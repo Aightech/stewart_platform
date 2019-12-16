@@ -1,0 +1,279 @@
+<?xml version="1.0" ?>
+<%
+# Geometry
+base_deltaA=0.63
+base_deltaB=0.15
+base_radius=base_deltaB/(2*Math.sin(Math.atan(base_deltaB*Math.sqrt(3)/(2*base_deltaA+base_deltaB))))
+base_length=0.02
+
+motor_radius=0.05
+motor_length=0.05
+motor_delta=Math.asin(base_deltaA/2/base_radius)
+
+arm_width=0.02
+arm_length=0.08
+
+rotule_radius=0.02
+
+leg_radius=0.02
+leg_length=0.44
+
+
+
+platform_deltaA=0.075
+platform_deltaB=0.3#0.40
+platform_radius=platform_deltaB/(2*Math.sin(Math.atan(platform_deltaB*Math.sqrt(3)/(2*platform_deltaA+platform_deltaB))))
+platform_length=0.02
+rotule_delta=Math.asin(platform_deltaA/2/platform_radius)
+
+holder_length=platform_deltaA
+holder_width=0.02
+
+#<!--
+############# MACRO CYLINDER ##############
+def cylinder(radius,length)
+'<collision name="collision">
+        <geometry>
+          <cylinder>
+            <radius> ' + radius.to_s + ' </radius>
+            <length> ' + length.to_s + ' </length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <cylinder>
+            <radius> ' + radius.to_s + ' </radius>
+            <length> ' + length.to_s + ' </length>
+          </cylinder>
+        </geometry>
+      </visual>'
+    end
+##########################################
+#-->
+
+#<!--
+############# MACRO BOX  ##############
+def box(dx, dy, dz)
+'<collision name="collision">
+        <geometry>
+         <box>
+	     <size> ' + dx.to_s + ' ' + dy.to_s + ' ' + dz.to_s + ' </size>
+	 </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+	     <size> ' + dx.to_s + ' ' + dy.to_s + ' ' + dz.to_s + ' </size>
+	 </box>
+        </geometry>
+      </visual>'
+    end
+##########################################
+#-->
+
+#<!--
+############# MACRO SPHERE  ##############
+def sphere(radius)
+'<collision name="collision">
+        <geometry>
+          <sphere>
+	    <radius> ' + radius.to_s + ' </radius>
+	 </sphere>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <sphere>
+	    <radius> ' + radius.to_s + ' </radius>
+	 </sphere>
+        </geometry>
+      </visual>'
+end
+##########################################
+#-->
+
+   
+
+#<!--
+############# MACRO ANGLE  ##############
+def a_to_s(arr)
+' ' + arr[0].to_s + ' ' + arr[1].to_s + ' ' + arr[2].to_s + ' ' + arr[3].to_s + ' ' + arr[4].to_s + ' ' + arr[5].to_s
+end
+##########################################
+#-->
+
+#<!--
+############# MACRO NORM  ##############
+def norm(arr,arr2)
+	Math.sqrt((arr[0]-arr2[0])**2+(arr[1]-arr2[1])**2+(arr[2]-arr2[2])**2)
+end
+##########################################
+#-->
+
+
+%>
+
+<sdf version="1.5">
+<model name="stewart_platform">
+
+	<!-- ** Links Definitions ** -->
+	<!-- * Base Definitions * -->
+	<link name="base_link">
+		<!-- Position -->
+		<pose>0 0  <%= -motor_radius %>  0 0 0</pose>
+		<!-- Shape -->
+		<%= cylinder(base_radius, base_length) %>
+	</link>
+	<!-- * Base Definitions * -->
+	<link name="platform_link">
+		<!-- Position -->
+		<pose>0 0  <%= leg_length+platform_length/2 %>  0 0 0</pose>
+		<!-- Shape -->
+		<%= cylinder(platform_radius, platform_length) %>
+	</link>
+
+	<% (0..5).each do |index| %>
+		<% 	beta = index/2*Math::PI*2/3
+			parity = (index-(index/2)*2)*2-1
+			theta = beta+parity*motor_delta
+			gamma = beta+parity*rotule_delta
+
+			pos_motor = [
+				base_radius*Math.cos(theta)+motor_length/2*Math.cos(beta),
+				base_radius*Math.sin(theta)+motor_length/2*Math.sin(beta),
+				0,
+				Math::PI/2, 0, beta+Math::PI/2]
+			
+			pos_arm = [
+				base_radius*Math.cos(theta)-arm_width/2*Math.cos(beta)+parity*arm_length/2*Math.sin(beta),
+				base_radius*Math.sin(theta)-arm_width/2*Math.sin(beta)-parity*arm_length/2*Math.cos(beta),
+				0,
+				Math::PI/2, 0, beta]
+			
+			pos_rotuleDown = [
+				base_radius*Math.cos(theta)+parity*arm_length*Math.sin(beta),
+				base_radius*Math.sin(theta)-parity*arm_length*Math.cos(beta),
+				0,
+				0, 0, 0]
+			
+			pos_rotuleUp = [
+				platform_radius*Math.cos(gamma)-rotule_radius*Math.cos(beta),
+				platform_radius*Math.sin(gamma)-rotule_radius*Math.sin(beta),
+				leg_length,
+				0, 0, 0]
+			pos_rotuleUp[2]=Math.sqrt(leg_length**2 - (pos_rotuleUp[0]-pos_rotuleDown[0])**2 - (pos_rotuleUp[1]-pos_rotuleDown[1])**2)
+			
+			r1 = pos_rotuleDown[0]**2 + pos_rotuleDown[1]**2
+			r2 = pos_rotuleUp[0]**2 + pos_rotuleUp[1]**2 
+			alpha = Math.asin((pos_rotuleUp[2]-pos_rotuleDown[2])/leg_length)
+			pos_leg = [ 
+				(pos_rotuleDown[0]+pos_rotuleUp[0])/2,
+				(pos_rotuleDown[1]+pos_rotuleUp[1])/2,
+				(pos_rotuleDown[2]+pos_rotuleUp[2])/2,
+				Math::PI/2 - alpha,
+				0,
+				(index-index/2*2-1)*Math::PI+beta - parity*Math.asin((r1-r2)/2/(leg_length/2*Math.sin(Math::PI/2 -alpha)))]
+				
+			pos_holder = [
+				pos_rotuleUp[0]-holder_length/2*Math.sin(beta),
+				pos_rotuleUp[1]+holder_length/2*Math.cos(beta),
+				pos_rotuleUp[2],
+				Math::PI/2, 0, beta
+			]
+		%>
+		
+		<!-- * Motor Definitions * -->
+		<link name= "motor_<%= index %>_link">
+			<!-- Position -->
+			<pose><%= a_to_s(pos_motor) %></pose>
+			<!-- Shape -->
+			<%= cylinder(motor_radius,motor_length) %>
+		</link>
+		<!-- * ARM Definitions * -->
+		<link name="arm_<%=index%>_link">
+			<!-- Position -->
+			<pose> <%= a_to_s(pos_arm)%></pose>
+			<!-- Shape -->
+			<%= box(arm_width, arm_width, arm_length) %>
+		</link>
+		<!-- * RotuleDown Definitions * -->
+		<link name="rotuleDown_<%=index%>_link">
+			<!-- Position -->
+			<pose> <%= a_to_s(pos_rotuleDown) %> </pose>
+			<!-- Shape -->
+			<%= sphere(rotule_radius) %>
+		</link>
+		<!-- * Leg Definitions * -->
+		<link name= "leg_<%= index %>_link">
+			<!-- Position -->
+			<pose><%= a_to_s(pos_leg) %></pose>
+			<!-- Shape -->
+			<%= cylinder(leg_radius,leg_length) %>
+		</link>
+		<!-- * RotuleUp Definitions * -->
+		<link name="rotuleUp_<%=index%>_link">
+			<!-- Position -->
+			<pose> <%= a_to_s(pos_rotuleUp) %></pose>
+			<!-- Shape -->
+			<%= sphere(rotule_radius) %>
+		</link>
+
+		<% if parity == -1 %>
+		<!-- * Holder Definitions * -->
+		<link name="holder_<%=index/2%>_link">
+			<!-- Position -->
+			<pose> <%= a_to_s(pos_holder)%></pose>
+			<!-- Shape -->
+			<%= box(holder_width, holder_width, holder_length) %>
+		</link>
+		<%end%>
+
+		<!-- ** Joints Definitions ** -->
+		<!-- * Platform-Motor Joint Definitions * -->
+		<joint name="mot_fixed_<%=index%>_joint" type="fixed">
+			<parent>base_link</parent>
+			<child>motor_<%=index%>_link</child>
+		</joint>
+		<!-- * Motor-Arm Joint Definitions * -->
+		<joint name="motor_<%=index%>" type="revolute">
+			<pose frame= "arm_<%=index%>"> 0 0 <%=-parity*arm_length/2%> 0 0 </pose>
+			<parent>motor_<%=index%>_link</parent>
+			<child>arm_<%=index%>_link</child>
+			<axis>
+				<xyz>1 0 0</xyz>
+			</axis>
+		</joint>
+		<!-- * Arm-RotuleDown Joint Definitions * -->
+		<joint name="arm_rotDown_<%=index%>_joint" type="fixed">
+			<parent>arm_<%=index%>_link</parent>
+			<child>rotuleDown_<%=index%>_link</child>
+		</joint>
+		<!-- * RotuleDown-Leg Joint Definitions * -->
+		<joint name="rotDown_leg_<%=index%>_joint" type="ball">
+			<pose frame= "arm_<%=index%>_link"> 0 0 <%=-leg_length/2%> 0 0 </pose>
+			<parent>rotuleDown_<%=index%>_link</parent>
+			<child>leg_<%=index%>_link</child>
+		</joint>
+		<!-- * Leg-RotuleUp Joint Definitions * -->
+		<joint name="arm_rotUp_<%=index%>_joint" type="fixed">
+			<parent>leg_<%=index%>_link</parent>
+			<child>rotuleUp_<%=index%>_link</child>
+		</joint>
+		<!-- * RotuleUp-Holder Joint Definitions * -->
+		<joint name="rotUp_platform_<%=index%>_joint" type="ball">
+			<pose frame="rotuleUp_<%=index%>_link"> 0 0 0 0 0 </pose>
+			<child>rotuleUp_<%=index%>_link</child>
+			<parent>holder_<%=index/2%>_link</parent>
+		</joint>
+		<% if parity == -1 %>
+		<!-- * RotuleUp-Holder Joint Definitions * -->
+		<joint name="holder_platform_<%=index/2%>_joint" type="fixed">
+			<parent>holder_<%=index/2%>_link</parent>
+			<child>platform_link</child>
+		</joint>
+		<% end %>
+	<% end %>
+</model>
+</sdf>
