@@ -252,7 +252,7 @@ public:
 		file(boost::filesystem::unique_path(
 			boost::filesystem::temp_directory_path() /
 			"tmp-gnuplot-%%%%-%%%%-%%%%-%%%%"))
-	{ }
+	{}
 
 private:
 	// noncopyable

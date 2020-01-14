@@ -1,0 +1,3 @@
+/home/aightech/.gazebo/models/stewart_platform/CMakeFiles/rebuild_cache.dir
+/home/aightech/.gazebo/models/stewart_platform/CMakeFiles/stewart_platform.dir
+/home/aightech/.gazebo/models/stewart_platform/CMakeFiles/edit_cache.dir

@@ -7,6 +7,7 @@
 
 Stewart_platform::Stewart_platform(double deltas[4], double a, double l)
 {
+  _inc=0;
   //set the length of the arms and legs
   _a=a;
   _l=l;
@@ -36,6 +37,8 @@ Stewart_platform::Stewart_platform(double deltas[4], double a, double l)
       _P1[i][0]= _radius[1]*cos(_gamma[1][i]);
       _P1[i][1]= _radius[1]*sin(_gamma[1][i]);
       _P1[i][2]=0;
+
+      _alpha_p[i]=0;
     }
 
   //setup the vector used to draw the platform
@@ -59,6 +62,10 @@ Stewart_platform::Stewart_platform(double deltas[4], double a, double l)
   set_T(0,0,h0);
   set_theta(0,0,0);
 
+  set_T_p(0,0,0);
+  set_theta_p(0,0,0);
+
+  new_pos(_T, _theta);
    
 
 
@@ -123,6 +130,35 @@ double* Stewart_platform::new_pos(double T[3], double theta[3])
   
 	
   return _alpha;
+}
+
+
+double* Stewart_platform::new_speed(double T_p[3], double theta_p[3])
+{
+  return _alpha_p;
+}
+
+void Stewart_platform::update(double dt)
+{
+  double T[3];
+  double theta[3];
+  double alpha[6];
+  for(int i = 0; i<3; i++)
+    {
+      T[i] = _T[i]+ _T_p[i]*dt;
+      theta[i] = _theta[i]+ _theta_p[i]*dt;
+      alpha[2*i] = _alpha[2*i];
+      alpha[2*i+1] = _alpha[2*i+1];
+    }
+  
+  new_pos(T, theta);
+
+  std::cout << "#######################" << std::endl;
+  for(int i =0; i<6; i++)
+    {
+      std::cout <<  i  << ": " << _alpha[i] - alpha[i] << " " <<  _alpha_p[i]*dt << std::endl;
+    }
+  
 }
 
 
@@ -197,4 +233,6 @@ void Stewart_platform::draw()
     }
 
   _gp << " \n";
+  
+  
 }
