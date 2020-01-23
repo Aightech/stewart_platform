@@ -12,7 +12,7 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 ## Special libraries
-set(EXTRA_LIBS "pthread")
+set(EXTRA_LIBS "pthread" "util" "boost_iostreams" "boost_system" "boost_filesystem" )
 
 
 #Set prooject name

@@ -3,6 +3,7 @@
 # define M_PI 3.14159265358979323846  /* pi */
 #define NB_LEGS 6
 
+#include "Lexium32A_canopen.h"
 
 class Stewart_platform
 {
@@ -92,4 +93,14 @@ class Stewart_platform
   std::vector<std::vector<double>> _P0_vect;
   std::vector<std::vector<double>> _A_vect;
   std::vector<std::vector<double>> _B_vect;
+
+  std::vector<LXM32*> motors;
+  int32_t m_motor_pos[NB_LEGS];
+  int32_t m_inc[NB_LEGS];
+  double m_conv=50000.0f/24.0f*180.0f/M_PI;
+
+  int m_motor_lookup[NB_LEGS] = {5,2,0,1,4,3};
+
+
+  
 };
