@@ -1,4 +1,4 @@
-# Install script for directory: /home/aightech/.gazebo/models/stewart_platform
+# Install script for directory: /home/aightech/Documents/Profesional/Isir/Service_Technique/stewart_platform
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/aightech/.gazebo/models/stewart_platform/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/aightech/Documents/Profesional/Isir/Service_Technique/stewart_platform/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

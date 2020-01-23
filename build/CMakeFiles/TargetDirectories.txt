@@ -1,0 +1,3 @@
+/home/aightech/Documents/Profesional/Isir/Service_Technique/stewart_platform/build/CMakeFiles/rebuild_cache.dir
+/home/aightech/Documents/Profesional/Isir/Service_Technique/stewart_platform/build/CMakeFiles/stewart_platform.dir
+/home/aightech/Documents/Profesional/Isir/Service_Technique/stewart_platform/build/CMakeFiles/edit_cache.dir

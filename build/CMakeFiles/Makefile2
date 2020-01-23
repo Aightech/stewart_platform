@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/aightech/.gazebo/models/stewart_platform
+CMAKE_SOURCE_DIR = /home/aightech/Documents/Profesional/Isir/Service_Technique/stewart_platform
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/aightech/.gazebo/models/stewart_platform
+CMAKE_BINARY_DIR = /home/aightech/Documents/Profesional/Isir/Service_Technique/stewart_platform/build
 
 #=============================================================================
 # Target rules for target CMakeFiles/stewart_platform.dir
@@ -66,7 +66,7 @@ CMAKE_BINARY_DIR = /home/aightech/.gazebo/models/stewart_platform
 CMakeFiles/stewart_platform.dir/all:
 	$(MAKE) -f CMakeFiles/stewart_platform.dir/build.make CMakeFiles/stewart_platform.dir/depend
 	$(MAKE) -f CMakeFiles/stewart_platform.dir/build.make CMakeFiles/stewart_platform.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aightech/.gazebo/models/stewart_platform/CMakeFiles --progress-num=1,2,3,4 "Built target stewart_platform"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aightech/Documents/Profesional/Isir/Service_Technique/stewart_platform/build/CMakeFiles --progress-num=1,2,3,4 "Built target stewart_platform"
 .PHONY : CMakeFiles/stewart_platform.dir/all
 
 # Include target in all.
@@ -76,9 +76,9 @@ all: CMakeFiles/stewart_platform.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/stewart_platform.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/aightech/.gazebo/models/stewart_platform/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aightech/Documents/Profesional/Isir/Service_Technique/stewart_platform/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/stewart_platform.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/aightech/.gazebo/models/stewart_platform/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aightech/Documents/Profesional/Isir/Service_Technique/stewart_platform/build/CMakeFiles 0
 .PHONY : CMakeFiles/stewart_platform.dir/rule
 
 # Convenience name for target.

@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/aightech/.gazebo/models/stewart_platform/include 
+CXX_INCLUDES = -I/home/aightech/Documents/Profesional/Isir/Service_Technique/stewart_platform/include 
 

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/aightech/.gazebo/models/stewart_platform
+CMAKE_SOURCE_DIR = /home/aightech/Documents/Profesional/Isir/Service_Technique/stewart_platform
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/aightech/.gazebo/models/stewart_platform
+CMAKE_BINARY_DIR = /home/aightech/Documents/Profesional/Isir/Service_Technique/stewart_platform/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/stewart_platform.dir/depend.make
@@ -58,17 +58,17 @@ include CMakeFiles/stewart_platform.dir/progress.make
 include CMakeFiles/stewart_platform.dir/flags.make
 
 CMakeFiles/stewart_platform.dir/src/joystick.cpp.o: CMakeFiles/stewart_platform.dir/flags.make
-CMakeFiles/stewart_platform.dir/src/joystick.cpp.o: src/joystick.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/aightech/.gazebo/models/stewart_platform/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/stewart_platform.dir/src/joystick.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/stewart_platform.dir/src/joystick.cpp.o -c /home/aightech/.gazebo/models/stewart_platform/src/joystick.cpp
+CMakeFiles/stewart_platform.dir/src/joystick.cpp.o: ../src/joystick.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/aightech/Documents/Profesional/Isir/Service_Technique/stewart_platform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/stewart_platform.dir/src/joystick.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/stewart_platform.dir/src/joystick.cpp.o -c /home/aightech/Documents/Profesional/Isir/Service_Technique/stewart_platform/src/joystick.cpp
 
 CMakeFiles/stewart_platform.dir/src/joystick.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/stewart_platform.dir/src/joystick.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aightech/.gazebo/models/stewart_platform/src/joystick.cpp > CMakeFiles/stewart_platform.dir/src/joystick.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aightech/Documents/Profesional/Isir/Service_Technique/stewart_platform/src/joystick.cpp > CMakeFiles/stewart_platform.dir/src/joystick.cpp.i
 
 CMakeFiles/stewart_platform.dir/src/joystick.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/stewart_platform.dir/src/joystick.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aightech/.gazebo/models/stewart_platform/src/joystick.cpp -o CMakeFiles/stewart_platform.dir/src/joystick.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aightech/Documents/Profesional/Isir/Service_Technique/stewart_platform/src/joystick.cpp -o CMakeFiles/stewart_platform.dir/src/joystick.cpp.s
 
 CMakeFiles/stewart_platform.dir/src/joystick.cpp.o.requires:
 
@@ -82,17 +82,17 @@ CMakeFiles/stewart_platform.dir/src/joystick.cpp.o.provides.build: CMakeFiles/st
 
 
 CMakeFiles/stewart_platform.dir/src/pos.cpp.o: CMakeFiles/stewart_platform.dir/flags.make
-CMakeFiles/stewart_platform.dir/src/pos.cpp.o: src/pos.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/aightech/.gazebo/models/stewart_platform/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/stewart_platform.dir/src/pos.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/stewart_platform.dir/src/pos.cpp.o -c /home/aightech/.gazebo/models/stewart_platform/src/pos.cpp
+CMakeFiles/stewart_platform.dir/src/pos.cpp.o: ../src/pos.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/aightech/Documents/Profesional/Isir/Service_Technique/stewart_platform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/stewart_platform.dir/src/pos.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/stewart_platform.dir/src/pos.cpp.o -c /home/aightech/Documents/Profesional/Isir/Service_Technique/stewart_platform/src/pos.cpp
 
 CMakeFiles/stewart_platform.dir/src/pos.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/stewart_platform.dir/src/pos.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aightech/.gazebo/models/stewart_platform/src/pos.cpp > CMakeFiles/stewart_platform.dir/src/pos.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aightech/Documents/Profesional/Isir/Service_Technique/stewart_platform/src/pos.cpp > CMakeFiles/stewart_platform.dir/src/pos.cpp.i
 
 CMakeFiles/stewart_platform.dir/src/pos.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/stewart_platform.dir/src/pos.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aightech/.gazebo/models/stewart_platform/src/pos.cpp -o CMakeFiles/stewart_platform.dir/src/pos.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aightech/Documents/Profesional/Isir/Service_Technique/stewart_platform/src/pos.cpp -o CMakeFiles/stewart_platform.dir/src/pos.cpp.s
 
 CMakeFiles/stewart_platform.dir/src/pos.cpp.o.requires:
 
@@ -106,17 +106,17 @@ CMakeFiles/stewart_platform.dir/src/pos.cpp.o.provides.build: CMakeFiles/stewart
 
 
 CMakeFiles/stewart_platform.dir/src/stewart_platform.cpp.o: CMakeFiles/stewart_platform.dir/flags.make
-CMakeFiles/stewart_platform.dir/src/stewart_platform.cpp.o: src/stewart_platform.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/aightech/.gazebo/models/stewart_platform/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/stewart_platform.dir/src/stewart_platform.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/stewart_platform.dir/src/stewart_platform.cpp.o -c /home/aightech/.gazebo/models/stewart_platform/src/stewart_platform.cpp
+CMakeFiles/stewart_platform.dir/src/stewart_platform.cpp.o: ../src/stewart_platform.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/aightech/Documents/Profesional/Isir/Service_Technique/stewart_platform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/stewart_platform.dir/src/stewart_platform.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/stewart_platform.dir/src/stewart_platform.cpp.o -c /home/aightech/Documents/Profesional/Isir/Service_Technique/stewart_platform/src/stewart_platform.cpp
 
 CMakeFiles/stewart_platform.dir/src/stewart_platform.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/stewart_platform.dir/src/stewart_platform.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aightech/.gazebo/models/stewart_platform/src/stewart_platform.cpp > CMakeFiles/stewart_platform.dir/src/stewart_platform.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aightech/Documents/Profesional/Isir/Service_Technique/stewart_platform/src/stewart_platform.cpp > CMakeFiles/stewart_platform.dir/src/stewart_platform.cpp.i
 
 CMakeFiles/stewart_platform.dir/src/stewart_platform.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/stewart_platform.dir/src/stewart_platform.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aightech/.gazebo/models/stewart_platform/src/stewart_platform.cpp -o CMakeFiles/stewart_platform.dir/src/stewart_platform.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aightech/Documents/Profesional/Isir/Service_Technique/stewart_platform/src/stewart_platform.cpp -o CMakeFiles/stewart_platform.dir/src/stewart_platform.cpp.s
 
 CMakeFiles/stewart_platform.dir/src/stewart_platform.cpp.o.requires:
 
@@ -143,11 +143,11 @@ stewart_platform: CMakeFiles/stewart_platform.dir/src/pos.cpp.o
 stewart_platform: CMakeFiles/stewart_platform.dir/src/stewart_platform.cpp.o
 stewart_platform: CMakeFiles/stewart_platform.dir/build.make
 stewart_platform: CMakeFiles/stewart_platform.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/aightech/.gazebo/models/stewart_platform/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable stewart_platform"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/aightech/Documents/Profesional/Isir/Service_Technique/stewart_platform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable stewart_platform"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/stewart_platform.dir/link.txt --verbose=$(VERBOSE)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Saving exec in bin/ directory..."
-	/usr/bin/cmake -E make_directory /home/aightech/.gazebo/models/stewart_platform/bin/UNIX/Linux_5.0.0-37-generic
-	/usr/bin/cmake -E copy /home/aightech/.gazebo/models/stewart_platform/stewart_platform /home/aightech/.gazebo/models/stewart_platform/bin/UNIX/Linux_5.0.0-37-generic
+	/usr/bin/cmake -E make_directory /home/aightech/Documents/Profesional/Isir/Service_Technique/stewart_platform/bin/UNIX/Linux_5.0.0-37-generic
+	/usr/bin/cmake -E copy /home/aightech/Documents/Profesional/Isir/Service_Technique/stewart_platform/build/stewart_platform /home/aightech/Documents/Profesional/Isir/Service_Technique/stewart_platform/bin/UNIX/Linux_5.0.0-37-generic
 
 # Rule to build all files generated by this target.
 CMakeFiles/stewart_platform.dir/build: stewart_platform
@@ -165,6 +165,6 @@ CMakeFiles/stewart_platform.dir/clean:
 .PHONY : CMakeFiles/stewart_platform.dir/clean
 
 CMakeFiles/stewart_platform.dir/depend:
-	cd /home/aightech/.gazebo/models/stewart_platform && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/aightech/.gazebo/models/stewart_platform /home/aightech/.gazebo/models/stewart_platform /home/aightech/.gazebo/models/stewart_platform /home/aightech/.gazebo/models/stewart_platform /home/aightech/.gazebo/models/stewart_platform/CMakeFiles/stewart_platform.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/aightech/Documents/Profesional/Isir/Service_Technique/stewart_platform/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/aightech/Documents/Profesional/Isir/Service_Technique/stewart_platform /home/aightech/Documents/Profesional/Isir/Service_Technique/stewart_platform /home/aightech/Documents/Profesional/Isir/Service_Technique/stewart_platform/build /home/aightech/Documents/Profesional/Isir/Service_Technique/stewart_platform/build /home/aightech/Documents/Profesional/Isir/Service_Technique/stewart_platform/build/CMakeFiles/stewart_platform.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/stewart_platform.dir/depend
 
