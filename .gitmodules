@@ -1,4 +1,4 @@
 [submodule "lib/lxm32"]
-	path = lib/lmx32
-	url = ../lmx32
+	path = lib/lxm32
+	url = git@github.com:Aightech/lxm32
 	branch = master
