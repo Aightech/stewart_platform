@@ -89,6 +89,8 @@ class Stewart_platform
   double _theta_p[3]; /*!< Rotation speed of the platform. */
   double _alpha_p[6];  /*!< Rotation speed of the motors. */
 
+  double _alphaI[6];
+
   Gnuplot _gp;
   std::vector<std::vector<double>> _P0_vect;
   std::vector<std::vector<double>> _A_vect;

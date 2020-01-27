@@ -77,6 +77,15 @@ Stewart_platform::Stewart_platform(double deltas[4], double a, double l)
   set_theta_p(0,0,0);
 
   new_pos(_T, _theta);
+
+
+  for(int i =0;i<6; i++)
+    {
+      _alphaI[i] = _alpha[i];
+    }
+
+
+  
    
 
 
@@ -130,7 +139,7 @@ double* Stewart_platform::new_pos(double T[3], double theta[3])
       _alpha[i] = asin(L/sqrt(M*M + N*N)) - atan(M/N);
 
       int i_n = m_motor_lookup[i];
-      m_inc[i_n] = _alpha[i_n]*m_conv - m_motor_pos[i_n];
+      m_inc[i_n] = -_alpha[i]*m_conv - m_motor_pos[i_n];
       m_motor_pos[i_n]+= m_inc[i_n];
       
       _A[i][0]= _a*cos(_alpha[i])*cos(_beta[i]) + _B[i][0];
@@ -206,8 +215,10 @@ void Stewart_platform::draw()
 
   lines[0].resize(1);
   lines[1].resize(1);
-  for(int i=1; i<NB_LEGS; i++)
+  for(int i=0; i<NB_LEGS; i++)
     {
+      if(i==2)
+	i++;
       lines[0][0].push_back(_B_vect[i]);
       lines[1][0].push_back(_P0_vect[i]);
 

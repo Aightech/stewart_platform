@@ -9,7 +9,7 @@ int main()
 {
   cJoystick js;
   
-  double deltas[4] = {0.63, 0.15, 0.40, 0.075};
+  double deltas[4] = {0.63, 0.14, 0.40, 0.075};
   Stewart_platform sp(deltas,0.08,0.44);
 
   
@@ -23,7 +23,7 @@ int main()
   //sp.new_speed(T_p, theta_p );
   
   int i=0;
-  while(i++<1000)
+  while(1)
     {
 
       T[0]= js.joystickValue(0)/MAX_JOY*TRANS_MAX;
@@ -37,7 +37,7 @@ int main()
       sp.new_pos(T, theta);
       
       // sp.update(0.001);		
-      sp.draw();
+      //sp.draw();
       usleep(10000);
 	
       
