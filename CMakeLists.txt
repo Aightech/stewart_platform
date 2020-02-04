@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.0)
 ###### Date:   27/01/2020
 ###### Brief: This CmakeLists.txt file enable to build generic project with the following structure:
 ######                                +---------+
-######                                | porject |
+######                                | project |
 ######                                +----+----+
 ######                                     |
 ######            +----------+------------++-------------+-----------+
@@ -43,8 +43,15 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 ###### Special libraries ######
 if(0)
-  set(EXTRA_LIBS "pthread" "util" "boost_iostreams" "boost_system" "boost_filesystem" )
+  set(EXTRA_LIBS "pthread" "util")
 endif()
+
+find_package(Boost 1.56 REQUIRED COMPONENTS system filesystem iostreams)
+if (Boost_FOUND)
+  list(APPEND EXTRA_LIBS ${Boost_IOSTREAMS_LIBRARY} ${Boost_SYSTEM_LIBRARY} ${Boost_FILESYSTEM_LIBRARY})
+else ()
+  message("Couldn't find Boost library")
+endif (Boost_FOUND)
 
 
 
@@ -92,7 +99,7 @@ add_library(${LIB_NAME} ${LIB_SRCS})
 target_link_libraries (${LIB_NAME}
   PUBLIC ${EXTRA_LIBS})
 target_include_directories(${LIB_NAME}
-  PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include",
+  PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include"
   )
 
 

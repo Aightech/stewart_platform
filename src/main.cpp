@@ -26,6 +26,7 @@ int main()
   while(1)
     {
 
+      std::cout << i++ << std::endl;
       T[0]= js.joystickValue(0)/MAX_JOY*TRANS_MAX;
       T[1]= js.joystickValue(1)/MAX_JOY*TRANS_MAX;
       T[2]+= js.buttonPressed(4)*0.001 -js.buttonPressed(5)*0.001;
