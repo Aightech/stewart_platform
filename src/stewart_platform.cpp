@@ -13,7 +13,7 @@ Stewart_platform::Stewart_platform(double deltas[4], double a, double l)
       if(motors.back()->is_available())
 	{
 	  motors.back()->init();
-	  motors.back()->start();
+	  motors.back()->start(MODE_ProfilePosition, PPctrl_RELATIVE| PPctrl_ON_DIRECT);
 	}
       
       m_motor_pos[i]=0;
