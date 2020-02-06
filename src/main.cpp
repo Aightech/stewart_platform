@@ -22,20 +22,20 @@ main()
 
     int i = 0;
     while(1)
-        {
-            std::cout << i++ << std::endl;
-            T[0] = js.joystickValue(0) / MAX_JOY * TRANS_MAX;
-            T[1] = js.joystickValue(1) / MAX_JOY * TRANS_MAX;
-            T[2] += js.buttonPressed(4) * 0.001 - js.buttonPressed(5) * 0.001;
+    {
+        std::cout << i++ << std::endl;
+        T[0] = js.joystickValue(0) / MAX_JOY * TRANS_MAX;
+        T[1] = js.joystickValue(1) / MAX_JOY * TRANS_MAX;
+        T[2] += js.buttonPressed(4) * 0.001 - js.buttonPressed(5) * 0.001;
 
-            theta[1] = js.joystickValue(2) / MAX_JOY * ANG_MAX;
-            theta[1] = js.joystickValue(3) / MAX_JOY * ANG_MAX;
+        theta[1] = js.joystickValue(2) / MAX_JOY * ANG_MAX;
+        theta[1] = js.joystickValue(3) / MAX_JOY * ANG_MAX;
 
-            std::cout << i << std::endl;
-            sp.new_pos(T, theta);
+        std::cout << i << std::endl;
+        sp.new_pos(T, theta);
 
-            // sp.update(0.001);
-            // sp.draw();
-            usleep(10000);
-        }
+        // sp.update(0.001);
+        // sp.draw();
+        usleep(10000);
+    }
 }

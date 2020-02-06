@@ -10,10 +10,15 @@ Stewart_platform::Stewart_platform(double deltas[4], double a, double l)
   for(int i=0; i<NB_LEGS; i++)
     {
       motors.push_back(new LXM32("can0", i+1,false));
-      motors.back()->init();
-      motors.back()->start();
+      if(motors.back()->is_available())
+	{
+	  motors.back()->init();
+	  motors.back()->start();
+	}
+      
       m_motor_pos[i]=0;
       m_inc[i]=0;
+      
     }
 
 

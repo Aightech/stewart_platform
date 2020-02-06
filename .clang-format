@@ -8,11 +8,8 @@ AlwaysBreakAfterReturnType: All
 AlwaysBreakTemplateDeclarations: 'true'
 BinPackParameters: 'false'
 
-BreakBeforeBraces: GNU
-
-BreakBeforeBinaryOperators: None
-BreakBeforeBraces: GNU
-IndentWidth: '8'
+BreakBeforeBraces: Allman
+IndentWidth: '4'
 Language: Cpp
 SpaceBeforeParens: Never
 SpaceInEmptyParentheses: 'false'
@@ -25,3 +22,4 @@ Standard: Cpp11
 TabWidth: '4'
 UseTab: Never
 
+CommentPragmas:  '\\*'
