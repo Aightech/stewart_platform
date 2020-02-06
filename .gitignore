@@ -23,3 +23,5 @@
 !Doxyfile
 !todo.org
 !/.dir-locals.el
+
+!/.clang-format
