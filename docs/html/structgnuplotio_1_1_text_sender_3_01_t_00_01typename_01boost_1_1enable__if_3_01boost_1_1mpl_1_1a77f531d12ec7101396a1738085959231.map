@@ -1,0 +1,2 @@
+<map id="gnuplotio::TextSender&lt; T, typename boost::enable_if&lt; boost::mpl::and_&lt; is_boost_tuple&lt; T &gt;, is_boost_tuple_nulltype&lt; typename T::tail_type &gt; &gt; &gt;::type &gt;" name="gnuplotio::TextSender&lt; T, typename boost::enable_if&lt; boost::mpl::and_&lt; is_boost_tuple&lt; T &gt;, is_boost_tuple_nulltype&lt; typename T::tail_type &gt; &gt; &gt;::type &gt;">
+</map>

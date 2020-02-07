@@ -1,0 +1,6 @@
+<map id="stp::Gnuplot_sim::new_pos" name="stp::Gnuplot_sim::new_pos">
+<area shape="rect" id="node2" href="$classstp_1_1_model.html#a553d9f7f63c97eba26e3522a73531dc1" title="stp::Model::new_pos" alt="" coords="305,5,473,35"/>
+<area shape="rect" id="node4" href="$classstp_1_1_gnuplot__sim.html#a22d1793e471b78033080650a3701d2c4" title="stp::Gnuplot_sim::update_draw" alt="" coords="268,59,511,88"/>
+<area shape="rect" id="node3" href="$classstp_1_1_model.html#afeda6e56bb177dc53c2c3fd1a86a2388" title="stp::Model::compute_R" alt="" coords="559,5,744,35"/>
+<area shape="rect" id="node5" href="$classstp_1_1_gnuplot__sim.html#a7d01da793fef045e81a8927ab7316d61" title="stp::Gnuplot_sim::draw" alt="" coords="559,59,743,88"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="LXM32::stop" name="LXM32::stop">
+<area shape="rect" id="node2" href="$class_canopen__socket.html#a835dea5a2888f8e689e587651e5f4edd" title="templated function to send NMT CAN message. " alt="" coords="164,5,395,35"/>
+<area shape="rect" id="node4" href="$class_canopen__socket.html#a7450dea468619c57c7a3eda7c69bcafa" title="templated function to send PDO1 message with different kind of data type (uint8_t, uint16_t ...) " alt="" coords="164,59,395,88"/>
+<area shape="rect" id="node3" href="$class_canopen__socket.html#a52a0dcf2d0f5f7708f73af80fab0d610" title="templated function to send CAN message. " alt="" coords="443,5,668,35"/>
+</map>

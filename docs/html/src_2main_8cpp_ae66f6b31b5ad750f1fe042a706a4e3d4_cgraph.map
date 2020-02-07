@@ -1,0 +1,15 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$classc_joystick.html#a10375763b82c2da3e904d118d5cf2ecb" title="cJoystick::buttonPressed" alt="" coords="119,5,317,35"/>
+<area shape="rect" id="node3" href="$classstp_1_1_model.html#a96807e2f67ea212b44e89bc567d8fa2a" title="stp::Model::get_T" alt="" coords="146,59,290,88"/>
+<area shape="rect" id="node4" href="$classstp_1_1_model.html#a732e1d29e24600760b53a8e126bb7906" title="stp::Model::init_pos" alt="" coords="139,112,297,141"/>
+<area shape="rect" id="node11" href="$classc_joystick.html#a2954017eb51ef6f4658450199e5df5b4" title="cJoystick::joystickValue" alt="" coords="123,165,313,195"/>
+<area shape="rect" id="node12" href="$classstp_1_1_gnuplot__sim.html#a510b50f1120459f9eb7684f249ed58ca" title="stp::Gnuplot_sim::new_pos" alt="" coords="111,219,325,248"/>
+<area shape="rect" id="node5" href="$classstp_1_1_model.html#ade58705e09f3edf93f43a51021517f9e" title="stp::Model::set_T" alt="" coords="423,5,566,35"/>
+<area shape="rect" id="node6" href="$classstp_1_1_model.html#a6a6dcae980e86d84084dc4ccd0de3285" title="stp::Model::set_theta" alt="" coords="411,59,579,88"/>
+<area shape="rect" id="node7" href="$classstp_1_1_model.html#a84fd6646ed05db5eec86afd968fde65d" title="stp::Model::set_T_spd" alt="" coords="405,112,584,141"/>
+<area shape="rect" id="node8" href="$classstp_1_1_model.html#afd0f76304578013e1faff062a318dac5" title="stp::Model::set_theta_spd" alt="" coords="393,165,596,195"/>
+<area shape="rect" id="node9" href="$classstp_1_1_model.html#a553d9f7f63c97eba26e3522a73531dc1" title="stp::Model::new_pos" alt="" coords="411,219,579,248"/>
+<area shape="rect" id="node10" href="$classstp_1_1_model.html#afeda6e56bb177dc53c2c3fd1a86a2388" title="stp::Model::compute_R" alt="" coords="664,219,849,248"/>
+<area shape="rect" id="node13" href="$classstp_1_1_gnuplot__sim.html#a22d1793e471b78033080650a3701d2c4" title="stp::Gnuplot_sim::update_draw" alt="" coords="373,272,616,301"/>
+<area shape="rect" id="node14" href="$classstp_1_1_gnuplot__sim.html#a7d01da793fef045e81a8927ab7316d61" title="stp::Gnuplot_sim::draw" alt="" coords="665,272,849,301"/>
+</map>

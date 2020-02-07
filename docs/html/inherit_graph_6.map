@@ -1,0 +1,4 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classgnuplotio_1_1_array_traits.html" title="gnuplotio::ArrayTraits\l\&lt; T::head_type \&gt;" alt="" coords="5,40,180,87"/>
+<area shape="rect" id="node2" href="$classgnuplotio_1_1_array_traits_3_01_t_00_01typename_01boost_1_1enable__if_3_01boost_1_1mpl_1_1ad3fa8e75dccbaae12a06d17831678a88.html" title="gnuplotio::ArrayTraits\l\&lt; T, typename boost::enable\l_if\&lt; boost::mpl::and_\&lt; is\l_boost_tuple\&lt; T \&gt;, is_boost\l_tuple_nulltype\&lt; typename T\l::tail_type \&gt; \&gt; \&gt;::type \&gt;" alt="" coords="228,5,456,121"/>
+</map>

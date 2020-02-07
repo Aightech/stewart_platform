@@ -1,0 +1,4 @@
+<map id="gnuplotio::ArrayTraits&lt; T, typename boost::enable_if&lt; is_like_stl_container&lt; T &gt; &gt;::type &gt;" name="gnuplotio::ArrayTraits&lt; T, typename boost::enable_if&lt; is_like_stl_container&lt; T &gt; &gt;::type &gt;">
+<area shape="rect" id="node2" href="$classgnuplotio_1_1_array_traits_defaults.html" title="gnuplotio::ArrayTraitsDefaults\l\&lt; T::value_type \&gt;" alt="" coords="24,100,257,147"/>
+<area shape="rect" id="node3" href="$classgnuplotio_1_1_array_traits_defaults.html" title="gnuplotio::ArrayTraitsDefaults\&lt; V \&gt;" alt="" coords="5,5,276,35"/>
+</map>
