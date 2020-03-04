@@ -1,8 +1,0 @@
-<map id="stp::Model::init_pos" name="stp::Model::init_pos">
-<area shape="rect" id="node2" href="$classstp_1_1_model.html#a553d9f7f63c97eba26e3522a73531dc1" title="stp::Model::new_pos" alt="" coords="229,5,397,35"/>
-<area shape="rect" id="node4" href="$classstp_1_1_model.html#ade58705e09f3edf93f43a51021517f9e" title="stp::Model::set_T" alt="" coords="242,59,385,88"/>
-<area shape="rect" id="node5" href="$classstp_1_1_model.html#a84fd6646ed05db5eec86afd968fde65d" title="stp::Model::set_T_spd" alt="" coords="224,112,403,141"/>
-<area shape="rect" id="node6" href="$classstp_1_1_model.html#a6a6dcae980e86d84084dc4ccd0de3285" title="stp::Model::set_theta" alt="" coords="229,165,397,195"/>
-<area shape="rect" id="node7" href="$classstp_1_1_model.html#afd0f76304578013e1faff062a318dac5" title="stp::Model::set_theta_spd" alt="" coords="212,219,415,248"/>
-<area shape="rect" id="node3" href="$classstp_1_1_model.html#afeda6e56bb177dc53c2c3fd1a86a2388" title="stp::Model::compute_R" alt="" coords="463,5,648,35"/>
-</map>

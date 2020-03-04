@@ -1,5 +1,0 @@
-<map id="stp::Platform" name="stp::Platform">
-<area shape="rect" id="node2" href="$classstp_1_1_model.html" title="stp::Model" alt="" coords="5,187,100,216"/>
-<area shape="rect" id="node3" href="$class_l_x_m32.html" title="LXM32" alt="" coords="124,187,197,216"/>
-<area shape="rect" id="node4" href="$class_canopen__socket.html" title="Canopen object able to send command through a CAN interface using the UNIX socket. " alt="" coords="89,5,232,35"/>
-</map>

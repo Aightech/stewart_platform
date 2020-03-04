@@ -1,8 +1,0 @@
-<map id="LXM32::init" name="LXM32::init">
-<area shape="rect" id="node2" href="$class_l_x_m32.html#a201d8f9da28994a92612e2618b7a1167" title="LXM32::print_status" alt="" coords="183,5,345,35"/>
-<area shape="rect" id="node3" href="$class_canopen__socket.html#a07d81bd345670ed859cc07f21b8ecbe3" title="templated function to send SDO message with different kind of data type (uint8_t, uint16_t ..." alt="" coords="420,163,651,192"/>
-<area shape="rect" id="node4" href="$class_canopen__socket.html#aa3cb0686ca837db520281613741e5776" title="Canopen_socket::set_PDO" alt="" coords="156,109,372,139"/>
-<area shape="rect" id="node5" href="$class_l_x_m32.html#ab942cd394ba87efa06704e9921395692" title="LXM32::setAccel" alt="" coords="193,163,335,192"/>
-<area shape="rect" id="node6" href="$class_l_x_m32.html#aa1b975678f618dd2383e61bef655a353" title="LXM32::setDecel" alt="" coords="192,216,336,245"/>
-<area shape="rect" id="node7" href="$class_l_x_m32.html#aefb41cdca05c78cf0df485df8abbaf69" title="LXM32::setSpeed" alt="" coords="189,269,339,299"/>
-</map>

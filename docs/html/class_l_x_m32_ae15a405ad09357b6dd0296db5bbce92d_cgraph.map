@@ -1,8 +1,0 @@
-<map id="LXM32::start" name="LXM32::start">
-<area shape="rect" id="node2" href="$class_l_x_m32.html#a545b23fab3528a8039bb2cc62808f9f5" title="LXM32::print_control" alt="" coords="195,5,364,35"/>
-<area shape="rect" id="node3" href="$class_canopen__socket.html#a835dea5a2888f8e689e587651e5f4edd" title="templated function to send NMT CAN message. " alt="" coords="164,59,395,88"/>
-<area shape="rect" id="node5" href="$class_canopen__socket.html#a7450dea468619c57c7a3eda7c69bcafa" title="templated function to send PDO1 message with different kind of data type (uint8_t, uint16_t ...) " alt="" coords="164,112,395,141"/>
-<area shape="rect" id="node6" href="$class_l_x_m32.html#a4087402e009dd3be18765caac410d412" title="LXM32::set_mode" alt="" coords="204,165,355,195"/>
-<area shape="rect" id="node4" href="$class_canopen__socket.html#a52a0dcf2d0f5f7708f73af80fab0d610" title="templated function to send CAN message. " alt="" coords="445,59,671,88"/>
-<area shape="rect" id="node7" href="$class_canopen__socket.html#a07d81bd345670ed859cc07f21b8ecbe3" title="templated function to send SDO message with different kind of data type (uint8_t, uint16_t ..." alt="" coords="443,165,673,195"/>
-</map>

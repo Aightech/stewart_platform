@@ -1,6 +1,0 @@
-<map id="stp::Gnuplot_sim" name="stp::Gnuplot_sim">
-<area shape="rect" id="node2" href="$classstp_1_1_model.html" title="stp::Model" alt="" coords="555,5,649,35"/>
-<area shape="rect" id="node3" href="$structstp_1_1_gnuplot__sim_1_1_plot.html" title="stp::Gnuplot_sim::Plot" alt="" coords="513,59,691,88"/>
-<area shape="rect" id="node4" href="$classgnuplotio_1_1_gnuplot.html" title="gnuplotio::Gnuplot" alt="" coords="291,59,443,88"/>
-<area shape="rect" id="node5" href="$structgnuplotio_1_1_file_handle_wrapper.html" title="gnuplotio::FileHandleWrapper" alt="" coords="5,23,241,52"/>
-</map>

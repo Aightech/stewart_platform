@@ -1,3 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structgnuplotio_1_1_binfmt_sender_3_01_t_00_01typename_01boost_1_1enable__if_3_01boost_1_1mpl_1_e9270e5cb86823566a0af3940aa51061.html" title="gnuplotio::BinfmtSender\l\&lt; T, typename boost::enable\l_if\&lt; boost::mpl::and_\&lt; is\l_boost_tuple\&lt; T \&gt;, boost::mpl\l::not_\&lt; is_boost_tuple_nulltype\l\&lt; typename T::tail_type \&gt; \&gt; \&gt; \&gt;::type \&gt;" alt="" coords="5,5,296,121"/>
-</map>

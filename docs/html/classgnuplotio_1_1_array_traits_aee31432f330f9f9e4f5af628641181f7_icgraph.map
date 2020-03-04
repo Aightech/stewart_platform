@@ -1,7 +1,0 @@
-<map id="gnuplotio::ArrayTraits::get_range" name="gnuplotio::ArrayTraits::get_range">
-<area shape="rect" id="node2" href="$classgnuplotio_1_1_iterator_range.html#a34ef78d431ad8a643d412851016b2122" title="gnuplotio::IteratorRange\l::deref_subiter" alt="" coords="200,5,339,41"/>
-<area shape="rect" id="node3" href="$namespacegnuplotio.html#a64984827dd8debb9098ad1afdde8e409" title="gnuplotio::get_columns\l_range" alt="" coords="204,65,335,101"/>
-<area shape="rect" id="node5" href="$classgnuplotio_1_1_array_traits_3_01_t_00_01typename_01boost_1_1enable__if_3_01boost_1_1mpl_1_1ad3fa8e75dccbaae12a06d17831678a88.html#ad0485dd16a9d54a4eb75bf3e75b1facd" title="gnuplotio::ArrayTraits\l\&lt; T, typename boost::enable\l_if\&lt; boost::mpl::and_\&lt; is\l_boost_tuple\&lt; T \&gt;, is_boost\l_tuple_nulltype\&lt; typename T\l::tail_type \&gt; \&gt; \&gt;::type \&gt;::get_range" alt="" coords="177,125,361,209"/>
-<area shape="rect" id="node6" href="$namespacegnuplotio.html#aef147f3d42f3f2c89cc4c895b8494150" title="gnuplotio::handle_colunwrap_tag" alt="" coords="180,234,359,258"/>
-<area shape="rect" id="node4" href="$namespacegnuplotio.html#a3b8981d3f39de8a058b5f18484f06c3c" title="gnuplotio::handle_colunwrap_tag" alt="" coords="409,71,588,95"/>
-</map>

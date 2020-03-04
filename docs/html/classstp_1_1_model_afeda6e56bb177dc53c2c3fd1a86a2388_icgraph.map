@@ -1,8 +1,0 @@
-<map id="stp::Model::compute_R" name="stp::Model::compute_R">
-<area shape="rect" id="node2" href="$classstp_1_1_model.html#a771583e4fa62890a4c86b30ada77a9e5" title="stp::Model::Model" alt="" coords="552,5,659,29"/>
-<area shape="rect" id="node3" href="$classstp_1_1_model.html#a553d9f7f63c97eba26e3522a73531dc1" title="stp::Model::new_pos" alt="" coords="185,55,305,79"/>
-<area shape="rect" id="node4" href="$classstp_1_1_gnuplot__sim.html#a510b50f1120459f9eb7684f249ed58ca" title="stp::Gnuplot_sim::new_pos" alt="" coords="353,103,504,127"/>
-<area shape="rect" id="node6" href="$classstp_1_1_platform.html#af0ea4b19f21849974bb25b46d9276e84" title="stp::Platform::new_pos" alt="" coords="363,151,494,175"/>
-<area shape="rect" id="node7" href="$classstp_1_1_model.html#a732e1d29e24600760b53a8e126bb7906" title="stp::Model::init_pos" alt="" coords="372,55,485,79"/>
-<area shape="rect" id="node5" href="$src_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="583,79,628,103"/>
-</map>

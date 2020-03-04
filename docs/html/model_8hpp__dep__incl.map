@@ -1,7 +1,0 @@
-<map id="include/model.hpp" name="include/model.hpp">
-<area shape="rect" id="node2" href="$gnuplot__sim_8hpp.html" title="include/gnuplot_sim.hpp" alt="" coords="71,83,267,112"/>
-<area shape="rect" id="node5" href="$platform_8hpp.html" title="include/platform.hpp" alt="" coords="291,83,457,112"/>
-<area shape="rect" id="node6" href="$model_8cpp.html" title="src/model.cpp" alt="" coords="481,83,603,112"/>
-<area shape="rect" id="node3" href="$gnuplot__sim_8cpp.html" title="src/gnuplot_sim.cpp" alt="" coords="5,160,169,189"/>
-<area shape="rect" id="node4" href="$src_2main_8cpp.html" title="src/main.cpp" alt="" coords="194,160,306,189"/>
-</map>

@@ -1,8 +1,0 @@
-<map id="Canopen_socket::send_msg" name="Canopen_socket::send_msg">
-<area shape="rect" id="node2" href="$class_canopen__socket.html#a835dea5a2888f8e689e587651e5f4edd" title="templated function to send NMT CAN message. " alt="" coords="211,29,372,53"/>
-<area shape="rect" id="node7" href="$class_canopen__socket.html#abfb76ebe139e5c32cf0a5f280aea33d6" title="templated function to send PDO message with different kind of data type (uint8_t, uint16_t ..." alt="" coords="211,77,371,101"/>
-<area shape="rect" id="node3" href="$class_l_x_m32.html#ae15a405ad09357b6dd0296db5bbce92d" title="LXM32::start" alt="" coords="420,5,503,29"/>
-<area shape="rect" id="node6" href="$class_l_x_m32.html#a73364111a5c2be2d60b7456704f7b9a8" title="LXM32::stop" alt="" coords="420,53,503,77"/>
-<area shape="rect" id="node4" href="$classstp_1_1_platform.html#a29151c99e9b53ff150f802a27c9c3eaa" title="stp::Platform::init\l_drivers" alt="" coords="715,23,816,59"/>
-<area shape="rect" id="node5" href="$class_l_x_m32.html#a0a18e2b7e7d312156457c5a5b00def2e" title="return true if the can interface is available " alt="" coords="551,53,667,77"/>
-</map>

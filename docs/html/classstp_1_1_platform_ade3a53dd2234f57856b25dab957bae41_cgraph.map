@@ -1,4 +1,0 @@
-<map id="stp::Platform::update_platform" name="stp::Platform::update_platform">
-<area shape="rect" id="node2" href="$class_l_x_m32.html#a3b470e3d484fc0fb2a208df10a8e29e7" title="LXM32::new_pos" alt="" coords="175,11,280,35"/>
-<area shape="rect" id="node3" href="$class_canopen__socket.html#a7450dea468619c57c7a3eda7c69bcafa" title="templated function to send PDO1 message with different kind of data type (uint8_t, uint16_t ...) " alt="" coords="328,11,488,35"/>
-</map>
