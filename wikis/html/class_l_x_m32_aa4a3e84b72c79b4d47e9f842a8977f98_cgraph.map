@@ -1,0 +1,4 @@
+<map id="LXM32::LXM32" name="LXM32::LXM32">
+<area shape="rect" id="node2" href="$class_canopen__socket.html#a57b7653675abfcaf690027f8d3fefc8c" title="return true if the can interface is available " alt="" coords="219,5,382,52"/>
+<area shape="rect" id="node3" href="$class_canopen__socket.html#a07d81bd345670ed859cc07f21b8ecbe3" title="templated function to send SDO message with different kind of data type (uint8_t, uint16_t ..." alt="" coords="185,77,416,106"/>
+</map>

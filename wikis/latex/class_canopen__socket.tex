@@ -1,0 +1,552 @@
+\hypertarget{class_canopen__socket}{}\section{Canopen\+\_\+socket Class Reference}
+\label{class_canopen__socket}\index{Canopen\+\_\+socket@{Canopen\+\_\+socket}}
+
+
+Canopen object able to send command through a C\+AN interface using the U\+N\+IX socket.  
+
+
+
+
+{\ttfamily \#include $<$canopen\+\_\+socket.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_canopen__socket_a5ac330ffe00a414d7b2a1e393b3f2113}{Canopen\+\_\+socket} (const char $\ast$ifname, bool verbose=false)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_canopen__socket_a897638e8ede53e4302568a66c87eb914}{Canopen\+\_\+socket} (const char $\ast$ifname, uint32\+\_\+t C\+O\+B\+ID, bool verbose=false)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+bool \hyperlink{class_canopen__socket_a57b7653675abfcaf690027f8d3fefc8c}{is\+\_\+available} ()
+\begin{DoxyCompactList}\small\item\em return true if the can interface is available \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T  = uint64\+\_\+t$>$ }\\int32\+\_\+t \hyperlink{class_canopen__socket_a07d81bd345670ed859cc07f21b8ecbe3}{send\+\_\+\+S\+DO} (uint8\+\_\+t node\+ID, bool w, uint32\+\_\+t index, T \&data=A\+V\+AL)
+\begin{DoxyCompactList}\small\item\em templated function to send S\+DO message with different kind of data type (uint8\+\_\+t, uint16\+\_\+t ...) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T  = uint64\+\_\+t$>$ }\\int32\+\_\+t \hyperlink{class_canopen__socket_a24d92b73c10d954c9c7dda3ca16173ef}{send\+\_\+\+S\+DO} (uint8\+\_\+t node\+ID, bool w, uint16\+\_\+t index, uint8\+\_\+t subindex, T \&data=A\+V\+AL)
+\begin{DoxyCompactList}\small\item\em templated function to send S\+DO message with different kind of data type (uint8\+\_\+t, uint16\+\_\+t ...) \end{DoxyCompactList}\item 
+{\footnotesize template$<$uint8\+\_\+t N, uint8\+\_\+t U = R\+\_\+\+P\+DO$>$ }\\int32\+\_\+t \hyperlink{class_canopen__socket_aa3cb0686ca837db520281613741e5776}{set\+\_\+\+P\+DO} (uint8\+\_\+t node\+ID)
+\item 
+{\footnotesize template$<$uint8\+\_\+t N, typename T , typename S  = uint64\+\_\+t$>$ }\\int32\+\_\+t \hyperlink{class_canopen__socket_a7450dea468619c57c7a3eda7c69bcafa}{send\+\_\+\+P\+DO} (uint8\+\_\+t node\+ID, T data1, S data2=0)
+\begin{DoxyCompactList}\small\item\em templated function to send P\+D\+O1 message with different kind of data type (uint8\+\_\+t, uint16\+\_\+t ...) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename S  = uint64\+\_\+t$>$ }\\int32\+\_\+t \hyperlink{class_canopen__socket_abfb76ebe139e5c32cf0a5f280aea33d6}{send\+\_\+\+P\+DO} (uint8\+\_\+t pdo\+\_\+n, uint8\+\_\+t node\+ID, T data1, S data2=0)
+\begin{DoxyCompactList}\small\item\em templated function to send P\+DO message with different kind of data type (uint8\+\_\+t, uint16\+\_\+t ...) \end{DoxyCompactList}\item 
+int32\+\_\+t \hyperlink{class_canopen__socket_a835dea5a2888f8e689e587651e5f4edd}{send\+\_\+\+N\+MT} (uint16\+\_\+t msg)
+\begin{DoxyCompactList}\small\item\em templated function to send N\+MT C\+AN message. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename S  = uint64\+\_\+t$>$ }\\int32\+\_\+t \hyperlink{class_canopen__socket_a52a0dcf2d0f5f7708f73af80fab0d610}{send\+\_\+msg} (uint32\+\_\+t C\+O\+B\+\_\+\+ID, T data1, S data2=0)
+\begin{DoxyCompactList}\small\item\em templated function to send C\+AN message. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename S  = uint64\+\_\+t$>$ }\\int32\+\_\+t \hyperlink{class_canopen__socket_a50f06a4b2c2f43728904cd4b33374cec}{recv} (T \&data1, S \&data2=A\+V\+AL)
+\begin{DoxyCompactList}\small\item\em templated function to read message with different kind of data type (uint8\+\_\+t, uint16\+\_\+t ...) \end{DoxyCompactList}\item 
+void \hyperlink{class_canopen__socket_a61ae3a827e06354d04f20c224aacf717}{print\+\_\+frame} (struct can\+\_\+frame frame)
+\begin{DoxyCompactList}\small\item\em Function to print S\+DO message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_canopen__socket_acc89d9cb40b8b999b0f376a0c7206394}{m\+\_\+socket}
+\item 
+char \hyperlink{class_canopen__socket_ad49a1354ba3384f1414f5841a972114e}{m\+\_\+ifname} \mbox{[}20\mbox{]}
+\item 
+struct can\+\_\+filter \hyperlink{class_canopen__socket_a4f1fd71caed91a115169596d401010c9}{m\+\_\+rfilter} \mbox{[}1\mbox{]}
+\item 
+struct sockaddr\+\_\+can \hyperlink{class_canopen__socket_a5a97bd26a92fb94c9a662e30c7d4a490}{m\+\_\+addr}
+\item 
+struct can\+\_\+frame \hyperlink{class_canopen__socket_a3ef799f7984741623f0ccf5cfd0c6c24}{m\+\_\+frame}
+\item 
+struct ifreq \hyperlink{class_canopen__socket_a7d62a0470dce8d1d7d45dbc956c2226a}{m\+\_\+ifr}
+\item 
+bool \hyperlink{class_canopen__socket_acac0d3984deafb27f4d6a2f96005c6b9}{m\+\_\+verbose}
+\item 
+bool \hyperlink{class_canopen__socket_a117c72a5f32b1155c74d9435abdde88f}{m\+\_\+ifavailable}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Canopen object able to send command through a C\+AN interface using the U\+N\+IX socket. 
+
+Definition at line 50 of file canopen\+\_\+socket.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_canopen__socket_a5ac330ffe00a414d7b2a1e393b3f2113}\label{class_canopen__socket_a5ac330ffe00a414d7b2a1e393b3f2113}} 
+\index{Canopen\+\_\+socket@{Canopen\+\_\+socket}!Canopen\+\_\+socket@{Canopen\+\_\+socket}}
+\index{Canopen\+\_\+socket@{Canopen\+\_\+socket}!Canopen\+\_\+socket@{Canopen\+\_\+socket}}
+\subsubsection{\texorpdfstring{Canopen\+\_\+socket()}{Canopen\_socket()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Canopen\+\_\+socket\+::\+Canopen\+\_\+socket (\begin{DoxyParamCaption}\item[{const char $\ast$}]{ifname,  }\item[{bool}]{verbose = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ifname} & \+: Name of the can interface ex\+:\char`\"{}can0\char`\"{} \\
+\hline
+{\em verbose} & \+: Display the different message sent. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 3 of file canopen\+\_\+socket.\+cpp.
+
+
+
+References m\+\_\+addr, m\+\_\+ifavailable, m\+\_\+ifname, m\+\_\+ifr, and m\+\_\+socket.
+
+\mbox{\Hypertarget{class_canopen__socket_a897638e8ede53e4302568a66c87eb914}\label{class_canopen__socket_a897638e8ede53e4302568a66c87eb914}} 
+\index{Canopen\+\_\+socket@{Canopen\+\_\+socket}!Canopen\+\_\+socket@{Canopen\+\_\+socket}}
+\index{Canopen\+\_\+socket@{Canopen\+\_\+socket}!Canopen\+\_\+socket@{Canopen\+\_\+socket}}
+\subsubsection{\texorpdfstring{Canopen\+\_\+socket()}{Canopen\_socket()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Canopen\+\_\+socket\+::\+Canopen\+\_\+socket (\begin{DoxyParamCaption}\item[{const char $\ast$}]{ifname,  }\item[{uint32\+\_\+t}]{C\+O\+B\+ID,  }\item[{bool}]{verbose = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ifname} & \+: Name of the can interface ex\+:\char`\"{}can0\char`\"{} \\
+\hline
+{\em C\+O\+B\+ID} & \+: Filtering only frame with this ID. \\
+\hline
+{\em verbose} & \+: Display the different message sent. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 66 of file canopen\+\_\+socket.\+h.
+
+
+
+References m\+\_\+rfilter, and m\+\_\+socket.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_canopen__socket_a57b7653675abfcaf690027f8d3fefc8c}\label{class_canopen__socket_a57b7653675abfcaf690027f8d3fefc8c}} 
+\index{Canopen\+\_\+socket@{Canopen\+\_\+socket}!is\+\_\+available@{is\+\_\+available}}
+\index{is\+\_\+available@{is\+\_\+available}!Canopen\+\_\+socket@{Canopen\+\_\+socket}}
+\subsubsection{\texorpdfstring{is\+\_\+available()}{is\_available()}}
+{\footnotesize\ttfamily bool Canopen\+\_\+socket\+::is\+\_\+available (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+return true if the can interface is available 
+
+
+
+Definition at line 87 of file canopen\+\_\+socket.\+h.
+
+
+
+References m\+\_\+ifavailable.
+
+
+
+Referenced by L\+X\+M32\+::\+L\+X\+M32().
+
+\mbox{\Hypertarget{class_canopen__socket_a61ae3a827e06354d04f20c224aacf717}\label{class_canopen__socket_a61ae3a827e06354d04f20c224aacf717}} 
+\index{Canopen\+\_\+socket@{Canopen\+\_\+socket}!print\+\_\+frame@{print\+\_\+frame}}
+\index{print\+\_\+frame@{print\+\_\+frame}!Canopen\+\_\+socket@{Canopen\+\_\+socket}}
+\subsubsection{\texorpdfstring{print\+\_\+frame()}{print\_frame()}}
+{\footnotesize\ttfamily void Canopen\+\_\+socket\+::print\+\_\+frame (\begin{DoxyParamCaption}\item[{struct can\+\_\+frame}]{frame }\end{DoxyParamCaption})}
+
+
+
+Function to print S\+DO message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame} & \+:C\+AN frame to print \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 36 of file canopen\+\_\+socket.\+cpp.
+
+\mbox{\Hypertarget{class_canopen__socket_a50f06a4b2c2f43728904cd4b33374cec}\label{class_canopen__socket_a50f06a4b2c2f43728904cd4b33374cec}} 
+\index{Canopen\+\_\+socket@{Canopen\+\_\+socket}!recv@{recv}}
+\index{recv@{recv}!Canopen\+\_\+socket@{Canopen\+\_\+socket}}
+\subsubsection{\texorpdfstring{recv()}{recv()}}
+{\footnotesize\ttfamily template$<$typename T , typename S  = uint64\+\_\+t$>$ \\
+int32\+\_\+t Canopen\+\_\+socket\+::recv (\begin{DoxyParamCaption}\item[{T \&}]{data1,  }\item[{S \&}]{data2 = {\ttfamily AVAL} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+templated function to read message with different kind of data type (uint8\+\_\+t, uint16\+\_\+t ...) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em T} & \+: Data type. \\
+\hline
+{\em S} & \+: Data type. \\
+\hline
+{\em data1} & \+: The data to read, can be any data type. (uint8\+\_\+t, uint16\+\_\+t ...) \\
+\hline
+{\em data2} & \+: The data to read, can be any data type. (uint8\+\_\+t, uint16\+\_\+t ...) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return -\/1\+:couldn\textquotesingle{}t read -\/2\+:couldn\textquotesingle{}t read full frame $>$=0\+:frame C\+AN ID 
+\end{DoxyReturn}
+
+
+Definition at line 265 of file canopen\+\_\+socket.\+h.
+
+\mbox{\Hypertarget{class_canopen__socket_a52a0dcf2d0f5f7708f73af80fab0d610}\label{class_canopen__socket_a52a0dcf2d0f5f7708f73af80fab0d610}} 
+\index{Canopen\+\_\+socket@{Canopen\+\_\+socket}!send\+\_\+msg@{send\+\_\+msg}}
+\index{send\+\_\+msg@{send\+\_\+msg}!Canopen\+\_\+socket@{Canopen\+\_\+socket}}
+\subsubsection{\texorpdfstring{send\+\_\+msg()}{send\_msg()}}
+{\footnotesize\ttfamily template$<$typename T , typename S  = uint64\+\_\+t$>$ \\
+int32\+\_\+t Canopen\+\_\+socket\+::send\+\_\+msg (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{C\+O\+B\+\_\+\+ID,  }\item[{T}]{data1,  }\item[{S}]{data2 = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+templated function to send C\+AN message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em T} & \+: Data type. \\
+\hline
+{\em S} & \+: Data type. \\
+\hline
+{\em node\+ID} & \+: C\+O\+B\+ID of the messae to send \\
+\hline
+{\em data1} & \+: The data to write, can be any data type. (uint8\+\_\+t, uint16\+\_\+t ...) \\
+\hline
+{\em data2} & \+: The data to write, can be any data type. (uint8\+\_\+t, uint16\+\_\+t ...) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return number of bytes written 
+\end{DoxyReturn}
+
+
+Definition at line 239 of file canopen\+\_\+socket.\+h.
+
+
+
+References m\+\_\+frame, and m\+\_\+socket.
+
+
+
+Referenced by send\+\_\+\+N\+M\+T(), and send\+\_\+\+P\+D\+O().
+
+\mbox{\Hypertarget{class_canopen__socket_a835dea5a2888f8e689e587651e5f4edd}\label{class_canopen__socket_a835dea5a2888f8e689e587651e5f4edd}} 
+\index{Canopen\+\_\+socket@{Canopen\+\_\+socket}!send\+\_\+\+N\+MT@{send\+\_\+\+N\+MT}}
+\index{send\+\_\+\+N\+MT@{send\+\_\+\+N\+MT}!Canopen\+\_\+socket@{Canopen\+\_\+socket}}
+\subsubsection{\texorpdfstring{send\+\_\+\+N\+M\+T()}{send\_NMT()}}
+{\footnotesize\ttfamily int32\+\_\+t Canopen\+\_\+socket\+::send\+\_\+\+N\+MT (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+templated function to send N\+MT C\+AN message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & \+: N\+MT message to send. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return number of bytes written. 
+\end{DoxyReturn}
+
+
+Definition at line 223 of file canopen\+\_\+socket.\+h.
+
+
+
+References send\+\_\+msg().
+
+
+
+Referenced by L\+X\+M32\+::start(), and L\+X\+M32\+::stop().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_canopen__socket_a835dea5a2888f8e689e587651e5f4edd_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_canopen__socket_a7450dea468619c57c7a3eda7c69bcafa}\label{class_canopen__socket_a7450dea468619c57c7a3eda7c69bcafa}} 
+\index{Canopen\+\_\+socket@{Canopen\+\_\+socket}!send\+\_\+\+P\+DO@{send\+\_\+\+P\+DO}}
+\index{send\+\_\+\+P\+DO@{send\+\_\+\+P\+DO}!Canopen\+\_\+socket@{Canopen\+\_\+socket}}
+\subsubsection{\texorpdfstring{send\+\_\+\+P\+D\+O()}{send\_PDO()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$uint8\+\_\+t N, typename T , typename S  = uint64\+\_\+t$>$ \\
+int32\+\_\+t Canopen\+\_\+socket\+::send\+\_\+\+P\+DO (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{node\+ID,  }\item[{T}]{data1,  }\item[{S}]{data2 = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+templated function to send P\+D\+O1 message with different kind of data type (uint8\+\_\+t, uint16\+\_\+t ...) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em N} & \+: Number of the P\+DO. \\
+\hline
+{\em T} & \+: Data type. \\
+\hline
+{\em node\+ID} & \+: ID of the destination node. \mbox{[}0-\/127\mbox{]} \\
+\hline
+{\em data1} & \+: The data to write, can be any data type. (uint8\+\_\+t, uint16\+\_\+t ...) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return number of bytes written. 
+\end{DoxyReturn}
+
+
+Definition at line 195 of file canopen\+\_\+socket.\+h.
+
+
+
+Referenced by L\+X\+M32\+::new\+\_\+pos(), L\+X\+M32\+::start(), and L\+X\+M32\+::stop().
+
+\mbox{\Hypertarget{class_canopen__socket_abfb76ebe139e5c32cf0a5f280aea33d6}\label{class_canopen__socket_abfb76ebe139e5c32cf0a5f280aea33d6}} 
+\index{Canopen\+\_\+socket@{Canopen\+\_\+socket}!send\+\_\+\+P\+DO@{send\+\_\+\+P\+DO}}
+\index{send\+\_\+\+P\+DO@{send\+\_\+\+P\+DO}!Canopen\+\_\+socket@{Canopen\+\_\+socket}}
+\subsubsection{\texorpdfstring{send\+\_\+\+P\+D\+O()}{send\_PDO()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename S  = uint64\+\_\+t$>$ \\
+int32\+\_\+t Canopen\+\_\+socket\+::send\+\_\+\+P\+DO (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pdo\+\_\+n,  }\item[{uint8\+\_\+t}]{node\+ID,  }\item[{T}]{data1,  }\item[{S}]{data2 = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+templated function to send P\+DO message with different kind of data type (uint8\+\_\+t, uint16\+\_\+t ...) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em T} & \+: Data type. \\
+\hline
+{\em S} & \+: Data type. \\
+\hline
+{\em pdo\+\_\+n} & \+: Number of the P\+DO to send \\
+\hline
+{\em node\+ID} & \+: ID of the destination node. \mbox{[}0-\/127\mbox{]} \\
+\hline
+{\em data1} & \+: The data to write, can be any data type. (uint8\+\_\+t, uint16\+\_\+t ...) \\
+\hline
+{\em data2} & \+: The data to write, can be any data type. (uint8\+\_\+t, uint16\+\_\+t ...) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return number of bytes written. 
+\end{DoxyReturn}
+
+
+Definition at line 212 of file canopen\+\_\+socket.\+h.
+
+
+
+References send\+\_\+msg().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_canopen__socket_abfb76ebe139e5c32cf0a5f280aea33d6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_canopen__socket_a07d81bd345670ed859cc07f21b8ecbe3}\label{class_canopen__socket_a07d81bd345670ed859cc07f21b8ecbe3}} 
+\index{Canopen\+\_\+socket@{Canopen\+\_\+socket}!send\+\_\+\+S\+DO@{send\+\_\+\+S\+DO}}
+\index{send\+\_\+\+S\+DO@{send\+\_\+\+S\+DO}!Canopen\+\_\+socket@{Canopen\+\_\+socket}}
+\subsubsection{\texorpdfstring{send\+\_\+\+S\+D\+O()}{send\_SDO()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T  = uint64\+\_\+t$>$ \\
+int32\+\_\+t Canopen\+\_\+socket\+::send\+\_\+\+S\+DO (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{node\+ID,  }\item[{bool}]{w,  }\item[{uint32\+\_\+t}]{index,  }\item[{T \&}]{data = {\ttfamily AVAL} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+templated function to send S\+DO message with different kind of data type (uint8\+\_\+t, uint16\+\_\+t ...) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\+ID} & \+: ID of the destination node. \mbox{[}0-\/127\mbox{]} \\
+\hline
+{\em w} & \+: Set to S\+D\+O\+\_\+W or S\+D\+O\+\_\+R to respectively write or read a parameter. \\
+\hline
+{\em index} & \+: Register index with the format (unit32\+\_\+t)\+:0x$\vert$(uint16\+\_\+t)index$\vert$(uint8\+\_\+t)00$\vert$ (uint16\+\_\+t)subindex$\vert$ \\
+\hline
+{\em data} & \+: The data to write, can be any data type. (uint8\+\_\+t, uint16\+\_\+t ...) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return number of bytes written. 
+\end{DoxyReturn}
+
+
+Definition at line 103 of file canopen\+\_\+socket.\+h.
+
+
+
+Referenced by L\+X\+M32\+::get\+\_\+param(), L\+X\+M32\+::init(), L\+X\+M32\+::\+L\+X\+M32(), main(), L\+X\+M32\+::set\+\_\+mode(), set\+\_\+\+P\+D\+O(), L\+X\+M32\+::set\+Accel(), L\+X\+M32\+::set\+Decel(), and L\+X\+M32\+::set\+Speed().
+
+\mbox{\Hypertarget{class_canopen__socket_a24d92b73c10d954c9c7dda3ca16173ef}\label{class_canopen__socket_a24d92b73c10d954c9c7dda3ca16173ef}} 
+\index{Canopen\+\_\+socket@{Canopen\+\_\+socket}!send\+\_\+\+S\+DO@{send\+\_\+\+S\+DO}}
+\index{send\+\_\+\+S\+DO@{send\+\_\+\+S\+DO}!Canopen\+\_\+socket@{Canopen\+\_\+socket}}
+\subsubsection{\texorpdfstring{send\+\_\+\+S\+D\+O()}{send\_SDO()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T  = uint64\+\_\+t$>$ \\
+int32\+\_\+t Canopen\+\_\+socket\+::send\+\_\+\+S\+DO (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{node\+ID,  }\item[{bool}]{w,  }\item[{uint16\+\_\+t}]{index,  }\item[{uint8\+\_\+t}]{subindex,  }\item[{T \&}]{data = {\ttfamily AVAL} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+templated function to send S\+DO message with different kind of data type (uint8\+\_\+t, uint16\+\_\+t ...) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\+ID} & \+: ID of the destination node. \mbox{[}0-\/127\mbox{]} \\
+\hline
+{\em w} & \+: Set to S\+D\+O\+\_\+W or S\+D\+O\+\_\+R to respectively write or read a parameter. \\
+\hline
+{\em index} & \+: Register index. \\
+\hline
+{\em subindex} & \+: Register subindex. \\
+\hline
+{\em data} & \+: The data to write, can be any data type. (uint8\+\_\+t, uint16\+\_\+t ...) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return number of bytes written. 
+\end{DoxyReturn}
+
+
+Definition at line 120 of file canopen\+\_\+socket.\+h.
+
+\mbox{\Hypertarget{class_canopen__socket_aa3cb0686ca837db520281613741e5776}\label{class_canopen__socket_aa3cb0686ca837db520281613741e5776}} 
+\index{Canopen\+\_\+socket@{Canopen\+\_\+socket}!set\+\_\+\+P\+DO@{set\+\_\+\+P\+DO}}
+\index{set\+\_\+\+P\+DO@{set\+\_\+\+P\+DO}!Canopen\+\_\+socket@{Canopen\+\_\+socket}}
+\subsubsection{\texorpdfstring{set\+\_\+\+P\+D\+O()}{set\_PDO()}}
+{\footnotesize\ttfamily template$<$uint8\+\_\+t N, uint8\+\_\+t U = R\+\_\+\+P\+DO$>$ \\
+int32\+\_\+t Canopen\+\_\+socket\+::set\+\_\+\+P\+DO (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{node\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 174 of file canopen\+\_\+socket.\+h.
+
+
+
+References R\+\_\+\+P\+DO, S\+D\+O\+\_\+W, and send\+\_\+\+S\+D\+O().
+
+
+
+Referenced by L\+X\+M32\+::init().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_canopen__socket_aa3cb0686ca837db520281613741e5776_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_canopen__socket_a5a97bd26a92fb94c9a662e30c7d4a490}\label{class_canopen__socket_a5a97bd26a92fb94c9a662e30c7d4a490}} 
+\index{Canopen\+\_\+socket@{Canopen\+\_\+socket}!m\+\_\+addr@{m\+\_\+addr}}
+\index{m\+\_\+addr@{m\+\_\+addr}!Canopen\+\_\+socket@{Canopen\+\_\+socket}}
+\subsubsection{\texorpdfstring{m\+\_\+addr}{m\_addr}}
+{\footnotesize\ttfamily struct sockaddr\+\_\+can Canopen\+\_\+socket\+::m\+\_\+addr\hspace{0.3cm}{\ttfamily [private]}}
+
+C\+AN address 
+
+Definition at line 303 of file canopen\+\_\+socket.\+h.
+
+
+
+Referenced by Canopen\+\_\+socket().
+
+\mbox{\Hypertarget{class_canopen__socket_a3ef799f7984741623f0ccf5cfd0c6c24}\label{class_canopen__socket_a3ef799f7984741623f0ccf5cfd0c6c24}} 
+\index{Canopen\+\_\+socket@{Canopen\+\_\+socket}!m\+\_\+frame@{m\+\_\+frame}}
+\index{m\+\_\+frame@{m\+\_\+frame}!Canopen\+\_\+socket@{Canopen\+\_\+socket}}
+\subsubsection{\texorpdfstring{m\+\_\+frame}{m\_frame}}
+{\footnotesize\ttfamily struct can\+\_\+frame Canopen\+\_\+socket\+::m\+\_\+frame\hspace{0.3cm}{\ttfamily [private]}}
+
+C\+AN frame 
+
+Definition at line 304 of file canopen\+\_\+socket.\+h.
+
+
+
+Referenced by send\+\_\+msg().
+
+\mbox{\Hypertarget{class_canopen__socket_a117c72a5f32b1155c74d9435abdde88f}\label{class_canopen__socket_a117c72a5f32b1155c74d9435abdde88f}} 
+\index{Canopen\+\_\+socket@{Canopen\+\_\+socket}!m\+\_\+ifavailable@{m\+\_\+ifavailable}}
+\index{m\+\_\+ifavailable@{m\+\_\+ifavailable}!Canopen\+\_\+socket@{Canopen\+\_\+socket}}
+\subsubsection{\texorpdfstring{m\+\_\+ifavailable}{m\_ifavailable}}
+{\footnotesize\ttfamily bool Canopen\+\_\+socket\+::m\+\_\+ifavailable\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 308 of file canopen\+\_\+socket.\+h.
+
+
+
+Referenced by Canopen\+\_\+socket(), and is\+\_\+available().
+
+\mbox{\Hypertarget{class_canopen__socket_ad49a1354ba3384f1414f5841a972114e}\label{class_canopen__socket_ad49a1354ba3384f1414f5841a972114e}} 
+\index{Canopen\+\_\+socket@{Canopen\+\_\+socket}!m\+\_\+ifname@{m\+\_\+ifname}}
+\index{m\+\_\+ifname@{m\+\_\+ifname}!Canopen\+\_\+socket@{Canopen\+\_\+socket}}
+\subsubsection{\texorpdfstring{m\+\_\+ifname}{m\_ifname}}
+{\footnotesize\ttfamily char Canopen\+\_\+socket\+::m\+\_\+ifname\mbox{[}20\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+C\+AN interface name 
+
+Definition at line 299 of file canopen\+\_\+socket.\+h.
+
+
+
+Referenced by Canopen\+\_\+socket().
+
+\mbox{\Hypertarget{class_canopen__socket_a7d62a0470dce8d1d7d45dbc956c2226a}\label{class_canopen__socket_a7d62a0470dce8d1d7d45dbc956c2226a}} 
+\index{Canopen\+\_\+socket@{Canopen\+\_\+socket}!m\+\_\+ifr@{m\+\_\+ifr}}
+\index{m\+\_\+ifr@{m\+\_\+ifr}!Canopen\+\_\+socket@{Canopen\+\_\+socket}}
+\subsubsection{\texorpdfstring{m\+\_\+ifr}{m\_ifr}}
+{\footnotesize\ttfamily struct ifreq Canopen\+\_\+socket\+::m\+\_\+ifr\hspace{0.3cm}{\ttfamily [private]}}
+
+C\+AN interface 
+
+Definition at line 305 of file canopen\+\_\+socket.\+h.
+
+
+
+Referenced by Canopen\+\_\+socket().
+
+\mbox{\Hypertarget{class_canopen__socket_a4f1fd71caed91a115169596d401010c9}\label{class_canopen__socket_a4f1fd71caed91a115169596d401010c9}} 
+\index{Canopen\+\_\+socket@{Canopen\+\_\+socket}!m\+\_\+rfilter@{m\+\_\+rfilter}}
+\index{m\+\_\+rfilter@{m\+\_\+rfilter}!Canopen\+\_\+socket@{Canopen\+\_\+socket}}
+\subsubsection{\texorpdfstring{m\+\_\+rfilter}{m\_rfilter}}
+{\footnotesize\ttfamily struct can\+\_\+filter Canopen\+\_\+socket\+::m\+\_\+rfilter\mbox{[}1\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 301 of file canopen\+\_\+socket.\+h.
+
+
+
+Referenced by Canopen\+\_\+socket().
+
+\mbox{\Hypertarget{class_canopen__socket_acc89d9cb40b8b999b0f376a0c7206394}\label{class_canopen__socket_acc89d9cb40b8b999b0f376a0c7206394}} 
+\index{Canopen\+\_\+socket@{Canopen\+\_\+socket}!m\+\_\+socket@{m\+\_\+socket}}
+\index{m\+\_\+socket@{m\+\_\+socket}!Canopen\+\_\+socket@{Canopen\+\_\+socket}}
+\subsubsection{\texorpdfstring{m\+\_\+socket}{m\_socket}}
+{\footnotesize\ttfamily int Canopen\+\_\+socket\+::m\+\_\+socket\hspace{0.3cm}{\ttfamily [private]}}
+
+Can socket 
+
+Definition at line 298 of file canopen\+\_\+socket.\+h.
+
+
+
+Referenced by Canopen\+\_\+socket(), and send\+\_\+msg().
+
+\mbox{\Hypertarget{class_canopen__socket_acac0d3984deafb27f4d6a2f96005c6b9}\label{class_canopen__socket_acac0d3984deafb27f4d6a2f96005c6b9}} 
+\index{Canopen\+\_\+socket@{Canopen\+\_\+socket}!m\+\_\+verbose@{m\+\_\+verbose}}
+\index{m\+\_\+verbose@{m\+\_\+verbose}!Canopen\+\_\+socket@{Canopen\+\_\+socket}}
+\subsubsection{\texorpdfstring{m\+\_\+verbose}{m\_verbose}}
+{\footnotesize\ttfamily bool Canopen\+\_\+socket\+::m\+\_\+verbose\hspace{0.3cm}{\ttfamily [private]}}
+
+Verbose mode 
+
+Definition at line 307 of file canopen\+\_\+socket.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/lxm32/lib/canopen/include/\hyperlink{canopen__socket_8h}{canopen\+\_\+socket.\+h}\item 
+lib/lxm32/lib/canopen/src/\hyperlink{canopen__socket_8cpp}{canopen\+\_\+socket.\+cpp}\end{DoxyCompactItemize}

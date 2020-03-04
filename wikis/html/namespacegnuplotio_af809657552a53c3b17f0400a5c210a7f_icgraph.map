@@ -1,0 +1,9 @@
+<map id="gnuplotio::handle_organization_tag" name="gnuplotio::handle_organization_tag">
+<area shape="rect" id="node2" href="$namespacegnuplotio.html#affc9cb6a9b6e5630523f0dbf8acdfcc2" title="gnuplotio::handle_organization_tag" alt="" coords="241,77,429,101"/>
+<area shape="rect" id="node3" href="$namespacegnuplotio.html#a1e452d861932700749421ce103ef8d48" title="gnuplotio::top_level\l_array_sender" alt="" coords="279,125,392,161"/>
+<area shape="rect" id="node4" href="$classgnuplotio_1_1_gnuplot.html#ae3f4c07960aa5601cc72158be67f945c" title="gnuplotio::Gnuplot\l::send" alt="" coords="477,5,585,41"/>
+<area shape="rect" id="node5" href="$classgnuplotio_1_1_gnuplot.html#a46c9e01d2030768cd811d2e8dbd10dfa" title="gnuplotio::Gnuplot\l::sendBinary" alt="" coords="477,65,585,101"/>
+<area shape="rect" id="node6" href="$classgnuplotio_1_1_gnuplot.html#a43fe103649ec168b453c43aecdacce81" title="gnuplotio::Gnuplot\l::binfmt" alt="" coords="477,125,585,161"/>
+<area shape="rect" id="node7" href="$classgnuplotio_1_1_gnuplot.html#a9b9980e3b3d7cbb233a989e27468fa55" title="gnuplotio::Gnuplot\l::file" alt="" coords="477,185,585,221"/>
+<area shape="rect" id="node8" href="$classgnuplotio_1_1_gnuplot.html#ad90501e6dbab5379abcd76fd0e2e4ef1" title="gnuplotio::Gnuplot\l::binaryFile" alt="" coords="477,245,585,281"/>
+</map>

@@ -25,3 +25,6 @@
 !/.dir-locals.el
 
 !/.clang-format
+
+!/wikis
+!/wikis/*
