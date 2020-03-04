@@ -7,9 +7,28 @@
 
 stp::Model::Model(double deltas[4], double a, double l)
 {
+
+    /*
+
+           _______
+        _.-'  _. -' '-._
+      .' _.-'     / '-. '.
+     -'-'   d2         '._\
+    /._         /     _.-' |
+   |    '-._    - _.-'     |
+   |d1      ' >+<'         |
+   |    _.-'    - '-._     |
+   '.-'         \     '-._ |
+    '                 .'  /
+     '.          \ .' _.'
+       '-.________-.-'
+
+
+     */
+
     //set the length of the arms and legs
-    m_a = a;
-    m_l = l;
+    m_a = a; //arm of the motor
+    m_l = l; //leg link to the arm and the platform
     m_a2 = a * a;
     m_l2 = l * l;
 
@@ -64,11 +83,10 @@ stp::Model::init_pos()
     for(int i = 0; i < 6; i++) { _alphaI[i] = m_alpha[i]; }
 }
 
-double*
+double *
 stp::Model::new_pos(double T[3], double theta[3])
 {
-  
-    std::cout << "heya" << std::endl;
+
     ////////////
     double T_tmp[3];
     double theta_tmp[3];

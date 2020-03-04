@@ -13,58 +13,16 @@ class Platform : public Model
     Platform(double deltas[4], double a, double l) : Model(deltas, a, l){};
 
     void
-    init_drivers()
-    {
-        m_available = true;
-        for(int i = 0; i < NB_LEGS; i++)
-        {
-
-            motors[i] = new LXM32("can0", i + 1, false));
-	if(motors[i]->is_available())
-            {
-                motors[i]->init();
-                motors[i]->start(MODE_ProfilePosition,
-                                     PPctrl_RELATIVE | PPctrl_ON_DIRECT);
-            }
-            else
-            {
-                std::cout << "Driver n" << i << " unavailable..." << std::endl;
-                m_available = false;
-            }
-
-            m_motor_pos[i] = 0;
-            m_inc[i] = 0;
-        }
-    };
+    init_drivers();
 
     double *
-    new_pos(double T[3], double theta[3])
-    {
-
-        Model::new_pos(T, theta);
-        update_platform();
-        return m_alpha;
-    };
+    new_pos(double T[3], double theta[3]);
 
     void
-    update_platform()
-    {
-        for(int i = 0; i < NB_LEGS; i++)
-        {
-            int i_n = m_motor_lookup[i];
-            m_inc[i_n] = -m_alpha[i] * m_conv - m_motor_pos[i_n];
-            m_motor_pos[i_n] += m_inc[i_n];
-        }
-
-        for(int i = 0; i < NB_LEGS; i++)
-        {
-            std::cout << m_inc[i] << std::endl;
-            motors[i]->new_pos(m_inc[i]);
-        }
-    };
+    update_platform();
 
     private:
-  LXM32* m_motors[NB_LEGS];/*!< Driver of the platform.*/
+    LXM32 *m_motors[NB_LEGS]; /*!< Driver of the platform.*/
     bool m_available;
     int32_t m_motor_pos[NB_LEGS];
     int32_t m_inc[NB_LEGS];
@@ -73,6 +31,6 @@ class Platform : public Model
     int m_motor_lookup[NB_LEGS] = {5, 2, 0, 1, 4, 3};
 };
 
-}; 
+}; // namespace stp
 
 #endif

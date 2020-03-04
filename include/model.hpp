@@ -6,7 +6,6 @@
 
 #include "Lexium32A_canopen.h"
 
-
 namespace stp
 {
 
@@ -27,6 +26,12 @@ class Model
 
     void
     init_pos();
+
+    void
+    set_verbose(bool v = true)
+    {
+        m_verbose = v;
+    };
 
     void
     compute_R(double theta[3]);
@@ -79,8 +84,10 @@ class Model
     double m_alpha_spd[6]; /*!< Rotation speed of the motors. */
 
     double _alphaI[6];
+
+    bool m_verbose = false;
 };
 
-};
+}; // namespace stp
 
 #endif
