@@ -29,7 +29,6 @@ stp::Platform::init_drivers()
 double *
 stp::Platform::new_pos(double T[3], double theta[3])
 {
-
     stp::Model::new_pos(T, theta);
     update_platform();
     return m_alpha;
