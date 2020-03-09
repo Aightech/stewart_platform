@@ -19,7 +19,6 @@ main()
 
     sp.new_pos(T, theta);
 
-    int i = 0;
     while(js.buttonPressed(7)==0)
     {
         T[0] = js.joystickValue(0) / MAX_JOY * TRANS_MAX;
@@ -29,7 +28,6 @@ main()
         theta[1] = js.joystickValue(2) / MAX_JOY * ANG_MAX;
         theta[1] = js.joystickValue(3) / MAX_JOY * ANG_MAX;
 
-        std::cout << i << std::endl;
         sp.new_pos(T, theta);
 
         usleep(10000);
