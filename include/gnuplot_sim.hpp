@@ -2,7 +2,6 @@
 #define _GNUPLOT_SIM_H_
 #define GNUPLOT_ENABLE_PTY
 #include "gnuplot-iostream.h"
-#include "Lexium32A_canopen.h"
 #include "model.hpp"
 
 namespace stp
