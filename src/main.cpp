@@ -1,5 +1,5 @@
-#include "joystick.h"
 #include "gnuplot_sim.hpp"
+#include "joystick.h"
 
 #define MAX_JOY 32767.
 #define ANG_MAX 0.06
@@ -12,14 +12,14 @@ main()
 
     double deltas[4] = {0.63, 0.14, 0.40, 0.075};
     stp::Gnuplot_sim sp(deltas, 0.08, 0.44);
-    
+
     double T[3] = {0, 0, sp.get_T(2)};
     double theta[3] = {0, 0, 0};
 
     sp.init_pos();
     sp.new_pos(T, theta);
 
-    while(js.buttonPressed(7)==0)
+    while(js.buttonPressed(7) == 0)
     {
         T[0] = js.joystickValue(0) / MAX_JOY * TRANS_MAX;
         T[1] = js.joystickValue(1) / MAX_JOY * TRANS_MAX;

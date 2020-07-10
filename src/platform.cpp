@@ -1,6 +1,6 @@
 #include "platform.hpp"
+#include "CANopen_lxm32.h"
 #include <iostream>
-
 void
 stp::Platform::init_drivers()
 {
@@ -8,21 +8,21 @@ stp::Platform::init_drivers()
     for(int i = 0; i < NB_LEGS; i++)
     {
 
-            m_motors[i] = new LXM32("can0", i + 1, false);
-            if(m_motors[i]->is_available())
-            {
-                m_motors[i]->init();
-                m_motors[i]->start(MODE_ProfilePosition,
-                                 PPctrl_RELATIVE | PPctrl_ON_DIRECT);
-            }
-            else
-            {
-                std::cout << "Driver n" << i << " unavailable..." << std::endl;
-                m_available = false;
-            }
+        m_motors[i] = new CANopen::LXM32("can0", i + 1, false);
+        if(m_motors[i]->is_available())
+        {
+            //TODO: initialize the drivers
+            //m_motors[i]->init();
+            //  m_motors[i]->start(MODE_ProfilePosition, PPctrl_RELATIVE | PPctrl_ON_DIRECT);
+        }
+        else
+        {
+            std::cout << "Driver n" << i << " unavailable..." << std::endl;
+            m_available = false;
+        }
 
-            m_motor_pos[i] = 0;
-            m_inc[i] = 0;
+        m_motor_pos[i] = 0;
+        m_inc[i] = 0;
     }
 }
 
@@ -46,8 +46,8 @@ stp::Platform::update_platform()
 
     for(int i = 0; i < NB_LEGS; i++)
     {
-      if(m_verbose)
-        std::cout << m_inc[i] << std::endl;
-      m_motors[i]->new_pos(m_inc[i]);
+        if(m_verbose)
+            std::cout << m_inc[i] << std::endl;
+        m_motors[i]->set_position(m_inc[i]);
     }
 };

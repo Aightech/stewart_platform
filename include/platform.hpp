@@ -1,7 +1,7 @@
 #ifndef _PLATFORM_H_
 #define _PLATFORM_H_
 
-#include "Lexium32A_canopen.h"
+#include "CANopen_lxm32.h"
 #include "model.hpp"
 
 namespace stp
@@ -22,7 +22,7 @@ class Platform : public Model
     update_platform();
 
     private:
-    LXM32 *m_motors[NB_LEGS]; /*!< Driver of the platform.*/
+  CANopen::LXM32 *m_motors[NB_LEGS]; /*!< Driver of the platform.*/
     bool m_available;
     int32_t m_motor_pos[NB_LEGS];
     int32_t m_inc[NB_LEGS];

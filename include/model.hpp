@@ -4,7 +4,6 @@
 #define M_PI 3.14159265358979323846 /* pi */
 #define NB_LEGS 6
 
-#include "Lexium32A_canopen.h"
 
 namespace stp
 {
