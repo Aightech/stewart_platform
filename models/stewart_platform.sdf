@@ -1,0 +1,2330 @@
+<?xml version="1.0" ?>
+
+<sdf version="1.6">
+  <model name="stewart_platform">
+    <pose>0 0 0.2 0 0 0</pose>
+
+	<!-- ** Links Definitions ** -->
+	<!-- * Base Definitions * -->
+	<link name="base_link">
+		<!-- Position -->
+		<pose>0 0   -0.13 0 0 0</pose>
+		<!-- Inertia -->
+		<inertial>
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<mass> 500</mass>
+			<inertia>
+				<ixx>22.77831733771394</ixx>
+				<ixy>0</ixy>
+				<ixz>0</ixz>
+				<iyy>22.77831733771394</iyy>
+				<iyz>0</iyz>
+				<izz>42.824999999999996</izz>
+			</inertia>
+		</inertial>
+		<!-- collision -->
+		<collision name="base_link_colision">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+				<cylinder>
+					<radius> 0.4138840417314975 </radius>
+					<length> 0.02 </length>
+				</cylinder>
+			</geometry>
+			<surface>
+				<contact>
+					<ode>
+						<min_depth>0.001</min_depth>
+						<max_vel>0</max_vel>
+					</ode>
+				</contact>
+				<friction>
+					<ode/>
+				</friction>
+			</surface>
+		</collision>		
+		<!-- Visual -->
+		<visual name="base_link_visual">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+				<cylinder>
+					<radius> 0.4138840417314975 </radius>
+					<length> 0.02 </length>
+				</cylinder>
+			</geometry>
+			<material>
+				<script>
+					<name>Gazebo/DarkGrey</name>
+					<uri>file://media/materials/scripts/gazebo.material</uri>
+				</script>
+			</material>
+		</visual>		
+	</link>
+	
+	<!-- * Base Definitions * -->
+	<link name="platform_link">
+		<!-- Position -->
+		<pose>0 0  0.45  0 0 0</pose>
+		<!-- Inertia -->
+		<inertial>
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<mass> 20</mass>
+			<inertia>
+				<ixx>0.2191117471252045</ixx>
+				<ixy>0</ixy>
+				<ixz>0</ixz>
+				<iyy>0.2191117471252045</iyy>
+				<iyz>0</iyz>
+				<izz>0.3863333333333334</izz>
+			</inertia>
+		</inertial>
+		<!-- collision -->
+		<collision name="platform_link_colision">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+				<cylinder>
+					<radius> 0.1965536398374076 </radius>
+					<length> 0.02 </length>
+				</cylinder>
+			</geometry>
+			<surface>
+				<contact>
+					<ode>
+						<min_depth>0.001</min_depth>
+						<max_vel>0</max_vel>
+					</ode>
+				</contact>
+				<friction>
+					<ode/>
+				</friction>
+			</surface>
+		</collision>		
+		<!-- Visual -->
+		<visual name="platform_link_visual">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+				<cylinder>
+					<radius> 0.1965536398374076 </radius>
+					<length> 0.02 </length>
+				</cylinder>
+			</geometry>
+			<material>
+				<script>
+					<name>Gazebo/DarkGrey</name>
+					<uri>file://media/materials/scripts/gazebo.material</uri>
+				</script>
+			</material>
+		</visual>		
+	</link>
+
+					
+	<!-- * Motor Definitions * -->
+	<link name= "motor_0_link">
+		<!-- Position -->
+		<pose> 0.29346787517317596 -0.315 0 1.5707963267948966 0 1.5707963267948966</pose>
+		<!-- Inertia -->
+		<inertial>
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<mass> 5</mass>
+			<inertia>
+				<ixx>0.007250000000000001</ixx>
+				<ixy>0</ixy>
+				<ixz>0</ixz>
+				<iyy>0.007250000000000001</iyy>
+				<iyz>0</iyz>
+				<izz>0.00625</izz>
+			</inertia>
+		</inertial>		
+		<!-- Visual -->
+		<visual name="motor_0_visual">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+				<cylinder>
+					<radius> 0.05 </radius>
+					<length> 0.05 </length>
+				</cylinder>
+			</geometry>
+			<material>
+				<script>
+					<name>Gazebo/DarkGrey</name>
+					<uri>file://media/materials/scripts/gazebo.material</uri>
+				</script>
+			</material>
+		</visual>		
+		<!-- collision -->
+		<!-- <collision name="motor_0_colision">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+				<cylinder>
+					<radius> 0.05 </radius>
+					<length> 0.05 </length>
+				</cylinder>
+			</geometry>
+			<surface>
+				<contact>
+					<ode>
+						<min_depth>0.001</min_depth>
+						<max_vel>0</max_vel>
+					</ode>
+				</contact>
+				<friction>
+					<ode/>
+				</friction>
+			</surface>
+		</collision> -->
+		
+	</link>
+
+	<!-- * ARM Definitions * -->
+	<link name="arm_0_link">
+		<!-- Position -->
+		<pose>  0.25846787517317593 -0.275 0 1.5707963267948966 0 0.0</pose>
+		<!-- <!-\- Inertia -\-> -->
+		<!-- <inertial>
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<mass> 0.1</mass>
+			<inertia>
+				<ixx>2.89e-05</ixx>
+				<ixy>0</ixy>
+				<ixz>0</ixz>
+				<iyy>2.89e-05</iyy>
+				<iyz>0</iyz>
+				<izz>5.0e-06</izz>
+			</inertia>
+		</inertial> -->
+		
+		<!-- Visual -->
+		<visual name="arm_0_visual">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+			<box>
+	                    <size> 0.02 0.02 0.08 </size>
+	 		</box>	    
+			</geometry>
+			<material>
+				<script>
+					<name>Gazebo/DarkGrey</name>
+					<uri>file://media/materials/scripts/gazebo.material</uri>
+				</script>
+			</material>
+		</visual>		
+		<!-- collision -->
+		<!-- <collision name="arm_0_colision">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+			<box>
+	                    <size> 0.02 0.02 0.08 </size>
+	 		</box>	    
+			</geometry>
+			<surface>
+				<contact>
+					<ode>
+						<min_depth>0.001</min_depth>
+						<max_vel>0</max_vel>
+					</ode>
+				</contact>
+				<friction>
+					<ode/>
+				</friction>
+			</surface>
+		</collision> -->
+		
+	</link>
+
+	<!-- * RotuleDown Definitions * -->
+	<link name="rotuleDown_0_link">
+		<!-- Position -->
+		<pose>  0.26846787517317594 -0.235 0 0 0 0 </pose>
+		<!-- Inertia -->
+		<inertial>
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<mass> 0.1</mass>
+			<inertia>
+				<ixx>0.0</ixx>
+				<ixy>0</ixy>
+				<ixz>0</ixz>
+				<iyy>0.0</iyy>
+				<iyz>0</iyz>
+				<izz>0.0</izz>
+			</inertia>
+		</inertial>		
+		<!-- Visual -->
+		<visual name="rotuleDown_0_visual">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+			<sphere>
+				<radius> 0.02 </radius>
+	 		</sphere>	    
+			</geometry>
+			<material>
+				<script>
+					<name>Gazebo/DarkGrey</name>
+					<uri>file://media/materials/scripts/gazebo.material</uri>
+				</script>
+			</material>
+		</visual>		
+		<!-- collision -->
+		<!-- <collision name="rotuleDown_0_colision">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+			<sphere>
+				<radius> 0.02 </radius>
+	 		</sphere>  
+			</geometry>
+			<surface>
+				<contact>
+					<ode>
+						<min_depth>0.001</min_depth>
+						<max_vel>0</max_vel>
+					</ode>
+				</contact>
+				<friction>
+					<ode/>
+				</friction>
+			</surface>
+		</collision> -->
+		
+	</link>
+
+	<!-- * Leg Definitions * -->
+	<link name= "leg_0_link">
+		<!-- Position -->
+		<pose> 0.22094010767585032 -0.135 0.19010815689159724 0.5273812302657104 0 -2.693174292478814</pose>
+		<!-- Inertia -->
+		<inertial>
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<mass> 0.5</mass>
+			<inertia>
+				<ixx>0.001502</ixx>
+				<ixy>0</ixy>
+				<ixz>0</ixz>
+				<iyy>0.001502</iyy>
+				<iyz>0</iyz>
+				<izz>0.0001</izz>
+			</inertia>
+		</inertial>		
+		<!-- Visual -->
+		<visual name="leg_0_visual">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+				<cylinder>
+					<radius> 0.02 </radius>
+					<length> 0.44 </length>
+				</cylinder>
+			</geometry>
+			<material>
+				<script>
+					<name>Gazebo/DarkGrey</name>
+					<uri>file://media/materials/scripts/gazebo.material</uri>
+				</script>
+			</material>
+		</visual>		
+		<!-- collision -->
+		<!-- <collision name="leg_0_colision">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+				<cylinder>
+					<radius> 0.02 </radius>
+					<length> 0.44 </length>
+				</cylinder>
+			</geometry>
+			<surface>
+				<contact>
+					<ode>
+						<min_depth>0.001</min_depth>
+						<max_vel>0</max_vel>
+					</ode>
+				</contact>
+				<friction>
+					<ode/>
+				</friction>
+			</surface>
+		</collision> -->
+		
+	</link>
+
+	<!-- * RotuleUp Definitions * -->
+	<link name="rotuleUp_0_link">
+		<!-- Position -->
+		<pose>  0.17341234017852467 -0.035 0.3802163137831945 0 0 0</pose>
+		<!-- Inertia -->
+		<inertial>
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<mass> 0.1</mass>
+			<inertia>
+				<ixx>0.0</ixx>
+				<ixy>0</ixy>
+				<ixz>0</ixz>
+				<iyy>0.0</iyy>
+				<iyz>0</iyz>
+				<izz>0.0</izz>
+			</inertia>
+		</inertial>		
+		<!-- Visual -->
+		<visual name="rotuleUp_0_visual">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+			<sphere>
+				<radius> 0.02 </radius>
+	 		</sphere>	    
+			</geometry>
+			<material>
+				<script>
+					<name>Gazebo/DarkGrey</name>
+					<uri>file://media/materials/scripts/gazebo.material</uri>
+				</script>
+			</material>
+		</visual>		
+		<!-- collision -->
+		<!-- <collision name="rotuleDown_0_colision">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+			<sphere>
+				<radius> 0.02 </radius>
+	 		</sphere>  
+			</geometry>
+			<surface>
+				<contact>
+					<ode>
+						<min_depth>0.001</min_depth>
+						<max_vel>0</max_vel>
+					</ode>
+				</contact>
+				<friction>
+					<ode/>
+				</friction>
+			</surface>
+		</collision> -->
+	</link>
+
+			<!-- * Holder Definitions * -->
+	<link name="holder_0_link">
+		<!-- Position -->
+		<pose>  0.17341234017852467 0.0 0.3802163137831945 1.5707963267948966 0 0.0</pose>
+		<!-- Inertia -->
+		<inertial>
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<mass> 0.2</mass>
+			<inertia>
+				<ixx>5.1200000000000004e-05</ixx>
+				<ixy>0</ixy>
+				<ixz>0</ixz>
+				<iyy>5.1200000000000004e-05</iyy>
+				<iyz>0</iyz>
+				<izz>1.0e-05</izz>
+			</inertia>
+		</inertial>		
+		<!-- Visual -->
+		<visual name="holder_0_visual">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+			<box>
+	                    <size> 0.02 0.02 0.07 </size>
+	 		</box>	    
+			</geometry>
+			<material>
+				<script>
+					<name>Gazebo/DarkGrey</name>
+					<uri>file://media/materials/scripts/gazebo.material</uri>
+				</script>
+			</material>
+		</visual>		
+		<!-- collision -->
+		<!-- <collision name="holder_0_colision">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+			<box>
+	                    <size> 0.02 0.02 0.07 </size>
+	 		</box>	    
+			</geometry>
+			<surface>
+				<contact>
+					<ode>
+						<min_depth>0.001</min_depth>
+						<max_vel>0</max_vel>
+					</ode>
+				</contact>
+				<friction>
+					<ode/>
+				</friction>
+			</surface>
+		</collision> -->
+		
+	</link>
+		
+	<!-- ** Joints Definitions ** -->
+	<!-- * Platform-Motor Joint Definitions * -->
+	<joint name="mot_fixed_0_joint" type="fixed">
+		<parent>base_link</parent>
+		<child>motor_0_link</child>
+	</joint>
+
+	<!-- * Motor-Arm Joint Definitions * -->
+	<joint name="motor_0_joint" type="revolute">
+		<pose frame= "arm_0"> 0 0 0.04 0 0 </pose>
+		<parent>motor_0_link</parent>
+		<child>arm_0_link</child>
+		<axis>
+                <limit>
+                    <lower>-0.4</lower>
+                    <upper>0.4</upper>
+                </limit>
+		<dynamics>
+                    <damping>1</damping>
+                    <friction>0.4</friction>
+                </dynamics>
+                <xyz>1 0 0</xyz>
+            </axis>
+		
+	</joint>
+
+	<!-- * Arm-RotuleDown Joint Definitions * -->
+	<joint name="arm_rotDown_0_joint" type="fixed">
+		<parent>arm_0_link</parent>
+		<child>rotuleDown_0_link</child>
+	</joint>
+
+	<!-- * RotuleDown-Leg Joint Definitions * -->
+	<joint name="rotDown_leg_0_joint" type="ball">
+		<pose frame= "arm_0_link"> 0 0 -0.22 0 0 </pose>
+		<parent>rotuleDown_0_link</parent>
+		<child>leg_0_link</child>
+	</joint>
+
+	<!-- * Leg-RotuleUp Joint Definitions * -->
+	<joint name="arm_rotUp_0_joint" type="fixed">
+		<parent>leg_0_link</parent>
+		<child>rotuleUp_0_link</child>
+	</joint>
+
+	<!-- * RotuleUp-Holder Joint Definitions * -->
+	<joint name="rotUp_platform_0_joint" type="ball">
+		<pose frame="rotuleUp_0_link"> 0 0 0 0 0 </pose>
+		<child>rotuleUp_0_link</child>
+		<parent>holder_0_link</parent>
+	</joint>
+	      
+						
+	<!-- * Motor Definitions * -->
+	<link name= "motor_1_link">
+		<!-- Position -->
+		<pose> 0.29346787517317596 0.315 0 1.5707963267948966 0 1.5707963267948966</pose>
+		<!-- Inertia -->
+		<inertial>
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<mass> 5</mass>
+			<inertia>
+				<ixx>0.007250000000000001</ixx>
+				<ixy>0</ixy>
+				<ixz>0</ixz>
+				<iyy>0.007250000000000001</iyy>
+				<iyz>0</iyz>
+				<izz>0.00625</izz>
+			</inertia>
+		</inertial>		
+		<!-- Visual -->
+		<visual name="motor_1_visual">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+				<cylinder>
+					<radius> 0.05 </radius>
+					<length> 0.05 </length>
+				</cylinder>
+			</geometry>
+			<material>
+				<script>
+					<name>Gazebo/DarkGrey</name>
+					<uri>file://media/materials/scripts/gazebo.material</uri>
+				</script>
+			</material>
+		</visual>		
+		<!-- collision -->
+		<!-- <collision name="motor_1_colision">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+				<cylinder>
+					<radius> 0.05 </radius>
+					<length> 0.05 </length>
+				</cylinder>
+			</geometry>
+			<surface>
+				<contact>
+					<ode>
+						<min_depth>0.001</min_depth>
+						<max_vel>0</max_vel>
+					</ode>
+				</contact>
+				<friction>
+					<ode/>
+				</friction>
+			</surface>
+		</collision> -->
+		
+	</link>
+
+	<!-- * ARM Definitions * -->
+	<link name="arm_1_link">
+		<!-- Position -->
+		<pose>  0.25846787517317593 0.275 0 1.5707963267948966 0 0.0</pose>
+		<!-- <!-\- Inertia -\-> -->
+		<!-- <inertial>
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<mass> 0.1</mass>
+			<inertia>
+				<ixx>2.89e-05</ixx>
+				<ixy>0</ixy>
+				<ixz>0</ixz>
+				<iyy>2.89e-05</iyy>
+				<iyz>0</iyz>
+				<izz>5.0e-06</izz>
+			</inertia>
+		</inertial> -->
+		
+		<!-- Visual -->
+		<visual name="arm_1_visual">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+			<box>
+	                    <size> 0.02 0.02 0.08 </size>
+	 		</box>	    
+			</geometry>
+			<material>
+				<script>
+					<name>Gazebo/DarkGrey</name>
+					<uri>file://media/materials/scripts/gazebo.material</uri>
+				</script>
+			</material>
+		</visual>		
+		<!-- collision -->
+		<!-- <collision name="arm_1_colision">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+			<box>
+	                    <size> 0.02 0.02 0.08 </size>
+	 		</box>	    
+			</geometry>
+			<surface>
+				<contact>
+					<ode>
+						<min_depth>0.001</min_depth>
+						<max_vel>0</max_vel>
+					</ode>
+				</contact>
+				<friction>
+					<ode/>
+				</friction>
+			</surface>
+		</collision> -->
+		
+	</link>
+
+	<!-- * RotuleDown Definitions * -->
+	<link name="rotuleDown_1_link">
+		<!-- Position -->
+		<pose>  0.26846787517317594 0.235 0 0 0 0 </pose>
+		<!-- Inertia -->
+		<inertial>
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<mass> 0.1</mass>
+			<inertia>
+				<ixx>0.0</ixx>
+				<ixy>0</ixy>
+				<ixz>0</ixz>
+				<iyy>0.0</iyy>
+				<iyz>0</iyz>
+				<izz>0.0</izz>
+			</inertia>
+		</inertial>		
+		<!-- Visual -->
+		<visual name="rotuleDown_1_visual">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+			<sphere>
+				<radius> 0.02 </radius>
+	 		</sphere>	    
+			</geometry>
+			<material>
+				<script>
+					<name>Gazebo/DarkGrey</name>
+					<uri>file://media/materials/scripts/gazebo.material</uri>
+				</script>
+			</material>
+		</visual>		
+		<!-- collision -->
+		<!-- <collision name="rotuleDown_1_colision">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+			<sphere>
+				<radius> 0.02 </radius>
+	 		</sphere>  
+			</geometry>
+			<surface>
+				<contact>
+					<ode>
+						<min_depth>0.001</min_depth>
+						<max_vel>0</max_vel>
+					</ode>
+				</contact>
+				<friction>
+					<ode/>
+				</friction>
+			</surface>
+		</collision> -->
+		
+	</link>
+
+	<!-- * Leg Definitions * -->
+	<link name= "leg_1_link">
+		<!-- Position -->
+		<pose> 0.22094010767585032 0.135 0.19010815689159724 0.5273812302657104 0 -0.4484183611109792</pose>
+		<!-- Inertia -->
+		<inertial>
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<mass> 0.5</mass>
+			<inertia>
+				<ixx>0.001502</ixx>
+				<ixy>0</ixy>
+				<ixz>0</ixz>
+				<iyy>0.001502</iyy>
+				<iyz>0</iyz>
+				<izz>0.0001</izz>
+			</inertia>
+		</inertial>		
+		<!-- Visual -->
+		<visual name="leg_1_visual">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+				<cylinder>
+					<radius> 0.02 </radius>
+					<length> 0.44 </length>
+				</cylinder>
+			</geometry>
+			<material>
+				<script>
+					<name>Gazebo/DarkGrey</name>
+					<uri>file://media/materials/scripts/gazebo.material</uri>
+				</script>
+			</material>
+		</visual>		
+		<!-- collision -->
+		<!-- <collision name="leg_1_colision">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+				<cylinder>
+					<radius> 0.02 </radius>
+					<length> 0.44 </length>
+				</cylinder>
+			</geometry>
+			<surface>
+				<contact>
+					<ode>
+						<min_depth>0.001</min_depth>
+						<max_vel>0</max_vel>
+					</ode>
+				</contact>
+				<friction>
+					<ode/>
+				</friction>
+			</surface>
+		</collision> -->
+		
+	</link>
+
+	<!-- * RotuleUp Definitions * -->
+	<link name="rotuleUp_1_link">
+		<!-- Position -->
+		<pose>  0.17341234017852467 0.035 0.3802163137831945 0 0 0</pose>
+		<!-- Inertia -->
+		<inertial>
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<mass> 0.1</mass>
+			<inertia>
+				<ixx>0.0</ixx>
+				<ixy>0</ixy>
+				<ixz>0</ixz>
+				<iyy>0.0</iyy>
+				<iyz>0</iyz>
+				<izz>0.0</izz>
+			</inertia>
+		</inertial>		
+		<!-- Visual -->
+		<visual name="rotuleUp_1_visual">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+			<sphere>
+				<radius> 0.02 </radius>
+	 		</sphere>	    
+			</geometry>
+			<material>
+				<script>
+					<name>Gazebo/DarkGrey</name>
+					<uri>file://media/materials/scripts/gazebo.material</uri>
+				</script>
+			</material>
+		</visual>		
+		<!-- collision -->
+		<!-- <collision name="rotuleDown_1_colision">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+			<sphere>
+				<radius> 0.02 </radius>
+	 		</sphere>  
+			</geometry>
+			<surface>
+				<contact>
+					<ode>
+						<min_depth>0.001</min_depth>
+						<max_vel>0</max_vel>
+					</ode>
+				</contact>
+				<friction>
+					<ode/>
+				</friction>
+			</surface>
+		</collision> -->
+	</link>
+
+		
+	<!-- ** Joints Definitions ** -->
+	<!-- * Platform-Motor Joint Definitions * -->
+	<joint name="mot_fixed_1_joint" type="fixed">
+		<parent>base_link</parent>
+		<child>motor_1_link</child>
+	</joint>
+
+	<!-- * Motor-Arm Joint Definitions * -->
+	<joint name="motor_1_joint" type="revolute">
+		<pose frame= "arm_1"> 0 0 -0.04 0 0 </pose>
+		<parent>motor_1_link</parent>
+		<child>arm_1_link</child>
+		<axis>
+                <limit>
+                    <lower>-0.4</lower>
+                    <upper>0.4</upper>
+                </limit>
+		<dynamics>
+                    <damping>1</damping>
+                    <friction>0.4</friction>
+                </dynamics>
+                <xyz>1 0 0</xyz>
+            </axis>
+		
+	</joint>
+
+	<!-- * Arm-RotuleDown Joint Definitions * -->
+	<joint name="arm_rotDown_1_joint" type="fixed">
+		<parent>arm_1_link</parent>
+		<child>rotuleDown_1_link</child>
+	</joint>
+
+	<!-- * RotuleDown-Leg Joint Definitions * -->
+	<joint name="rotDown_leg_1_joint" type="ball">
+		<pose frame= "arm_1_link"> 0 0 -0.22 0 0 </pose>
+		<parent>rotuleDown_1_link</parent>
+		<child>leg_1_link</child>
+	</joint>
+
+	<!-- * Leg-RotuleUp Joint Definitions * -->
+	<joint name="arm_rotUp_1_joint" type="fixed">
+		<parent>leg_1_link</parent>
+		<child>rotuleUp_1_link</child>
+	</joint>
+
+	<!-- * RotuleUp-Holder Joint Definitions * -->
+	<joint name="rotUp_platform_1_joint" type="ball">
+		<pose frame="rotuleUp_1_link"> 0 0 0 0 0 </pose>
+		<child>rotuleUp_1_link</child>
+		<parent>holder_0_link</parent>
+	</joint>
+	      
+						
+	<!-- * Motor Definitions * -->
+	<link name= "motor_2_link">
+		<!-- Position -->
+		<pose> 0.12606406460551028 0.41165063509461086 0 1.5707963267948966 0 3.665191429188092</pose>
+		<!-- Inertia -->
+		<inertial>
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<mass> 5</mass>
+			<inertia>
+				<ixx>0.007250000000000001</ixx>
+				<ixy>0</ixy>
+				<ixz>0</ixz>
+				<iyy>0.007250000000000001</iyy>
+				<iyz>0</iyz>
+				<izz>0.00625</izz>
+			</inertia>
+		</inertial>		
+		<!-- Visual -->
+		<visual name="motor_2_visual">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+				<cylinder>
+					<radius> 0.05 </radius>
+					<length> 0.05 </length>
+				</cylinder>
+			</geometry>
+			<material>
+				<script>
+					<name>Gazebo/DarkGrey</name>
+					<uri>file://media/materials/scripts/gazebo.material</uri>
+				</script>
+			</material>
+		</visual>		
+		<!-- collision -->
+		<!-- <collision name="motor_2_colision">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+				<cylinder>
+					<radius> 0.05 </radius>
+					<length> 0.05 </length>
+				</cylinder>
+			</geometry>
+			<surface>
+				<contact>
+					<ode>
+						<min_depth>0.001</min_depth>
+						<max_vel>0</max_vel>
+					</ode>
+				</contact>
+				<friction>
+					<ode/>
+				</friction>
+			</surface>
+		</collision> -->
+		
+	</link>
+
+	<!-- * ARM Definitions * -->
+	<link name="arm_2_link">
+		<!-- Position -->
+		<pose>  0.10892304845413273 0.36133974596215557 0 1.5707963267948966 0 2.0943951023931953</pose>
+		<!-- <!-\- Inertia -\-> -->
+		<!-- <inertial>
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<mass> 0.1</mass>
+			<inertia>
+				<ixx>2.89e-05</ixx>
+				<ixy>0</ixy>
+				<ixz>0</ixz>
+				<iyy>2.89e-05</iyy>
+				<iyz>0</iyz>
+				<izz>5.0e-06</izz>
+			</inertia>
+		</inertial> -->
+		
+		<!-- Visual -->
+		<visual name="arm_2_visual">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+			<box>
+	                    <size> 0.02 0.02 0.08 </size>
+	 		</box>	    
+			</geometry>
+			<material>
+				<script>
+					<name>Gazebo/DarkGrey</name>
+					<uri>file://media/materials/scripts/gazebo.material</uri>
+				</script>
+			</material>
+		</visual>		
+		<!-- collision -->
+		<!-- <collision name="arm_2_colision">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+			<box>
+	                    <size> 0.02 0.02 0.08 </size>
+	 		</box>	    
+			</geometry>
+			<surface>
+				<contact>
+					<ode>
+						<min_depth>0.001</min_depth>
+						<max_vel>0</max_vel>
+					</ode>
+				</contact>
+				<friction>
+					<ode/>
+				</friction>
+			</surface>
+		</collision> -->
+		
+	</link>
+
+	<!-- * RotuleDown Definitions * -->
+	<link name="rotuleDown_2_link">
+		<!-- Position -->
+		<pose>  0.06928203230275518 0.3499999999999999 0 0 0 0 </pose>
+		<!-- Inertia -->
+		<inertial>
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<mass> 0.1</mass>
+			<inertia>
+				<ixx>0.0</ixx>
+				<ixy>0</ixy>
+				<ixz>0</ixz>
+				<iyy>0.0</iyy>
+				<iyz>0</iyz>
+				<izz>0.0</izz>
+			</inertia>
+		</inertial>		
+		<!-- Visual -->
+		<visual name="rotuleDown_2_visual">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+			<sphere>
+				<radius> 0.02 </radius>
+	 		</sphere>	    
+			</geometry>
+			<material>
+				<script>
+					<name>Gazebo/DarkGrey</name>
+					<uri>file://media/materials/scripts/gazebo.material</uri>
+				</script>
+			</material>
+		</visual>		
+		<!-- collision -->
+		<!-- <collision name="rotuleDown_2_colision">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+			<sphere>
+				<radius> 0.02 </radius>
+	 		</sphere>  
+			</geometry>
+			<surface>
+				<contact>
+					<ode>
+						<min_depth>0.001</min_depth>
+						<max_vel>0</max_vel>
+					</ode>
+				</contact>
+				<friction>
+					<ode/>
+				</friction>
+			</surface>
+		</collision> -->
+		
+	</link>
+
+	<!-- * Leg Definitions * -->
+	<link name= "leg_2_link">
+		<!-- Position -->
+		<pose> 0.006443375672974129 0.2588397459621556 0.19010815689159724 0.5273812302657104 0 -0.5987791900856189</pose>
+		<!-- Inertia -->
+		<inertial>
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<mass> 0.5</mass>
+			<inertia>
+				<ixx>0.001502</ixx>
+				<ixy>0</ixy>
+				<ixz>0</ixz>
+				<iyy>0.001502</iyy>
+				<iyz>0</iyz>
+				<izz>0.0001</izz>
+			</inertia>
+		</inertial>		
+		<!-- Visual -->
+		<visual name="leg_2_visual">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+				<cylinder>
+					<radius> 0.02 </radius>
+					<length> 0.44 </length>
+				</cylinder>
+			</geometry>
+			<material>
+				<script>
+					<name>Gazebo/DarkGrey</name>
+					<uri>file://media/materials/scripts/gazebo.material</uri>
+				</script>
+			</material>
+		</visual>		
+		<!-- collision -->
+		<!-- <collision name="leg_2_colision">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+				<cylinder>
+					<radius> 0.02 </radius>
+					<length> 0.44 </length>
+				</cylinder>
+			</geometry>
+			<surface>
+				<contact>
+					<ode>
+						<min_depth>0.001</min_depth>
+						<max_vel>0</max_vel>
+					</ode>
+				</contact>
+				<friction>
+					<ode/>
+				</friction>
+			</surface>
+		</collision> -->
+		
+	</link>
+
+	<!-- * RotuleUp Definitions * -->
+	<link name="rotuleUp_2_link">
+		<!-- Position -->
+		<pose>  -0.05639528095680692 0.16767949192431125 0.3802163137831945 0 0 0</pose>
+		<!-- Inertia -->
+		<inertial>
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<mass> 0.1</mass>
+			<inertia>
+				<ixx>0.0</ixx>
+				<ixy>0</ixy>
+				<ixz>0</ixz>
+				<iyy>0.0</iyy>
+				<iyz>0</iyz>
+				<izz>0.0</izz>
+			</inertia>
+		</inertial>		
+		<!-- Visual -->
+		<visual name="rotuleUp_2_visual">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+			<sphere>
+				<radius> 0.02 </radius>
+	 		</sphere>	    
+			</geometry>
+			<material>
+				<script>
+					<name>Gazebo/DarkGrey</name>
+					<uri>file://media/materials/scripts/gazebo.material</uri>
+				</script>
+			</material>
+		</visual>		
+		<!-- collision -->
+		<!-- <collision name="rotuleDown_2_colision">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+			<sphere>
+				<radius> 0.02 </radius>
+	 		</sphere>  
+			</geometry>
+			<surface>
+				<contact>
+					<ode>
+						<min_depth>0.001</min_depth>
+						<max_vel>0</max_vel>
+					</ode>
+				</contact>
+				<friction>
+					<ode/>
+				</friction>
+			</surface>
+		</collision> -->
+	</link>
+
+			<!-- * Holder Definitions * -->
+	<link name="holder_1_link">
+		<!-- Position -->
+		<pose>  -0.08670617008926228 0.15017949192431126 0.3802163137831945 1.5707963267948966 0 2.0943951023931953</pose>
+		<!-- Inertia -->
+		<inertial>
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<mass> 0.2</mass>
+			<inertia>
+				<ixx>5.1200000000000004e-05</ixx>
+				<ixy>0</ixy>
+				<ixz>0</ixz>
+				<iyy>5.1200000000000004e-05</iyy>
+				<iyz>0</iyz>
+				<izz>1.0e-05</izz>
+			</inertia>
+		</inertial>		
+		<!-- Visual -->
+		<visual name="holder_1_visual">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+			<box>
+	                    <size> 0.02 0.02 0.07 </size>
+	 		</box>	    
+			</geometry>
+			<material>
+				<script>
+					<name>Gazebo/DarkGrey</name>
+					<uri>file://media/materials/scripts/gazebo.material</uri>
+				</script>
+			</material>
+		</visual>		
+		<!-- collision -->
+		<!-- <collision name="holder_1_colision">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+			<box>
+	                    <size> 0.02 0.02 0.07 </size>
+	 		</box>	    
+			</geometry>
+			<surface>
+				<contact>
+					<ode>
+						<min_depth>0.001</min_depth>
+						<max_vel>0</max_vel>
+					</ode>
+				</contact>
+				<friction>
+					<ode/>
+				</friction>
+			</surface>
+		</collision> -->
+		
+	</link>
+		
+	<!-- ** Joints Definitions ** -->
+	<!-- * Platform-Motor Joint Definitions * -->
+	<joint name="mot_fixed_2_joint" type="fixed">
+		<parent>base_link</parent>
+		<child>motor_2_link</child>
+	</joint>
+
+	<!-- * Motor-Arm Joint Definitions * -->
+	<joint name="motor_2_joint" type="revolute">
+		<pose frame= "arm_2"> 0 0 0.04 0 0 </pose>
+		<parent>motor_2_link</parent>
+		<child>arm_2_link</child>
+		<axis>
+                <limit>
+                    <lower>-0.4</lower>
+                    <upper>0.4</upper>
+                </limit>
+		<dynamics>
+                    <damping>1</damping>
+                    <friction>0.4</friction>
+                </dynamics>
+                <xyz>1 0 0</xyz>
+            </axis>
+		
+	</joint>
+
+	<!-- * Arm-RotuleDown Joint Definitions * -->
+	<joint name="arm_rotDown_2_joint" type="fixed">
+		<parent>arm_2_link</parent>
+		<child>rotuleDown_2_link</child>
+	</joint>
+
+	<!-- * RotuleDown-Leg Joint Definitions * -->
+	<joint name="rotDown_leg_2_joint" type="ball">
+		<pose frame= "arm_2_link"> 0 0 -0.22 0 0 </pose>
+		<parent>rotuleDown_2_link</parent>
+		<child>leg_2_link</child>
+	</joint>
+
+	<!-- * Leg-RotuleUp Joint Definitions * -->
+	<joint name="arm_rotUp_2_joint" type="fixed">
+		<parent>leg_2_link</parent>
+		<child>rotuleUp_2_link</child>
+	</joint>
+
+	<!-- * RotuleUp-Holder Joint Definitions * -->
+	<joint name="rotUp_platform_2_joint" type="ball">
+		<pose frame="rotuleUp_2_link"> 0 0 0 0 0 </pose>
+		<child>rotuleUp_2_link</child>
+		<parent>holder_1_link</parent>
+	</joint>
+	      
+						
+	<!-- * Motor Definitions * -->
+	<link name= "motor_3_link">
+		<!-- Position -->
+		<pose> -0.41953193977868614 0.09665063509461105 0 1.5707963267948966 0 3.665191429188092</pose>
+		<!-- Inertia -->
+		<inertial>
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<mass> 5</mass>
+			<inertia>
+				<ixx>0.007250000000000001</ixx>
+				<ixy>0</ixy>
+				<ixz>0</ixz>
+				<iyy>0.007250000000000001</iyy>
+				<iyz>0</iyz>
+				<izz>0.00625</izz>
+			</inertia>
+		</inertial>		
+		<!-- Visual -->
+		<visual name="motor_3_visual">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+				<cylinder>
+					<radius> 0.05 </radius>
+					<length> 0.05 </length>
+				</cylinder>
+			</geometry>
+			<material>
+				<script>
+					<name>Gazebo/DarkGrey</name>
+					<uri>file://media/materials/scripts/gazebo.material</uri>
+				</script>
+			</material>
+		</visual>		
+		<!-- collision -->
+		<!-- <collision name="motor_3_colision">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+				<cylinder>
+					<radius> 0.05 </radius>
+					<length> 0.05 </length>
+				</cylinder>
+			</geometry>
+			<surface>
+				<contact>
+					<ode>
+						<min_depth>0.001</min_depth>
+						<max_vel>0</max_vel>
+					</ode>
+				</contact>
+				<friction>
+					<ode/>
+				</friction>
+			</surface>
+		</collision> -->
+		
+	</link>
+
+	<!-- * ARM Definitions * -->
+	<link name="arm_3_link">
+		<!-- Position -->
+		<pose>  -0.3673909236273086 0.08633974596215568 0 1.5707963267948966 0 2.0943951023931953</pose>
+		<!-- <!-\- Inertia -\-> -->
+		<!-- <inertial>
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<mass> 0.1</mass>
+			<inertia>
+				<ixx>2.89e-05</ixx>
+				<ixy>0</ixy>
+				<ixz>0</ixz>
+				<iyy>2.89e-05</iyy>
+				<iyz>0</iyz>
+				<izz>5.0e-06</izz>
+			</inertia>
+		</inertial> -->
+		
+		<!-- Visual -->
+		<visual name="arm_3_visual">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+			<box>
+	                    <size> 0.02 0.02 0.08 </size>
+	 		</box>	    
+			</geometry>
+			<material>
+				<script>
+					<name>Gazebo/DarkGrey</name>
+					<uri>file://media/materials/scripts/gazebo.material</uri>
+				</script>
+			</material>
+		</visual>		
+		<!-- collision -->
+		<!-- <collision name="arm_3_colision">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+			<box>
+	                    <size> 0.02 0.02 0.08 </size>
+	 		</box>	    
+			</geometry>
+			<surface>
+				<contact>
+					<ode>
+						<min_depth>0.001</min_depth>
+						<max_vel>0</max_vel>
+					</ode>
+				</contact>
+				<friction>
+					<ode/>
+				</friction>
+			</surface>
+		</collision> -->
+		
+	</link>
+
+	<!-- * RotuleDown Definitions * -->
+	<link name="rotuleDown_3_link">
+		<!-- Position -->
+		<pose>  -0.33774990747593103 0.11500000000000006 0 0 0 0 </pose>
+		<!-- Inertia -->
+		<inertial>
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<mass> 0.1</mass>
+			<inertia>
+				<ixx>0.0</ixx>
+				<ixy>0</ixy>
+				<ixz>0</ixz>
+				<iyy>0.0</iyy>
+				<iyz>0</iyz>
+				<izz>0.0</izz>
+			</inertia>
+		</inertial>		
+		<!-- Visual -->
+		<visual name="rotuleDown_3_visual">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+			<sphere>
+				<radius> 0.02 </radius>
+	 		</sphere>	    
+			</geometry>
+			<material>
+				<script>
+					<name>Gazebo/DarkGrey</name>
+					<uri>file://media/materials/scripts/gazebo.material</uri>
+				</script>
+			</material>
+		</visual>		
+		<!-- collision -->
+		<!-- <collision name="rotuleDown_3_colision">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+			<sphere>
+				<radius> 0.02 </radius>
+	 		</sphere>  
+			</geometry>
+			<surface>
+				<contact>
+					<ode>
+						<min_depth>0.001</min_depth>
+						<max_vel>0</max_vel>
+					</ode>
+				</contact>
+				<friction>
+					<ode/>
+				</friction>
+			</surface>
+		</collision> -->
+		
+	</link>
+
+	<!-- * Leg Definitions * -->
+	<link name= "leg_3_link">
+		<!-- Position -->
+		<pose> -0.22738348334882433 0.12383974596215566 0.19010815689159724 0.5273812302657104 0 1.6459767412822162</pose>
+		<!-- Inertia -->
+		<inertial>
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<mass> 0.5</mass>
+			<inertia>
+				<ixx>0.001502</ixx>
+				<ixy>0</ixy>
+				<ixz>0</ixz>
+				<iyy>0.001502</iyy>
+				<iyz>0</iyz>
+				<izz>0.0001</izz>
+			</inertia>
+		</inertial>		
+		<!-- Visual -->
+		<visual name="leg_3_visual">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+				<cylinder>
+					<radius> 0.02 </radius>
+					<length> 0.44 </length>
+				</cylinder>
+			</geometry>
+			<material>
+				<script>
+					<name>Gazebo/DarkGrey</name>
+					<uri>file://media/materials/scripts/gazebo.material</uri>
+				</script>
+			</material>
+		</visual>		
+		<!-- collision -->
+		<!-- <collision name="leg_3_colision">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+				<cylinder>
+					<radius> 0.02 </radius>
+					<length> 0.44 </length>
+				</cylinder>
+			</geometry>
+			<surface>
+				<contact>
+					<ode>
+						<min_depth>0.001</min_depth>
+						<max_vel>0</max_vel>
+					</ode>
+				</contact>
+				<friction>
+					<ode/>
+				</friction>
+			</surface>
+		</collision> -->
+		
+	</link>
+
+	<!-- * RotuleUp Definitions * -->
+	<link name="rotuleUp_3_link">
+		<!-- Position -->
+		<pose>  -0.11701705922171764 0.13267949192431128 0.3802163137831945 0 0 0</pose>
+		<!-- Inertia -->
+		<inertial>
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<mass> 0.1</mass>
+			<inertia>
+				<ixx>0.0</ixx>
+				<ixy>0</ixy>
+				<ixz>0</ixz>
+				<iyy>0.0</iyy>
+				<iyz>0</iyz>
+				<izz>0.0</izz>
+			</inertia>
+		</inertial>		
+		<!-- Visual -->
+		<visual name="rotuleUp_3_visual">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+			<sphere>
+				<radius> 0.02 </radius>
+	 		</sphere>	    
+			</geometry>
+			<material>
+				<script>
+					<name>Gazebo/DarkGrey</name>
+					<uri>file://media/materials/scripts/gazebo.material</uri>
+				</script>
+			</material>
+		</visual>		
+		<!-- collision -->
+		<!-- <collision name="rotuleDown_3_colision">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+			<sphere>
+				<radius> 0.02 </radius>
+	 		</sphere>  
+			</geometry>
+			<surface>
+				<contact>
+					<ode>
+						<min_depth>0.001</min_depth>
+						<max_vel>0</max_vel>
+					</ode>
+				</contact>
+				<friction>
+					<ode/>
+				</friction>
+			</surface>
+		</collision> -->
+	</link>
+
+		
+	<!-- ** Joints Definitions ** -->
+	<!-- * Platform-Motor Joint Definitions * -->
+	<joint name="mot_fixed_3_joint" type="fixed">
+		<parent>base_link</parent>
+		<child>motor_3_link</child>
+	</joint>
+
+	<!-- * Motor-Arm Joint Definitions * -->
+	<joint name="motor_3_joint" type="revolute">
+		<pose frame= "arm_3"> 0 0 -0.04 0 0 </pose>
+		<parent>motor_3_link</parent>
+		<child>arm_3_link</child>
+		<axis>
+                <limit>
+                    <lower>-0.4</lower>
+                    <upper>0.4</upper>
+                </limit>
+		<dynamics>
+                    <damping>1</damping>
+                    <friction>0.4</friction>
+                </dynamics>
+                <xyz>1 0 0</xyz>
+            </axis>
+		
+	</joint>
+
+	<!-- * Arm-RotuleDown Joint Definitions * -->
+	<joint name="arm_rotDown_3_joint" type="fixed">
+		<parent>arm_3_link</parent>
+		<child>rotuleDown_3_link</child>
+	</joint>
+
+	<!-- * RotuleDown-Leg Joint Definitions * -->
+	<joint name="rotDown_leg_3_joint" type="ball">
+		<pose frame= "arm_3_link"> 0 0 -0.22 0 0 </pose>
+		<parent>rotuleDown_3_link</parent>
+		<child>leg_3_link</child>
+	</joint>
+
+	<!-- * Leg-RotuleUp Joint Definitions * -->
+	<joint name="arm_rotUp_3_joint" type="fixed">
+		<parent>leg_3_link</parent>
+		<child>rotuleUp_3_link</child>
+	</joint>
+
+	<!-- * RotuleUp-Holder Joint Definitions * -->
+	<joint name="rotUp_platform_3_joint" type="ball">
+		<pose frame="rotuleUp_3_link"> 0 0 0 0 0 </pose>
+		<child>rotuleUp_3_link</child>
+		<parent>holder_1_link</parent>
+	</joint>
+	      
+						
+	<!-- * Motor Definitions * -->
+	<link name= "motor_4_link">
+		<!-- Position -->
+		<pose> -0.4195319397786862 -0.09665063509461076 0 1.5707963267948966 0 5.759586531581287</pose>
+		<!-- Inertia -->
+		<inertial>
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<mass> 5</mass>
+			<inertia>
+				<ixx>0.007250000000000001</ixx>
+				<ixy>0</ixy>
+				<ixz>0</ixz>
+				<iyy>0.007250000000000001</iyy>
+				<iyz>0</iyz>
+				<izz>0.00625</izz>
+			</inertia>
+		</inertial>		
+		<!-- Visual -->
+		<visual name="motor_4_visual">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+				<cylinder>
+					<radius> 0.05 </radius>
+					<length> 0.05 </length>
+				</cylinder>
+			</geometry>
+			<material>
+				<script>
+					<name>Gazebo/DarkGrey</name>
+					<uri>file://media/materials/scripts/gazebo.material</uri>
+				</script>
+			</material>
+		</visual>		
+		<!-- collision -->
+		<!-- <collision name="motor_4_colision">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+				<cylinder>
+					<radius> 0.05 </radius>
+					<length> 0.05 </length>
+				</cylinder>
+			</geometry>
+			<surface>
+				<contact>
+					<ode>
+						<min_depth>0.001</min_depth>
+						<max_vel>0</max_vel>
+					</ode>
+				</contact>
+				<friction>
+					<ode/>
+				</friction>
+			</surface>
+		</collision> -->
+		
+	</link>
+
+	<!-- * ARM Definitions * -->
+	<link name="arm_4_link">
+		<!-- Position -->
+		<pose>  -0.36739092362730863 -0.08633974596215543 0 1.5707963267948966 0 4.1887902047863905</pose>
+		<!-- <!-\- Inertia -\-> -->
+		<!-- <inertial>
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<mass> 0.1</mass>
+			<inertia>
+				<ixx>2.89e-05</ixx>
+				<ixy>0</ixy>
+				<ixz>0</ixz>
+				<iyy>2.89e-05</iyy>
+				<iyz>0</iyz>
+				<izz>5.0e-06</izz>
+			</inertia>
+		</inertial> -->
+		
+		<!-- Visual -->
+		<visual name="arm_4_visual">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+			<box>
+	                    <size> 0.02 0.02 0.08 </size>
+	 		</box>	    
+			</geometry>
+			<material>
+				<script>
+					<name>Gazebo/DarkGrey</name>
+					<uri>file://media/materials/scripts/gazebo.material</uri>
+				</script>
+			</material>
+		</visual>		
+		<!-- collision -->
+		<!-- <collision name="arm_4_colision">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+			<box>
+	                    <size> 0.02 0.02 0.08 </size>
+	 		</box>	    
+			</geometry>
+			<surface>
+				<contact>
+					<ode>
+						<min_depth>0.001</min_depth>
+						<max_vel>0</max_vel>
+					</ode>
+				</contact>
+				<friction>
+					<ode/>
+				</friction>
+			</surface>
+		</collision> -->
+		
+	</link>
+
+	<!-- * RotuleDown Definitions * -->
+	<link name="rotuleDown_4_link">
+		<!-- Position -->
+		<pose>  -0.3377499074759311 -0.11499999999999984 0 0 0 0 </pose>
+		<!-- Inertia -->
+		<inertial>
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<mass> 0.1</mass>
+			<inertia>
+				<ixx>0.0</ixx>
+				<ixy>0</ixy>
+				<ixz>0</ixz>
+				<iyy>0.0</iyy>
+				<iyz>0</iyz>
+				<izz>0.0</izz>
+			</inertia>
+		</inertial>		
+		<!-- Visual -->
+		<visual name="rotuleDown_4_visual">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+			<sphere>
+				<radius> 0.02 </radius>
+	 		</sphere>	    
+			</geometry>
+			<material>
+				<script>
+					<name>Gazebo/DarkGrey</name>
+					<uri>file://media/materials/scripts/gazebo.material</uri>
+				</script>
+			</material>
+		</visual>		
+		<!-- collision -->
+		<!-- <collision name="rotuleDown_4_colision">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+			<sphere>
+				<radius> 0.02 </radius>
+	 		</sphere>  
+			</geometry>
+			<surface>
+				<contact>
+					<ode>
+						<min_depth>0.001</min_depth>
+						<max_vel>0</max_vel>
+					</ode>
+				</contact>
+				<friction>
+					<ode/>
+				</friction>
+			</surface>
+		</collision> -->
+		
+	</link>
+
+	<!-- * Leg Definitions * -->
+	<link name= "leg_4_link">
+		<!-- Position -->
+		<pose> -0.2273834833488244 -0.12383974596215552 0.19010815689159724 0.5273812302657104 0 1.4956159123075765</pose>
+		<!-- Inertia -->
+		<inertial>
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<mass> 0.5</mass>
+			<inertia>
+				<ixx>0.001502</ixx>
+				<ixy>0</ixy>
+				<ixz>0</ixz>
+				<iyy>0.001502</iyy>
+				<iyz>0</iyz>
+				<izz>0.0001</izz>
+			</inertia>
+		</inertial>		
+		<!-- Visual -->
+		<visual name="leg_4_visual">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+				<cylinder>
+					<radius> 0.02 </radius>
+					<length> 0.44 </length>
+				</cylinder>
+			</geometry>
+			<material>
+				<script>
+					<name>Gazebo/DarkGrey</name>
+					<uri>file://media/materials/scripts/gazebo.material</uri>
+				</script>
+			</material>
+		</visual>		
+		<!-- collision -->
+		<!-- <collision name="leg_4_colision">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+				<cylinder>
+					<radius> 0.02 </radius>
+					<length> 0.44 </length>
+				</cylinder>
+			</geometry>
+			<surface>
+				<contact>
+					<ode>
+						<min_depth>0.001</min_depth>
+						<max_vel>0</max_vel>
+					</ode>
+				</contact>
+				<friction>
+					<ode/>
+				</friction>
+			</surface>
+		</collision> -->
+		
+	</link>
+
+	<!-- * RotuleUp Definitions * -->
+	<link name="rotuleUp_4_link">
+		<!-- Position -->
+		<pose>  -0.1170170592217177 -0.1326794919243112 0.3802163137831945 0 0 0</pose>
+		<!-- Inertia -->
+		<inertial>
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<mass> 0.1</mass>
+			<inertia>
+				<ixx>0.0</ixx>
+				<ixy>0</ixy>
+				<ixz>0</ixz>
+				<iyy>0.0</iyy>
+				<iyz>0</iyz>
+				<izz>0.0</izz>
+			</inertia>
+		</inertial>		
+		<!-- Visual -->
+		<visual name="rotuleUp_4_visual">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+			<sphere>
+				<radius> 0.02 </radius>
+	 		</sphere>	    
+			</geometry>
+			<material>
+				<script>
+					<name>Gazebo/DarkGrey</name>
+					<uri>file://media/materials/scripts/gazebo.material</uri>
+				</script>
+			</material>
+		</visual>		
+		<!-- collision -->
+		<!-- <collision name="rotuleDown_4_colision">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+			<sphere>
+				<radius> 0.02 </radius>
+	 		</sphere>  
+			</geometry>
+			<surface>
+				<contact>
+					<ode>
+						<min_depth>0.001</min_depth>
+						<max_vel>0</max_vel>
+					</ode>
+				</contact>
+				<friction>
+					<ode/>
+				</friction>
+			</surface>
+		</collision> -->
+	</link>
+
+			<!-- * Holder Definitions * -->
+	<link name="holder_2_link">
+		<!-- Position -->
+		<pose>  -0.08670617008926236 -0.1501794919243112 0.3802163137831945 1.5707963267948966 0 4.1887902047863905</pose>
+		<!-- Inertia -->
+		<inertial>
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<mass> 0.2</mass>
+			<inertia>
+				<ixx>5.1200000000000004e-05</ixx>
+				<ixy>0</ixy>
+				<ixz>0</ixz>
+				<iyy>5.1200000000000004e-05</iyy>
+				<iyz>0</iyz>
+				<izz>1.0e-05</izz>
+			</inertia>
+		</inertial>		
+		<!-- Visual -->
+		<visual name="holder_2_visual">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+			<box>
+	                    <size> 0.02 0.02 0.07 </size>
+	 		</box>	    
+			</geometry>
+			<material>
+				<script>
+					<name>Gazebo/DarkGrey</name>
+					<uri>file://media/materials/scripts/gazebo.material</uri>
+				</script>
+			</material>
+		</visual>		
+		<!-- collision -->
+		<!-- <collision name="holder_2_colision">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+			<box>
+	                    <size> 0.02 0.02 0.07 </size>
+	 		</box>	    
+			</geometry>
+			<surface>
+				<contact>
+					<ode>
+						<min_depth>0.001</min_depth>
+						<max_vel>0</max_vel>
+					</ode>
+				</contact>
+				<friction>
+					<ode/>
+				</friction>
+			</surface>
+		</collision> -->
+		
+	</link>
+		
+	<!-- ** Joints Definitions ** -->
+	<!-- * Platform-Motor Joint Definitions * -->
+	<joint name="mot_fixed_4_joint" type="fixed">
+		<parent>base_link</parent>
+		<child>motor_4_link</child>
+	</joint>
+
+	<!-- * Motor-Arm Joint Definitions * -->
+	<joint name="motor_4_joint" type="revolute">
+		<pose frame= "arm_4"> 0 0 0.04 0 0 </pose>
+		<parent>motor_4_link</parent>
+		<child>arm_4_link</child>
+		<axis>
+                <limit>
+                    <lower>-0.4</lower>
+                    <upper>0.4</upper>
+                </limit>
+		<dynamics>
+                    <damping>1</damping>
+                    <friction>0.4</friction>
+                </dynamics>
+                <xyz>1 0 0</xyz>
+            </axis>
+		
+	</joint>
+
+	<!-- * Arm-RotuleDown Joint Definitions * -->
+	<joint name="arm_rotDown_4_joint" type="fixed">
+		<parent>arm_4_link</parent>
+		<child>rotuleDown_4_link</child>
+	</joint>
+
+	<!-- * RotuleDown-Leg Joint Definitions * -->
+	<joint name="rotDown_leg_4_joint" type="ball">
+		<pose frame= "arm_4_link"> 0 0 -0.22 0 0 </pose>
+		<parent>rotuleDown_4_link</parent>
+		<child>leg_4_link</child>
+	</joint>
+
+	<!-- * Leg-RotuleUp Joint Definitions * -->
+	<joint name="arm_rotUp_4_joint" type="fixed">
+		<parent>leg_4_link</parent>
+		<child>rotuleUp_4_link</child>
+	</joint>
+
+	<!-- * RotuleUp-Holder Joint Definitions * -->
+	<joint name="rotUp_platform_4_joint" type="ball">
+		<pose frame="rotuleUp_4_link"> 0 0 0 0 0 </pose>
+		<child>rotuleUp_4_link</child>
+		<parent>holder_2_link</parent>
+	</joint>
+	      
+						
+	<!-- * Motor Definitions * -->
+	<link name= "motor_5_link">
+		<!-- Position -->
+		<pose> 0.12606406460551017 -0.4116506350946109 0 1.5707963267948966 0 5.759586531581287</pose>
+		<!-- Inertia -->
+		<inertial>
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<mass> 5</mass>
+			<inertia>
+				<ixx>0.007250000000000001</ixx>
+				<ixy>0</ixy>
+				<ixz>0</ixz>
+				<iyy>0.007250000000000001</iyy>
+				<iyz>0</iyz>
+				<izz>0.00625</izz>
+			</inertia>
+		</inertial>		
+		<!-- Visual -->
+		<visual name="motor_5_visual">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+				<cylinder>
+					<radius> 0.05 </radius>
+					<length> 0.05 </length>
+				</cylinder>
+			</geometry>
+			<material>
+				<script>
+					<name>Gazebo/DarkGrey</name>
+					<uri>file://media/materials/scripts/gazebo.material</uri>
+				</script>
+			</material>
+		</visual>		
+		<!-- collision -->
+		<!-- <collision name="motor_5_colision">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+				<cylinder>
+					<radius> 0.05 </radius>
+					<length> 0.05 </length>
+				</cylinder>
+			</geometry>
+			<surface>
+				<contact>
+					<ode>
+						<min_depth>0.001</min_depth>
+						<max_vel>0</max_vel>
+					</ode>
+				</contact>
+				<friction>
+					<ode/>
+				</friction>
+			</surface>
+		</collision> -->
+		
+	</link>
+
+	<!-- * ARM Definitions * -->
+	<link name="arm_5_link">
+		<!-- Position -->
+		<pose>  0.10892304845413264 -0.36133974596215557 0 1.5707963267948966 0 4.1887902047863905</pose>
+		<!-- <!-\- Inertia -\-> -->
+		<!-- <inertial>
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<mass> 0.1</mass>
+			<inertia>
+				<ixx>2.89e-05</ixx>
+				<ixy>0</ixy>
+				<ixz>0</ixz>
+				<iyy>2.89e-05</iyy>
+				<iyz>0</iyz>
+				<izz>5.0e-06</izz>
+			</inertia>
+		</inertial> -->
+		
+		<!-- Visual -->
+		<visual name="arm_5_visual">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+			<box>
+	                    <size> 0.02 0.02 0.08 </size>
+	 		</box>	    
+			</geometry>
+			<material>
+				<script>
+					<name>Gazebo/DarkGrey</name>
+					<uri>file://media/materials/scripts/gazebo.material</uri>
+				</script>
+			</material>
+		</visual>		
+		<!-- collision -->
+		<!-- <collision name="arm_5_colision">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+			<box>
+	                    <size> 0.02 0.02 0.08 </size>
+	 		</box>	    
+			</geometry>
+			<surface>
+				<contact>
+					<ode>
+						<min_depth>0.001</min_depth>
+						<max_vel>0</max_vel>
+					</ode>
+				</contact>
+				<friction>
+					<ode/>
+				</friction>
+			</surface>
+		</collision> -->
+		
+	</link>
+
+	<!-- * RotuleDown Definitions * -->
+	<link name="rotuleDown_5_link">
+		<!-- Position -->
+		<pose>  0.0692820323027551 -0.3499999999999999 0 0 0 0 </pose>
+		<!-- Inertia -->
+		<inertial>
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<mass> 0.1</mass>
+			<inertia>
+				<ixx>0.0</ixx>
+				<ixy>0</ixy>
+				<ixz>0</ixz>
+				<iyy>0.0</iyy>
+				<iyz>0</iyz>
+				<izz>0.0</izz>
+			</inertia>
+		</inertial>		
+		<!-- Visual -->
+		<visual name="rotuleDown_5_visual">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+			<sphere>
+				<radius> 0.02 </radius>
+	 		</sphere>	    
+			</geometry>
+			<material>
+				<script>
+					<name>Gazebo/DarkGrey</name>
+					<uri>file://media/materials/scripts/gazebo.material</uri>
+				</script>
+			</material>
+		</visual>		
+		<!-- collision -->
+		<!-- <collision name="rotuleDown_5_colision">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+			<sphere>
+				<radius> 0.02 </radius>
+	 		</sphere>  
+			</geometry>
+			<surface>
+				<contact>
+					<ode>
+						<min_depth>0.001</min_depth>
+						<max_vel>0</max_vel>
+					</ode>
+				</contact>
+				<friction>
+					<ode/>
+				</friction>
+			</surface>
+		</collision> -->
+		
+	</link>
+
+	<!-- * Leg Definitions * -->
+	<link name= "leg_5_link">
+		<!-- Position -->
+		<pose> 0.006443375672974018 -0.25883974596215553 0.19010815689159724 0.5273812302657104 0 3.7403718436754114</pose>
+		<!-- Inertia -->
+		<inertial>
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<mass> 0.5</mass>
+			<inertia>
+				<ixx>0.001502</ixx>
+				<ixy>0</ixy>
+				<ixz>0</ixz>
+				<iyy>0.001502</iyy>
+				<iyz>0</iyz>
+				<izz>0.0001</izz>
+			</inertia>
+		</inertial>		
+		<!-- Visual -->
+		<visual name="leg_5_visual">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+				<cylinder>
+					<radius> 0.02 </radius>
+					<length> 0.44 </length>
+				</cylinder>
+			</geometry>
+			<material>
+				<script>
+					<name>Gazebo/DarkGrey</name>
+					<uri>file://media/materials/scripts/gazebo.material</uri>
+				</script>
+			</material>
+		</visual>		
+		<!-- collision -->
+		<!-- <collision name="leg_5_colision">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+				<cylinder>
+					<radius> 0.02 </radius>
+					<length> 0.44 </length>
+				</cylinder>
+			</geometry>
+			<surface>
+				<contact>
+					<ode>
+						<min_depth>0.001</min_depth>
+						<max_vel>0</max_vel>
+					</ode>
+				</contact>
+				<friction>
+					<ode/>
+				</friction>
+			</surface>
+		</collision> -->
+		
+	</link>
+
+	<!-- * RotuleUp Definitions * -->
+	<link name="rotuleUp_5_link">
+		<!-- Position -->
+		<pose>  -0.05639528095680707 -0.1676794919243112 0.3802163137831945 0 0 0</pose>
+		<!-- Inertia -->
+		<inertial>
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<mass> 0.1</mass>
+			<inertia>
+				<ixx>0.0</ixx>
+				<ixy>0</ixy>
+				<ixz>0</ixz>
+				<iyy>0.0</iyy>
+				<iyz>0</iyz>
+				<izz>0.0</izz>
+			</inertia>
+		</inertial>		
+		<!-- Visual -->
+		<visual name="rotuleUp_5_visual">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+			<sphere>
+				<radius> 0.02 </radius>
+	 		</sphere>	    
+			</geometry>
+			<material>
+				<script>
+					<name>Gazebo/DarkGrey</name>
+					<uri>file://media/materials/scripts/gazebo.material</uri>
+				</script>
+			</material>
+		</visual>		
+		<!-- collision -->
+		<!-- <collision name="rotuleDown_5_colision">
+			<pose frame=>0 0 0 0 -0 0</pose>
+			<geometry>
+			<sphere>
+				<radius> 0.02 </radius>
+	 		</sphere>  
+			</geometry>
+			<surface>
+				<contact>
+					<ode>
+						<min_depth>0.001</min_depth>
+						<max_vel>0</max_vel>
+					</ode>
+				</contact>
+				<friction>
+					<ode/>
+				</friction>
+			</surface>
+		</collision> -->
+	</link>
+
+		
+	<!-- ** Joints Definitions ** -->
+	<!-- * Platform-Motor Joint Definitions * -->
+	<joint name="mot_fixed_5_joint" type="fixed">
+		<parent>base_link</parent>
+		<child>motor_5_link</child>
+	</joint>
+
+	<!-- * Motor-Arm Joint Definitions * -->
+	<joint name="motor_5_joint" type="revolute">
+		<pose frame= "arm_5"> 0 0 -0.04 0 0 </pose>
+		<parent>motor_5_link</parent>
+		<child>arm_5_link</child>
+		<axis>
+                <limit>
+                    <lower>-0.4</lower>
+                    <upper>0.4</upper>
+                </limit>
+		<dynamics>
+                    <damping>1</damping>
+                    <friction>0.4</friction>
+                </dynamics>
+                <xyz>1 0 0</xyz>
+            </axis>
+		
+	</joint>
+
+	<!-- * Arm-RotuleDown Joint Definitions * -->
+	<joint name="arm_rotDown_5_joint" type="fixed">
+		<parent>arm_5_link</parent>
+		<child>rotuleDown_5_link</child>
+	</joint>
+
+	<!-- * RotuleDown-Leg Joint Definitions * -->
+	<joint name="rotDown_leg_5_joint" type="ball">
+		<pose frame= "arm_5_link"> 0 0 -0.22 0 0 </pose>
+		<parent>rotuleDown_5_link</parent>
+		<child>leg_5_link</child>
+	</joint>
+
+	<!-- * Leg-RotuleUp Joint Definitions * -->
+	<joint name="arm_rotUp_5_joint" type="fixed">
+		<parent>leg_5_link</parent>
+		<child>rotuleUp_5_link</child>
+	</joint>
+
+	<!-- * RotuleUp-Holder Joint Definitions * -->
+	<joint name="rotUp_platform_5_joint" type="ball">
+		<pose frame="rotuleUp_5_link"> 0 0 0 0 0 </pose>
+		<child>rotuleUp_5_link</child>
+		<parent>holder_2_link</parent>
+	</joint>
+	      
+		
+		
+			<!-- * RotuleUp-Holder Joint Definitions * -->
+	<joint name="holder_platform_0_joint" type="fixed">
+		<parent>holder_0_link</parent>
+		<child>platform_link</child>
+	</joint>
+		<!-- * RotuleUp-Holder Joint Definitions * -->
+	<joint name="holder_platform_1_joint" type="fixed">
+		<parent>holder_1_link</parent>
+		<child>platform_link</child>
+	</joint>
+		<!-- * RotuleUp-Holder Joint Definitions * -->
+	<joint name="holder_platform_2_joint" type="fixed">
+		<parent>holder_2_link</parent>
+		<child>platform_link</child>
+	</joint>
+	
+		<plugin name='motor_0_model' filename='libstp_plugin.so'>
+		<robotNamespace/>
+		<joint_name>motor_0_joint</joint_name>
+		
+	 </plugin>
+	 	<plugin name='motor_1_model' filename='libstp_plugin.so'>
+		<robotNamespace/>
+		<joint_name>motor_1_joint</joint_name>
+		
+	 </plugin>
+	 	<plugin name='motor_2_model' filename='libstp_plugin.so'>
+		<robotNamespace/>
+		<joint_name>motor_2_joint</joint_name>
+		
+	 </plugin>
+	 	<plugin name='motor_3_model' filename='libstp_plugin.so'>
+		<robotNamespace/>
+		<joint_name>motor_3_joint</joint_name>
+		
+	 </plugin>
+	 	<plugin name='motor_4_model' filename='libstp_plugin.so'>
+		<robotNamespace/>
+		<joint_name>motor_4_joint</joint_name>
+		
+	 </plugin>
+	 	<plugin name='motor_5_model' filename='libstp_plugin.so'>
+		<robotNamespace/>
+		<joint_name>motor_5_joint</joint_name>
+		
+	 </plugin>
+	 	
+</model>
+</sdf>

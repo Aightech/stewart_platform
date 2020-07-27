@@ -62,6 +62,7 @@ stp::Model::Model(double deltas[4], double a, double l)
 
         m_alpha_spd[i] = 0;
     }
+    init_pos();
 }
 
 void
@@ -82,6 +83,8 @@ stp::Model::init_pos()
 
     for(int i = 0; i < 6; i++) { _alphaI[i] = m_alpha[i]; }
 }
+
+
 
 double *
 stp::Model::new_pos(double T[3], double theta[3])
@@ -193,4 +196,18 @@ stp::Model::set_theta_spd(double t0, double t1, double t2)
     m_theta_spd[0] = t0;
     m_theta_spd[1] = t1;
     m_theta_spd[2] = t2;
+}
+
+void
+stp::Model::print_pos()
+{
+    std::cout << "Position: T[";
+    for(int i = 0; i < 3; i++)
+    { std::cout << (char)('x' + i) << ": " << get_T(i) << "\t"; }
+    std::cout << "\b]   Theta[";
+    char letter[] = {'r', 'p', 'y'};
+    for(int i = 0; i < 3; i++)
+    { std::cout << letter[i] << ": " << get_theta(i) << "\t"; }
+
+    std::cout << "\b]\n";
 }

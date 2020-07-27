@@ -267,13 +267,15 @@ end
 			<child>rotuleUp_<%=index%>_link</child>
 			<parent>holder_<%=index/2%>_link</parent>
 		</joint>
-		<% if parity == -1 %>
+		<% end %>
+		
+		<% (0..2).each do |index| %>
 		<!-- * RotuleUp-Holder Joint Definitions * -->
-		<joint name="holder_platform_<%=index/2%>_joint" type="fixed">
-			<parent>holder_<%=index/2%>_link</parent>
+		<joint name="holder_platform_<%=index%>_joint" type="fixed">
+			<parent>holder_<%=index%>_link</parent>
 			<child>platform_link</child>
 		</joint>
 		<% end %>
-	<% end %>
+	
 </model>
 </sdf>

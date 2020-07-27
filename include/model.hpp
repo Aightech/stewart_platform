@@ -35,6 +35,8 @@ class Model
     void
     compute_R(double theta[3]);
 
+  void print_pos();
+
     protected:
     void
     set_T(double t0, double t1, double t2);

@@ -1,0 +1,137 @@
+<%
+author="Devillard"
+model_name="stewart_platform"
+
+# Geometry
+########## Platform ###########
+# Masse
+platform_m=20
+
+platform_deltaA=0.070
+platform_deltaB=0.3#0.40
+platform_radius=platform_deltaB/(2*Math.sin(Math.atan(platform_deltaB*Math.sqrt(3)/(2*platform_deltaA+platform_deltaB))))
+platform_length=0.02
+
+# Inertia 
+platform_xxi=0.25*platform_m*platform_radius*platform_radius + 0.33*platform_m*platform_radius*platform_length
+platform_xyi=0
+platform_xzi=0
+platform_yyi=0.25*platform_m*platform_radius*platform_radius + 0.33*platform_m*platform_radius*platform_length
+platform_yzi=0
+platform_zzi=0.5*platform_m*platform_radius*platform_radius
+
+
+
+###########################
+
+########## BASE ##########
+# Masse
+base_m=500
+
+# Dimension
+base_deltaA=0.63
+base_deltaB=0.15
+base_radius=base_deltaB/(2*Math.sin(Math.atan(base_deltaB*Math.sqrt(3)/(2*base_deltaA+base_deltaB))))
+base_length=0.02
+
+# Inertia 
+base_xxi=0.25*base_m*base_radius*base_radius + 0.33*base_m*base_radius*base_length
+base_xyi=0
+base_xzi=0
+base_yyi=0.25*base_m*base_radius*base_radius + 0.33*base_m*base_radius*base_length
+base_yzi=0
+base_zzi=0.5*base_m*base_radius*base_radius
+
+
+##########################
+
+
+########## Motor ###########
+# Masse
+motor_m=5
+
+motor_radius=0.05
+motor_length=0.05
+motor_delta=Math.asin(base_deltaA/2/base_radius)
+
+# Inertia 
+motor_xxi=0.25*motor_m*motor_radius*motor_radius + 0.33*motor_m*motor_radius*motor_length
+motor_xyi=0
+motor_xzi=0
+motor_yyi=0.25*motor_m*motor_radius*motor_radius + 0.33*motor_m*motor_radius*motor_length
+motor_yzi=0
+motor_zzi=0.5*motor_m*motor_radius*motor_radius
+###########################
+
+########## Arm ###########
+# Masse
+arm_m=0.1
+
+
+arm_width=0.02
+arm_length=0.08
+arm_delta=Math.asin(base_deltaA/2/base_radius)
+
+# Inertia 
+arm_xxi=0.25*arm_m*arm_width/2*arm_width/2 + 0.33*arm_m*arm_width/2*arm_length
+arm_xyi=0
+arm_xzi=0
+arm_yyi=0.25*arm_m*arm_width/2*arm_width/2 + 0.33*arm_m*arm_width/2*arm_length
+arm_yzi=0
+arm_zzi=0.5*arm_m*arm_width/2*arm_width/2
+###########################
+
+########## Rotule ###########
+# Masse
+rotule_m=0.1
+
+
+rotule_radius=0.02
+rotule_delta=Math.asin(platform_deltaA/2/platform_radius)
+
+# Inertia 
+rotule_xxi=2/5*rotule_m*rotule_radius*rotule_radius
+rotule_xyi=0
+rotule_xzi=0
+rotule_yyi=2/5*rotule_m*rotule_radius*rotule_radius
+rotule_yzi=0
+rotule_zzi=2/5*rotule_m*rotule_radius*rotule_radius
+
+###########################
+
+########## Leg ###########
+# Masse
+leg_m=0.5
+
+leg_radius=0.02
+leg_length=0.44
+
+# Inertia 
+leg_xxi=0.25*leg_m*leg_radius*leg_radius + 0.33*leg_m*leg_radius*leg_length
+leg_xyi=0
+leg_xzi=0
+leg_yyi=0.25*leg_m*leg_radius*leg_radius + 0.33*leg_m*leg_radius*leg_length
+leg_yzi=0
+leg_zzi=0.5*leg_m*leg_radius*leg_radius
+###########################
+
+########## Holder ###########
+# Masse
+holder_m=0.2
+
+
+
+holder_length=platform_deltaA
+holder_width=0.02
+holder_radius= holder_width/2
+
+holder_xxi=0.25*holder_m*holder_radius*holder_radius + 0.33*holder_m*holder_radius*holder_length
+holder_xyi=0
+holder_xzi=0
+holder_yyi=0.25*holder_m*holder_radius*holder_radius + 0.33*holder_m*holder_radius*holder_length
+holder_yzi=0
+holder_zzi=0.5*holder_m*holder_radius*holder_radius
+###########################
+
+
+%>

@@ -1,0 +1,258 @@
+<?xml version="1.0" ?>
+
+<sdf version="1.6">
+  <model name="stewart_platform">
+    <pose>0 0 <%= motor_radius*4 %> 0 0 0</pose>
+
+	<!-- ** Links Definitions ** -->
+	<!-- * Base Definitions * -->
+	<link name="base_link">
+		<!-- Position -->
+		<pose>0 0   <%= -motor_radius-4*base_length %> 0 0 0</pose>
+		<!-- Inertia -->
+		<%= inertia(base_m, base_xxi, base_xyi, base_xzi, base_yyi, base_yzi, base_zzi) %>
+
+		<!-- collision -->
+		<%= collision_cylinder('base_link', base_radius, base_length) %>
+		
+		<!-- Visual -->
+		<%= visual_cylinder('base_link', base_radius, base_length, 'DarkGrey') %>
+		
+	</link>
+	
+	<!-- * Base Definitions * -->
+	<link name="platform_link">
+		<!-- Position -->
+		<pose>0 0  <%= leg_length+platform_length/2 %>  0 0 0</pose>
+		<!-- Inertia -->
+		<%= inertia(platform_m, platform_xxi, platform_xyi, platform_xzi, platform_yyi, platform_yzi, platform_zzi) %>
+
+		<!-- collision -->
+		<%= collision_cylinder('platform_link', platform_radius, platform_length) %>
+		
+		<!-- Visual -->
+		<%= visual_cylinder('platform_link', platform_radius, platform_length, 'DarkGrey') %>
+		
+	</link>
+
+	<% (0..5).each do |index| %>
+		<% 	beta = index/2*Math::PI*2/3
+			parity = (index-(index/2)*2)*2-1
+			theta = beta+parity*motor_delta
+			gamma = beta+parity*rotule_delta
+
+			pos_motor = [
+				base_radius*Math.cos(theta)+motor_length/2*Math.cos(beta),
+				base_radius*Math.sin(theta)+motor_length/2*Math.sin(beta),
+				0,
+				Math::PI/2, 0, beta+Math::PI/2]
+			
+			pos_arm = [
+				base_radius*Math.cos(theta)-arm_width/2*Math.cos(beta)+parity*arm_length/2*Math.sin(beta),
+				base_radius*Math.sin(theta)-arm_width/2*Math.sin(beta)-parity*arm_length/2*Math.cos(beta),
+				0,
+				Math::PI/2, 0, beta]
+			
+			pos_rotuleDown = [
+				base_radius*Math.cos(theta)+parity*arm_length*Math.sin(beta),
+				base_radius*Math.sin(theta)-parity*arm_length*Math.cos(beta),
+				0,
+				0, 0, 0]
+			
+			pos_rotuleUp = [
+				platform_radius*Math.cos(gamma)-rotule_radius*Math.cos(beta),
+				platform_radius*Math.sin(gamma)-rotule_radius*Math.sin(beta),
+				leg_length,
+				0, 0, 0]
+			pos_rotuleUp[2]=Math.sqrt(leg_length**2 - (pos_rotuleUp[0]-pos_rotuleDown[0])**2 - (pos_rotuleUp[1]-pos_rotuleDown[1])**2)
+			
+			r1 = pos_rotuleDown[0]**2 + pos_rotuleDown[1]**2
+			r2 = pos_rotuleUp[0]**2 + pos_rotuleUp[1]**2 
+			alpha = Math.asin((pos_rotuleUp[2]-pos_rotuleDown[2])/leg_length)
+			pos_leg = [ 
+				(pos_rotuleDown[0]+pos_rotuleUp[0])/2,
+				(pos_rotuleDown[1]+pos_rotuleUp[1])/2,
+				(pos_rotuleDown[2]+pos_rotuleUp[2])/2,
+				Math::PI/2 - alpha,
+				0,
+				(index-index/2*2-1)*Math::PI+beta - parity*Math.asin((r1-r2)/2/(leg_length/2*Math.sin(Math::PI/2 -alpha)))]
+				
+			pos_holder = [
+				pos_rotuleUp[0]-holder_length/2*Math.sin(beta),
+				pos_rotuleUp[1]+holder_length/2*Math.cos(beta),
+				pos_rotuleUp[2],
+				Math::PI/2, 0, beta
+			]
+			
+			motor_name = "motor_"+index.to_s
+			arm_name = "arm_"+index.to_s
+			rotuleDown_name = "rotuleDown_"+index.to_s
+			leg_name = "leg_"+index.to_s
+			rotuleUp_name = "rotuleUp_"+index.to_s
+			holder_name = "holder_"+(index/2).to_s
+		%>
+		
+	<!-- * Motor Definitions * -->
+	<link name= "motor_<%= index %>_link">
+		<!-- Position -->
+		<pose><%= a_to_s(pos_motor) %></pose>
+		<!-- Inertia -->
+		<%= inertia(motor_m, motor_xxi, motor_xyi, motor_xzi, motor_yyi, motor_yzi, motor_zzi) %>
+		
+		<!-- Visual -->
+		<%= visual_cylinder(motor_name, motor_radius, motor_length, 'DarkGrey') %>
+		
+		<!-- collision -->
+		<!-- <%= collision_cylinder(motor_name, motor_radius, motor_length) %> -->
+		
+	</link>
+
+	<!-- * ARM Definitions * -->
+	<link name="arm_<%=index%>_link">
+		<!-- Position -->
+		<pose> <%= a_to_s(pos_arm)%></pose>
+		<!-- <!-\- Inertia -\-> -->
+		<!-- <%= inertia(arm_m, arm_xxi, arm_xyi, arm_xzi, arm_yyi, arm_yzi, arm_zzi) %> -->
+		
+		<!-- Visual -->
+		<%= visual_box(arm_name, arm_width, arm_width, arm_length, 'DarkGrey') %>
+		
+		<!-- collision -->
+		<!-- <%= collision_box(arm_name, arm_width, arm_width, arm_length) %> -->
+		
+	</link>
+
+	<!-- * RotuleDown Definitions * -->
+	<link name="rotuleDown_<%=index%>_link">
+		<!-- Position -->
+		<pose> <%= a_to_s(pos_rotuleDown) %> </pose>
+		<!-- Inertia -->
+		<%= inertia(rotule_m, rotule_xxi, rotule_xyi, rotule_xzi, rotule_yyi, rotule_yzi, rotule_zzi) %>
+		
+		<!-- Visual -->
+		<%= visual_sphere(rotuleDown_name, rotule_radius, 'DarkGrey') %>
+		
+		<!-- collision -->
+		<!-- <%= collision_sphere(rotuleDown_name, rotule_radius) %> -->
+		
+	</link>
+
+	<!-- * Leg Definitions * -->
+	<link name= "leg_<%= index %>_link">
+		<!-- Position -->
+		<pose><%= a_to_s(pos_leg) %></pose>
+		<!-- Inertia -->
+		<%= inertia(leg_m, leg_xxi, leg_xyi, leg_xzi, leg_yyi, leg_yzi, leg_zzi) %>
+		
+		<!-- Visual -->
+		<%= visual_cylinder(leg_name, leg_radius, leg_length, 'DarkGrey') %>
+		
+		<!-- collision -->
+		<!-- <%= collision_cylinder(leg_name, leg_radius, leg_length) %> -->
+		
+	</link>
+
+	<!-- * RotuleUp Definitions * -->
+	<link name="rotuleUp_<%=index%>_link">
+		<!-- Position -->
+		<pose> <%= a_to_s(pos_rotuleUp) %></pose>
+		<!-- Inertia -->
+		<%= inertia(rotule_m, rotule_xxi, rotule_xyi, rotule_xzi, rotule_yyi, rotule_yzi, rotule_zzi) %>
+		
+		<!-- Visual -->
+		<%= visual_sphere(rotuleUp_name, rotule_radius, 'DarkGrey') %>
+		
+		<!-- collision -->
+		<!-- <%= collision_sphere(rotuleDown_name, rotule_radius) %> -->
+	</link>
+
+		<% if parity == -1 %>
+	<!-- * Holder Definitions * -->
+	<link name="holder_<%=index/2%>_link">
+		<!-- Position -->
+		<pose> <%= a_to_s(pos_holder)%></pose>
+		<!-- Inertia -->
+		<%= inertia(holder_m, holder_xxi, holder_xyi, holder_xzi, holder_yyi, holder_yzi, holder_zzi) %>
+		
+		<!-- Visual -->
+		<%= visual_box(holder_name, holder_width, holder_width, holder_length, 'DarkGrey') %>
+		
+		<!-- collision -->
+		<!-- <%= collision_box(holder_name, holder_width, holder_width, holder_length) %> -->
+		
+	</link>
+		<%end%>
+
+	<!-- ** Joints Definitions ** -->
+	<!-- * Platform-Motor Joint Definitions * -->
+	<joint name="mot_fixed_<%=index%>_joint" type="fixed">
+		<parent>base_link</parent>
+		<child>motor_<%=index%>_link</child>
+	</joint>
+
+	<!-- * Motor-Arm Joint Definitions * -->
+	<joint name="motor_<%=index%>_joint" type="revolute">
+		<pose frame= "arm_<%=index%>"> 0 0 <%=-parity*arm_length/2%> 0 0 </pose>
+		<parent>motor_<%=index%>_link</parent>
+		<child>arm_<%=index%>_link</child>
+		<axis>
+                <limit>
+                    <lower>-0.4</lower>
+                    <upper>0.4</upper>
+                </limit>
+		<dynamics>
+                    <damping>1</damping>
+                    <friction>0.4</friction>
+                </dynamics>
+                <xyz>1 0 0</xyz>
+            </axis>
+		
+	</joint>
+
+	<!-- * Arm-RotuleDown Joint Definitions * -->
+	<joint name="arm_rotDown_<%=index%>_joint" type="fixed">
+		<parent>arm_<%=index%>_link</parent>
+		<child>rotuleDown_<%=index%>_link</child>
+	</joint>
+
+	<!-- * RotuleDown-Leg Joint Definitions * -->
+	<joint name="rotDown_leg_<%=index%>_joint" type="ball">
+		<pose frame= "arm_<%=index%>_link"> 0 0 <%=-leg_length/2%> 0 0 </pose>
+		<parent>rotuleDown_<%=index%>_link</parent>
+		<child>leg_<%=index%>_link</child>
+	</joint>
+
+	<!-- * Leg-RotuleUp Joint Definitions * -->
+	<joint name="arm_rotUp_<%=index%>_joint" type="fixed">
+		<parent>leg_<%=index%>_link</parent>
+		<child>rotuleUp_<%=index%>_link</child>
+	</joint>
+
+	<!-- * RotuleUp-Holder Joint Definitions * -->
+	<joint name="rotUp_platform_<%=index%>_joint" type="ball">
+		<pose frame="rotuleUp_<%=index%>_link"> 0 0 0 0 0 </pose>
+		<child>rotuleUp_<%=index%>_link</child>
+		<parent>holder_<%=index/2%>_link</parent>
+	</joint>
+	      
+		<% end %>
+
+		
+		<% (0..2).each do |index| %>
+	<!-- * RotuleUp-Holder Joint Definitions * -->
+	<joint name="holder_platform_<%=index%>_joint" type="fixed">
+		<parent>holder_<%=index%>_link</parent>
+		<child>platform_link</child>
+	</joint>
+	<% end %>
+
+	<% (0..5).each do |index| %>
+	<plugin name='motor_<%= index.to_s%>_model' filename='libstp_plugin.so'>
+		<robotNamespace/>
+		<joint_name>motor_<%=index%>_joint</joint_name>
+		
+	 </plugin>
+	 <% end %>
+	
+</model>
+</sdf>

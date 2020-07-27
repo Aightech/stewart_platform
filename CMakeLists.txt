@@ -53,6 +53,14 @@ else ()
   message("Couldn't find Boost library")
 endif (Boost_FOUND)
 
+find_package(gazebo REQUIRED)
+if (gazebo_FOUND)
+  list(APPEND EXTRA_LIBS ${GAZEBO_LIBRARIES})
+  list(APPEND EXTRA_INCLUDE ${GAZEBO_INCLUDE_DIRS})
+else ()
+  message("Couldn't find GAZEBO library")
+endif (gazebo_FOUND)
+
 
 
 
@@ -100,6 +108,7 @@ target_link_libraries (${LIB_NAME}
   PUBLIC ${EXTRA_LIBS})
 target_include_directories(${LIB_NAME}
   PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include"
+  PUBLIC "${EXTRA_INCLUDE}"
   )
 
 
@@ -110,7 +119,8 @@ target_link_libraries (${EXEC_NAME}
   PUBLIC ${LIB_NAME}
   PUBLIC ${EXTRA_LIBS})
 target_include_directories(${EXEC_NAME}
-  PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include")
+  PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include"
+  PUBLIC "${EXTRA_INCLUDE}")
 
 
 
