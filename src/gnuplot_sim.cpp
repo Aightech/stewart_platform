@@ -10,8 +10,6 @@ stp::Gnuplot_sim::draw()
     lines[1].resize(1);
     for(int i = 0; i < NB_LEGS; i++)
     {
-        if(i == 2)
-            i++;
         lines[0][0].push_back(m_plot.B[i]);
         lines[1][0].push_back(m_plot.P[i]);
 
@@ -51,4 +49,10 @@ stp::Gnuplot_sim::draw()
     }
 
     m_plot.gp << " \n";
+    
+//    for(int i = 0; i < NB_LEGS; i++)
+//    {
+//        std::cout << "\t" << m_alpha[i];//m_motors[m_motor_lookup[i]]->set_angle(m_alpha[i]);
+//    }
+//    std::cout << "\n";
 }

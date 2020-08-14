@@ -5,7 +5,7 @@
 #include "model.hpp"
 #include <cstdlib>
 
-stp::Model::Model(double deltas[4], double a, double l)
+stp::Model::Model(double deltas[4], double a, double l, int verbose_level): m_verbose_level(verbose_level)
 {
 
     /*
@@ -37,11 +37,14 @@ stp::Model::Model(double deltas[4], double a, double l)
         m_radius[i] = deltas[2 * i + 1] /
                       (2 * sin(atan(deltas[2 * i + 1] /
                                     (2 * deltas[2 * i] + deltas[2 * i + 1]))));
+    m_radius[0]=0.413;
+    m_radius[1]=0.244;
+     std::cout << m_radius[0] << " ddd " << m_radius[1] << "\n";
 
     //Set the constant coordinate of B and P1 (P in B1).
     for(int i = 0; i < NB_LEGS; i++)
     {
-        m_parity[i] = (i - i / 2 * 2);
+        m_parity[i] = (i - i / 2 * 2); //0-1-0-1-0-1
         //angle of the arms on Oxy.
         m_beta[i] = i / 2 * M_PI * 2 / 3 - (2 * m_parity[i] - 1) * M_PI / 2;
         //angle of the motor on the base circle.
@@ -50,15 +53,18 @@ stp::Model::Model(double deltas[4], double a, double l)
             (2 * m_parity[i] - 1) * asin(deltas[0] / 2 / m_radius[0]);
         m_gamma[1][i] =
             m_beta[i] + (2 * m_parity[i] - 1) * M_PI / 2 +
-            (2 * m_parity[i] - 1) * asin(deltas[1] / 2 / m_radius[1]);
+            (2 * m_parity[i] - 1) * asin(deltas[2] / 2 / m_radius[1]);
 
         m_B[i][0] = m_radius[0] * cos(m_gamma[0][i]);
         m_B[i][1] = m_radius[0] * sin(m_gamma[0][i]);
         m_B[i][2] = 0;
+        
 
         m_P1[i][0] = m_radius[1] * cos(m_gamma[1][i]);
         m_P1[i][1] = m_radius[1] * sin(m_gamma[1][i]);
         m_P1[i][2] = 0;
+        
+        
 
         m_alpha_spd[i] = 0;
     }
@@ -70,8 +76,10 @@ stp::Model::init_pos()
 {
     //compute h0
     double bp1_0 = m_B[0][0] - m_P1[0][0];
-    double h0 = sqrt(m_l2 + m_a2 - bp1_0 * bp1_0 - bp1_0 * bp1_0);
-
+    double h0 = sqrt(m_l2 + m_a2 - 2*(bp1_0 * bp1_0))-0.05;
+	m_alpha[0]=-1;
+	while(m_alpha[0]==-1)
+		{
     //set up the initial position.
     set_T(0, 0, h0);
     set_theta(0, 0, 0);
@@ -80,6 +88,10 @@ stp::Model::init_pos()
     set_theta_spd(0, 0, 0);
 
     new_pos(m_T, m_theta);
+    h0*=0.99;
+    std::cout << h0 << "\n";
+    
+    }
 
     for(int i = 0; i < 6; i++) { _alphaI[i] = m_alpha[i]; }
 }

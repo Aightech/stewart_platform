@@ -12,7 +12,7 @@ class Model
 {
     public:
     Model(){};
-    Model(double deltas[4], double a, double l);
+    Model(double deltas[4], double a, double l, int verbose_level=0);
 
     double *
     new_pos(double T[3], double theta[3]);
@@ -26,11 +26,6 @@ class Model
     void
     init_pos();
 
-    void
-    set_verbose(bool v = true)
-    {
-        m_verbose = v;
-    };
 
     void
     compute_R(double theta[3]);
@@ -86,7 +81,7 @@ class Model
 
     double _alphaI[6];
 
-    bool m_verbose = false;
+    int m_verbose_level = false;
 };
 
 }; // namespace stp
