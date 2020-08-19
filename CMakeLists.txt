@@ -52,7 +52,7 @@ if(0)
   set(EXTRA_LIBS "pthread" "util")
 endif()
 
-find_package(Boost 1.56 REQUIRED COMPONENTS system filesystem iostreams QUIET)
+find_package(Boost 1.56 QUIET REQUIRED COMPONENTS system filesystem iostreams)
 if (Boost_FOUND)
   message("-- Boost \t[OK]")
   list(APPEND EXTRA_LIBS ${Boost_IOSTREAMS_LIBRARY} ${Boost_SYSTEM_LIBRARY} ${Boost_FILESYSTEM_LIBRARY})
@@ -144,7 +144,7 @@ message("\n>  BUILD:")
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 qt5_wrap_cpp(EXEC_SRC ${CMAKE_CURRENT_SOURCE_DIR}/include/mainwindow.h)
 qt5_wrap_ui(EXEC_UI ${CMAKE_CURRENT_SOURCE_DIR}/forms/mainwindow.ui)
-set(LIB_SRCS ${LIB_SRCS}  ${EXEC_SRC})
+set(LIB_SRCS ${LIB_SRCS}  ${EXEC_SRC}  )
 
 
 add_executable(${EXEC_NAME} ${MAIN_FILE} ${LIB_SRCS})
@@ -152,7 +152,7 @@ target_link_libraries (${EXEC_NAME} ${EXTRA_LIBS})
 target_include_directories(${EXEC_NAME}
   PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include"
   PUBLIC "${EXTRA_INCLUDE}"
-  PRIVATE "${EXEC_UI}")
+  PUBLIC "${EXEC_UI}")
 
 
 
