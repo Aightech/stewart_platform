@@ -1,0 +1,84 @@
+\hypertarget{sdo_8cpp_source}{}\doxysection{sdo.\+cpp}
+\label{sdo_8cpp_source}\index{sdo.cpp@{sdo.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{sdo_8h}{sdo.h}}"}}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#include <stdexcept>}}
+\DoxyCodeLine{00004 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{00005 }
+\DoxyCodeLine{00006 \textcolor{keyword}{namespace }CANopen \{}
+\DoxyCodeLine{00007 SDOMessage::SDOMessage(\textcolor{keyword}{const} can\_frame \&other)}
+\DoxyCodeLine{00008     : Message(other) \{}
+\DoxyCodeLine{00009 \}}
+\DoxyCodeLine{00010 }
+\DoxyCodeLine{00011 SDOMessage::SDOMessage(FunctionCode fn, uint8\_t node\_id, CCS spec, uint8\_t n, uint8\_t e, uint8\_t s, uint16\_t index, uint8\_t subindex, Payload payload) \{}
+\DoxyCodeLine{00012     \textcolor{keywordflow}{if}(fn != SDOReceive \&\& fn != SDOTransmit) \{}
+\DoxyCodeLine{00013         \textcolor{keywordflow}{throw} std::runtime\_error(\textcolor{stringliteral}{"SDOMessage: wrong function code("} + (\textcolor{keyword}{static\_cast<}std::stringstream \textcolor{keyword}{const }\&\textcolor{keyword}{>}(std::stringstream() << \textcolor{stringliteral}{"0x"} << std::hex << fn)).str() + \textcolor{stringliteral}{")"});}
+\DoxyCodeLine{00014     \}}
+\DoxyCodeLine{00015 }
+\DoxyCodeLine{00016     can\_id = fn + node\_id;}
+\DoxyCodeLine{00017     can\_dlc = CAN\_MAX\_DLC;}
+\DoxyCodeLine{00018     data[0] = \textcolor{keyword}{static\_cast<}uint8\_t\textcolor{keyword}{>}(spec << 5 | (n\&0x03) << 2 | e << 1 | s);}
+\DoxyCodeLine{00019     data[1] = \textcolor{keyword}{static\_cast<}uint8\_t\textcolor{keyword}{>}(index);}
+\DoxyCodeLine{00020     data[2] = \textcolor{keyword}{static\_cast<}uint8\_t\textcolor{keyword}{>}(index >> 8);}
+\DoxyCodeLine{00021     data[3] = subindex;}
+\DoxyCodeLine{00022 }
+\DoxyCodeLine{00023     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < payload.size(); ++i) \{}
+\DoxyCodeLine{00024         data[4 + i] = payload[i];}
+\DoxyCodeLine{00025     \}}
+\DoxyCodeLine{00026 \}}
+\DoxyCodeLine{00027 }
+\DoxyCodeLine{00028 uint16\_t}
+\DoxyCodeLine{\Hypertarget{sdo_8cpp_source_l00029}\mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_message_a1e31a75dd442c32eaf42d74937b71cbb}{00029}} SDOMessage::index()\textcolor{keyword}{ const}\{}
+\DoxyCodeLine{00030     \textcolor{keywordflow}{return} data[1] + (data[2] << 8);}
+\DoxyCodeLine{00031 \}}
+\DoxyCodeLine{00032 }
+\DoxyCodeLine{00033 uint8\_t}
+\DoxyCodeLine{\Hypertarget{sdo_8cpp_source_l00034}\mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_message_acec40b62f1a77ab566fed5d9707ea619}{00034}} SDOMessage::subindex()\textcolor{keyword}{ const}\{}
+\DoxyCodeLine{00035     \textcolor{keywordflow}{return} data[3];}
+\DoxyCodeLine{00036 \}}
+\DoxyCodeLine{00037 }
+\DoxyCodeLine{00038 uint32\_t}
+\DoxyCodeLine{\Hypertarget{sdo_8cpp_source_l00039}\mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_message_aa12187c7761d4ef34de349270bb654d4}{00039}} SDOMessage::index\_\_sub()\textcolor{keyword}{ const}\{}
+\DoxyCodeLine{00040     \textcolor{keywordflow}{return} ((data[1] + (data[2] << 8)) << 16) + data[3];}
+\DoxyCodeLine{00041 \}}
+\DoxyCodeLine{00042 }
+\DoxyCodeLine{00043 \mbox{\hyperlink{class_c_a_nopen_1_1_payload}{Payload}}}
+\DoxyCodeLine{\Hypertarget{sdo_8cpp_source_l00044}\mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_message_a1c98a42d8af59c1b91d91ff2014cc276}{00044}} SDOMessage::payload()\textcolor{keyword}{ const}\{}
+\DoxyCodeLine{00045     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_c_a_nopen_1_1_payload}{Payload}}(std::vector<uint8\_t>(data + 4, data + 4 + size\_data()));}
+\DoxyCodeLine{00046 \}}
+\DoxyCodeLine{00047 }
+\DoxyCodeLine{00048 uint8\_t }
+\DoxyCodeLine{\Hypertarget{sdo_8cpp_source_l00049}\mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_message_ada403b64e3e300c54f9f941cf65a3da9}{00049}} SDOMessage::size\_data()\textcolor{keyword}{ const}}
+\DoxyCodeLine{00050 \textcolor{keyword}{}\{}
+\DoxyCodeLine{00051  \textcolor{keywordflow}{return} 4-\/(0x3\&(data[0]>>2));}
+\DoxyCodeLine{00052 \};}
+\DoxyCodeLine{00053 }
+\DoxyCodeLine{00054 SDOInbound::SDOInbound(\textcolor{keyword}{const} can\_frame \&other)}
+\DoxyCodeLine{00055     : \mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_message}{SDOMessage}}(other) \{}
+\DoxyCodeLine{00056 \}}
+\DoxyCodeLine{00057 }
+\DoxyCodeLine{00058 SDOOutbound::SDOOutbound(uint8\_t node\_id, RDWR dir, uint16\_t index, uint8\_t subindex, Payload payload)}
+\DoxyCodeLine{00059     : SDOMessage(SDOReceive, node\_id, dir == Write ? InitiateDownload : InitiateUpload, 4 -\/ payload.size(), 1, 1, index, subindex, payload) \{}
+\DoxyCodeLine{00060 \}}
+\DoxyCodeLine{00061 }
+\DoxyCodeLine{00062 SDOOutboundRead::SDOOutboundRead(uint8\_t node\_id, uint16\_t index, uint8\_t subindex)}
+\DoxyCodeLine{00063     : SDOOutbound(node\_id, Read, index, subindex, Payload()) \{}
+\DoxyCodeLine{00064 \}}
+\DoxyCodeLine{00065 }
+\DoxyCodeLine{00066 SDOOutboundRead::SDOOutboundRead(uint8\_t node\_id, uint32\_t index\_\_sub)}
+\DoxyCodeLine{00067     : SDOOutbound(node\_id, Read, (uint16\_t)(index\_\_sub >> 16), (uint8\_t)index\_\_sub, Payload()) \{}
+\DoxyCodeLine{00068 \}}
+\DoxyCodeLine{00069 }
+\DoxyCodeLine{00070 SDOOutboundWrite::SDOOutboundWrite(uint8\_t node\_id, uint16\_t index, uint8\_t subindex, Payload payload)}
+\DoxyCodeLine{00071     : SDOOutbound(node\_id, Write, index, subindex, payload) \{}
+\DoxyCodeLine{00072 \}}
+\DoxyCodeLine{00073 }
+\DoxyCodeLine{00074 SDOOutboundWrite::SDOOutboundWrite(uint8\_t node\_id, uint32\_t index\_\_sub, Payload payload)}
+\DoxyCodeLine{00075     : SDOOutbound(node\_id, Write, (uint16\_t)(index\_\_sub >> 16), (uint8\_t)index\_\_sub, payload) \{}
+\DoxyCodeLine{00076 \}}
+\DoxyCodeLine{00077 }
+\DoxyCodeLine{00078 \} \textcolor{comment}{// namespace CANopen}}
+
+\end{DoxyCode}

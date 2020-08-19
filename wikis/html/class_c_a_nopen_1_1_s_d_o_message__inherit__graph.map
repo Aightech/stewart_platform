@@ -1,0 +1,9 @@
+<map id="CANopen::SDOMessage" name="CANopen::SDOMessage">
+<area shape="rect" id="node1" title="SDO Message (Service Data Object)" alt="" coords="122,160,333,189"/>
+<area shape="rect" id="node4" href="$class_c_a_nopen_1_1_s_d_o_inbound.html" title="SDO received Message." alt="" coords="5,237,212,267"/>
+<area shape="rect" id="node5" href="$class_c_a_nopen_1_1_s_d_o_outbound.html" title="SDO Message to be sent." alt="" coords="236,237,456,267"/>
+<area shape="rect" id="node2" href="$class_c_a_nopen_1_1_message.html" title="can_frame object sent and received throught CANopen socket." alt="" coords="139,83,315,112"/>
+<area shape="rect" id="node3" title=" " alt="" coords="173,5,281,35"/>
+<area shape="rect" id="node6" href="$class_c_a_nopen_1_1_s_d_o_outbound_read.html" title="SDO Message to be sent to read the value from the object dictionary of a remote device." alt="" coords="73,315,333,344"/>
+<area shape="rect" id="node7" href="$class_c_a_nopen_1_1_s_d_o_outbound_write.html" title="SDO Message to be sent to write the value of the object dictionary of a remote device." alt="" coords="357,315,618,344"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="MainWindow::loop" name="MainWindow::loop">
+<area shape="rect" id="node1" title="loop Called every 1ms to send order depending of the mode." alt="" coords="5,37,172,67"/>
+<area shape="rect" id="node2" href="$classstp_1_1_platform.html#a7401402bd15c6ac28a0c83d00ff5a61c" title=" " alt="" coords="220,5,423,35"/>
+<area shape="rect" id="node4" href="$classstp_1_1_platform.html#ade3a53dd2234f57856b25dab957bae41" title=" " alt="" coords="227,59,416,106"/>
+<area shape="rect" id="node3" href="$classstp_1_1_model.html#a553d9f7f63c97eba26e3522a73531dc1" title=" " alt="" coords="471,5,653,35"/>
+</map>

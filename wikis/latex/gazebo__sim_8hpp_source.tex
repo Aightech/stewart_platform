@@ -1,0 +1,73 @@
+\hypertarget{gazebo__sim_8hpp_source}{}\doxysection{gazebo\+\_\+sim.\+hpp}
+\label{gazebo__sim_8hpp_source}\index{gazebo\_sim.hpp@{gazebo\_sim.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#ifndef \_GAZEBO\_SIM\_H\_}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#define \_GAZEBO\_SIM\_H\_}}
+\DoxyCodeLine{00003 }
+\DoxyCodeLine{00004 \textcolor{preprocessor}{\#include <gazebo/gazebo\_client.hh>}}
+\DoxyCodeLine{00005 \textcolor{preprocessor}{\#include <gazebo/gazebo\_config.h>}}
+\DoxyCodeLine{00006 \textcolor{preprocessor}{\#include <gazebo/msgs/msgs.hh>}}
+\DoxyCodeLine{00007 \textcolor{preprocessor}{\#include <gazebo/transport/transport.hh>}}
+\DoxyCodeLine{00008 }
+\DoxyCodeLine{00009 \textcolor{preprocessor}{\#include "gnuplot-\/iostream.h"}}
+\DoxyCodeLine{00010 \textcolor{preprocessor}{\#include "model.hpp"}}
+\DoxyCodeLine{00011 }
+\DoxyCodeLine{00012 \textcolor{keyword}{namespace }stp}
+\DoxyCodeLine{00013 \{}
+\DoxyCodeLine{00014 }
+\DoxyCodeLine{\Hypertarget{gazebo__sim_8hpp_source_l00015}\mbox{\hyperlink{classstp_1_1_gazebo__sim}{00015}} \textcolor{keyword}{class }\mbox{\hyperlink{classstp_1_1_gazebo__sim}{Gazebo\_sim}} : \textcolor{keyword}{public} \mbox{\hyperlink{classstp_1_1_model}{Model}}}
+\DoxyCodeLine{00016 \{}
+\DoxyCodeLine{00017     \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018     \mbox{\hyperlink{classstp_1_1_gazebo__sim}{Gazebo\_sim}}(\textcolor{keywordtype}{double} deltas[4], \textcolor{keywordtype}{double} a, \textcolor{keywordtype}{double} l)}
+\DoxyCodeLine{00019         : \mbox{\hyperlink{classstp_1_1_model}{Model}}(deltas, a, l), m\_node(\textcolor{keyword}{new} gazebo::transport::Node())}
+\DoxyCodeLine{00020     \{}
+\DoxyCodeLine{00021         gazebo::client::setup();}
+\DoxyCodeLine{00022         m\_node-\/>Init();}
+\DoxyCodeLine{00023 }
+\DoxyCodeLine{00024         \textcolor{comment}{// Publish to the  velodyne topic}}
+\DoxyCodeLine{00025         m\_pub = m\_node-\/>Advertise<gazebo::msgs::Vector3d>(\textcolor{stringliteral}{"\string~/stewart\_platform/cmd\_posstewart\_platform::motor\_0\_joint"});}
+\DoxyCodeLine{00026 }
+\DoxyCodeLine{00027     std::cout << \textcolor{stringliteral}{"Subscriber connecting to \string~/stewart\_platform/cmd\_posstewart\_platform::motor\_0\_joint"} << std::endl;}
+\DoxyCodeLine{00028         \textcolor{comment}{// Wait for a subscriber to connect to this publisher}}
+\DoxyCodeLine{00029         m\_pub-\/>WaitForConnection();}
+\DoxyCodeLine{00030 }
+\DoxyCodeLine{00031     \};}
+\DoxyCodeLine{00032 }
+\DoxyCodeLine{00033   \string~\mbox{\hyperlink{classstp_1_1_gazebo__sim}{Gazebo\_sim}}()}
+\DoxyCodeLine{00034     \{}
+\DoxyCodeLine{00035         \textcolor{comment}{// Make sure to shut everything down.}}
+\DoxyCodeLine{00036         gazebo::client::shutdown();}
+\DoxyCodeLine{00037     \};}
+\DoxyCodeLine{00038 }
+\DoxyCodeLine{00039     \textcolor{keywordtype}{double} *}
+\DoxyCodeLine{00040     new\_pos(\textcolor{keywordtype}{double} T[3], \textcolor{keywordtype}{double} theta[3])}
+\DoxyCodeLine{00041     \{}
+\DoxyCodeLine{00042 }
+\DoxyCodeLine{00043         Model::new\_pos(T, theta);}
+\DoxyCodeLine{00044         update();}
+\DoxyCodeLine{00045 }
+\DoxyCodeLine{00046      \textcolor{comment}{// Create a a vector3 message}}
+\DoxyCodeLine{00047         gazebo::msgs::Vector3d msg;}
+\DoxyCodeLine{00048 }
+\DoxyCodeLine{00049         \textcolor{comment}{// Set the velocity in the x-\/component}}
+\DoxyCodeLine{00050 }
+\DoxyCodeLine{00051         gazebo::msgs::Set(\&msg, }
+\DoxyCodeLine{00052                           ignition::math::Vector3d(T[0]*10, 0, 0));}
+\DoxyCodeLine{00053         \textcolor{comment}{// Send the message}}
+\DoxyCodeLine{00054        m\_pub-\/>Publish(msg);}
+\DoxyCodeLine{00055         \textcolor{keywordflow}{return} \mbox{\hyperlink{classstp_1_1_model_a8faca0ba2206f1ac384b80b2223a0c34}{m\_alpha}};}
+\DoxyCodeLine{00056     \};}
+\DoxyCodeLine{00057 }
+\DoxyCodeLine{00058     \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00059     update();}
+\DoxyCodeLine{00060 }
+\DoxyCodeLine{00061     gazebo::transport::NodePtr m\_node;}
+\DoxyCodeLine{00062     gazebo::transport::PublisherPtr m\_pub;}
+\DoxyCodeLine{00063 \};}
+\DoxyCodeLine{00064 }
+\DoxyCodeLine{00065 \} \textcolor{comment}{// namespace stp}}
+\DoxyCodeLine{00066 }
+\DoxyCodeLine{00067 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

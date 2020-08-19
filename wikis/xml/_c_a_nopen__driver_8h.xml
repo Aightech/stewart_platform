@@ -1,0 +1,491 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="_c_a_nopen__driver_8h" kind="file" language="C++">
+    <compoundname>CANopen_driver.h</compoundname>
+    <includes refid="_c_a_nopen__socket_8h" local="yes">CANopen_socket.h</includes>
+    <includes refid="parameter_8h" local="yes">parameter.h</includes>
+    <includes local="no">algorithm</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">map</includes>
+    <includes local="no">mutex</includes>
+    <includes local="no">string</includes>
+    <includes local="no">thread</includes>
+    <includedby refid="_c_a_nopen__lxm32_8h" local="yes">CANopen_lxm32.h</includedby>
+    <includedby refid="_c_a_nopen__driver_8cpp" local="yes">CANopen_driver.cpp</includedby>
+    <incdepgraph>
+      <node id="19">
+        <label>emcy.h</label>
+        <link refid="emcy_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>cstdint</label>
+      </node>
+      <node id="17">
+        <label>pdo.h</label>
+        <link refid="pdo_8h_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>stdexcept</label>
+      </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+      <node id="5">
+        <label>linux/can/raw.h</label>
+      </node>
+      <node id="23">
+        <label>map</label>
+      </node>
+      <node id="20">
+        <label>parameter.h</label>
+        <link refid="parameter_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>linux/can.h</label>
+      </node>
+      <node id="2">
+        <label>CANopen_socket.h</label>
+        <link refid="_c_a_nopen__socket_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>vector</label>
+      </node>
+      <node id="16">
+        <label>sdo.h</label>
+        <link refid="sdo_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>sstream</label>
+      </node>
+      <node id="18">
+        <label>nmt.h</label>
+        <link refid="nmt_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>iostream</label>
+      </node>
+      <node id="9">
+        <label>message.h</label>
+        <link refid="message_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>mutex</label>
+      </node>
+      <node id="6">
+        <label>sys/socket.h</label>
+      </node>
+      <node id="1">
+        <label>CANopen_driver.h</label>
+        <link refid="_c_a_nopen__driver_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>thread</label>
+      </node>
+      <node id="21">
+        <label>algorithm</label>
+      </node>
+      <node id="10">
+        <label>payload.h</label>
+        <link refid="payload_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>memory</label>
+      </node>
+      <node id="8">
+        <label>initializer_list</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="10">
+        <label>CANopen_driver.cpp</label>
+        <link refid="_c_a_nopen__driver_8cpp_source"/>
+      </node>
+      <node id="6">
+        <label>mainwindow.cpp</label>
+        <link refid="mainwindow_8cpp_source"/>
+      </node>
+      <node id="7">
+        <label>platform.cpp</label>
+        <link refid="platform_8cpp_source"/>
+      </node>
+      <node id="5">
+        <label>main.cpp</label>
+        <link refid="src_2main_8cpp_source"/>
+      </node>
+      <node id="3">
+        <label>platform.hpp</label>
+        <link refid="platform_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>CANopen_lxm32.h</label>
+        <link refid="_c_a_nopen__lxm32_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>CANopen_driver.h</label>
+        <link refid="_c_a_nopen__driver_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>mainwindow.h</label>
+        <link refid="mainwindow_8h_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>main.cpp</label>
+        <link refid="lib_2lxm32_2src_2main_8cpp_source"/>
+      </node>
+      <node id="8">
+        <label>CANopen_lxm32.cpp</label>
+        <link refid="_c_a_nopen__lxm32_8cpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_c_a_nopen_1_1_driver" prot="public">CANopen::Driver</innerclass>
+    <innernamespace refid="namespace_c_a_nopen">CANopen</innernamespace>
+    <briefdescription>
+<para>Device Profile Drives and Motion Control. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Alexis Devillard </para>
+</simplesect>
+<simplesect kind="version"><para>1.0 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_CANOPEN_DRIVER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_CANOPEN_DRIVER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_c_a_nopen__socket_8h" kindref="compound">CANopen_socket.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="parameter_8h" kindref="compound">parameter.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mutex&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;thread&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">CANopen<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">print_status(Parameter<sp/>*);</highlight></codeline>
+<codeline lineno="27" refid="class_c_a_nopen_1_1_driver" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_c_a_nopen_1_1_driver" kindref="compound">Driver</ref><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>constexpr<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>NB_PDO<sp/>=<sp/>4;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>constexpr<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MAX_PDO_SLOT<sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="34" refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7" kindref="member">Register</ref><sp/>:<sp/>uint32_t<sp/>{</highlight></codeline>
+<codeline lineno="35" refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7ad4d184bb0cd942f6bdd5ae4435ba1469" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7ad4d184bb0cd942f6bdd5ae4435ba1469" kindref="member">_DCOMstatus</ref><sp/>=<sp/>0x60410000,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39" refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a41294d34718a36687c2183a45ef06258" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a41294d34718a36687c2183a45ef06258" kindref="member">DCOMcontrol</ref><sp/>=<sp/>0x60400000,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43" refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a838ff7614cdd25d687a7b44f6fcd5112" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a838ff7614cdd25d687a7b44f6fcd5112" kindref="member">DCOMopmode</ref><sp/>=<sp/>0x60600000,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44" refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a27c60a5c7499691fa7a8927c3d4e4376" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a27c60a5c7499691fa7a8927c3d4e4376" kindref="member">_DCOMopmd_act</ref><sp/>=<sp/>0x60610000,<sp/></highlight></codeline>
+<codeline lineno="46" refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a9388c18e3ec79d918b872aab89a47387" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a9388c18e3ec79d918b872aab89a47387" kindref="member">PPp_target</ref><sp/>=<sp/>0x607A0000,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51" refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a97069ba1c67700d01ba84c05f2a31adb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a97069ba1c67700d01ba84c05f2a31adb" kindref="member">PPv_target</ref><sp/>=<sp/>0x60810000,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="54" refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a9a00b3971b7ee9985f91dd48ea7e1c73" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a9a00b3971b7ee9985f91dd48ea7e1c73" kindref="member">PVv_target</ref><sp/>=<sp/>0x60FF0000,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="55" refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a68422e03c559dee45c67d4743784c193" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a68422e03c559dee45c67d4743784c193" kindref="member">PTtq_target</ref><sp/>=<sp/>0x60710000,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="57" refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7ae34a009131bb4956dbb9a5c9e76b1c5a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7ae34a009131bb4956dbb9a5c9e76b1c5a" kindref="member">RAMP_v_acc</ref><sp/>=<sp/>0x60830000,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59" refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a6f355b7bef6158931cc8cf5e4b1f9c83" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a6f355b7bef6158931cc8cf5e4b1f9c83" kindref="member">RAMP_v_dec</ref><sp/>=<sp/>0x60840000,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="61" refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7af361a27c780c9ab4fe29763c80456258" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7af361a27c780c9ab4fe29763c80456258" kindref="member">_p_act</ref><sp/>=<sp/>0x60640000,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="62" refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a5790a9abb07781ba9d63ed64d7e0d7fc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a5790a9abb07781ba9d63ed64d7e0d7fc" kindref="member">_v_act</ref><sp/>=<sp/>0x606C0000,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="64" refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a0ab750decb5de6f5b2d380776dec09cc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a0ab750decb5de6f5b2d380776dec09cc" kindref="member">_tq_act</ref><sp/>=<sp/>0x60770000,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="66" refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a503823e06d7db891f898f6976aa7a514" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a503823e06d7db891f898f6976aa7a514" kindref="member">HMmethod</ref><sp/>=<sp/>0x60980000,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="67" refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7ad34e94f677df757d01d787a403a66a2a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7ad34e94f677df757d01d787a403a66a2a" kindref="member">HMv</ref><sp/>=<sp/>0x60990001,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="68" refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a796f4544102d3244ab451b229afbfb58" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a796f4544102d3244ab451b229afbfb58" kindref="member">HMv_out</ref><sp/>=<sp/>0x60990002<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="class_c_a_nopen_1_1_driver_1a47ce7e20890160451d8b43b4e32d3ceb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="class_c_a_nopen_1_1_driver_1a47ce7e20890160451d8b43b4e32d3ceb" kindref="member">OperationMode</ref><sp/>:<sp/>int8_t<sp/>{</highlight></codeline>
+<codeline lineno="73" refid="class_c_a_nopen_1_1_driver_1a47ce7e20890160451d8b43b4e32d3ceba3502834b10b8f0201a628b9a0e227425" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a47ce7e20890160451d8b43b4e32d3ceba3502834b10b8f0201a628b9a0e227425" kindref="member">ProfilePosition</ref><sp/>=<sp/>1,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="75" refid="class_c_a_nopen_1_1_driver_1a47ce7e20890160451d8b43b4e32d3cebacaf4b433be6b0476e7f157e086fea379" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a47ce7e20890160451d8b43b4e32d3cebacaf4b433be6b0476e7f157e086fea379" kindref="member">Velocity</ref><sp/>=<sp/>2,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="77" refid="class_c_a_nopen_1_1_driver_1a47ce7e20890160451d8b43b4e32d3cebadb9f0017145112261254a48699a41961" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a47ce7e20890160451d8b43b4e32d3cebadb9f0017145112261254a48699a41961" kindref="member">ProfileVelocity</ref><sp/>=<sp/>3,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="79" refid="class_c_a_nopen_1_1_driver_1a47ce7e20890160451d8b43b4e32d3cebaff42df87ec625334500bb240f76989ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a47ce7e20890160451d8b43b4e32d3cebaff42df87ec625334500bb240f76989ed" kindref="member">ProfileTorque</ref><sp/>=<sp/>4,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="83" refid="class_c_a_nopen_1_1_driver_1a47ce7e20890160451d8b43b4e32d3ceba080efe911eeba1ae575bfaa70b1bb579" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a47ce7e20890160451d8b43b4e32d3ceba080efe911eeba1ae575bfaa70b1bb579" kindref="member">Homing</ref><sp/>=<sp/>6,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="84" refid="class_c_a_nopen_1_1_driver_1a47ce7e20890160451d8b43b4e32d3cebab11858fe79ae30e3723a3cdb66360287" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a47ce7e20890160451d8b43b4e32d3cebab11858fe79ae30e3723a3cdb66360287" kindref="member">InterpolatedPosition</ref><sp/>=<sp/>7,<sp/></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02d" kindref="member">State</ref><sp/>:<sp/>uint16_t<sp/>{</highlight></codeline>
+<codeline lineno="92" refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02dac8ab6913526ea2fc62be30139261fbc6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02dac8ab6913526ea2fc62be30139261fbc6" kindref="member">mask</ref><sp/>=<sp/>0x006f,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="93" refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02da94d00ab583965d1d22f48674f7aefa7a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02da94d00ab583965d1d22f48674f7aefa7a" kindref="member">NotReadyToSwitchtON</ref><sp/>=<sp/>0x0000,<sp/></highlight></codeline>
+<codeline lineno="99" refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02da52c43c11131a9d753319d5e065d031c3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02da52c43c11131a9d753319d5e065d031c3" kindref="member">SwitchONDisabled</ref><sp/>=<sp/>0x0040,<sp/></highlight></codeline>
+<codeline lineno="106" refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02dafa947edce547a30b314910e6931235a4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02dafa947edce547a30b314910e6931235a4" kindref="member">ReadyToSwitchON</ref><sp/>=<sp/>0x0021,<sp/></highlight></codeline>
+<codeline lineno="111" refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02dac2e13098b6500cdcde217d2a9cc9ebb6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02dac2e13098b6500cdcde217d2a9cc9ebb6" kindref="member">SwitchedON</ref><sp/>=<sp/>0x0023,<sp/></highlight></codeline>
+<codeline lineno="117" refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02da1692c431e1cf20446dbf23a53913af0c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02da1692c431e1cf20446dbf23a53913af0c" kindref="member">OperationEnabled</ref><sp/>=<sp/>0x0037,<sp/></highlight></codeline>
+<codeline lineno="122" refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02da9028b5332c8352a087606c2cc79e9517" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02da9028b5332c8352a087606c2cc79e9517" kindref="member">Fault</ref><sp/>=<sp/>0x000f,<sp/></highlight></codeline>
+<codeline lineno="127" refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02dabafb33b6c4f43661a3257ca5b7569372" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02dabafb33b6c4f43661a3257ca5b7569372" kindref="member">FaultReactionActive</ref><sp/>=<sp/>0x000f,<sp/></highlight></codeline>
+<codeline lineno="133" refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02da8accb6a0a36eebcd88f85e0b92faf68a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02da8accb6a0a36eebcd88f85e0b92faf68a" kindref="member">QuickStopActive</ref><sp/>=<sp/>0x0007<sp/></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>StatusBits<sp/>:<sp/>uint16_t<sp/>{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ReadyToSwitchOn_bit<sp/>=<sp/>0x0001,</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SwitchedOn_bit<sp/>=<sp/>0x0002,</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OperationEnabled_bit<sp/>=<sp/>0x0004,</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Fault_bit<sp/>=<sp/>0x0008,</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VoltageEnabled_bit<sp/>=<sp/>0x0010,</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QuickStop_bit<sp/>=<sp/>0x0020,</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SwitchONDisabled_bit<sp/>=<sp/>0x0040,</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Error0_bit<sp/>=<sp/>0x0080,</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HaltRequest_bit<sp/>=<sp/>0x0100,</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Remote_bit<sp/>=<sp/>0x0200,</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TargetReached_bit<sp/>=<sp/>0x0400,</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InternalLimitReached_bit<sp/>=<sp/>0x0800,</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OperationMode_bit<sp/>=<sp/>0x1000,</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BlockingError_bit<sp/>=<sp/>0x2000,</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OperationModeStart_bit<sp/>=<sp/>0x4000,</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ValidRef_bit<sp/>=<sp/>0x8000</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160" refid="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903a" kindref="member">Control</ref><sp/>:<sp/>uint16_t<sp/>{</highlight></codeline>
+<codeline lineno="161" refid="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903aa6ccc4c2738c634abe2fd21cbe93f9fdb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903aa6ccc4c2738c634abe2fd21cbe93f9fdb" kindref="member">Shutdown</ref><sp/>=<sp/>0x0006,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="162" refid="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903aae98ed55dcd60bdd15d179ec32f651b8d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903aae98ed55dcd60bdd15d179ec32f651b8d" kindref="member">SwitchON</ref><sp/>=<sp/>0x0007,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="163" refid="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903aa81c0fb39e9e145721e1cf45a52f8786f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903aa81c0fb39e9e145721e1cf45a52f8786f" kindref="member">DisableVoltage</ref><sp/>=<sp/>0x0000,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="164" refid="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903aa6e8fc43d0b5f1ef14ac7ba475572c9b6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903aa6e8fc43d0b5f1ef14ac7ba475572c9b6" kindref="member">QuickStop</ref><sp/>=<sp/>0x0002,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="165" refid="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903aaa366dac5dbc508501f36112bf5472572" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903aaa366dac5dbc508501f36112bf5472572" kindref="member">DisableOperation</ref><sp/>=<sp/>0x0007,<sp/></highlight></codeline>
+<codeline lineno="166" refid="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903aaff77b9045071e916120fc49e159d2f77" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903aaff77b9045071e916120fc49e159d2f77" kindref="member">EnableOperation</ref><sp/>=<sp/>0x000f,<sp/><sp/></highlight></codeline>
+<codeline lineno="167" refid="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903aaa433113dfe71a54d4333344a339a9bbf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903aaa433113dfe71a54d4333344a339a9bbf" kindref="member">FaultResest</ref><sp/>=<sp/>0x0080<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>PDOFunctionCode<sp/>:<sp/>uint32_t<sp/>{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PDO1Transmit<sp/>=<sp/><ref refid="class_c_a_nopen_1_1_message_1a0f8f95e4ea1284011cd122629edc5468aea8753e3c4fecde547db28a4a01f4fea" kindref="member">Message::PDO1Transmit</ref>,</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PDO1Receive<sp/>=<sp/><ref refid="class_c_a_nopen_1_1_message_1a0f8f95e4ea1284011cd122629edc5468a289816747eb21454c97a2c0de54bd7bd" kindref="member">Message::PDO1Receive</ref>,</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PDO2Transmit<sp/>=<sp/><ref refid="class_c_a_nopen_1_1_message_1a0f8f95e4ea1284011cd122629edc5468a644cdb60cf2ec10f6f509c6dac09c7e7" kindref="member">Message::PDO2Transmit</ref>,</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PDO2Receive<sp/>=<sp/><ref refid="class_c_a_nopen_1_1_message_1a0f8f95e4ea1284011cd122629edc5468ae19e8c5160acfaab1c140c21789138e3" kindref="member">Message::PDO2Receive</ref>,</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PDO3Transmit<sp/>=<sp/><ref refid="class_c_a_nopen_1_1_message_1a0f8f95e4ea1284011cd122629edc5468ac15c2cbe07eac4f1fdc102927deadcdc" kindref="member">Message::PDO3Transmit</ref>,</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PDO3Receive<sp/>=<sp/><ref refid="class_c_a_nopen_1_1_message_1a0f8f95e4ea1284011cd122629edc5468ab059d1f4ab6ed9bb993e5d37aea6eba1" kindref="member">Message::PDO3Receive</ref>,</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PDO4Transmit<sp/>=<sp/><ref refid="class_c_a_nopen_1_1_message_1a0f8f95e4ea1284011cd122629edc5468a46d53ca55e462afcab565303b212656c" kindref="member">Message::PDO4Transmit</ref>,</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PDO4Receive<sp/>=<sp/><ref refid="class_c_a_nopen_1_1_message_1a0f8f95e4ea1284011cd122629edc5468a45f4fc29142533ab1395bd971c12be9b" kindref="member">Message::PDO4Receive</ref>,</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a0272315f94cb7bff729abeb8b8b052df" kindref="member">Driver</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*ifname,<sp/>uint16_t<sp/>can_id,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>verbose_lvl<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198" refid="class_c_a_nopen_1_1_driver_1a0da074f8cf3498e5d1c721ceaaa81a6e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a0da074f8cf3498e5d1c721ceaaa81a6e" kindref="member">set</ref>(<ref refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7" kindref="member">Register</ref><sp/>reg,<sp/>T<sp/>val,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>force_sdo<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>wait<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(m_available)<sp/>{</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_parameters[reg]-&gt;set(val);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(m_parameters[reg]-&gt;pdo_slot<sp/>==<sp/>-1<sp/>||<sp/>force_sdo<sp/>||<sp/>wait)</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1ad22705c4ee8cfee391113d359e790e67" kindref="member">send</ref>(m_parameters[reg]);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(wait)</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(m_parameters[reg]-&gt;sdo_flag.test_and_set())</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>T</highlight></codeline>
+<codeline lineno="218" refid="class_c_a_nopen_1_1_driver_1ae34094765084838267ac2ec088cf6554" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1ae34094765084838267ac2ec088cf6554" kindref="member">get</ref>(<ref refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7" kindref="member">Register</ref><sp/>reg,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>force_sdo<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(force_sdo<sp/>&amp;&amp;<sp/>m_available)<sp/>{</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a96123f2965334f4fda9c01ae7b0f8f46" kindref="member">update</ref>(m_parameters[reg]);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(m_parameters[reg]-&gt;sdo_flag.test_and_set())</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_parameters[reg]-&gt;get&lt;T&gt;();</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1aa831bccff07ba4c794952c8477e6810a" kindref="member">set_control</ref>(<ref refid="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903a" kindref="member">Control</ref><sp/>ctrl);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02d" kindref="member">State</ref></highlight></codeline>
+<codeline lineno="240" refid="class_c_a_nopen_1_1_driver_1a3087f343d739cb1cd138250ed6925eb8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a3087f343d739cb1cd138250ed6925eb8" kindref="member">get_state</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_parameters[<ref refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7ad4d184bb0cd942f6bdd5ae4435ba1469" kindref="member">_DCOMstatus</ref>]-&gt;get&lt;<ref refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02d" kindref="member">State</ref>&gt;();<sp/>};</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="248" refid="class_c_a_nopen_1_1_driver_1a6d875fd4488248671fb060c6a73030e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a6d875fd4488248671fb060c6a73030e2" kindref="member">wait_state</ref>(<ref refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02d" kindref="member">State</ref><sp/>state,<sp/>uint16_t<sp/>_mask<sp/>=<sp/><ref refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02dac8ab6913526ea2fc62be30139261fbc6" kindref="member">mask</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">((<ref refid="class_c_a_nopen_1_1_driver_1a3087f343d739cb1cd138250ed6925eb8" kindref="member">get_state</ref>()<sp/>&amp;<sp/><ref refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02dac8ab6913526ea2fc62be30139261fbc6" kindref="member">mask</ref>)<sp/>!=<sp/>(state<sp/>&amp;<sp/><ref refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02dac8ab6913526ea2fc62be30139261fbc6" kindref="member">mask</ref>))</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/>};<sp/></highlight><highlight class="comment">//std::cout<sp/>&lt;&lt;<sp/>(get_state()&amp;mask)<sp/>&lt;&lt;<sp/>&quot;<sp/>&quot;<sp/>&lt;&lt;<sp/>(state&amp;mask)&lt;&lt;<sp/>&quot;\n&quot;;}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a7e215f070766749f80655042cf70b6c2" kindref="member">set_mode</ref>(<ref refid="class_c_a_nopen_1_1_driver_1a47ce7e20890160451d8b43b4e32d3ceb" kindref="member">OperationMode</ref><sp/>mode,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>wait<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a47ce7e20890160451d8b43b4e32d3ceb" kindref="member">OperationMode</ref></highlight></codeline>
+<codeline lineno="267" refid="class_c_a_nopen_1_1_driver_1a0ece511729874fd45f24f5c517d84eae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a0ece511729874fd45f24f5c517d84eae" kindref="member">get_mode</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>force_sdo<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;get&lt;OperationMode&gt;(<ref refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a27c60a5c7499691fa7a8927c3d4e4376" kindref="member">_DCOMopmd_act</ref>,<sp/>force_sdo);<sp/>};</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a20967f674c7bfa52407350933248a300" kindref="member">set_position</ref>(int32_t<sp/>target,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>absolute<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a7a249fdda103c6c8d11e840d66514137" kindref="member">set_velocity</ref>(int32_t<sp/>target);</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a4b97e1e92f96eb579a85a4d33ef0592a" kindref="member">set_torque</ref>(int16_t<sp/>target);</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t</highlight></codeline>
+<codeline lineno="297" refid="class_c_a_nopen_1_1_driver_1a80f9eac00de5ae6c07d6d4fd56a3b110" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a80f9eac00de5ae6c07d6d4fd56a3b110" kindref="member">get_position</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_parameters[<ref refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7af361a27c780c9ab4fe29763c80456258" kindref="member">_p_act</ref>]-&gt;get&lt;int32_t&gt;()<sp/>-<sp/>m_offset_pos;<sp/>};</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t</highlight></codeline>
+<codeline lineno="303" refid="class_c_a_nopen_1_1_driver_1a0345a38f5dc54e5bcacd8cc86f6b903a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a0345a38f5dc54e5bcacd8cc86f6b903a" kindref="member">get_velocity</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_parameters[<ref refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a5790a9abb07781ba9d63ed64d7e0d7fc" kindref="member">_v_act</ref>]-&gt;get&lt;int32_t&gt;();<sp/>};</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t</highlight></codeline>
+<codeline lineno="309" refid="class_c_a_nopen_1_1_driver_1a32a2469e5958bf328b7df6ad7b7d49c1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a32a2469e5958bf328b7df6ad7b7d49c1" kindref="member">get_torque</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_parameters[<ref refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a0ab750decb5de6f5b2d380776dec09cc" kindref="member">_tq_act</ref>]-&gt;get&lt;int32_t&gt;();<sp/>};</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"></highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="316" refid="class_c_a_nopen_1_1_driver_1a9f5910067bb7489887a9ed25ba6199f8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a9f5910067bb7489887a9ed25ba6199f8" kindref="member">set_position_offset</ref>(int32_t<sp/>offset_pos)<sp/>{<sp/>m_offset_pos<sp/>=<sp/>offset_pos;<sp/>};</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1ad8ac07202c14ad344004146e126ecbf4" kindref="member">start</ref>();</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a05da9b5bdd80efed46b0629721d0664b" kindref="member">pause</ref>();</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1abd7d88699d02c007d5f23e608d8f0a0a" kindref="member">stop</ref>();</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1aa94db47b419a6afcc409c63c2685e1b6" kindref="member">profilePosition_mode</ref>();</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a32db059a1723f5c8db8986324ce21f8f" kindref="member">profileVelocity_mode</ref>();</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a4f2bd3e58752dfd0bc37b749452ebcfd" kindref="member">profileTorque_mode</ref>();</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a2fe863ef0d5d66f3241eda596a507377" kindref="member">homing</ref>();</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"></highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_c_a_nopen_1_1_parameter" kindref="compound">Parameter</ref><sp/>*</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/>get_param(<ref refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7" kindref="member">Register</ref><sp/>reg)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_parameters[reg];<sp/>};</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"></highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/>print_manufacturer_status()<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"></highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a05fb7b074555086b45918179c64494a6" kindref="member">ctrl_to_str</ref>(<ref refid="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903a" kindref="member">Control</ref><sp/>control);</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"></highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="368" refid="class_c_a_nopen_1_1_driver_1a249f11262c9264cf53486c247d004b99" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a249f11262c9264cf53486c247d004b99" kindref="member">is_available</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_available;<sp/>};</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"></highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1ad22705c4ee8cfee391113d359e790e67" kindref="member">send</ref>(<ref refid="struct_c_a_nopen_1_1_parameter" kindref="compound">Parameter</ref><sp/>*param);</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"></highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a96123f2965334f4fda9c01ae7b0f8f46" kindref="member">update</ref>(<ref refid="struct_c_a_nopen_1_1_parameter" kindref="compound">Parameter</ref><sp/>*param);</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"></highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1abd3e2b466b31e906ae7bcb390277f3dd" kindref="member">map_PDO</ref>(PDOFunctionCode<sp/>fn,<sp/><ref refid="struct_c_a_nopen_1_1_parameter" kindref="compound">Parameter</ref><sp/>*param,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>slot);</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"></highlight></codeline>
+<codeline lineno="399"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="400"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_driver_1a6cfa4f397be17e661e93bfb8f74ddb90" kindref="member">activate_PDO</ref>(PDOFunctionCode<sp/>fn,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_c_a_nopen_1_1_driver_1a0da074f8cf3498e5d1c721ceaaa81a6e" kindref="member">set</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="401"><highlight class="normal"></highlight></codeline>
+<codeline lineno="402"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="403"><highlight class="normal"><sp/><sp/><sp/><sp/>T_socket();</highlight></codeline>
+<codeline lineno="404"><highlight class="normal"></highlight></codeline>
+<codeline lineno="405"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="406"><highlight class="normal"><sp/><sp/><sp/><sp/>RPDO_socket();</highlight></codeline>
+<codeline lineno="407"><highlight class="normal"></highlight></codeline>
+<codeline lineno="408"><highlight class="normal"><sp/><sp/><sp/><sp/>std::thread<sp/>*m_rpdo_socket_thread;</highlight></codeline>
+<codeline lineno="409"><highlight class="normal"><sp/><sp/><sp/><sp/>std::atomic_flag<sp/>rpdo_socket_flag;</highlight></codeline>
+<codeline lineno="410"><highlight class="normal"><sp/><sp/><sp/><sp/>std::mutex<sp/>rpdo_mutex;</highlight></codeline>
+<codeline lineno="411"><highlight class="normal"><sp/><sp/><sp/><sp/>std::thread<sp/>*m_t_socket_thread;</highlight></codeline>
+<codeline lineno="412"><highlight class="normal"><sp/><sp/><sp/><sp/>std::atomic_flag<sp/>t_socket_flag;</highlight></codeline>
+<codeline lineno="413"><highlight class="normal"></highlight></codeline>
+<codeline lineno="414"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*m_ifname;</highlight></codeline>
+<codeline lineno="415"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m_verbose_level;</highlight></codeline>
+<codeline lineno="416"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>m_available;</highlight></codeline>
+<codeline lineno="417"><highlight class="normal"></highlight></codeline>
+<codeline lineno="418"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_socket" kindref="compound">CANopen::Socket</ref><sp/>m_socket;</highlight></codeline>
+<codeline lineno="419"><highlight class="normal"></highlight></codeline>
+<codeline lineno="420"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;PDOFunctionCode,<sp/>std::vector&lt;Parameter<sp/>*&gt;&gt;<sp/>m_PDO_map;</highlight></codeline>
+<codeline lineno="421"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;Register,<sp/>Parameter<sp/>*&gt;<sp/>m_parameters;</highlight></codeline>
+<codeline lineno="422"><highlight class="normal"></highlight></codeline>
+<codeline lineno="423"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>m_node_id;</highlight></codeline>
+<codeline lineno="424"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>m_can_baud;</highlight></codeline>
+<codeline lineno="425"><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/>m_offset_pos<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="426"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="427"><highlight class="normal"></highlight></codeline>
+<codeline lineno="428"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>CANopen</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="429"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h"/>
+  </compounddef>
+</doxygen>

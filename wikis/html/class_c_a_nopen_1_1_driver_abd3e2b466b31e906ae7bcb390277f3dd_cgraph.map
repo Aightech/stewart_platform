@@ -1,0 +1,4 @@
+<map id="CANopen::Driver::map_PDO" name="CANopen::Driver::map_PDO">
+<area shape="rect" id="node1" title="Enables to map the different parameters of the driver to the Transmit PDO. When a PDO is received in ..." alt="" coords="5,14,248,43"/>
+<area shape="rect" id="node2" href="$struct_c_a_nopen_1_1_parameter.html#a6f66686b516733d6506e8efdedd67862" title="link_to_pdo Links a paramet to a PDO message" alt="" coords="296,5,487,52"/>
+</map>

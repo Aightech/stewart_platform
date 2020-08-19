@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structgnuplotio_1_1_binfmt_sender_3_01float_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>gnuplotio::BinfmtSender&lt; float &gt;</compoundname>
+    <includes refid="gnuplot-iostream_8h" local="no">gnuplot-iostream.h</includes>
+    <templateparamlist>
+    </templateparamlist>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structgnuplotio_1_1_binfmt_sender_3_01float_01_4_1ae9c6a1915ee24e54ea5ed1a22c54fee1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void gnuplotio::BinfmtSender&lt; float &gt;::send</definition>
+        <argsstring>(std::ostream &amp;stream)</argsstring>
+        <name>send</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/gnuplot-iostream.h" line="468" column="42" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/gnuplot-iostream.h" bodystart="468" bodyend="468"/>
+        <references refid="structgnuplotio_1_1_binfmt_sender_3_01float_01_4_1ae9c6a1915ee24e54ea5ed1a22c54fee1" compoundref="gnuplot-iostream_8h" startline="468" endline="468">send</references>
+        <referencedby refid="structgnuplotio_1_1_binfmt_sender_3_01float_01_4_1ae9c6a1915ee24e54ea5ed1a22c54fee1" compoundref="gnuplot-iostream_8h" startline="468" endline="468">send</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/adev/Documents/STECH/stewart_platform/include/gnuplot-iostream.h" line="468" column="30" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/gnuplot-iostream.h" bodystart="468" bodyend="468"/>
+    <listofallmembers>
+      <member refid="structgnuplotio_1_1_binfmt_sender_3_01float_01_4_1ae9c6a1915ee24e54ea5ed1a22c54fee1" prot="public" virt="non-virtual"><scope>gnuplotio::BinfmtSender&lt; float &gt;</scope><name>send</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

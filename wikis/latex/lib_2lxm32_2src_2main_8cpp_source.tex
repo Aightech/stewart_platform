@@ -1,0 +1,122 @@
+\hypertarget{lib_2lxm32_2src_2main_8cpp_source}{}\doxysection{lib/lxm32/src/main.cpp}
+\label{lib_2lxm32_2src_2main_8cpp_source}\index{main.cpp@{main.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#include <stdlib.h>}}
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#include <unistd.h>}}
+\DoxyCodeLine{00004 \textcolor{preprocessor}{\#include <string.h>}}
+\DoxyCodeLine{00005 \textcolor{preprocessor}{\#include <cstdint>}}
+\DoxyCodeLine{00006 }
+\DoxyCodeLine{00007 \textcolor{preprocessor}{\#include <net/if.h>}}
+\DoxyCodeLine{00008 \textcolor{preprocessor}{\#include <sys/types.h>}}
+\DoxyCodeLine{00009 \textcolor{preprocessor}{\#include <sys/socket.h>}}
+\DoxyCodeLine{00010 \textcolor{preprocessor}{\#include <sys/ioctl.h>}}
+\DoxyCodeLine{00011 }
+\DoxyCodeLine{00012 \textcolor{preprocessor}{\#include <linux/can.h>}}
+\DoxyCodeLine{00013 \textcolor{preprocessor}{\#include <linux/can/raw.h>}}
+\DoxyCodeLine{00014 }
+\DoxyCodeLine{00015 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{_c_a_nopen__lxm32_8h}{CANopen\_lxm32.h}}"}}
+\DoxyCodeLine{00016 }
+\DoxyCodeLine{00017 \textcolor{preprocessor}{\#include "joystick.h"}}
+\DoxyCodeLine{00018 }
+\DoxyCodeLine{00019 }
+\DoxyCodeLine{00020 }
+\DoxyCodeLine{00021 \textcolor{keywordtype}{int}}
+\DoxyCodeLine{00022 main(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char}** argv)}
+\DoxyCodeLine{00023 \{}
+\DoxyCodeLine{00024     std::cout << std::dec << \textcolor{stringliteral}{" node: "} << atoi(argv[1]) << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{00025     \mbox{\hyperlink{class_c_a_nopen_1_1_l_x_m32}{CANopen::LXM32}} motor(\textcolor{stringliteral}{"can0"}, atoi(argv[1]), 0); }
+\DoxyCodeLine{00026     motor.start();}
+\DoxyCodeLine{00027     motor.set\_position\_offset(atoi(argv[2]));}
+\DoxyCodeLine{00028     motor.profilePosition\_mode();}
+\DoxyCodeLine{00029     }
+\DoxyCodeLine{00030     \textcolor{keywordtype}{double} pos = motor.get\_position();}
+\DoxyCodeLine{00031     \textcolor{keywordtype}{double} npos=0;}
+\DoxyCodeLine{00032     }
+\DoxyCodeLine{00033     \textcolor{keywordflow}{for}(;;)}
+\DoxyCodeLine{00034     \{}
+\DoxyCodeLine{00035         pos = motor.get\_position();}
+\DoxyCodeLine{00036         std::cout << std::dec << \textcolor{stringliteral}{"\(\backslash\)n Current pos: "} << pos << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{00037         std::cin >> npos;}
+\DoxyCodeLine{00038         motor.set\_position(npos);}
+\DoxyCodeLine{00039         }
+\DoxyCodeLine{00040         \textcolor{keywordflow}{while}(fabs(pos-\/npos) > 0.001)}
+\DoxyCodeLine{00041         \{}
+\DoxyCodeLine{00042             pos = motor.get\_position();}
+\DoxyCodeLine{00043             std::cout << std::dec << pos << \textcolor{stringliteral}{" "} << npos << \textcolor{stringliteral}{"\(\backslash\)xd"};}
+\DoxyCodeLine{00044         \}}
+\DoxyCodeLine{00045     \}}
+\DoxyCodeLine{00046     }
+\DoxyCodeLine{00047 \}}
+\DoxyCodeLine{00048 }
+\DoxyCodeLine{00049 \textcolor{comment}{//int}}
+\DoxyCodeLine{00050 \textcolor{comment}{//main(int argc, char** argv)}}
+\DoxyCodeLine{00051 \textcolor{comment}{//\{}}
+\DoxyCodeLine{00052 \textcolor{comment}{//  std::vector<CANopen::LXM32*> motors;}}
+\DoxyCodeLine{00053 \textcolor{comment}{//  int32\_t m\_motor\_pos[6];}}
+\DoxyCodeLine{00054 \textcolor{comment}{//  int32\_t m\_inc[6];}}
+\DoxyCodeLine{00055 \textcolor{comment}{//  double m\_conv=50000.0f/24.0f*180.0f/M\_PI;}}
+\DoxyCodeLine{00056 }
+\DoxyCodeLine{00057 \textcolor{comment}{//  int m\_motor\_lookup[6] = \{5,2,0,1,4,3\};}}
+\DoxyCodeLine{00058 \textcolor{comment}{//  }}
+\DoxyCodeLine{00059 \textcolor{comment}{//  for(int i=0; i<6; i++)}}
+\DoxyCodeLine{00060 \textcolor{comment}{//    \{}}
+\DoxyCodeLine{00061 \textcolor{comment}{//      //std::cout << CANopen::LXM32::OPmode::ProfilePosition << std::endl;}}
+\DoxyCodeLine{00062 \textcolor{comment}{//      motors.push\_back(new CANopen::LXM32("vcan0", i+1,false));}}
+\DoxyCodeLine{00063 \textcolor{comment}{//      int a = 1;}}
+\DoxyCodeLine{00064 \textcolor{comment}{//      int b = 2;}}
+\DoxyCodeLine{00065 \textcolor{comment}{//      //    motors.back()-\/>pdo\_watchdog(CANopen::Driver::PDOFunctionCode::PDO1Receive,\&a);}}
+\DoxyCodeLine{00066 }
+\DoxyCodeLine{00067 \textcolor{comment}{//      std::cout << a << " " << b << std::endl;}}
+\DoxyCodeLine{00068 \textcolor{comment}{//      //motors.back()-\/>start(MODE\_ProfilePosition, PPctrl\_RELATIVE| PPctrl\_ON\_DIRECT);}}
+\DoxyCodeLine{00069 \textcolor{comment}{//      m\_motor\_pos[i]=0;}}
+\DoxyCodeLine{00070 \textcolor{comment}{//      m\_inc[i]=0;}}
+\DoxyCodeLine{00071 \textcolor{comment}{//    \}}}
+\DoxyCodeLine{00072 \textcolor{comment}{//  }}
+\DoxyCodeLine{00073 \textcolor{comment}{//  cJoystick js;}}
+\DoxyCodeLine{00074 }
+\DoxyCodeLine{00075 \textcolor{comment}{//  int c=0;}}
+\DoxyCodeLine{00076 \textcolor{comment}{//  int i\_n;}}
+\DoxyCodeLine{00077 \textcolor{comment}{//  int i=0;}}
+\DoxyCodeLine{00078 \textcolor{comment}{//  i\_n = m\_motor\_lookup[i];}}
+\DoxyCodeLine{00079 \textcolor{comment}{//  while(1)}}
+\DoxyCodeLine{00080 \textcolor{comment}{//    \{}}
+\DoxyCodeLine{00081 \textcolor{comment}{//      if(js.buttonPressed(0)>0 \&\& c==0)}}
+\DoxyCodeLine{00082 \textcolor{comment}{//  \{}}
+\DoxyCodeLine{00083 \textcolor{comment}{//    i=(i+1)\%6;}}
+\DoxyCodeLine{00084 \textcolor{comment}{//    if(i==0)}}
+\DoxyCodeLine{00085 \textcolor{comment}{//        for(int i=0; i<6; i++)}}
+\DoxyCodeLine{00086 \textcolor{comment}{//      m\_motor\_pos[i]=0;}}
+\DoxyCodeLine{00087 \textcolor{comment}{//    printf("motor \%d\(\backslash\)n",i);}}
+\DoxyCodeLine{00088 \textcolor{comment}{//    c++;}}
+\DoxyCodeLine{00089 \textcolor{comment}{//    i\_n = m\_motor\_lookup[i];}}
+\DoxyCodeLine{00090 \textcolor{comment}{//  \}}}
+\DoxyCodeLine{00091 \textcolor{comment}{//      if(js.buttonPressed(0)==0)}}
+\DoxyCodeLine{00092 \textcolor{comment}{//  c=0;}}
+\DoxyCodeLine{00093 }
+\DoxyCodeLine{00094 \textcolor{comment}{//      int target = js.joystickValue(1)*m\_conv*3.14/32000/2;}}
+\DoxyCodeLine{00095 \textcolor{comment}{//      m\_inc[i\_n]=target-\/m\_motor\_pos[i\_n];}}
+\DoxyCodeLine{00096 \textcolor{comment}{//      m\_motor\_pos[i\_n]+=m\_inc[i\_n];}}
+\DoxyCodeLine{00097 \textcolor{comment}{//      //motors[i\_n]-\/>fa\_pos(m\_inc[i\_n]);}}
+\DoxyCodeLine{00098 \textcolor{comment}{//      printf("val \%d\(\backslash\)n",target);}}
+\DoxyCodeLine{00099 \textcolor{comment}{//      usleep(100000);}}
+\DoxyCodeLine{00100 \textcolor{comment}{//    \}}}
+\DoxyCodeLine{00101 }
+\DoxyCodeLine{00102 \textcolor{comment}{//  //lxm32.start();}}
+\DoxyCodeLine{00103 \textcolor{comment}{//  // Canopen\_socket can("can0",true);}}
+\DoxyCodeLine{00104 }
+\DoxyCodeLine{00105 \textcolor{comment}{//  // uint16\_t t = 0x1234;}}
+\DoxyCodeLine{00106 }
+\DoxyCodeLine{00107 \textcolor{comment}{//  // uint16\_t index = (uint16\_t)strtol(argv[1],NULL,16);}}
+\DoxyCodeLine{00108 \textcolor{comment}{//  // uint8\_t  subindex = (uint8\_t)strtol(argv[2],NULL,16);}}
+\DoxyCodeLine{00109 }
+\DoxyCodeLine{00110 \textcolor{comment}{//  // can.send\_SDO(1, FRAME\_SIZE, SDO\_R, index, subindex);}}
+\DoxyCodeLine{00111 }
+\DoxyCodeLine{00112 \textcolor{comment}{//  }}
+\DoxyCodeLine{00113 }
+\DoxyCodeLine{00114 \textcolor{comment}{//  }}
+\DoxyCodeLine{00115 \textcolor{comment}{//  return 0;}}
+\DoxyCodeLine{00116 \textcolor{comment}{//\}}}
+
+\end{DoxyCode}

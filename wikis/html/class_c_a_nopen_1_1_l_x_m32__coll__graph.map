@@ -1,0 +1,5 @@
+<map id="CANopen::LXM32" name="CANopen::LXM32">
+<area shape="rect" id="node1" title="Implementation of the Driver Class for a LXM32 driver." alt="" coords="5,179,165,208"/>
+<area shape="rect" id="node2" href="$class_c_a_nopen_1_1_driver.html" title="Device Profile Drives and Motion Control." alt="" coords="8,100,163,129"/>
+<area shape="rect" id="node3" href="$class_c_a_nopen_1_1_socket.html" title="CANopen object able to send Message through a CAN interface using UNIX sockets." alt="" coords="5,5,165,35"/>
+</map>

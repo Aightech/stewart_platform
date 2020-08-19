@@ -1,0 +1,644 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classstp_1_1_model" kind="class" language="C++" prot="public">
+    <compoundname>stp::Model</compoundname>
+    <derivedcompoundref refid="classstp_1_1_gazebo__sim" prot="public" virt="non-virtual">stp::Gazebo_sim</derivedcompoundref>
+    <derivedcompoundref refid="classstp_1_1_gnuplot__sim" prot="public" virt="non-virtual">stp::Gnuplot_sim</derivedcompoundref>
+    <derivedcompoundref refid="classstp_1_1_platform" prot="public" virt="non-virtual">stp::Platform</derivedcompoundref>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classstp_1_1_model_1a55f0ee3549b8f7e582ae9958d69cc493" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double stp::Model::m_radius[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>m_radius</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" line="48" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classstp_1_1_model_1a446d3fd455f0e44ec6a358b458ba85f2" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double stp::Model::m_a</definition>
+        <argsstring></argsstring>
+        <name>m_a</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" line="50" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classstp_1_1_model_1ad189b43e75b3b4a7a947e8142adce17c" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double stp::Model::m_a2</definition>
+        <argsstring></argsstring>
+        <name>m_a2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Size of the motors&apos; arms. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" line="50" column="16" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classstp_1_1_model_1a4093789451a0491487090daa1c4c9b85" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double stp::Model::m_l</definition>
+        <argsstring></argsstring>
+        <name>m_l</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" line="51" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classstp_1_1_model_1a9a16f1c28c96157d51bedbf67a1a7a81" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double stp::Model::m_l2</definition>
+        <argsstring></argsstring>
+        <name>m_l2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Size of the legs. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" line="51" column="16" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classstp_1_1_model_1ac031672ca5aae4c192c38b1103fdf2dd" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double stp::Model::_d2[NB_LEGS]</definition>
+        <argsstring>[NB_LEGS]</argsstring>
+        <name>_d2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Distance between the axe of the motors and the coresponding legs-platform articulation. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" line="52" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classstp_1_1_model_1a773d6f9a6ee4f6dd580229e0dc3d741c" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double stp::Model::m_P[NB_LEGS][3]</definition>
+        <argsstring>[NB_LEGS][3]</argsstring>
+        <name>m_P</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Position of the legs-platform articulation in the base B0. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" line="55" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classstp_1_1_model_1a82e25ba756ecbe2f929505ef4d97b317" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double stp::Model::m_P1[NB_LEGS][3]</definition>
+        <argsstring>[NB_LEGS][3]</argsstring>
+        <name>m_P1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Position of the legs-platform articulation in the base B1. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" line="58" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classstp_1_1_model_1ad1f36bbb9a3f9aac7054b991bb02fe70" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double stp::Model::m_B[NB_LEGS][3]</definition>
+        <argsstring>[NB_LEGS][3]</argsstring>
+        <name>m_B</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Position of the motors-arms articulation in the base B0. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" line="62" column="9" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classstp_1_1_model_1a4aaa7aee9ac9d9903d29d06cf15ed601" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double stp::Model::m_A[NB_LEGS][3]</definition>
+        <argsstring>[NB_LEGS][3]</argsstring>
+        <name>m_A</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Position of the arms-legs articulation in the base B0. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" line="64" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classstp_1_1_model_1a3c26b01a6c5e533e25ec3de71c7f132c" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double stp::Model::m_parity[NB_LEGS]</definition>
+        <argsstring>[NB_LEGS]</argsstring>
+        <name>m_parity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Use to represent the side of the motor arm. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" line="67" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classstp_1_1_model_1a0dde329f8445840075590404c4f2c0de" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double stp::Model::m_beta[NB_LEGS]</definition>
+        <argsstring>[NB_LEGS]</argsstring>
+        <name>m_beta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Orientation of the motor on the base. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" line="68" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classstp_1_1_model_1a8faca0ba2206f1ac384b80b2223a0c34" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double stp::Model::m_alpha[NB_LEGS]</definition>
+        <argsstring>[NB_LEGS]</argsstring>
+        <name>m_alpha</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Angular postion of the rotor. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" line="69" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classstp_1_1_model_1a60eab0062d4e65c720ed2ac39d51779b" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double stp::Model::m_gamma[2][NB_LEGS]</definition>
+        <argsstring>[2][NB_LEGS]</argsstring>
+        <name>m_gamma</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Angular position of the motor on the base </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" line="70" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classstp_1_1_model_1a61d8b4957be741fa473468065c2a5d0d" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double stp::Model::m_T[3]</definition>
+        <argsstring>[3]</argsstring>
+        <name>m_T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Postion of the center of the platform. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" line="73" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classstp_1_1_model_1a826586afc60c2c076b271413f5c3e382" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double stp::Model::m_theta[3]</definition>
+        <argsstring>[3]</argsstring>
+        <name>m_theta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Orientation of the platform. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" line="74" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classstp_1_1_model_1ae1c80dd8cb28d3bd7966c1f289fb291e" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double stp::Model::m_R[3][3]</definition>
+        <argsstring>[3][3]</argsstring>
+        <name>m_R</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Matrix of rotation. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" line="75" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classstp_1_1_model_1afdc7491e9be320ad94775ca046667f9b" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double stp::Model::m_trig[6]</definition>
+        <argsstring>[6]</argsstring>
+        <name>m_trig</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>(cos(theta_i),sin(theta_i)) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" line="76" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classstp_1_1_model_1a0ba1c1143089052ffad8133ff40d972f" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double stp::Model::m_T_spd[3]</definition>
+        <argsstring>[3]</argsstring>
+        <name>m_T_spd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Velocity of the platform. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" line="78" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classstp_1_1_model_1aa12970f18bc4258b9ad185f54a9cfe70" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double stp::Model::m_theta_spd[3]</definition>
+        <argsstring>[3]</argsstring>
+        <name>m_theta_spd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Rotation speed of the platform. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" line="79" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classstp_1_1_model_1a0b4fbb6fdec8106993ddffbd9f61d6ce" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double stp::Model::m_alpha_spd[6]</definition>
+        <argsstring>[6]</argsstring>
+        <name>m_alpha_spd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Rotation speed of the motors. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" line="80" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classstp_1_1_model_1a4679e65c69f376bf8f20f5b80635b79b" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double stp::Model::_alphaI[6]</definition>
+        <argsstring>[6]</argsstring>
+        <name>_alphaI</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" line="82" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classstp_1_1_model_1ab0f8907bbccb353cbabf625b7370eda1" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int stp::Model::m_verbose_level</definition>
+        <argsstring></argsstring>
+        <name>m_verbose_level</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" line="84" column="9" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classstp_1_1_model_1a771583e4fa62890a4c86b30ada77a9e5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>stp::Model::Model</definition>
+        <argsstring>()</argsstring>
+        <name>Model</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" line="14" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" bodystart="14" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classstp_1_1_model_1a6c82f7a11076fb192448a2fd54d872bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>stp::Model::Model</definition>
+        <argsstring>(double deltas[4], double a, double l, int verbose_level=0)</argsstring>
+        <name>Model</name>
+        <param>
+          <type>double</type>
+          <declname>deltas</declname>
+          <array>[4]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>verbose_level</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" line="15" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/src/model.cpp" bodystart="8" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classstp_1_1_model_1a553d9f7f63c97eba26e3522a73531dc1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double *</type>
+        <definition>double * stp::Model::new_pos</definition>
+        <argsstring>(double T[3], double theta[3])</argsstring>
+        <name>new_pos</name>
+        <param>
+          <type>double</type>
+          <declname>T</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>theta</declname>
+          <array>[3]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" line="18" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/src/model.cpp" bodystart="100" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="classstp_1_1_model_1a96807e2f67ea212b44e89bc567d8fa2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double stp::Model::get_T</definition>
+        <argsstring>(int i)</argsstring>
+        <name>get_T</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" line="21" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/src/model.cpp" bodystart="185" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="classstp_1_1_model_1a7856980516ed1f0613420a402b5b8d8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double stp::Model::get_theta</definition>
+        <argsstring>(int i)</argsstring>
+        <name>get_theta</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" line="24" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/src/model.cpp" bodystart="191" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="classstp_1_1_model_1a732e1d29e24600760b53a8e126bb7906" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void stp::Model::init_pos</definition>
+        <argsstring>()</argsstring>
+        <name>init_pos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" line="27" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/src/model.cpp" bodystart="74" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="classstp_1_1_model_1afeda6e56bb177dc53c2c3fd1a86a2388" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void stp::Model::compute_R</definition>
+        <argsstring>(double theta[3])</argsstring>
+        <name>compute_R</name>
+        <param>
+          <type>double</type>
+          <declname>theta</declname>
+          <array>[3]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" line="31" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/src/model.cpp" bodystart="148" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="classstp_1_1_model_1adacd3ce9b374636df51ce78b5be18c59" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void stp::Model::print_pos</definition>
+        <argsstring>()</argsstring>
+        <name>print_pos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" line="33" column="8" bodyfile="/home/adev/Documents/STECH/stewart_platform/src/model.cpp" bodystart="212" bodyend="223"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classstp_1_1_model_1ade58705e09f3edf93f43a51021517f9e" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void stp::Model::set_T</definition>
+        <argsstring>(double t0, double t1, double t2)</argsstring>
+        <name>set_T</name>
+        <param>
+          <type>double</type>
+          <declname>t0</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>t1</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>t2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" line="37" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/src/model.cpp" bodystart="169" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="classstp_1_1_model_1a84fd6646ed05db5eec86afd968fde65d" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void stp::Model::set_T_spd</definition>
+        <argsstring>(double t0, double t1, double t2)</argsstring>
+        <name>set_T_spd</name>
+        <param>
+          <type>double</type>
+          <declname>t0</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>t1</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>t2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" line="40" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/src/model.cpp" bodystart="177" bodyend="182"/>
+      </memberdef>
+      <memberdef kind="function" id="classstp_1_1_model_1a6a6dcae980e86d84084dc4ccd0de3285" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void stp::Model::set_theta</definition>
+        <argsstring>(double t0, double t1, double t2)</argsstring>
+        <name>set_theta</name>
+        <param>
+          <type>double</type>
+          <declname>t0</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>t1</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>t2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" line="43" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/src/model.cpp" bodystart="197" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="classstp_1_1_model_1afd0f76304578013e1faff062a318dac5" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void stp::Model::set_theta_spd</definition>
+        <argsstring>(double t0, double t1, double t2)</argsstring>
+        <name>set_theta_spd</name>
+        <param>
+          <type>double</type>
+          <declname>t0</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>t1</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>t2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" line="46" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/src/model.cpp" bodystart="204" bodyend="209"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4">
+        <label>stp::Platform</label>
+        <link refid="classstp_1_1_platform"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stp::Gazebo_sim</label>
+        <link refid="classstp_1_1_gazebo__sim"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>stp::Model</label>
+        <link refid="classstp_1_1_model"/>
+      </node>
+      <node id="3">
+        <label>stp::Gnuplot_sim</label>
+        <link refid="classstp_1_1_gnuplot__sim"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" line="12" column="1" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" bodystart="11" bodyend="85"/>
+    <listofallmembers>
+      <member refid="classstp_1_1_model_1a4679e65c69f376bf8f20f5b80635b79b" prot="protected" virt="non-virtual"><scope>stp::Model</scope><name>_alphaI</name></member>
+      <member refid="classstp_1_1_model_1ac031672ca5aae4c192c38b1103fdf2dd" prot="protected" virt="non-virtual"><scope>stp::Model</scope><name>_d2</name></member>
+      <member refid="classstp_1_1_model_1afeda6e56bb177dc53c2c3fd1a86a2388" prot="public" virt="non-virtual"><scope>stp::Model</scope><name>compute_R</name></member>
+      <member refid="classstp_1_1_model_1a96807e2f67ea212b44e89bc567d8fa2a" prot="public" virt="non-virtual"><scope>stp::Model</scope><name>get_T</name></member>
+      <member refid="classstp_1_1_model_1a7856980516ed1f0613420a402b5b8d8c" prot="public" virt="non-virtual"><scope>stp::Model</scope><name>get_theta</name></member>
+      <member refid="classstp_1_1_model_1a732e1d29e24600760b53a8e126bb7906" prot="public" virt="non-virtual"><scope>stp::Model</scope><name>init_pos</name></member>
+      <member refid="classstp_1_1_model_1a4aaa7aee9ac9d9903d29d06cf15ed601" prot="protected" virt="non-virtual"><scope>stp::Model</scope><name>m_A</name></member>
+      <member refid="classstp_1_1_model_1a446d3fd455f0e44ec6a358b458ba85f2" prot="protected" virt="non-virtual"><scope>stp::Model</scope><name>m_a</name></member>
+      <member refid="classstp_1_1_model_1ad189b43e75b3b4a7a947e8142adce17c" prot="protected" virt="non-virtual"><scope>stp::Model</scope><name>m_a2</name></member>
+      <member refid="classstp_1_1_model_1a8faca0ba2206f1ac384b80b2223a0c34" prot="protected" virt="non-virtual"><scope>stp::Model</scope><name>m_alpha</name></member>
+      <member refid="classstp_1_1_model_1a0b4fbb6fdec8106993ddffbd9f61d6ce" prot="protected" virt="non-virtual"><scope>stp::Model</scope><name>m_alpha_spd</name></member>
+      <member refid="classstp_1_1_model_1ad1f36bbb9a3f9aac7054b991bb02fe70" prot="protected" virt="non-virtual"><scope>stp::Model</scope><name>m_B</name></member>
+      <member refid="classstp_1_1_model_1a0dde329f8445840075590404c4f2c0de" prot="protected" virt="non-virtual"><scope>stp::Model</scope><name>m_beta</name></member>
+      <member refid="classstp_1_1_model_1a60eab0062d4e65c720ed2ac39d51779b" prot="protected" virt="non-virtual"><scope>stp::Model</scope><name>m_gamma</name></member>
+      <member refid="classstp_1_1_model_1a4093789451a0491487090daa1c4c9b85" prot="protected" virt="non-virtual"><scope>stp::Model</scope><name>m_l</name></member>
+      <member refid="classstp_1_1_model_1a9a16f1c28c96157d51bedbf67a1a7a81" prot="protected" virt="non-virtual"><scope>stp::Model</scope><name>m_l2</name></member>
+      <member refid="classstp_1_1_model_1a773d6f9a6ee4f6dd580229e0dc3d741c" prot="protected" virt="non-virtual"><scope>stp::Model</scope><name>m_P</name></member>
+      <member refid="classstp_1_1_model_1a82e25ba756ecbe2f929505ef4d97b317" prot="protected" virt="non-virtual"><scope>stp::Model</scope><name>m_P1</name></member>
+      <member refid="classstp_1_1_model_1a3c26b01a6c5e533e25ec3de71c7f132c" prot="protected" virt="non-virtual"><scope>stp::Model</scope><name>m_parity</name></member>
+      <member refid="classstp_1_1_model_1ae1c80dd8cb28d3bd7966c1f289fb291e" prot="protected" virt="non-virtual"><scope>stp::Model</scope><name>m_R</name></member>
+      <member refid="classstp_1_1_model_1a55f0ee3549b8f7e582ae9958d69cc493" prot="protected" virt="non-virtual"><scope>stp::Model</scope><name>m_radius</name></member>
+      <member refid="classstp_1_1_model_1a61d8b4957be741fa473468065c2a5d0d" prot="protected" virt="non-virtual"><scope>stp::Model</scope><name>m_T</name></member>
+      <member refid="classstp_1_1_model_1a0ba1c1143089052ffad8133ff40d972f" prot="protected" virt="non-virtual"><scope>stp::Model</scope><name>m_T_spd</name></member>
+      <member refid="classstp_1_1_model_1a826586afc60c2c076b271413f5c3e382" prot="protected" virt="non-virtual"><scope>stp::Model</scope><name>m_theta</name></member>
+      <member refid="classstp_1_1_model_1aa12970f18bc4258b9ad185f54a9cfe70" prot="protected" virt="non-virtual"><scope>stp::Model</scope><name>m_theta_spd</name></member>
+      <member refid="classstp_1_1_model_1afdc7491e9be320ad94775ca046667f9b" prot="protected" virt="non-virtual"><scope>stp::Model</scope><name>m_trig</name></member>
+      <member refid="classstp_1_1_model_1ab0f8907bbccb353cbabf625b7370eda1" prot="protected" virt="non-virtual"><scope>stp::Model</scope><name>m_verbose_level</name></member>
+      <member refid="classstp_1_1_model_1a771583e4fa62890a4c86b30ada77a9e5" prot="public" virt="non-virtual"><scope>stp::Model</scope><name>Model</name></member>
+      <member refid="classstp_1_1_model_1a6c82f7a11076fb192448a2fd54d872bf" prot="public" virt="non-virtual"><scope>stp::Model</scope><name>Model</name></member>
+      <member refid="classstp_1_1_model_1a553d9f7f63c97eba26e3522a73531dc1" prot="public" virt="non-virtual"><scope>stp::Model</scope><name>new_pos</name></member>
+      <member refid="classstp_1_1_model_1adacd3ce9b374636df51ce78b5be18c59" prot="public" virt="non-virtual"><scope>stp::Model</scope><name>print_pos</name></member>
+      <member refid="classstp_1_1_model_1ade58705e09f3edf93f43a51021517f9e" prot="protected" virt="non-virtual"><scope>stp::Model</scope><name>set_T</name></member>
+      <member refid="classstp_1_1_model_1a84fd6646ed05db5eec86afd968fde65d" prot="protected" virt="non-virtual"><scope>stp::Model</scope><name>set_T_spd</name></member>
+      <member refid="classstp_1_1_model_1a6a6dcae980e86d84084dc4ccd0de3285" prot="protected" virt="non-virtual"><scope>stp::Model</scope><name>set_theta</name></member>
+      <member refid="classstp_1_1_model_1afd0f76304578013e1faff062a318dac5" prot="protected" virt="non-virtual"><scope>stp::Model</scope><name>set_theta_spd</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

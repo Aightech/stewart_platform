@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['y',['y',['../structjoystick__position.html#ad8fc27fbd5404a4f8cdc1a045a0d689a',1,'joystick_position']]]
+  ['x_465',['x',['../structjoystick__position.html#a71c3292c1be3c3400a388eac41a47ad3',1,'joystick_position']]]
 ];

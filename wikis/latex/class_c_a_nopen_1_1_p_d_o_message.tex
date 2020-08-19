@@ -1,0 +1,73 @@
+\hypertarget{class_c_a_nopen_1_1_p_d_o_message}{}\doxysection{C\+A\+Nopen\+::P\+D\+O\+Message Class Reference}
+\label{class_c_a_nopen_1_1_p_d_o_message}\index{CANopen::PDOMessage@{CANopen::PDOMessage}}
+
+
+P\+DO \mbox{\hyperlink{class_c_a_nopen_1_1_message}{Message}} (Process Data Object)  
+
+
+
+
+{\ttfamily \#include $<$pdo.\+h$>$}
+
+
+
+Inheritance diagram for C\+A\+Nopen\+::P\+D\+O\+Message\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{class_c_a_nopen_1_1_p_d_o_message__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for C\+A\+Nopen\+::P\+D\+O\+Message\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{class_c_a_nopen_1_1_p_d_o_message__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_a_nopen_1_1_p_d_o_message_ab46579ce08cec30d0bc60428053cb39f}\label{class_c_a_nopen_1_1_p_d_o_message_ab46579ce08cec30d0bc60428053cb39f}} 
+enum {\bfseries P\+D\+O\+Function\+Code} \+: uint32\+\_\+t \{ \newline
+{\bfseries P\+D\+O1\+Transmit} = Message\+::P\+D\+O1\+Transmit, 
+{\bfseries P\+D\+O1\+Receive} = Message\+::P\+D\+O1\+Receive, 
+{\bfseries P\+D\+O2\+Transmit} = Message\+::P\+D\+O2\+Transmit, 
+{\bfseries P\+D\+O2\+Receive} = Message\+::P\+D\+O2\+Receive, 
+\newline
+{\bfseries P\+D\+O3\+Transmit} = Message\+::P\+D\+O3\+Transmit, 
+{\bfseries P\+D\+O3\+Receive} = Message\+::P\+D\+O3\+Receive, 
+{\bfseries P\+D\+O4\+Transmit} = Message\+::P\+D\+O4\+Transmit, 
+{\bfseries P\+D\+O4\+Receive} = Message\+::P\+D\+O4\+Receive
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_a_nopen_1_1_p_d_o_message_a461a62c471761504043dfcb13f9ec685}\label{class_c_a_nopen_1_1_p_d_o_message_a461a62c471761504043dfcb13f9ec685}} 
+{\bfseries P\+D\+O\+Message} (const can\+\_\+frame \&other)
+\item 
+\mbox{\Hypertarget{class_c_a_nopen_1_1_p_d_o_message_ae7f8db2be338aaa9cc61f08520fa0c85}\label{class_c_a_nopen_1_1_p_d_o_message_ae7f8db2be338aaa9cc61f08520fa0c85}} 
+{\bfseries P\+D\+O\+Message} (P\+D\+O\+Function\+Code fn, uint8\+\_\+t \mbox{\hyperlink{class_c_a_nopen_1_1_message_adc93c710fd35ab61e46a0881326d0336}{node\+\_\+id}}, \mbox{\hyperlink{class_c_a_nopen_1_1_payload}{Payload}} \mbox{\hyperlink{class_c_a_nopen_1_1_message_a231049034467f68a5a919a9267f9151f}{payload}})
+\item 
+\mbox{\Hypertarget{class_c_a_nopen_1_1_p_d_o_message_ae03740c1aa91dfc02a2a3ba0d566fb64}\label{class_c_a_nopen_1_1_p_d_o_message_ae03740c1aa91dfc02a2a3ba0d566fb64}} 
+uint8\+\_\+t {\bfseries num} ()
+\item 
+\mbox{\Hypertarget{class_c_a_nopen_1_1_p_d_o_message_a8d76de09957cad5a242f87082cc4c2bd}\label{class_c_a_nopen_1_1_p_d_o_message_a8d76de09957cad5a242f87082cc4c2bd}} 
+uint32\+\_\+t {\bfseries id} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+P\+DO \mbox{\hyperlink{class_c_a_nopen_1_1_message}{Message}} (Process Data Object) 
+
+Definition at line \mbox{\hyperlink{pdo_8h_source_l00018}{18}} of file \mbox{\hyperlink{pdo_8h_source}{pdo.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+pdo.\+h\item 
+pdo.\+cpp\end{DoxyCompactItemize}

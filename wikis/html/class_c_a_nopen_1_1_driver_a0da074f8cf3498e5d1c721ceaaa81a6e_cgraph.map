@@ -1,0 +1,5 @@
+<map id="CANopen::Driver::set" name="CANopen::Driver::set">
+<area shape="rect" id="node1" title="Enables to store a value in a specified registers." alt="" coords="5,14,193,43"/>
+<area shape="rect" id="node2" href="$class_c_a_nopen_1_1_driver.html#ad22705c4ee8cfee391113d359e790e67" title="send the parameter via a Writting SDO message to the driver" alt="" coords="241,14,444,43"/>
+<area shape="rect" id="node3" href="$struct_c_a_nopen_1_1_parameter.html#a0b5d5729fe8b242797e0ab7b49d4519d" title="payload Returns a payload filled with the parameter data." alt="" coords="492,5,683,52"/>
+</map>

@@ -1,5 +1,7 @@
-<map id="include/gnuplot&#45;iostream.h" name="include/gnuplot&#45;iostream.h">
-<area shape="rect" id="node2" href="$gnuplot__sim_8hpp.html" title="include/gnuplot_sim.hpp" alt="" coords="71,83,267,112"/>
-<area shape="rect" id="node3" href="$gnuplot__sim_8cpp.html" title="src/gnuplot_sim.cpp" alt="" coords="5,160,169,189"/>
-<area shape="rect" id="node4" href="$src_2main_8cpp.html" title="src/main.cpp" alt="" coords="194,160,306,189"/>
+<map id="/home/adev/Documents/STECH/stewart_platform/include/gnuplot&#45;iostream.h" name="/home/adev/Documents/STECH/stewart_platform/include/gnuplot&#45;iostream.h">
+<area shape="rect" id="node1" title=" " alt="" coords="117,5,357,69"/>
+<area shape="rect" id="node2" href="$gazebo__sim_8hpp.html" title=" " alt="" coords="5,117,225,181"/>
+<area shape="rect" id="node4" href="$gnuplot__sim_8hpp.html" title=" " alt="" coords="249,117,469,181"/>
+<area shape="rect" id="node3" href="$gazebo__sim_8cpp.html" title=" " alt="" coords="5,229,225,293"/>
+<area shape="rect" id="node5" href="$gnuplot__sim_8cpp.html" title=" " alt="" coords="249,229,469,293"/>
 </map>

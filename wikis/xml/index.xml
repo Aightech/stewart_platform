@@ -1,3 +1,513 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.13">
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.17">
+  <compound refid="class_c_a_nopen_1_1_driver" kind="class"><name>CANopen::Driver</name>
+    <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7" kind="enum"><name>Register</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7ad4d184bb0cd942f6bdd5ae4435ba1469" kind="enumvalue"><name>_DCOMstatus</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a41294d34718a36687c2183a45ef06258" kind="enumvalue"><name>DCOMcontrol</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a838ff7614cdd25d687a7b44f6fcd5112" kind="enumvalue"><name>DCOMopmode</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a27c60a5c7499691fa7a8927c3d4e4376" kind="enumvalue"><name>_DCOMopmd_act</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a9388c18e3ec79d918b872aab89a47387" kind="enumvalue"><name>PPp_target</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a97069ba1c67700d01ba84c05f2a31adb" kind="enumvalue"><name>PPv_target</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a9a00b3971b7ee9985f91dd48ea7e1c73" kind="enumvalue"><name>PVv_target</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a68422e03c559dee45c67d4743784c193" kind="enumvalue"><name>PTtq_target</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7ae34a009131bb4956dbb9a5c9e76b1c5a" kind="enumvalue"><name>RAMP_v_acc</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a6f355b7bef6158931cc8cf5e4b1f9c83" kind="enumvalue"><name>RAMP_v_dec</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7af361a27c780c9ab4fe29763c80456258" kind="enumvalue"><name>_p_act</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a5790a9abb07781ba9d63ed64d7e0d7fc" kind="enumvalue"><name>_v_act</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a0ab750decb5de6f5b2d380776dec09cc" kind="enumvalue"><name>_tq_act</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a503823e06d7db891f898f6976aa7a514" kind="enumvalue"><name>HMmethod</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7ad34e94f677df757d01d787a403a66a2a" kind="enumvalue"><name>HMv</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a796f4544102d3244ab451b229afbfb58" kind="enumvalue"><name>HMv_out</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a47ce7e20890160451d8b43b4e32d3ceb" kind="enum"><name>OperationMode</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a47ce7e20890160451d8b43b4e32d3ceba3502834b10b8f0201a628b9a0e227425" kind="enumvalue"><name>ProfilePosition</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a47ce7e20890160451d8b43b4e32d3cebacaf4b433be6b0476e7f157e086fea379" kind="enumvalue"><name>Velocity</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a47ce7e20890160451d8b43b4e32d3cebadb9f0017145112261254a48699a41961" kind="enumvalue"><name>ProfileVelocity</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a47ce7e20890160451d8b43b4e32d3cebaff42df87ec625334500bb240f76989ed" kind="enumvalue"><name>ProfileTorque</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a47ce7e20890160451d8b43b4e32d3ceba080efe911eeba1ae575bfaa70b1bb579" kind="enumvalue"><name>Homing</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a47ce7e20890160451d8b43b4e32d3cebab11858fe79ae30e3723a3cdb66360287" kind="enumvalue"><name>InterpolatedPosition</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02d" kind="enum"><name>State</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02dac8ab6913526ea2fc62be30139261fbc6" kind="enumvalue"><name>mask</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02da94d00ab583965d1d22f48674f7aefa7a" kind="enumvalue"><name>NotReadyToSwitchtON</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02da52c43c11131a9d753319d5e065d031c3" kind="enumvalue"><name>SwitchONDisabled</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02dafa947edce547a30b314910e6931235a4" kind="enumvalue"><name>ReadyToSwitchON</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02dac2e13098b6500cdcde217d2a9cc9ebb6" kind="enumvalue"><name>SwitchedON</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02da1692c431e1cf20446dbf23a53913af0c" kind="enumvalue"><name>OperationEnabled</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02da9028b5332c8352a087606c2cc79e9517" kind="enumvalue"><name>Fault</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02dabafb33b6c4f43661a3257ca5b7569372" kind="enumvalue"><name>FaultReactionActive</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02da8accb6a0a36eebcd88f85e0b92faf68a" kind="enumvalue"><name>QuickStopActive</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32b" kind="enum"><name>StatusBits</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32ba372bcbff592b4489af4a65e4952d5a81" kind="enumvalue"><name>ReadyToSwitchOn_bit</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32ba16ae91b87294fb45b6f802202f3baef0" kind="enumvalue"><name>SwitchedOn_bit</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32bab01de1698165aa4c610dabd12dc234d8" kind="enumvalue"><name>OperationEnabled_bit</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32baae485d8b16c8e58e89321d0e5b4444bc" kind="enumvalue"><name>Fault_bit</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32ba9937b12559ca3fb1023e76462c7b8aa5" kind="enumvalue"><name>VoltageEnabled_bit</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32bad894790b9971017bbbe70893a78715fd" kind="enumvalue"><name>QuickStop_bit</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32ba2a920673c9a04465308edfcf8a56b079" kind="enumvalue"><name>SwitchONDisabled_bit</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32ba60c37953da27b51a6801f480557136df" kind="enumvalue"><name>Error0_bit</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32ba984217ec2b962f14623e9afcb3e4998e" kind="enumvalue"><name>HaltRequest_bit</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32ba127fe4e9ceb301d180a2f2cea0cfc76b" kind="enumvalue"><name>Remote_bit</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32ba85e31a4e46272d9dfa78d793396f985b" kind="enumvalue"><name>TargetReached_bit</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32baf97dd0f4413b01fae6966a1630d52a75" kind="enumvalue"><name>InternalLimitReached_bit</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32ba0c48a11a55403f1e9e201a7d6f17fd8b" kind="enumvalue"><name>OperationMode_bit</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32ba7f839fb209d86b9caf014c150219cc1b" kind="enumvalue"><name>BlockingError_bit</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32ba51af307866828b496ff4dc8ba4491b90" kind="enumvalue"><name>OperationModeStart_bit</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32baafb3ac06d4413f6f4c325387c216c3f7" kind="enumvalue"><name>ValidRef_bit</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903a" kind="enum"><name>Control</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903aa6ccc4c2738c634abe2fd21cbe93f9fdb" kind="enumvalue"><name>Shutdown</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903aae98ed55dcd60bdd15d179ec32f651b8d" kind="enumvalue"><name>SwitchON</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903aa81c0fb39e9e145721e1cf45a52f8786f" kind="enumvalue"><name>DisableVoltage</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903aa6e8fc43d0b5f1ef14ac7ba475572c9b6" kind="enumvalue"><name>QuickStop</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903aaa366dac5dbc508501f36112bf5472572" kind="enumvalue"><name>DisableOperation</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903aaff77b9045071e916120fc49e159d2f77" kind="enumvalue"><name>EnableOperation</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903aaa433113dfe71a54d4333344a339a9bbf" kind="enumvalue"><name>FaultResest</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1af1538f81dbeb9dcafee3ff1a71c95be4" kind="enum"><name>PDOFunctionCode</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1af1538f81dbeb9dcafee3ff1a71c95be4aa31dc9b14e225c25d304e6d8d9b886ed" kind="enumvalue"><name>PDO1Transmit</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1af1538f81dbeb9dcafee3ff1a71c95be4aa97a14880dee29baad7ee8201721c585" kind="enumvalue"><name>PDO1Receive</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1af1538f81dbeb9dcafee3ff1a71c95be4a013baa4e40e72d67279f8e5b5d9b4035" kind="enumvalue"><name>PDO2Transmit</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1af1538f81dbeb9dcafee3ff1a71c95be4a9e3e5d76b75896fade4e2537f2e6e2f7" kind="enumvalue"><name>PDO2Receive</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1af1538f81dbeb9dcafee3ff1a71c95be4ae5889c8e1d945aa150ba4213617681d5" kind="enumvalue"><name>PDO3Transmit</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1af1538f81dbeb9dcafee3ff1a71c95be4ad6ff06a6427b5f68ecea8552f1a01ef9" kind="enumvalue"><name>PDO3Receive</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1af1538f81dbeb9dcafee3ff1a71c95be4ae5f1f938d9d8b8833be74c805268e9ca" kind="enumvalue"><name>PDO4Transmit</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1af1538f81dbeb9dcafee3ff1a71c95be4a6e9b86ade5180f6dcca330b94d1fd4da" kind="enumvalue"><name>PDO4Receive</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1ae8fb26d56324e42fb134b5901bbf072d" kind="variable"><name>NB_PDO</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1ac734b99ea0f12ec7160e38ec07c6120b" kind="variable"><name>MAX_PDO_SLOT</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a11f0158da7cc70943c23a0fa32f8f106" kind="variable"><name>m_rpdo_socket_thread</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a001afe91237b33a88254cc86fc5d7452" kind="variable"><name>rpdo_socket_flag</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a657422553d9c1c0b859c21e90b637961" kind="variable"><name>rpdo_mutex</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a2e64fa4286ab8e37afedd6d28d3f747c" kind="variable"><name>m_t_socket_thread</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a3178e7bc0783980c4523703b586d9da7" kind="variable"><name>t_socket_flag</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1aa72de21b55123ea624ff8c359484e8cd" kind="variable"><name>m_ifname</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1ae4998ef8bfce528498191cae7226349f" kind="variable"><name>m_verbose_level</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a042844b5c94052c0e8cbf5eab5a04791" kind="variable"><name>m_available</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a7978ee3b77f1e12a478f54d769a80842" kind="variable"><name>m_socket</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1acd1365f30661ee2f7a981d5e846c66b5" kind="variable"><name>m_PDO_map</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1aceacce4df52b5f3ee7e64f6e20059555" kind="variable"><name>m_parameters</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1ad97ef262c000db38000137395c7965d9" kind="variable"><name>m_node_id</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1ae208e82352b57ee7db7c2a92f4b0a7d1" kind="variable"><name>m_can_baud</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1abdec4604d2f5bfdc76b0db7430e76d8c" kind="variable"><name>m_offset_pos</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a0272315f94cb7bff729abeb8b8b052df" kind="function"><name>Driver</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a0da074f8cf3498e5d1c721ceaaa81a6e" kind="function"><name>set</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1ae34094765084838267ac2ec088cf6554" kind="function"><name>get</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1aa831bccff07ba4c794952c8477e6810a" kind="function"><name>set_control</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a3087f343d739cb1cd138250ed6925eb8" kind="function"><name>get_state</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a6d875fd4488248671fb060c6a73030e2" kind="function"><name>wait_state</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a7e215f070766749f80655042cf70b6c2" kind="function"><name>set_mode</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a0ece511729874fd45f24f5c517d84eae" kind="function"><name>get_mode</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a20967f674c7bfa52407350933248a300" kind="function"><name>set_position</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a7a249fdda103c6c8d11e840d66514137" kind="function"><name>set_velocity</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a4b97e1e92f96eb579a85a4d33ef0592a" kind="function"><name>set_torque</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a80f9eac00de5ae6c07d6d4fd56a3b110" kind="function"><name>get_position</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a0345a38f5dc54e5bcacd8cc86f6b903a" kind="function"><name>get_velocity</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a32a2469e5958bf328b7df6ad7b7d49c1" kind="function"><name>get_torque</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a9f5910067bb7489887a9ed25ba6199f8" kind="function"><name>set_position_offset</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1ad8ac07202c14ad344004146e126ecbf4" kind="function"><name>start</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a05da9b5bdd80efed46b0629721d0664b" kind="function"><name>pause</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1abd7d88699d02c007d5f23e608d8f0a0a" kind="function"><name>stop</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1aa94db47b419a6afcc409c63c2685e1b6" kind="function"><name>profilePosition_mode</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a32db059a1723f5c8db8986324ce21f8f" kind="function"><name>profileVelocity_mode</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a4f2bd3e58752dfd0bc37b749452ebcfd" kind="function"><name>profileTorque_mode</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a2fe863ef0d5d66f3241eda596a507377" kind="function"><name>homing</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a1cc9720ef3f1d1a671e5b696d688df3c" kind="function"><name>get_param</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1af3663cfb3627f928e7bb71a1358e4e00" kind="function"><name>print_manufacturer_status</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a05fb7b074555086b45918179c64494a6" kind="function"><name>ctrl_to_str</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a249f11262c9264cf53486c247d004b99" kind="function"><name>is_available</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1ad22705c4ee8cfee391113d359e790e67" kind="function"><name>send</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a96123f2965334f4fda9c01ae7b0f8f46" kind="function"><name>update</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1abd3e2b466b31e906ae7bcb390277f3dd" kind="function"><name>map_PDO</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a6cfa4f397be17e661e93bfb8f74ddb90" kind="function"><name>activate_PDO</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a535cd1c9eaf129d3b8b51cd636cb3ac0" kind="function"><name>T_socket</name></member>
+    <member refid="class_c_a_nopen_1_1_driver_1a4e2a54808fafdde192c0550bf8612274" kind="function"><name>RPDO_socket</name></member>
+  </compound>
+  <compound refid="class_c_a_nopen_1_1_e_m_c_y_message" kind="class"><name>CANopen::EMCYMessage</name>
+    <member refid="class_c_a_nopen_1_1_e_m_c_y_message_1ae428c017c53936a190b9286e18310509" kind="function"><name>EMCYMessage</name></member>
+    <member refid="class_c_a_nopen_1_1_e_m_c_y_message_1a9380a10b6422e984a3f29c70cc86819a" kind="function"><name>EMCYMessage</name></member>
+    <member refid="class_c_a_nopen_1_1_e_m_c_y_message_1aed0160aa869b0d1cc5a500717e860a51" kind="function"><name>code</name></member>
+    <member refid="class_c_a_nopen_1_1_e_m_c_y_message_1aff22303c03af49edfe5f5ea3aa87c055" kind="function"><name>reg</name></member>
+  </compound>
+  <compound refid="classstp_1_1_gazebo__sim" kind="class"><name>stp::Gazebo_sim</name>
+    <member refid="classstp_1_1_gazebo__sim_1a5b45d5885dcec80bc9032964ded75e6e" kind="variable"><name>m_node</name></member>
+    <member refid="classstp_1_1_gazebo__sim_1a12e4dc815f252d1a1c72665fdbb8d030" kind="variable"><name>m_pub</name></member>
+    <member refid="classstp_1_1_gazebo__sim_1a262880d9db2648f60b3084dd1b6055ac" kind="function"><name>Gazebo_sim</name></member>
+    <member refid="classstp_1_1_gazebo__sim_1a0d81c4f665325ed115d6f2d001811c4c" kind="function"><name>~Gazebo_sim</name></member>
+    <member refid="classstp_1_1_gazebo__sim_1af0dcad83a39533b2cd66fcc6ff533ec5" kind="function"><name>new_pos</name></member>
+    <member refid="classstp_1_1_gazebo__sim_1a8ba8b9ce55080dd486e9c22661e5da45" kind="function"><name>update</name></member>
+  </compound>
+  <compound refid="classstp_1_1_gnuplot__sim" kind="class"><name>stp::Gnuplot_sim</name>
+    <member refid="classstp_1_1_gnuplot__sim_1a5a546476a6b62ae119c3ed5da6b0623b" kind="variable"><name>m_plot</name></member>
+    <member refid="classstp_1_1_gnuplot__sim_1ad53ad8bec757608c339f5af50cdb2a57" kind="function"><name>Gnuplot_sim</name></member>
+    <member refid="classstp_1_1_gnuplot__sim_1a510b50f1120459f9eb7684f249ed58ca" kind="function"><name>new_pos</name></member>
+    <member refid="classstp_1_1_gnuplot__sim_1a22d1793e471b78033080650a3701d2c4" kind="function"><name>update_draw</name></member>
+    <member refid="classstp_1_1_gnuplot__sim_1a7d01da793fef045e81a8927ab7316d61" kind="function"><name>draw</name></member>
+  </compound>
+  <compound refid="class_c_a_nopen_1_1_l_x_m32" kind="class"><name>CANopen::LXM32</name>
+    <member refid="class_c_a_nopen_1_1_l_x_m32_1a0ec3a74a12cd898808fce514c296e6e6" kind="variable"><name>nb_index_per_turn</name></member>
+    <member refid="class_c_a_nopen_1_1_l_x_m32_1a30aafa4f881079e83bcb9de63f26c30e" kind="function"><name>LXM32</name></member>
+    <member refid="class_c_a_nopen_1_1_l_x_m32_1a04d84237ca467e2a3f39370b1183293c" kind="function"><name>set_angle</name></member>
+    <member refid="class_c_a_nopen_1_1_l_x_m32_1a40b15f47ae3270b987bc8eb8004b4c92" kind="function"><name>get_angle</name></member>
+    <member refid="class_c_a_nopen_1_1_l_x_m32_1a28fce51b02b587666c8ac7c550bd3b4b" kind="function"><name>print_manufacturer_status</name></member>
+  </compound>
+  <compound refid="class_main_window" kind="class"><name>MainWindow</name>
+    <member refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kind="variable"><name>ui</name></member>
+    <member refid="class_main_window_1aa1a332115b78f5e211b82c0f515a3f8c" kind="variable"><name>m_sp</name></member>
+    <member refid="class_main_window_1a2dc78344ad37cb35ef6d8dfc756f5809" kind="variable"><name>m_running</name></member>
+    <member refid="class_main_window_1a4348c5344b00fee834f71e267f9a1e6a" kind="variable"><name>m_T</name></member>
+    <member refid="class_main_window_1ab56896fe93dcfa017f2ca9414158f141" kind="variable"><name>m_T_mid</name></member>
+    <member refid="class_main_window_1a24b1dc395d58cc618ff8ff67300ab00a" kind="variable"><name>m_theta</name></member>
+    <member refid="class_main_window_1ab7bd68a358ebb64298a813429da9c917" kind="variable"><name>m_cart_trans</name></member>
+    <member refid="class_main_window_1a44e2c9990b99f6e60a3417bc4831db9d" kind="variable"><name>m_cart_anlge</name></member>
+    <member refid="class_main_window_1a7b33eb14399e057d13f279fbc8ad3f1c" kind="variable"><name>m_sin_dir</name></member>
+    <member refid="class_main_window_1a6579964dbeda5a8f67cdec6860ba85e9" kind="variable"><name>m_prev_time</name></member>
+    <member refid="class_main_window_1a996c5a2b6f77944776856f08ec30858d" kind="function"><name>MainWindow</name></member>
+    <member refid="class_main_window_1ae98d00a93bc118200eeef9f9bba1dba7" kind="function"><name>~MainWindow</name></member>
+    <member refid="class_main_window_1aed18d5fa47cd919da8dedbf4edd8e37e" kind="function"><name>update_pos</name></member>
+    <member refid="class_main_window_1aba8ebc22f101fa59e1e2efa7a3ae1616" kind="function"><name>loop</name></member>
+    <member refid="class_main_window_1a535e5b3faa553f87eb9e42fababa08b5" kind="slot"><name>on_pushButton_start_clicked</name></member>
+    <member refid="class_main_window_1a62e7a67f097d5c7a21edb8179da136ed" kind="slot"><name>on_pushButton_pause_clicked</name></member>
+    <member refid="class_main_window_1a71332a9e3ffc7d39793806dfec728d49" kind="slot"><name>on_pushButton_stop_clicked</name></member>
+  </compound>
+  <compound refid="class_c_a_nopen_1_1_message" kind="class"><name>CANopen::Message</name>
+    <member refid="class_c_a_nopen_1_1_message_1a0f8f95e4ea1284011cd122629edc5468" kind="enum"><name>FunctionCode</name></member>
+    <member refid="class_c_a_nopen_1_1_message_1a0f8f95e4ea1284011cd122629edc5468a9772de90d6832671c05553ecc93168ce" kind="enumvalue"><name>NMT</name></member>
+    <member refid="class_c_a_nopen_1_1_message_1a0f8f95e4ea1284011cd122629edc5468acf827d4fddf4af5908ff22d480ec3f9f" kind="enumvalue"><name>Emergency</name></member>
+    <member refid="class_c_a_nopen_1_1_message_1a0f8f95e4ea1284011cd122629edc5468a439fca8488e446232afad47ea72326f4" kind="enumvalue"><name>Sync</name></member>
+    <member refid="class_c_a_nopen_1_1_message_1a0f8f95e4ea1284011cd122629edc5468a4cce8d38cc9a387ac2553c97082934c7" kind="enumvalue"><name>TimeStamp</name></member>
+    <member refid="class_c_a_nopen_1_1_message_1a0f8f95e4ea1284011cd122629edc5468aea8753e3c4fecde547db28a4a01f4fea" kind="enumvalue"><name>PDO1Transmit</name></member>
+    <member refid="class_c_a_nopen_1_1_message_1a0f8f95e4ea1284011cd122629edc5468a289816747eb21454c97a2c0de54bd7bd" kind="enumvalue"><name>PDO1Receive</name></member>
+    <member refid="class_c_a_nopen_1_1_message_1a0f8f95e4ea1284011cd122629edc5468a644cdb60cf2ec10f6f509c6dac09c7e7" kind="enumvalue"><name>PDO2Transmit</name></member>
+    <member refid="class_c_a_nopen_1_1_message_1a0f8f95e4ea1284011cd122629edc5468ae19e8c5160acfaab1c140c21789138e3" kind="enumvalue"><name>PDO2Receive</name></member>
+    <member refid="class_c_a_nopen_1_1_message_1a0f8f95e4ea1284011cd122629edc5468ac15c2cbe07eac4f1fdc102927deadcdc" kind="enumvalue"><name>PDO3Transmit</name></member>
+    <member refid="class_c_a_nopen_1_1_message_1a0f8f95e4ea1284011cd122629edc5468ab059d1f4ab6ed9bb993e5d37aea6eba1" kind="enumvalue"><name>PDO3Receive</name></member>
+    <member refid="class_c_a_nopen_1_1_message_1a0f8f95e4ea1284011cd122629edc5468a46d53ca55e462afcab565303b212656c" kind="enumvalue"><name>PDO4Transmit</name></member>
+    <member refid="class_c_a_nopen_1_1_message_1a0f8f95e4ea1284011cd122629edc5468a45f4fc29142533ab1395bd971c12be9b" kind="enumvalue"><name>PDO4Receive</name></member>
+    <member refid="class_c_a_nopen_1_1_message_1a0f8f95e4ea1284011cd122629edc5468ab54b9a53105e0549e5fc07ef1ee6b91a" kind="enumvalue"><name>SDOTransmit</name></member>
+    <member refid="class_c_a_nopen_1_1_message_1a0f8f95e4ea1284011cd122629edc5468a720fb5202eef37017f7f58ac195c5949" kind="enumvalue"><name>SDOReceive</name></member>
+    <member refid="class_c_a_nopen_1_1_message_1a0f8f95e4ea1284011cd122629edc5468aea5e380d61d7dbbbb5f4655e3fbdc65c" kind="enumvalue"><name>Heartbeat</name></member>
+    <member refid="class_c_a_nopen_1_1_message_1a90dac1b216099b2a29f7b4deb3ccced8" kind="function"><name>Message</name></member>
+    <member refid="class_c_a_nopen_1_1_message_1a77a8c09ad0711fa4b574a8b88d983441" kind="function"><name>Message</name></member>
+    <member refid="class_c_a_nopen_1_1_message_1ace3b5218ab769fb1e642b82b2d3fc7d3" kind="function"><name>Message</name></member>
+    <member refid="class_c_a_nopen_1_1_message_1a2f57055297e93e7d694a2aa32911da6c" kind="function"><name>operator can_frame *</name></member>
+    <member refid="class_c_a_nopen_1_1_message_1aa0b2fbf64579563a763e3efbe1766c3a" kind="function"><name>function_code</name></member>
+    <member refid="class_c_a_nopen_1_1_message_1adc93c710fd35ab61e46a0881326d0336" kind="function"><name>node_id</name></member>
+    <member refid="class_c_a_nopen_1_1_message_1a231049034467f68a5a919a9267f9151f" kind="function"><name>payload</name></member>
+    <member refid="class_c_a_nopen_1_1_message_1aaf1c9976719a7c585eaa35aede987ffa" kind="function"><name>id</name></member>
+    <member refid="class_c_a_nopen_1_1_message_1afdc7d0f669d0736395beac0e846646a5" kind="function"><name>to_string</name></member>
+  </compound>
+  <compound refid="classstp_1_1_model" kind="class"><name>stp::Model</name>
+    <member refid="classstp_1_1_model_1a55f0ee3549b8f7e582ae9958d69cc493" kind="variable"><name>m_radius</name></member>
+    <member refid="classstp_1_1_model_1a446d3fd455f0e44ec6a358b458ba85f2" kind="variable"><name>m_a</name></member>
+    <member refid="classstp_1_1_model_1ad189b43e75b3b4a7a947e8142adce17c" kind="variable"><name>m_a2</name></member>
+    <member refid="classstp_1_1_model_1a4093789451a0491487090daa1c4c9b85" kind="variable"><name>m_l</name></member>
+    <member refid="classstp_1_1_model_1a9a16f1c28c96157d51bedbf67a1a7a81" kind="variable"><name>m_l2</name></member>
+    <member refid="classstp_1_1_model_1ac031672ca5aae4c192c38b1103fdf2dd" kind="variable"><name>_d2</name></member>
+    <member refid="classstp_1_1_model_1a773d6f9a6ee4f6dd580229e0dc3d741c" kind="variable"><name>m_P</name></member>
+    <member refid="classstp_1_1_model_1a82e25ba756ecbe2f929505ef4d97b317" kind="variable"><name>m_P1</name></member>
+    <member refid="classstp_1_1_model_1ad1f36bbb9a3f9aac7054b991bb02fe70" kind="variable"><name>m_B</name></member>
+    <member refid="classstp_1_1_model_1a4aaa7aee9ac9d9903d29d06cf15ed601" kind="variable"><name>m_A</name></member>
+    <member refid="classstp_1_1_model_1a3c26b01a6c5e533e25ec3de71c7f132c" kind="variable"><name>m_parity</name></member>
+    <member refid="classstp_1_1_model_1a0dde329f8445840075590404c4f2c0de" kind="variable"><name>m_beta</name></member>
+    <member refid="classstp_1_1_model_1a8faca0ba2206f1ac384b80b2223a0c34" kind="variable"><name>m_alpha</name></member>
+    <member refid="classstp_1_1_model_1a60eab0062d4e65c720ed2ac39d51779b" kind="variable"><name>m_gamma</name></member>
+    <member refid="classstp_1_1_model_1a61d8b4957be741fa473468065c2a5d0d" kind="variable"><name>m_T</name></member>
+    <member refid="classstp_1_1_model_1a826586afc60c2c076b271413f5c3e382" kind="variable"><name>m_theta</name></member>
+    <member refid="classstp_1_1_model_1ae1c80dd8cb28d3bd7966c1f289fb291e" kind="variable"><name>m_R</name></member>
+    <member refid="classstp_1_1_model_1afdc7491e9be320ad94775ca046667f9b" kind="variable"><name>m_trig</name></member>
+    <member refid="classstp_1_1_model_1a0ba1c1143089052ffad8133ff40d972f" kind="variable"><name>m_T_spd</name></member>
+    <member refid="classstp_1_1_model_1aa12970f18bc4258b9ad185f54a9cfe70" kind="variable"><name>m_theta_spd</name></member>
+    <member refid="classstp_1_1_model_1a0b4fbb6fdec8106993ddffbd9f61d6ce" kind="variable"><name>m_alpha_spd</name></member>
+    <member refid="classstp_1_1_model_1a4679e65c69f376bf8f20f5b80635b79b" kind="variable"><name>_alphaI</name></member>
+    <member refid="classstp_1_1_model_1ab0f8907bbccb353cbabf625b7370eda1" kind="variable"><name>m_verbose_level</name></member>
+    <member refid="classstp_1_1_model_1a771583e4fa62890a4c86b30ada77a9e5" kind="function"><name>Model</name></member>
+    <member refid="classstp_1_1_model_1a6c82f7a11076fb192448a2fd54d872bf" kind="function"><name>Model</name></member>
+    <member refid="classstp_1_1_model_1a553d9f7f63c97eba26e3522a73531dc1" kind="function"><name>new_pos</name></member>
+    <member refid="classstp_1_1_model_1a96807e2f67ea212b44e89bc567d8fa2a" kind="function"><name>get_T</name></member>
+    <member refid="classstp_1_1_model_1a7856980516ed1f0613420a402b5b8d8c" kind="function"><name>get_theta</name></member>
+    <member refid="classstp_1_1_model_1a732e1d29e24600760b53a8e126bb7906" kind="function"><name>init_pos</name></member>
+    <member refid="classstp_1_1_model_1afeda6e56bb177dc53c2c3fd1a86a2388" kind="function"><name>compute_R</name></member>
+    <member refid="classstp_1_1_model_1adacd3ce9b374636df51ce78b5be18c59" kind="function"><name>print_pos</name></member>
+    <member refid="classstp_1_1_model_1ade58705e09f3edf93f43a51021517f9e" kind="function"><name>set_T</name></member>
+    <member refid="classstp_1_1_model_1a84fd6646ed05db5eec86afd968fde65d" kind="function"><name>set_T_spd</name></member>
+    <member refid="classstp_1_1_model_1a6a6dcae980e86d84084dc4ccd0de3285" kind="function"><name>set_theta</name></member>
+    <member refid="classstp_1_1_model_1afd0f76304578013e1faff062a318dac5" kind="function"><name>set_theta_spd</name></member>
+  </compound>
+  <compound refid="class_c_a_nopen_1_1_n_m_t_message" kind="class"><name>CANopen::NMTMessage</name>
+    <member refid="class_c_a_nopen_1_1_n_m_t_message_1a20257f9fc32b84adc9196fd436f15e95" kind="enum"><name>Code</name></member>
+    <member refid="class_c_a_nopen_1_1_n_m_t_message_1a20257f9fc32b84adc9196fd436f15e95a7fe77fc2c4080c22ffe1833947ccbe9a" kind="enumvalue"><name>Initialising</name></member>
+    <member refid="class_c_a_nopen_1_1_n_m_t_message_1a20257f9fc32b84adc9196fd436f15e95a545e9a577466163fb58669287c3c6b41" kind="enumvalue"><name>GoToOperational</name></member>
+    <member refid="class_c_a_nopen_1_1_n_m_t_message_1a20257f9fc32b84adc9196fd436f15e95a7809df81e01fe09e4419db0473038d43" kind="enumvalue"><name>GoToStopped</name></member>
+    <member refid="class_c_a_nopen_1_1_n_m_t_message_1a20257f9fc32b84adc9196fd436f15e95a7d6f2ebee6ed9eb78ce062f2c39fcb3f" kind="enumvalue"><name>Stopped</name></member>
+    <member refid="class_c_a_nopen_1_1_n_m_t_message_1a20257f9fc32b84adc9196fd436f15e95a8060d997fd31646e2abe3ecef93e5224" kind="enumvalue"><name>Operational</name></member>
+    <member refid="class_c_a_nopen_1_1_n_m_t_message_1a20257f9fc32b84adc9196fd436f15e95af0059e344b7e07bdcb934da702a529ad" kind="enumvalue"><name>PreOperational</name></member>
+    <member refid="class_c_a_nopen_1_1_n_m_t_message_1a20257f9fc32b84adc9196fd436f15e95aac9ea51398ac876f28caa68e5060dc49" kind="enumvalue"><name>GoToPreOperational</name></member>
+    <member refid="class_c_a_nopen_1_1_n_m_t_message_1a20257f9fc32b84adc9196fd436f15e95a8f2baac414d139872bfef60ecea4ebd8" kind="enumvalue"><name>GoToResetNode</name></member>
+    <member refid="class_c_a_nopen_1_1_n_m_t_message_1a20257f9fc32b84adc9196fd436f15e95adc2beca1ff30670ddbe1181b6ba82a0f" kind="enumvalue"><name>GoToResetCommunication</name></member>
+    <member refid="class_c_a_nopen_1_1_n_m_t_message_1a5e38ad7cb1464480121e527589f4d18f" kind="function"><name>NMTMessage</name></member>
+    <member refid="class_c_a_nopen_1_1_n_m_t_message_1ae691342a23d0bffa2a98861099c19fcc" kind="function"><name>NMTMessage</name></member>
+    <member refid="class_c_a_nopen_1_1_n_m_t_message_1a5939adf6f14706495b9e734f8412f5d4" kind="function"><name>NMTMessage</name></member>
+  </compound>
+  <compound refid="struct_c_a_nopen_1_1_parameter" kind="struct"><name>CANopen::Parameter</name>
+    <member refid="struct_c_a_nopen_1_1_parameter_1a4870a26654749daa1ef95bdcb6d01d59" kind="enum"><name>PDOFunctionCode</name></member>
+    <member refid="struct_c_a_nopen_1_1_parameter_1a4870a26654749daa1ef95bdcb6d01d59a974ac3668332f61bdc693759a935961c" kind="enumvalue"><name>PDO1Transmit</name></member>
+    <member refid="struct_c_a_nopen_1_1_parameter_1a4870a26654749daa1ef95bdcb6d01d59a1c5da340e64a4c5f0b83b7a423d6c6ad" kind="enumvalue"><name>PDO1Receive</name></member>
+    <member refid="struct_c_a_nopen_1_1_parameter_1a4870a26654749daa1ef95bdcb6d01d59adedfa8a7a9f737cfab1f4d25019494cb" kind="enumvalue"><name>PDO2Transmit</name></member>
+    <member refid="struct_c_a_nopen_1_1_parameter_1a4870a26654749daa1ef95bdcb6d01d59a4d4a2071af2074e9f0eaeebcfb224b6d" kind="enumvalue"><name>PDO2Receive</name></member>
+    <member refid="struct_c_a_nopen_1_1_parameter_1a4870a26654749daa1ef95bdcb6d01d59ae18c92cef48b3ed4f9ccc9e3fcda8cdb" kind="enumvalue"><name>PDO3Transmit</name></member>
+    <member refid="struct_c_a_nopen_1_1_parameter_1a4870a26654749daa1ef95bdcb6d01d59a8bd4f75f9862ef90b05ed660c55f8701" kind="enumvalue"><name>PDO3Receive</name></member>
+    <member refid="struct_c_a_nopen_1_1_parameter_1a4870a26654749daa1ef95bdcb6d01d59a73ee3b850ad0e4d4c9ae1d18e3bad91a" kind="enumvalue"><name>PDO4Transmit</name></member>
+    <member refid="struct_c_a_nopen_1_1_parameter_1a4870a26654749daa1ef95bdcb6d01d59a172786d8c40c3594bd359c134df6ca6e" kind="enumvalue"><name>PDO4Receive</name></member>
+    <member refid="struct_c_a_nopen_1_1_parameter_1aa7232c26e1cf4daa3e5719007872ddc5" kind="typedef"><name>param_cb_t</name></member>
+    <member refid="struct_c_a_nopen_1_1_parameter_1ab123478082ba8a41206baedb175cc19a" kind="variable"><name>size</name></member>
+    <member refid="struct_c_a_nopen_1_1_parameter_1af45b5384a6e819637d8dbd4b2c96daf4" kind="variable"><name>name</name></member>
+    <member refid="struct_c_a_nopen_1_1_parameter_1a69d1fe3372e1afb2103e83f741e74f9e" kind="variable"><name>index</name></member>
+    <member refid="struct_c_a_nopen_1_1_parameter_1a376778b75d8e6659d81088e159381aa8" kind="variable"><name>subindex</name></member>
+    <member refid="struct_c_a_nopen_1_1_parameter_1a69bfa86bc32a7f5141d14ee85db26773" kind="variable"><name>pdo_fn</name></member>
+    <member refid="struct_c_a_nopen_1_1_parameter_1ade3d99a7b2be1e9c098e07f32bcec078" kind="variable"><name>pdo_slot</name></member>
+    <member refid="struct_c_a_nopen_1_1_parameter_1a6827c18c4e58298d06111557759e4c3c" kind="variable"><name>sdo_flag</name></member>
+    <member refid="struct_c_a_nopen_1_1_parameter_1a5047a8b8f0dbfe120e7d4dbef4405cd4" kind="variable"><name>var</name></member>
+    <member refid="struct_c_a_nopen_1_1_parameter_1ac78a22b55b6618e8c7abd3184373f9f2" kind="variable"><name>_cb</name></member>
+    <member refid="struct_c_a_nopen_1_1_parameter_1a75be475f808feb1f0d8ec40f0a8026cc" kind="variable"><name>m_should_be_sent</name></member>
+    <member refid="struct_c_a_nopen_1_1_parameter_1a722d2affe2dc3f01d8e05af68bf290e2" kind="variable"><name>mutex</name></member>
+    <member refid="struct_c_a_nopen_1_1_parameter_1a7d11792f2b06d2d836bc29b8298a9916" kind="function"><name>Parameter</name></member>
+    <member refid="struct_c_a_nopen_1_1_parameter_1ab53571d27af3fba545a250f87320aa64" kind="function"><name>Parameter</name></member>
+    <member refid="struct_c_a_nopen_1_1_parameter_1ac2e3642934ae7736c045e70b0e08e83c" kind="function"><name>Parameter</name></member>
+    <member refid="struct_c_a_nopen_1_1_parameter_1aa774dd4d265fe8d0c3eb4b845b847183" kind="function"><name>~Parameter</name></member>
+    <member refid="struct_c_a_nopen_1_1_parameter_1a6f66686b516733d6506e8efdedd67862" kind="function"><name>link_to_pdo</name></member>
+    <member refid="struct_c_a_nopen_1_1_parameter_1a56877b06fefded5cf3353844604d59f7" kind="function"><name>set</name></member>
+    <member refid="struct_c_a_nopen_1_1_parameter_1a3ec2c4a4da29908a2e69de9187325a11" kind="function"><name>operator=</name></member>
+    <member refid="struct_c_a_nopen_1_1_parameter_1ae2f287d5d0abc2b4693d3ec81b53cdd1" kind="function"><name>operator=</name></member>
+    <member refid="struct_c_a_nopen_1_1_parameter_1aea3dee9f4e137c2e5627d23836f18a6b" kind="function"><name>operator=</name></member>
+    <member refid="struct_c_a_nopen_1_1_parameter_1ad72cd626ccab044f0295b092d41668ca" kind="function"><name>operator=</name></member>
+    <member refid="struct_c_a_nopen_1_1_parameter_1a77c306435be2eaf34c1ceb15edd559ff" kind="function"><name>operator=</name></member>
+    <member refid="struct_c_a_nopen_1_1_parameter_1a9984a99c5627b35e3bbe3992a2f6bad2" kind="function"><name>operator=</name></member>
+    <member refid="struct_c_a_nopen_1_1_parameter_1acb8721ccbdd90aed8f347296dca9e7e1" kind="function"><name>get</name></member>
+    <member refid="struct_c_a_nopen_1_1_parameter_1a83099406a35bd9501b421e514dffde73" kind="function"><name>operator int8_t</name></member>
+    <member refid="struct_c_a_nopen_1_1_parameter_1a32b09e89de697d8040ac634ca8bc9f87" kind="function"><name>operator int16_t</name></member>
+    <member refid="struct_c_a_nopen_1_1_parameter_1a4703b3922e5630ac1b8808d4980542bb" kind="function"><name>operator int32_t</name></member>
+    <member refid="struct_c_a_nopen_1_1_parameter_1aaf0db9d918b06945cb59154745866d50" kind="function"><name>operator uint8_t</name></member>
+    <member refid="struct_c_a_nopen_1_1_parameter_1abcdc291fd736380c80e401a05c3fa7dd" kind="function"><name>operator uint16_t</name></member>
+    <member refid="struct_c_a_nopen_1_1_parameter_1a5e098f5a04dbd1e1f07f728f0c98cad0" kind="function"><name>operator uint32_t</name></member>
+    <member refid="struct_c_a_nopen_1_1_parameter_1a2a80caa7af7b8df1ee93999e27f493f6" kind="function"><name>from_payload</name></member>
+    <member refid="struct_c_a_nopen_1_1_parameter_1a78c2b557f058aee3bc6997cbdd6d99a6" kind="function"><name>has_been_sent</name></member>
+    <member refid="struct_c_a_nopen_1_1_parameter_1a6423121211fcdcdfc086d36217872fce" kind="function"><name>callback</name></member>
+    <member refid="struct_c_a_nopen_1_1_parameter_1a0b5d5729fe8b242797e0ab7b49d4519d" kind="function"><name>payload</name></member>
+  </compound>
+  <compound refid="class_c_a_nopen_1_1_payload" kind="class"><name>CANopen::Payload</name>
+    <member refid="class_c_a_nopen_1_1_payload_1a1b22524210c44e52820944fdd041484f" kind="function"><name>Payload</name></member>
+    <member refid="class_c_a_nopen_1_1_payload_1a1177f8bbace9e9779c7549ae7ace1681" kind="function"><name>Payload</name></member>
+    <member refid="class_c_a_nopen_1_1_payload_1ab0769e01554cc879840463e2a55eab0e" kind="function"><name>Payload</name></member>
+    <member refid="class_c_a_nopen_1_1_payload_1a769f01631bd710d3b37f07cc2753b889" kind="function"><name>Payload</name></member>
+    <member refid="class_c_a_nopen_1_1_payload_1a646541a9ec787a3fcdbbcba153e8553c" kind="function"><name>operator=</name></member>
+    <member refid="class_c_a_nopen_1_1_payload_1aef05ef8cfc8b9ba4170891f3168a726b" kind="function"><name>value</name></member>
+    <member refid="class_c_a_nopen_1_1_payload_1aeb41b12a7903cb5dee4d2f5ccd1d3f15" kind="function"><name>operator&lt;&lt;</name></member>
+    <member refid="class_c_a_nopen_1_1_payload_1ae8e5f1160cc9d6578a315a455d305469" kind="function"><name>operator&lt;&lt;</name></member>
+    <member refid="class_c_a_nopen_1_1_payload_1a4d25baad973a414a3b160f366bb92153" kind="function"><name>store_at</name></member>
+    <member refid="class_c_a_nopen_1_1_payload_1a61e7092a555d000dfd59c6942823c9f1" kind="function"><name>operator std::string</name></member>
+  </compound>
+  <compound refid="class_c_a_nopen_1_1_p_d_o_message" kind="class"><name>CANopen::PDOMessage</name>
+    <member refid="class_c_a_nopen_1_1_p_d_o_message_1ab46579ce08cec30d0bc60428053cb39f" kind="enum"><name>PDOFunctionCode</name></member>
+    <member refid="class_c_a_nopen_1_1_p_d_o_message_1ab46579ce08cec30d0bc60428053cb39fabfcc66bfc93e03a72bb931e5bd636798" kind="enumvalue"><name>PDO1Transmit</name></member>
+    <member refid="class_c_a_nopen_1_1_p_d_o_message_1ab46579ce08cec30d0bc60428053cb39fa01d2d22755748fca5086b2e4bf6b009e" kind="enumvalue"><name>PDO1Receive</name></member>
+    <member refid="class_c_a_nopen_1_1_p_d_o_message_1ab46579ce08cec30d0bc60428053cb39fa13229b4458d1949639c4e635cda6689c" kind="enumvalue"><name>PDO2Transmit</name></member>
+    <member refid="class_c_a_nopen_1_1_p_d_o_message_1ab46579ce08cec30d0bc60428053cb39fa2e653900b8cea5673b6c829c0d40b0f2" kind="enumvalue"><name>PDO2Receive</name></member>
+    <member refid="class_c_a_nopen_1_1_p_d_o_message_1ab46579ce08cec30d0bc60428053cb39fa508480956655988cac3696b73e542753" kind="enumvalue"><name>PDO3Transmit</name></member>
+    <member refid="class_c_a_nopen_1_1_p_d_o_message_1ab46579ce08cec30d0bc60428053cb39fa54205762ad0ee3cae8ff88519454fd2b" kind="enumvalue"><name>PDO3Receive</name></member>
+    <member refid="class_c_a_nopen_1_1_p_d_o_message_1ab46579ce08cec30d0bc60428053cb39fa67325f4e5dfd2ce6a2214a73997ac09d" kind="enumvalue"><name>PDO4Transmit</name></member>
+    <member refid="class_c_a_nopen_1_1_p_d_o_message_1ab46579ce08cec30d0bc60428053cb39fa73eba51ebd0e854b545554bf9c92091b" kind="enumvalue"><name>PDO4Receive</name></member>
+    <member refid="class_c_a_nopen_1_1_p_d_o_message_1a9a38d99b2d049eccc56efb307f3619e6" kind="function"><name>PDOMessage</name></member>
+    <member refid="class_c_a_nopen_1_1_p_d_o_message_1a461a62c471761504043dfcb13f9ec685" kind="function"><name>PDOMessage</name></member>
+    <member refid="class_c_a_nopen_1_1_p_d_o_message_1ae7f8db2be338aaa9cc61f08520fa0c85" kind="function"><name>PDOMessage</name></member>
+    <member refid="class_c_a_nopen_1_1_p_d_o_message_1ae03740c1aa91dfc02a2a3ba0d566fb64" kind="function"><name>num</name></member>
+    <member refid="class_c_a_nopen_1_1_p_d_o_message_1a8d76de09957cad5a242f87082cc4c2bd" kind="function"><name>id</name></member>
+  </compound>
+  <compound refid="classstp_1_1_platform" kind="class"><name>stp::Platform</name>
+    <member refid="classstp_1_1_platform_1ae430bcbcc69c375c2b63fdcb391af235" kind="variable"><name>m_motors</name></member>
+    <member refid="classstp_1_1_platform_1a7a896535eaa53686f44f50d3dceee967" kind="variable"><name>m_available</name></member>
+    <member refid="classstp_1_1_platform_1a28409e75157c9d16b41336568082ba17" kind="variable"><name>m_motor_pos</name></member>
+    <member refid="classstp_1_1_platform_1a5a13db3be1f7180271f5045905c2b5e3" kind="variable"><name>m_motor_lookup</name></member>
+    <member refid="classstp_1_1_platform_1a45609c8ad50761c3729a8ea8b2ab7ae8" kind="variable"><name>m_motor_position_offset</name></member>
+    <member refid="classstp_1_1_platform_1a4d9acaa268e9bfd6bf7f02eb6f7f2b8e" kind="variable"><name>v</name></member>
+    <member refid="classstp_1_1_platform_1a7e0a23c194609bf6d34f4f9b9e535895" kind="variable"><name>t</name></member>
+    <member refid="classstp_1_1_platform_1a432b143fa841498ffa6b144a2655addb" kind="function"><name>Platform</name></member>
+    <member refid="classstp_1_1_platform_1ad10b47ba1002a7509154538efd713750" kind="function"><name>init</name></member>
+    <member refid="classstp_1_1_platform_1ade36b3f4a7cb67bd5854237106cc1dd6" kind="function"><name>start</name></member>
+    <member refid="classstp_1_1_platform_1a11cea38713f56ddc1b018aa8f3de262d" kind="function"><name>pause</name></member>
+    <member refid="classstp_1_1_platform_1a018551e44e34211bb9299ece76e22bfc" kind="function"><name>stop</name></member>
+    <member refid="classstp_1_1_platform_1a7401402bd15c6ac28a0c83d00ff5a61c" kind="function"><name>new_pos</name></member>
+    <member refid="classstp_1_1_platform_1ade3a53dd2234f57856b25dab957bae41" kind="function"><name>update_platform</name></member>
+  </compound>
+  <compound refid="structstp_1_1_gnuplot__sim_1_1_plot" kind="struct"><name>stp::Gnuplot_sim::Plot</name>
+    <member refid="structstp_1_1_gnuplot__sim_1_1_plot_1ad0c15571b7ebf84061341863e00f4dd6" kind="variable"><name>gp</name></member>
+    <member refid="structstp_1_1_gnuplot__sim_1_1_plot_1acb7e4715a9d62a66ce7b1228e46fc75d" kind="variable"><name>P</name></member>
+    <member refid="structstp_1_1_gnuplot__sim_1_1_plot_1a81f7c65e2f66254a85f70a58cf285f73" kind="variable"><name>A</name></member>
+    <member refid="structstp_1_1_gnuplot__sim_1_1_plot_1a097858b4b2ff6da39924ee9c1427e8b0" kind="variable"><name>B</name></member>
+  </compound>
+  <compound refid="class_c_a_nopen_1_1_s_d_o_inbound" kind="class"><name>CANopen::SDOInbound</name>
+    <member refid="class_c_a_nopen_1_1_s_d_o_inbound_1a9ec2a9d10554f7f47aeaa5d83e048f70" kind="function"><name>SDOInbound</name></member>
+  </compound>
+  <compound refid="class_c_a_nopen_1_1_s_d_o_message" kind="class"><name>CANopen::SDOMessage</name>
+    <member refid="class_c_a_nopen_1_1_s_d_o_message_1aba8926782f1557b8d7d90f430b26cd8d" kind="enum"><name>RDWR</name></member>
+    <member refid="class_c_a_nopen_1_1_s_d_o_message_1aba8926782f1557b8d7d90f430b26cd8da289c8fc8152983893c105c7babdc681b" kind="enumvalue"><name>Read</name></member>
+    <member refid="class_c_a_nopen_1_1_s_d_o_message_1aba8926782f1557b8d7d90f430b26cd8da0583f2eb7789cc0917f023c833e64ea2" kind="enumvalue"><name>Write</name></member>
+    <member refid="class_c_a_nopen_1_1_s_d_o_message_1a87e867140acb008777fb9419626d19ea" kind="enum"><name>CCS</name></member>
+    <member refid="class_c_a_nopen_1_1_s_d_o_message_1a87e867140acb008777fb9419626d19eaa44e7a57deaad302a380a06c5788f780f" kind="enumvalue"><name>SegmentDownload</name></member>
+    <member refid="class_c_a_nopen_1_1_s_d_o_message_1a87e867140acb008777fb9419626d19eaa78901951e33e3579cb856b53609248fe" kind="enumvalue"><name>InitiateDownload</name></member>
+    <member refid="class_c_a_nopen_1_1_s_d_o_message_1a87e867140acb008777fb9419626d19eaaf330c9070f66925edbece3a896f4c0e3" kind="enumvalue"><name>InitiateUpload</name></member>
+    <member refid="class_c_a_nopen_1_1_s_d_o_message_1a87e867140acb008777fb9419626d19eaaebae2db15a511c989cfa09218d3858f9" kind="enumvalue"><name>SegmentUpload</name></member>
+    <member refid="class_c_a_nopen_1_1_s_d_o_message_1a87e867140acb008777fb9419626d19eaa211ad465c11d2bac3504d46fdc020954" kind="enumvalue"><name>AbortTransfer</name></member>
+    <member refid="class_c_a_nopen_1_1_s_d_o_message_1a87e867140acb008777fb9419626d19eaab1dec130d95dc1c743b8d87dd56b8d7f" kind="enumvalue"><name>BlockUpload</name></member>
+    <member refid="class_c_a_nopen_1_1_s_d_o_message_1a87e867140acb008777fb9419626d19eaade0ce8477f2b012117aa5fa6c2c10479" kind="enumvalue"><name>BlockDownload</name></member>
+    <member refid="class_c_a_nopen_1_1_s_d_o_message_1a6229048c08585beeb1e19d76ae0966cd" kind="function"><name>SDOMessage</name></member>
+    <member refid="class_c_a_nopen_1_1_s_d_o_message_1a73ab5aad06fd6a6f53fb614f4d9a8465" kind="function"><name>SDOMessage</name></member>
+    <member refid="class_c_a_nopen_1_1_s_d_o_message_1ad299429ca0de823d392fb24addf4fe85" kind="function"><name>SDOMessage</name></member>
+    <member refid="class_c_a_nopen_1_1_s_d_o_message_1a1e31a75dd442c32eaf42d74937b71cbb" kind="function"><name>index</name></member>
+    <member refid="class_c_a_nopen_1_1_s_d_o_message_1a8889e754f2faf789a1df98f7f8f03310" kind="function"><name>is_confirmation</name></member>
+    <member refid="class_c_a_nopen_1_1_s_d_o_message_1a5951f11447f25d3f9b9fb976446f1044" kind="function"><name>is_error</name></member>
+    <member refid="class_c_a_nopen_1_1_s_d_o_message_1acec40b62f1a77ab566fed5d9707ea619" kind="function"><name>subindex</name></member>
+    <member refid="class_c_a_nopen_1_1_s_d_o_message_1aa12187c7761d4ef34de349270bb654d4" kind="function"><name>index__sub</name></member>
+    <member refid="class_c_a_nopen_1_1_s_d_o_message_1af81e301ad58fcf18fecbe359f1587d2f" kind="function"><name>id</name></member>
+    <member refid="class_c_a_nopen_1_1_s_d_o_message_1ada403b64e3e300c54f9f941cf65a3da9" kind="function"><name>size_data</name></member>
+    <member refid="class_c_a_nopen_1_1_s_d_o_message_1a1c98a42d8af59c1b91d91ff2014cc276" kind="function"><name>payload</name></member>
+  </compound>
+  <compound refid="class_c_a_nopen_1_1_s_d_o_outbound" kind="class"><name>CANopen::SDOOutbound</name>
+    <member refid="class_c_a_nopen_1_1_s_d_o_outbound_1ac43a44aaaa9356e3ddab74d008c5a3ca" kind="function"><name>SDOOutbound</name></member>
+  </compound>
+  <compound refid="class_c_a_nopen_1_1_s_d_o_outbound_read" kind="class"><name>CANopen::SDOOutboundRead</name>
+    <member refid="class_c_a_nopen_1_1_s_d_o_outbound_read_1a622eb7aa4300ebdcd74d7e50e5a7b6e3" kind="function"><name>SDOOutboundRead</name></member>
+    <member refid="class_c_a_nopen_1_1_s_d_o_outbound_read_1a888154f4196096357dad341b131ee81f" kind="function"><name>SDOOutboundRead</name></member>
+  </compound>
+  <compound refid="class_c_a_nopen_1_1_s_d_o_outbound_write" kind="class"><name>CANopen::SDOOutboundWrite</name>
+    <member refid="class_c_a_nopen_1_1_s_d_o_outbound_write_1af86ced7cb745cc3b18c4cd7c1406a312" kind="function"><name>SDOOutboundWrite</name></member>
+    <member refid="class_c_a_nopen_1_1_s_d_o_outbound_write_1a7c71af3977530091cafdc6aeae6f6c6a" kind="function"><name>SDOOutboundWrite</name></member>
+  </compound>
+  <compound refid="class_c_a_nopen_1_1_socket" kind="class"><name>CANopen::Socket</name>
+    <member refid="class_c_a_nopen_1_1_socket_1a39635df87fb1755fb9c2ce3d7ad6b6e3" kind="variable"><name>m_socket</name></member>
+    <member refid="class_c_a_nopen_1_1_socket_1ae4954058b8e521b52a26065924cbea2b" kind="variable"><name>m_ifname</name></member>
+    <member refid="class_c_a_nopen_1_1_socket_1a4911481144bf02f1dacfa74563ed8eab" kind="variable"><name>m_verbose_level</name></member>
+    <member refid="class_c_a_nopen_1_1_socket_1a66c37f6819a5ad8829326380812446e6" kind="function"><name>Socket</name></member>
+    <member refid="class_c_a_nopen_1_1_socket_1af234eea5568f8f436cb815ab70e75f2f" kind="function"><name>Socket</name></member>
+    <member refid="class_c_a_nopen_1_1_socket_1a058eedc1db11274b21421171b554c7e9" kind="function"><name>add_filter</name></member>
+    <member refid="class_c_a_nopen_1_1_socket_1a6f63808addc451747608c21b958821f4" kind="function"><name>bind</name></member>
+    <member refid="class_c_a_nopen_1_1_socket_1aa147801723e58f287d06b6df28837c44" kind="function"><name>send</name></member>
+    <member refid="class_c_a_nopen_1_1_socket_1a15363c054b276777b4290c91fd05edd5" kind="function"><name>receive</name></member>
+  </compound>
+  <compound refid="structsss" kind="struct"><name>sss</name>
+    <member refid="structsss_1a0d82573d6d7582dff0c9bb07e9c672b0" kind="variable"><name>a</name></member>
+  </compound>
+  <compound refid="namespace_c_a_nopen" kind="namespace"><name>CANopen</name>
+    <member refid="_c_a_nopen__socket_8h_1aaec5501be77093ddca113d18ace1a752" kind="variable"><name>g_verbose_mutex</name></member>
+    <member refid="_c_a_nopen__driver_8h_1a4d9cca44e04c78dd31fdb05347ed19a2" kind="function"><name>print_status</name></member>
+  </compound>
+  <compound refid="namespacestp" kind="namespace"><name>stp</name>
+  </compound>
+  <compound refid="namespace_ui" kind="namespace"><name>Ui</name>
+  </compound>
+  <compound refid="_c_a_ndriver_8h" kind="file"><name>CANdriver.h</name>
+  </compound>
+  <compound refid="_c_a_nopen__driver_8cpp" kind="file"><name>CANopen_driver.cpp</name>
+  </compound>
+  <compound refid="_c_a_nopen__driver_8h" kind="file"><name>CANopen_driver.h</name>
+  </compound>
+  <compound refid="_c_a_nopen__lxm32_8cpp" kind="file"><name>CANopen_lxm32.cpp</name>
+  </compound>
+  <compound refid="_c_a_nopen__lxm32_8h" kind="file"><name>CANopen_lxm32.h</name>
+  </compound>
+  <compound refid="_c_a_nopen__socket_8cpp" kind="file"><name>CANopen_socket.cpp</name>
+  </compound>
+  <compound refid="_c_a_nopen__socket_8h" kind="file"><name>CANopen_socket.h</name>
+    <member refid="_c_a_nopen__socket_8h_1a7622b11a0067cd59b30bc251db9eb298" kind="define"><name>IF_VERBOSE</name></member>
+  </compound>
+  <compound refid="emcy_8cpp" kind="file"><name>emcy.cpp</name>
+  </compound>
+  <compound refid="emcy_8h" kind="file"><name>emcy.h</name>
+  </compound>
+  <compound refid="gazebo__sim_8cpp" kind="file"><name>gazebo_sim.cpp</name>
+  </compound>
+  <compound refid="gazebo__sim_8hpp" kind="file"><name>gazebo_sim.hpp</name>
+  </compound>
+  <compound refid="gnuplot__sim_8cpp" kind="file"><name>gnuplot_sim.cpp</name>
+  </compound>
+  <compound refid="gnuplot__sim_8hpp" kind="file"><name>gnuplot_sim.hpp</name>
+    <member refid="gnuplot__sim_8hpp_1a4ed9e0adba13d3a0e5e3f6dd88bebd02" kind="define"><name>GNUPLOT_ENABLE_PTY</name></member>
+  </compound>
+  <compound refid="lib_2lxm32_2lib_2canopen_2src_2main_8cpp" kind="file"><name>lib/lxm32/lib/canopen/src/main.cpp</name>
+    <member refid="lib_2lxm32_2lib_2canopen_2src_2main_8cpp_1ad179db7b04bfd86a67a6a62a36bffdac" kind="function"><name>usage</name></member>
+    <member refid="lib_2lxm32_2lib_2canopen_2src_2main_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="lib_2lxm32_2src_2main_8cpp" kind="file"><name>lib/lxm32/src/main.cpp</name>
+    <member refid="lib_2lxm32_2src_2main_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="src_2main_8cpp" kind="file"><name>src/main.cpp</name>
+    <member refid="src_2main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="mainwindow_8cpp" kind="file"><name>mainwindow.cpp</name>
+  </compound>
+  <compound refid="mainwindow_8h" kind="file"><name>mainwindow.h</name>
+  </compound>
+  <compound refid="message_8cpp" kind="file"><name>message.cpp</name>
+  </compound>
+  <compound refid="message_8h" kind="file"><name>message.h</name>
+  </compound>
+  <compound refid="model_8cpp" kind="file"><name>model.cpp</name>
+  </compound>
+  <compound refid="model_8hpp" kind="file"><name>model.hpp</name>
+    <member refid="model_8hpp_1ae71449b1cc6e6250b91f539153a7a0d3" kind="define"><name>M_PI</name></member>
+    <member refid="model_8hpp_1ae44092ed043cb4350e2df47fdee890b9" kind="define"><name>NB_LEGS</name></member>
+  </compound>
+  <compound refid="nmt_8cpp" kind="file"><name>nmt.cpp</name>
+  </compound>
+  <compound refid="nmt_8h" kind="file"><name>nmt.h</name>
+  </compound>
+  <compound refid="parameter_8cpp" kind="file"><name>parameter.cpp</name>
+  </compound>
+  <compound refid="parameter_8h" kind="file"><name>parameter.h</name>
+  </compound>
+  <compound refid="payload_8cpp" kind="file"><name>payload.cpp</name>
+    <member refid="payload_8cpp_1ae70f4d583f8731e7bffe4f75957da939" kind="function"><name>operator&lt;&lt;</name></member>
+  </compound>
+  <compound refid="payload_8h" kind="file"><name>payload.h</name>
+    <member refid="payload_8h_1ae70f4d583f8731e7bffe4f75957da939" kind="function"><name>operator&lt;&lt;</name></member>
+  </compound>
+  <compound refid="pdo_8cpp" kind="file"><name>pdo.cpp</name>
+  </compound>
+  <compound refid="pdo_8h" kind="file"><name>pdo.h</name>
+  </compound>
+  <compound refid="platform_8cpp" kind="file"><name>platform.cpp</name>
+  </compound>
+  <compound refid="platform_8hpp" kind="file"><name>platform.hpp</name>
+  </compound>
+  <compound refid="lib_2lxm32_2lib_2canopen_2_r_e_a_d_m_e_8md" kind="file"><name>lib/lxm32/lib/canopen/README.md</name>
+  </compound>
+  <compound refid="lib_2lxm32_2_r_e_a_d_m_e_8md" kind="file"><name>lib/lxm32/README.md</name>
+  </compound>
+  <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="sdo_8cpp" kind="file"><name>sdo.cpp</name>
+  </compound>
+  <compound refid="sdo_8h" kind="file"><name>sdo.h</name>
+  </compound>
+  <compound refid="md__home_adev__documents__s_t_e_c_h_stewart_platform_lib_lxm32_lib_canopen__r_e_a_d_m_e" kind="page"><name>md__home_adev_Documents_STECH_stewart_platform_lib_lxm32_lib_canopen_README</name>
+  </compound>
+  <compound refid="md__home_adev__documents__s_t_e_c_h_stewart_platform_lib_lxm32__r_e_a_d_m_e" kind="page"><name>md__home_adev_Documents_STECH_stewart_platform_lib_lxm32_README</name>
+  </compound>
+  <compound refid="md__home_adev__documents__s_t_e_c_h_stewart_platform__r_e_a_d_m_e" kind="page"><name>md__home_adev_Documents_STECH_stewart_platform_README</name>
+  </compound>
+  <compound refid="dir_23220e5d4eb2412ea02d6ea5bea34c4b" kind="dir"><name>canopen</name>
+  </compound>
+  <compound refid="dir_4b7063341a3aa6384a0b6309956e879b" kind="dir"><name>include</name>
+  </compound>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>include</name>
+  </compound>
+  <compound refid="dir_41288c44a1ffec16a296b4c982a01359" kind="dir"><name>include</name>
+  </compound>
+  <compound refid="dir_220cbcf469ac190fdb1e9ad69346afb3" kind="dir"><name>lib</name>
+  </compound>
+  <compound refid="dir_97aefd0d527b934f1d99a682da8fe6a9" kind="dir"><name>lib</name>
+  </compound>
+  <compound refid="dir_0faa4166abffc2d91ba5b47622b31ea7" kind="dir"><name>lxm32</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+  <compound refid="dir_44a8ec273164e33839689911abe1d9ea" kind="dir"><name>src</name>
+  </compound>
+  <compound refid="dir_c1fdb8f31c969fbbde7d99ce8e7055a9" kind="dir"><name>src</name>
+  </compound>
 </doxygenindex>

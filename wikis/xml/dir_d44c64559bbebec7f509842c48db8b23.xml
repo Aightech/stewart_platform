@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_d44c64559bbebec7f509842c48db8b23" kind="dir">
+    <compoundname>include</compoundname>
+    <innerfile refid="gazebo__sim_8hpp">gazebo_sim.hpp</innerfile>
+    <innerfile refid="gnuplot__sim_8hpp">gnuplot_sim.hpp</innerfile>
+    <innerfile refid="mainwindow_8h">mainwindow.h</innerfile>
+    <innerfile refid="model_8hpp">model.hpp</innerfile>
+    <innerfile refid="platform_8hpp">platform.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/adev/Documents/STECH/stewart_platform/include/"/>
+  </compounddef>
+</doxygen>

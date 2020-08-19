@@ -147,7 +147,7 @@ qt5_wrap_ui(EXEC_UI ${CMAKE_CURRENT_SOURCE_DIR}/forms/mainwindow.ui)
 set(LIB_SRCS ${LIB_SRCS}  ${EXEC_SRC}  )
 
 
-add_executable(${EXEC_NAME} ${MAIN_FILE} ${LIB_SRCS})
+add_executable(${EXEC_NAME} ${MAIN_FILE} ${LIB_SRCS} ${EXEC_UI})
 target_link_libraries (${EXEC_NAME} ${EXTRA_LIBS})
 target_include_directories(${EXEC_NAME}
   PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include"

@@ -1,0 +1,12 @@
+<map id="CANopen_driver.h" name="CANopen_driver.h">
+<area shape="rect" id="node1" title="Device Profile Drives and Motion Control." alt="" coords="365,5,529,35"/>
+<area shape="rect" id="node2" href="$_c_a_nopen__lxm32_8h.html" title="Implementation of the Driver Class for a LXM32 driver." alt="" coords="263,83,431,112"/>
+<area shape="rect" id="node10" href="$_c_a_nopen__driver_8cpp_source.html" title=" " alt="" coords="455,83,638,112"/>
+<area shape="rect" id="node3" href="$platform_8hpp_source.html" title=" " alt="" coords="119,160,243,189"/>
+<area shape="rect" id="node7" href="$platform_8cpp_source.html" title=" " alt="" coords="220,237,343,267"/>
+<area shape="rect" id="node8" href="$_c_a_nopen__lxm32_8cpp_source.html" title=" " alt="" coords="319,160,505,189"/>
+<area shape="rect" id="node9" href="$lib_2lxm32_2src_2main_8cpp_source.html" title=" " alt="" coords="529,160,625,189"/>
+<area shape="rect" id="node4" href="$mainwindow_8h_source.html" title=" " alt="" coords="61,237,195,267"/>
+<area shape="rect" id="node5" href="$src_2main_8cpp_source.html" title=" " alt="" coords="5,315,101,344"/>
+<area shape="rect" id="node6" href="$mainwindow_8cpp_source.html" title=" " alt="" coords="125,315,280,344"/>
+</map>

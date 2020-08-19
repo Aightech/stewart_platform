@@ -1,0 +1,4 @@
+<map id="CANopen::Driver::wait_state" name="CANopen::Driver::wait_state">
+<area shape="rect" id="node1" title="wait_state loop until the driver state is different from the one passed while(actual_state()&amp;mask) !..." alt="" coords="5,5,203,52"/>
+<area shape="rect" id="node2" href="$class_c_a_nopen_1_1_driver.html#a3087f343d739cb1cd138250ed6925eb8" title="Returns the current state of the driver by reading the status word." alt="" coords="251,5,441,52"/>
+</map>

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacestp" kind="namespace" language="C++">
+    <compoundname>stp</compoundname>
+    <innerclass refid="classstp_1_1_gazebo__sim" prot="public">stp::Gazebo_sim</innerclass>
+    <innerclass refid="classstp_1_1_gnuplot__sim" prot="public">stp::Gnuplot_sim</innerclass>
+    <innerclass refid="classstp_1_1_model" prot="public">stp::Model</innerclass>
+    <innerclass refid="classstp_1_1_platform" prot="public">stp::Platform</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/adev/Documents/STECH/stewart_platform/include/gazebo_sim.hpp" line="13" column="1"/>
+  </compounddef>
+</doxygen>

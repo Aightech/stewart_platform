@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="class_ui_1_1_main_window" kind="class" language="C++" prot="public">
+    <compoundname>Ui::MainWindow</compoundname>
+    <basecompoundref refid="class_ui___main_window" prot="public" virt="non-virtual">Ui_MainWindow</basecompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Ui::MainWindow</label>
+        <link refid="class_ui_1_1_main_window"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Ui_MainWindow</label>
+        <link refid="class_ui___main_window"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Ui::MainWindow</label>
+        <link refid="class_ui_1_1_main_window"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Ui_MainWindow</label>
+        <link refid="class_ui___main_window"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="666" column="42" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="666" bodyend="666"/>
+    <listofallmembers>
+      <member refid="class_ui___main_window_1a356f1cf3ebda15f1fac59467ee081b74" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>centralwidget</name></member>
+      <member refid="class_ui___main_window_1a953d66beb0dfd3502804f692f3acc822" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>doubleSpinBox_cart_pitch</name></member>
+      <member refid="class_ui___main_window_1acdb66ad5541dceb9609f7c9eb61211d6" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>doubleSpinBox_cart_roll</name></member>
+      <member refid="class_ui___main_window_1a381762f7049fde8c67cac178caaa2757" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>doubleSpinBox_cart_x</name></member>
+      <member refid="class_ui___main_window_1ae804d3a01e893bc74c89343016acd76a" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>doubleSpinBox_cart_y</name></member>
+      <member refid="class_ui___main_window_1a07f4c00eab4766202a73b7e16f4d8e91" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>doubleSpinBox_cart_yaw</name></member>
+      <member refid="class_ui___main_window_1a3303acbaf828ed141f8414ce3da7687f" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>doubleSpinBox_cart_z</name></member>
+      <member refid="class_ui___main_window_1a9fe3891af8b6ca25c37d871df45600a1" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>doubleSpinBox_sin_omega</name></member>
+      <member refid="class_ui___main_window_1a05a6cd080251713c8c5939c063bfab4f" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>doubleSpinBox_sin_x</name></member>
+      <member refid="class_ui___main_window_1a804eaedb9bb0704958f96b2a3ff970a0" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>doubleSpinBox_sin_y</name></member>
+      <member refid="class_ui___main_window_1a9e22a39ea1699287d89c5bb795427c44" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>doubleSpinBox_sin_z</name></member>
+      <member refid="class_ui___main_window_1a525ed3c5fe0784ac502ee222fba4e205" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>gridLayout</name></member>
+      <member refid="class_ui___main_window_1a6b2a0c5f7e8ff2a87134908dd770d2d2" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>gridLayout_2</name></member>
+      <member refid="class_ui___main_window_1acd6fdc9ebacc4b25b834162380d75ce8" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>horizontalLayout</name></member>
+      <member refid="class_ui___main_window_1af1a7bbeee705545b94c55c297299118d" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>horizontalLayout_10</name></member>
+      <member refid="class_ui___main_window_1ad07bcc9304056b61c4065a1e77ce0ba2" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>horizontalLayout_11</name></member>
+      <member refid="class_ui___main_window_1ad81454913b05646674b1a41c595b8510" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>horizontalLayout_12</name></member>
+      <member refid="class_ui___main_window_1a3b24c4bb360d79ae2e886fe63c8fdac7" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>horizontalLayout_13</name></member>
+      <member refid="class_ui___main_window_1aa53955f35b7d9f3d161525ed8639db84" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>horizontalLayout_14</name></member>
+      <member refid="class_ui___main_window_1a1e64a8da62994a2cb0ff65f32b26639e" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>horizontalLayout_15</name></member>
+      <member refid="class_ui___main_window_1a80867018070156432923d0266cc9fe25" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>horizontalLayout_2</name></member>
+      <member refid="class_ui___main_window_1a03ce63974cc69b067c91bbf285cceca8" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>horizontalLayout_3</name></member>
+      <member refid="class_ui___main_window_1ae183387a7d233b437a637b403ba39ffd" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>horizontalLayout_4</name></member>
+      <member refid="class_ui___main_window_1a14c9d4842c3e97e16e7873ef0aecdb1e" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>horizontalLayout_5</name></member>
+      <member refid="class_ui___main_window_1a1351e317cba7ca711b6b4d2212b6bf36" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>horizontalLayout_6</name></member>
+      <member refid="class_ui___main_window_1a2afb915e1492b7e6704db4918c1e5e80" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>horizontalLayout_7</name></member>
+      <member refid="class_ui___main_window_1a8ead8fc876ee91c30864822eedb9c370" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>horizontalLayout_8</name></member>
+      <member refid="class_ui___main_window_1ab48e49d68609b4c66e5169e2f87e3eb9" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>horizontalLayout_9</name></member>
+      <member refid="class_ui___main_window_1a7871ea8c4b6c595d7ccd53960b344719" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>horizontalSpacer</name></member>
+      <member refid="class_ui___main_window_1a9a022556cf8ce3fa47e51d79cb222ab0" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>horizontalSpacer_2</name></member>
+      <member refid="class_ui___main_window_1ad9c89133780f28e6efa2ec17ceb9cff5" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>label</name></member>
+      <member refid="class_ui___main_window_1a9dc4dba26b83e0c94aa566e1c564420b" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>label_10</name></member>
+      <member refid="class_ui___main_window_1a4f12a71b4a2fb6f85df2300d83b5ed3e" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>label_11</name></member>
+      <member refid="class_ui___main_window_1aa2621565827195e88436fb54220bb48d" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>label_12</name></member>
+      <member refid="class_ui___main_window_1ac1cbc41e9dbaeb3d0bdc2189d8e9ee1d" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>label_13</name></member>
+      <member refid="class_ui___main_window_1a1c16c0a684617927472e534822a63c7d" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>label_14</name></member>
+      <member refid="class_ui___main_window_1a882200d8ae16962f5dd3b749ebacbf7e" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>label_15</name></member>
+      <member refid="class_ui___main_window_1ab6ac4329a89041f557332f6569d94493" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>label_16</name></member>
+      <member refid="class_ui___main_window_1a1f4ff90c122fededcc08604401442034" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>label_17</name></member>
+      <member refid="class_ui___main_window_1a55100f53189f25cf8a1ee0beb29be642" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>label_18</name></member>
+      <member refid="class_ui___main_window_1ad0a5580e9e7432ed041d6c2d587cd13e" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>label_19</name></member>
+      <member refid="class_ui___main_window_1a9125c3f58951f983d461686ccaabb468" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>label_20</name></member>
+      <member refid="class_ui___main_window_1a4a18586583a48765b392cbab0ea7545c" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>label_21</name></member>
+      <member refid="class_ui___main_window_1aa7d5a218f527f204fa7f544dc8c024a7" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>label_22</name></member>
+      <member refid="class_ui___main_window_1a7a9350c6de61e7051850744487d910bd" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>label_23</name></member>
+      <member refid="class_ui___main_window_1a29b781f23566d0f91b217459c06929ba" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>label_24</name></member>
+      <member refid="class_ui___main_window_1acf6fc9bce4db154fecbd1ff532918353" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>label_25</name></member>
+      <member refid="class_ui___main_window_1a1bf8f5e6531b7bc79378d58ee57ba389" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>label_26</name></member>
+      <member refid="class_ui___main_window_1ac6c19d112b25073d9276c377d00dbadb" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>label_27</name></member>
+      <member refid="class_ui___main_window_1a0376fd90247280e7c7957cc70628708c" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>label_3</name></member>
+      <member refid="class_ui___main_window_1a78c7e10730b43c6700cd7216911ed76a" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>label_4</name></member>
+      <member refid="class_ui___main_window_1ad6bab8fb8903b8f41afea1218ee52695" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>label_5</name></member>
+      <member refid="class_ui___main_window_1a663f728e6244926a795c6e6892673b1d" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>label_6</name></member>
+      <member refid="class_ui___main_window_1a13936e6f18b1c90402b3c7a3c92b6cdb" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>label_7</name></member>
+      <member refid="class_ui___main_window_1af183bfbfb9f38bbdd60caf92b15e23dc" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>label_8</name></member>
+      <member refid="class_ui___main_window_1a0e90c7e9ad77386881e0b264ddb9dd22" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>label_9</name></member>
+      <member refid="class_ui___main_window_1ade2cd7c7d365ab2ff1841cb0f9481c7d" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>label_state</name></member>
+      <member refid="class_ui___main_window_1a16e802a7ebd4beb9d8aba858565e51b3" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>line</name></member>
+      <member refid="class_ui___main_window_1a17207206e55a605ecc14a3534b7e575f" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>line_2</name></member>
+      <member refid="class_ui___main_window_1a27e0b134c3c12643afbf0b50dd175453" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>line_3</name></member>
+      <member refid="class_ui___main_window_1add492bf5763815e82fba9ba9297c50e6" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>line_4</name></member>
+      <member refid="class_ui___main_window_1ad4c35196e6d4f99c0e889120d03c1639" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>lineEdit_pos_pitch</name></member>
+      <member refid="class_ui___main_window_1a05ab3399270d413c9f4a86e35cc017e0" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>lineEdit_pos_roll</name></member>
+      <member refid="class_ui___main_window_1ad5ae91b6f4d0058591082cd6f1df4c96" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>lineEdit_pos_x</name></member>
+      <member refid="class_ui___main_window_1a2af9edeacce3ffebd5d11080ca86d2a1" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>lineEdit_pos_y</name></member>
+      <member refid="class_ui___main_window_1a60f07cdd17f4c7ba0ba2cc9930e7de1f" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>lineEdit_pos_yaw</name></member>
+      <member refid="class_ui___main_window_1a24812c8657bf9ba4bb6fa8497e271a9e" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>lineEdit_pos_z</name></member>
+      <member refid="class_ui___main_window_1adf43d9a67adaec750aaa956b5e082f09" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>menubar</name></member>
+      <member refid="class_ui___main_window_1a96b1fefd9ac8c6ad2cd5395eeb5ad98b" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>pushButton_pause</name></member>
+      <member refid="class_ui___main_window_1a8a0d793710705878e3f433550ca05470" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>pushButton_start</name></member>
+      <member refid="class_ui___main_window_1a1c2326996ec6bdb6bd873fc2b0aed709" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>pushButton_stop</name></member>
+      <member refid="class_ui___main_window_1a61269a10bc342763a5a51a93a235944d" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>radioButton</name></member>
+      <member refid="class_ui___main_window_1add4061a8dc5a94be04e0579450c2a330" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>radioButton_cart_mvt</name></member>
+      <member refid="class_ui___main_window_1ac67621eaf3c700ae21dba70b5c796fcd" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>radioButton_sin_mvt</name></member>
+      <member refid="class_ui___main_window_1a097dd160c3534a204904cb374412c618" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>retranslateUi</name></member>
+      <member refid="class_ui___main_window_1acf4a0872c4c77d8f43a2ec66ed849b58" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>setupUi</name></member>
+      <member refid="class_ui___main_window_1a1687cceb1e2787aa1f83e50433943a91" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>statusbar</name></member>
+      <member refid="class_ui___main_window_1aecd96a04789fcfec3f98d80390ad8184" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>verticalLayout</name></member>
+      <member refid="class_ui___main_window_1a0c01bad60d9f422a1258e710635a2f65" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>verticalLayout_2</name></member>
+      <member refid="class_ui___main_window_1a6f40fc110b15410c00837a446d57bdbe" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>verticalLayout_4</name></member>
+      <member refid="class_ui___main_window_1afcc20a3d5058037a00cdc6122f231848" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>verticalLayout_5</name></member>
+      <member refid="class_ui___main_window_1a93c190b085c63a667c535ba0bbcfec7c" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>verticalLayout_6</name></member>
+      <member refid="class_ui___main_window_1a7b66d5d6ab55f3977317359d09a42345" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>verticalLayout_7</name></member>
+      <member refid="class_ui___main_window_1a8384329c3663ff274e926a12024aab52" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>verticalSpacer</name></member>
+      <member refid="class_ui___main_window_1adc1f5fdd97fb3729999c56902d0fa591" prot="public" virt="non-virtual"><scope>Ui::MainWindow</scope><name>verticalSpacer_2</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

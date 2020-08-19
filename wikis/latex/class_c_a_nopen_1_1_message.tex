@@ -1,0 +1,250 @@
+\hypertarget{class_c_a_nopen_1_1_message}{}\doxysection{C\+A\+Nopen\+::Message Class Reference}
+\label{class_c_a_nopen_1_1_message}\index{CANopen::Message@{CANopen::Message}}
+
+
+can\+\_\+frame object sent and received throught C\+A\+Nopen socket.  
+
+
+
+
+{\ttfamily \#include $<$message.\+h$>$}
+
+
+
+Inheritance diagram for C\+A\+Nopen\+::Message\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_c_a_nopen_1_1_message__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for C\+A\+Nopen\+::Message\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{class_c_a_nopen_1_1_message__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468}{Function\+Code}} \+: uint32\+\_\+t \{ \newline
+\mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468a9772de90d6832671c05553ecc93168ce}{N\+MT}} = 0, 
+\mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468acf827d4fddf4af5908ff22d480ec3f9f}{Emergency}} = 0x80, 
+\mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468a439fca8488e446232afad47ea72326f4}{Sync}} = 0x80, 
+\mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468a4cce8d38cc9a387ac2553c97082934c7}{Time\+Stamp}} = 0x100, 
+\newline
+\mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468aea8753e3c4fecde547db28a4a01f4fea}{P\+D\+O1\+Transmit}} = 0x180, 
+\mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468a289816747eb21454c97a2c0de54bd7bd}{P\+D\+O1\+Receive}} = 0x200, 
+\mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468a644cdb60cf2ec10f6f509c6dac09c7e7}{P\+D\+O2\+Transmit}} = 0x280, 
+\mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468ae19e8c5160acfaab1c140c21789138e3}{P\+D\+O2\+Receive}} = 0x300, 
+\newline
+\mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468ac15c2cbe07eac4f1fdc102927deadcdc}{P\+D\+O3\+Transmit}} = 0x380, 
+\mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468ab059d1f4ab6ed9bb993e5d37aea6eba1}{P\+D\+O3\+Receive}} = 0x400, 
+\mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468a46d53ca55e462afcab565303b212656c}{P\+D\+O4\+Transmit}} = 0x480, 
+\mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468a45f4fc29142533ab1395bd971c12be9b}{P\+D\+O4\+Receive}} = 0x500, 
+\newline
+\mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468ab54b9a53105e0549e5fc07ef1ee6b91a}{S\+D\+O\+Transmit}} = 0x580, 
+\mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468a720fb5202eef37017f7f58ac195c5949}{S\+D\+O\+Receive}} = 0x600, 
+\mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468aea5e380d61d7dbbbb5f4655e3fbdc65c}{Heartbeat}} = 0x700
+ \}
+\begin{DoxyCompactList}\small\item\em Function codes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_a_nopen_1_1_message_a77a8c09ad0711fa4b574a8b88d983441}\label{class_c_a_nopen_1_1_message_a77a8c09ad0711fa4b574a8b88d983441}} 
+{\bfseries Message} (const can\+\_\+frame \&other)
+\item 
+\mbox{\Hypertarget{class_c_a_nopen_1_1_message_ace3b5218ab769fb1e642b82b2d3fc7d3}\label{class_c_a_nopen_1_1_message_ace3b5218ab769fb1e642b82b2d3fc7d3}} 
+{\bfseries Message} (uint32\+\_\+t cob\+\_\+id, \mbox{\hyperlink{class_c_a_nopen_1_1_payload}{Payload}} \mbox{\hyperlink{class_c_a_nopen_1_1_message_a231049034467f68a5a919a9267f9151f}{payload}})
+\item 
+\mbox{\Hypertarget{class_c_a_nopen_1_1_message_a2f57055297e93e7d694a2aa32911da6c}\label{class_c_a_nopen_1_1_message_a2f57055297e93e7d694a2aa32911da6c}} 
+{\bfseries operator can\+\_\+frame $\ast$} () const
+\item 
+\mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468}{Function\+Code}} \mbox{\hyperlink{class_c_a_nopen_1_1_message_aa0b2fbf64579563a763e3efbe1766c3a}{function\+\_\+code}} () const
+\begin{DoxyCompactList}\small\item\em function\+\_\+code \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_c_a_nopen_1_1_message_adc93c710fd35ab61e46a0881326d0336}{node\+\_\+id}} () const
+\begin{DoxyCompactList}\small\item\em node\+\_\+id \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_c_a_nopen_1_1_payload}{Payload}} \mbox{\hyperlink{class_c_a_nopen_1_1_message_a231049034467f68a5a919a9267f9151f}{payload}} () const
+\begin{DoxyCompactList}\small\item\em payload \end{DoxyCompactList}\item 
+virtual uint32\+\_\+t \mbox{\hyperlink{class_c_a_nopen_1_1_message_aaf1c9976719a7c585eaa35aede987ffa}{id}} () const
+\begin{DoxyCompactList}\small\item\em id \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_a_nopen_1_1_message_afdc7d0f669d0736395beac0e846646a5}\label{class_c_a_nopen_1_1_message_afdc7d0f669d0736395beac0e846646a5}} 
+std\+::string {\bfseries to\+\_\+string} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+can\+\_\+frame object sent and received throught C\+A\+Nopen socket. 
+
+Definition at line \mbox{\hyperlink{message_8h_source_l00020}{20}} of file \mbox{\hyperlink{message_8h_source}{message.\+h}}.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468}\label{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468}} 
+\index{CANopen::Message@{CANopen::Message}!FunctionCode@{FunctionCode}}
+\index{FunctionCode@{FunctionCode}!CANopen::Message@{CANopen::Message}}
+\doxysubsubsection{\texorpdfstring{FunctionCode}{FunctionCode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468}{C\+A\+Nopen\+::\+Message\+::\+Function\+Code}} \+: uint32\+\_\+t}
+
+
+
+Function codes. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NMT@{NMT}!CANopen::Message@{CANopen::Message}}\index{CANopen::Message@{CANopen::Message}!NMT@{NMT}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468a9772de90d6832671c05553ecc93168ce}\label{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468a9772de90d6832671c05553ecc93168ce}} 
+N\+MT&{\bfseries{0\textsubscript{h}}} N\+MT \mbox{\hyperlink{class_c_a_nopen_1_1_message}{Message}} (Network management) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Emergency@{Emergency}!CANopen::Message@{CANopen::Message}}\index{CANopen::Message@{CANopen::Message}!Emergency@{Emergency}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468acf827d4fddf4af5908ff22d480ec3f9f}\label{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468acf827d4fddf4af5908ff22d480ec3f9f}} 
+Emergency&{\bfseries{80\textsubscript{h}}} E\+M\+CY \mbox{\hyperlink{class_c_a_nopen_1_1_message}{Message}} (Emergency Object) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Sync@{Sync}!CANopen::Message@{CANopen::Message}}\index{CANopen::Message@{CANopen::Message}!Sync@{Sync}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468a439fca8488e446232afad47ea72326f4}\label{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468a439fca8488e446232afad47ea72326f4}} 
+Sync&{\bfseries{80\textsubscript{h}}} ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TimeStamp@{TimeStamp}!CANopen::Message@{CANopen::Message}}\index{CANopen::Message@{CANopen::Message}!TimeStamp@{TimeStamp}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468a4cce8d38cc9a387ac2553c97082934c7}\label{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468a4cce8d38cc9a387ac2553c97082934c7}} 
+Time\+Stamp&{\bfseries{100\textsubscript{h}}} ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PDO1Transmit@{PDO1Transmit}!CANopen::Message@{CANopen::Message}}\index{CANopen::Message@{CANopen::Message}!PDO1Transmit@{PDO1Transmit}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468aea8753e3c4fecde547db28a4a01f4fea}\label{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468aea8753e3c4fecde547db28a4a01f4fea}} 
+P\+D\+O1\+Transmit&{\bfseries{180\textsubscript{h}}} P\+D\+O1 Transmiting \mbox{\hyperlink{class_c_a_nopen_1_1_message}{Message}} (Process Data Object) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PDO1Receive@{PDO1Receive}!CANopen::Message@{CANopen::Message}}\index{CANopen::Message@{CANopen::Message}!PDO1Receive@{PDO1Receive}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468a289816747eb21454c97a2c0de54bd7bd}\label{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468a289816747eb21454c97a2c0de54bd7bd}} 
+P\+D\+O1\+Receive&{\bfseries{200\textsubscript{h}}} P\+D\+O1 Receiving \mbox{\hyperlink{class_c_a_nopen_1_1_message}{Message}} (Process Data Object) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PDO2Transmit@{PDO2Transmit}!CANopen::Message@{CANopen::Message}}\index{CANopen::Message@{CANopen::Message}!PDO2Transmit@{PDO2Transmit}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468a644cdb60cf2ec10f6f509c6dac09c7e7}\label{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468a644cdb60cf2ec10f6f509c6dac09c7e7}} 
+P\+D\+O2\+Transmit&{\bfseries{280\textsubscript{h}}} P\+D\+O2 Transmiting \mbox{\hyperlink{class_c_a_nopen_1_1_message}{Message}} (Process Data Object) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PDO2Receive@{PDO2Receive}!CANopen::Message@{CANopen::Message}}\index{CANopen::Message@{CANopen::Message}!PDO2Receive@{PDO2Receive}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468ae19e8c5160acfaab1c140c21789138e3}\label{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468ae19e8c5160acfaab1c140c21789138e3}} 
+P\+D\+O2\+Receive&{\bfseries{300\textsubscript{h}}} P\+D\+O2 Receiving \mbox{\hyperlink{class_c_a_nopen_1_1_message}{Message}} (Process Data Object) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PDO3Transmit@{PDO3Transmit}!CANopen::Message@{CANopen::Message}}\index{CANopen::Message@{CANopen::Message}!PDO3Transmit@{PDO3Transmit}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468ac15c2cbe07eac4f1fdc102927deadcdc}\label{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468ac15c2cbe07eac4f1fdc102927deadcdc}} 
+P\+D\+O3\+Transmit&{\bfseries{380\textsubscript{h}}} P\+D\+O3 Transmiting \mbox{\hyperlink{class_c_a_nopen_1_1_message}{Message}} (Process Data Object) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PDO3Receive@{PDO3Receive}!CANopen::Message@{CANopen::Message}}\index{CANopen::Message@{CANopen::Message}!PDO3Receive@{PDO3Receive}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468ab059d1f4ab6ed9bb993e5d37aea6eba1}\label{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468ab059d1f4ab6ed9bb993e5d37aea6eba1}} 
+P\+D\+O3\+Receive&{\bfseries{400\textsubscript{h}}} P\+D\+O3 Receiving \mbox{\hyperlink{class_c_a_nopen_1_1_message}{Message}} (Process Data Object) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PDO4Transmit@{PDO4Transmit}!CANopen::Message@{CANopen::Message}}\index{CANopen::Message@{CANopen::Message}!PDO4Transmit@{PDO4Transmit}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468a46d53ca55e462afcab565303b212656c}\label{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468a46d53ca55e462afcab565303b212656c}} 
+P\+D\+O4\+Transmit&{\bfseries{480\textsubscript{h}}} P\+D\+O4 Transmiting \mbox{\hyperlink{class_c_a_nopen_1_1_message}{Message}} (Process Data Object) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PDO4Receive@{PDO4Receive}!CANopen::Message@{CANopen::Message}}\index{CANopen::Message@{CANopen::Message}!PDO4Receive@{PDO4Receive}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468a45f4fc29142533ab1395bd971c12be9b}\label{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468a45f4fc29142533ab1395bd971c12be9b}} 
+P\+D\+O4\+Receive&{\bfseries{500\textsubscript{h}}} P\+D\+O4 Receiving \mbox{\hyperlink{class_c_a_nopen_1_1_message}{Message}} (Process Data Object) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDOTransmit@{SDOTransmit}!CANopen::Message@{CANopen::Message}}\index{CANopen::Message@{CANopen::Message}!SDOTransmit@{SDOTransmit}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468ab54b9a53105e0549e5fc07ef1ee6b91a}\label{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468ab54b9a53105e0549e5fc07ef1ee6b91a}} 
+S\+D\+O\+Transmit&{\bfseries{580\textsubscript{h}}} S\+DO Transmiting \mbox{\hyperlink{class_c_a_nopen_1_1_message}{Message}} (Service Data Object) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDOReceive@{SDOReceive}!CANopen::Message@{CANopen::Message}}\index{CANopen::Message@{CANopen::Message}!SDOReceive@{SDOReceive}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468a720fb5202eef37017f7f58ac195c5949}\label{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468a720fb5202eef37017f7f58ac195c5949}} 
+S\+D\+O\+Receive&{\bfseries{600\textsubscript{h}}} S\+DO Receiving \mbox{\hyperlink{class_c_a_nopen_1_1_message}{Message}} (Service Data Object) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Heartbeat@{Heartbeat}!CANopen::Message@{CANopen::Message}}\index{CANopen::Message@{CANopen::Message}!Heartbeat@{Heartbeat}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468aea5e380d61d7dbbbb5f4655e3fbdc65c}\label{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468aea5e380d61d7dbbbb5f4655e3fbdc65c}} 
+Heartbeat&{\bfseries{700\textsubscript{h}}} ~\newline
+ \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{message_8h_source_l00025}{25}} of file \mbox{\hyperlink{message_8h_source}{message.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_a_nopen_1_1_message_aa0b2fbf64579563a763e3efbe1766c3a}\label{class_c_a_nopen_1_1_message_aa0b2fbf64579563a763e3efbe1766c3a}} 
+\index{CANopen::Message@{CANopen::Message}!function\_code@{function\_code}}
+\index{function\_code@{function\_code}!CANopen::Message@{CANopen::Message}}
+\doxysubsubsection{\texorpdfstring{function\_code()}{function\_code()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468}{Message\+::\+Function\+Code}} C\+A\+Nopen\+::\+Message\+::function\+\_\+code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+function\+\_\+code 
+
+\begin{DoxyReturn}{Returns}
+Returns the function code of the message (without the node id) 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{message_8cpp_source_l00019}{19}} of file \mbox{\hyperlink{message_8cpp_source}{message.\+cpp}}.
+
+\mbox{\Hypertarget{class_c_a_nopen_1_1_message_aaf1c9976719a7c585eaa35aede987ffa}\label{class_c_a_nopen_1_1_message_aaf1c9976719a7c585eaa35aede987ffa}} 
+\index{CANopen::Message@{CANopen::Message}!id@{id}}
+\index{id@{id}!CANopen::Message@{CANopen::Message}}
+\doxysubsubsection{\texorpdfstring{id()}{id()}}
+{\footnotesize\ttfamily virtual uint32\+\_\+t C\+A\+Nopen\+::\+Message\+::id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+id 
+
+\begin{DoxyReturn}{Returns}
+Depends of the child class \+: return index\+\_\+\+\_\+sub if \mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_message}{S\+D\+O\+Message}} or pdo number if \mbox{\hyperlink{class_c_a_nopen_1_1_p_d_o_message}{P\+D\+O\+Message}} 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_message_af81e301ad58fcf18fecbe359f1587d2f}{C\+A\+Nopen\+::\+S\+D\+O\+Message}}.
+
+
+
+Definition at line \mbox{\hyperlink{message_8h_source_l00074}{74}} of file \mbox{\hyperlink{message_8h_source}{message.\+h}}.
+
+\mbox{\Hypertarget{class_c_a_nopen_1_1_message_adc93c710fd35ab61e46a0881326d0336}\label{class_c_a_nopen_1_1_message_adc93c710fd35ab61e46a0881326d0336}} 
+\index{CANopen::Message@{CANopen::Message}!node\_id@{node\_id}}
+\index{node\_id@{node\_id}!CANopen::Message@{CANopen::Message}}
+\doxysubsubsection{\texorpdfstring{node\_id()}{node\_id()}}
+{\footnotesize\ttfamily uint8\+\_\+t C\+A\+Nopen\+::\+Message\+::node\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+node\+\_\+id 
+
+\begin{DoxyReturn}{Returns}
+Returns the ID of the node sending or getting the message (extracted from the C\+OB ID) 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{message_8cpp_source_l00024}{24}} of file \mbox{\hyperlink{message_8cpp_source}{message.\+cpp}}.
+
+\mbox{\Hypertarget{class_c_a_nopen_1_1_message_a231049034467f68a5a919a9267f9151f}\label{class_c_a_nopen_1_1_message_a231049034467f68a5a919a9267f9151f}} 
+\index{CANopen::Message@{CANopen::Message}!payload@{payload}}
+\index{payload@{payload}!CANopen::Message@{CANopen::Message}}
+\doxysubsubsection{\texorpdfstring{payload()}{payload()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_a_nopen_1_1_payload}{Payload}} C\+A\+Nopen\+::\+Message\+::payload (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+payload 
+
+\begin{DoxyReturn}{Returns}
+Returns the payload of the message. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_message_a1c98a42d8af59c1b91d91ff2014cc276}{C\+A\+Nopen\+::\+S\+D\+O\+Message}}.
+
+
+
+Definition at line \mbox{\hyperlink{message_8cpp_source_l00029}{29}} of file \mbox{\hyperlink{message_8cpp_source}{message.\+cpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{message_8h}{message.\+h}}\item 
+message.\+cpp\end{DoxyCompactItemize}

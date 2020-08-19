@@ -1,0 +1,306 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="class_c_a_nopen_1_1_payload" kind="class" language="C++" prot="public">
+    <compoundname>CANopen::Payload</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::vector&lt; uint8_t &gt;</basecompoundref>
+    <includes refid="payload_8h" local="no">payload.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_c_a_nopen_1_1_payload_1a1b22524210c44e52820944fdd041484f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CANopen::Payload::Payload</definition>
+        <argsstring>()=default</argsstring>
+        <name>Payload</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/include/payload.h" line="24" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_payload_1a1177f8bbace9e9779c7549ae7ace1681" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CANopen::Payload::Payload</definition>
+        <argsstring>(const Payload &amp;)=default</argsstring>
+        <name>Payload</name>
+        <param>
+          <type>const <ref refid="class_c_a_nopen_1_1_payload" kindref="compound">Payload</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/include/payload.h" line="25" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_payload_1ab0769e01554cc879840463e2a55eab0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CANopen::Payload::Payload</definition>
+        <argsstring>(const std::vector&lt; uint8_t &gt; &amp;other)</argsstring>
+        <name>Payload</name>
+        <param>
+          <type>const std::vector&lt; uint8_t &gt; &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/include/payload.h" line="26" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/src/payload.cpp" bodystart="6" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_payload_1a769f01631bd710d3b37f07cc2753b889" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>CANopen::Payload::Payload</definition>
+        <argsstring>(T value)</argsstring>
+        <name>Payload</name>
+        <param>
+          <type>T</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_c_a_nopen_1_1_payload" kindref="compound">Payload</ref> Constructor from a standard data type variable. It transfrom the n bytes of the data into a array of n bytes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The variable to store in the payload </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/include/payload.h" line="33" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/include/payload.h" bodystart="33" bodyend="36"/>
+        <references refid="class_c_a_nopen_1_1_payload_1aef05ef8cfc8b9ba4170891f3168a726b" compoundref="payload_8h" startline="48" endline="52">value</references>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_payload_1a646541a9ec787a3fcdbbcba153e8553c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_c_a_nopen_1_1_payload" kindref="compound">Payload</ref> &amp;</type>
+        <definition>Payload&amp; CANopen::Payload::operator=</definition>
+        <argsstring>(const Payload &amp;)=default</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="class_c_a_nopen_1_1_payload" kindref="compound">Payload</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/include/payload.h" line="39" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_payload_1aef05ef8cfc8b9ba4170891f3168a726b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T &amp;</type>
+        <definition>T&amp; CANopen::Payload::value</definition>
+        <argsstring>(unsigned begin=0)</argsstring>
+        <name>value</name>
+        <param>
+          <type>unsigned</type>
+          <declname>begin</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>value Returns the data casted as a variable of type T </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>begin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the data array from where the data must be returned. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The data as a variable of type T. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/include/payload.h" line="48" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/include/payload.h" bodystart="48" bodyend="52"/>
+        <referencedby refid="struct_c_a_nopen_1_1_parameter_1a2a80caa7af7b8df1ee93999e27f493f6" compoundref="parameter_8cpp" startline="14" endline="26">CANopen::Parameter::from_payload</referencedby>
+        <referencedby refid="class_c_a_nopen_1_1_payload_1aeb41b12a7903cb5dee4d2f5ccd1d3f15" compoundref="payload_8h" startline="62" endline="66">operator&lt;&lt;</referencedby>
+        <referencedby refid="class_c_a_nopen_1_1_payload_1a769f01631bd710d3b37f07cc2753b889" compoundref="payload_8h" startline="33" endline="36">Payload</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_payload_1aeb41b12a7903cb5dee4d2f5ccd1d3f15" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="class_c_a_nopen_1_1_payload" kindref="compound">Payload</ref> &amp;</type>
+        <definition>Payload&amp; CANopen::Payload::operator&lt;&lt;</definition>
+        <argsstring>(T &amp;&amp;value)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>T &amp;&amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>operator &lt;&lt; Adds a variable inside the payload </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The variable to store </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The <ref refid="class_c_a_nopen_1_1_payload" kindref="compound">Payload</ref> reference. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/include/payload.h" line="61" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/include/payload.h" bodystart="62" bodyend="66"/>
+        <references refid="class_c_a_nopen_1_1_payload_1aef05ef8cfc8b9ba4170891f3168a726b" compoundref="payload_8h" startline="48" endline="52">value</references>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_payload_1ae8e5f1160cc9d6578a315a455d305469" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_c_a_nopen_1_1_payload" kindref="compound">Payload</ref> &amp;</type>
+        <definition>Payload&amp; CANopen::Payload::operator&lt;&lt;</definition>
+        <argsstring>(Payload &amp;&amp;p)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type><ref refid="class_c_a_nopen_1_1_payload" kindref="compound">Payload</ref> &amp;&amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>operator &lt;&lt; Adds a variable inside the payload </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The variable to store </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The <ref refid="class_c_a_nopen_1_1_payload" kindref="compound">Payload</ref> reference. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/include/payload.h" line="73" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/include/payload.h" bodystart="74" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_payload_1a4d25baad973a414a3b160f366bb92153" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_c_a_nopen_1_1_payload" kindref="compound">Payload</ref> &amp;</type>
+        <definition>Payload&amp; CANopen::Payload::store_at</definition>
+        <argsstring>(Payload &amp;&amp;p, int slot)</argsstring>
+        <name>store_at</name>
+        <param>
+          <type><ref refid="class_c_a_nopen_1_1_payload" kindref="compound">Payload</ref> &amp;&amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>slot</declname>
+        </param>
+        <briefdescription>
+<para>store_at Stores a variable at a specified index in the data array. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The variable to store. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>slot</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index in data array where the variable has to be store to. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/include/payload.h" line="87" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/include/payload.h" bodystart="87" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_payload_1a61e7092a555d000dfd59c6942823c9f1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CANopen::Payload::operator std::string</definition>
+        <argsstring>() const</argsstring>
+        <name>operator std::string</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/include/payload.h" line="100" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/src/payload.cpp" bodystart="11" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_c_a_nopen_1_1_payload" kindref="compound">Payload</ref> of CANopen message: array of 1 to 8 bytes of data. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>CANopen::Payload</label>
+        <link refid="class_c_a_nopen_1_1_payload"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::vector&lt; uint8_t &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>CANopen::Payload</label>
+        <link refid="class_c_a_nopen_1_1_payload"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::vector&lt; uint8_t &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/include/payload.h" line="22" column="34" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/include/payload.h" bodystart="22" bodyend="101"/>
+    <listofallmembers>
+      <member refid="class_c_a_nopen_1_1_payload_1a61e7092a555d000dfd59c6942823c9f1" prot="public" virt="non-virtual"><scope>CANopen::Payload</scope><name>operator std::string</name></member>
+      <member refid="class_c_a_nopen_1_1_payload_1aeb41b12a7903cb5dee4d2f5ccd1d3f15" prot="public" virt="non-virtual"><scope>CANopen::Payload</scope><name>operator&lt;&lt;</name></member>
+      <member refid="class_c_a_nopen_1_1_payload_1ae8e5f1160cc9d6578a315a455d305469" prot="public" virt="non-virtual"><scope>CANopen::Payload</scope><name>operator&lt;&lt;</name></member>
+      <member refid="class_c_a_nopen_1_1_payload_1a646541a9ec787a3fcdbbcba153e8553c" prot="public" virt="non-virtual"><scope>CANopen::Payload</scope><name>operator=</name></member>
+      <member refid="class_c_a_nopen_1_1_payload_1a1b22524210c44e52820944fdd041484f" prot="public" virt="non-virtual"><scope>CANopen::Payload</scope><name>Payload</name></member>
+      <member refid="class_c_a_nopen_1_1_payload_1a1177f8bbace9e9779c7549ae7ace1681" prot="public" virt="non-virtual"><scope>CANopen::Payload</scope><name>Payload</name></member>
+      <member refid="class_c_a_nopen_1_1_payload_1ab0769e01554cc879840463e2a55eab0e" prot="public" virt="non-virtual"><scope>CANopen::Payload</scope><name>Payload</name></member>
+      <member refid="class_c_a_nopen_1_1_payload_1a769f01631bd710d3b37f07cc2753b889" prot="public" virt="non-virtual"><scope>CANopen::Payload</scope><name>Payload</name></member>
+      <member refid="class_c_a_nopen_1_1_payload_1a4d25baad973a414a3b160f366bb92153" prot="public" virt="non-virtual"><scope>CANopen::Payload</scope><name>store_at</name></member>
+      <member refid="class_c_a_nopen_1_1_payload_1aef05ef8cfc8b9ba4170891f3168a726b" prot="public" virt="non-virtual"><scope>CANopen::Payload</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

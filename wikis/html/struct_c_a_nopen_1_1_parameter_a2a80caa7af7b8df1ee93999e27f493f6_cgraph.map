@@ -1,0 +1,4 @@
+<map id="CANopen::Parameter::from_payload" name="CANopen::Parameter::from_payload">
+<area shape="rect" id="node1" title="from_payload Sets the value of the parameters with the data of a payload." alt="" coords="5,5,196,52"/>
+<area shape="rect" id="node2" href="$class_c_a_nopen_1_1_payload.html#aef05ef8cfc8b9ba4170891f3168a726b" title="value Returns the data casted as a variable of type T" alt="" coords="244,14,464,43"/>
+</map>

@@ -1,0 +1,473 @@
+\hypertarget{struct_c_a_nopen_1_1_parameter}{}\doxysection{C\+A\+Nopen\+::Parameter Struct Reference}
+\label{struct_c_a_nopen_1_1_parameter}\index{CANopen::Parameter@{CANopen::Parameter}}
+
+
+Object from the object dictionary of a remote C\+A\+Nopen device.  
+
+
+
+
+{\ttfamily \#include $<$parameter.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_c_a_nopen_1_1_parameter_a4870a26654749daa1ef95bdcb6d01d59}\label{struct_c_a_nopen_1_1_parameter_a4870a26654749daa1ef95bdcb6d01d59}} 
+enum \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a4870a26654749daa1ef95bdcb6d01d59}{P\+D\+O\+Function\+Code}} \+: uint32\+\_\+t \{ \newline
+{\bfseries P\+D\+O1\+Transmit} = Message\+::P\+D\+O1\+Transmit, 
+{\bfseries P\+D\+O1\+Receive} = Message\+::P\+D\+O1\+Receive, 
+{\bfseries P\+D\+O2\+Transmit} = Message\+::P\+D\+O2\+Transmit, 
+{\bfseries P\+D\+O2\+Receive} = Message\+::P\+D\+O2\+Receive, 
+\newline
+{\bfseries P\+D\+O3\+Transmit} = Message\+::P\+D\+O3\+Transmit, 
+{\bfseries P\+D\+O3\+Receive} = Message\+::P\+D\+O3\+Receive, 
+{\bfseries P\+D\+O4\+Transmit} = Message\+::P\+D\+O4\+Transmit, 
+{\bfseries P\+D\+O4\+Receive} = Message\+::P\+D\+O4\+Receive
+ \}
+\begin{DoxyCompactList}\small\item\em P\+DO Function code. \end{DoxyCompactList}\item 
+typedef void($\ast$ \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_aa7232c26e1cf4daa3e5719007872ddc5}{param\+\_\+cb\+\_\+t}}) (\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter}{Parameter}} $\ast$)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_ab53571d27af3fba545a250f87320aa64}{Parameter}} (std\+::string name\+\_\+, T val, uint16\+\_\+t index\+\_\+, uint8\+\_\+t subindex\+\_\+, \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_aa7232c26e1cf4daa3e5719007872ddc5}{param\+\_\+cb\+\_\+t}} cb=nullptr)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter}{Parameter}} Constructor. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_ac2e3642934ae7736c045e70b0e08e83c}{Parameter}} (std\+::string name\+\_\+, T val, uint32\+\_\+t index\+\_\+\+\_\+sub, \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_aa7232c26e1cf4daa3e5719007872ddc5}{param\+\_\+cb\+\_\+t}} cb=nullptr)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter}{Parameter}} Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a6f66686b516733d6506e8efdedd67862}{link\+\_\+to\+\_\+pdo}} (\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a4870a26654749daa1ef95bdcb6d01d59}{P\+D\+O\+Function\+Code}} fn, int8\+\_\+t slot)
+\begin{DoxyCompactList}\small\item\em link\+\_\+to\+\_\+pdo Links a paramet to a P\+DO message \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\bool \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a56877b06fefded5cf3353844604d59f7}{set}} (T val, bool force\+\_\+update=false, bool received\+\_\+data=false)
+\begin{DoxyCompactList}\small\item\em sets Set the value of a parameter. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a3ec2c4a4da29908a2e69de9187325a11}{operator=}} (int8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Sets the value of the parameter. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_ae2f287d5d0abc2b4693d3ec81b53cdd1}{operator=}} (int16\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Sets the value of the parameter. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_aea3dee9f4e137c2e5627d23836f18a6b}{operator=}} (int32\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Sets the value of the parameter. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_ad72cd626ccab044f0295b092d41668ca}{operator=}} (uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Sets the value of the parameter. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a77c306435be2eaf34c1ceb15edd559ff}{operator=}} (uint16\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Sets the value of the parameter. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a9984a99c5627b35e3bbe3992a2f6bad2}{operator=}} (uint32\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Sets the value of the parameter. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_acb8721ccbdd90aed8f347296dca9e7e1}{get}} ()
+\begin{DoxyCompactList}\small\item\em gets Returns the value (with a type T coherent with the data size) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_c_a_nopen_1_1_parameter_a83099406a35bd9501b421e514dffde73}\label{struct_c_a_nopen_1_1_parameter_a83099406a35bd9501b421e514dffde73}} 
+\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a83099406a35bd9501b421e514dffde73}{operator int8\+\_\+t}} ()
+\begin{DoxyCompactList}\small\item\em operator int8\+\_\+t Returns the value as an int8\+\_\+t \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_c_a_nopen_1_1_parameter_a32b09e89de697d8040ac634ca8bc9f87}\label{struct_c_a_nopen_1_1_parameter_a32b09e89de697d8040ac634ca8bc9f87}} 
+\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a32b09e89de697d8040ac634ca8bc9f87}{operator int16\+\_\+t}} ()
+\begin{DoxyCompactList}\small\item\em operator int16\+\_\+t Returns the value as an int16\+\_\+t \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_c_a_nopen_1_1_parameter_a4703b3922e5630ac1b8808d4980542bb}\label{struct_c_a_nopen_1_1_parameter_a4703b3922e5630ac1b8808d4980542bb}} 
+\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a4703b3922e5630ac1b8808d4980542bb}{operator int32\+\_\+t}} ()
+\begin{DoxyCompactList}\small\item\em operator int32\+\_\+t Returns the value as an int32\+\_\+t \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_c_a_nopen_1_1_parameter_aaf0db9d918b06945cb59154745866d50}\label{struct_c_a_nopen_1_1_parameter_aaf0db9d918b06945cb59154745866d50}} 
+\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_aaf0db9d918b06945cb59154745866d50}{operator uint8\+\_\+t}} ()
+\begin{DoxyCompactList}\small\item\em operator uint8\+\_\+t Returns the value as an uint8\+\_\+t \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_c_a_nopen_1_1_parameter_abcdc291fd736380c80e401a05c3fa7dd}\label{struct_c_a_nopen_1_1_parameter_abcdc291fd736380c80e401a05c3fa7dd}} 
+\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_abcdc291fd736380c80e401a05c3fa7dd}{operator uint16\+\_\+t}} ()
+\begin{DoxyCompactList}\small\item\em operator uint16\+\_\+t Returns the value as an uint16\+\_\+t \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_c_a_nopen_1_1_parameter_a5e098f5a04dbd1e1f07f728f0c98cad0}\label{struct_c_a_nopen_1_1_parameter_a5e098f5a04dbd1e1f07f728f0c98cad0}} 
+\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a5e098f5a04dbd1e1f07f728f0c98cad0}{operator uint32\+\_\+t}} ()
+\begin{DoxyCompactList}\small\item\em operator uint32\+\_\+t Returns the value as an uint32\+\_\+t \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a2a80caa7af7b8df1ee93999e27f493f6}{from\+\_\+payload}} (\mbox{\hyperlink{class_c_a_nopen_1_1_payload}{Payload}} \&p, int slot=0, bool received\+\_\+data=true)
+\begin{DoxyCompactList}\small\item\em from\+\_\+payload Sets the value of the parameters with the data of a payload. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a78c2b557f058aee3bc6997cbdd6d99a6}{has\+\_\+been\+\_\+sent}} ()
+\begin{DoxyCompactList}\small\item\em has\+\_\+been\+\_\+sent Returns the sending flag. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_c_a_nopen_1_1_parameter_a6423121211fcdcdfc086d36217872fce}\label{struct_c_a_nopen_1_1_parameter_a6423121211fcdcdfc086d36217872fce}} 
+void \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a6423121211fcdcdfc086d36217872fce}{callback}} ()
+\begin{DoxyCompactList}\small\item\em callback Execute the parameter callback (If not null) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_a_nopen_1_1_payload}{Payload}} \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a0b5d5729fe8b242797e0ab7b49d4519d}{payload}} (bool $\ast$should\+\_\+be\+\_\+sent=nullptr)
+\begin{DoxyCompactList}\small\item\em payload Returns a payload filled with the parameter data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_c_a_nopen_1_1_parameter_ab123478082ba8a41206baedb175cc19a}\label{struct_c_a_nopen_1_1_parameter_ab123478082ba8a41206baedb175cc19a}} 
+size\+\_\+t {\bfseries size} = 0
+\item 
+\mbox{\Hypertarget{struct_c_a_nopen_1_1_parameter_af45b5384a6e819637d8dbd4b2c96daf4}\label{struct_c_a_nopen_1_1_parameter_af45b5384a6e819637d8dbd4b2c96daf4}} 
+std\+::string {\bfseries name}
+\item 
+\mbox{\Hypertarget{struct_c_a_nopen_1_1_parameter_a69d1fe3372e1afb2103e83f741e74f9e}\label{struct_c_a_nopen_1_1_parameter_a69d1fe3372e1afb2103e83f741e74f9e}} 
+uint16\+\_\+t {\bfseries index} = 0
+\item 
+\mbox{\Hypertarget{struct_c_a_nopen_1_1_parameter_a376778b75d8e6659d81088e159381aa8}\label{struct_c_a_nopen_1_1_parameter_a376778b75d8e6659d81088e159381aa8}} 
+uint8\+\_\+t {\bfseries subindex} = 0
+\item 
+\mbox{\Hypertarget{struct_c_a_nopen_1_1_parameter_a69bfa86bc32a7f5141d14ee85db26773}\label{struct_c_a_nopen_1_1_parameter_a69bfa86bc32a7f5141d14ee85db26773}} 
+\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a4870a26654749daa1ef95bdcb6d01d59}{P\+D\+O\+Function\+Code}} {\bfseries pdo\+\_\+fn}
+\item 
+\mbox{\Hypertarget{struct_c_a_nopen_1_1_parameter_ade3d99a7b2be1e9c098e07f32bcec078}\label{struct_c_a_nopen_1_1_parameter_ade3d99a7b2be1e9c098e07f32bcec078}} 
+int8\+\_\+t {\bfseries pdo\+\_\+slot} = -\/1
+\item 
+\mbox{\Hypertarget{struct_c_a_nopen_1_1_parameter_a6827c18c4e58298d06111557759e4c3c}\label{struct_c_a_nopen_1_1_parameter_a6827c18c4e58298d06111557759e4c3c}} 
+std\+::atomic\+\_\+flag {\bfseries sdo\+\_\+flag}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Object from the object dictionary of a remote C\+A\+Nopen device. 
+
+Definition at line \mbox{\hyperlink{parameter_8h_source_l00024}{24}} of file \mbox{\hyperlink{parameter_8h_source}{parameter.\+h}}.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{struct_c_a_nopen_1_1_parameter_aa7232c26e1cf4daa3e5719007872ddc5}\label{struct_c_a_nopen_1_1_parameter_aa7232c26e1cf4daa3e5719007872ddc5}} 
+\index{CANopen::Parameter@{CANopen::Parameter}!param\_cb\_t@{param\_cb\_t}}
+\index{param\_cb\_t@{param\_cb\_t}!CANopen::Parameter@{CANopen::Parameter}}
+\doxysubsubsection{\texorpdfstring{param\_cb\_t}{param\_cb\_t}}
+{\footnotesize\ttfamily typedef void($\ast$ C\+A\+Nopen\+::\+Parameter\+::param\+\_\+cb\+\_\+t) (\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter}{Parameter}} $\ast$)}
+
+\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter}{Parameter}} Callback function type 
+
+Definition at line \mbox{\hyperlink{parameter_8h_source_l00029}{29}} of file \mbox{\hyperlink{parameter_8h_source}{parameter.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{struct_c_a_nopen_1_1_parameter_ab53571d27af3fba545a250f87320aa64}\label{struct_c_a_nopen_1_1_parameter_ab53571d27af3fba545a250f87320aa64}} 
+\index{CANopen::Parameter@{CANopen::Parameter}!Parameter@{Parameter}}
+\index{Parameter@{Parameter}!CANopen::Parameter@{CANopen::Parameter}}
+\doxysubsubsection{\texorpdfstring{Parameter()}{Parameter()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+C\+A\+Nopen\+::\+Parameter\+::\+Parameter (\begin{DoxyParamCaption}\item[{std\+::string}]{name\+\_\+,  }\item[{T}]{val,  }\item[{uint16\+\_\+t}]{index\+\_\+,  }\item[{uint8\+\_\+t}]{subindex\+\_\+,  }\item[{\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_aa7232c26e1cf4daa3e5719007872ddc5}{param\+\_\+cb\+\_\+t}}}]{cb = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter}{Parameter}} Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name\+\_\+} & Name of the parameter. \\
+\hline
+{\em val} & Value to store in the parameter (the type will be used to fixed the data size) \\
+\hline
+{\em index\+\_\+} & Index of the object in the object dictionary of the device. \\
+\hline
+{\em subindex\+\_\+} & Subindex of the object in the object dictionary of the device. \\
+\hline
+{\em cb} & \mbox{[}facultative\mbox{]} The address of a callback function that will be called each time the parameter is updated by the device. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{parameter_8h_source_l00056}{56}} of file \mbox{\hyperlink{parameter_8h_source}{parameter.\+h}}.
+
+\mbox{\Hypertarget{struct_c_a_nopen_1_1_parameter_ac2e3642934ae7736c045e70b0e08e83c}\label{struct_c_a_nopen_1_1_parameter_ac2e3642934ae7736c045e70b0e08e83c}} 
+\index{CANopen::Parameter@{CANopen::Parameter}!Parameter@{Parameter}}
+\index{Parameter@{Parameter}!CANopen::Parameter@{CANopen::Parameter}}
+\doxysubsubsection{\texorpdfstring{Parameter()}{Parameter()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+C\+A\+Nopen\+::\+Parameter\+::\+Parameter (\begin{DoxyParamCaption}\item[{std\+::string}]{name\+\_\+,  }\item[{T}]{val,  }\item[{uint32\+\_\+t}]{index\+\_\+\+\_\+sub,  }\item[{\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_aa7232c26e1cf4daa3e5719007872ddc5}{param\+\_\+cb\+\_\+t}}}]{cb = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter}{Parameter}} Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name\+\_\+} & Name of the parameter. \\
+\hline
+{\em val} & Value to store in the parameter (the type will be used to fixed the data size) \\
+\hline
+{\em index\+\_\+\+\_\+sub} & Index and subindex of the object in the object dictionary of the device. (in the format index\+\_\+\+\_\+sub) \\
+\hline
+{\em cb} & \mbox{[}facultative\mbox{]} The address of a callback function that will be called each time the parameter is updated by the device. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{parameter_8h_source_l00073}{73}} of file \mbox{\hyperlink{parameter_8h_source}{parameter.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_c_a_nopen_1_1_parameter_a2a80caa7af7b8df1ee93999e27f493f6}\label{struct_c_a_nopen_1_1_parameter_a2a80caa7af7b8df1ee93999e27f493f6}} 
+\index{CANopen::Parameter@{CANopen::Parameter}!from\_payload@{from\_payload}}
+\index{from\_payload@{from\_payload}!CANopen::Parameter@{CANopen::Parameter}}
+\doxysubsubsection{\texorpdfstring{from\_payload()}{from\_payload()}}
+{\footnotesize\ttfamily bool C\+A\+Nopen\+::\+Parameter\+::from\+\_\+payload (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_a_nopen_1_1_payload}{Payload}} \&}]{p,  }\item[{int}]{slot = {\ttfamily 0},  }\item[{bool}]{received\+\_\+data = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+from\+\_\+payload Sets the value of the parameters with the data of a payload. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & \mbox{\hyperlink{class_c_a_nopen_1_1_payload}{Payload}} to store in the parameter \\
+\hline
+{\em slot} & Index in the payload array where the parameter data is \\
+\hline
+{\em received\+\_\+data} & If set the data is processed as a receied data (no sending flag raised) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the parameter value has been changed. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{parameter_8cpp_source_l00014}{14}} of file \mbox{\hyperlink{parameter_8cpp_source}{parameter.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{payload_8h_source_l00048}{C\+A\+Nopen\+::\+Payload\+::value()}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_c_a_nopen_1_1_parameter_a2a80caa7af7b8df1ee93999e27f493f6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{struct_c_a_nopen_1_1_parameter_acb8721ccbdd90aed8f347296dca9e7e1}\label{struct_c_a_nopen_1_1_parameter_acb8721ccbdd90aed8f347296dca9e7e1}} 
+\index{CANopen::Parameter@{CANopen::Parameter}!get@{get}}
+\index{get@{get}!CANopen::Parameter@{CANopen::Parameter}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T C\+A\+Nopen\+::\+Parameter\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+gets Returns the value (with a type T coherent with the data size) 
+
+\begin{DoxyReturn}{Returns}
+The value of the parameter. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{parameter_8h_source_l00164}{164}} of file \mbox{\hyperlink{parameter_8h_source}{parameter.\+h}}.
+
+\mbox{\Hypertarget{struct_c_a_nopen_1_1_parameter_a78c2b557f058aee3bc6997cbdd6d99a6}\label{struct_c_a_nopen_1_1_parameter_a78c2b557f058aee3bc6997cbdd6d99a6}} 
+\index{CANopen::Parameter@{CANopen::Parameter}!has\_been\_sent@{has\_been\_sent}}
+\index{has\_been\_sent@{has\_been\_sent}!CANopen::Parameter@{CANopen::Parameter}}
+\doxysubsubsection{\texorpdfstring{has\_been\_sent()}{has\_been\_sent()}}
+{\footnotesize\ttfamily bool C\+A\+Nopen\+::\+Parameter\+::has\+\_\+been\+\_\+sent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+has\+\_\+been\+\_\+sent Returns the sending flag. 
+
+\begin{DoxyReturn}{Returns}
+The sending flag. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{parameter_8h_source_l00214}{214}} of file \mbox{\hyperlink{parameter_8h_source}{parameter.\+h}}.
+
+\mbox{\Hypertarget{struct_c_a_nopen_1_1_parameter_a6f66686b516733d6506e8efdedd67862}\label{struct_c_a_nopen_1_1_parameter_a6f66686b516733d6506e8efdedd67862}} 
+\index{CANopen::Parameter@{CANopen::Parameter}!link\_to\_pdo@{link\_to\_pdo}}
+\index{link\_to\_pdo@{link\_to\_pdo}!CANopen::Parameter@{CANopen::Parameter}}
+\doxysubsubsection{\texorpdfstring{link\_to\_pdo()}{link\_to\_pdo()}}
+{\footnotesize\ttfamily void C\+A\+Nopen\+::\+Parameter\+::link\+\_\+to\+\_\+pdo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a4870a26654749daa1ef95bdcb6d01d59}{P\+D\+O\+Function\+Code}}}]{fn,  }\item[{int8\+\_\+t}]{slot }\end{DoxyParamCaption})}
+
+
+
+link\+\_\+to\+\_\+pdo Links a paramet to a P\+DO message 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fn} & The function code of the P\+DO \\
+\hline
+{\em slot} & The index of the parameter data inside the P\+DO \mbox{\hyperlink{class_c_a_nopen_1_1_message}{Message}} \mbox{\hyperlink{class_c_a_nopen_1_1_payload}{Payload}} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{parameter_8cpp_source_l00004}{4}} of file \mbox{\hyperlink{parameter_8cpp_source}{parameter.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_c_a_nopen__driver_8cpp_source_l00050}{C\+A\+Nopen\+::\+Driver\+::map\+\_\+\+P\+D\+O()}}.
+
+\mbox{\Hypertarget{struct_c_a_nopen_1_1_parameter_ae2f287d5d0abc2b4693d3ec81b53cdd1}\label{struct_c_a_nopen_1_1_parameter_ae2f287d5d0abc2b4693d3ec81b53cdd1}} 
+\index{CANopen::Parameter@{CANopen::Parameter}!operator=@{operator=}}
+\index{operator=@{operator=}!CANopen::Parameter@{CANopen::Parameter}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily bool C\+A\+Nopen\+::\+Parameter\+::operator= (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the value of the parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & New int16\+\_\+t value to set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the parameter value has been changed. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{parameter_8h_source_l00128}{128}} of file \mbox{\hyperlink{parameter_8h_source}{parameter.\+h}}.
+
+\mbox{\Hypertarget{struct_c_a_nopen_1_1_parameter_aea3dee9f4e137c2e5627d23836f18a6b}\label{struct_c_a_nopen_1_1_parameter_aea3dee9f4e137c2e5627d23836f18a6b}} 
+\index{CANopen::Parameter@{CANopen::Parameter}!operator=@{operator=}}
+\index{operator=@{operator=}!CANopen::Parameter@{CANopen::Parameter}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily bool C\+A\+Nopen\+::\+Parameter\+::operator= (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the value of the parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & New int32\+\_\+t value to set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the parameter value has been changed. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{parameter_8h_source_l00135}{135}} of file \mbox{\hyperlink{parameter_8h_source}{parameter.\+h}}.
+
+\mbox{\Hypertarget{struct_c_a_nopen_1_1_parameter_a3ec2c4a4da29908a2e69de9187325a11}\label{struct_c_a_nopen_1_1_parameter_a3ec2c4a4da29908a2e69de9187325a11}} 
+\index{CANopen::Parameter@{CANopen::Parameter}!operator=@{operator=}}
+\index{operator=@{operator=}!CANopen::Parameter@{CANopen::Parameter}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily bool C\+A\+Nopen\+::\+Parameter\+::operator= (\begin{DoxyParamCaption}\item[{int8\+\_\+t}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the value of the parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & New int8\+\_\+t value to set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the parameter value has been changed. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{parameter_8h_source_l00121}{121}} of file \mbox{\hyperlink{parameter_8h_source}{parameter.\+h}}.
+
+\mbox{\Hypertarget{struct_c_a_nopen_1_1_parameter_a77c306435be2eaf34c1ceb15edd559ff}\label{struct_c_a_nopen_1_1_parameter_a77c306435be2eaf34c1ceb15edd559ff}} 
+\index{CANopen::Parameter@{CANopen::Parameter}!operator=@{operator=}}
+\index{operator=@{operator=}!CANopen::Parameter@{CANopen::Parameter}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily bool C\+A\+Nopen\+::\+Parameter\+::operator= (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the value of the parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & New uint16\+\_\+t value to set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the parameter value has been changed. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{parameter_8h_source_l00149}{149}} of file \mbox{\hyperlink{parameter_8h_source}{parameter.\+h}}.
+
+\mbox{\Hypertarget{struct_c_a_nopen_1_1_parameter_a9984a99c5627b35e3bbe3992a2f6bad2}\label{struct_c_a_nopen_1_1_parameter_a9984a99c5627b35e3bbe3992a2f6bad2}} 
+\index{CANopen::Parameter@{CANopen::Parameter}!operator=@{operator=}}
+\index{operator=@{operator=}!CANopen::Parameter@{CANopen::Parameter}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily bool C\+A\+Nopen\+::\+Parameter\+::operator= (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the value of the parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & New uint32\+\_\+t value to set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the parameter value has been changed. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{parameter_8h_source_l00156}{156}} of file \mbox{\hyperlink{parameter_8h_source}{parameter.\+h}}.
+
+\mbox{\Hypertarget{struct_c_a_nopen_1_1_parameter_ad72cd626ccab044f0295b092d41668ca}\label{struct_c_a_nopen_1_1_parameter_ad72cd626ccab044f0295b092d41668ca}} 
+\index{CANopen::Parameter@{CANopen::Parameter}!operator=@{operator=}}
+\index{operator=@{operator=}!CANopen::Parameter@{CANopen::Parameter}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily bool C\+A\+Nopen\+::\+Parameter\+::operator= (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the value of the parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & New uint8\+\_\+t value to set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the parameter value has been changed. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{parameter_8h_source_l00142}{142}} of file \mbox{\hyperlink{parameter_8h_source}{parameter.\+h}}.
+
+\mbox{\Hypertarget{struct_c_a_nopen_1_1_parameter_a0b5d5729fe8b242797e0ab7b49d4519d}\label{struct_c_a_nopen_1_1_parameter_a0b5d5729fe8b242797e0ab7b49d4519d}} 
+\index{CANopen::Parameter@{CANopen::Parameter}!payload@{payload}}
+\index{payload@{payload}!CANopen::Parameter@{CANopen::Parameter}}
+\doxysubsubsection{\texorpdfstring{payload()}{payload()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_a_nopen_1_1_payload}{C\+A\+Nopen\+::\+Payload}} C\+A\+Nopen\+::\+Parameter\+::payload (\begin{DoxyParamCaption}\item[{bool $\ast$}]{should\+\_\+be\+\_\+sent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+payload Returns a payload filled with the parameter data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em should\+\_\+be\+\_\+sent} & If a boolean pointer is passed the sending flag is stored in the booled and then cleared. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A payload filled with the parameter data. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{parameter_8cpp_source_l00029}{29}} of file \mbox{\hyperlink{parameter_8cpp_source}{parameter.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_c_a_nopen__driver_8cpp_source_l00096}{C\+A\+Nopen\+::\+Driver\+::send()}}.
+
+\mbox{\Hypertarget{struct_c_a_nopen_1_1_parameter_a56877b06fefded5cf3353844604d59f7}\label{struct_c_a_nopen_1_1_parameter_a56877b06fefded5cf3353844604d59f7}} 
+\index{CANopen::Parameter@{CANopen::Parameter}!set@{set}}
+\index{set@{set}!CANopen::Parameter@{CANopen::Parameter}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool C\+A\+Nopen\+::\+Parameter\+::set (\begin{DoxyParamCaption}\item[{T}]{val,  }\item[{bool}]{force\+\_\+update = {\ttfamily false},  }\item[{bool}]{received\+\_\+data = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+sets Set the value of a parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & The value to set. (the type has to be coherent with the parameter data size) \\
+\hline
+{\em force\+\_\+update} & If set the value of the \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter}{Parameter}} is set even idf the previous value has not been sent yet to the remote device. \\
+\hline
+{\em received\+\_\+data} & Has to be set to True if the data being set come from the remote device (so the sending flag will not be raised) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the parameter value has been changed. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{parameter_8h_source_l00096}{96}} of file \mbox{\hyperlink{parameter_8h_source}{parameter.\+h}}.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{parameter_8h}{parameter.\+h}}\item 
+parameter.\+cpp\end{DoxyCompactItemize}

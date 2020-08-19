@@ -1,0 +1,227 @@
+\hypertarget{model_8cpp_source}{}\doxysection{model.\+cpp}
+\label{model_8cpp_source}\index{model.cpp@{model.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include <cmath>}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{00004 }
+\DoxyCodeLine{00005 \textcolor{preprocessor}{\#include "model.hpp"}}
+\DoxyCodeLine{00006 \textcolor{preprocessor}{\#include <cstdlib>}}
+\DoxyCodeLine{00007 }
+\DoxyCodeLine{00008 stp::Model::Model(\textcolor{keywordtype}{double} deltas[4], \textcolor{keywordtype}{double} a, \textcolor{keywordtype}{double} l, \textcolor{keywordtype}{int} verbose\_level): m\_verbose\_level(verbose\_level)}
+\DoxyCodeLine{00009 \{}
+\DoxyCodeLine{00010 }
+\DoxyCodeLine{00011     \textcolor{comment}{/*}}
+\DoxyCodeLine{00012 \textcolor{comment}{}}
+\DoxyCodeLine{00013 \textcolor{comment}{           \_\_\_\_\_\_\_}}
+\DoxyCodeLine{00014 \textcolor{comment}{        \_.-\/'  \_. -\/' '-\/.\_}}
+\DoxyCodeLine{00015 \textcolor{comment}{      .' \_.-\/'     / '-\/. '.}}
+\DoxyCodeLine{00016 \textcolor{comment}{     -\/'-\/'   d2         '.\_\(\backslash\)}}
+\DoxyCodeLine{00017 \textcolor{comment}{    /.\_         /     \_.-\/' |}}
+\DoxyCodeLine{00018 \textcolor{comment}{   |    '-\/.\_    -\/ \_.-\/'     |}}
+\DoxyCodeLine{00019 \textcolor{comment}{   |d1      ' >+<'         |}}
+\DoxyCodeLine{00020 \textcolor{comment}{   |    \_.-\/'    -\/ '-\/.\_     |}}
+\DoxyCodeLine{00021 \textcolor{comment}{   '.-\/'         \(\backslash\)     '-\/.\_ |}}
+\DoxyCodeLine{00022 \textcolor{comment}{    '                 .'  /}}
+\DoxyCodeLine{00023 \textcolor{comment}{     '.          \(\backslash\) .' \_.'}}
+\DoxyCodeLine{00024 \textcolor{comment}{       '-\/.\_\_\_\_\_\_\_\_-\/.-\/'}}
+\DoxyCodeLine{00025 \textcolor{comment}{}}
+\DoxyCodeLine{00026 \textcolor{comment}{}}
+\DoxyCodeLine{00027 \textcolor{comment}{     */}}
+\DoxyCodeLine{00028 }
+\DoxyCodeLine{00029     \textcolor{comment}{//set the length of the arms and legs}}
+\DoxyCodeLine{00030     m\_a = a; \textcolor{comment}{//arm of the motor}}
+\DoxyCodeLine{00031     m\_l = l; \textcolor{comment}{//leg link to the arm and the platform}}
+\DoxyCodeLine{00032     m\_a2 = a * a;}
+\DoxyCodeLine{00033     m\_l2 = l * l;}
+\DoxyCodeLine{00034 }
+\DoxyCodeLine{00035     \textcolor{comment}{//compute the radius of the base and the platform from the delta lengths.}}
+\DoxyCodeLine{00036     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < 2; i++)}
+\DoxyCodeLine{00037         m\_radius[i] = deltas[2 * i + 1] /}
+\DoxyCodeLine{00038                       (2 * sin(atan(deltas[2 * i + 1] /}
+\DoxyCodeLine{00039                                     (2 * deltas[2 * i] + deltas[2 * i + 1]))));}
+\DoxyCodeLine{00040     m\_radius[0]=0.413;}
+\DoxyCodeLine{00041     m\_radius[1]=0.244;}
+\DoxyCodeLine{00042 }
+\DoxyCodeLine{00043     \textcolor{comment}{//Set the constant coordinate of B and P1 (P in B1).}}
+\DoxyCodeLine{00044     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < NB\_LEGS; i++)}
+\DoxyCodeLine{00045     \{}
+\DoxyCodeLine{00046         m\_parity[i] = (i -\/ i / 2 * 2); \textcolor{comment}{//0-\/1-\/0-\/1-\/0-\/1}}
+\DoxyCodeLine{00047         \textcolor{comment}{//angle of the arms on Oxy.}}
+\DoxyCodeLine{00048         m\_beta[i] = i / 2 * M\_PI * 2 / 3 -\/ (2 * m\_parity[i] -\/ 1) * M\_PI / 2;}
+\DoxyCodeLine{00049         \textcolor{comment}{//angle of the motor on the base circle.}}
+\DoxyCodeLine{00050         m\_gamma[0][i] =}
+\DoxyCodeLine{00051             m\_beta[i] + (2 * m\_parity[i] -\/ 1) * M\_PI / 2 +}
+\DoxyCodeLine{00052             (2 * m\_parity[i] -\/ 1) * asin(deltas[0] / 2 / m\_radius[0]);}
+\DoxyCodeLine{00053         m\_gamma[1][i] =}
+\DoxyCodeLine{00054             m\_beta[i] + (2 * m\_parity[i] -\/ 1) * M\_PI / 2 +}
+\DoxyCodeLine{00055             (2 * m\_parity[i] -\/ 1) * asin(deltas[2] / 2 / m\_radius[1]);}
+\DoxyCodeLine{00056 }
+\DoxyCodeLine{00057         m\_B[i][0] = m\_radius[0] * cos(m\_gamma[0][i]);}
+\DoxyCodeLine{00058         m\_B[i][1] = m\_radius[0] * sin(m\_gamma[0][i]);}
+\DoxyCodeLine{00059         m\_B[i][2] = 0;}
+\DoxyCodeLine{00060         }
+\DoxyCodeLine{00061 }
+\DoxyCodeLine{00062         m\_P1[i][0] = m\_radius[1] * cos(m\_gamma[1][i]);}
+\DoxyCodeLine{00063         m\_P1[i][1] = m\_radius[1] * sin(m\_gamma[1][i]);}
+\DoxyCodeLine{00064         m\_P1[i][2] = 0;}
+\DoxyCodeLine{00065         }
+\DoxyCodeLine{00066         }
+\DoxyCodeLine{00067 }
+\DoxyCodeLine{00068         m\_alpha\_spd[i] = 0;}
+\DoxyCodeLine{00069     \}}
+\DoxyCodeLine{00070     init\_pos();}
+\DoxyCodeLine{00071 \}}
+\DoxyCodeLine{00072 }
+\DoxyCodeLine{00073 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00074 stp::Model::init\_pos()}
+\DoxyCodeLine{00075 \{}
+\DoxyCodeLine{00076     \textcolor{comment}{//compute h0}}
+\DoxyCodeLine{00077     \textcolor{keywordtype}{double} bp1\_0 = m\_B[0][0] -\/ m\_P1[0][0];}
+\DoxyCodeLine{00078     \textcolor{keywordtype}{double} h0 = sqrt(m\_l2 + m\_a2 -\/ 2*(bp1\_0 * bp1\_0))-\/0.05;}
+\DoxyCodeLine{00079     m\_alpha[0]=-\/1;}
+\DoxyCodeLine{00080     \textcolor{keywordflow}{while}(m\_alpha[0]==-\/1)}
+\DoxyCodeLine{00081         \{}
+\DoxyCodeLine{00082     \textcolor{comment}{//set up the initial position.}}
+\DoxyCodeLine{00083     set\_T(0, 0, h0);}
+\DoxyCodeLine{00084     set\_theta(0, 0, 0);}
+\DoxyCodeLine{00085 }
+\DoxyCodeLine{00086     set\_T\_spd(0, 0, 0);}
+\DoxyCodeLine{00087     set\_theta\_spd(0, 0, 0);}
+\DoxyCodeLine{00088 }
+\DoxyCodeLine{00089     new\_pos(m\_T, m\_theta);}
+\DoxyCodeLine{00090     h0*=0.99;}
+\DoxyCodeLine{00091     }
+\DoxyCodeLine{00092     \}}
+\DoxyCodeLine{00093 }
+\DoxyCodeLine{00094     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < 6; i++) \{ \_alphaI[i] = m\_alpha[i]; \}}
+\DoxyCodeLine{00095 \}}
+\DoxyCodeLine{00096 }
+\DoxyCodeLine{00097 }
+\DoxyCodeLine{00098 }
+\DoxyCodeLine{00099 \textcolor{keywordtype}{double} *}
+\DoxyCodeLine{00100 stp::Model::new\_pos(\textcolor{keywordtype}{double} T[3], \textcolor{keywordtype}{double} theta[3])}
+\DoxyCodeLine{00101 \{}
+\DoxyCodeLine{00102 }
+\DoxyCodeLine{00104     \textcolor{keywordtype}{double} T\_tmp[3];}
+\DoxyCodeLine{00105     \textcolor{keywordtype}{double} theta\_tmp[3];}
+\DoxyCodeLine{00106     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < 3; j++)}
+\DoxyCodeLine{00107     \{}
+\DoxyCodeLine{00108         T\_tmp[j] = m\_T[j];}
+\DoxyCodeLine{00109         theta\_tmp[j] = m\_theta[j];}
+\DoxyCodeLine{00110         m\_T[j] = T[j];}
+\DoxyCodeLine{00111     \}}
+\DoxyCodeLine{00112     compute\_R(theta);}
+\DoxyCodeLine{00113 }
+\DoxyCodeLine{00115     \textcolor{keywordtype}{double} tmp;}
+\DoxyCodeLine{00116     \textcolor{keywordtype}{double} L;}
+\DoxyCodeLine{00117     \textcolor{keywordtype}{double} M;}
+\DoxyCodeLine{00118     \textcolor{keywordtype}{double} N;}
+\DoxyCodeLine{00119     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < NB\_LEGS; i++)}
+\DoxyCodeLine{00120     \{}
+\DoxyCodeLine{00121         \_d2[i] = 0;}
+\DoxyCodeLine{00122         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < 3; j++)}
+\DoxyCodeLine{00123         \{}
+\DoxyCodeLine{00124             m\_P[i][j] = m\_T[j];}
+\DoxyCodeLine{00125             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} k = 0; k < 3; k++) m\_P[i][j] += m\_R[j][k] * m\_P1[i][k];}
+\DoxyCodeLine{00126             tmp = m\_P[i][j] -\/ m\_B[i][j];}
+\DoxyCodeLine{00127             \_d2[i] += tmp * tmp;}
+\DoxyCodeLine{00128         \}}
+\DoxyCodeLine{00129 }
+\DoxyCodeLine{00130         L = (m\_a2 -\/ m\_l2 + \_d2[i]) / (2 * m\_a);}
+\DoxyCodeLine{00131         M = cos(m\_beta[i]) * (m\_P[i][0] -\/ m\_B[i][0]) +}
+\DoxyCodeLine{00132             sin(m\_beta[i]) * (m\_P[i][1] -\/ m\_B[i][1]);}
+\DoxyCodeLine{00133         N = (m\_P[i][2] -\/ m\_B[i][2]);}
+\DoxyCodeLine{00134 }
+\DoxyCodeLine{00135         \textcolor{keywordtype}{double} D = M * M + N * N;}
+\DoxyCodeLine{00136         \textcolor{keywordflow}{if}(D < 0 || L / sqrt(D) >= 1 || L / sqrt(D) <= -\/1)}
+\DoxyCodeLine{00137         \{}
+\DoxyCodeLine{00138             std::cout << \textcolor{stringliteral}{"Limit reached..."} << std::endl;}
+\DoxyCodeLine{00139             new\_pos(T\_tmp, theta\_tmp);}
+\DoxyCodeLine{00140             \textcolor{keywordflow}{return} m\_alpha;}
+\DoxyCodeLine{00141         \}}
+\DoxyCodeLine{00142         m\_alpha[i] = asin(L / sqrt(D)) -\/ atan(M / N);}
+\DoxyCodeLine{00143     \}}
+\DoxyCodeLine{00144     \textcolor{keywordflow}{return} m\_alpha;}
+\DoxyCodeLine{00145 \};}
+\DoxyCodeLine{00146 }
+\DoxyCodeLine{00147 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00148 stp::Model::compute\_R(\textcolor{keywordtype}{double} theta[3])}
+\DoxyCodeLine{00149 \{}
+\DoxyCodeLine{00150 }
+\DoxyCodeLine{00151     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < 3; j++)}
+\DoxyCodeLine{00152     \{}
+\DoxyCodeLine{00153         m\_theta[j] = theta[j];}
+\DoxyCodeLine{00154         m\_trig[j * 2] = cos(m\_theta[j]);}
+\DoxyCodeLine{00155         m\_trig[j * 2 + 1] = sin(m\_theta[j]);}
+\DoxyCodeLine{00156     \}}
+\DoxyCodeLine{00157     m\_R[0][0] = m\_trig[0] * m\_trig[2];}
+\DoxyCodeLine{00158     m\_R[0][1] = -\/m\_trig[1] * m\_trig[4] + m\_trig[0] * m\_trig[3] * m\_trig[5];}
+\DoxyCodeLine{00159     m\_R[0][2] = m\_trig[1] * m\_trig[5] + m\_trig[0] * m\_trig[3] * m\_trig[4];}
+\DoxyCodeLine{00160     m\_R[1][0] = m\_trig[1] * m\_trig[2];}
+\DoxyCodeLine{00161     m\_R[1][1] = m\_trig[0] * m\_trig[4] + m\_trig[1] * m\_trig[3] * m\_trig[5];}
+\DoxyCodeLine{00162     m\_R[1][2] = -\/m\_trig[0] * m\_trig[5] + m\_trig[1] * m\_trig[3] * m\_trig[4];}
+\DoxyCodeLine{00163     m\_R[2][0] = -\/m\_trig[3];}
+\DoxyCodeLine{00164     m\_R[2][1] = m\_trig[2] * m\_trig[5];}
+\DoxyCodeLine{00165     m\_R[2][2] = m\_trig[2] * m\_trig[4];}
+\DoxyCodeLine{00166 \}}
+\DoxyCodeLine{00167 }
+\DoxyCodeLine{00168 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00169 stp::Model::set\_T(\textcolor{keywordtype}{double} t0, \textcolor{keywordtype}{double} t1, \textcolor{keywordtype}{double} t2)}
+\DoxyCodeLine{00170 \{}
+\DoxyCodeLine{00171     m\_T[0] = t0;}
+\DoxyCodeLine{00172     m\_T[1] = t1;}
+\DoxyCodeLine{00173     m\_T[2] = t2;}
+\DoxyCodeLine{00174 \}}
+\DoxyCodeLine{00175 }
+\DoxyCodeLine{00176 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00177 stp::Model::set\_T\_spd(\textcolor{keywordtype}{double} t0, \textcolor{keywordtype}{double} t1, \textcolor{keywordtype}{double} t2)}
+\DoxyCodeLine{00178 \{}
+\DoxyCodeLine{00179     m\_T\_spd[0] = t0;}
+\DoxyCodeLine{00180     m\_T\_spd[1] = t1;}
+\DoxyCodeLine{00181     m\_T\_spd[2] = t2;}
+\DoxyCodeLine{00182 \}}
+\DoxyCodeLine{00183 }
+\DoxyCodeLine{00184 \textcolor{keywordtype}{double}}
+\DoxyCodeLine{00185 stp::Model::get\_T(\textcolor{keywordtype}{int} i)}
+\DoxyCodeLine{00186 \{}
+\DoxyCodeLine{00187     \textcolor{keywordflow}{return} m\_T[i];}
+\DoxyCodeLine{00188 \};}
+\DoxyCodeLine{00189 }
+\DoxyCodeLine{00190 \textcolor{keywordtype}{double}}
+\DoxyCodeLine{00191 stp::Model::get\_theta(\textcolor{keywordtype}{int} i)}
+\DoxyCodeLine{00192 \{}
+\DoxyCodeLine{00193     \textcolor{keywordflow}{return} m\_theta[i];}
+\DoxyCodeLine{00194 \};}
+\DoxyCodeLine{00195 }
+\DoxyCodeLine{00196 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00197 stp::Model::set\_theta(\textcolor{keywordtype}{double} t0, \textcolor{keywordtype}{double} t1, \textcolor{keywordtype}{double} t2)}
+\DoxyCodeLine{00198 \{}
+\DoxyCodeLine{00199     m\_theta[0] = t0;}
+\DoxyCodeLine{00200     m\_theta[1] = t1;}
+\DoxyCodeLine{00201     m\_theta[2] = t2;}
+\DoxyCodeLine{00202 \}}
+\DoxyCodeLine{00203 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00204 stp::Model::set\_theta\_spd(\textcolor{keywordtype}{double} t0, \textcolor{keywordtype}{double} t1, \textcolor{keywordtype}{double} t2)}
+\DoxyCodeLine{00205 \{}
+\DoxyCodeLine{00206     m\_theta\_spd[0] = t0;}
+\DoxyCodeLine{00207     m\_theta\_spd[1] = t1;}
+\DoxyCodeLine{00208     m\_theta\_spd[2] = t2;}
+\DoxyCodeLine{00209 \}}
+\DoxyCodeLine{00210 }
+\DoxyCodeLine{00211 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00212 stp::Model::print\_pos()}
+\DoxyCodeLine{00213 \{}
+\DoxyCodeLine{00214     std::cout << \textcolor{stringliteral}{"Position: T["};}
+\DoxyCodeLine{00215     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < 3; i++)}
+\DoxyCodeLine{00216     \{ std::cout << (char)(\textcolor{charliteral}{'x'} + i) << \textcolor{stringliteral}{": "} << get\_T(i) << \textcolor{stringliteral}{"\(\backslash\)t"}; \}}
+\DoxyCodeLine{00217     std::cout << \textcolor{stringliteral}{"\(\backslash\)b]   Theta["};}
+\DoxyCodeLine{00218     \textcolor{keywordtype}{char} letter[] = \{\textcolor{charliteral}{'r'}, \textcolor{charliteral}{'p'}, \textcolor{charliteral}{'y'}\};}
+\DoxyCodeLine{00219     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < 3; i++)}
+\DoxyCodeLine{00220     \{ std::cout << letter[i] << \textcolor{stringliteral}{": "} << get\_theta(i) << \textcolor{stringliteral}{"\(\backslash\)t"}; \}}
+\DoxyCodeLine{00221 }
+\DoxyCodeLine{00222     std::cout << \textcolor{stringliteral}{"\(\backslash\)b]\(\backslash\)n"};}
+\DoxyCodeLine{00223 \}}
+
+\end{DoxyCode}

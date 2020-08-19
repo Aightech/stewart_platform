@@ -1,0 +1,451 @@
+\hypertarget{_c_a_nopen__driver_8cpp_source}{}\doxysection{C\+A\+Nopen\+\_\+driver.\+cpp}
+\label{_c_a_nopen__driver_8cpp_source}\index{CANopen\_driver.cpp@{CANopen\_driver.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{_c_a_nopen__driver_8h}{CANopen\_driver.h}}"}}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003  }
+\DoxyCodeLine{\Hypertarget{_c_a_nopen__driver_8cpp_source_l00004}\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a0272315f94cb7bff729abeb8b8b052df}{00004}} \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a0272315f94cb7bff729abeb8b8b052df}{CANopen::Driver::Driver}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *ifname, uint16\_t can\_id, \textcolor{keywordtype}{int} verbose\_lvl)}
+\DoxyCodeLine{00005     : m\_ifname(ifname), m\_verbose\_level(verbose\_lvl), m\_available(true), m\_socket(ifname, verbose\_lvl), m\_node\_id(can\_id) \{}
+\DoxyCodeLine{00006 }
+\DoxyCodeLine{00007 }
+\DoxyCodeLine{00008     m\_parameters[\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7ad4d184bb0cd942f6bdd5ae4435ba1469}{\_DCOMstatus}}] = \textcolor{keyword}{new} \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter}{Parameter}}(\textcolor{stringliteral}{"\_DCOMstatus"}, (uint16\_t)0, \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7ad4d184bb0cd942f6bdd5ae4435ba1469}{\_DCOMstatus}}, (verbose\_lvl>0)?\&print\_status:\textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00009     m\_parameters[\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a41294d34718a36687c2183a45ef06258}{DCOMcontrol}}] = \textcolor{keyword}{new} \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter}{Parameter}}(\textcolor{stringliteral}{"DCOMcontrol"}, (uint16\_t)0, \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a41294d34718a36687c2183a45ef06258}{DCOMcontrol}});}
+\DoxyCodeLine{00010     m\_parameters[\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a838ff7614cdd25d687a7b44f6fcd5112}{DCOMopmode}}] = \textcolor{keyword}{new} \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter}{Parameter}}(\textcolor{stringliteral}{"DCOMopmode"}, (uint8\_t)0, \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a838ff7614cdd25d687a7b44f6fcd5112}{DCOMopmode}});}
+\DoxyCodeLine{00011     m\_parameters[\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a27c60a5c7499691fa7a8927c3d4e4376}{\_DCOMopmd\_act}}] = \textcolor{keyword}{new} \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter}{Parameter}}(\textcolor{stringliteral}{"\_DCOMopmd\_act"}, (uint8\_t)0, \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a27c60a5c7499691fa7a8927c3d4e4376}{\_DCOMopmd\_act}});}
+\DoxyCodeLine{00012     }
+\DoxyCodeLine{00013     m\_parameters[\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a9388c18e3ec79d918b872aab89a47387}{PPp\_target}}] = \textcolor{keyword}{new} \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter}{Parameter}}(\textcolor{stringliteral}{"PPp\_target"}, (int32\_t)0x365b539, \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a9388c18e3ec79d918b872aab89a47387}{PPp\_target}});}
+\DoxyCodeLine{00014     m\_parameters[\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a97069ba1c67700d01ba84c05f2a31adb}{PPv\_target}}] = \textcolor{keyword}{new} \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter}{Parameter}}(\textcolor{stringliteral}{"PPv\_target"}, (int32\_t)0, \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a97069ba1c67700d01ba84c05f2a31adb}{PPv\_target}});}
+\DoxyCodeLine{00015     m\_parameters[\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7ae34a009131bb4956dbb9a5c9e76b1c5a}{RAMP\_v\_acc}}] = \textcolor{keyword}{new} \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter}{Parameter}}(\textcolor{stringliteral}{"RAMP\_v\_acc"}, (int32\_t)0, \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7ae34a009131bb4956dbb9a5c9e76b1c5a}{RAMP\_v\_acc}});}
+\DoxyCodeLine{00016     m\_parameters[\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a6f355b7bef6158931cc8cf5e4b1f9c83}{RAMP\_v\_dec}}] = \textcolor{keyword}{new} \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter}{Parameter}}(\textcolor{stringliteral}{"RAMP\_v\_dec"}, (int32\_t)0, \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a6f355b7bef6158931cc8cf5e4b1f9c83}{RAMP\_v\_dec}});}
+\DoxyCodeLine{00017     }
+\DoxyCodeLine{00018     m\_parameters[\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a9a00b3971b7ee9985f91dd48ea7e1c73}{PVv\_target}}] = \textcolor{keyword}{new} \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter}{Parameter}}(\textcolor{stringliteral}{"PVv\_target"}, (int32\_t)0, \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a9a00b3971b7ee9985f91dd48ea7e1c73}{PVv\_target}});}
+\DoxyCodeLine{00019     m\_parameters[\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a68422e03c559dee45c67d4743784c193}{PTtq\_target}}] = \textcolor{keyword}{new} \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter}{Parameter}}(\textcolor{stringliteral}{"PTtq\_target"}, (int16\_t)0, \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a68422e03c559dee45c67d4743784c193}{PTtq\_target}});}
+\DoxyCodeLine{00020 }
+\DoxyCodeLine{00021     m\_parameters[\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7af361a27c780c9ab4fe29763c80456258}{\_p\_act}}] = \textcolor{keyword}{new} \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter}{Parameter}}(\textcolor{stringliteral}{"\_p\_act"}, (int32\_t)0, \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7af361a27c780c9ab4fe29763c80456258}{\_p\_act}});}
+\DoxyCodeLine{00022     m\_parameters[\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a5790a9abb07781ba9d63ed64d7e0d7fc}{\_v\_act}}] = \textcolor{keyword}{new} \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter}{Parameter}}(\textcolor{stringliteral}{"\_v\_act"}, (int32\_t)0, \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7af361a27c780c9ab4fe29763c80456258}{\_p\_act}});}
+\DoxyCodeLine{00023     m\_parameters[\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a0ab750decb5de6f5b2d380776dec09cc}{\_tq\_act}}] = \textcolor{keyword}{new} \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter}{Parameter}}(\textcolor{stringliteral}{"\_tq\_act"}, (int32\_t)0, \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7af361a27c780c9ab4fe29763c80456258}{\_p\_act}});}
+\DoxyCodeLine{00024     }
+\DoxyCodeLine{00025     m\_parameters[\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a503823e06d7db891f898f6976aa7a514}{HMmethod}}] = \textcolor{keyword}{new} \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter}{Parameter}}(\textcolor{stringliteral}{"HMmethod"}, (int8\_t)0, \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a503823e06d7db891f898f6976aa7a514}{HMmethod}});}
+\DoxyCodeLine{00026     m\_parameters[\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7ad34e94f677df757d01d787a403a66a2a}{HMv}}] = \textcolor{keyword}{new} \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter}{Parameter}}(\textcolor{stringliteral}{"HMv"}, (int32\_t)100, \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7ad34e94f677df757d01d787a403a66a2a}{HMv}});}
+\DoxyCodeLine{00027     m\_parameters[\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a796f4544102d3244ab451b229afbfb58}{HMv\_out}}] = \textcolor{keyword}{new} \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter}{Parameter}}(\textcolor{stringliteral}{"HMv\_out"}, (uint32\_t)10, \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a796f4544102d3244ab451b229afbfb58}{HMv\_out}});}
+\DoxyCodeLine{00028     }
+\DoxyCodeLine{00029     }
+\DoxyCodeLine{00030     }
+\DoxyCodeLine{00031     t\_socket\_flag.test\_and\_set();}
+\DoxyCodeLine{00032     m\_t\_socket\_thread = \textcolor{keyword}{new} std::thread(\&Driver::T\_socket, \textcolor{keyword}{this});}
+\DoxyCodeLine{00033     \textcolor{keywordflow}{while}(t\_socket\_flag.test\_and\_set());}
+\DoxyCodeLine{00034     }
+\DoxyCodeLine{00035 }
+\DoxyCodeLine{00036     \textcolor{comment}{// Map the different PDO with default mapping}}
+\DoxyCodeLine{00037     \mbox{\hyperlink{class_c_a_nopen_1_1_driver_abd3e2b466b31e906ae7bcb390277f3dd}{map\_PDO}}(PDO1Transmit, m\_parameters[\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7ad4d184bb0cd942f6bdd5ae4435ba1469}{\_DCOMstatus}}], 0);}
+\DoxyCodeLine{00038     \mbox{\hyperlink{class_c_a_nopen_1_1_driver_abd3e2b466b31e906ae7bcb390277f3dd}{map\_PDO}}(PDO1Receive, m\_parameters[\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a41294d34718a36687c2183a45ef06258}{DCOMcontrol}}], 0);}
+\DoxyCodeLine{00039     }
+\DoxyCodeLine{00040 }
+\DoxyCodeLine{00041     rpdo\_socket\_flag.test\_and\_set();}
+\DoxyCodeLine{00042     m\_rpdo\_socket\_thread = \textcolor{keyword}{new} std::thread(\&Driver::RPDO\_socket, \textcolor{keyword}{this});}
+\DoxyCodeLine{00043     \textcolor{keywordflow}{while}(rpdo\_socket\_flag.test\_and\_set());}
+\DoxyCodeLine{00044     }
+\DoxyCodeLine{00045     }
+\DoxyCodeLine{00046     m\_socket.\mbox{\hyperlink{class_c_a_nopen_1_1_socket_aa147801723e58f287d06b6df28837c44}{send}}(\mbox{\hyperlink{class_c_a_nopen_1_1_n_m_t_message}{CANopen::NMTMessage}}(CANopen::NMTMessage::GoToOperational,0));}
+\DoxyCodeLine{00047 \}}
+\DoxyCodeLine{00048 }
+\DoxyCodeLine{00049 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{_c_a_nopen__driver_8cpp_source_l00050}\mbox{\hyperlink{class_c_a_nopen_1_1_driver_abd3e2b466b31e906ae7bcb390277f3dd}{00050}} \mbox{\hyperlink{class_c_a_nopen_1_1_driver_abd3e2b466b31e906ae7bcb390277f3dd}{CANopen::Driver::map\_PDO}}(PDOFunctionCode fn, \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter}{Parameter}} *param, \textcolor{keywordtype}{int} slot) \{}
+\DoxyCodeLine{00051     \textcolor{keywordflow}{if}(std::find(m\_PDO\_map[fn].begin(), m\_PDO\_map[fn].end(), param) == m\_PDO\_map[fn].end()) \{}
+\DoxyCodeLine{00052         param-\/>\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a6f66686b516733d6506e8efdedd67862}{link\_to\_pdo}}((\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a4870a26654749daa1ef95bdcb6d01d59}{Parameter::PDOFunctionCode}})fn, slot);}
+\DoxyCodeLine{00053         activate\_PDO(fn, \textcolor{keyword}{true});}
+\DoxyCodeLine{00054         m\_PDO\_map[fn].push\_back(param);}
+\DoxyCodeLine{00055     \}}
+\DoxyCodeLine{00056 \}}
+\DoxyCodeLine{00057 }
+\DoxyCodeLine{00058 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{_c_a_nopen__driver_8cpp_source_l00059}\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a6cfa4f397be17e661e93bfb8f74ddb90}{00059}} \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a6cfa4f397be17e661e93bfb8f74ddb90}{CANopen::Driver::activate\_PDO}}(PDOFunctionCode fn, \textcolor{keywordtype}{bool} set) \{}
+\DoxyCodeLine{00060     uint16\_t index = 0;}
+\DoxyCodeLine{00061     std::string reg\_name;}
+\DoxyCodeLine{00062 }
+\DoxyCodeLine{00063     \textcolor{keywordflow}{if}((fn \& 0x80) == 0x00) \textcolor{comment}{//R\_PDO}}
+\DoxyCodeLine{00064     \{}
+\DoxyCodeLine{00065         index = (0x1400 + (fn >> 8) -\/ 2);}
+\DoxyCodeLine{00066         reg\_name = \textcolor{stringliteral}{"R\_PDO"} + std::to\_string((fn>>8)-\/1);}
+\DoxyCodeLine{00067     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00068         index = (0x1800 + (fn >> 8) -\/ 1);}
+\DoxyCodeLine{00069         reg\_name = \textcolor{stringliteral}{"T\_PDO"} + std::to\_string(fn>>8);}
+\DoxyCodeLine{00070     \}}
+\DoxyCodeLine{00071     reg\_name+=\textcolor{stringliteral}{"\_setting"};}
+\DoxyCodeLine{00072     }
+\DoxyCodeLine{00073     \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7}{Register}} reg = (\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7}{Register}})( (index<<16) + 0x0001);}
+\DoxyCodeLine{00074     int32\_t val = (set ? 0x04000000 : 0x80000000) + fn + m\_node\_id;}
+\DoxyCodeLine{00075     \textcolor{keywordflow}{if}(m\_parameters.count(reg)==0)}
+\DoxyCodeLine{00076     \{}
+\DoxyCodeLine{00077         m\_parameters[reg] = \textcolor{keyword}{new} \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter}{Parameter}}(reg\_name, val, index, 1);}
+\DoxyCodeLine{00078         this-\/>send(m\_parameters[reg]);}
+\DoxyCodeLine{00079         \textcolor{keywordflow}{while}(m\_parameters[reg]-\/>sdo\_flag.test\_and\_set());}
+\DoxyCodeLine{00080         }
+\DoxyCodeLine{00081         IF\_VERBOSE(1, std::cout <<  reg\_name << \textcolor{stringliteral}{" "} << ((set)?\textcolor{stringliteral}{"activated"}:\textcolor{stringliteral}{"desactivated"}) <<  \textcolor{stringliteral}{"\(\backslash\)n"}, m\_verbose\_level)}
+\DoxyCodeLine{00082         }
+\DoxyCodeLine{00083     \}}
+\DoxyCodeLine{00084     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}((int32\_t)*m\_parameters[reg] != val)}
+\DoxyCodeLine{00085     \{}
+\DoxyCodeLine{00086         *m\_parameters[reg] = val;}
+\DoxyCodeLine{00087         this-\/>send(m\_parameters[reg]);}
+\DoxyCodeLine{00088         \textcolor{keywordflow}{while}(m\_parameters[reg]-\/>sdo\_flag.test\_and\_set());}
+\DoxyCodeLine{00089         }
+\DoxyCodeLine{00090         IF\_VERBOSE(1, std::cout <<  reg\_name << \textcolor{stringliteral}{" "} << ((set)?\textcolor{stringliteral}{"activated"}:\textcolor{stringliteral}{"desactivated"}) <<  \textcolor{stringliteral}{"\(\backslash\)n"}, m\_verbose\_level)}
+\DoxyCodeLine{00091     \}}
+\DoxyCodeLine{00092 }
+\DoxyCodeLine{00093 \}}
+\DoxyCodeLine{00094 }
+\DoxyCodeLine{00095 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{_c_a_nopen__driver_8cpp_source_l00096}\mbox{\hyperlink{class_c_a_nopen_1_1_driver_ad22705c4ee8cfee391113d359e790e67}{00096}} \mbox{\hyperlink{class_c_a_nopen_1_1_driver_ad22705c4ee8cfee391113d359e790e67}{CANopen::Driver::send}}(\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter}{Parameter}} *param) \{}
+\DoxyCodeLine{00097     \textcolor{keywordflow}{if}(m\_available)}
+\DoxyCodeLine{00098     \{}
+\DoxyCodeLine{00099         param-\/>sdo\_flag.test\_and\_set();}
+\DoxyCodeLine{00100         \textcolor{keywordtype}{bool} b;}
+\DoxyCodeLine{00101         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{00102         m\_socket.send(\mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_outbound_write}{CANopen::SDOOutboundWrite}}(m\_node\_id, param-\/>index, param-\/>subindex, param-\/>\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a0b5d5729fe8b242797e0ab7b49d4519d}{payload}}(\&b)));}
+\DoxyCodeLine{00103     \}}
+\DoxyCodeLine{00104     \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} std::runtime\_error\& e) \{}
+\DoxyCodeLine{00105         std::cerr << e.what();}
+\DoxyCodeLine{00106     \}}
+\DoxyCodeLine{00107         }
+\DoxyCodeLine{00108     \}}
+\DoxyCodeLine{00109 \}}
+\DoxyCodeLine{00110 }
+\DoxyCodeLine{00111 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{_c_a_nopen__driver_8cpp_source_l00112}\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a96123f2965334f4fda9c01ae7b0f8f46}{00112}} \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a96123f2965334f4fda9c01ae7b0f8f46}{CANopen::Driver::update}}(\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter}{Parameter}} *param) \{}
+\DoxyCodeLine{00113     \textcolor{keywordflow}{if}(m\_available)}
+\DoxyCodeLine{00114     \{}
+\DoxyCodeLine{00115         param-\/>sdo\_flag.test\_and\_set();}
+\DoxyCodeLine{00116         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{00117         m\_socket.send(\mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_outbound_read}{CANopen::SDOOutboundRead}}(m\_node\_id, param-\/>index, param-\/>subindex));}
+\DoxyCodeLine{00118     \}}
+\DoxyCodeLine{00119     \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} std::runtime\_error\& e) \{}
+\DoxyCodeLine{00120         std::cerr << e.what();}
+\DoxyCodeLine{00121     \}}
+\DoxyCodeLine{00122     \}}
+\DoxyCodeLine{00123 \}}
+\DoxyCodeLine{00124 }
+\DoxyCodeLine{00125 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00126 CANopen::Driver::T\_socket() \{}
+\DoxyCodeLine{00127     \textcolor{comment}{//create a socket dedicated to the incomming pdo (T\_PDO)}}
+\DoxyCodeLine{00128     \mbox{\hyperlink{class_c_a_nopen_1_1_socket}{Socket}} socket(m\_ifname, \textcolor{keyword}{false});}
+\DoxyCodeLine{00129     \textcolor{comment}{//set the filter to only receive T\_PDO messages}}
+\DoxyCodeLine{00130     socket.add\_filter(\{\{m\_node\_id,0x07f\}\}); \textcolor{comment}{//all message with the right node id}}
+\DoxyCodeLine{00131 }
+\DoxyCodeLine{00132     std::shared\_ptr<Message> msg;}
+\DoxyCodeLine{00133     Payload p;}
+\DoxyCodeLine{00134     \mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468}{Message::FunctionCode}} fn;}
+\DoxyCodeLine{00135     }
+\DoxyCodeLine{00136     IF\_VERBOSE(1, std::cout << \textcolor{stringliteral}{"Receiving socket thread ready.\(\backslash\)n"};, m\_verbose\_level)}
+\DoxyCodeLine{00137     }
+\DoxyCodeLine{00138     }
+\DoxyCodeLine{00139     t\_socket\_flag.clear();}
+\DoxyCodeLine{00140     \textcolor{keywordflow}{while}(1) \{}
+\DoxyCodeLine{00141         \textcolor{comment}{//try to receive pdo}}
+\DoxyCodeLine{00142         msg = socket.receive();}
+\DoxyCodeLine{00143         \textcolor{keywordflow}{if}(msg.get() != \textcolor{keyword}{nullptr}) \{ \textcolor{comment}{//if pdo received}}
+\DoxyCodeLine{00144             fn = msg-\/>function\_code();}
+\DoxyCodeLine{00145             p = msg-\/>payload();}
+\DoxyCodeLine{00146             \textcolor{keywordflow}{switch}(fn) \{}
+\DoxyCodeLine{00147             \textcolor{keywordflow}{case} \mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468acf827d4fddf4af5908ff22d480ec3f9f}{CANopen::Message::Emergency}}:}
+\DoxyCodeLine{00148             \{}
+\DoxyCodeLine{00149                 std::shared\_ptr<CANopen::EMCYMessage> emcy\_msg = std::dynamic\_pointer\_cast<CANopen::EMCYMessage>(msg);}
+\DoxyCodeLine{00150                 std::cout <<  \textcolor{stringliteral}{"Error \{"} << (int)emcy\_msg-\/>node\_id() << \textcolor{stringliteral}{"\} code: "}<< std::hex << (int)emcy\_msg-\/>code() << \textcolor{stringliteral}{"  reg:"} << (int)emcy\_msg-\/>reg() << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{00151             \}}
+\DoxyCodeLine{00152                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00153             \textcolor{keywordflow}{case} \mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468a4cce8d38cc9a387ac2553c97082934c7}{CANopen::Message::TimeStamp}}:}
+\DoxyCodeLine{00154                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00155             \textcolor{keywordflow}{case} \mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468aea8753e3c4fecde547db28a4a01f4fea}{CANopen::Message::PDO1Transmit}}:}
+\DoxyCodeLine{00156             \textcolor{keywordflow}{case} \mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468a644cdb60cf2ec10f6f509c6dac09c7e7}{CANopen::Message::PDO2Transmit}}:}
+\DoxyCodeLine{00157             \textcolor{keywordflow}{case} \mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468ac15c2cbe07eac4f1fdc102927deadcdc}{CANopen::Message::PDO3Transmit}}:}
+\DoxyCodeLine{00158             \textcolor{keywordflow}{case} \mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468a46d53ca55e462afcab565303b212656c}{CANopen::Message::PDO4Transmit}}:}
+\DoxyCodeLine{00159                 \textcolor{keywordflow}{if}(m\_PDO\_map.count((PDOFunctionCode)fn)) \{}
+\DoxyCodeLine{00160                     }
+\DoxyCodeLine{00161                     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} param : m\_PDO\_map[(PDOFunctionCode)fn])}
+\DoxyCodeLine{00162                     \{}
+\DoxyCodeLine{00163                         \textcolor{keywordflow}{if}(param-\/>from\_payload(p, param-\/>pdo\_slot))}
+\DoxyCodeLine{00164                             param-\/>callback();}
+\DoxyCodeLine{00165                         \textcolor{comment}{//if(param == m\_parameters[DCOMcontrol]) }}
+\DoxyCodeLine{00166                             \textcolor{comment}{//std::cout << param-\/>name << ": "<< std::hex << (uint16\_t)*param << " " << p << "\(\backslash\)n";}}
+\DoxyCodeLine{00167                     \}}
+\DoxyCodeLine{00168                 \}}
+\DoxyCodeLine{00169                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00170             \textcolor{keywordflow}{case} \mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468ab54b9a53105e0549e5fc07ef1ee6b91a}{CANopen::Message::SDOTransmit}}:}
+\DoxyCodeLine{00171                 \textcolor{keywordflow}{if}(m\_parameters.count((Register)msg-\/>id()))}
+\DoxyCodeLine{00172                 \{}
+\DoxyCodeLine{00173                     std::shared\_ptr<CANopen::SDOMessage> sdo\_msg = std::dynamic\_pointer\_cast<CANopen::SDOMessage>(msg);}
+\DoxyCodeLine{00174                     \textcolor{keywordflow}{if}(!sdo\_msg-\/>is\_confirmation() \&\& !sdo\_msg-\/>is\_error())}
+\DoxyCodeLine{00175                         m\_parameters[(Register)msg-\/>id()]-\/>from\_payload(p);}
+\DoxyCodeLine{00176                     m\_parameters[(Register)msg-\/>id()]-\/>sdo\_flag.clear();}
+\DoxyCodeLine{00177                 \}}
+\DoxyCodeLine{00178                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00179             \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00180                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00181             \}}
+\DoxyCodeLine{00182         \}}
+\DoxyCodeLine{00183     \}}
+\DoxyCodeLine{00184 \}}
+\DoxyCodeLine{00185 }
+\DoxyCodeLine{00186 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00187 CANopen::Driver::RPDO\_socket() \{}
+\DoxyCodeLine{00188     \textcolor{comment}{//create a socket dedicated to the incomming pdo (T\_PDO)}}
+\DoxyCodeLine{00189     Socket socket(m\_ifname, \textcolor{keyword}{false});}
+\DoxyCodeLine{00190     PDOFunctionCode RPDO\_fn\_list[] = \{PDO1Receive, PDO2Receive, PDO3Receive, PDO4Receive\};}
+\DoxyCodeLine{00191 }
+\DoxyCodeLine{00192     }
+\DoxyCodeLine{00193     IF\_VERBOSE(1, std::cout << \textcolor{stringliteral}{"Sending PDO socket thread ready.\(\backslash\)n"};, m\_verbose\_level)}
+\DoxyCodeLine{00194     }
+\DoxyCodeLine{00195     rpdo\_socket\_flag.clear();}
+\DoxyCodeLine{00196     \textcolor{keywordflow}{while}(1)}
+\DoxyCodeLine{00197     \{}
+\DoxyCodeLine{00198         \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} fn : RPDO\_fn\_list) \{}
+\DoxyCodeLine{00199             \textcolor{keywordflow}{if}(m\_PDO\_map.count(fn)) \{}
+\DoxyCodeLine{00200                 \textcolor{keywordtype}{bool} should\_update=\textcolor{keyword}{false}, should\_update\_PDO1=\textcolor{keyword}{false};}
+\DoxyCodeLine{00201                 Payload payload;}
+\DoxyCodeLine{00202 }
+\DoxyCodeLine{00203                 \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} p : m\_PDO\_map[fn])\textcolor{comment}{// for each parameter mapped on the pdo, get the payload and store it at the right positon + get if the data has to be updated.}}
+\DoxyCodeLine{00204                 \{}
+\DoxyCodeLine{00205                     \textcolor{comment}{//std::cout << p-\/>name << "\(\backslash\)n";}}
+\DoxyCodeLine{00206                     payload.store\_at(p-\/>payload(((p != m\_parameters[DCOMcontrol])?\&should\_update:\&should\_update\_PDO1)), p-\/>pdo\_slot);}
+\DoxyCodeLine{00207                 \}}
+\DoxyCodeLine{00208                     }
+\DoxyCodeLine{00209                 \textcolor{keywordflow}{if}(should\_update) }
+\DoxyCodeLine{00210                 \{}
+\DoxyCodeLine{00211                     \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{00212                         socket.send(PDOMessage((PDOMessage::PDOFunctionCode) fn, m\_node\_id, payload));}
+\DoxyCodeLine{00213                     \}}
+\DoxyCodeLine{00214                     \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} std::runtime\_error\& e) \{}
+\DoxyCodeLine{00215                         IF\_VERBOSE(1, std::cerr << e.what();, m\_verbose\_level)}
+\DoxyCodeLine{00216                     \}}
+\DoxyCodeLine{00217                     }
+\DoxyCodeLine{00218                 \}}
+\DoxyCodeLine{00219                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(should\_update\_PDO1) }
+\DoxyCodeLine{00220                 \{}
+\DoxyCodeLine{00221                     payload.resize(m\_parameters[DCOMcontrol]-\/>size);}
+\DoxyCodeLine{00222                     \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{00223                         socket.send(PDOMessage((PDOMessage::PDOFunctionCode) PDO1Receive, m\_node\_id, payload));}
+\DoxyCodeLine{00224                     \}}
+\DoxyCodeLine{00225                     \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} std::runtime\_error\& e) \{}
+\DoxyCodeLine{00226                         IF\_VERBOSE(1, std::cerr << e.what();, m\_verbose\_level)}
+\DoxyCodeLine{00227                     \}}
+\DoxyCodeLine{00228                     }
+\DoxyCodeLine{00229                 \}}
+\DoxyCodeLine{00230                 }
+\DoxyCodeLine{00231             \}}
+\DoxyCodeLine{00232         \}}
+\DoxyCodeLine{00233     \}}
+\DoxyCodeLine{00234 \}}
+\DoxyCodeLine{00235 }
+\DoxyCodeLine{00236 }
+\DoxyCodeLine{00237 }
+\DoxyCodeLine{00238 \textcolor{keywordtype}{bool}}
+\DoxyCodeLine{\Hypertarget{_c_a_nopen__driver_8cpp_source_l00239}\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a20967f674c7bfa52407350933248a300}{00239}} \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a20967f674c7bfa52407350933248a300}{CANopen::Driver::set\_position}}(int32\_t target, \textcolor{keywordtype}{bool} absolute)}
+\DoxyCodeLine{00240 \{}
+\DoxyCodeLine{00241     \textcolor{keywordflow}{switch}(get\_mode(\textcolor{keyword}{false}))}
+\DoxyCodeLine{00242     \{}
+\DoxyCodeLine{00243         \textcolor{keywordflow}{case} ProfilePosition:   }
+\DoxyCodeLine{00244             \textcolor{keywordflow}{if}(m\_parameters[PPp\_target]-\/>set(target+(absolute?m\_offset\_pos:0),\textcolor{keyword}{true}))}
+\DoxyCodeLine{00245             \{}
+\DoxyCodeLine{00246                 set\_control((\mbox{\hyperlink{class_c_a_nopen_1_1_driver_af4031601d8ef94250316995e8339903a}{Control}})(EnableOperation));}
+\DoxyCodeLine{00247                 \textcolor{keywordflow}{if}(absolute)}
+\DoxyCodeLine{00248                     set\_control((\mbox{\hyperlink{class_c_a_nopen_1_1_driver_af4031601d8ef94250316995e8339903a}{Control}})(EnableOperation|0x0030));}
+\DoxyCodeLine{00249                 \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00250                     set\_control((\mbox{\hyperlink{class_c_a_nopen_1_1_driver_af4031601d8ef94250316995e8339903a}{Control}})(EnableOperation|0x0070));}
+\DoxyCodeLine{00251                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00252             \}}
+\DoxyCodeLine{00253             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00254         \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00255             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00256     \}}
+\DoxyCodeLine{00257 \};}
+\DoxyCodeLine{00258 }
+\DoxyCodeLine{00259 \textcolor{keywordtype}{bool}}
+\DoxyCodeLine{\Hypertarget{_c_a_nopen__driver_8cpp_source_l00260}\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a7a249fdda103c6c8d11e840d66514137}{00260}} \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a7a249fdda103c6c8d11e840d66514137}{CANopen::Driver::set\_velocity}}(int32\_t target)}
+\DoxyCodeLine{00261 \{}
+\DoxyCodeLine{00262     \textcolor{keywordflow}{switch}(get\_mode())}
+\DoxyCodeLine{00263     \{}
+\DoxyCodeLine{00264         \textcolor{keywordflow}{case} ProfilePosition:}
+\DoxyCodeLine{00265             \textcolor{comment}{//this-\/>set(PPv\_target,target,true,true);}}
+\DoxyCodeLine{00266             \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00267         \textcolor{keywordflow}{case} ProfileVelocity:}
+\DoxyCodeLine{00268             \textcolor{keywordflow}{return} m\_parameters[PVv\_target]-\/>set(target,\textcolor{keyword}{true});}
+\DoxyCodeLine{00269         \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00270             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00271     \}}
+\DoxyCodeLine{00272 \};}
+\DoxyCodeLine{00273 }
+\DoxyCodeLine{00274 \textcolor{keywordtype}{bool}}
+\DoxyCodeLine{\Hypertarget{_c_a_nopen__driver_8cpp_source_l00275}\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a4b97e1e92f96eb579a85a4d33ef0592a}{00275}} \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a4b97e1e92f96eb579a85a4d33ef0592a}{CANopen::Driver::set\_torque}}(int16\_t target)}
+\DoxyCodeLine{00276 \{}
+\DoxyCodeLine{00277     \textcolor{keywordflow}{switch}(get\_mode())}
+\DoxyCodeLine{00278     \{}
+\DoxyCodeLine{00279         \textcolor{keywordflow}{case} ProfileTorque:}
+\DoxyCodeLine{00280             this-\/>set(PTtq\_target,target,\textcolor{keyword}{true},\textcolor{keyword}{true});}
+\DoxyCodeLine{00281             \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00282         \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00283             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00284     \}}
+\DoxyCodeLine{00285 \};}
+\DoxyCodeLine{00286 }
+\DoxyCodeLine{00287 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00288 CANopen::print\_status(\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter}{CANopen::Parameter}}* param) \{}
+\DoxyCodeLine{00289     }
+\DoxyCodeLine{00290     g\_verbose\_mutex.lock();}
+\DoxyCodeLine{00291     int16\_t s = param-\/>\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_acb8721ccbdd90aed8f347296dca9e7e1}{get}}<int16\_t>();}
+\DoxyCodeLine{00292         std::cout << \textcolor{stringliteral}{"> Driver Status [0x"} << std::hex << s << \textcolor{stringliteral}{"] State: [ "};}
+\DoxyCodeLine{00293         \textcolor{keywordflow}{switch}(s \& Driver::State::mask) \{}
+\DoxyCodeLine{00294         \textcolor{keywordflow}{case} \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a16a451fc3593c0f174911e969a7be02da94d00ab583965d1d22f48674f7aefa7a}{Driver::NotReadyToSwitchtON}}\& Driver::State::mask:}
+\DoxyCodeLine{00295             std::cout << \textcolor{stringliteral}{"Not Ready to Switch ON ]\(\backslash\)n"};}
+\DoxyCodeLine{00296             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00297         \textcolor{keywordflow}{case} \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a16a451fc3593c0f174911e969a7be02da52c43c11131a9d753319d5e065d031c3}{Driver::SwitchONDisabled}}\& Driver::State::mask:}
+\DoxyCodeLine{00298             std::cout << \textcolor{stringliteral}{"Switch ON Disabled ]\(\backslash\)n"};}
+\DoxyCodeLine{00299             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00300         \textcolor{keywordflow}{case} \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a16a451fc3593c0f174911e969a7be02dafa947edce547a30b314910e6931235a4}{Driver::ReadyToSwitchON}}\& Driver::State::mask:}
+\DoxyCodeLine{00301             std::cout << \textcolor{stringliteral}{"Ready To Switch ON ]\(\backslash\)n"};}
+\DoxyCodeLine{00302             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00303         \textcolor{keywordflow}{case} \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a16a451fc3593c0f174911e969a7be02dac2e13098b6500cdcde217d2a9cc9ebb6}{Driver::SwitchedON}}\& Driver::State::mask:}
+\DoxyCodeLine{00304             std::cout << \textcolor{stringliteral}{"Switch ON ]\(\backslash\)n"};}
+\DoxyCodeLine{00305             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00306         \textcolor{keywordflow}{case} \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a16a451fc3593c0f174911e969a7be02da1692c431e1cf20446dbf23a53913af0c}{Driver::OperationEnabled}}\& Driver::State::mask:}
+\DoxyCodeLine{00307             std::cout << \textcolor{stringliteral}{"Operation Enabled ]\(\backslash\)n"};}
+\DoxyCodeLine{00308             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00309         \textcolor{keywordflow}{case} \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a16a451fc3593c0f174911e969a7be02da9028b5332c8352a087606c2cc79e9517}{Driver::Fault}}\& Driver::State::mask:}
+\DoxyCodeLine{00310             std::cout << \textcolor{stringliteral}{"Fault ]\(\backslash\)n"};}
+\DoxyCodeLine{00311             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00312         \textcolor{keywordflow}{case} \mbox{\hyperlink{class_c_a_nopen_1_1_driver_af4031601d8ef94250316995e8339903aa6e8fc43d0b5f1ef14ac7ba475572c9b6}{Driver::QuickStop}}\& Driver::State::mask:}
+\DoxyCodeLine{00313             std::cout << \textcolor{stringliteral}{"Quick Stop ]\(\backslash\)n"};}
+\DoxyCodeLine{00314             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00315         \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00316             std::cout << \textcolor{stringliteral}{"Unknown ]\(\backslash\)n"};}
+\DoxyCodeLine{00317             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00318         \}}
+\DoxyCodeLine{00319         std::string bits\_names[16] = \{\textcolor{stringliteral}{"Ready To SwitchOn"},}
+\DoxyCodeLine{00320                                     \textcolor{stringliteral}{"Switched On"},}
+\DoxyCodeLine{00321                                     \textcolor{stringliteral}{"Operation Enabled"},}
+\DoxyCodeLine{00322                                     \textcolor{stringliteral}{"Fault"},}
+\DoxyCodeLine{00323                                     \textcolor{stringliteral}{"Voltage Enabled"},}
+\DoxyCodeLine{00324                                     \textcolor{stringliteral}{"QuickStop Disabled"},}
+\DoxyCodeLine{00325                                     \textcolor{stringliteral}{"Switch ON Disabled"},}
+\DoxyCodeLine{00326                                     \textcolor{stringliteral}{"Error0"},}
+\DoxyCodeLine{00327                                     \textcolor{stringliteral}{"Halt Request"},}
+\DoxyCodeLine{00328                                     \textcolor{stringliteral}{"Remote"},}
+\DoxyCodeLine{00329                                     \textcolor{stringliteral}{"Target Reached"},}
+\DoxyCodeLine{00330                                     \textcolor{stringliteral}{"Internal Limit Reached"},}
+\DoxyCodeLine{00331                                     \textcolor{stringliteral}{"Operation Mode"},}
+\DoxyCodeLine{00332                                     \textcolor{stringliteral}{"Blocking Error"},}
+\DoxyCodeLine{00333                                     \textcolor{stringliteral}{"Operation Mode Not Started"},}
+\DoxyCodeLine{00334                                     \textcolor{stringliteral}{"Valid Zero Point"}\};}
+\DoxyCodeLine{00335         }
+\DoxyCodeLine{00336         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i =0; i<16; i++)}
+\DoxyCodeLine{00337         \{}
+\DoxyCodeLine{00338             std::cout << (((s\&(0x0001<<i))==0)?\textcolor{stringliteral}{"0"}:\textcolor{stringliteral}{"1"}) << \textcolor{stringliteral}{" ["} << i << \textcolor{stringliteral}{"] "} << bits\_names[i] << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{00339         \}}
+\DoxyCodeLine{00340         std::cout << \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)n"};}
+\DoxyCodeLine{00341     g\_verbose\_mutex.unlock();}
+\DoxyCodeLine{00342 }
+\DoxyCodeLine{00343 \}}
+\DoxyCodeLine{00344 }
+\DoxyCodeLine{00345 std::string}
+\DoxyCodeLine{\Hypertarget{_c_a_nopen__driver_8cpp_source_l00346}\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a05fb7b074555086b45918179c64494a6}{00346}} \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a05fb7b074555086b45918179c64494a6}{CANopen::Driver::ctrl\_to\_str}}(\mbox{\hyperlink{class_c_a_nopen_1_1_driver_af4031601d8ef94250316995e8339903a}{Control}} control) \{}
+\DoxyCodeLine{00347     \textcolor{keywordflow}{switch}(control)}
+\DoxyCodeLine{00348     \{}
+\DoxyCodeLine{00349         \textcolor{keywordflow}{case} Shutdown: \textcolor{keywordflow}{return} \textcolor{stringliteral}{"Shutdown"};         }
+\DoxyCodeLine{00350         \textcolor{keywordflow}{case} SwitchON: \textcolor{keywordflow}{return} \textcolor{stringliteral}{"SwitchON"};        }
+\DoxyCodeLine{00351         \textcolor{keywordflow}{case} DisableVoltage: \textcolor{keywordflow}{return} \textcolor{stringliteral}{"DisableVoltage"};  }
+\DoxyCodeLine{00352         \textcolor{keywordflow}{case} QuickStop: \textcolor{keywordflow}{return} \textcolor{stringliteral}{"QuickStop"};      }
+\DoxyCodeLine{00353         \textcolor{keywordflow}{case} EnableOperation: \textcolor{keywordflow}{return} \textcolor{stringliteral}{"EnableOperation"};  }
+\DoxyCodeLine{00354         \textcolor{keywordflow}{case} FaultResest: \textcolor{keywordflow}{return} \textcolor{stringliteral}{"FaultResest"};}
+\DoxyCodeLine{00355     \}}
+\DoxyCodeLine{00356     \textcolor{keywordflow}{return} \textcolor{stringliteral}{"unknown control"};}
+\DoxyCodeLine{00357 \}}
+\DoxyCodeLine{00358 }
+\DoxyCodeLine{00359 \textcolor{keywordtype}{void} }
+\DoxyCodeLine{\Hypertarget{_c_a_nopen__driver_8cpp_source_l00360}\mbox{\hyperlink{class_c_a_nopen_1_1_driver_ad8ac07202c14ad344004146e126ecbf4}{00360}} \mbox{\hyperlink{class_c_a_nopen_1_1_driver_ad8ac07202c14ad344004146e126ecbf4}{CANopen::Driver::start}}()}
+\DoxyCodeLine{00361 \{}
+\DoxyCodeLine{00362     this-\/>set\_control(DisableVoltage);}
+\DoxyCodeLine{00363     this-\/>set\_control(Shutdown);}
+\DoxyCodeLine{00364     this-\/>set\_control(EnableOperation);}
+\DoxyCodeLine{00365     this-\/>wait\_state(OperationEnabled);}
+\DoxyCodeLine{00366 \}}
+\DoxyCodeLine{00367 }
+\DoxyCodeLine{00368 \textcolor{keywordtype}{void} }
+\DoxyCodeLine{\Hypertarget{_c_a_nopen__driver_8cpp_source_l00369}\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a05da9b5bdd80efed46b0629721d0664b}{00369}} \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a05da9b5bdd80efed46b0629721d0664b}{CANopen::Driver::pause}}()}
+\DoxyCodeLine{00370 \{}
+\DoxyCodeLine{00371     this-\/>set\_control(DisableOperation);}
+\DoxyCodeLine{00372     this-\/>wait\_state(SwitchedON);}
+\DoxyCodeLine{00373 \}}
+\DoxyCodeLine{00374 }
+\DoxyCodeLine{00375 \textcolor{keywordtype}{void} }
+\DoxyCodeLine{\Hypertarget{_c_a_nopen__driver_8cpp_source_l00376}\mbox{\hyperlink{class_c_a_nopen_1_1_driver_abd7d88699d02c007d5f23e608d8f0a0a}{00376}} \mbox{\hyperlink{class_c_a_nopen_1_1_driver_abd7d88699d02c007d5f23e608d8f0a0a}{CANopen::Driver::stop}}()}
+\DoxyCodeLine{00377 \{}
+\DoxyCodeLine{00378     this-\/>set\_control(Shutdown);}
+\DoxyCodeLine{00379     this-\/>wait\_state(ReadyToSwitchON);}
+\DoxyCodeLine{00380 \}}
+\DoxyCodeLine{00381     }
+\DoxyCodeLine{00382 \textcolor{keywordtype}{void} }
+\DoxyCodeLine{\Hypertarget{_c_a_nopen__driver_8cpp_source_l00383}\mbox{\hyperlink{class_c_a_nopen_1_1_driver_aa94db47b419a6afcc409c63c2685e1b6}{00383}} \mbox{\hyperlink{class_c_a_nopen_1_1_driver_aa94db47b419a6afcc409c63c2685e1b6}{CANopen::Driver::profilePosition\_mode}}()}
+\DoxyCodeLine{00384 \{}
+\DoxyCodeLine{00385     map\_PDO(PDO2Transmit, m\_parameters[\_DCOMstatus], 0);}
+\DoxyCodeLine{00386     map\_PDO(PDO2Transmit, m\_parameters[\_p\_act], m\_parameters[\_DCOMstatus]-\/>size);}
+\DoxyCodeLine{00387     map\_PDO(PDO2Receive , m\_parameters[DCOMcontrol], 0);}
+\DoxyCodeLine{00388     map\_PDO(PDO2Receive, m\_parameters[PPp\_target], m\_parameters[DCOMcontrol]-\/>size);}
+\DoxyCodeLine{00389     this-\/>set(RAMP\_v\_acc,1000,\textcolor{keyword}{true},\textcolor{keyword}{true});}
+\DoxyCodeLine{00390     this-\/>set(RAMP\_v\_dec,2000,\textcolor{keyword}{true},\textcolor{keyword}{true});}
+\DoxyCodeLine{00391     this-\/>set(PPv\_target,2000,\textcolor{keyword}{true},\textcolor{keyword}{true});}
+\DoxyCodeLine{00392     this-\/>set\_mode(ProfilePosition, \textcolor{keyword}{true});}
+\DoxyCodeLine{00393 \}}
+\DoxyCodeLine{00394 }
+\DoxyCodeLine{00395 \textcolor{keywordtype}{void} }
+\DoxyCodeLine{\Hypertarget{_c_a_nopen__driver_8cpp_source_l00396}\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a32db059a1723f5c8db8986324ce21f8f}{00396}} \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a32db059a1723f5c8db8986324ce21f8f}{CANopen::Driver::profileVelocity\_mode}}()}
+\DoxyCodeLine{00397 \{}
+\DoxyCodeLine{00398     map\_PDO(PDO3Transmit, m\_parameters[\_DCOMstatus], 0);}
+\DoxyCodeLine{00399     map\_PDO(PDO3Transmit, m\_parameters[\_v\_act], m\_parameters[\_DCOMstatus]-\/>size);}
+\DoxyCodeLine{00400     map\_PDO(PDO3Receive , m\_parameters[DCOMcontrol], 0);}
+\DoxyCodeLine{00401     map\_PDO(PDO3Receive, m\_parameters[PVv\_target], m\_parameters[DCOMcontrol]-\/>size);}
+\DoxyCodeLine{00402     }
+\DoxyCodeLine{00403     this-\/>set(RAMP\_v\_acc,1000,\textcolor{keyword}{true},\textcolor{keyword}{true});}
+\DoxyCodeLine{00404     this-\/>set(RAMP\_v\_dec,1000,\textcolor{keyword}{true},\textcolor{keyword}{true});}
+\DoxyCodeLine{00405     this-\/>set(PPv\_target,1000,\textcolor{keyword}{true},\textcolor{keyword}{true});}
+\DoxyCodeLine{00406     this-\/>set\_mode(ProfilePosition, \textcolor{keyword}{true});}
+\DoxyCodeLine{00407 \}}
+\DoxyCodeLine{00408 }
+\DoxyCodeLine{00409 \textcolor{keywordtype}{void} }
+\DoxyCodeLine{\Hypertarget{_c_a_nopen__driver_8cpp_source_l00410}\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a4f2bd3e58752dfd0bc37b749452ebcfd}{00410}} \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a4f2bd3e58752dfd0bc37b749452ebcfd}{CANopen::Driver::profileTorque\_mode}}()}
+\DoxyCodeLine{00411 \{}
+\DoxyCodeLine{00412     this-\/>set\_mode(ProfileTorque, \textcolor{keyword}{true});}
+\DoxyCodeLine{00413 \}}
+\DoxyCodeLine{00414  }
+\DoxyCodeLine{00415 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{_c_a_nopen__driver_8cpp_source_l00416}\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a2fe863ef0d5d66f3241eda596a507377}{00416}} \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a2fe863ef0d5d66f3241eda596a507377}{CANopen::Driver::homing}}()}
+\DoxyCodeLine{00417 \{}
+\DoxyCodeLine{00418     set\_position(0);}
+\DoxyCodeLine{00419     \textcolor{keywordflow}{while}(abs(get\_position())>0.001)\{\}}
+\DoxyCodeLine{00420 \textcolor{comment}{//  this-\/>set(HMv,(uint8\_t)100,true,true);}}
+\DoxyCodeLine{00421 \textcolor{comment}{//  this-\/>set(HMv\_out,(uint8\_t)10,true,true);}}
+\DoxyCodeLine{00422 \textcolor{comment}{//  this-\/>set\_mode(Driver::Homing);}}
+\DoxyCodeLine{00423 \textcolor{comment}{//  this-\/>set(HMmethod,(uint8\_t)1,true,true);}}
+\DoxyCodeLine{00424 \textcolor{comment}{//  this-\/>set\_control((Control)(EnableOperation|0x0010));}}
+\DoxyCodeLine{00425 }
+\DoxyCodeLine{00426 \}}
+\DoxyCodeLine{00427 }
+\DoxyCodeLine{00428 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{_c_a_nopen__driver_8cpp_source_l00429}\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a7e215f070766749f80655042cf70b6c2}{00429}} \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a7e215f070766749f80655042cf70b6c2}{CANopen::Driver::set\_mode}}(\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a47ce7e20890160451d8b43b4e32d3ceb}{OperationMode}} mode, \textcolor{keywordtype}{bool} wait) \{}
+\DoxyCodeLine{00430     \textcolor{keywordflow}{if}(m\_available) \{}
+\DoxyCodeLine{00431         m\_parameters[DCOMopmode]-\/>set(mode,\textcolor{keyword}{true});}
+\DoxyCodeLine{00432         send(m\_parameters[DCOMopmode]);}
+\DoxyCodeLine{00433         \textcolor{keywordflow}{if}(wait)}
+\DoxyCodeLine{00434             \textcolor{keywordflow}{while}(get\_mode()!=mode);}
+\DoxyCodeLine{00435     \}}
+\DoxyCodeLine{00436 \}}
+\DoxyCodeLine{00437 }
+\DoxyCodeLine{00438 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{_c_a_nopen__driver_8cpp_source_l00439}\mbox{\hyperlink{class_c_a_nopen_1_1_driver_aa831bccff07ba4c794952c8477e6810a}{00439}} \mbox{\hyperlink{class_c_a_nopen_1_1_driver_aa831bccff07ba4c794952c8477e6810a}{CANopen::Driver::set\_control}}(\mbox{\hyperlink{class_c_a_nopen_1_1_driver_af4031601d8ef94250316995e8339903a}{Control}} ctrl) \{ }
+\DoxyCodeLine{00440         m\_parameters[DCOMcontrol]-\/>set(ctrl, \textcolor{keyword}{true});}
+\DoxyCodeLine{00441         \textcolor{keywordflow}{while}(!m\_parameters[DCOMcontrol]-\/>has\_been\_sent()); }
+\DoxyCodeLine{00442         }
+\DoxyCodeLine{00443         IF\_VERBOSE(1, std::cout << \textcolor{stringliteral}{"Mode: "} << ctrl\_to\_str(ctrl)  << \textcolor{stringliteral}{"["} << std::hex << ctrl << \textcolor{stringliteral}{"] Activated.\(\backslash\)n"};, m\_verbose\_level)}
+\DoxyCodeLine{00444                         \}}
+\DoxyCodeLine{00445 }
+
+\end{DoxyCode}

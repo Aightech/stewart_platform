@@ -1,3 +1,12 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classc_joystick.html" title="cJoystick" alt="" coords="5,5,92,35"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,85,113,115"/>
+<area shape="rect" id="node2" href="$class_c_a_nopen_1_1_message.html" title="can_frame object sent and received throught CANopen socket." alt="" coords="161,85,337,115"/>
+<area shape="rect" id="node3" href="$class_c_a_nopen_1_1_e_m_c_y_message.html" title="EMCY Message (Emergency Object)" alt="" coords="385,5,607,35"/>
+<area shape="rect" id="node4" href="$class_c_a_nopen_1_1_n_m_t_message.html" title="NMT Message (Network management)" alt="" coords="390,59,602,88"/>
+<area shape="rect" id="node5" href="$class_c_a_nopen_1_1_p_d_o_message.html" title="PDO Message (Process Data Object)" alt="" coords="391,112,601,141"/>
+<area shape="rect" id="node6" href="$class_c_a_nopen_1_1_s_d_o_message.html" title="SDO Message (Service Data Object)" alt="" coords="391,165,601,195"/>
+<area shape="rect" id="node7" href="$class_c_a_nopen_1_1_s_d_o_inbound.html" title="SDO received Message." alt="" coords="661,139,868,168"/>
+<area shape="rect" id="node8" href="$class_c_a_nopen_1_1_s_d_o_outbound.html" title="SDO Message to be sent." alt="" coords="655,192,875,221"/>
+<area shape="rect" id="node9" href="$class_c_a_nopen_1_1_s_d_o_outbound_read.html" title="SDO Message to be sent to read the value from the object dictionary of a remote device." alt="" coords="923,165,1183,195"/>
+<area shape="rect" id="node10" href="$class_c_a_nopen_1_1_s_d_o_outbound_write.html" title="SDO Message to be sent to write the value of the object dictionary of a remote device." alt="" coords="923,219,1184,248"/>
 </map>

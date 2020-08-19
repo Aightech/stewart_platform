@@ -1,0 +1,1903 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="class_c_a_nopen_1_1_driver" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>CANopen::Driver</compoundname>
+    <derivedcompoundref refid="class_c_a_nopen_1_1_l_x_m32" prot="public" virt="non-virtual">CANopen::LXM32</derivedcompoundref>
+    <includes refid="_c_a_nopen__driver_8h" local="no">CANopen_driver.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7" prot="public" static="no" strong="no">
+        <type>uint32_t</type>
+        <name>Register</name>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7ad4d184bb0cd942f6bdd5ae4435ba1469" prot="public">
+          <name>_DCOMstatus</name>
+          <initializer>= 0x60410000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><bold>6041<subscript>h</subscript></bold> - The statusword indicates the current state of the drive. No bits are latched. The statusword consist of bits for:<itemizedlist>
+<listitem><para>the current state of the drive,</para>
+</listitem><listitem><para>the operating state of the mode and</para>
+</listitem><listitem><para>manufacturer specific options. </para>
+</listitem></itemizedlist>
+</para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a41294d34718a36687c2183a45ef06258" prot="public">
+          <name>DCOMcontrol</name>
+          <initializer>= 0x60400000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><bold>6040<subscript>h</subscript></bold> - The controlword consist of bits for:<itemizedlist>
+<listitem><para>the controlling of the state,</para>
+</listitem><listitem><para>the controlling of operating modes and</para>
+</listitem><listitem><para>manufacturer specific options. </para>
+</listitem></itemizedlist>
+</para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a838ff7614cdd25d687a7b44f6fcd5112" prot="public">
+          <name>DCOMopmode</name>
+          <initializer>= 0x60600000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><bold>6060<subscript>h</subscript></bold> - The parameter modes of operation switches the actually choosen operation mode. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a27c60a5c7499691fa7a8927c3d4e4376" prot="public">
+          <name>_DCOMopmd_act</name>
+          <initializer>= 0x60610000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><bold>6061<subscript>h</subscript></bold> - The modes of operation display shows the current mode of operation. The meaning of the returned value corresponds to that of the modes of operation option code </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a9388c18e3ec79d918b872aab89a47387" prot="public">
+          <name>PPp_target</name>
+          <initializer>= 0x607A0000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><bold>607A<subscript>h</subscript></bold> - The target position is the position that the drive should move to in position profile mode using the current settings of motion control parameters such as velocity, acceleration, deceleration, motion profile type etc. The target position is given in user defined position units. It is converted to position increments using the position factor. The target position will be interpreted as absolute or relative depending on the ‘abs / rel&apos; flag in the controlword. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a97069ba1c67700d01ba84c05f2a31adb" prot="public">
+          <name>PPv_target</name>
+          <initializer>= 0x60810000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><bold>6081<subscript>h</subscript></bold> - The profile velocity is the velocity normally attained at the end of the acceleration ramp during a profiled move and is valid for both directions of motion. The profile velocity is given in user defined speed units. It is converted to position increments per second using the velocity encoder factor. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a9a00b3971b7ee9985f91dd48ea7e1c73" prot="public">
+          <name>PVv_target</name>
+          <initializer>= 0x60FF0000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><bold>60FF<subscript>h</subscript></bold> - The target velocity is the input for the trajectory generator and the value is given in velocity units. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a68422e03c559dee45c67d4743784c193" prot="public">
+          <name>PTtq_target</name>
+          <initializer>= 0x60710000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><bold>6071<subscript>h</subscript></bold> - This parameter is the input value for the torque controller in profile torque mode and the value is given per thousand of rated torque. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7ae34a009131bb4956dbb9a5c9e76b1c5a" prot="public">
+          <name>RAMP_v_acc</name>
+          <initializer>= 0x60830000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><bold>6083<subscript>h</subscript></bold> - The profile acceleration is given in user defined acceleration units. It is converted to position increments per second 2 using the normalizing factors. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a6f355b7bef6158931cc8cf5e4b1f9c83" prot="public">
+          <name>RAMP_v_dec</name>
+          <initializer>= 0x60840000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><bold>6084<subscript>h</subscript></bold> - The profile deceleration is given in the same units as profile acceleration. If this parameter is not supported, then the profile acceleration value is also used for deceleration. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7af361a27c780c9ab4fe29763c80456258" prot="public">
+          <name>_p_act</name>
+          <initializer>= 0x60640000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><bold>6064<subscript>h</subscript></bold> - This object represents the actual value of the position measurement device in user defined units. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a5790a9abb07781ba9d63ed64d7e0d7fc" prot="public">
+          <name>_v_act</name>
+          <initializer>= 0x606C0000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><bold>606C<subscript>h</subscript></bold> - The velocity actual value is also represented in velocity units and is coupled to the velocity used as input to the velocity controller. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a0ab750decb5de6f5b2d380776dec09cc" prot="public">
+          <name>_tq_act</name>
+          <initializer>= 0x60770000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><bold>6077<subscript>h</subscript></bold> - The torque actual value corresponds to the instantaneous torque in the drive motor. The value is given per thousand of rated torque. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a503823e06d7db891f898f6976aa7a514" prot="public">
+          <name>HMmethod</name>
+          <initializer>= 0x60980000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><bold>6098<subscript>h</subscript></bold> - The homing method object determines the method that will be used during homing. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7ad34e94f677df757d01d787a403a66a2a" prot="public">
+          <name>HMv</name>
+          <initializer>= 0x60990001</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><bold>6099<subscript>h</subscript>01</bold> - Speed during search for switch. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a796f4544102d3244ab451b229afbfb58" prot="public">
+          <name>HMv_out</name>
+          <initializer>= 0x60990002</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><bold>6099<subscript>h</subscript>02</bold> - Speed during search for zero </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>CIA 402 CANopen <ref refid="class_c_a_nopen_1_1_driver" kindref="compound">Driver</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="34" column="18" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" bodystart="34" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="enum" id="class_c_a_nopen_1_1_driver_1a47ce7e20890160451d8b43b4e32d3ceb" prot="public" static="no" strong="no">
+        <type>int8_t</type>
+        <name>OperationMode</name>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1a47ce7e20890160451d8b43b4e32d3ceba3502834b10b8f0201a628b9a0e227425" prot="public">
+          <name>ProfilePosition</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>The positioning of the drive is defined in this mode. Speed, position and acceleration can be limited and profiled moves using a Trajectory Generator are possible as well. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1a47ce7e20890160451d8b43b4e32d3cebacaf4b433be6b0476e7f157e086fea379" prot="public">
+          <name>Velocity</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Many frequency inverters use this simple mode to control the velocity of the drive with limits and ramp functions. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1a47ce7e20890160451d8b43b4e32d3cebadb9f0017145112261254a48699a41961" prot="public">
+          <name>ProfileVelocity</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>The Profile Velocity Mode is used to control the velocity of the drive with no special regard of the position. It supplies limit functions and Trajectory Generation. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1a47ce7e20890160451d8b43b4e32d3cebaff42df87ec625334500bb240f76989ed" prot="public">
+          <name>ProfileTorque</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>The profile torque mode allows a host (external) control system (i.e. closed-loop speed controller, open-loop transmission force controller) to transmit the target torque value, which is processed via the trajectory generator. The torque slope and torque profile type parameters are required. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1a47ce7e20890160451d8b43b4e32d3ceba080efe911eeba1ae575bfaa70b1bb579" prot="public">
+          <name>Homing</name>
+          <initializer>= 6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Homming mode. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1a47ce7e20890160451d8b43b4e32d3cebab11858fe79ae30e3723a3cdb66360287" prot="public">
+          <name>InterpolatedPosition</name>
+          <initializer>= 7</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>The interpolated position mode is used to control multiple coordinated axles or a single axle with the need for time-interpolation of set-point data. The interpolated position mode normally uses time synchronization mechanisms like the sync object defined in /3/ for a time coordination of the related drive units. </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Operational modes </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="72" column="23" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" bodystart="72" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="enum" id="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02d" prot="public" static="no" strong="no">
+        <type>uint16_t</type>
+        <name>State</name>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02dac8ab6913526ea2fc62be30139261fbc6" prot="public">
+          <name>mask</name>
+          <initializer>= 0x006f</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Keeping only main state bytes. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02da94d00ab583965d1d22f48674f7aefa7a" prot="public">
+          <name>NotReadyToSwitchtON</name>
+          <initializer>= 0x0000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Not Ready to Switch ON:<itemizedlist>
+<listitem><para>Low level Power (e.g. 15V, 5V) has been applied to the drive.</para>
+</listitem><listitem><para>The drive is being initialized or is running self test.</para>
+</listitem><listitem><para>A brake, if present, has to be applied in this state.</para>
+</listitem><listitem><para>The drive function is disabled. </para>
+</listitem></itemizedlist>
+</para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02da52c43c11131a9d753319d5e065d031c3" prot="public">
+          <name>SwitchONDisabled</name>
+          <initializer>= 0x0040</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Switch ON Disabled:<itemizedlist>
+<listitem><para>Drive Initialisation is complete.</para>
+</listitem><listitem><para>The drive parameters have been set up.</para>
+</listitem><listitem><para>Drive parameters may be changed.</para>
+</listitem><listitem><para>High Voltage may not be applied to the drive, (e.g. for safety reasons).</para>
+</listitem><listitem><para>The drive function is disabled. </para>
+</listitem></itemizedlist>
+</para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02dafa947edce547a30b314910e6931235a4" prot="public">
+          <name>ReadyToSwitchON</name>
+          <initializer>= 0x0021</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Ready to Switch ON:<itemizedlist>
+<listitem><para>High Voltage may be applied to the drive.</para>
+</listitem><listitem><para>The drive parameters may be changed.</para>
+</listitem><listitem><para>The drive function is disabled </para>
+</listitem></itemizedlist>
+</para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02dac2e13098b6500cdcde217d2a9cc9ebb6" prot="public">
+          <name>SwitchedON</name>
+          <initializer>= 0x0023</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Switched ON:<itemizedlist>
+<listitem><para>High Voltage has been applied to the drive.</para>
+</listitem><listitem><para>The Power Amplifier is ready.</para>
+</listitem><listitem><para>The drive parameters may be changed.</para>
+</listitem><listitem><para>The drive function is disabled. </para>
+</listitem></itemizedlist>
+</para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02da1692c431e1cf20446dbf23a53913af0c" prot="public">
+          <name>OperationEnabled</name>
+          <initializer>= 0x0037</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Operation Enabled:<itemizedlist>
+<listitem><para>No faults have been detected.</para>
+</listitem><listitem><para>The drive function is enabled and power is applied to the motor.</para>
+</listitem><listitem><para>The drive parameters may be changed.(This corresponds to normal operation of the drive.) </para>
+</listitem></itemizedlist>
+</para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02da9028b5332c8352a087606c2cc79e9517" prot="public">
+          <name>Fault</name>
+          <initializer>= 0x000f</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Fault:<itemizedlist>
+<listitem><para>The drive parameters may be changed.</para>
+</listitem><listitem><para>A fault has occured in the drive.</para>
+</listitem><listitem><para>The drive function is disabled. </para>
+</listitem></itemizedlist>
+</para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02dabafb33b6c4f43661a3257ca5b7569372" prot="public">
+          <name>FaultReactionActive</name>
+          <initializer>= 0x000f</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Fault Reaction Active:<itemizedlist>
+<listitem><para>The drive parameters may be changed.</para>
+</listitem><listitem><para>A non-fatal fault has occured in the drive.</para>
+</listitem><listitem><para>The Quick Stop function is being executed.</para>
+</listitem><listitem><para>The drive function is enabled and power is applied to the motor. </para>
+</listitem></itemizedlist>
+</para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02da8accb6a0a36eebcd88f85e0b92faf68a" prot="public">
+          <name>QuickStopActive</name>
+          <initializer>= 0x0007</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Quick Stop Active:<itemizedlist>
+<listitem><para>The drive parameters may be changed.The Quick Stop function is being executed.</para>
+</listitem><listitem><para>The drive function is enabled and power is applied to the motor. If the ‘Quick-Stop-Option-Code’ is switched to 5 (Stay in Quick-Stop), you can’t leave the Quick-Stop-State, but you can transmit to ‘Operation Enable’ with the command‘Enable Operation’ </para>
+</listitem></itemizedlist>
+</para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Possible States </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="91" column="15" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" bodystart="91" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="enum" id="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32b" prot="public" static="no" strong="no">
+        <type>uint16_t</type>
+        <name>StatusBits</name>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32ba372bcbff592b4489af4a65e4952d5a81" prot="public">
+          <name>ReadyToSwitchOn_bit</name>
+          <initializer>= 0x0001</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32ba16ae91b87294fb45b6f802202f3baef0" prot="public">
+          <name>SwitchedOn_bit</name>
+          <initializer>= 0x0002</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32bab01de1698165aa4c610dabd12dc234d8" prot="public">
+          <name>OperationEnabled_bit</name>
+          <initializer>= 0x0004</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32baae485d8b16c8e58e89321d0e5b4444bc" prot="public">
+          <name>Fault_bit</name>
+          <initializer>= 0x0008</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32ba9937b12559ca3fb1023e76462c7b8aa5" prot="public">
+          <name>VoltageEnabled_bit</name>
+          <initializer>= 0x0010</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32bad894790b9971017bbbe70893a78715fd" prot="public">
+          <name>QuickStop_bit</name>
+          <initializer>= 0x0020</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32ba2a920673c9a04465308edfcf8a56b079" prot="public">
+          <name>SwitchONDisabled_bit</name>
+          <initializer>= 0x0040</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32ba60c37953da27b51a6801f480557136df" prot="public">
+          <name>Error0_bit</name>
+          <initializer>= 0x0080</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32ba984217ec2b962f14623e9afcb3e4998e" prot="public">
+          <name>HaltRequest_bit</name>
+          <initializer>= 0x0100</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32ba127fe4e9ceb301d180a2f2cea0cfc76b" prot="public">
+          <name>Remote_bit</name>
+          <initializer>= 0x0200</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32ba85e31a4e46272d9dfa78d793396f985b" prot="public">
+          <name>TargetReached_bit</name>
+          <initializer>= 0x0400</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32baf97dd0f4413b01fae6966a1630d52a75" prot="public">
+          <name>InternalLimitReached_bit</name>
+          <initializer>= 0x0800</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32ba0c48a11a55403f1e9e201a7d6f17fd8b" prot="public">
+          <name>OperationMode_bit</name>
+          <initializer>= 0x1000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32ba7f839fb209d86b9caf014c150219cc1b" prot="public">
+          <name>BlockingError_bit</name>
+          <initializer>= 0x2000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32ba51af307866828b496ff4dc8ba4491b90" prot="public">
+          <name>OperationModeStart_bit</name>
+          <initializer>= 0x4000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32baafb3ac06d4413f6f4c325387c216c3f7" prot="public">
+          <name>ValidRef_bit</name>
+          <initializer>= 0x8000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="140" column="20" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" bodystart="140" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="enum" id="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903a" prot="public" static="no" strong="no">
+        <type>uint16_t</type>
+        <name>Control</name>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903aa6ccc4c2738c634abe2fd21cbe93f9fdb" prot="public">
+          <name>Shutdown</name>
+          <initializer>= 0x0006</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>goto ReadySwitchON </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903aae98ed55dcd60bdd15d179ec32f651b8d" prot="public">
+          <name>SwitchON</name>
+          <initializer>= 0x0007</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>goto SwitchedON </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903aa81c0fb39e9e145721e1cf45a52f8786f" prot="public">
+          <name>DisableVoltage</name>
+          <initializer>= 0x0000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>goto SwitchONDisabled </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903aa6e8fc43d0b5f1ef14ac7ba475572c9b6" prot="public">
+          <name>QuickStop</name>
+          <initializer>= 0x0002</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>goto QuickStopActiv </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903aaa366dac5dbc508501f36112bf5472572" prot="public">
+          <name>DisableOperation</name>
+          <initializer>= 0x0007</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>goto SwitchedON </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903aaff77b9045071e916120fc49e159d2f77" prot="public">
+          <name>EnableOperation</name>
+          <initializer>= 0x000f</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>goto OperationEnabled </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903aaa433113dfe71a54d4333344a339a9bbf" prot="public">
+          <name>FaultResest</name>
+          <initializer>= 0x0080</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>goto SwitchONDisabled </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Possible Control commands </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="160" column="17" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" bodystart="160" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="enum" id="class_c_a_nopen_1_1_driver_1af1538f81dbeb9dcafee3ff1a71c95be4" prot="public" static="no" strong="no">
+        <type>uint32_t</type>
+        <name>PDOFunctionCode</name>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1af1538f81dbeb9dcafee3ff1a71c95be4aa31dc9b14e225c25d304e6d8d9b886ed" prot="public">
+          <name>PDO1Transmit</name>
+          <initializer>= Message::PDO1Transmit</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1af1538f81dbeb9dcafee3ff1a71c95be4aa97a14880dee29baad7ee8201721c585" prot="public">
+          <name>PDO1Receive</name>
+          <initializer>= Message::PDO1Receive</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1af1538f81dbeb9dcafee3ff1a71c95be4a013baa4e40e72d67279f8e5b5d9b4035" prot="public">
+          <name>PDO2Transmit</name>
+          <initializer>= Message::PDO2Transmit</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1af1538f81dbeb9dcafee3ff1a71c95be4a9e3e5d76b75896fade4e2537f2e6e2f7" prot="public">
+          <name>PDO2Receive</name>
+          <initializer>= Message::PDO2Receive</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1af1538f81dbeb9dcafee3ff1a71c95be4ae5889c8e1d945aa150ba4213617681d5" prot="public">
+          <name>PDO3Transmit</name>
+          <initializer>= Message::PDO3Transmit</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1af1538f81dbeb9dcafee3ff1a71c95be4ad6ff06a6427b5f68ecea8552f1a01ef9" prot="public">
+          <name>PDO3Receive</name>
+          <initializer>= Message::PDO3Receive</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1af1538f81dbeb9dcafee3ff1a71c95be4ae5f1f938d9d8b8833be74c805268e9ca" prot="public">
+          <name>PDO4Transmit</name>
+          <initializer>= Message::PDO4Transmit</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_driver_1af1538f81dbeb9dcafee3ff1a71c95be4a6e9b86ade5180f6dcca330b94d1fd4da" prot="public">
+          <name>PDO4Receive</name>
+          <initializer>= Message::PDO4Receive</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="170" column="25" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" bodystart="170" bodyend="179"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_c_a_nopen_1_1_driver_1ae8fb26d56324e42fb134b5901bbf072d" prot="private" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int CANopen::Driver::NB_PDO</definition>
+        <argsstring></argsstring>
+        <name>NB_PDO</name>
+        <initializer>= 4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="29" column="26" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_a_nopen_1_1_driver_1ac734b99ea0f12ec7160e38ec07c6120b" prot="private" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int CANopen::Driver::MAX_PDO_SLOT</definition>
+        <argsstring></argsstring>
+        <name>MAX_PDO_SLOT</name>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="30" column="26" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_c_a_nopen_1_1_driver_1a11f0158da7cc70943c23a0fa32f8f106" prot="protected" static="no" mutable="no">
+        <type>std::thread *</type>
+        <definition>std::thread* CANopen::Driver::m_rpdo_socket_thread</definition>
+        <argsstring></argsstring>
+        <name>m_rpdo_socket_thread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="408" column="17" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" bodystart="408" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_a_nopen_1_1_driver_1a001afe91237b33a88254cc86fc5d7452" prot="protected" static="no" mutable="no">
+        <type>std::atomic_flag</type>
+        <definition>std::atomic_flag CANopen::Driver::rpdo_socket_flag</definition>
+        <argsstring></argsstring>
+        <name>rpdo_socket_flag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="409" column="22" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" bodystart="409" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_a_nopen_1_1_driver_1a657422553d9c1c0b859c21e90b637961" prot="protected" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex CANopen::Driver::rpdo_mutex</definition>
+        <argsstring></argsstring>
+        <name>rpdo_mutex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="410" column="16" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" bodystart="410" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_a_nopen_1_1_driver_1a2e64fa4286ab8e37afedd6d28d3f747c" prot="protected" static="no" mutable="no">
+        <type>std::thread *</type>
+        <definition>std::thread* CANopen::Driver::m_t_socket_thread</definition>
+        <argsstring></argsstring>
+        <name>m_t_socket_thread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="411" column="17" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" bodystart="411" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_a_nopen_1_1_driver_1a3178e7bc0783980c4523703b586d9da7" prot="protected" static="no" mutable="no">
+        <type>std::atomic_flag</type>
+        <definition>std::atomic_flag CANopen::Driver::t_socket_flag</definition>
+        <argsstring></argsstring>
+        <name>t_socket_flag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="412" column="22" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" bodystart="412" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_a_nopen_1_1_driver_1aa72de21b55123ea624ff8c359484e8cd" prot="protected" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* CANopen::Driver::m_ifname</definition>
+        <argsstring></argsstring>
+        <name>m_ifname</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="414" column="16" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" bodystart="414" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_a_nopen_1_1_driver_1ae4998ef8bfce528498191cae7226349f" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CANopen::Driver::m_verbose_level</definition>
+        <argsstring></argsstring>
+        <name>m_verbose_level</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="415" column="9" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" bodystart="415" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_a_nopen_1_1_driver_1a042844b5c94052c0e8cbf5eab5a04791" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool CANopen::Driver::m_available</definition>
+        <argsstring></argsstring>
+        <name>m_available</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="416" column="10" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" bodystart="416" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_a_nopen_1_1_driver_1a7978ee3b77f1e12a478f54d769a80842" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_c_a_nopen_1_1_socket" kindref="compound">CANopen::Socket</ref></type>
+        <definition>CANopen::Socket CANopen::Driver::m_socket</definition>
+        <argsstring></argsstring>
+        <name>m_socket</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="418" column="21" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" bodystart="418" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_a_nopen_1_1_driver_1acd1365f30661ee2f7a981d5e846c66b5" prot="protected" static="no" mutable="no">
+        <type>std::map&lt; PDOFunctionCode, std::vector&lt; <ref refid="struct_c_a_nopen_1_1_parameter" kindref="compound">Parameter</ref> * &gt; &gt;</type>
+        <definition>std::map&lt;PDOFunctionCode, std::vector&lt;Parameter *&gt; &gt; CANopen::Driver::m_PDO_map</definition>
+        <argsstring></argsstring>
+        <name>m_PDO_map</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="420" column="14" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" bodystart="420" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_a_nopen_1_1_driver_1aceacce4df52b5f3ee7e64f6e20059555" prot="protected" static="no" mutable="no">
+        <type>std::map&lt; <ref refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7" kindref="member">Register</ref>, <ref refid="struct_c_a_nopen_1_1_parameter" kindref="compound">Parameter</ref> * &gt;</type>
+        <definition>std::map&lt;Register, Parameter *&gt; CANopen::Driver::m_parameters</definition>
+        <argsstring></argsstring>
+        <name>m_parameters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="421" column="14" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" bodystart="421" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_a_nopen_1_1_driver_1ad97ef262c000db38000137395c7965d9" prot="protected" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t CANopen::Driver::m_node_id</definition>
+        <argsstring></argsstring>
+        <name>m_node_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="423" column="13" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" bodystart="423" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_a_nopen_1_1_driver_1ae208e82352b57ee7db7c2a92f4b0a7d1" prot="protected" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t CANopen::Driver::m_can_baud</definition>
+        <argsstring></argsstring>
+        <name>m_can_baud</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="424" column="14" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" bodystart="424" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_a_nopen_1_1_driver_1abdec4604d2f5bfdc76b0db7430e76d8c" prot="protected" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t CANopen::Driver::m_offset_pos</definition>
+        <argsstring></argsstring>
+        <name>m_offset_pos</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="425" column="13" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" bodystart="425" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_c_a_nopen_1_1_driver_1a0272315f94cb7bff729abeb8b8b052df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CANopen::Driver::Driver</definition>
+        <argsstring>(const char *ifname, uint16_t can_id, int verbose_lvl=0)</argsstring>
+        <name>Driver</name>
+        <param>
+          <type>const char *</type>
+          <declname>ifname</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>can_id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>verbose_lvl</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ifname</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Name of the CAN interface. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>can_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Node CAN ID of the driver. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>verbose_lvl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Level of verbosity. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="187" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/src/CANopen_driver.cpp" bodystart="4" bodyend="47"/>
+        <references refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7ad4d184bb0cd942f6bdd5ae4435ba1469" compoundref="_c_a_nopen__driver_8h" startline="35">_DCOMstatus</references>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_driver_1a0da074f8cf3498e5d1c721ceaaa81a6e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void CANopen::Driver::set</definition>
+        <argsstring>(Register reg, T val, bool force_sdo=false, bool wait=false)</argsstring>
+        <name>set</name>
+        <param>
+          <type><ref refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7" kindref="member">Register</ref></type>
+          <declname>reg</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>val</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>force_sdo</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>wait</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Enables to store a value in a specified registers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: The register to set. (In the format ind__sub) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: The value to store in the register. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>force_sdo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: If true, the parameter will be send to the driver via a SDO. Else the parametr will be sent via PDO if it was mapped to an activated RPDO. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wait</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: If set, the function is blocking and wait for the parameter to be sent via SDO. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="198" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" bodystart="198" bodyend="208"/>
+        <references refid="class_c_a_nopen_1_1_driver_1ad22705c4ee8cfee391113d359e790e67" compoundref="_c_a_nopen__driver_8cpp" startline="96" endline="109">send</references>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_driver_1ae34094765084838267ac2ec088cf6554" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T CANopen::Driver::get</definition>
+        <argsstring>(Register reg, bool force_sdo=false)</argsstring>
+        <name>get</name>
+        <param>
+          <type><ref refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7" kindref="member">Register</ref></type>
+          <declname>reg</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>force_sdo</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>get Gets the value of a specified registers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: The register to get. (In the format ind__sub) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>force_sdo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: If true, the parameter will be updated via a reading SDO. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The value of the register in the templated format T selected. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="218" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" bodystart="218" bodyend="226"/>
+        <references refid="class_c_a_nopen_1_1_driver_1a96123f2965334f4fda9c01ae7b0f8f46" compoundref="_c_a_nopen__driver_8cpp" startline="112" endline="123">update</references>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_driver_1aa831bccff07ba4c794952c8477e6810a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CANopen::Driver::set_control</definition>
+        <argsstring>(Control ctrl)</argsstring>
+        <name>set_control</name>
+        <param>
+          <type><ref refid="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903a" kindref="member">Control</ref></type>
+          <declname>ctrl</declname>
+        </param>
+        <briefdescription>
+<para>set_control : Send transition states order. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctrl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Control to send. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="233" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/src/CANopen_driver.cpp" bodystart="439" bodyend="444"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_driver_1a3087f343d739cb1cd138250ed6925eb8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02d" kindref="member">State</ref></type>
+        <definition>State CANopen::Driver::get_state</definition>
+        <argsstring>()</argsstring>
+        <name>get_state</name>
+        <briefdescription>
+<para>Returns the current state of the driver by reading the status word. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The current state. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="240" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" bodystart="240" bodyend="240"/>
+        <references refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7ad4d184bb0cd942f6bdd5ae4435ba1469" compoundref="_c_a_nopen__driver_8h" startline="35">_DCOMstatus</references>
+        <referencedby refid="class_c_a_nopen_1_1_driver_1a6d875fd4488248671fb060c6a73030e2" compoundref="_c_a_nopen__driver_8h" startline="248" endline="251">wait_state</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_driver_1a6d875fd4488248671fb060c6a73030e2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CANopen::Driver::wait_state</definition>
+        <argsstring>(State state, uint16_t _mask=mask)</argsstring>
+        <name>wait_state</name>
+        <param>
+          <type><ref refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02d" kindref="member">State</ref></type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>_mask</declname>
+          <defval><ref refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02dac8ab6913526ea2fc62be30139261fbc6" kindref="member">mask</ref></defval>
+        </param>
+        <briefdescription>
+<para>wait_state loop until the driver state is different from the one passed while(actual_state()&amp;mask) != (state&amp;mask)) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>State to wait for. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mask to selected specific bits of the state. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="248" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" bodystart="248" bodyend="251"/>
+        <references refid="class_c_a_nopen_1_1_driver_1a3087f343d739cb1cd138250ed6925eb8" compoundref="_c_a_nopen__driver_8h" startline="240" endline="240">get_state</references>
+        <references refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02dac8ab6913526ea2fc62be30139261fbc6" compoundref="_c_a_nopen__driver_8h" startline="92">mask</references>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_driver_1a7e215f070766749f80655042cf70b6c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CANopen::Driver::set_mode</definition>
+        <argsstring>(OperationMode mode, bool wait=false)</argsstring>
+        <name>set_mode</name>
+        <param>
+          <type><ref refid="class_c_a_nopen_1_1_driver_1a47ce7e20890160451d8b43b4e32d3ceb" kindref="member">OperationMode</ref></type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>wait</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>set_mode Set the desired opereration mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mode to set. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wait</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Repeatidly test the actual operation mode register until it is eqaual to the selected mode. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="259" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/src/CANopen_driver.cpp" bodystart="429" bodyend="436"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_driver_1a0ece511729874fd45f24f5c517d84eae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_c_a_nopen_1_1_driver_1a47ce7e20890160451d8b43b4e32d3ceb" kindref="member">OperationMode</ref></type>
+        <definition>OperationMode CANopen::Driver::get_mode</definition>
+        <argsstring>(bool force_sdo=true)</argsstring>
+        <name>get_mode</name>
+        <param>
+          <type>bool</type>
+          <declname>force_sdo</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>get_mode Returns the actual operation mode of the driver. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>force_sdo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If set a sdo read message will be send to get the mode. Set to false to save some communication time. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The actual operational mode </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="267" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" bodystart="267" bodyend="267"/>
+        <references refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a27c60a5c7499691fa7a8927c3d4e4376" compoundref="_c_a_nopen__driver_8h" startline="44">_DCOMopmd_act</references>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_driver_1a20967f674c7bfa52407350933248a300" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CANopen::Driver::set_position</definition>
+        <argsstring>(int32_t target, bool absolute=true)</argsstring>
+        <name>set_position</name>
+        <param>
+          <type>int32_t</type>
+          <declname>target</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>absolute</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>set_position Send the new position to reach. Has to be in ProfilPositon mode to have some effect. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>target</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position to reach (in internal unit) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>absolute</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If set the target will be process as an absolute value. Else it will be procecced as a relative (to the current position) value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if successfully sent. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="276" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/src/CANopen_driver.cpp" bodystart="239" bodyend="257"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_driver_1a7a249fdda103c6c8d11e840d66514137" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CANopen::Driver::set_velocity</definition>
+        <argsstring>(int32_t target)</argsstring>
+        <name>set_velocity</name>
+        <param>
+          <type>int32_t</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+<para>set_velocity Send the new velocity to reach. Has to be in ProfilPositon or ProfilVelocity mode to have some effect. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>target</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Velocity to reach (in internal unit) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if successfully sent. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="283" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/src/CANopen_driver.cpp" bodystart="260" bodyend="272"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_driver_1a4b97e1e92f96eb579a85a4d33ef0592a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CANopen::Driver::set_torque</definition>
+        <argsstring>(int16_t target)</argsstring>
+        <name>set_torque</name>
+        <param>
+          <type>int16_t</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+<para>set_torque Send the new torque to reach. Has to be in ProfilTorque mode to have some effect. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>target</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Torque to reach (in internal unit) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if successfully sent. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="290" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/src/CANopen_driver.cpp" bodystart="275" bodyend="285"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_driver_1a80f9eac00de5ae6c07d6d4fd56a3b110" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>int32_t CANopen::Driver::get_position</definition>
+        <argsstring>()</argsstring>
+        <name>get_position</name>
+        <briefdescription>
+<para>get_position Returns the actual postion of the motor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The actual postion of the motor. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="297" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" bodystart="297" bodyend="297"/>
+        <references refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7af361a27c780c9ab4fe29763c80456258" compoundref="_c_a_nopen__driver_8h" startline="61">_p_act</references>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_driver_1a0345a38f5dc54e5bcacd8cc86f6b903a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>int32_t CANopen::Driver::get_velocity</definition>
+        <argsstring>()</argsstring>
+        <name>get_velocity</name>
+        <briefdescription>
+<para>get_velocity Returns the actual velocity of the motor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The actual velocity of the motor. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="303" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" bodystart="303" bodyend="303"/>
+        <references refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a5790a9abb07781ba9d63ed64d7e0d7fc" compoundref="_c_a_nopen__driver_8h" startline="62">_v_act</references>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_driver_1a32a2469e5958bf328b7df6ad7b7d49c1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>int32_t CANopen::Driver::get_torque</definition>
+        <argsstring>()</argsstring>
+        <name>get_torque</name>
+        <briefdescription>
+<para>get_torque Returns the actual torque of the motor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The actual torque of the motor. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="309" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" bodystart="309" bodyend="309"/>
+        <references refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a0ab750decb5de6f5b2d380776dec09cc" compoundref="_c_a_nopen__driver_8h" startline="64">_tq_act</references>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_driver_1a9f5910067bb7489887a9ed25ba6199f8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CANopen::Driver::set_position_offset</definition>
+        <argsstring>(int32_t offset_pos)</argsstring>
+        <name>set_position_offset</name>
+        <param>
+          <type>int32_t</type>
+          <declname>offset_pos</declname>
+        </param>
+        <briefdescription>
+<para>set_position_offset Set the postion offset of the motor. Rq better to have a large offset to avoid letting the motor switch off in negativ position: it would result in a wrong position when restarting </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>offset_pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Offest of the motor in internal Unit </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="316" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" bodystart="316" bodyend="316"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_driver_1ad8ac07202c14ad344004146e126ecbf4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CANopen::Driver::start</definition>
+        <argsstring>()</argsstring>
+        <name>start</name>
+        <briefdescription>
+<para>start </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="322" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/src/CANopen_driver.cpp" bodystart="360" bodyend="366"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_driver_1a05da9b5bdd80efed46b0629721d0664b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CANopen::Driver::pause</definition>
+        <argsstring>()</argsstring>
+        <name>pause</name>
+        <briefdescription>
+<para>pause </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="327" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/src/CANopen_driver.cpp" bodystart="369" bodyend="373"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_driver_1abd7d88699d02c007d5f23e608d8f0a0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CANopen::Driver::stop</definition>
+        <argsstring>()</argsstring>
+        <name>stop</name>
+        <briefdescription>
+<para>stop </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="332" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/src/CANopen_driver.cpp" bodystart="376" bodyend="380"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_driver_1aa94db47b419a6afcc409c63c2685e1b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CANopen::Driver::profilePosition_mode</definition>
+        <argsstring>()</argsstring>
+        <name>profilePosition_mode</name>
+        <briefdescription>
+<para>profilePosition_mode </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="338" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/src/CANopen_driver.cpp" bodystart="383" bodyend="393"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_driver_1a32db059a1723f5c8db8986324ce21f8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CANopen::Driver::profileVelocity_mode</definition>
+        <argsstring>()</argsstring>
+        <name>profileVelocity_mode</name>
+        <briefdescription>
+<para>profileVelocity_mode </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="343" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/src/CANopen_driver.cpp" bodystart="396" bodyend="407"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_driver_1a4f2bd3e58752dfd0bc37b749452ebcfd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CANopen::Driver::profileTorque_mode</definition>
+        <argsstring>()</argsstring>
+        <name>profileTorque_mode</name>
+        <briefdescription>
+<para>profileTorque_mode </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="348" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/src/CANopen_driver.cpp" bodystart="410" bodyend="413"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_driver_1a2fe863ef0d5d66f3241eda596a507377" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CANopen::Driver::homing</definition>
+        <argsstring>()</argsstring>
+        <name>homing</name>
+        <briefdescription>
+<para>homing </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="353" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/src/CANopen_driver.cpp" bodystart="416" bodyend="426"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_driver_1a1cc9720ef3f1d1a671e5b696d688df3c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_c_a_nopen_1_1_parameter" kindref="compound">Parameter</ref> *</type>
+        <definition>Parameter* CANopen::Driver::get_param</definition>
+        <argsstring>(Register reg)</argsstring>
+        <name>get_param</name>
+        <param>
+          <type><ref refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7" kindref="member">Register</ref></type>
+          <declname>reg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="356" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" bodystart="356" bodyend="356"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_driver_1af3663cfb3627f928e7bb71a1358e4e00" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void CANopen::Driver::print_manufacturer_status</definition>
+        <argsstring>()=0</argsstring>
+        <name>print_manufacturer_status</name>
+        <reimplementedby refid="class_c_a_nopen_1_1_l_x_m32_1a28fce51b02b587666c8ac7c550bd3b4b">print_manufacturer_status</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="359" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_driver_1a05fb7b074555086b45918179c64494a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string CANopen::Driver::ctrl_to_str</definition>
+        <argsstring>(Control control)</argsstring>
+        <name>ctrl_to_str</name>
+        <param>
+          <type><ref refid="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903a" kindref="member">Control</ref></type>
+          <declname>control</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>&lt; goto ReadySwitchON</para>
+<para>&lt; goto SwitchedON</para>
+<para>&lt; goto SwitchONDisabled</para>
+<para>&lt; goto QuickStopActiv</para>
+<para>&lt; goto OperationEnabled</para>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="362" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/src/CANopen_driver.cpp" bodystart="346" bodyend="357"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_driver_1a249f11262c9264cf53486c247d004b99" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CANopen::Driver::is_available</definition>
+        <argsstring>()</argsstring>
+        <name>is_available</name>
+        <briefdescription>
+<para>return true if the can interface is available </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="368" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" bodystart="368" bodyend="368"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_c_a_nopen_1_1_driver_1ad22705c4ee8cfee391113d359e790e67" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CANopen::Driver::send</definition>
+        <argsstring>(Parameter *param)</argsstring>
+        <name>send</name>
+        <param>
+          <type><ref refid="struct_c_a_nopen_1_1_parameter" kindref="compound">Parameter</ref> *</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+<para>send the parameter via a Writting SDO message to the driver </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="struct_c_a_nopen_1_1_parameter" kindref="compound">Parameter</ref> to send. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="376" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/src/CANopen_driver.cpp" bodystart="96" bodyend="109"/>
+        <references refid="struct_c_a_nopen_1_1_parameter_1a0b5d5729fe8b242797e0ab7b49d4519d" compoundref="parameter_8cpp" startline="29" endline="37">CANopen::Parameter::payload</references>
+        <referencedby refid="class_c_a_nopen_1_1_driver_1a0da074f8cf3498e5d1c721ceaaa81a6e" compoundref="_c_a_nopen__driver_8h" startline="198" endline="208">set</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_driver_1a96123f2965334f4fda9c01ae7b0f8f46" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CANopen::Driver::update</definition>
+        <argsstring>(Parameter *param)</argsstring>
+        <name>update</name>
+        <param>
+          <type><ref refid="struct_c_a_nopen_1_1_parameter" kindref="compound">Parameter</ref> *</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+<para>Request an update of the parameter via a Reading SDO message. (the parameter has been updated when param-&gt;sdo_flag is down. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="struct_c_a_nopen_1_1_parameter" kindref="compound">Parameter</ref> to update. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="383" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/src/CANopen_driver.cpp" bodystart="112" bodyend="123"/>
+        <referencedby refid="class_c_a_nopen_1_1_driver_1ae34094765084838267ac2ec088cf6554" compoundref="_c_a_nopen__driver_8h" startline="218" endline="226">get</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_driver_1abd3e2b466b31e906ae7bcb390277f3dd" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CANopen::Driver::map_PDO</definition>
+        <argsstring>(PDOFunctionCode fn, Parameter *param, int slot)</argsstring>
+        <name>map_PDO</name>
+        <param>
+          <type>PDOFunctionCode</type>
+          <declname>fn</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_c_a_nopen_1_1_parameter" kindref="compound">Parameter</ref> *</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>slot</declname>
+        </param>
+        <briefdescription>
+<para>Enables to map the different parameters of the driver to the Transmit PDO. When a PDO is received in the T_PDO_socket() thread, the value of the pdo will be stored in the mapped parameter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Function code of the PDO. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: <ref refid="struct_c_a_nopen_1_1_parameter" kindref="compound">Parameter</ref> to map. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>slot</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Slot of the parameter in the PDO message. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="392" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/src/CANopen_driver.cpp" bodystart="50" bodyend="56"/>
+        <references refid="struct_c_a_nopen_1_1_parameter_1a6f66686b516733d6506e8efdedd67862" compoundref="parameter_8cpp" startline="4" endline="11">CANopen::Parameter::link_to_pdo</references>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_driver_1a6cfa4f397be17e661e93bfb8f74ddb90" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CANopen::Driver::activate_PDO</definition>
+        <argsstring>(PDOFunctionCode fn, bool set=true)</argsstring>
+        <name>activate_PDO</name>
+        <param>
+          <type>PDOFunctionCode</type>
+          <declname>fn</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>set</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Sends a SDO message to activate the specified PDO. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ifname</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: N </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>can_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Node CAN ID of the driver. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="400" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/src/CANopen_driver.cpp" bodystart="59" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_driver_1a535cd1c9eaf129d3b8b51cd636cb3ac0" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CANopen::Driver::T_socket</definition>
+        <argsstring>()</argsstring>
+        <name>T_socket</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="403" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/src/CANopen_driver.cpp" bodystart="126" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_driver_1a4e2a54808fafdde192c0550bf8612274" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CANopen::Driver::RPDO_socket</definition>
+        <argsstring>()</argsstring>
+        <name>RPDO_socket</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="406" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/src/CANopen_driver.cpp" bodystart="187" bodyend="234"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Device Profile Drives and Motion Control. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>CANopen::Driver</label>
+        <link refid="class_c_a_nopen_1_1_driver"/>
+      </node>
+      <node id="2">
+        <label>CANopen::LXM32</label>
+        <link refid="class_c_a_nopen_1_1_l_x_m32"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>CANopen::Driver</label>
+        <link refid="class_c_a_nopen_1_1_driver"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>m_socket</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>CANopen::Socket</label>
+        <link refid="class_c_a_nopen_1_1_socket"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="27" column="13" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" bodystart="27" bodyend="426"/>
+    <listofallmembers>
+      <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a27c60a5c7499691fa7a8927c3d4e4376" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>_DCOMopmd_act</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7ad4d184bb0cd942f6bdd5ae4435ba1469" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>_DCOMstatus</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7af361a27c780c9ab4fe29763c80456258" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>_p_act</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a0ab750decb5de6f5b2d380776dec09cc" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>_tq_act</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a5790a9abb07781ba9d63ed64d7e0d7fc" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>_v_act</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a6cfa4f397be17e661e93bfb8f74ddb90" prot="protected" virt="non-virtual"><scope>CANopen::Driver</scope><name>activate_PDO</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32ba7f839fb209d86b9caf014c150219cc1b" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>BlockingError_bit</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903a" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>Control</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a05fb7b074555086b45918179c64494a6" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>ctrl_to_str</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a41294d34718a36687c2183a45ef06258" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>DCOMcontrol</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a838ff7614cdd25d687a7b44f6fcd5112" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>DCOMopmode</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903aaa366dac5dbc508501f36112bf5472572" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>DisableOperation</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903aa81c0fb39e9e145721e1cf45a52f8786f" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>DisableVoltage</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a0272315f94cb7bff729abeb8b8b052df" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>Driver</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903aaff77b9045071e916120fc49e159d2f77" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>EnableOperation</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32ba60c37953da27b51a6801f480557136df" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>Error0_bit</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02da9028b5332c8352a087606c2cc79e9517" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>Fault</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32baae485d8b16c8e58e89321d0e5b4444bc" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>Fault_bit</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02dabafb33b6c4f43661a3257ca5b7569372" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>FaultReactionActive</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903aaa433113dfe71a54d4333344a339a9bbf" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>FaultResest</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1ae34094765084838267ac2ec088cf6554" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>get</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a0ece511729874fd45f24f5c517d84eae" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>get_mode</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a1cc9720ef3f1d1a671e5b696d688df3c" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>get_param</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a80f9eac00de5ae6c07d6d4fd56a3b110" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>get_position</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a3087f343d739cb1cd138250ed6925eb8" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>get_state</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a32a2469e5958bf328b7df6ad7b7d49c1" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>get_torque</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a0345a38f5dc54e5bcacd8cc86f6b903a" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>get_velocity</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32ba984217ec2b962f14623e9afcb3e4998e" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>HaltRequest_bit</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a503823e06d7db891f898f6976aa7a514" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>HMmethod</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7ad34e94f677df757d01d787a403a66a2a" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>HMv</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a796f4544102d3244ab451b229afbfb58" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>HMv_out</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a47ce7e20890160451d8b43b4e32d3ceba080efe911eeba1ae575bfaa70b1bb579" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>Homing</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a2fe863ef0d5d66f3241eda596a507377" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>homing</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32baf97dd0f4413b01fae6966a1630d52a75" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>InternalLimitReached_bit</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a47ce7e20890160451d8b43b4e32d3cebab11858fe79ae30e3723a3cdb66360287" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>InterpolatedPosition</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a249f11262c9264cf53486c247d004b99" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>is_available</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a042844b5c94052c0e8cbf5eab5a04791" prot="protected" virt="non-virtual"><scope>CANopen::Driver</scope><name>m_available</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1ae208e82352b57ee7db7c2a92f4b0a7d1" prot="protected" virt="non-virtual"><scope>CANopen::Driver</scope><name>m_can_baud</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1aa72de21b55123ea624ff8c359484e8cd" prot="protected" virt="non-virtual"><scope>CANopen::Driver</scope><name>m_ifname</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1ad97ef262c000db38000137395c7965d9" prot="protected" virt="non-virtual"><scope>CANopen::Driver</scope><name>m_node_id</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1abdec4604d2f5bfdc76b0db7430e76d8c" prot="protected" virt="non-virtual"><scope>CANopen::Driver</scope><name>m_offset_pos</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1aceacce4df52b5f3ee7e64f6e20059555" prot="protected" virt="non-virtual"><scope>CANopen::Driver</scope><name>m_parameters</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1acd1365f30661ee2f7a981d5e846c66b5" prot="protected" virt="non-virtual"><scope>CANopen::Driver</scope><name>m_PDO_map</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a11f0158da7cc70943c23a0fa32f8f106" prot="protected" virt="non-virtual"><scope>CANopen::Driver</scope><name>m_rpdo_socket_thread</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a7978ee3b77f1e12a478f54d769a80842" prot="protected" virt="non-virtual"><scope>CANopen::Driver</scope><name>m_socket</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a2e64fa4286ab8e37afedd6d28d3f747c" prot="protected" virt="non-virtual"><scope>CANopen::Driver</scope><name>m_t_socket_thread</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1ae4998ef8bfce528498191cae7226349f" prot="protected" virt="non-virtual"><scope>CANopen::Driver</scope><name>m_verbose_level</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1abd3e2b466b31e906ae7bcb390277f3dd" prot="protected" virt="non-virtual"><scope>CANopen::Driver</scope><name>map_PDO</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02dac8ab6913526ea2fc62be30139261fbc6" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>mask</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1ac734b99ea0f12ec7160e38ec07c6120b" prot="private" virt="non-virtual"><scope>CANopen::Driver</scope><name>MAX_PDO_SLOT</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1ae8fb26d56324e42fb134b5901bbf072d" prot="private" virt="non-virtual"><scope>CANopen::Driver</scope><name>NB_PDO</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02da94d00ab583965d1d22f48674f7aefa7a" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>NotReadyToSwitchtON</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02da1692c431e1cf20446dbf23a53913af0c" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>OperationEnabled</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32bab01de1698165aa4c610dabd12dc234d8" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>OperationEnabled_bit</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a47ce7e20890160451d8b43b4e32d3ceb" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>OperationMode</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32ba0c48a11a55403f1e9e201a7d6f17fd8b" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>OperationMode_bit</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32ba51af307866828b496ff4dc8ba4491b90" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>OperationModeStart_bit</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a05da9b5bdd80efed46b0629721d0664b" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>pause</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1af1538f81dbeb9dcafee3ff1a71c95be4aa97a14880dee29baad7ee8201721c585" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>PDO1Receive</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1af1538f81dbeb9dcafee3ff1a71c95be4aa31dc9b14e225c25d304e6d8d9b886ed" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>PDO1Transmit</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1af1538f81dbeb9dcafee3ff1a71c95be4a9e3e5d76b75896fade4e2537f2e6e2f7" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>PDO2Receive</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1af1538f81dbeb9dcafee3ff1a71c95be4a013baa4e40e72d67279f8e5b5d9b4035" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>PDO2Transmit</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1af1538f81dbeb9dcafee3ff1a71c95be4ad6ff06a6427b5f68ecea8552f1a01ef9" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>PDO3Receive</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1af1538f81dbeb9dcafee3ff1a71c95be4ae5889c8e1d945aa150ba4213617681d5" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>PDO3Transmit</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1af1538f81dbeb9dcafee3ff1a71c95be4a6e9b86ade5180f6dcca330b94d1fd4da" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>PDO4Receive</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1af1538f81dbeb9dcafee3ff1a71c95be4ae5f1f938d9d8b8833be74c805268e9ca" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>PDO4Transmit</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1af1538f81dbeb9dcafee3ff1a71c95be4" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>PDOFunctionCode</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a9388c18e3ec79d918b872aab89a47387" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>PPp_target</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a97069ba1c67700d01ba84c05f2a31adb" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>PPv_target</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1af3663cfb3627f928e7bb71a1358e4e00" prot="public" virt="pure-virtual"><scope>CANopen::Driver</scope><name>print_manufacturer_status</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a47ce7e20890160451d8b43b4e32d3ceba3502834b10b8f0201a628b9a0e227425" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>ProfilePosition</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1aa94db47b419a6afcc409c63c2685e1b6" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>profilePosition_mode</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a47ce7e20890160451d8b43b4e32d3cebaff42df87ec625334500bb240f76989ed" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>ProfileTorque</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a4f2bd3e58752dfd0bc37b749452ebcfd" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>profileTorque_mode</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a47ce7e20890160451d8b43b4e32d3cebadb9f0017145112261254a48699a41961" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>ProfileVelocity</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a32db059a1723f5c8db8986324ce21f8f" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>profileVelocity_mode</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a68422e03c559dee45c67d4743784c193" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>PTtq_target</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a9a00b3971b7ee9985f91dd48ea7e1c73" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>PVv_target</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903aa6e8fc43d0b5f1ef14ac7ba475572c9b6" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>QuickStop</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32bad894790b9971017bbbe70893a78715fd" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>QuickStop_bit</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02da8accb6a0a36eebcd88f85e0b92faf68a" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>QuickStopActive</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7ae34a009131bb4956dbb9a5c9e76b1c5a" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>RAMP_v_acc</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a6f355b7bef6158931cc8cf5e4b1f9c83" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>RAMP_v_dec</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02dafa947edce547a30b314910e6931235a4" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>ReadyToSwitchON</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32ba372bcbff592b4489af4a65e4952d5a81" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>ReadyToSwitchOn_bit</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>Register</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32ba127fe4e9ceb301d180a2f2cea0cfc76b" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>Remote_bit</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a657422553d9c1c0b859c21e90b637961" prot="protected" virt="non-virtual"><scope>CANopen::Driver</scope><name>rpdo_mutex</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a4e2a54808fafdde192c0550bf8612274" prot="protected" virt="non-virtual"><scope>CANopen::Driver</scope><name>RPDO_socket</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a001afe91237b33a88254cc86fc5d7452" prot="protected" virt="non-virtual"><scope>CANopen::Driver</scope><name>rpdo_socket_flag</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1ad22705c4ee8cfee391113d359e790e67" prot="protected" virt="non-virtual"><scope>CANopen::Driver</scope><name>send</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a0da074f8cf3498e5d1c721ceaaa81a6e" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>set</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1aa831bccff07ba4c794952c8477e6810a" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>set_control</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a7e215f070766749f80655042cf70b6c2" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>set_mode</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a20967f674c7bfa52407350933248a300" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>set_position</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a9f5910067bb7489887a9ed25ba6199f8" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>set_position_offset</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a4b97e1e92f96eb579a85a4d33ef0592a" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>set_torque</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a7a249fdda103c6c8d11e840d66514137" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>set_velocity</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903aa6ccc4c2738c634abe2fd21cbe93f9fdb" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>Shutdown</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1ad8ac07202c14ad344004146e126ecbf4" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>start</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02d" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>State</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32b" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>StatusBits</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1abd7d88699d02c007d5f23e608d8f0a0a" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>stop</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02dac2e13098b6500cdcde217d2a9cc9ebb6" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>SwitchedON</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32ba16ae91b87294fb45b6f802202f3baef0" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>SwitchedOn_bit</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903aae98ed55dcd60bdd15d179ec32f651b8d" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>SwitchON</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02da52c43c11131a9d753319d5e065d031c3" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>SwitchONDisabled</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32ba2a920673c9a04465308edfcf8a56b079" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>SwitchONDisabled_bit</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a535cd1c9eaf129d3b8b51cd636cb3ac0" prot="protected" virt="non-virtual"><scope>CANopen::Driver</scope><name>T_socket</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a3178e7bc0783980c4523703b586d9da7" prot="protected" virt="non-virtual"><scope>CANopen::Driver</scope><name>t_socket_flag</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32ba85e31a4e46272d9dfa78d793396f985b" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>TargetReached_bit</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a96123f2965334f4fda9c01ae7b0f8f46" prot="protected" virt="non-virtual"><scope>CANopen::Driver</scope><name>update</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32baafb3ac06d4413f6f4c325387c216c3f7" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>ValidRef_bit</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a47ce7e20890160451d8b43b4e32d3cebacaf4b433be6b0476e7f157e086fea379" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>Velocity</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32ba9937b12559ca3fb1023e76462c7b8aa5" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>VoltageEnabled_bit</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a6d875fd4488248671fb060c6a73030e2" prot="public" virt="non-virtual"><scope>CANopen::Driver</scope><name>wait_state</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

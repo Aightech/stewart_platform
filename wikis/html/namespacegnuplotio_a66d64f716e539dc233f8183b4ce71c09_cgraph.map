@@ -1,4 +1,5 @@
 <map id="gnuplotio::deref_and_print" name="gnuplotio::deref_and_print">
-<area shape="rect" id="node2" href="$namespacegnuplotio.html#a55ff2f9abaa4b3e1c64a8f730f791b33" title="gnuplotio::send_scalar" alt="" coords="221,14,404,43"/>
-<area shape="rect" id="node3" href="$structgnuplotio_1_1_text_sender.html#a03b58292dc75a4137d30ad7fffd762c6" title="gnuplotio::TextSender\l::send" alt="" coords="452,5,631,52"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,192,52"/>
+<area shape="rect" id="node2" href="$namespacegnuplotio.html#a55ff2f9abaa4b3e1c64a8f730f791b33" title=" " alt="" coords="240,14,440,43"/>
+<area shape="rect" id="node3" href="$structgnuplotio_1_1_text_sender.html#a03b58292dc75a4137d30ad7fffd762c6" title=" " alt="" coords="488,5,683,52"/>
 </map>

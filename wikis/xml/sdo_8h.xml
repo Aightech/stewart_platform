@@ -1,0 +1,298 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="sdo_8h" kind="file" language="C++">
+    <compoundname>sdo.h</compoundname>
+    <includes refid="message_8h" local="yes">message.h</includes>
+    <includedby refid="_c_a_nopen__socket_8h" local="yes">CANopen_socket.h</includedby>
+    <includedby refid="pdo_8h" local="yes">pdo.h</includedby>
+    <includedby refid="sdo_8cpp" local="yes">sdo.cpp</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>cstdint</label>
+      </node>
+      <node id="6">
+        <label>stdexcept</label>
+      </node>
+      <node id="7">
+        <label>string</label>
+      </node>
+      <node id="9">
+        <label>linux/can.h</label>
+      </node>
+      <node id="8">
+        <label>vector</label>
+      </node>
+      <node id="1">
+        <label>sdo.h</label>
+        <link refid="sdo_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>sstream</label>
+      </node>
+      <node id="2">
+        <label>message.h</label>
+        <link refid="message_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>payload.h</label>
+        <link refid="payload_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="12">
+        <label>CANopen_driver.cpp</label>
+        <link refid="_c_a_nopen__driver_8cpp_source"/>
+      </node>
+      <node id="15">
+        <label>CANopen_socket.cpp</label>
+        <link refid="_c_a_nopen__socket_8cpp_source"/>
+      </node>
+      <node id="14">
+        <label>parameter.cpp</label>
+        <link refid="parameter_8cpp_source"/>
+      </node>
+      <node id="17">
+        <label>pdo.h</label>
+        <link refid="pdo_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>pdo.cpp</label>
+        <link refid="pdo_8cpp_source"/>
+      </node>
+      <node id="8">
+        <label>mainwindow.cpp</label>
+        <link refid="mainwindow_8cpp_source"/>
+      </node>
+      <node id="13">
+        <label>parameter.h</label>
+        <link refid="parameter_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>platform.cpp</label>
+        <link refid="platform_8cpp_source"/>
+      </node>
+      <node id="7">
+        <label>main.cpp</label>
+        <link refid="src_2main_8cpp_source"/>
+      </node>
+      <node id="16">
+        <label>main.cpp</label>
+        <link refid="lib_2lxm32_2lib_2canopen_2src_2main_8cpp_source"/>
+      </node>
+      <node id="2">
+        <label>CANopen_socket.h</label>
+        <link refid="_c_a_nopen__socket_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>sdo.h</label>
+        <link refid="sdo_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>platform.hpp</label>
+        <link refid="platform_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>CANopen_lxm32.h</label>
+        <link refid="_c_a_nopen__lxm32_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>sdo.cpp</label>
+        <link refid="sdo_8cpp_source"/>
+      </node>
+      <node id="3">
+        <label>CANopen_driver.h</label>
+        <link refid="_c_a_nopen__driver_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>mainwindow.h</label>
+        <link refid="mainwindow_8h_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>main.cpp</label>
+        <link refid="lib_2lxm32_2src_2main_8cpp_source"/>
+      </node>
+      <node id="10">
+        <label>CANopen_lxm32.cpp</label>
+        <link refid="_c_a_nopen__lxm32_8cpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_c_a_nopen_1_1_s_d_o_message" prot="public">CANopen::SDOMessage</innerclass>
+    <innerclass refid="class_c_a_nopen_1_1_s_d_o_inbound" prot="public">CANopen::SDOInbound</innerclass>
+    <innerclass refid="class_c_a_nopen_1_1_s_d_o_outbound" prot="public">CANopen::SDOOutbound</innerclass>
+    <innerclass refid="class_c_a_nopen_1_1_s_d_o_outbound_read" prot="public">CANopen::SDOOutboundRead</innerclass>
+    <innerclass refid="class_c_a_nopen_1_1_s_d_o_outbound_write" prot="public">CANopen::SDOOutboundWrite</innerclass>
+    <innernamespace refid="namespace_c_a_nopen">CANopen</innernamespace>
+    <briefdescription>
+<para>PDO message sent and received throught CANopen socket. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>SDO message sent and received throught CANopen socket.</para>
+<para><simplesect kind="author"><para>Florian Richer &amp; Alexis Devillard </para>
+</simplesect>
+<simplesect kind="version"><para>1.0 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_CANOPEN_SDO_MESSAGE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_CANOPEN_SDO_MESSAGE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="message_8h" kindref="compound">message.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">CANopen<sp/>{</highlight></codeline>
+<codeline lineno="17" refid="class_c_a_nopen_1_1_s_d_o_message" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_c_a_nopen_1_1_s_d_o_message" kindref="compound">SDOMessage</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_c_a_nopen_1_1_message" kindref="compound">Message</ref><sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>RDWR<sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Read,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Write</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>CCS<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SegmentDownload<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InitiateDownload<sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InitiateUpload<sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SegmentUpload<sp/>=<sp/>3,</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AbortTransfer<sp/>=<sp/>4,</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BlockUpload<sp/>=<sp/>5,</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BlockDownload<sp/>=<sp/>6</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_s_d_o_message" kindref="compound">SDOMessage</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_s_d_o_message" kindref="compound">SDOMessage</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>can_frame<sp/>&amp;other);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_s_d_o_message" kindref="compound">SDOMessage</ref>(<ref refid="class_c_a_nopen_1_1_message_1a0f8f95e4ea1284011cd122629edc5468" kindref="member">FunctionCode</ref><sp/>fn,</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_c_a_nopen_1_1_message_1adc93c710fd35ab61e46a0881326d0336" kindref="member">node_id</ref>,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CCS<sp/>spec,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>n,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>e,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>s,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="class_c_a_nopen_1_1_s_d_o_message_1a1e31a75dd442c32eaf42d74937b71cbb" kindref="member">index</ref>,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_c_a_nopen_1_1_s_d_o_message_1acec40b62f1a77ab566fed5d9707ea619" kindref="member">subindex</ref>,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_payload" kindref="compound">Payload</ref><sp/><ref refid="class_c_a_nopen_1_1_s_d_o_message_1a1c98a42d8af59c1b91d91ff2014cc276" kindref="member">payload</ref>);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_s_d_o_message_1a1e31a75dd442c32eaf42d74937b71cbb" kindref="member">index</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="57" refid="class_c_a_nopen_1_1_s_d_o_message_1a8889e754f2faf789a1df98f7f8f03310" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_c_a_nopen_1_1_s_d_o_message_1a8889e754f2faf789a1df98f7f8f03310" kindref="member">is_confirmation</ref>()</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(data[0]==0x60)</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="class_c_a_nopen_1_1_s_d_o_message_1a5951f11447f25d3f9b9fb976446f1044" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_c_a_nopen_1_1_s_d_o_message_1a5951f11447f25d3f9b9fb976446f1044" kindref="member">is_error</ref>()</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(data[0]==0x80)</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_s_d_o_message_1acec40b62f1a77ab566fed5d9707ea619" kindref="member">subindex</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_s_d_o_message_1aa12187c7761d4ef34de349270bb654d4" kindref="member">index__sub</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t</highlight></codeline>
+<codeline lineno="96" refid="class_c_a_nopen_1_1_s_d_o_message_1af81e301ad58fcf18fecbe359f1587d2f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_s_d_o_message_1af81e301ad58fcf18fecbe359f1587d2f" kindref="member">id</ref>()</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_c_a_nopen_1_1_s_d_o_message_1aa12187c7761d4ef34de349270bb654d4" kindref="member">index__sub</ref>();</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_s_d_o_message_1ada403b64e3e300c54f9f941cf65a3da9" kindref="member">size_data</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_payload" kindref="compound">Payload</ref></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_s_d_o_message_1a1c98a42d8af59c1b91d91ff2014cc276" kindref="member">payload</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118" refid="class_c_a_nopen_1_1_s_d_o_inbound" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_c_a_nopen_1_1_s_d_o_inbound" kindref="compound">SDOInbound</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_c_a_nopen_1_1_s_d_o_message" kindref="compound">SDOMessage</ref><sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_s_d_o_inbound" kindref="compound">SDOInbound</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>can_frame<sp/>&amp;other);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="class_c_a_nopen_1_1_s_d_o_outbound" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_c_a_nopen_1_1_s_d_o_outbound" kindref="compound">SDOOutbound</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_c_a_nopen_1_1_s_d_o_message" kindref="compound">SDOMessage</ref><sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_s_d_o_outbound" kindref="compound">SDOOutbound</ref>(uint8_t<sp/><ref refid="class_c_a_nopen_1_1_message_1adc93c710fd35ab61e46a0881326d0336" kindref="member">node_id</ref>,<sp/>RDWR<sp/>dir,<sp/>uint16_t<sp/><ref refid="class_c_a_nopen_1_1_s_d_o_message_1a1e31a75dd442c32eaf42d74937b71cbb" kindref="member">index</ref>,<sp/>uint8_t<sp/><ref refid="class_c_a_nopen_1_1_s_d_o_message_1acec40b62f1a77ab566fed5d9707ea619" kindref="member">subindex</ref>,<sp/><ref refid="class_c_a_nopen_1_1_payload" kindref="compound">Payload</ref><sp/><ref refid="class_c_a_nopen_1_1_s_d_o_message_1a1c98a42d8af59c1b91d91ff2014cc276" kindref="member">payload</ref>);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134" refid="class_c_a_nopen_1_1_s_d_o_outbound_read" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_c_a_nopen_1_1_s_d_o_outbound_read" kindref="compound">SDOOutboundRead</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_c_a_nopen_1_1_s_d_o_outbound" kindref="compound">SDOOutbound</ref><sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_s_d_o_outbound_read" kindref="compound">SDOOutboundRead</ref>(uint8_t<sp/><ref refid="class_c_a_nopen_1_1_message_1adc93c710fd35ab61e46a0881326d0336" kindref="member">node_id</ref>,<sp/>uint16_t<sp/><ref refid="class_c_a_nopen_1_1_s_d_o_message_1a1e31a75dd442c32eaf42d74937b71cbb" kindref="member">index</ref>,<sp/>uint8_t<sp/><ref refid="class_c_a_nopen_1_1_s_d_o_message_1acec40b62f1a77ab566fed5d9707ea619" kindref="member">subindex</ref>);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_s_d_o_outbound_read" kindref="compound">SDOOutboundRead</ref>(uint8_t<sp/><ref refid="class_c_a_nopen_1_1_message_1adc93c710fd35ab61e46a0881326d0336" kindref="member">node_id</ref>,<sp/>uint32_t<sp/><ref refid="class_c_a_nopen_1_1_s_d_o_message_1aa12187c7761d4ef34de349270bb654d4" kindref="member">index__sub</ref>);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143" refid="class_c_a_nopen_1_1_s_d_o_outbound_write" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_c_a_nopen_1_1_s_d_o_outbound_write" kindref="compound">SDOOutboundWrite</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_c_a_nopen_1_1_s_d_o_outbound" kindref="compound">SDOOutbound</ref><sp/>{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_s_d_o_outbound_write" kindref="compound">SDOOutboundWrite</ref>(uint8_t<sp/><ref refid="class_c_a_nopen_1_1_message_1adc93c710fd35ab61e46a0881326d0336" kindref="member">node_id</ref>,<sp/>uint16_t<sp/><ref refid="class_c_a_nopen_1_1_s_d_o_message_1a1e31a75dd442c32eaf42d74937b71cbb" kindref="member">index</ref>,<sp/>uint8_t<sp/><ref refid="class_c_a_nopen_1_1_s_d_o_message_1acec40b62f1a77ab566fed5d9707ea619" kindref="member">subindex</ref>,<sp/><ref refid="class_c_a_nopen_1_1_payload" kindref="compound">Payload</ref><sp/><ref refid="class_c_a_nopen_1_1_s_d_o_message_1a1c98a42d8af59c1b91d91ff2014cc276" kindref="member">payload</ref>);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_s_d_o_outbound_write" kindref="compound">SDOOutboundWrite</ref>(uint8_t<sp/><ref refid="class_c_a_nopen_1_1_message_1adc93c710fd35ab61e46a0881326d0336" kindref="member">node_id</ref>,<sp/>uint32_t<sp/><ref refid="class_c_a_nopen_1_1_s_d_o_message_1aa12187c7761d4ef34de349270bb654d4" kindref="member">index__sub</ref>,<sp/><ref refid="class_c_a_nopen_1_1_payload" kindref="compound">Payload</ref><sp/><ref refid="class_c_a_nopen_1_1_s_d_o_message_1a1c98a42d8af59c1b91d91ff2014cc276" kindref="member">payload</ref>);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="148"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>CANopen</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>_CANOPEN_SDO_MESSAGE_H_</highlight></codeline>
+    </programlisting>
+    <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/include/sdo.h"/>
+  </compounddef>
+</doxygen>

@@ -1,4 +1,8 @@
 <map id="main" name="main">
-<area shape="rect" id="node2" href="$classc_joystick.html#a10375763b82c2da3e904d118d5cf2ecb" title="cJoystick::buttonPressed" alt="" coords="111,5,309,35"/>
-<area shape="rect" id="node3" href="$classc_joystick.html#a2954017eb51ef6f4658450199e5df5b4" title="cJoystick::joystickValue" alt="" coords="115,59,305,88"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,155,68,185"/>
+<area shape="rect" id="node2" href="$class_c_a_nopen_1_1_driver.html#a80f9eac00de5ae6c07d6d4fd56a3b110" title="get_position Returns the actual postion of the motor." alt="" coords="128,5,319,52"/>
+<area shape="rect" id="node3" href="$class_c_a_nopen_1_1_driver.html#aa94db47b419a6afcc409c63c2685e1b6" title="profilePosition_mode" alt="" coords="116,76,331,123"/>
+<area shape="rect" id="node4" href="$class_c_a_nopen_1_1_driver.html#a20967f674c7bfa52407350933248a300" title="set_position Send the new position to reach. Has to be in ProfilPositon mode to have some effect." alt="" coords="129,147,317,193"/>
+<area shape="rect" id="node5" href="$class_c_a_nopen_1_1_driver.html#a9f5910067bb7489887a9ed25ba6199f8" title="set_position_offset Set the postion offset of the motor. Rq better to have a large offset to avoid le..." alt="" coords="129,217,317,264"/>
+<area shape="rect" id="node6" href="$class_c_a_nopen_1_1_driver.html#ad8ac07202c14ad344004146e126ecbf4" title="start" alt="" coords="123,289,324,318"/>
 </map>

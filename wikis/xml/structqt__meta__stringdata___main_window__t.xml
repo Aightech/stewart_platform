@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structqt__meta__stringdata___main_window__t" kind="struct" language="C++" prot="public">
+    <compoundname>qt_meta_stringdata_MainWindow_t</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structqt__meta__stringdata___main_window__t_1a728217305ebd7d8895235c2038c4ed28" prot="public" static="no" mutable="no">
+        <type>QByteArrayData</type>
+        <definition>QByteArrayData qt_meta_stringdata_MainWindow_t::data[5]</definition>
+        <argsstring>[5]</argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/include/moc_mainwindow.cpp" line="30" column="20" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/include/moc_mainwindow.cpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqt__meta__stringdata___main_window__t_1a0a613edd69b1462e5769fe583a820f8b" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char qt_meta_stringdata_MainWindow_t::stringdata0[95]</definition>
+        <argsstring>[95]</argsstring>
+        <name>stringdata0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/include/moc_mainwindow.cpp" line="31" column="10" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/include/moc_mainwindow.cpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/adev/Documents/STECH/stewart_platform/build/include/moc_mainwindow.cpp" line="23" column="38" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/include/moc_mainwindow.cpp" bodystart="23" bodyend="26"/>
+    <listofallmembers>
+      <member refid="structqt__meta__stringdata___main_window__t_1a728217305ebd7d8895235c2038c4ed28" prot="public" virt="non-virtual"><scope>qt_meta_stringdata_MainWindow_t</scope><name>data</name></member>
+      <member refid="structqt__meta__stringdata___main_window__t_1a0a613edd69b1462e5769fe583a820f8b" prot="public" virt="non-virtual"><scope>qt_meta_stringdata_MainWindow_t</scope><name>stringdata0</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

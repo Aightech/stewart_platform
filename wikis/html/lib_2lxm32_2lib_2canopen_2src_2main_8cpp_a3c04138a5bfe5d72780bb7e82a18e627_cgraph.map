@@ -1,4 +1,11 @@
 <map id="main" name="main">
-<area shape="rect" id="node2" href="$class_canopen__socket.html#a07d81bd345670ed859cc07f21b8ecbe3" title="templated function to send SDO message with different kind of data type (uint8_t, uint16_t ..." alt="" coords="111,5,341,35"/>
-<area shape="rect" id="node3" href="$lib_2lxm32_2lib_2canopen_2src_2main_8cpp.html#ad179db7b04bfd86a67a6a62a36bffdac" title="usage" alt="" coords="193,59,259,88"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,131,68,160"/>
+<area shape="rect" id="node2" href="$class_c_a_nopen_1_1_socket.html#a15363c054b276777b4290c91fd05edd5" title=" " alt="" coords="116,5,344,35"/>
+<area shape="rect" id="node5" href="$class_c_a_nopen_1_1_socket.html#aa147801723e58f287d06b6df28837c44" title="Function to send a CAN message." alt="" coords="126,131,334,160"/>
+<area shape="rect" id="node6" href="$class_c_a_nopen_1_1_message.html#afdc7d0f669d0736395beac0e846646a5" title=" " alt="" coords="129,59,331,106"/>
+<area shape="rect" id="node8" href="$lib_2lxm32_2lib_2canopen_2src_2main_8cpp.html#ad179db7b04bfd86a67a6a62a36bffdac" title=" " alt="" coords="195,184,265,213"/>
+<area shape="rect" id="node9" href="$class_c_a_nopen_1_1_payload.html#aef05ef8cfc8b9ba4170891f3168a726b" title="value Returns the data casted as a variable of type T" alt="" coords="120,237,340,267"/>
+<area shape="rect" id="node3" href="$class_c_a_nopen_1_1_message.html#aa0b2fbf64579563a763e3efbe1766c3a" title="function_code" alt="" coords="392,59,691,88"/>
+<area shape="rect" id="node4" href="$class_c_a_nopen_1_1_message.html#adc93c710fd35ab61e46a0881326d0336" title="node_id" alt="" coords="417,5,665,35"/>
+<area shape="rect" id="node7" href="$class_c_a_nopen_1_1_message.html#a231049034467f68a5a919a9267f9151f" title="payload" alt="" coords="417,112,666,141"/>
 </map>

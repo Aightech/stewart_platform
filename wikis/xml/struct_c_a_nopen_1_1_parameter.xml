@@ -1,0 +1,992 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="struct_c_a_nopen_1_1_parameter" kind="struct" language="C++" prot="public">
+    <compoundname>CANopen::Parameter</compoundname>
+    <includes refid="parameter_8h" local="no">parameter.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="struct_c_a_nopen_1_1_parameter_1a4870a26654749daa1ef95bdcb6d01d59" prot="public" static="no" strong="no">
+        <type>uint32_t</type>
+        <name>PDOFunctionCode</name>
+        <enumvalue id="struct_c_a_nopen_1_1_parameter_1a4870a26654749daa1ef95bdcb6d01d59a974ac3668332f61bdc693759a935961c" prot="public">
+          <name>PDO1Transmit</name>
+          <initializer>= Message::PDO1Transmit</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="struct_c_a_nopen_1_1_parameter_1a4870a26654749daa1ef95bdcb6d01d59a1c5da340e64a4c5f0b83b7a423d6c6ad" prot="public">
+          <name>PDO1Receive</name>
+          <initializer>= Message::PDO1Receive</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="struct_c_a_nopen_1_1_parameter_1a4870a26654749daa1ef95bdcb6d01d59adedfa8a7a9f737cfab1f4d25019494cb" prot="public">
+          <name>PDO2Transmit</name>
+          <initializer>= Message::PDO2Transmit</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="struct_c_a_nopen_1_1_parameter_1a4870a26654749daa1ef95bdcb6d01d59a4d4a2071af2074e9f0eaeebcfb224b6d" prot="public">
+          <name>PDO2Receive</name>
+          <initializer>= Message::PDO2Receive</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="struct_c_a_nopen_1_1_parameter_1a4870a26654749daa1ef95bdcb6d01d59ae18c92cef48b3ed4f9ccc9e3fcda8cdb" prot="public">
+          <name>PDO3Transmit</name>
+          <initializer>= Message::PDO3Transmit</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="struct_c_a_nopen_1_1_parameter_1a4870a26654749daa1ef95bdcb6d01d59a8bd4f75f9862ef90b05ed660c55f8701" prot="public">
+          <name>PDO3Receive</name>
+          <initializer>= Message::PDO3Receive</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="struct_c_a_nopen_1_1_parameter_1a4870a26654749daa1ef95bdcb6d01d59a73ee3b850ad0e4d4c9ae1d18e3bad91a" prot="public">
+          <name>PDO4Transmit</name>
+          <initializer>= Message::PDO4Transmit</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="struct_c_a_nopen_1_1_parameter_1a4870a26654749daa1ef95bdcb6d01d59a172786d8c40c3594bd359c134df6ca6e" prot="public">
+          <name>PDO4Receive</name>
+          <initializer>= Message::PDO4Receive</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>PDO Function code. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" line="34" column="25" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" bodystart="34" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="typedef" id="struct_c_a_nopen_1_1_parameter_1aa7232c26e1cf4daa3e5719007872ddc5" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* CANopen::Parameter::param_cb_t) (Parameter *)</definition>
+        <argsstring>)(Parameter *)</argsstring>
+        <name>param_cb_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="struct_c_a_nopen_1_1_parameter" kindref="compound">Parameter</ref> Callback function type </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" line="29" column="13" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_c_a_nopen_1_1_parameter_1ab123478082ba8a41206baedb175cc19a" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t CANopen::Parameter::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" line="233" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" bodystart="233" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_a_nopen_1_1_parameter_1af45b5384a6e819637d8dbd4b2c96daf4" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string CANopen::Parameter::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" line="234" column="17" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" bodystart="234" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_a_nopen_1_1_parameter_1a69d1fe3372e1afb2103e83f741e74f9e" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t CANopen::Parameter::index</definition>
+        <argsstring></argsstring>
+        <name>index</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" line="235" column="14" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" bodystart="235" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_a_nopen_1_1_parameter_1a376778b75d8e6659d81088e159381aa8" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t CANopen::Parameter::subindex</definition>
+        <argsstring></argsstring>
+        <name>subindex</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" line="236" column="13" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" bodystart="236" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_a_nopen_1_1_parameter_1a69bfa86bc32a7f5141d14ee85db26773" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_c_a_nopen_1_1_parameter_1a4870a26654749daa1ef95bdcb6d01d59" kindref="member">PDOFunctionCode</ref></type>
+        <definition>PDOFunctionCode CANopen::Parameter::pdo_fn</definition>
+        <argsstring></argsstring>
+        <name>pdo_fn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" line="238" column="21" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" bodystart="238" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_a_nopen_1_1_parameter_1ade3d99a7b2be1e9c098e07f32bcec078" prot="public" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t CANopen::Parameter::pdo_slot</definition>
+        <argsstring></argsstring>
+        <name>pdo_slot</name>
+        <initializer>= -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" line="239" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" bodystart="239" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_a_nopen_1_1_parameter_1a6827c18c4e58298d06111557759e4c3c" prot="public" static="no" mutable="no">
+        <type>std::atomic_flag</type>
+        <definition>std::atomic_flag CANopen::Parameter::sdo_flag</definition>
+        <argsstring></argsstring>
+        <name>sdo_flag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" line="241" column="22" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" bodystart="241" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="struct_c_a_nopen_1_1_parameter_1a5047a8b8f0dbfe120e7d4dbef4405cd4" prot="private" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* CANopen::Parameter::var</definition>
+        <argsstring></argsstring>
+        <name>var</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" line="244" column="10" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" bodystart="244" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_a_nopen_1_1_parameter_1ac78a22b55b6618e8c7abd3184373f9f2" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_c_a_nopen_1_1_parameter_1aa7232c26e1cf4daa3e5719007872ddc5" kindref="member">param_cb_t</ref></type>
+        <definition>param_cb_t CANopen::Parameter::_cb</definition>
+        <argsstring></argsstring>
+        <name>_cb</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" line="245" column="16" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" bodystart="245" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_a_nopen_1_1_parameter_1a75be475f808feb1f0d8ec40f0a8026cc" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool CANopen::Parameter::m_should_be_sent</definition>
+        <argsstring></argsstring>
+        <name>m_should_be_sent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" line="246" column="10" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" bodystart="246" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_a_nopen_1_1_parameter_1a722d2affe2dc3f01d8e05af68bf290e2" prot="private" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex CANopen::Parameter::mutex</definition>
+        <argsstring></argsstring>
+        <name>mutex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" line="247" column="16" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" bodystart="247" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_c_a_nopen_1_1_parameter_1a7d11792f2b06d2d836bc29b8298a9916" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CANopen::Parameter::Parameter</definition>
+        <argsstring>()</argsstring>
+        <name>Parameter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" line="45" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" bodystart="45" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_c_a_nopen_1_1_parameter_1ab53571d27af3fba545a250f87320aa64" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>CANopen::Parameter::Parameter</definition>
+        <argsstring>(std::string name_, T val, uint16_t index_, uint8_t subindex_, param_cb_t cb=nullptr)</argsstring>
+        <name>Parameter</name>
+        <param>
+          <type>std::string</type>
+          <declname>name_</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>val</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>index_</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>subindex_</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_c_a_nopen_1_1_parameter_1aa7232c26e1cf4daa3e5719007872ddc5" kindref="member">param_cb_t</ref></type>
+          <declname>cb</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para><ref refid="struct_c_a_nopen_1_1_parameter" kindref="compound">Parameter</ref> Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name_</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the parameter. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value to store in the parameter (the type will be used to fixed the data size) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>index_</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of the object in the object dictionary of the device. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>subindex_</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Subindex of the object in the object dictionary of the device. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[facultative] The address of a callback function that will be called each time the parameter is updated by the device. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" line="56" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" bodystart="56" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_c_a_nopen_1_1_parameter_1ac2e3642934ae7736c045e70b0e08e83c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>CANopen::Parameter::Parameter</definition>
+        <argsstring>(std::string name_, T val, uint32_t index__sub, param_cb_t cb=nullptr)</argsstring>
+        <name>Parameter</name>
+        <param>
+          <type>std::string</type>
+          <declname>name_</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>val</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>index__sub</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_c_a_nopen_1_1_parameter_1aa7232c26e1cf4daa3e5719007872ddc5" kindref="member">param_cb_t</ref></type>
+          <declname>cb</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para><ref refid="struct_c_a_nopen_1_1_parameter" kindref="compound">Parameter</ref> Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name_</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the parameter. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value to store in the parameter (the type will be used to fixed the data size) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>index__sub</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index and subindex of the object in the object dictionary of the device. (in the format index__sub) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[facultative] The address of a callback function that will be called each time the parameter is updated by the device. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" line="73" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" bodystart="73" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_c_a_nopen_1_1_parameter_1aa774dd4d265fe8d0c3eb4b845b847183" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CANopen::Parameter::~Parameter</definition>
+        <argsstring>()</argsstring>
+        <name>~Parameter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" line="75" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" bodystart="75" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_c_a_nopen_1_1_parameter_1a6f66686b516733d6506e8efdedd67862" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CANopen::Parameter::link_to_pdo</definition>
+        <argsstring>(PDOFunctionCode fn, int8_t slot)</argsstring>
+        <name>link_to_pdo</name>
+        <param>
+          <type><ref refid="struct_c_a_nopen_1_1_parameter_1a4870a26654749daa1ef95bdcb6d01d59" kindref="member">PDOFunctionCode</ref></type>
+          <declname>fn</declname>
+        </param>
+        <param>
+          <type>int8_t</type>
+          <declname>slot</declname>
+        </param>
+        <briefdescription>
+<para>link_to_pdo Links a paramet to a PDO message </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The function code of the PDO </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>slot</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the parameter data inside the PDO <ref refid="class_c_a_nopen_1_1_message" kindref="compound">Message</ref> <ref refid="class_c_a_nopen_1_1_payload" kindref="compound">Payload</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" line="85" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/src/parameter.cpp" bodystart="4" bodyend="11"/>
+        <referencedby refid="class_c_a_nopen_1_1_driver_1abd3e2b466b31e906ae7bcb390277f3dd" compoundref="_c_a_nopen__driver_8cpp" startline="50" endline="56">CANopen::Driver::map_PDO</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="struct_c_a_nopen_1_1_parameter_1a56877b06fefded5cf3353844604d59f7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool CANopen::Parameter::set</definition>
+        <argsstring>(T val, bool force_update=false, bool received_data=false)</argsstring>
+        <name>set</name>
+        <param>
+          <type>T</type>
+          <declname>val</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>force_update</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>received_data</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>sets Set the value of a parameter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to set. (the type has to be coherent with the parameter data size) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>force_update</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If set the value of the <ref refid="struct_c_a_nopen_1_1_parameter" kindref="compound">Parameter</ref> is set even idf the previous value has not been sent yet to the remote device. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>received_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Has to be set to True if the data being set come from the remote device (so the sending flag will not be raised) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the parameter value has been changed. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" line="96" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" bodystart="96" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_c_a_nopen_1_1_parameter_1a3ec2c4a4da29908a2e69de9187325a11" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CANopen::Parameter::operator=</definition>
+        <argsstring>(int8_t val)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>int8_t</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>Sets the value of the parameter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New int8_t value to set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the parameter value has been changed. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" line="121" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" bodystart="121" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_c_a_nopen_1_1_parameter_1ae2f287d5d0abc2b4693d3ec81b53cdd1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CANopen::Parameter::operator=</definition>
+        <argsstring>(int16_t val)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>int16_t</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>Sets the value of the parameter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New int16_t value to set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the parameter value has been changed. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" line="128" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" bodystart="128" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_c_a_nopen_1_1_parameter_1aea3dee9f4e137c2e5627d23836f18a6b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CANopen::Parameter::operator=</definition>
+        <argsstring>(int32_t val)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>int32_t</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>Sets the value of the parameter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New int32_t value to set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the parameter value has been changed. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" line="135" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" bodystart="135" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_c_a_nopen_1_1_parameter_1ad72cd626ccab044f0295b092d41668ca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CANopen::Parameter::operator=</definition>
+        <argsstring>(uint8_t val)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>Sets the value of the parameter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New uint8_t value to set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the parameter value has been changed. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" line="142" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" bodystart="142" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_c_a_nopen_1_1_parameter_1a77c306435be2eaf34c1ceb15edd559ff" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CANopen::Parameter::operator=</definition>
+        <argsstring>(uint16_t val)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>Sets the value of the parameter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New uint16_t value to set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the parameter value has been changed. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" line="149" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" bodystart="149" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_c_a_nopen_1_1_parameter_1a9984a99c5627b35e3bbe3992a2f6bad2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CANopen::Parameter::operator=</definition>
+        <argsstring>(uint32_t val)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>Sets the value of the parameter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New uint32_t value to set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the parameter value has been changed. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" line="156" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" bodystart="156" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_c_a_nopen_1_1_parameter_1acb8721ccbdd90aed8f347296dca9e7e1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T CANopen::Parameter::get</definition>
+        <argsstring>()</argsstring>
+        <name>get</name>
+        <briefdescription>
+<para>gets Returns the value (with a type T coherent with the data size) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The value of the parameter. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" line="164" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" bodystart="164" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_c_a_nopen_1_1_parameter_1a83099406a35bd9501b421e514dffde73" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CANopen::Parameter::operator int8_t</definition>
+        <argsstring>()</argsstring>
+        <name>operator int8_t</name>
+        <briefdescription>
+<para>operator int8_t Returns the value as an int8_t </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" line="177" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" bodystart="177" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_c_a_nopen_1_1_parameter_1a32b09e89de697d8040ac634ca8bc9f87" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CANopen::Parameter::operator int16_t</definition>
+        <argsstring>()</argsstring>
+        <name>operator int16_t</name>
+        <briefdescription>
+<para>operator int16_t Returns the value as an int16_t </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" line="181" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" bodystart="181" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_c_a_nopen_1_1_parameter_1a4703b3922e5630ac1b8808d4980542bb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CANopen::Parameter::operator int32_t</definition>
+        <argsstring>()</argsstring>
+        <name>operator int32_t</name>
+        <briefdescription>
+<para>operator int32_t Returns the value as an int32_t </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" line="185" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" bodystart="185" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_c_a_nopen_1_1_parameter_1aaf0db9d918b06945cb59154745866d50" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CANopen::Parameter::operator uint8_t</definition>
+        <argsstring>()</argsstring>
+        <name>operator uint8_t</name>
+        <briefdescription>
+<para>operator uint8_t Returns the value as an uint8_t </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" line="189" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" bodystart="189" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_c_a_nopen_1_1_parameter_1abcdc291fd736380c80e401a05c3fa7dd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CANopen::Parameter::operator uint16_t</definition>
+        <argsstring>()</argsstring>
+        <name>operator uint16_t</name>
+        <briefdescription>
+<para>operator uint16_t Returns the value as an uint16_t </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" line="193" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" bodystart="193" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_c_a_nopen_1_1_parameter_1a5e098f5a04dbd1e1f07f728f0c98cad0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CANopen::Parameter::operator uint32_t</definition>
+        <argsstring>()</argsstring>
+        <name>operator uint32_t</name>
+        <briefdescription>
+<para>operator uint32_t Returns the value as an uint32_t </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" line="197" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" bodystart="197" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_c_a_nopen_1_1_parameter_1a2a80caa7af7b8df1ee93999e27f493f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CANopen::Parameter::from_payload</definition>
+        <argsstring>(Payload &amp;p, int slot=0, bool received_data=true)</argsstring>
+        <name>from_payload</name>
+        <param>
+          <type><ref refid="class_c_a_nopen_1_1_payload" kindref="compound">Payload</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>slot</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>received_data</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>from_payload Sets the value of the parameters with the data of a payload. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_c_a_nopen_1_1_payload" kindref="compound">Payload</ref> to store in the parameter </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>slot</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index in the payload array where the parameter data is </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>received_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If set the data is processed as a receied data (no sending flag raised) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the parameter value has been changed. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" line="207" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/src/parameter.cpp" bodystart="14" bodyend="26"/>
+        <references refid="class_c_a_nopen_1_1_payload_1aef05ef8cfc8b9ba4170891f3168a726b" compoundref="payload_8h" startline="48" endline="52">CANopen::Payload::value</references>
+      </memberdef>
+      <memberdef kind="function" id="struct_c_a_nopen_1_1_parameter_1a78c2b557f058aee3bc6997cbdd6d99a6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CANopen::Parameter::has_been_sent</definition>
+        <argsstring>()</argsstring>
+        <name>has_been_sent</name>
+        <briefdescription>
+<para>has_been_sent Returns the sending flag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The sending flag. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" line="214" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" bodystart="214" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_c_a_nopen_1_1_parameter_1a6423121211fcdcdfc086d36217872fce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CANopen::Parameter::callback</definition>
+        <argsstring>()</argsstring>
+        <name>callback</name>
+        <briefdescription>
+<para>callback Execute the parameter callback (If not null) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" line="223" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/src/parameter.cpp" bodystart="40" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_c_a_nopen_1_1_parameter_1a0b5d5729fe8b242797e0ab7b49d4519d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_c_a_nopen_1_1_payload" kindref="compound">Payload</ref></type>
+        <definition>CANopen::Payload CANopen::Parameter::payload</definition>
+        <argsstring>(bool *should_be_sent=nullptr)</argsstring>
+        <name>payload</name>
+        <param>
+          <type>bool *</type>
+          <declname>should_be_sent</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para>payload Returns a payload filled with the parameter data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>should_be_sent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If a boolean pointer is passed the sending flag is stored in the booled and then cleared. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A payload filled with the parameter data. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" line="231" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/src/parameter.cpp" bodystart="29" bodyend="37"/>
+        <referencedby refid="class_c_a_nopen_1_1_driver_1ad22705c4ee8cfee391113d359e790e67" compoundref="_c_a_nopen__driver_8cpp" startline="96" endline="109">CANopen::Driver::send</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Object from the object dictionary of a remote CANopen device. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" line="24" column="16" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h" bodystart="24" bodyend="248"/>
+    <listofallmembers>
+      <member refid="struct_c_a_nopen_1_1_parameter_1ac78a22b55b6618e8c7abd3184373f9f2" prot="private" virt="non-virtual"><scope>CANopen::Parameter</scope><name>_cb</name></member>
+      <member refid="struct_c_a_nopen_1_1_parameter_1a6423121211fcdcdfc086d36217872fce" prot="public" virt="non-virtual"><scope>CANopen::Parameter</scope><name>callback</name></member>
+      <member refid="struct_c_a_nopen_1_1_parameter_1a2a80caa7af7b8df1ee93999e27f493f6" prot="public" virt="non-virtual"><scope>CANopen::Parameter</scope><name>from_payload</name></member>
+      <member refid="struct_c_a_nopen_1_1_parameter_1acb8721ccbdd90aed8f347296dca9e7e1" prot="public" virt="non-virtual"><scope>CANopen::Parameter</scope><name>get</name></member>
+      <member refid="struct_c_a_nopen_1_1_parameter_1a78c2b557f058aee3bc6997cbdd6d99a6" prot="public" virt="non-virtual"><scope>CANopen::Parameter</scope><name>has_been_sent</name></member>
+      <member refid="struct_c_a_nopen_1_1_parameter_1a69d1fe3372e1afb2103e83f741e74f9e" prot="public" virt="non-virtual"><scope>CANopen::Parameter</scope><name>index</name></member>
+      <member refid="struct_c_a_nopen_1_1_parameter_1a6f66686b516733d6506e8efdedd67862" prot="public" virt="non-virtual"><scope>CANopen::Parameter</scope><name>link_to_pdo</name></member>
+      <member refid="struct_c_a_nopen_1_1_parameter_1a75be475f808feb1f0d8ec40f0a8026cc" prot="private" virt="non-virtual"><scope>CANopen::Parameter</scope><name>m_should_be_sent</name></member>
+      <member refid="struct_c_a_nopen_1_1_parameter_1a722d2affe2dc3f01d8e05af68bf290e2" prot="private" virt="non-virtual"><scope>CANopen::Parameter</scope><name>mutex</name></member>
+      <member refid="struct_c_a_nopen_1_1_parameter_1af45b5384a6e819637d8dbd4b2c96daf4" prot="public" virt="non-virtual"><scope>CANopen::Parameter</scope><name>name</name></member>
+      <member refid="struct_c_a_nopen_1_1_parameter_1a32b09e89de697d8040ac634ca8bc9f87" prot="public" virt="non-virtual"><scope>CANopen::Parameter</scope><name>operator int16_t</name></member>
+      <member refid="struct_c_a_nopen_1_1_parameter_1a4703b3922e5630ac1b8808d4980542bb" prot="public" virt="non-virtual"><scope>CANopen::Parameter</scope><name>operator int32_t</name></member>
+      <member refid="struct_c_a_nopen_1_1_parameter_1a83099406a35bd9501b421e514dffde73" prot="public" virt="non-virtual"><scope>CANopen::Parameter</scope><name>operator int8_t</name></member>
+      <member refid="struct_c_a_nopen_1_1_parameter_1abcdc291fd736380c80e401a05c3fa7dd" prot="public" virt="non-virtual"><scope>CANopen::Parameter</scope><name>operator uint16_t</name></member>
+      <member refid="struct_c_a_nopen_1_1_parameter_1a5e098f5a04dbd1e1f07f728f0c98cad0" prot="public" virt="non-virtual"><scope>CANopen::Parameter</scope><name>operator uint32_t</name></member>
+      <member refid="struct_c_a_nopen_1_1_parameter_1aaf0db9d918b06945cb59154745866d50" prot="public" virt="non-virtual"><scope>CANopen::Parameter</scope><name>operator uint8_t</name></member>
+      <member refid="struct_c_a_nopen_1_1_parameter_1a3ec2c4a4da29908a2e69de9187325a11" prot="public" virt="non-virtual"><scope>CANopen::Parameter</scope><name>operator=</name></member>
+      <member refid="struct_c_a_nopen_1_1_parameter_1ae2f287d5d0abc2b4693d3ec81b53cdd1" prot="public" virt="non-virtual"><scope>CANopen::Parameter</scope><name>operator=</name></member>
+      <member refid="struct_c_a_nopen_1_1_parameter_1aea3dee9f4e137c2e5627d23836f18a6b" prot="public" virt="non-virtual"><scope>CANopen::Parameter</scope><name>operator=</name></member>
+      <member refid="struct_c_a_nopen_1_1_parameter_1ad72cd626ccab044f0295b092d41668ca" prot="public" virt="non-virtual"><scope>CANopen::Parameter</scope><name>operator=</name></member>
+      <member refid="struct_c_a_nopen_1_1_parameter_1a77c306435be2eaf34c1ceb15edd559ff" prot="public" virt="non-virtual"><scope>CANopen::Parameter</scope><name>operator=</name></member>
+      <member refid="struct_c_a_nopen_1_1_parameter_1a9984a99c5627b35e3bbe3992a2f6bad2" prot="public" virt="non-virtual"><scope>CANopen::Parameter</scope><name>operator=</name></member>
+      <member refid="struct_c_a_nopen_1_1_parameter_1aa7232c26e1cf4daa3e5719007872ddc5" prot="public" virt="non-virtual"><scope>CANopen::Parameter</scope><name>param_cb_t</name></member>
+      <member refid="struct_c_a_nopen_1_1_parameter_1a7d11792f2b06d2d836bc29b8298a9916" prot="public" virt="non-virtual"><scope>CANopen::Parameter</scope><name>Parameter</name></member>
+      <member refid="struct_c_a_nopen_1_1_parameter_1ab53571d27af3fba545a250f87320aa64" prot="public" virt="non-virtual"><scope>CANopen::Parameter</scope><name>Parameter</name></member>
+      <member refid="struct_c_a_nopen_1_1_parameter_1ac2e3642934ae7736c045e70b0e08e83c" prot="public" virt="non-virtual"><scope>CANopen::Parameter</scope><name>Parameter</name></member>
+      <member refid="struct_c_a_nopen_1_1_parameter_1a0b5d5729fe8b242797e0ab7b49d4519d" prot="public" virt="non-virtual"><scope>CANopen::Parameter</scope><name>payload</name></member>
+      <member refid="struct_c_a_nopen_1_1_parameter_1a4870a26654749daa1ef95bdcb6d01d59a1c5da340e64a4c5f0b83b7a423d6c6ad" prot="public" virt="non-virtual"><scope>CANopen::Parameter</scope><name>PDO1Receive</name></member>
+      <member refid="struct_c_a_nopen_1_1_parameter_1a4870a26654749daa1ef95bdcb6d01d59a974ac3668332f61bdc693759a935961c" prot="public" virt="non-virtual"><scope>CANopen::Parameter</scope><name>PDO1Transmit</name></member>
+      <member refid="struct_c_a_nopen_1_1_parameter_1a4870a26654749daa1ef95bdcb6d01d59a4d4a2071af2074e9f0eaeebcfb224b6d" prot="public" virt="non-virtual"><scope>CANopen::Parameter</scope><name>PDO2Receive</name></member>
+      <member refid="struct_c_a_nopen_1_1_parameter_1a4870a26654749daa1ef95bdcb6d01d59adedfa8a7a9f737cfab1f4d25019494cb" prot="public" virt="non-virtual"><scope>CANopen::Parameter</scope><name>PDO2Transmit</name></member>
+      <member refid="struct_c_a_nopen_1_1_parameter_1a4870a26654749daa1ef95bdcb6d01d59a8bd4f75f9862ef90b05ed660c55f8701" prot="public" virt="non-virtual"><scope>CANopen::Parameter</scope><name>PDO3Receive</name></member>
+      <member refid="struct_c_a_nopen_1_1_parameter_1a4870a26654749daa1ef95bdcb6d01d59ae18c92cef48b3ed4f9ccc9e3fcda8cdb" prot="public" virt="non-virtual"><scope>CANopen::Parameter</scope><name>PDO3Transmit</name></member>
+      <member refid="struct_c_a_nopen_1_1_parameter_1a4870a26654749daa1ef95bdcb6d01d59a172786d8c40c3594bd359c134df6ca6e" prot="public" virt="non-virtual"><scope>CANopen::Parameter</scope><name>PDO4Receive</name></member>
+      <member refid="struct_c_a_nopen_1_1_parameter_1a4870a26654749daa1ef95bdcb6d01d59a73ee3b850ad0e4d4c9ae1d18e3bad91a" prot="public" virt="non-virtual"><scope>CANopen::Parameter</scope><name>PDO4Transmit</name></member>
+      <member refid="struct_c_a_nopen_1_1_parameter_1a69bfa86bc32a7f5141d14ee85db26773" prot="public" virt="non-virtual"><scope>CANopen::Parameter</scope><name>pdo_fn</name></member>
+      <member refid="struct_c_a_nopen_1_1_parameter_1ade3d99a7b2be1e9c098e07f32bcec078" prot="public" virt="non-virtual"><scope>CANopen::Parameter</scope><name>pdo_slot</name></member>
+      <member refid="struct_c_a_nopen_1_1_parameter_1a4870a26654749daa1ef95bdcb6d01d59" prot="public" virt="non-virtual"><scope>CANopen::Parameter</scope><name>PDOFunctionCode</name></member>
+      <member refid="struct_c_a_nopen_1_1_parameter_1a6827c18c4e58298d06111557759e4c3c" prot="public" virt="non-virtual"><scope>CANopen::Parameter</scope><name>sdo_flag</name></member>
+      <member refid="struct_c_a_nopen_1_1_parameter_1a56877b06fefded5cf3353844604d59f7" prot="public" virt="non-virtual"><scope>CANopen::Parameter</scope><name>set</name></member>
+      <member refid="struct_c_a_nopen_1_1_parameter_1ab123478082ba8a41206baedb175cc19a" prot="public" virt="non-virtual"><scope>CANopen::Parameter</scope><name>size</name></member>
+      <member refid="struct_c_a_nopen_1_1_parameter_1a376778b75d8e6659d81088e159381aa8" prot="public" virt="non-virtual"><scope>CANopen::Parameter</scope><name>subindex</name></member>
+      <member refid="struct_c_a_nopen_1_1_parameter_1a5047a8b8f0dbfe120e7d4dbef4405cd4" prot="private" virt="non-virtual"><scope>CANopen::Parameter</scope><name>var</name></member>
+      <member refid="struct_c_a_nopen_1_1_parameter_1aa774dd4d265fe8d0c3eb4b845b847183" prot="public" virt="non-virtual"><scope>CANopen::Parameter</scope><name>~Parameter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

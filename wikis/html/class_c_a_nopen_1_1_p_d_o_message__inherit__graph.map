@@ -1,0 +1,5 @@
+<map id="CANopen::PDOMessage" name="CANopen::PDOMessage">
+<area shape="rect" id="node1" title="PDO Message (Process Data Object)" alt="" coords="5,160,216,189"/>
+<area shape="rect" id="node2" href="$class_c_a_nopen_1_1_message.html" title="can_frame object sent and received throught CANopen socket." alt="" coords="23,83,199,112"/>
+<area shape="rect" id="node3" title=" " alt="" coords="57,5,165,35"/>
+</map>

@@ -1,0 +1,88 @@
+\hypertarget{_c_a_nopen__socket_8h}{}\doxysection{C\+A\+Nopen\+\_\+socket.\+h File Reference}
+\label{_c_a_nopen__socket_8h}\index{CANopen\_socket.h@{CANopen\_socket.h}}
+
+
+Canopen socket able to send/receive messages through a C\+AN interface using the U\+N\+IX socket.  
+
+
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$linux/can/raw.\+h$>$}\newline
+{\ttfamily \#include $<$sys/socket.\+h$>$}\newline
+{\ttfamily \#include $<$mutex$>$}\newline
+{\ttfamily \#include $<$initializer\+\_\+list$>$}\newline
+{\ttfamily \#include \char`\"{}message.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}payload.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sdo.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pdo.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}nmt.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}emcy.\+h\char`\"{}}\newline
+Include dependency graph for C\+A\+Nopen\+\_\+socket.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_c_a_nopen__socket_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_c_a_nopen__socket_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_c_a_nopen_1_1_socket}{C\+A\+Nopen\+::\+Socket}}
+\begin{DoxyCompactList}\small\item\em C\+A\+Nopen object able to send \mbox{\hyperlink{class_c_a_nopen_1_1_message}{Message}} through a C\+AN interface using U\+N\+IX sockets. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries I\+F\+\_\+\+V\+E\+R\+B\+O\+SE}(lvl,  cmd,  m\+\_\+lvl)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_c_a_nopen__socket_8h_aaec5501be77093ddca113d18ace1a752}\label{_c_a_nopen__socket_8h_aaec5501be77093ddca113d18ace1a752}} 
+std\+::mutex {\bfseries C\+A\+Nopen\+::g\+\_\+verbose\+\_\+mutex}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Canopen socket able to send/receive messages through a C\+AN interface using the U\+N\+IX socket. 
+
+\begin{DoxyAuthor}{Author}
+Florian Richer \& Alexis Devillard 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+Definition in file \mbox{\hyperlink{_c_a_nopen__socket_8h_source}{C\+A\+Nopen\+\_\+socket.\+h}}.
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_c_a_nopen__socket_8h_a7622b11a0067cd59b30bc251db9eb298}\label{_c_a_nopen__socket_8h_a7622b11a0067cd59b30bc251db9eb298}} 
+\index{CANopen\_socket.h@{CANopen\_socket.h}!IF\_VERBOSE@{IF\_VERBOSE}}
+\index{IF\_VERBOSE@{IF\_VERBOSE}!CANopen\_socket.h@{CANopen\_socket.h}}
+\doxysubsubsection{\texorpdfstring{IF\_VERBOSE}{IF\_VERBOSE}}
+{\footnotesize\ttfamily \#define I\+F\+\_\+\+V\+E\+R\+B\+O\+SE(\begin{DoxyParamCaption}\item[{}]{lvl,  }\item[{}]{cmd,  }\item[{}]{m\+\_\+lvl }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (m\_lvl >= lvl) \{ \(\backslash\)}
+\DoxyCodeLine{        CANopen::g\_verbose\_mutex.lock(); \(\backslash\)}
+\DoxyCodeLine{        cmd;                      \(\backslash\)}
+\DoxyCodeLine{        CANopen::g\_verbose\_mutex.unlock(); \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{_c_a_nopen__socket_8h_source_l00026}{26}} of file \mbox{\hyperlink{_c_a_nopen__socket_8h_source}{C\+A\+Nopen\+\_\+socket.\+h}}.
+

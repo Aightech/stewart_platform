@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="md__home_adev__documents__s_t_e_c_h_stewart_platform_lib_lxm32_lib_canopen__r_e_a_d_m_e" kind="page">
+    <compoundname>md__home_adev_Documents_STECH_stewart_platform_lib_lxm32_lib_canopen_README</compoundname>
+    <title>canopen</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><heading level="1">Information</heading>
+</para>
+<para><itemizedlist>
+<listitem><para><bold>Brief</bold>: Canopen object able to send command through a CAN interface using the UNIX socket.</para>
+</listitem><listitem><para><bold>Languages</bold>: C++</para>
+</listitem><listitem><para><bold>Libraries</bold>:</para>
+</listitem><listitem><para><bold>Note</bold>: /</para>
+</listitem><listitem><para><bold>Compatibility</bold>:</para>
+</listitem></itemizedlist>
+</para>
+<para><table rows="2" cols="3"><row>
+<entry thead="yes"><para>Ubuntu </para>
+</entry><entry thead="yes"><para>Window10 </para>
+</entry><entry thead="yes"><para>MacOS  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>:heavy_check_mark: </para>
+</entry><entry thead="no"><para>:grey_question: </para>
+</entry><entry thead="no"><para>:grey_question:  </para>
+</entry></row>
+</table>
+</para>
+<para><heading level="1">Building</heading>
+</para>
+<para><heading level="2">Ubuntu</heading>
+</para>
+<para><heading level="3">Steps</heading>
+</para>
+<para><itemizedlist>
+<listitem><para>Clone the repository and go inside. <programlisting filename=".bash"><codeline><highlight class="normal">git<sp/>clone<sp/>https://gitlab-dev.isir.upmc.fr/devillard/canopen.git<sp/>&amp;&amp;<sp/>cd<sp/>canpen</highlight></codeline>
+</programlisting></para>
+</listitem><listitem><para>Create a build directory and go inside.</para>
+</listitem><listitem><para>Configure the project.</para>
+</listitem><listitem><para>Build the project. <programlisting filename=".bash"><codeline><highlight class="normal">mkdir<sp/>build<sp/>&amp;&amp;<sp/>cd<sp/>build<sp/>&amp;&amp;<sp/>cmake<sp/>..<sp/>&amp;&amp;<sp/>cmake<sp/>--build<sp/>.</highlight></codeline>
+</programlisting></para>
+</listitem></itemizedlist>
+</para>
+<para><heading level="3">Testing</heading>
+</para>
+<para><heading level="4">Install can tools</heading>
+</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">sudo<sp/>apt<sp/>install<sp/>can-utilis</highlight></codeline>
+</programlisting></para>
+<para><heading level="4">Setup a virtual CAN bus</heading>
+</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">sudo<sp/>ip<sp/>link<sp/>add<sp/>dev<sp/>vcan0<sp/>type<sp/>vcan<sp/>&amp;&amp;<sp/>ip<sp/>link<sp/>set<sp/>up<sp/>vcan0</highlight></codeline>
+</programlisting></para>
+<para><heading level="4">Listen to the CAN bus</heading>
+</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">candump<sp/>vcan0</highlight></codeline>
+</programlisting></para>
+<para><heading level="1">Canopen program</heading>
+</para>
+<para>The executable file canopen enable you to send SDO message to a CAN bus. <heading level="2">usage:</heading>
+</para>
+<para>./canopen ifname 0xindex 0xsub [ size base data ]</para>
+<para>Arg: ifname : CAN interface name 0xindex : Object register index 0xsub : Object register subindex size : Data size (number of bytes) base : Numerical base of the value passed. data : Value to write.</para>
+<para>Ex: To read register 0x1000:2 of node 4 on &quot;can0&quot;: ./canopen can0 4 1000 2</para>
+<para>To write in register 0x2000:F of node 3 the value 0x1234 on &quot;can0&quot;: ./canopen can0 3 2000 F 2 x 1234 </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

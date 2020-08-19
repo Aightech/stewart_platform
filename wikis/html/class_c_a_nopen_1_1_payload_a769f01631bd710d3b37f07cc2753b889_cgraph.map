@@ -1,0 +1,4 @@
+<map id="CANopen::Payload::Payload" name="CANopen::Payload::Payload">
+<area shape="rect" id="node1" title="Payload Constructor from a standard data type variable. It transfrom the n bytes of the data into a a..." alt="" coords="5,5,244,35"/>
+<area shape="rect" id="node2" href="$class_c_a_nopen_1_1_payload.html#aef05ef8cfc8b9ba4170891f3168a726b" title="value Returns the data casted as a variable of type T" alt="" coords="292,5,512,35"/>
+</map>

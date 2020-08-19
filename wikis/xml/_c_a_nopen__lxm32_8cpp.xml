@@ -1,0 +1,224 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="_c_a_nopen__lxm32_8cpp" kind="file" language="C++">
+    <compoundname>CANopen_lxm32.cpp</compoundname>
+    <includes refid="_c_a_nopen__lxm32_8h" local="yes">CANopen_lxm32.h</includes>
+    <incdepgraph>
+      <node id="21">
+        <label>emcy.h</label>
+        <link refid="emcy_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>cstdint</label>
+      </node>
+      <node id="19">
+        <label>pdo.h</label>
+        <link refid="pdo_8h_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>cmath</label>
+      </node>
+      <node id="15">
+        <label>stdexcept</label>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="7">
+        <label>linux/can/raw.h</label>
+      </node>
+      <node id="25">
+        <label>map</label>
+      </node>
+      <node id="22">
+        <label>parameter.h</label>
+        <link refid="parameter_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>linux/can.h</label>
+      </node>
+      <node id="4">
+        <label>CANopen_socket.h</label>
+        <link refid="_c_a_nopen__socket_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>unistd.h</label>
+      </node>
+      <node id="16">
+        <label>vector</label>
+      </node>
+      <node id="18">
+        <label>sdo.h</label>
+        <link refid="sdo_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>sstream</label>
+      </node>
+      <node id="2">
+        <label>CANopen_lxm32.h</label>
+        <link refid="_c_a_nopen__lxm32_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>nmt.h</label>
+        <link refid="nmt_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>iostream</label>
+      </node>
+      <node id="11">
+        <label>message.h</label>
+        <link refid="message_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>mutex</label>
+      </node>
+      <node id="8">
+        <label>sys/socket.h</label>
+      </node>
+      <node id="3">
+        <label>CANopen_driver.h</label>
+        <link refid="_c_a_nopen__driver_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>thread</label>
+      </node>
+      <node id="23">
+        <label>algorithm</label>
+      </node>
+      <node id="1">
+        <label>CANopen_lxm32.cpp</label>
+        <link refid="_c_a_nopen__lxm32_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>payload.h</label>
+        <link refid="payload_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>memory</label>
+      </node>
+      <node id="10">
+        <label>initializer_list</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_c_a_nopen__lxm32_8h" kindref="compound">CANopen_lxm32.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="class_c_a_nopen_1_1_l_x_m32_1a30aafa4f881079e83bcb9de63f26c30e" refkind="member"><highlight class="normal"><ref refid="class_c_a_nopen_1_1_l_x_m32_1a30aafa4f881079e83bcb9de63f26c30e" kindref="member">CANopen::LXM32::LXM32</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*ifname,<sp/>uint16_t<sp/>can_id,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>verbose)</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/>:<sp/><ref refid="class_c_a_nopen_1_1_driver" kindref="compound">Driver</ref>(ifname,can_id,verbose)<sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="class_c_a_nopen_1_1_l_x_m32_1a04d84237ca467e2a3f39370b1183293c" refkind="member"><highlight class="normal"><ref refid="class_c_a_nopen_1_1_l_x_m32_1a04d84237ca467e2a3f39370b1183293c" kindref="member">CANopen::LXM32::set_angle</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ang,</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>absolute,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>radian)</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>target<sp/>=<sp/>ang*nb_index_per_turn/((radian)?2*M_PI:360.0f);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;set_position(target,<sp/>absolute);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="class_c_a_nopen_1_1_l_x_m32_1a40b15f47ae3270b987bc8eb8004b4c92" refkind="member"><highlight class="normal"><ref refid="class_c_a_nopen_1_1_l_x_m32_1a40b15f47ae3270b987bc8eb8004b4c92" kindref="member">CANopen::LXM32::get_angle</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>radian)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>get_position()*((radian)?2*M_PI:360.0f)/nb_index_per_turn;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/src/CANopen_lxm32.cpp"/>
+  </compounddef>
+</doxygen>

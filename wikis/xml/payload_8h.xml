@@ -1,0 +1,333 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="payload_8h" kind="file" language="C++">
+    <compoundname>payload.h</compoundname>
+    <includes local="no">cstdint</includes>
+    <includes local="no">sstream</includes>
+    <includes local="no">stdexcept</includes>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="message_8h" local="yes">message.h</includedby>
+    <includedby refid="_c_a_nopen__socket_8h" local="yes">CANopen_socket.h</includedby>
+    <includedby refid="payload_8cpp" local="yes">payload.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>cstdint</label>
+      </node>
+      <node id="4">
+        <label>stdexcept</label>
+      </node>
+      <node id="5">
+        <label>string</label>
+      </node>
+      <node id="6">
+        <label>vector</label>
+      </node>
+      <node id="3">
+        <label>sstream</label>
+      </node>
+      <node id="1">
+        <label>payload.h</label>
+        <link refid="payload_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="13">
+        <label>CANopen_driver.cpp</label>
+        <link refid="_c_a_nopen__driver_8cpp_source"/>
+      </node>
+      <node id="16">
+        <label>CANopen_socket.cpp</label>
+        <link refid="_c_a_nopen__socket_8cpp_source"/>
+      </node>
+      <node id="24">
+        <label>emcy.h</label>
+        <link refid="emcy_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>parameter.cpp</label>
+        <link refid="parameter_8cpp_source"/>
+      </node>
+      <node id="23">
+        <label>nmt.cpp</label>
+        <link refid="nmt_8cpp_source"/>
+      </node>
+      <node id="19">
+        <label>pdo.h</label>
+        <link refid="pdo_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>pdo.cpp</label>
+        <link refid="pdo_8cpp_source"/>
+      </node>
+      <node id="9">
+        <label>mainwindow.cpp</label>
+        <link refid="mainwindow_8cpp_source"/>
+      </node>
+      <node id="14">
+        <label>parameter.h</label>
+        <link refid="parameter_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>platform.cpp</label>
+        <link refid="platform_8cpp_source"/>
+      </node>
+      <node id="8">
+        <label>main.cpp</label>
+        <link refid="src_2main_8cpp_source"/>
+      </node>
+      <node id="17">
+        <label>main.cpp</label>
+        <link refid="lib_2lxm32_2lib_2canopen_2src_2main_8cpp_source"/>
+      </node>
+      <node id="3">
+        <label>CANopen_socket.h</label>
+        <link refid="_c_a_nopen__socket_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>message.cpp</label>
+        <link refid="message_8cpp_source"/>
+      </node>
+      <node id="18">
+        <label>sdo.h</label>
+        <link refid="sdo_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>platform.hpp</label>
+        <link refid="platform_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>CANopen_lxm32.h</label>
+        <link refid="_c_a_nopen__lxm32_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>sdo.cpp</label>
+        <link refid="sdo_8cpp_source"/>
+      </node>
+      <node id="22">
+        <label>nmt.h</label>
+        <link refid="nmt_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>message.h</label>
+        <link refid="message_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>CANopen_driver.h</label>
+        <link refid="_c_a_nopen__driver_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>mainwindow.h</label>
+        <link refid="mainwindow_8h_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>main.cpp</label>
+        <link refid="lib_2lxm32_2src_2main_8cpp_source"/>
+      </node>
+      <node id="25">
+        <label>emcy.cpp</label>
+        <link refid="emcy_8cpp_source"/>
+      </node>
+      <node id="27">
+        <label>payload.cpp</label>
+        <link refid="payload_8cpp_source"/>
+      </node>
+      <node id="11">
+        <label>CANopen_lxm32.cpp</label>
+        <link refid="_c_a_nopen__lxm32_8cpp_source"/>
+      </node>
+      <node id="1">
+        <label>payload.h</label>
+        <link refid="payload_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_c_a_nopen_1_1_payload" prot="public">CANopen::Payload</innerclass>
+    <innernamespace refid="namespace_c_a_nopen">CANopen</innernamespace>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="payload_8h_1ae70f4d583f8731e7bffe4f75957da939" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;out, const CANopen::Payload &amp;p)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_c_a_nopen_1_1_payload" kindref="compound">CANopen::Payload</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/include/payload.h" line="104" column="1" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/src/payload.cpp" bodystart="25" bodyend="28" declfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/include/payload.h" declline="104" declcolumn="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Payload of CANopen message: array of 1 to 8 bytes of data. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Florian Richer &amp; Alexis Devillard </para>
+</simplesect>
+<simplesect kind="version"><para>1.0 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_CANOPEN_PAYLOAD_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_CANOPEN_PAYLOAD_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdexcept&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">CANopen<sp/>{</highlight></codeline>
+<codeline lineno="22" refid="class_c_a_nopen_1_1_payload" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_c_a_nopen_1_1_payload" kindref="compound">Payload</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>std::vector&lt;uint8_t&gt;<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_payload" kindref="compound">Payload</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_payload" kindref="compound">Payload</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_c_a_nopen_1_1_payload" kindref="compound">Payload</ref><sp/>&amp;)<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_payload" kindref="compound">Payload</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;uint8_t&gt;<sp/>&amp;other);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="33" refid="class_c_a_nopen_1_1_payload_1a769f01631bd710d3b37f07cc2753b889" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_payload_1a769f01631bd710d3b37f07cc2753b889" kindref="member">Payload</ref>(T<sp/><ref refid="class_c_a_nopen_1_1_payload_1aef05ef8cfc8b9ba4170891f3168a726b" kindref="member">value</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(T);<sp/>i++)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>push_back(*((uint8_t<sp/>*)(&amp;<ref refid="class_c_a_nopen_1_1_payload_1aef05ef8cfc8b9ba4170891f3168a726b" kindref="member">value</ref>)<sp/>+<sp/>i));</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_payload" kindref="compound">Payload</ref><sp/>&amp;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_c_a_nopen_1_1_payload" kindref="compound">Payload</ref><sp/>&amp;)<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>T<sp/>&amp;</highlight></codeline>
+<codeline lineno="48" refid="class_c_a_nopen_1_1_payload_1aef05ef8cfc8b9ba4170891f3168a726b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_payload_1aef05ef8cfc8b9ba4170891f3168a726b" kindref="member">value</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>begin<sp/>=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(empty())</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(std::string(</highlight><highlight class="stringliteral">&quot;Empty<sp/>payload.&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*(T<sp/>*)(data()<sp/>+<sp/>begin);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_payload" kindref="compound">Payload</ref><sp/>&amp;</highlight></codeline>
+<codeline lineno="62" refid="class_c_a_nopen_1_1_payload_1aeb41b12a7903cb5dee4d2f5ccd1d3f15" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_payload_1aeb41b12a7903cb5dee4d2f5ccd1d3f15" kindref="member">operator&lt;&lt;</ref>(T<sp/>&amp;&amp;<ref refid="class_c_a_nopen_1_1_payload_1aef05ef8cfc8b9ba4170891f3168a726b" kindref="member">value</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(T);<sp/>i++)</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>push_back(*((uint8_t<sp/>*)(&amp;<ref refid="class_c_a_nopen_1_1_payload_1aef05ef8cfc8b9ba4170891f3168a726b" kindref="member">value</ref>)<sp/>+<sp/>i));</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_payload" kindref="compound">Payload</ref><sp/>&amp;</highlight></codeline>
+<codeline lineno="74" refid="class_c_a_nopen_1_1_payload_1ae8e5f1160cc9d6578a315a455d305469" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_payload_1aeb41b12a7903cb5dee4d2f5ccd1d3f15" kindref="member">operator&lt;&lt;</ref>(<ref refid="class_c_a_nopen_1_1_payload" kindref="compound">Payload</ref><sp/>&amp;&amp;p)<sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>p.size();<sp/>i++)</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>push_back(*((uint8_t<sp/>*)(&amp;p[i])));</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_payload" kindref="compound">Payload</ref><sp/>&amp;</highlight></codeline>
+<codeline lineno="87" refid="class_c_a_nopen_1_1_payload_1a4d25baad973a414a3b160f366bb92153" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_payload_1a4d25baad973a414a3b160f366bb92153" kindref="member">store_at</ref>(<ref refid="class_c_a_nopen_1_1_payload" kindref="compound">Payload</ref><sp/>&amp;&amp;p,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>slot)<sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>this-&gt;size();<sp/>i<sp/>&lt;<sp/>slot<sp/>;<sp/>i++)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;push_back(0);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>slot;<sp/>i<sp/>&lt;<sp/>slot<sp/>+<sp/>p.size();<sp/>i++)</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(i<sp/>&lt;<sp/>this-&gt;size())</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*this)[i]=*((uint8_t<sp/>*)(&amp;p[i]));</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;push_back(*((uint8_t<sp/>*)(&amp;p[i-slot])));</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/>std::string()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>CANopen</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal">std::ostream<sp/>&amp;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">operator&lt;&lt;(std::ostream<sp/>&amp;out,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_c_a_nopen_1_1_payload" kindref="compound">CANopen::Payload</ref><sp/>&amp;p);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>_CANOPEN_PAYLOAD_H_</highlight></codeline>
+    </programlisting>
+    <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/include/payload.h"/>
+  </compounddef>
+</doxygen>

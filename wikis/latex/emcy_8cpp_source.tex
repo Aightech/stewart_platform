@@ -1,0 +1,27 @@
+\hypertarget{emcy_8cpp_source}{}\doxysection{emcy.\+cpp}
+\label{emcy_8cpp_source}\index{emcy.cpp@{emcy.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{emcy_8h}{emcy.h}}"}}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 \textcolor{keyword}{namespace }CANopen \{}
+\DoxyCodeLine{00004 EMCYMessage::EMCYMessage(\textcolor{keyword}{const} can\_frame\& other)}
+\DoxyCodeLine{00005     : Message(other)}
+\DoxyCodeLine{00006 \{}
+\DoxyCodeLine{00007 \}}
+\DoxyCodeLine{00008 }
+\DoxyCodeLine{00009 }
+\DoxyCodeLine{00010 uint16\_t}
+\DoxyCodeLine{00011 EMCYMessage::code()\textcolor{keyword}{ const}}
+\DoxyCodeLine{00012 \textcolor{keyword}{}\{}
+\DoxyCodeLine{00013     \textcolor{keywordflow}{return} data[0] + (data[1] << 8);}
+\DoxyCodeLine{00014 \}}
+\DoxyCodeLine{00015 }
+\DoxyCodeLine{00016 uint8\_t}
+\DoxyCodeLine{00017 EMCYMessage::reg()\textcolor{keyword}{ const}}
+\DoxyCodeLine{00018 \textcolor{keyword}{}\{}
+\DoxyCodeLine{00019     \textcolor{keywordflow}{return} data[2];}
+\DoxyCodeLine{00020 \}}
+\DoxyCodeLine{00021 \}}
+
+\end{DoxyCode}

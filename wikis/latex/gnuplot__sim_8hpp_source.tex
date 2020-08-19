@@ -1,0 +1,76 @@
+\hypertarget{gnuplot__sim_8hpp_source}{}\doxysection{gnuplot\+\_\+sim.\+hpp}
+\label{gnuplot__sim_8hpp_source}\index{gnuplot\_sim.hpp@{gnuplot\_sim.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#ifndef \_GNUPLOT\_SIM\_H\_}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#define \_GNUPLOT\_SIM\_H\_}}
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#define GNUPLOT\_ENABLE\_PTY}}
+\DoxyCodeLine{00004 \textcolor{preprocessor}{\#include "gnuplot-\/iostream.h"}}
+\DoxyCodeLine{00005 \textcolor{preprocessor}{\#include "model.hpp"}}
+\DoxyCodeLine{00006 }
+\DoxyCodeLine{00007 \textcolor{keyword}{namespace }stp}
+\DoxyCodeLine{00008 \{}
+\DoxyCodeLine{00009 }
+\DoxyCodeLine{00010 }
+\DoxyCodeLine{\Hypertarget{gnuplot__sim_8hpp_source_l00011}\mbox{\hyperlink{classstp_1_1_gnuplot__sim}{00011}} \textcolor{keyword}{class }\mbox{\hyperlink{classstp_1_1_gnuplot__sim}{Gnuplot\_sim}} : \textcolor{keyword}{public} \mbox{\hyperlink{classstp_1_1_model}{Model}}}
+\DoxyCodeLine{00012 \{}
+\DoxyCodeLine{00013     \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014     \mbox{\hyperlink{classstp_1_1_gnuplot__sim}{Gnuplot\_sim}}(\textcolor{keywordtype}{double} deltas[4], \textcolor{keywordtype}{double} a, \textcolor{keywordtype}{double} l) : \mbox{\hyperlink{classstp_1_1_model}{Model}}(deltas, a, l)}
+\DoxyCodeLine{00015     \{}
+\DoxyCodeLine{00016         \textcolor{comment}{//setup the vector used to draw the platform}}
+\DoxyCodeLine{00017         m\_plot.P.resize(6);}
+\DoxyCodeLine{00018         m\_plot.B.resize(6);}
+\DoxyCodeLine{00019         m\_plot.A.resize(6);}
+\DoxyCodeLine{00020         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < NB\_LEGS; i++)}
+\DoxyCodeLine{00021         \{}
+\DoxyCodeLine{00022             m\_plot.P[i].resize(3);}
+\DoxyCodeLine{00023             m\_plot.B[i].resize(3);}
+\DoxyCodeLine{00024             m\_plot.B[i].assign(\&(\mbox{\hyperlink{classstp_1_1_model_ad1f36bbb9a3f9aac7054b991bb02fe70}{m\_B}}[i][0]), \&(\mbox{\hyperlink{classstp_1_1_model_ad1f36bbb9a3f9aac7054b991bb02fe70}{m\_B}}[i][3]));}
+\DoxyCodeLine{00025             m\_plot.A[i].resize(3);}
+\DoxyCodeLine{00026         \}}
+\DoxyCodeLine{00027     \};}
+\DoxyCodeLine{00028 }
+\DoxyCodeLine{00029     \textcolor{keywordtype}{double} *}
+\DoxyCodeLine{00030     new\_pos(\textcolor{keywordtype}{double} T[3], \textcolor{keywordtype}{double} theta[3])}
+\DoxyCodeLine{00031     \{}
+\DoxyCodeLine{00032 }
+\DoxyCodeLine{00033         Model::new\_pos(T, theta);}
+\DoxyCodeLine{00034         update\_draw();}
+\DoxyCodeLine{00035         \textcolor{keywordflow}{return} \mbox{\hyperlink{classstp_1_1_model_a8faca0ba2206f1ac384b80b2223a0c34}{m\_alpha}};}
+\DoxyCodeLine{00036     \};}
+\DoxyCodeLine{00037 }
+\DoxyCodeLine{00038     \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00039     update\_draw()}
+\DoxyCodeLine{00040     \{}
+\DoxyCodeLine{00041         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < NB\_LEGS; i++)}
+\DoxyCodeLine{00042         \{}
+\DoxyCodeLine{00043 }
+\DoxyCodeLine{00044             \mbox{\hyperlink{classstp_1_1_model_a4aaa7aee9ac9d9903d29d06cf15ed601}{m\_A}}[i][0] = m\_a * cos(\mbox{\hyperlink{classstp_1_1_model_a8faca0ba2206f1ac384b80b2223a0c34}{m\_alpha}}[i]) * cos(\mbox{\hyperlink{classstp_1_1_model_a0dde329f8445840075590404c4f2c0de}{m\_beta}}[i]) + \mbox{\hyperlink{classstp_1_1_model_ad1f36bbb9a3f9aac7054b991bb02fe70}{m\_B}}[i][0];}
+\DoxyCodeLine{00045             \mbox{\hyperlink{classstp_1_1_model_a4aaa7aee9ac9d9903d29d06cf15ed601}{m\_A}}[i][1] = m\_a * cos(\mbox{\hyperlink{classstp_1_1_model_a8faca0ba2206f1ac384b80b2223a0c34}{m\_alpha}}[i]) * sin(\mbox{\hyperlink{classstp_1_1_model_a0dde329f8445840075590404c4f2c0de}{m\_beta}}[i]) + \mbox{\hyperlink{classstp_1_1_model_ad1f36bbb9a3f9aac7054b991bb02fe70}{m\_B}}[i][1];}
+\DoxyCodeLine{00046             \mbox{\hyperlink{classstp_1_1_model_a4aaa7aee9ac9d9903d29d06cf15ed601}{m\_A}}[i][2] = m\_a * sin(\mbox{\hyperlink{classstp_1_1_model_a8faca0ba2206f1ac384b80b2223a0c34}{m\_alpha}}[i]) + \mbox{\hyperlink{classstp_1_1_model_ad1f36bbb9a3f9aac7054b991bb02fe70}{m\_B}}[i][2];}
+\DoxyCodeLine{00047             m\_plot.A[i].assign(\&(\mbox{\hyperlink{classstp_1_1_model_a4aaa7aee9ac9d9903d29d06cf15ed601}{m\_A}}[i][0]), \&(\mbox{\hyperlink{classstp_1_1_model_a4aaa7aee9ac9d9903d29d06cf15ed601}{m\_A}}[i][3]));}
+\DoxyCodeLine{00048 }
+\DoxyCodeLine{00049             m\_plot.P[i].assign(\&(\mbox{\hyperlink{classstp_1_1_model_a773d6f9a6ee4f6dd580229e0dc3d741c}{m\_P}}[i][0]), \&(\mbox{\hyperlink{classstp_1_1_model_a773d6f9a6ee4f6dd580229e0dc3d741c}{m\_P}}[i][3]));}
+\DoxyCodeLine{00050         \}}
+\DoxyCodeLine{00051         draw();}
+\DoxyCodeLine{00052     \}}
+\DoxyCodeLine{00053 }
+\DoxyCodeLine{00054     \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00055     draw();}
+\DoxyCodeLine{00056 }
+\DoxyCodeLine{00057     \textcolor{keyword}{private}:}
+\DoxyCodeLine{00058     \textcolor{keyword}{struct }Plot}
+\DoxyCodeLine{00059     \{}
+\DoxyCodeLine{00060         Gnuplot gp;}
+\DoxyCodeLine{00061         std::vector<std::vector<double>> P;}
+\DoxyCodeLine{00062         std::vector<std::vector<double>> A;}
+\DoxyCodeLine{00063         std::vector<std::vector<double>> B;}
+\DoxyCodeLine{00064     \};}
+\DoxyCodeLine{00065     Plot m\_plot;}
+\DoxyCodeLine{00066 \};}
+\DoxyCodeLine{00067 }
+\DoxyCodeLine{00068 \}}
+\DoxyCodeLine{00069 }
+\DoxyCodeLine{00070 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

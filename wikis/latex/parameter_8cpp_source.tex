@@ -1,0 +1,52 @@
+\hypertarget{parameter_8cpp_source}{}\doxysection{parameter.\+cpp}
+\label{parameter_8cpp_source}\index{parameter.cpp@{parameter.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{parameter_8h}{parameter.h}}"}}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{parameter_8cpp_source_l00004}\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a6f66686b516733d6506e8efdedd67862}{00004}} \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a6f66686b516733d6506e8efdedd67862}{CANopen::Parameter::link\_to\_pdo}}(\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a4870a26654749daa1ef95bdcb6d01d59}{PDOFunctionCode}} fn, int8\_t slot) \{}
+\DoxyCodeLine{00005 }
+\DoxyCodeLine{00006     \textcolor{keywordflow}{if}(pdo\_slot == -\/1) \{}
+\DoxyCodeLine{00007         pdo\_fn = fn;}
+\DoxyCodeLine{00008         pdo\_slot = slot;}
+\DoxyCodeLine{00009     \}}
+\DoxyCodeLine{00010     }
+\DoxyCodeLine{00011 \};}
+\DoxyCodeLine{00012 }
+\DoxyCodeLine{00013 \textcolor{keywordtype}{bool}}
+\DoxyCodeLine{\Hypertarget{parameter_8cpp_source_l00014}\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a2a80caa7af7b8df1ee93999e27f493f6}{00014}} \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a2a80caa7af7b8df1ee93999e27f493f6}{CANopen::Parameter::from\_payload}}(\mbox{\hyperlink{class_c_a_nopen_1_1_payload}{Payload}} \&p, \textcolor{keywordtype}{int} slot, \textcolor{keywordtype}{bool} received\_data) \{}
+\DoxyCodeLine{00015     \textcolor{keywordflow}{if}(slot + size <= p.size()) \{ \textcolor{comment}{//ensure the payload contain the data.}}
+\DoxyCodeLine{00016         \textcolor{keywordflow}{switch}(size) \{         \textcolor{comment}{//store the received value in the coresponding parameter (with the right size)}}
+\DoxyCodeLine{00017         \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{00018             \textcolor{keywordflow}{return} set(p.\mbox{\hyperlink{class_c_a_nopen_1_1_payload_aef05ef8cfc8b9ba4170891f3168a726b}{value}}<uint8\_t>(slot),\textcolor{keyword}{true},received\_data);}
+\DoxyCodeLine{00019         \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{00020             \textcolor{keywordflow}{return} set(p.\mbox{\hyperlink{class_c_a_nopen_1_1_payload_aef05ef8cfc8b9ba4170891f3168a726b}{value}}<uint16\_t>(slot),\textcolor{keyword}{true},received\_data);}
+\DoxyCodeLine{00021         \textcolor{keywordflow}{case} 4:}
+\DoxyCodeLine{00022             \textcolor{keywordflow}{return} set(p.\mbox{\hyperlink{class_c_a_nopen_1_1_payload_aef05ef8cfc8b9ba4170891f3168a726b}{value}}<uint32\_t>(slot),\textcolor{keyword}{true},received\_data);}
+\DoxyCodeLine{00023         \}}
+\DoxyCodeLine{00024     \}}
+\DoxyCodeLine{00025     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00026 \}}
+\DoxyCodeLine{00027 }
+\DoxyCodeLine{00028 \mbox{\hyperlink{class_c_a_nopen_1_1_payload}{CANopen::Payload}}}
+\DoxyCodeLine{\Hypertarget{parameter_8cpp_source_l00029}\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a0b5d5729fe8b242797e0ab7b49d4519d}{00029}} \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a0b5d5729fe8b242797e0ab7b49d4519d}{CANopen::Parameter::payload}}(\textcolor{keywordtype}{bool}* should\_be\_sent) \{}
+\DoxyCodeLine{00030     \textcolor{keyword}{const} std::lock\_guard<std::mutex> lock(mutex);}
+\DoxyCodeLine{00031     \textcolor{keywordflow}{if}(should\_be\_sent!=\textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00032     \{}
+\DoxyCodeLine{00033         *should\_be\_sent=m\_should\_be\_sent;}
+\DoxyCodeLine{00034         m\_should\_be\_sent = \textcolor{keyword}{false};}
+\DoxyCodeLine{00035     \}}
+\DoxyCodeLine{00036     \textcolor{keywordflow}{return} std::vector<uint8\_t>((uint8\_t *)var, (uint8\_t *)var + size);}
+\DoxyCodeLine{00037 \};}
+\DoxyCodeLine{00038 }
+\DoxyCodeLine{00039 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{parameter_8cpp_source_l00040}\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a6423121211fcdcdfc086d36217872fce}{00040}} \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a6423121211fcdcdfc086d36217872fce}{CANopen::Parameter::callback}}()}
+\DoxyCodeLine{00041 \{}
+\DoxyCodeLine{00042     \textcolor{keywordflow}{if}(\_cb!=\textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00043     \{}
+\DoxyCodeLine{00044         \_cb(\textcolor{keyword}{this});}
+\DoxyCodeLine{00045     \}}
+\DoxyCodeLine{00046 \}}
+
+\end{DoxyCode}

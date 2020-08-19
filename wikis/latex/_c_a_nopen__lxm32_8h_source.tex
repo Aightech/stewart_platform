@@ -1,0 +1,36 @@
+\hypertarget{_c_a_nopen__lxm32_8h_source}{}\doxysection{C\+A\+Nopen\+\_\+lxm32.\+h}
+\label{_c_a_nopen__lxm32_8h_source}\index{CANopen\_lxm32.h@{CANopen\_lxm32.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#ifndef \_LEXIUM32A\_CANOPEN\_H\_}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#define \_LEXIUM32A\_CANOPEN\_H\_}}
+\DoxyCodeLine{00003 }
+\DoxyCodeLine{00011 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{_c_a_nopen__driver_8h}{CANopen\_driver.h}}"}}
+\DoxyCodeLine{00012 }
+\DoxyCodeLine{00013 \textcolor{preprocessor}{\#include <cmath>}}
+\DoxyCodeLine{00014 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{00015 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{00016 \textcolor{preprocessor}{\#include <unistd.h>}}
+\DoxyCodeLine{00017 }
+\DoxyCodeLine{00018 \textcolor{keyword}{namespace }CANopen \{}
+\DoxyCodeLine{\Hypertarget{_c_a_nopen__lxm32_8h_source_l00022}\mbox{\hyperlink{class_c_a_nopen_1_1_l_x_m32}{00022}} \textcolor{keyword}{class }\mbox{\hyperlink{class_c_a_nopen_1_1_l_x_m32}{LXM32}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_c_a_nopen_1_1_driver}{Driver}} \{}
+\DoxyCodeLine{00023     \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030     \mbox{\hyperlink{class_c_a_nopen_1_1_l_x_m32_a30aafa4f881079e83bcb9de63f26c30e}{LXM32}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *ifname, uint16\_t can\_id, \textcolor{keywordtype}{bool} verbose = \textcolor{keyword}{false});}
+\DoxyCodeLine{00031 }
+\DoxyCodeLine{00039     \textcolor{keywordtype}{bool}}
+\DoxyCodeLine{00040     \mbox{\hyperlink{class_c_a_nopen_1_1_l_x_m32_a04d84237ca467e2a3f39370b1183293c}{set\_angle}}(\textcolor{keywordtype}{double} ang, \textcolor{keywordtype}{bool} absolute = \textcolor{keyword}{true}, \textcolor{keywordtype}{bool} radian = \textcolor{keyword}{true});}
+\DoxyCodeLine{00041 }
+\DoxyCodeLine{00047     \textcolor{keywordtype}{double}}
+\DoxyCodeLine{00048     \mbox{\hyperlink{class_c_a_nopen_1_1_l_x_m32_a40b15f47ae3270b987bc8eb8004b4c92}{get\_angle}}(\textcolor{keywordtype}{bool} radian = \textcolor{keyword}{true});}
+\DoxyCodeLine{00049 }
+\DoxyCodeLine{00050     \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00051     print\_manufacturer\_status()\{\};}
+\DoxyCodeLine{00052 }
+\DoxyCodeLine{00053 }
+\DoxyCodeLine{00054     \textcolor{keywordtype}{int} nb\_index\_per\_turn = 737280;}
+\DoxyCodeLine{00055 \};}
+\DoxyCodeLine{00056 \} \textcolor{comment}{// namespace CANopen}}
+\DoxyCodeLine{00057 }
+\DoxyCodeLine{00058 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

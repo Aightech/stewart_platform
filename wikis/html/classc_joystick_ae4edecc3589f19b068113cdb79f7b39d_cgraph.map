@@ -1,4 +1,5 @@
 <map id="cJoystick::cJoystick" name="cJoystick::cJoystick">
-<area shape="rect" id="node2" href="$classc_joystick.html#aafa52c2e4d67c71f3d1e31b80d1dd324" title="cJoystick::loop" alt="" coords="213,5,340,35"/>
-<area shape="rect" id="node3" href="$classc_joystick.html#a8c04dc903aac9588db3b3e81f495705a" title="cJoystick::readEv" alt="" coords="388,5,535,35"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,176,35"/>
+<area shape="rect" id="node2" href="$classc_joystick.html#aafa52c2e4d67c71f3d1e31b80d1dd324" title=" " alt="" coords="224,5,359,35"/>
+<area shape="rect" id="node3" href="$classc_joystick.html#a8c04dc903aac9588db3b3e81f495705a" title=" " alt="" coords="407,5,563,35"/>
 </map>

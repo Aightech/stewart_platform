@@ -1,0 +1,89 @@
+\hypertarget{model_8hpp_source}{}\doxysection{model.\+hpp}
+\label{model_8hpp_source}\index{model.hpp@{model.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#ifndef \_MODEL\_H\_}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#define \_MODEL\_H\_}}
+\DoxyCodeLine{00003 }
+\DoxyCodeLine{00004 \textcolor{preprocessor}{\#define M\_PI 3.14159265358979323846 }\textcolor{comment}{/* pi */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00005 \textcolor{preprocessor}{\#define NB\_LEGS 6}}
+\DoxyCodeLine{00006 }
+\DoxyCodeLine{00007 }
+\DoxyCodeLine{00008 \textcolor{keyword}{namespace }stp}
+\DoxyCodeLine{00009 \{}
+\DoxyCodeLine{00010 }
+\DoxyCodeLine{\Hypertarget{model_8hpp_source_l00011}\mbox{\hyperlink{classstp_1_1_model}{00011}} \textcolor{keyword}{class }\mbox{\hyperlink{classstp_1_1_model}{Model}}}
+\DoxyCodeLine{00012 \{}
+\DoxyCodeLine{00013     \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014     \mbox{\hyperlink{classstp_1_1_model}{Model}}()\{\};}
+\DoxyCodeLine{00015     \mbox{\hyperlink{classstp_1_1_model}{Model}}(\textcolor{keywordtype}{double} deltas[4], \textcolor{keywordtype}{double} a, \textcolor{keywordtype}{double} l, \textcolor{keywordtype}{int} verbose\_level=0);}
+\DoxyCodeLine{00016 }
+\DoxyCodeLine{00017     \textcolor{keywordtype}{double} *}
+\DoxyCodeLine{00018     new\_pos(\textcolor{keywordtype}{double} T[3], \textcolor{keywordtype}{double} theta[3]);}
+\DoxyCodeLine{00019 }
+\DoxyCodeLine{00020     \textcolor{keywordtype}{double}}
+\DoxyCodeLine{00021     get\_T(\textcolor{keywordtype}{int} i);}
+\DoxyCodeLine{00022 }
+\DoxyCodeLine{00023     \textcolor{keywordtype}{double}}
+\DoxyCodeLine{00024     get\_theta(\textcolor{keywordtype}{int} i);}
+\DoxyCodeLine{00025 }
+\DoxyCodeLine{00026     \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00027     init\_pos();}
+\DoxyCodeLine{00028 }
+\DoxyCodeLine{00029 }
+\DoxyCodeLine{00030     \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00031     compute\_R(\textcolor{keywordtype}{double} theta[3]);}
+\DoxyCodeLine{00032 }
+\DoxyCodeLine{00033   \textcolor{keywordtype}{void} print\_pos();}
+\DoxyCodeLine{00034 }
+\DoxyCodeLine{00035     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00036     \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00037     set\_T(\textcolor{keywordtype}{double} t0, \textcolor{keywordtype}{double} t1, \textcolor{keywordtype}{double} t2);}
+\DoxyCodeLine{00038 }
+\DoxyCodeLine{00039     \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00040     set\_T\_spd(\textcolor{keywordtype}{double} t0, \textcolor{keywordtype}{double} t1, \textcolor{keywordtype}{double} t2);}
+\DoxyCodeLine{00041 }
+\DoxyCodeLine{00042     \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00043     set\_theta(\textcolor{keywordtype}{double} t0, \textcolor{keywordtype}{double} t1, \textcolor{keywordtype}{double} t2);}
+\DoxyCodeLine{00044 }
+\DoxyCodeLine{00045     \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00046     set\_theta\_spd(\textcolor{keywordtype}{double} t0, \textcolor{keywordtype}{double} t1, \textcolor{keywordtype}{double} t2);}
+\DoxyCodeLine{00047 }
+\DoxyCodeLine{00048     \textcolor{keywordtype}{double} m\_radius[2]; }
+\DoxyCodeLine{\Hypertarget{model_8hpp_source_l00050}\mbox{\hyperlink{classstp_1_1_model_ad189b43e75b3b4a7a947e8142adce17c}{00050}}     \textcolor{keywordtype}{double} m\_a, \mbox{\hyperlink{classstp_1_1_model_ad189b43e75b3b4a7a947e8142adce17c}{m\_a2}}; }
+\DoxyCodeLine{\Hypertarget{model_8hpp_source_l00051}\mbox{\hyperlink{classstp_1_1_model_a9a16f1c28c96157d51bedbf67a1a7a81}{00051}}     \textcolor{keywordtype}{double} m\_l, \mbox{\hyperlink{classstp_1_1_model_a9a16f1c28c96157d51bedbf67a1a7a81}{m\_l2}}; }
+\DoxyCodeLine{00052     \textcolor{keywordtype}{double} \mbox{\hyperlink{classstp_1_1_model_ac031672ca5aae4c192c38b1103fdf2dd}{\_d2}}}
+\DoxyCodeLine{\Hypertarget{model_8hpp_source_l00053}\mbox{\hyperlink{classstp_1_1_model_ac031672ca5aae4c192c38b1103fdf2dd}{00053}}         [NB\_LEGS]; }
+\DoxyCodeLine{00055     \textcolor{keywordtype}{double} \mbox{\hyperlink{classstp_1_1_model_a773d6f9a6ee4f6dd580229e0dc3d741c}{m\_P}}}
+\DoxyCodeLine{00056         [NB\_LEGS]}
+\DoxyCodeLine{\Hypertarget{model_8hpp_source_l00057}\mbox{\hyperlink{classstp_1_1_model_a773d6f9a6ee4f6dd580229e0dc3d741c}{00057}}         [3]; }
+\DoxyCodeLine{00058     \textcolor{keywordtype}{double} \mbox{\hyperlink{classstp_1_1_model_a82e25ba756ecbe2f929505ef4d97b317}{m\_P1}}}
+\DoxyCodeLine{00059         [NB\_LEGS]}
+\DoxyCodeLine{\Hypertarget{model_8hpp_source_l00060}\mbox{\hyperlink{classstp_1_1_model_a82e25ba756ecbe2f929505ef4d97b317}{00060}}         [3]; }
+\DoxyCodeLine{00061     \textcolor{keywordtype}{double}}
+\DoxyCodeLine{00062         \mbox{\hyperlink{classstp_1_1_model_ad1f36bbb9a3f9aac7054b991bb02fe70}{m\_B}}[NB\_LEGS]}
+\DoxyCodeLine{\Hypertarget{model_8hpp_source_l00063}\mbox{\hyperlink{classstp_1_1_model_ad1f36bbb9a3f9aac7054b991bb02fe70}{00063}}            [3]; }
+\DoxyCodeLine{00064     \textcolor{keywordtype}{double} \mbox{\hyperlink{classstp_1_1_model_a4aaa7aee9ac9d9903d29d06cf15ed601}{m\_A}}[NB\_LEGS]}
+\DoxyCodeLine{\Hypertarget{model_8hpp_source_l00065}\mbox{\hyperlink{classstp_1_1_model_a4aaa7aee9ac9d9903d29d06cf15ed601}{00065}}               [3]; }
+\DoxyCodeLine{\Hypertarget{model_8hpp_source_l00067}\mbox{\hyperlink{classstp_1_1_model_a3c26b01a6c5e533e25ec3de71c7f132c}{00067}}     \textcolor{keywordtype}{double} \mbox{\hyperlink{classstp_1_1_model_a3c26b01a6c5e533e25ec3de71c7f132c}{m\_parity}}[NB\_LEGS]; }
+\DoxyCodeLine{\Hypertarget{model_8hpp_source_l00068}\mbox{\hyperlink{classstp_1_1_model_a0dde329f8445840075590404c4f2c0de}{00068}}     \textcolor{keywordtype}{double} \mbox{\hyperlink{classstp_1_1_model_a0dde329f8445840075590404c4f2c0de}{m\_beta}}[NB\_LEGS];   }
+\DoxyCodeLine{\Hypertarget{model_8hpp_source_l00069}\mbox{\hyperlink{classstp_1_1_model_a8faca0ba2206f1ac384b80b2223a0c34}{00069}}     \textcolor{keywordtype}{double} \mbox{\hyperlink{classstp_1_1_model_a8faca0ba2206f1ac384b80b2223a0c34}{m\_alpha}}[NB\_LEGS];  }
+\DoxyCodeLine{00070     \textcolor{keywordtype}{double} \mbox{\hyperlink{classstp_1_1_model_a60eab0062d4e65c720ed2ac39d51779b}{m\_gamma}}[2]}
+\DoxyCodeLine{\Hypertarget{model_8hpp_source_l00071}\mbox{\hyperlink{classstp_1_1_model_a60eab0062d4e65c720ed2ac39d51779b}{00071}}                   [NB\_LEGS]; }
+\DoxyCodeLine{\Hypertarget{model_8hpp_source_l00073}\mbox{\hyperlink{classstp_1_1_model_a61d8b4957be741fa473468065c2a5d0d}{00073}}     \textcolor{keywordtype}{double} \mbox{\hyperlink{classstp_1_1_model_a61d8b4957be741fa473468065c2a5d0d}{m\_T}}[3];     }
+\DoxyCodeLine{\Hypertarget{model_8hpp_source_l00074}\mbox{\hyperlink{classstp_1_1_model_a826586afc60c2c076b271413f5c3e382}{00074}}     \textcolor{keywordtype}{double} \mbox{\hyperlink{classstp_1_1_model_a826586afc60c2c076b271413f5c3e382}{m\_theta}}[3]; }
+\DoxyCodeLine{\Hypertarget{model_8hpp_source_l00075}\mbox{\hyperlink{classstp_1_1_model_ae1c80dd8cb28d3bd7966c1f289fb291e}{00075}}     \textcolor{keywordtype}{double} \mbox{\hyperlink{classstp_1_1_model_ae1c80dd8cb28d3bd7966c1f289fb291e}{m\_R}}[3][3];  }
+\DoxyCodeLine{\Hypertarget{model_8hpp_source_l00076}\mbox{\hyperlink{classstp_1_1_model_afdc7491e9be320ad94775ca046667f9b}{00076}}     \textcolor{keywordtype}{double} \mbox{\hyperlink{classstp_1_1_model_afdc7491e9be320ad94775ca046667f9b}{m\_trig}}[6];  }
+\DoxyCodeLine{\Hypertarget{model_8hpp_source_l00078}\mbox{\hyperlink{classstp_1_1_model_a0ba1c1143089052ffad8133ff40d972f}{00078}}     \textcolor{keywordtype}{double} \mbox{\hyperlink{classstp_1_1_model_a0ba1c1143089052ffad8133ff40d972f}{m\_T\_spd}}[3];     }
+\DoxyCodeLine{\Hypertarget{model_8hpp_source_l00079}\mbox{\hyperlink{classstp_1_1_model_aa12970f18bc4258b9ad185f54a9cfe70}{00079}}     \textcolor{keywordtype}{double} \mbox{\hyperlink{classstp_1_1_model_aa12970f18bc4258b9ad185f54a9cfe70}{m\_theta\_spd}}[3]; }
+\DoxyCodeLine{\Hypertarget{model_8hpp_source_l00080}\mbox{\hyperlink{classstp_1_1_model_a0b4fbb6fdec8106993ddffbd9f61d6ce}{00080}}     \textcolor{keywordtype}{double} \mbox{\hyperlink{classstp_1_1_model_a0b4fbb6fdec8106993ddffbd9f61d6ce}{m\_alpha\_spd}}[6]; }
+\DoxyCodeLine{00082     \textcolor{keywordtype}{double} \_alphaI[6];}
+\DoxyCodeLine{00083 }
+\DoxyCodeLine{00084     \textcolor{keywordtype}{int} m\_verbose\_level = \textcolor{keyword}{false};}
+\DoxyCodeLine{00085 \};}
+\DoxyCodeLine{00086 }
+\DoxyCodeLine{00087 \}; \textcolor{comment}{// namespace stp}}
+\DoxyCodeLine{00088 }
+\DoxyCodeLine{00089 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

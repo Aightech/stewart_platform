@@ -1,0 +1,8 @@
+<map id="stp::Platform::init" name="stp::Platform::init">
+<area shape="rect" id="node1" title=" " alt="" coords="5,139,163,169"/>
+<area shape="rect" id="node2" href="$class_c_a_nopen_1_1_l_x_m32.html#a40b15f47ae3270b987bc8eb8004b4c92" title=" " alt="" coords="225,5,421,52"/>
+<area shape="rect" id="node3" href="$class_c_a_nopen_1_1_driver.html#a2fe863ef0d5d66f3241eda596a507377" title="homing" alt="" coords="211,77,435,106"/>
+<area shape="rect" id="node4" href="$class_c_a_nopen_1_1_driver.html#aa94db47b419a6afcc409c63c2685e1b6" title="profilePosition_mode" alt="" coords="215,131,430,177"/>
+<area shape="rect" id="node5" href="$class_c_a_nopen_1_1_driver.html#a9f5910067bb7489887a9ed25ba6199f8" title="set_position_offset Set the postion offset of the motor. Rq better to have a large offset to avoid le..." alt="" coords="229,201,417,248"/>
+<area shape="rect" id="node6" href="$class_c_a_nopen_1_1_driver.html#ad8ac07202c14ad344004146e126ecbf4" title="start" alt="" coords="222,273,423,302"/>
+</map>

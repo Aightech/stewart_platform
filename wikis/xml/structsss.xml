@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structsss" kind="struct" language="C++" prot="public">
+    <compoundname>sss</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsss_1a0d82573d6d7582dff0c9bb07e9c672b0" prot="public" static="no" mutable="no">
+        <type>T</type>
+        <definition>T sss&lt; T &gt;::a</definition>
+        <argsstring></argsstring>
+        <name>a</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/src/main.cpp" line="19" column="7" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/src/main.cpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/src/main.cpp" line="18" column="10" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/src/main.cpp" bodystart="18" bodyend="20"/>
+    <listofallmembers>
+      <member refid="structsss_1a0d82573d6d7582dff0c9bb07e9c672b0" prot="public" virt="non-virtual"><scope>sss</scope><name>a</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

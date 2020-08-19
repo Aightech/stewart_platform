@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="joystick_8h" kind="file" language="C++">
+    <compoundname>joystick.h</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">fcntl.h</includes>
+    <includes local="no">pthread.h</includes>
+    <includes local="no">math.h</includes>
+    <includes local="no">linux/joystick.h</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">unistd.h</includes>
+    <includedby refid="mainwindow_8h" local="yes">/home/adev/Documents/STECH/stewart_platform/include/mainwindow.h</includedby>
+    <includedby refid="joystick_8cpp" local="yes">/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/src/joystick.cpp</includedby>
+    <includedby refid="lib_2lxm32_2lib_2joystick_2src_2main_8cpp" local="yes">/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/src/main.cpp</includedby>
+    <includedby refid="lib_2lxm32_2src_2main_8cpp" local="yes">/home/adev/Documents/STECH/stewart_platform/lib/lxm32/src/main.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/include/joystick.h</label>
+        <link refid="joystick_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>fcntl.h</label>
+      </node>
+      <node id="4">
+        <label>pthread.h</label>
+      </node>
+      <node id="8">
+        <label>unistd.h</label>
+      </node>
+      <node id="7">
+        <label>vector</label>
+      </node>
+      <node id="6">
+        <label>linux/joystick.h</label>
+      </node>
+      <node id="5">
+        <label>math.h</label>
+      </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/include/joystick.h</label>
+        <link refid="joystick_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/adev/Documents/STECH/stewart_platform/src/mainwindow.cpp</label>
+        <link refid="mainwindow_8cpp"/>
+      </node>
+      <node id="5">
+        <label>/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/src/joystick.cpp</label>
+        <link refid="joystick_8cpp"/>
+      </node>
+      <node id="6">
+        <label>/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/src/main.cpp</label>
+        <link refid="lib_2lxm32_2lib_2joystick_2src_2main_8cpp"/>
+      </node>
+      <node id="3">
+        <label>/home/adev/Documents/STECH/stewart_platform/src/main.cpp</label>
+        <link refid="src_2main_8cpp"/>
+      </node>
+      <node id="2">
+        <label>/home/adev/Documents/STECH/stewart_platform/include/mainwindow.h</label>
+        <link refid="mainwindow_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>/home/adev/Documents/STECH/stewart_platform/lib/lxm32/src/main.cpp</label>
+        <link refid="lib_2lxm32_2src_2main_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structjoystick__position" prot="public">joystick_position</innerclass>
+    <innerclass refid="structjoystick__state" prot="public">joystick_state</innerclass>
+    <innerclass refid="classc_joystick" prot="public">cJoystick</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="joystick_8h_1aa59cbb7e48c4f3c3dfbc694fd2869a3d" prot="public" static="no">
+        <name>JOYSTICK_DEV</name>
+        <initializer>&quot;/dev/input/js0&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/include/joystick.h" line="12" column="9" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/include/joystick.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>JOYSTICK_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JOYSTICK_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fcntl.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;pthread.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;math.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;linux/joystick.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unistd.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="joystick_8h_1aa59cbb7e48c4f3c3dfbc694fd2869a3d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JOYSTICK_DEV<sp/>&quot;/dev/input/js0&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="structjoystick__position" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structjoystick__position" kindref="compound">joystick_position</ref><sp/>{</highlight></codeline>
+<codeline lineno="15" refid="structjoystick__position_1ad8fc27fbd5404a4f8cdc1a045a0d689a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structjoystick__position_1ad738e8acb3656438c10d2ec7670639e5" kindref="member">theta</ref>,<sp/><ref refid="structjoystick__position_1a0a9043868a14fce25888dd81b80f6c94" kindref="member">r</ref>,<sp/><ref refid="structjoystick__position_1a71c3292c1be3c3400a388eac41a47ad3" kindref="member">x</ref>,<sp/><ref refid="structjoystick__position_1ad8fc27fbd5404a4f8cdc1a045a0d689a" kindref="member">y</ref>;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="structjoystick__state" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structjoystick__state" kindref="compound">joystick_state</ref><sp/>{</highlight></codeline>
+<codeline lineno="19" refid="structjoystick__state_1af16d0e2bea842ab4fafa05ce23f45f56" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;signed<sp/>short&gt;<sp/><ref refid="structjoystick__state_1af16d0e2bea842ab4fafa05ce23f45f56" kindref="member">button</ref>;</highlight></codeline>
+<codeline lineno="20" refid="structjoystick__state_1acc10718083ec5603bfcca9d1780239f2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;signed<sp/>short&gt;<sp/><ref refid="structjoystick__state_1acc10718083ec5603bfcca9d1780239f2" kindref="member">axis</ref>;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="classc_joystick" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classc_joystick" kindref="compound">cJoystick</ref><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>pthread_t<sp/>thread;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>active;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>joystick_fd;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>js_event<sp/>*joystick_ev;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structjoystick__state" kindref="compound">joystick_state</ref><sp/>*joystick_st;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>__u32<sp/>version;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>__u8<sp/>axes;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>__u8<sp/>buttons;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>name[256];</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classc_joystick_1ae4edecc3589f19b068113cdb79f7b39d" kindref="member">cJoystick</ref>();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classc_joystick_1a9e429f765dee1dc7dc3d31dc0f50ae0e" kindref="member">~cJoystick</ref>();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="classc_joystick_1aafa52c2e4d67c71f3d1e31b80d1dd324" kindref="member">loop</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>obj);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classc_joystick_1a8c04dc903aac9588db3b3e81f495705a" kindref="member">readEv</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structjoystick__position" kindref="compound">joystick_position</ref><sp/><ref refid="classc_joystick_1a30d938005453ad77f512094c8a7a99f5" kindref="member">joystickPosition</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classc_joystick_1a2954017eb51ef6f4658450199e5df5b4" kindref="member">joystickValue</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classc_joystick_1a10375763b82c2da3e904d118d5cf2ecb" kindref="member">buttonPressed</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/include/joystick.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="md__home_adev__documents__s_t_e_c_h_stewart_platform_lib_lxm32__r_e_a_d_m_e" kind="page">
+    <compoundname>md__home_adev_Documents_STECH_stewart_platform_lib_lxm32_README</compoundname>
+    <title>lxm32</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><heading level="1">Information</heading>
+</para>
+<para><itemizedlist>
+<listitem><para><bold>Brief</bold>: Library to control a Lexium32A driver from Schneider.</para>
+</listitem><listitem><para><bold>Languages</bold>: C++</para>
+</listitem><listitem><para><bold>Libraries</bold>:</para>
+</listitem><listitem><para><bold>Note</bold>: /</para>
+</listitem><listitem><para><bold>Compatibility</bold>:</para>
+</listitem></itemizedlist>
+</para>
+<para><table rows="2" cols="3"><row>
+<entry thead="yes"><para>Ubuntu </para>
+</entry><entry thead="yes"><para>Window10 </para>
+</entry><entry thead="yes"><para>MacOS  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>:heavy_check_mark: </para>
+</entry><entry thead="no"><para>:grey_question: </para>
+</entry><entry thead="no"><para>:grey_question:  </para>
+</entry></row>
+</table>
+</para>
+<para><heading level="1">Building</heading>
+</para>
+<para><heading level="2">Ubuntu</heading>
+</para>
+<para><heading level="3">Steps</heading>
+</para>
+<para><itemizedlist>
+<listitem><para>Clone the repository and go inside. <programlisting filename=".bash"><codeline><highlight class="normal">git<sp/>clone<sp/>https://gitlab-dev.isir.upmc.fr/devillard/lxm32.git<sp/>&amp;&amp;<sp/>cd<sp/>lxm32</highlight></codeline>
+</programlisting></para>
+</listitem><listitem><para>Create a build directory and go inside.</para>
+</listitem><listitem><para>Configure the project.</para>
+</listitem><listitem><para>Build the project. <programlisting filename=".bash"><codeline><highlight class="normal">mkdir<sp/>build<sp/>&amp;&amp;<sp/>cd<sp/>build<sp/>&amp;&amp;<sp/>cmake<sp/>..<sp/>&amp;&amp;<sp/>cmake<sp/>--build<sp/>.</highlight></codeline>
+</programlisting></para>
+</listitem></itemizedlist>
+</para>
+<para><heading level="1">Schematics</heading>
+</para>
+<para><image type="html" name="steps.png" inline="yes"></image>
+ <image type="html" name="registers.png" inline="yes"></image>
+ </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

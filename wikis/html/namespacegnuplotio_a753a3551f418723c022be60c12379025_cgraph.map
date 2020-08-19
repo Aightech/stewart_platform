@@ -1,6 +1,7 @@
 <map id="gnuplotio::print_block" name="gnuplotio::print_block">
-<area shape="rect" id="node2" href="$namespacegnuplotio.html#a631368ab4e255d2a5d563a41895f2edc" title="gnuplotio::print_block" alt="" coords="228,14,403,43"/>
-<area shape="rect" id="node3" href="$namespacegnuplotio.html#a66d64f716e539dc233f8183b4ce71c09" title="gnuplotio::deref_and\l_print" alt="" coords="451,5,619,52"/>
-<area shape="rect" id="node4" href="$namespacegnuplotio.html#a55ff2f9abaa4b3e1c64a8f730f791b33" title="gnuplotio::send_scalar" alt="" coords="667,14,849,43"/>
-<area shape="rect" id="node5" href="$structgnuplotio_1_1_text_sender.html#a03b58292dc75a4137d30ad7fffd762c6" title="gnuplotio::TextSender\l::send" alt="" coords="897,5,1076,52"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,14,199,43"/>
+<area shape="rect" id="node2" href="$namespacegnuplotio.html#a631368ab4e255d2a5d563a41895f2edc" title=" " alt="" coords="247,14,440,43"/>
+<area shape="rect" id="node3" href="$namespacegnuplotio.html#a66d64f716e539dc233f8183b4ce71c09" title=" " alt="" coords="488,5,675,52"/>
+<area shape="rect" id="node4" href="$namespacegnuplotio.html#a55ff2f9abaa4b3e1c64a8f730f791b33" title=" " alt="" coords="723,14,923,43"/>
+<area shape="rect" id="node5" href="$structgnuplotio_1_1_text_sender.html#a03b58292dc75a4137d30ad7fffd762c6" title=" " alt="" coords="971,5,1165,52"/>
 </map>

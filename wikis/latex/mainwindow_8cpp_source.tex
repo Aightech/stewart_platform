@@ -1,0 +1,116 @@
+\hypertarget{mainwindow_8cpp_source}{}\doxysection{mainwindow.\+cpp}
+\label{mainwindow_8cpp_source}\index{mainwindow.cpp@{mainwindow.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include "mainwindow.h"}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#include "./ui\_mainwindow.h"}}
+\DoxyCodeLine{00003 }
+\DoxyCodeLine{00004 \textcolor{preprocessor}{\#include <QTimer>}}
+\DoxyCodeLine{00005 }
+\DoxyCodeLine{00006 MainWindow::MainWindow(QWidget *parent)}
+\DoxyCodeLine{00007     : QMainWindow(parent)}
+\DoxyCodeLine{00008     , ui(new Ui::\mbox{\hyperlink{class_main_window}{MainWindow}})}
+\DoxyCodeLine{00009 \{}
+\DoxyCodeLine{00010     ui-\/>setupUi(\textcolor{keyword}{this});}
+\DoxyCodeLine{00011     \textcolor{keywordtype}{double} deltas[4] = \{0.63, 0.16, 0.075, 0.38\};}
+\DoxyCodeLine{00012     m\_sp = \textcolor{keyword}{new} \mbox{\hyperlink{classstp_1_1_platform}{stp::Platform}}(deltas, 0.08, 0.44,0);}
+\DoxyCodeLine{00013     \mbox{\hyperlink{classstp_1_1_model_a61d8b4957be741fa473468065c2a5d0d}{m\_T}}[2] = m\_sp-\/>get\_T(2);}
+\DoxyCodeLine{00014     m\_sp-\/>init();}
+\DoxyCodeLine{00015     std::cout << \textcolor{stringliteral}{"Initialized\(\backslash\)n"};}
+\DoxyCodeLine{00016 }
+\DoxyCodeLine{00017     m\_cart\_anlge[0] = ui-\/>doubleSpinBox\_cart\_roll;}
+\DoxyCodeLine{00018     m\_cart\_anlge[1] = ui-\/>doubleSpinBox\_cart\_pitch;}
+\DoxyCodeLine{00019     m\_cart\_anlge[2] = ui-\/>doubleSpinBox\_cart\_yaw;}
+\DoxyCodeLine{00020 }
+\DoxyCodeLine{00021     m\_cart\_trans[0] = ui-\/>doubleSpinBox\_cart\_x;}
+\DoxyCodeLine{00022     m\_cart\_trans[1] = ui-\/>doubleSpinBox\_cart\_y;}
+\DoxyCodeLine{00023     m\_cart\_trans[2] = ui-\/>doubleSpinBox\_cart\_z;}
+\DoxyCodeLine{00024 }
+\DoxyCodeLine{00025     m\_sin\_dir[0] = ui-\/>doubleSpinBox\_sin\_x;}
+\DoxyCodeLine{00026     m\_sin\_dir[1] = ui-\/>doubleSpinBox\_sin\_y;}
+\DoxyCodeLine{00027     m\_sin\_dir[2] = ui-\/>doubleSpinBox\_sin\_z;}
+\DoxyCodeLine{00028 }
+\DoxyCodeLine{00029     QTimer *timer = \textcolor{keyword}{new} QTimer(\textcolor{keyword}{this});}
+\DoxyCodeLine{00030     connect(timer, \&QTimer::timeout, \textcolor{keyword}{this}, \&\mbox{\hyperlink{class_main_window_aba8ebc22f101fa59e1e2efa7a3ae1616}{MainWindow::loop}});}
+\DoxyCodeLine{00031     timer-\/>start(1);}
+\DoxyCodeLine{00032 }
+\DoxyCodeLine{00033     update\_pos();}
+\DoxyCodeLine{00034 \}}
+\DoxyCodeLine{00035 }
+\DoxyCodeLine{00036 MainWindow::\string~MainWindow()}
+\DoxyCodeLine{00037 \{}
+\DoxyCodeLine{00038     \textcolor{keyword}{delete} ui;}
+\DoxyCodeLine{00039 \}}
+\DoxyCodeLine{00040 }
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00041}\mbox{\hyperlink{class_main_window_aba8ebc22f101fa59e1e2efa7a3ae1616}{00041}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_main_window_aba8ebc22f101fa59e1e2efa7a3ae1616}{MainWindow::loop}}()}
+\DoxyCodeLine{00042 \{}
+\DoxyCodeLine{00043 }
+\DoxyCodeLine{00044     \textcolor{keywordflow}{if}(m\_running)}
+\DoxyCodeLine{00045     \{}
+\DoxyCodeLine{00046         \textcolor{keywordflow}{if} (ui-\/>radioButton\_cart\_mvt-\/>isChecked())}
+\DoxyCodeLine{00047         \{}
+\DoxyCodeLine{00048             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i< 3; i++)}
+\DoxyCodeLine{00049             \{}
+\DoxyCodeLine{00050                 m\_T[i] = m\_cart\_trans[i]-\/>value();}
+\DoxyCodeLine{00051                 m\_theta[i] = m\_cart\_anlge[i]-\/>value();}
+\DoxyCodeLine{00052             \}}
+\DoxyCodeLine{00053         \}}
+\DoxyCodeLine{00054         \textcolor{keywordflow}{if} (ui-\/>radioButton\_sin\_mvt-\/>isChecked())}
+\DoxyCodeLine{00055         \{}
+\DoxyCodeLine{00056             \textcolor{keywordtype}{double} sin\_v = sin(ui-\/>doubleSpinBox\_sin\_omega-\/>value()*chr::duration<double>(chr::high\_resolution\_clock::now()-\/m\_prev\_time).count());}
+\DoxyCodeLine{00057             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i =0; i<3; i++)}
+\DoxyCodeLine{00058                 m\_T[i] = m\_T\_mid[i] + m\_sin\_dir[i]-\/>value()*sin\_v;}
+\DoxyCodeLine{00059         \}}
+\DoxyCodeLine{00060 }
+\DoxyCodeLine{00061         m\_sp-\/>new\_pos(m\_T, m\_theta);}
+\DoxyCodeLine{00062         m\_sp-\/>update\_platform();}
+\DoxyCodeLine{00063     \}}
+\DoxyCodeLine{00064 \}}
+\DoxyCodeLine{00065 }
+\DoxyCodeLine{00066 \textcolor{keywordtype}{void} MainWindow::on\_pushButton\_start\_clicked()}
+\DoxyCodeLine{00067 \{}
+\DoxyCodeLine{00068     m\_sp-\/>start();}
+\DoxyCodeLine{00069     m\_running=\textcolor{keyword}{true};}
+\DoxyCodeLine{00070     \textcolor{keywordflow}{if}(ui-\/>radioButton\_cart\_mvt-\/>isChecked())}
+\DoxyCodeLine{00071     \{}
+\DoxyCodeLine{00072         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i< 3; i++)}
+\DoxyCodeLine{00073         \{}
+\DoxyCodeLine{00074             m\_T[i] = m\_sp-\/>get\_T(i);}
+\DoxyCodeLine{00075             m\_theta[i] = m\_sp-\/>get\_theta(i);}
+\DoxyCodeLine{00076             m\_cart\_trans[i]-\/>setValue(m\_T[i]);}
+\DoxyCodeLine{00077             m\_cart\_anlge[i]-\/>setValue(m\_theta[i]);}
+\DoxyCodeLine{00078         \}}
+\DoxyCodeLine{00079     \}}
+\DoxyCodeLine{00080     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (ui-\/>radioButton\_sin\_mvt-\/>isChecked())}
+\DoxyCodeLine{00081     \{}
+\DoxyCodeLine{00082         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i =0; i<3; i++)}
+\DoxyCodeLine{00083             m\_T\_mid[i] = m\_sp-\/>get\_T(i);}
+\DoxyCodeLine{00084         m\_prev\_time = chr::high\_resolution\_clock::now();}
+\DoxyCodeLine{00085     \}}
+\DoxyCodeLine{00086 \}}
+\DoxyCodeLine{00087 }
+\DoxyCodeLine{00088 \textcolor{keywordtype}{void} MainWindow::on\_pushButton\_pause\_clicked()}
+\DoxyCodeLine{00089 \{}
+\DoxyCodeLine{00090     m\_running=\textcolor{keyword}{false};}
+\DoxyCodeLine{00091     m\_sp-\/>pause();}
+\DoxyCodeLine{00092 \}}
+\DoxyCodeLine{00093 }
+\DoxyCodeLine{00094 \textcolor{keywordtype}{void} MainWindow::on\_pushButton\_stop\_clicked()}
+\DoxyCodeLine{00095 \{}
+\DoxyCodeLine{00096     m\_running=\textcolor{keyword}{false};}
+\DoxyCodeLine{00097     m\_sp-\/>stop();}
+\DoxyCodeLine{00098 \}}
+\DoxyCodeLine{00099 }
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00100}\mbox{\hyperlink{class_main_window_aed18d5fa47cd919da8dedbf4edd8e37e}{00100}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_main_window_aed18d5fa47cd919da8dedbf4edd8e37e}{MainWindow::update\_pos}}()}
+\DoxyCodeLine{00101 \{}
+\DoxyCodeLine{00102     ui-\/>lineEdit\_pos\_x-\/>setText(QString::number(m\_T[0]));}
+\DoxyCodeLine{00103     ui-\/>lineEdit\_pos\_y-\/>setText(QString::number(m\_T[1]));}
+\DoxyCodeLine{00104     ui-\/>lineEdit\_pos\_z-\/>setText(QString::number(m\_T[2]));}
+\DoxyCodeLine{00105 }
+\DoxyCodeLine{00106 }
+\DoxyCodeLine{00107     ui-\/>lineEdit\_pos\_roll-\/>setText(QString::number(m\_theta[0]));}
+\DoxyCodeLine{00108     ui-\/>lineEdit\_pos\_pitch-\/>setText(QString::number(m\_theta[1]));}
+\DoxyCodeLine{00109     ui-\/>lineEdit\_pos\_yaw-\/>setText(QString::number(m\_theta[2]));}
+\DoxyCodeLine{00110 \}}
+
+\end{DoxyCode}

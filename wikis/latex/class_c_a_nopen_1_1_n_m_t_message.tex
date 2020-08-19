@@ -1,0 +1,69 @@
+\hypertarget{class_c_a_nopen_1_1_n_m_t_message}{}\doxysection{C\+A\+Nopen\+::N\+M\+T\+Message Class Reference}
+\label{class_c_a_nopen_1_1_n_m_t_message}\index{CANopen::NMTMessage@{CANopen::NMTMessage}}
+
+
+N\+MT \mbox{\hyperlink{class_c_a_nopen_1_1_message}{Message}} (Network management)  
+
+
+
+
+{\ttfamily \#include $<$nmt.\+h$>$}
+
+
+
+Inheritance diagram for C\+A\+Nopen\+::N\+M\+T\+Message\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{class_c_a_nopen_1_1_n_m_t_message__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for C\+A\+Nopen\+::N\+M\+T\+Message\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{class_c_a_nopen_1_1_n_m_t_message__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_a_nopen_1_1_n_m_t_message_a20257f9fc32b84adc9196fd436f15e95}\label{class_c_a_nopen_1_1_n_m_t_message_a20257f9fc32b84adc9196fd436f15e95}} 
+enum {\bfseries Code} \+: uint8\+\_\+t \{ \newline
+{\bfseries Initialising} = 0, 
+{\bfseries Go\+To\+Operational} = 0x01, 
+{\bfseries Go\+To\+Stopped} = 0x02, 
+{\bfseries Stopped} = 0x04, 
+\newline
+{\bfseries Operational} = 0x05, 
+{\bfseries Pre\+Operational} = 0x7f, 
+{\bfseries Go\+To\+Pre\+Operational} = 0x80, 
+{\bfseries Go\+To\+Reset\+Node} = 0x81, 
+\newline
+{\bfseries Go\+To\+Reset\+Communication} = 0x82
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_a_nopen_1_1_n_m_t_message_ae691342a23d0bffa2a98861099c19fcc}\label{class_c_a_nopen_1_1_n_m_t_message_ae691342a23d0bffa2a98861099c19fcc}} 
+{\bfseries N\+M\+T\+Message} (const can\+\_\+frame \&other)
+\item 
+\mbox{\Hypertarget{class_c_a_nopen_1_1_n_m_t_message_a5939adf6f14706495b9e734f8412f5d4}\label{class_c_a_nopen_1_1_n_m_t_message_a5939adf6f14706495b9e734f8412f5d4}} 
+{\bfseries N\+M\+T\+Message} (Code code, uint8\+\_\+t \mbox{\hyperlink{class_c_a_nopen_1_1_message_adc93c710fd35ab61e46a0881326d0336}{node\+\_\+id}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+N\+MT \mbox{\hyperlink{class_c_a_nopen_1_1_message}{Message}} (Network management) 
+
+Definition at line \mbox{\hyperlink{nmt_8h_source_l00017}{17}} of file \mbox{\hyperlink{nmt_8h_source}{nmt.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{nmt_8h}{nmt.\+h}}\item 
+nmt.\+cpp\end{DoxyCompactItemize}

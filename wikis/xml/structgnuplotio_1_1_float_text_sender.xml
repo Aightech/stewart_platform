@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structgnuplotio_1_1_float_text_sender" kind="struct" language="C++" prot="public">
+    <compoundname>gnuplotio::FloatTextSender</compoundname>
+    <includes refid="gnuplot-iostream_8h" local="no">gnuplot-iostream.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structgnuplotio_1_1_float_text_sender_1aed6b6c3a95b1396688800d6d1f2fc299" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void gnuplotio::FloatTextSender&lt; T &gt;::send</definition>
+        <argsstring>(std::ostream &amp;stream, const T &amp;v)</argsstring>
+        <name>send</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/gnuplot-iostream.h" line="506" column="13" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/gnuplot-iostream.h" bodystart="506" bodyend="508"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="6">
+        <label>gnuplotio::FloatTextSender&lt; long double &gt;</label>
+        <link refid="structgnuplotio_1_1_float_text_sender"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; long double &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>gnuplotio::TextSender&lt; long double &gt;</label>
+        <link refid="structgnuplotio_1_1_text_sender_3_01long_01double_01_4"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>gnuplotio::FloatTextSender&lt; double &gt;</label>
+        <link refid="structgnuplotio_1_1_float_text_sender"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; double &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>gnuplotio::TextSender&lt; double &gt;</label>
+        <link refid="structgnuplotio_1_1_text_sender_3_01double_01_4"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>gnuplotio::FloatTextSender&lt; T &gt;</label>
+        <link refid="structgnuplotio_1_1_float_text_sender"/>
+      </node>
+      <node id="4">
+        <label>gnuplotio::FloatTextSender&lt; float &gt;</label>
+        <link refid="structgnuplotio_1_1_float_text_sender"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; float &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>gnuplotio::TextSender&lt; float &gt;</label>
+        <link refid="structgnuplotio_1_1_text_sender_3_01float_01_4"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/home/adev/Documents/STECH/stewart_platform/include/gnuplot-iostream.h" line="505" column="22" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/gnuplot-iostream.h" bodystart="505" bodyend="509"/>
+    <listofallmembers>
+      <member refid="structgnuplotio_1_1_float_text_sender_1aed6b6c3a95b1396688800d6d1f2fc299" prot="public" virt="non-virtual"><scope>gnuplotio::FloatTextSender</scope><name>send</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

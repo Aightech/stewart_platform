@@ -1,0 +1,88 @@
+\hypertarget{namespace_c_a_nopen}{}\doxysection{C\+A\+Nopen Namespace Reference}
+\label{namespace_c_a_nopen}\index{CANopen@{CANopen}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_c_a_nopen_1_1_driver}{Driver}}
+\begin{DoxyCompactList}\small\item\em Device Profile Drives and Motion Control. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_c_a_nopen_1_1_e_m_c_y_message}{E\+M\+C\+Y\+Message}}
+\begin{DoxyCompactList}\small\item\em E\+M\+CY \mbox{\hyperlink{class_c_a_nopen_1_1_message}{Message}} (Emergency Object) \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_c_a_nopen_1_1_l_x_m32}{L\+X\+M32}}
+\item 
+class \mbox{\hyperlink{class_c_a_nopen_1_1_message}{Message}}
+\begin{DoxyCompactList}\small\item\em can\+\_\+frame object sent and received throught \mbox{\hyperlink{namespace_c_a_nopen}{C\+A\+Nopen}} socket. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_c_a_nopen_1_1_n_m_t_message}{N\+M\+T\+Message}}
+\begin{DoxyCompactList}\small\item\em N\+MT \mbox{\hyperlink{class_c_a_nopen_1_1_message}{Message}} (Network management) \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter}{Parameter}}
+\begin{DoxyCompactList}\small\item\em Object from the object dictionary of a remote \mbox{\hyperlink{namespace_c_a_nopen}{C\+A\+Nopen}} device. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_c_a_nopen_1_1_payload}{Payload}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_c_a_nopen_1_1_payload}{Payload}} of \mbox{\hyperlink{namespace_c_a_nopen}{C\+A\+Nopen}} message\+: array of 1 to 8 bytes of data. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_c_a_nopen_1_1_p_d_o_message}{P\+D\+O\+Message}}
+\begin{DoxyCompactList}\small\item\em P\+DO \mbox{\hyperlink{class_c_a_nopen_1_1_message}{Message}} (Process Data Object) \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_inbound}{S\+D\+O\+Inbound}}
+\begin{DoxyCompactList}\small\item\em S\+DO received \mbox{\hyperlink{class_c_a_nopen_1_1_message}{Message}}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_message}{S\+D\+O\+Message}}
+\begin{DoxyCompactList}\small\item\em S\+DO \mbox{\hyperlink{class_c_a_nopen_1_1_message}{Message}} (Service Data Object) \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_outbound}{S\+D\+O\+Outbound}}
+\begin{DoxyCompactList}\small\item\em S\+DO \mbox{\hyperlink{class_c_a_nopen_1_1_message}{Message}} to be sent. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_outbound_read}{S\+D\+O\+Outbound\+Read}}
+\begin{DoxyCompactList}\small\item\em S\+DO \mbox{\hyperlink{class_c_a_nopen_1_1_message}{Message}} to be sent to read the value from the object dictionary of a remote device. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_outbound_write}{S\+D\+O\+Outbound\+Write}}
+\begin{DoxyCompactList}\small\item\em S\+DO \mbox{\hyperlink{class_c_a_nopen_1_1_message}{Message}} to be sent to write the value of the object dictionary of a remote device. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_c_a_nopen_1_1_socket}{Socket}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{namespace_c_a_nopen}{C\+A\+Nopen}} object able to send \mbox{\hyperlink{class_c_a_nopen_1_1_message}{Message}} through a C\+AN interface using U\+N\+IX sockets. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespace_c_a_nopen_a4d9cca44e04c78dd31fdb05347ed19a2}{print\+\_\+status}} (\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter}{Parameter}} $\ast$)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+std\+::mutex \mbox{\hyperlink{namespace_c_a_nopen_aaec5501be77093ddca113d18ace1a752}{g\+\_\+verbose\+\_\+mutex}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespace_c_a_nopen_a4d9cca44e04c78dd31fdb05347ed19a2}\label{namespace_c_a_nopen_a4d9cca44e04c78dd31fdb05347ed19a2}} 
+\index{CANopen@{CANopen}!print\_status@{print\_status}}
+\index{print\_status@{print\_status}!CANopen@{CANopen}}
+\doxysubsubsection{\texorpdfstring{print\_status()}{print\_status()}}
+{\footnotesize\ttfamily void C\+A\+Nopen\+::print\+\_\+status (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter}{C\+A\+Nopen\+::\+Parameter}} $\ast$}]{param }\end{DoxyParamCaption})}
+
+
+
+Definition at line 287 of file C\+A\+Nopen\+\_\+driver.\+cpp.
+
+
+
+References C\+A\+Nopen\+::\+Driver\+::\+Fault, g\+\_\+verbose\+\_\+mutex, C\+A\+Nopen\+::\+Parameter\+::get(), C\+A\+Nopen\+::\+Driver\+::\+Not\+Ready\+To\+Switcht\+ON, C\+A\+Nopen\+::\+Driver\+::\+Operation\+Enabled, C\+A\+Nopen\+::\+Driver\+::\+Quick\+Stop, C\+A\+Nopen\+::\+Driver\+::\+Ready\+To\+Switch\+ON, C\+A\+Nopen\+::\+Driver\+::\+Switched\+ON, and C\+A\+Nopen\+::\+Driver\+::\+Switch\+O\+N\+Disabled.
+
+
+
+Referenced by C\+A\+Nopen\+::\+Driver\+::\+Driver().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_c_a_nopen_a4d9cca44e04c78dd31fdb05347ed19a2_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespace_c_a_nopen_aaec5501be77093ddca113d18ace1a752}\label{namespace_c_a_nopen_aaec5501be77093ddca113d18ace1a752}} 
+\index{CANopen@{CANopen}!g\_verbose\_mutex@{g\_verbose\_mutex}}
+\index{g\_verbose\_mutex@{g\_verbose\_mutex}!CANopen@{CANopen}}
+\doxysubsubsection{\texorpdfstring{g\_verbose\_mutex}{g\_verbose\_mutex}}
+{\footnotesize\ttfamily std\+::mutex C\+A\+Nopen\+::g\+\_\+verbose\+\_\+mutex}
+
+
+
+Definition at line 17 of file C\+A\+Nopen\+\_\+socket.\+cpp.
+
+
+
+Referenced by print\+\_\+status().
+

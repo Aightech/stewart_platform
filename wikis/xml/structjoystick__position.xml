@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structjoystick__position" kind="struct" language="C++" prot="public">
+    <compoundname>joystick_position</compoundname>
+    <includes refid="joystick_8h" local="no">joystick.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structjoystick__position_1ad738e8acb3656438c10d2ec7670639e5" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float joystick_position::theta</definition>
+        <argsstring></argsstring>
+        <name>theta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/include/joystick.h" line="15" column="7" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/include/joystick.h" bodystart="15" bodyend="-1"/>
+        <referencedby refid="classc_joystick_1a30d938005453ad77f512094c8a7a99f5" compoundref="joystick_8cpp" startline="56" endline="73">cJoystick::joystickPosition</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structjoystick__position_1a0a9043868a14fce25888dd81b80f6c94" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float joystick_position::r</definition>
+        <argsstring></argsstring>
+        <name>r</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/include/joystick.h" line="15" column="13" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/include/joystick.h" bodystart="15" bodyend="-1"/>
+        <referencedby refid="classc_joystick_1a30d938005453ad77f512094c8a7a99f5" compoundref="joystick_8cpp" startline="56" endline="73">cJoystick::joystickPosition</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structjoystick__position_1a71c3292c1be3c3400a388eac41a47ad3" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float joystick_position::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/include/joystick.h" line="15" column="15" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/include/joystick.h" bodystart="15" bodyend="-1"/>
+        <referencedby refid="classc_joystick_1a30d938005453ad77f512094c8a7a99f5" compoundref="joystick_8cpp" startline="56" endline="73">cJoystick::joystickPosition</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structjoystick__position_1ad8fc27fbd5404a4f8cdc1a045a0d689a" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float joystick_position::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/include/joystick.h" line="15" column="17" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/include/joystick.h" bodystart="15" bodyend="-1"/>
+        <referencedby refid="classc_joystick_1a30d938005453ad77f512094c8a7a99f5" compoundref="joystick_8cpp" startline="56" endline="73">cJoystick::joystickPosition</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/include/joystick.h" line="14" column="24" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/include/joystick.h" bodystart="14" bodyend="16"/>
+    <listofallmembers>
+      <member refid="structjoystick__position_1a0a9043868a14fce25888dd81b80f6c94" prot="public" virt="non-virtual"><scope>joystick_position</scope><name>r</name></member>
+      <member refid="structjoystick__position_1ad738e8acb3656438c10d2ec7670639e5" prot="public" virt="non-virtual"><scope>joystick_position</scope><name>theta</name></member>
+      <member refid="structjoystick__position_1a71c3292c1be3c3400a388eac41a47ad3" prot="public" virt="non-virtual"><scope>joystick_position</scope><name>x</name></member>
+      <member refid="structjoystick__position_1ad8fc27fbd5404a4f8cdc1a045a0d689a" prot="public" virt="non-virtual"><scope>joystick_position</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,9 +1,21 @@
 var searchData=
 [
-  ['a',['A',['../structstp_1_1_gnuplot__sim_1_1_plot.html#a81f7c65e2f66254a85f70a58cf285f73',1,'stp::Gnuplot_sim::Plot']]],
-  ['active',['active',['../classc_joystick.html#a76b927cfdc179f053256952d0d94656d',1,'cJoystick']]],
-  ['allow_5fauto_5funwrap',['allow_auto_unwrap',['../classgnuplotio_1_1_array_traits.html#a354d64663551a34c36c5fa7823859668',1,'gnuplotio::ArrayTraits::allow_auto_unwrap()'],['../classgnuplotio_1_1_array_traits_defaults.html#ac8d430cba6ceefc6f52706455f12a0e8',1,'gnuplotio::ArrayTraitsDefaults::allow_auto_unwrap()'],['../classgnuplotio_1_1_array_traits_3_01std_1_1pair_3_01_t_00_01_u_01_4_01_4.html#afff9ebffb39ab8660bb59ffcc7d8a2e5',1,'gnuplotio::ArrayTraits&lt; std::pair&lt; T, U &gt; &gt;::allow_auto_unwrap()'],['../classgnuplotio_1_1_vec_of_range.html#a19d87e61a7854f9e22d3dd8a94f79500',1,'gnuplotio::VecOfRange::allow_auto_unwrap()']]],
-  ['arr_5for_5frec',['arr_or_rec',['../classgnuplotio_1_1_gnuplot.html#a2d194dbd4d2f3475ff6f9b8384e62a9f',1,'gnuplotio::Gnuplot']]],
-  ['axes',['axes',['../classc_joystick.html#ada53890948b0afe1b49b4c2ff2970c77',1,'cJoystick']]],
-  ['axis',['axis',['../structjoystick__state.html#acc10718083ec5603bfcca9d1780239f2',1,'joystick_state']]]
+  ['m_5fa_253',['m_A',['../classstp_1_1_model.html#a4aaa7aee9ac9d9903d29d06cf15ed601',1,'stp::Model']]],
+  ['m_5fa2_254',['m_a2',['../classstp_1_1_model.html#ad189b43e75b3b4a7a947e8142adce17c',1,'stp::Model']]],
+  ['m_5falpha_255',['m_alpha',['../classstp_1_1_model.html#a8faca0ba2206f1ac384b80b2223a0c34',1,'stp::Model']]],
+  ['m_5falpha_5fspd_256',['m_alpha_spd',['../classstp_1_1_model.html#a0b4fbb6fdec8106993ddffbd9f61d6ce',1,'stp::Model']]],
+  ['m_5fb_257',['m_B',['../classstp_1_1_model.html#ad1f36bbb9a3f9aac7054b991bb02fe70',1,'stp::Model']]],
+  ['m_5fbeta_258',['m_beta',['../classstp_1_1_model.html#a0dde329f8445840075590404c4f2c0de',1,'stp::Model']]],
+  ['m_5fgamma_259',['m_gamma',['../classstp_1_1_model.html#a60eab0062d4e65c720ed2ac39d51779b',1,'stp::Model']]],
+  ['m_5fl2_260',['m_l2',['../classstp_1_1_model.html#a9a16f1c28c96157d51bedbf67a1a7a81',1,'stp::Model']]],
+  ['m_5fmotors_261',['m_motors',['../classstp_1_1_platform.html#ae430bcbcc69c375c2b63fdcb391af235',1,'stp::Platform']]],
+  ['m_5fp_262',['m_P',['../classstp_1_1_model.html#a773d6f9a6ee4f6dd580229e0dc3d741c',1,'stp::Model']]],
+  ['m_5fp1_263',['m_P1',['../classstp_1_1_model.html#a82e25ba756ecbe2f929505ef4d97b317',1,'stp::Model']]],
+  ['m_5fparity_264',['m_parity',['../classstp_1_1_model.html#a3c26b01a6c5e533e25ec3de71c7f132c',1,'stp::Model']]],
+  ['m_5fr_265',['m_R',['../classstp_1_1_model.html#ae1c80dd8cb28d3bd7966c1f289fb291e',1,'stp::Model']]],
+  ['m_5ft_266',['m_T',['../classstp_1_1_model.html#a61d8b4957be741fa473468065c2a5d0d',1,'stp::Model']]],
+  ['m_5ft_5fspd_267',['m_T_spd',['../classstp_1_1_model.html#a0ba1c1143089052ffad8133ff40d972f',1,'stp::Model']]],
+  ['m_5ftheta_268',['m_theta',['../classstp_1_1_model.html#a826586afc60c2c076b271413f5c3e382',1,'stp::Model']]],
+  ['m_5ftheta_5fspd_269',['m_theta_spd',['../classstp_1_1_model.html#aa12970f18bc4258b9ad185f54a9cfe70',1,'stp::Model']]],
+  ['m_5ftrig_270',['m_trig',['../classstp_1_1_model.html#afdc7491e9be320ad94775ca046667f9b',1,'stp::Model']]]
 ];

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_23220e5d4eb2412ea02d6ea5bea34c4b" kind="dir">
+    <compoundname>canopen</compoundname>
+    <innerdir refid="dir_4b7063341a3aa6384a0b6309956e879b">include</innerdir>
+    <innerdir refid="dir_c1fdb8f31c969fbbde7d99ce8e7055a9">src</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/"/>
+  </compounddef>
+</doxygen>

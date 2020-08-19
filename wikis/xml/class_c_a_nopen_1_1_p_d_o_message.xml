@@ -1,0 +1,241 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="class_c_a_nopen_1_1_p_d_o_message" kind="class" language="C++" prot="public">
+    <compoundname>CANopen::PDOMessage</compoundname>
+    <basecompoundref refid="class_c_a_nopen_1_1_message" prot="public" virt="non-virtual">CANopen::Message</basecompoundref>
+    <includes refid="pdo_8h" local="no">pdo.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_c_a_nopen_1_1_p_d_o_message_1ab46579ce08cec30d0bc60428053cb39f" prot="public" static="no" strong="no">
+        <type>uint32_t</type>
+        <name>PDOFunctionCode</name>
+        <enumvalue id="class_c_a_nopen_1_1_p_d_o_message_1ab46579ce08cec30d0bc60428053cb39fabfcc66bfc93e03a72bb931e5bd636798" prot="public">
+          <name>PDO1Transmit</name>
+          <initializer>= Message::PDO1Transmit</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_p_d_o_message_1ab46579ce08cec30d0bc60428053cb39fa01d2d22755748fca5086b2e4bf6b009e" prot="public">
+          <name>PDO1Receive</name>
+          <initializer>= Message::PDO1Receive</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_p_d_o_message_1ab46579ce08cec30d0bc60428053cb39fa13229b4458d1949639c4e635cda6689c" prot="public">
+          <name>PDO2Transmit</name>
+          <initializer>= Message::PDO2Transmit</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_p_d_o_message_1ab46579ce08cec30d0bc60428053cb39fa2e653900b8cea5673b6c829c0d40b0f2" prot="public">
+          <name>PDO2Receive</name>
+          <initializer>= Message::PDO2Receive</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_p_d_o_message_1ab46579ce08cec30d0bc60428053cb39fa508480956655988cac3696b73e542753" prot="public">
+          <name>PDO3Transmit</name>
+          <initializer>= Message::PDO3Transmit</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_p_d_o_message_1ab46579ce08cec30d0bc60428053cb39fa54205762ad0ee3cae8ff88519454fd2b" prot="public">
+          <name>PDO3Receive</name>
+          <initializer>= Message::PDO3Receive</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_p_d_o_message_1ab46579ce08cec30d0bc60428053cb39fa67325f4e5dfd2ce6a2214a73997ac09d" prot="public">
+          <name>PDO4Transmit</name>
+          <initializer>= Message::PDO4Transmit</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_c_a_nopen_1_1_p_d_o_message_1ab46579ce08cec30d0bc60428053cb39fa73eba51ebd0e854b545554bf9c92091b" prot="public">
+          <name>PDO4Receive</name>
+          <initializer>= Message::PDO4Receive</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/include/pdo.h" line="20" column="25" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/include/pdo.h" bodystart="20" bodyend="29"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_c_a_nopen_1_1_p_d_o_message_1a9a38d99b2d049eccc56efb307f3619e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CANopen::PDOMessage::PDOMessage</definition>
+        <argsstring>()=default</argsstring>
+        <name>PDOMessage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/include/pdo.h" line="31" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_p_d_o_message_1a461a62c471761504043dfcb13f9ec685" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CANopen::PDOMessage::PDOMessage</definition>
+        <argsstring>(const can_frame &amp;other)</argsstring>
+        <name>PDOMessage</name>
+        <param>
+          <type>const can_frame &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/include/pdo.h" line="32" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/src/pdo.cpp" bodystart="4" bodyend="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_p_d_o_message_1ae7f8db2be338aaa9cc61f08520fa0c85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CANopen::PDOMessage::PDOMessage</definition>
+        <argsstring>(PDOFunctionCode fn, uint8_t node_id, Payload payload)</argsstring>
+        <name>PDOMessage</name>
+        <param>
+          <type>PDOFunctionCode</type>
+          <declname>fn</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>node_id</declname>
+        </param>
+        <param>
+          <type><ref refid="class_c_a_nopen_1_1_payload" kindref="compound">Payload</ref></type>
+          <declname>payload</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/include/pdo.h" line="33" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/src/pdo.cpp" bodystart="8" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_p_d_o_message_1ae03740c1aa91dfc02a2a3ba0d566fb64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t CANopen::PDOMessage::num</definition>
+        <argsstring>()</argsstring>
+        <name>num</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/include/pdo.h" line="36" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/src/pdo.cpp" bodystart="12" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_p_d_o_message_1a8d76de09957cad5a242f87082cc4c2bd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t CANopen::PDOMessage::id</definition>
+        <argsstring>()</argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/include/pdo.h" line="39" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/include/pdo.h" bodystart="39" bodyend="41"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>PDO <ref refid="class_c_a_nopen_1_1_message" kindref="compound">Message</ref> (Process Data Object) </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>can_frame</label>
+      </node>
+      <node id="2">
+        <label>CANopen::Message</label>
+        <link refid="class_c_a_nopen_1_1_message"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>CANopen::PDOMessage</label>
+        <link refid="class_c_a_nopen_1_1_p_d_o_message"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>can_frame</label>
+      </node>
+      <node id="2">
+        <label>CANopen::Message</label>
+        <link refid="class_c_a_nopen_1_1_message"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>CANopen::PDOMessage</label>
+        <link refid="class_c_a_nopen_1_1_p_d_o_message"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/include/pdo.h" line="18" column="32" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/include/pdo.h" bodystart="18" bodyend="42"/>
+    <listofallmembers>
+      <member refid="class_c_a_nopen_1_1_message_1a0f8f95e4ea1284011cd122629edc5468acf827d4fddf4af5908ff22d480ec3f9f" prot="public" virt="non-virtual"><scope>CANopen::PDOMessage</scope><name>Emergency</name></member>
+      <member refid="class_c_a_nopen_1_1_message_1aa0b2fbf64579563a763e3efbe1766c3a" prot="public" virt="non-virtual"><scope>CANopen::PDOMessage</scope><name>function_code</name></member>
+      <member refid="class_c_a_nopen_1_1_message_1a0f8f95e4ea1284011cd122629edc5468" prot="public" virt="non-virtual"><scope>CANopen::PDOMessage</scope><name>FunctionCode</name></member>
+      <member refid="class_c_a_nopen_1_1_message_1a0f8f95e4ea1284011cd122629edc5468aea5e380d61d7dbbbb5f4655e3fbdc65c" prot="public" virt="non-virtual"><scope>CANopen::PDOMessage</scope><name>Heartbeat</name></member>
+      <member refid="class_c_a_nopen_1_1_p_d_o_message_1a8d76de09957cad5a242f87082cc4c2bd" prot="public" virt="non-virtual"><scope>CANopen::PDOMessage</scope><name>id</name></member>
+      <member refid="class_c_a_nopen_1_1_message_1aaf1c9976719a7c585eaa35aede987ffa" prot="public" virt="virtual" ambiguityscope="CANopen::Message::"><scope>CANopen::PDOMessage</scope><name>id</name></member>
+      <member refid="class_c_a_nopen_1_1_message_1a90dac1b216099b2a29f7b4deb3ccced8" prot="public" virt="non-virtual"><scope>CANopen::PDOMessage</scope><name>Message</name></member>
+      <member refid="class_c_a_nopen_1_1_message_1a77a8c09ad0711fa4b574a8b88d983441" prot="public" virt="non-virtual"><scope>CANopen::PDOMessage</scope><name>Message</name></member>
+      <member refid="class_c_a_nopen_1_1_message_1ace3b5218ab769fb1e642b82b2d3fc7d3" prot="public" virt="non-virtual"><scope>CANopen::PDOMessage</scope><name>Message</name></member>
+      <member refid="class_c_a_nopen_1_1_message_1a0f8f95e4ea1284011cd122629edc5468a9772de90d6832671c05553ecc93168ce" prot="public" virt="non-virtual"><scope>CANopen::PDOMessage</scope><name>NMT</name></member>
+      <member refid="class_c_a_nopen_1_1_message_1adc93c710fd35ab61e46a0881326d0336" prot="public" virt="non-virtual"><scope>CANopen::PDOMessage</scope><name>node_id</name></member>
+      <member refid="class_c_a_nopen_1_1_p_d_o_message_1ae03740c1aa91dfc02a2a3ba0d566fb64" prot="public" virt="non-virtual"><scope>CANopen::PDOMessage</scope><name>num</name></member>
+      <member refid="class_c_a_nopen_1_1_message_1a2f57055297e93e7d694a2aa32911da6c" prot="public" virt="non-virtual"><scope>CANopen::PDOMessage</scope><name>operator can_frame *</name></member>
+      <member refid="class_c_a_nopen_1_1_message_1a231049034467f68a5a919a9267f9151f" prot="public" virt="virtual"><scope>CANopen::PDOMessage</scope><name>payload</name></member>
+      <member refid="class_c_a_nopen_1_1_p_d_o_message_1ab46579ce08cec30d0bc60428053cb39fa01d2d22755748fca5086b2e4bf6b009e" prot="public" virt="non-virtual"><scope>CANopen::PDOMessage</scope><name>PDO1Receive</name></member>
+      <member refid="class_c_a_nopen_1_1_p_d_o_message_1ab46579ce08cec30d0bc60428053cb39fabfcc66bfc93e03a72bb931e5bd636798" prot="public" virt="non-virtual"><scope>CANopen::PDOMessage</scope><name>PDO1Transmit</name></member>
+      <member refid="class_c_a_nopen_1_1_p_d_o_message_1ab46579ce08cec30d0bc60428053cb39fa2e653900b8cea5673b6c829c0d40b0f2" prot="public" virt="non-virtual"><scope>CANopen::PDOMessage</scope><name>PDO2Receive</name></member>
+      <member refid="class_c_a_nopen_1_1_p_d_o_message_1ab46579ce08cec30d0bc60428053cb39fa13229b4458d1949639c4e635cda6689c" prot="public" virt="non-virtual"><scope>CANopen::PDOMessage</scope><name>PDO2Transmit</name></member>
+      <member refid="class_c_a_nopen_1_1_p_d_o_message_1ab46579ce08cec30d0bc60428053cb39fa54205762ad0ee3cae8ff88519454fd2b" prot="public" virt="non-virtual"><scope>CANopen::PDOMessage</scope><name>PDO3Receive</name></member>
+      <member refid="class_c_a_nopen_1_1_p_d_o_message_1ab46579ce08cec30d0bc60428053cb39fa508480956655988cac3696b73e542753" prot="public" virt="non-virtual"><scope>CANopen::PDOMessage</scope><name>PDO3Transmit</name></member>
+      <member refid="class_c_a_nopen_1_1_p_d_o_message_1ab46579ce08cec30d0bc60428053cb39fa73eba51ebd0e854b545554bf9c92091b" prot="public" virt="non-virtual"><scope>CANopen::PDOMessage</scope><name>PDO4Receive</name></member>
+      <member refid="class_c_a_nopen_1_1_p_d_o_message_1ab46579ce08cec30d0bc60428053cb39fa67325f4e5dfd2ce6a2214a73997ac09d" prot="public" virt="non-virtual"><scope>CANopen::PDOMessage</scope><name>PDO4Transmit</name></member>
+      <member refid="class_c_a_nopen_1_1_p_d_o_message_1ab46579ce08cec30d0bc60428053cb39f" prot="public" virt="non-virtual"><scope>CANopen::PDOMessage</scope><name>PDOFunctionCode</name></member>
+      <member refid="class_c_a_nopen_1_1_p_d_o_message_1a9a38d99b2d049eccc56efb307f3619e6" prot="public" virt="non-virtual"><scope>CANopen::PDOMessage</scope><name>PDOMessage</name></member>
+      <member refid="class_c_a_nopen_1_1_p_d_o_message_1a461a62c471761504043dfcb13f9ec685" prot="public" virt="non-virtual"><scope>CANopen::PDOMessage</scope><name>PDOMessage</name></member>
+      <member refid="class_c_a_nopen_1_1_p_d_o_message_1ae7f8db2be338aaa9cc61f08520fa0c85" prot="public" virt="non-virtual"><scope>CANopen::PDOMessage</scope><name>PDOMessage</name></member>
+      <member refid="class_c_a_nopen_1_1_message_1a0f8f95e4ea1284011cd122629edc5468a720fb5202eef37017f7f58ac195c5949" prot="public" virt="non-virtual"><scope>CANopen::PDOMessage</scope><name>SDOReceive</name></member>
+      <member refid="class_c_a_nopen_1_1_message_1a0f8f95e4ea1284011cd122629edc5468ab54b9a53105e0549e5fc07ef1ee6b91a" prot="public" virt="non-virtual"><scope>CANopen::PDOMessage</scope><name>SDOTransmit</name></member>
+      <member refid="class_c_a_nopen_1_1_message_1a0f8f95e4ea1284011cd122629edc5468a439fca8488e446232afad47ea72326f4" prot="public" virt="non-virtual"><scope>CANopen::PDOMessage</scope><name>Sync</name></member>
+      <member refid="class_c_a_nopen_1_1_message_1a0f8f95e4ea1284011cd122629edc5468a4cce8d38cc9a387ac2553c97082934c7" prot="public" virt="non-virtual"><scope>CANopen::PDOMessage</scope><name>TimeStamp</name></member>
+      <member refid="class_c_a_nopen_1_1_message_1afdc7d0f669d0736395beac0e846646a5" prot="public" virt="non-virtual"><scope>CANopen::PDOMessage</scope><name>to_string</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

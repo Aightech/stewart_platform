@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_0faa4166abffc2d91ba5b47622b31ea7" kind="dir">
+    <compoundname>lxm32</compoundname>
+    <innerdir refid="dir_41288c44a1ffec16a296b4c982a01359">include</innerdir>
+    <innerdir refid="dir_220cbcf469ac190fdb1e9ad69346afb3">lib</innerdir>
+    <innerdir refid="dir_44a8ec273164e33839689911abe1d9ea">src</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/"/>
+  </compounddef>
+</doxygen>

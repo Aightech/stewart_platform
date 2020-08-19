@@ -1,0 +1,4 @@
+<map id="CANopen::Socket::Socket" name="CANopen::Socket::Socket">
+<area shape="rect" id="node1" title="Constructor." alt="" coords="5,5,229,35"/>
+<area shape="rect" id="node2" href="$class_c_a_nopen_1_1_socket.html#a6f63808addc451747608c21b958821f4" title="return true if the can interface is successfully bound" alt="" coords="277,5,481,35"/>
+</map>

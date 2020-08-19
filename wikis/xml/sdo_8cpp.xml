@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="sdo_8cpp" kind="file" language="C++">
+    <compoundname>sdo.cpp</compoundname>
+    <includes refid="sdo_8h" local="yes">sdo.h</includes>
+    <includes local="no">stdexcept</includes>
+    <includes local="no">iostream</includes>
+    <incdepgraph>
+      <node id="5">
+        <label>cstdint</label>
+      </node>
+      <node id="7">
+        <label>stdexcept</label>
+      </node>
+      <node id="8">
+        <label>string</label>
+      </node>
+      <node id="10">
+        <label>linux/can.h</label>
+      </node>
+      <node id="9">
+        <label>vector</label>
+      </node>
+      <node id="2">
+        <label>sdo.h</label>
+        <link refid="sdo_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>sstream</label>
+      </node>
+      <node id="1">
+        <label>sdo.cpp</label>
+        <link refid="sdo_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>iostream</label>
+      </node>
+      <node id="3">
+        <label>message.h</label>
+        <link refid="message_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>payload.h</label>
+        <link refid="payload_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespace_c_a_nopen">CANopen</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sdo_8h" kindref="compound">sdo.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdexcept&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">CANopen<sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">SDOMessage::SDOMessage(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>can_frame<sp/>&amp;other)</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>Message(other)<sp/>{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">SDOMessage::SDOMessage(FunctionCode<sp/>fn,<sp/>uint8_t<sp/>node_id,<sp/>CCS<sp/>spec,<sp/>uint8_t<sp/>n,<sp/>uint8_t<sp/>e,<sp/>uint8_t<sp/>s,<sp/>uint16_t<sp/>index,<sp/>uint8_t<sp/>subindex,<sp/>Payload<sp/>payload)<sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(fn<sp/>!=<sp/>SDOReceive<sp/>&amp;&amp;<sp/>fn<sp/>!=<sp/>SDOTransmit)<sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;SDOMessage:<sp/>wrong<sp/>function<sp/>code(&quot;</highlight><highlight class="normal"><sp/>+<sp/>(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::stringstream<sp/></highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal">&amp;</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(std::stringstream()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;0x&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::hex<sp/>&lt;&lt;<sp/>fn)).str()<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;)&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>can_id<sp/>=<sp/>fn<sp/>+<sp/>node_id;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>can_dlc<sp/>=<sp/>CAN_MAX_DLC;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>data[0]<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">uint8_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(spec<sp/>&lt;&lt;<sp/>5<sp/>|<sp/>(n&amp;0x03)<sp/>&lt;&lt;<sp/>2<sp/>|<sp/>e<sp/>&lt;&lt;<sp/>1<sp/>|<sp/>s);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>data[1]<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">uint8_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(index);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>data[2]<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">uint8_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(index<sp/>&gt;&gt;<sp/>8);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>data[3]<sp/>=<sp/>subindex;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>payload.size();<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data[4<sp/>+<sp/>i]<sp/>=<sp/>payload[i];</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">uint16_t</highlight></codeline>
+<codeline lineno="29" refid="class_c_a_nopen_1_1_s_d_o_message_1a1e31a75dd442c32eaf42d74937b71cbb" refkind="member"><highlight class="normal">SDOMessage::index()</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>data[1]<sp/>+<sp/>(data[2]<sp/>&lt;&lt;<sp/>8);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal">uint8_t</highlight></codeline>
+<codeline lineno="34" refid="class_c_a_nopen_1_1_s_d_o_message_1acec40b62f1a77ab566fed5d9707ea619" refkind="member"><highlight class="normal">SDOMessage::subindex()</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>data[3];</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal">uint32_t</highlight></codeline>
+<codeline lineno="39" refid="class_c_a_nopen_1_1_s_d_o_message_1aa12187c7761d4ef34de349270bb654d4" refkind="member"><highlight class="normal">SDOMessage::index__sub()</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>((data[1]<sp/>+<sp/>(data[2]<sp/>&lt;&lt;<sp/>8))<sp/>&lt;&lt;<sp/>16)<sp/>+<sp/>data[3];</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><ref refid="class_c_a_nopen_1_1_payload" kindref="compound">Payload</ref></highlight></codeline>
+<codeline lineno="44" refid="class_c_a_nopen_1_1_s_d_o_message_1a1c98a42d8af59c1b91d91ff2014cc276" refkind="member"><highlight class="normal">SDOMessage::payload()</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_c_a_nopen_1_1_payload" kindref="compound">Payload</ref>(std::vector&lt;uint8_t&gt;(data<sp/>+<sp/>4,<sp/>data<sp/>+<sp/>4<sp/>+<sp/>size_data()));</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal">uint8_t<sp/></highlight></codeline>
+<codeline lineno="49" refid="class_c_a_nopen_1_1_s_d_o_message_1ada403b64e3e300c54f9f941cf65a3da9" refkind="member"><highlight class="normal">SDOMessage::size_data()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="50"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>4-(0x3&amp;(data[0]&gt;&gt;2));</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal">SDOInbound::SDOInbound(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>can_frame<sp/>&amp;other)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/><ref refid="class_c_a_nopen_1_1_s_d_o_message" kindref="compound">SDOMessage</ref>(other)<sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal">SDOOutbound::SDOOutbound(uint8_t<sp/>node_id,<sp/>RDWR<sp/>dir,<sp/>uint16_t<sp/>index,<sp/>uint8_t<sp/>subindex,<sp/>Payload<sp/>payload)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>SDOMessage(SDOReceive,<sp/>node_id,<sp/>dir<sp/>==<sp/>Write<sp/>?<sp/>InitiateDownload<sp/>:<sp/>InitiateUpload,<sp/>4<sp/>-<sp/>payload.size(),<sp/>1,<sp/>1,<sp/>index,<sp/>subindex,<sp/>payload)<sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal">SDOOutboundRead::SDOOutboundRead(uint8_t<sp/>node_id,<sp/>uint16_t<sp/>index,<sp/>uint8_t<sp/>subindex)</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>SDOOutbound(node_id,<sp/>Read,<sp/>index,<sp/>subindex,<sp/>Payload())<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal">SDOOutboundRead::SDOOutboundRead(uint8_t<sp/>node_id,<sp/>uint32_t<sp/>index__sub)</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>SDOOutbound(node_id,<sp/>Read,<sp/>(uint16_t)(index__sub<sp/>&gt;&gt;<sp/>16),<sp/>(uint8_t)index__sub,<sp/>Payload())<sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal">SDOOutboundWrite::SDOOutboundWrite(uint8_t<sp/>node_id,<sp/>uint16_t<sp/>index,<sp/>uint8_t<sp/>subindex,<sp/>Payload<sp/>payload)</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>SDOOutbound(node_id,<sp/>Write,<sp/>index,<sp/>subindex,<sp/>payload)<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal">SDOOutboundWrite::SDOOutboundWrite(uint8_t<sp/>node_id,<sp/>uint32_t<sp/>index__sub,<sp/>Payload<sp/>payload)</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>SDOOutbound(node_id,<sp/>Write,<sp/>(uint16_t)(index__sub<sp/>&gt;&gt;<sp/>16),<sp/>(uint8_t)index__sub,<sp/>payload)<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>CANopen</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/src/sdo.cpp"/>
+  </compounddef>
+</doxygen>

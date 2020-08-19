@@ -27,9 +27,6 @@ class Platform : public Model
     double *
     new_pos(double T[3], double theta[3]);
     
-    void 
-    sin_wave(Eigen::Vector3f dir, double w);
-    
     void
     update_platform();
 

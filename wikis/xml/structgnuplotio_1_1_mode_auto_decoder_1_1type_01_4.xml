@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structgnuplotio_1_1_mode_auto_decoder_1_1type_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>gnuplotio::ModeAutoDecoder::type &gt;</compoundname>
+    <includes refid="gnuplot-iostream_8h" local="no">gnuplot-iostream.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structgnuplotio_1_1_mode_auto_decoder_1_1type_01_4_1ad1942745c810b24503495c6ade6bd9f6" prot="public" static="no">
+        <type><ref refid="structgnuplotio_1_1_mode2_d_unwrap" kindref="compound">Mode2DUnwrap</ref></type>
+        <definition>typedef Mode2DUnwrap gnuplotio::ModeAutoDecoder&lt; T, Enable &gt;::type &gt;::mode</definition>
+        <argsstring></argsstring>
+        <name>mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/gnuplot-iostream.h" line="1262" column="22" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/gnuplot-iostream.h" bodystart="1262" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structgnuplotio_1_1_mode_auto_decoder_1_1type_01_4_1a07e8af1d93e8107efb7be6fd68b0024c" prot="public" static="no">
+        <type><ref refid="structgnuplotio_1_1_mode2_d" kindref="compound">Mode2D</ref></type>
+        <definition>typedef Mode2D gnuplotio::ModeAutoDecoder&lt; T, Enable &gt;::type &gt;::mode</definition>
+        <argsstring></argsstring>
+        <name>mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/gnuplot-iostream.h" line="1272" column="16" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/gnuplot-iostream.h" bodystart="1272" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/adev/Documents/STECH/stewart_platform/include/gnuplot-iostream.h" line="1261" column="1" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/gnuplot-iostream.h" bodystart="1256" bodyend="1263"/>
+    <listofallmembers>
+      <member refid="structgnuplotio_1_1_mode_auto_decoder_1_1type_01_4_1ad1942745c810b24503495c6ade6bd9f6" prot="public" virt="non-virtual"><scope>gnuplotio::ModeAutoDecoder::type &gt;</scope><name>mode</name></member>
+      <member refid="structgnuplotio_1_1_mode_auto_decoder_1_1type_01_4_1a07e8af1d93e8107efb7be6fd68b0024c" prot="public" virt="non-virtual"><scope>gnuplotio::ModeAutoDecoder::type &gt;</scope><name>mode</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

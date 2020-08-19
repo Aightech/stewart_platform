@@ -1,0 +1,136 @@
+\hypertarget{_c_a_nopen__socket_8cpp_source}{}\doxysection{C\+A\+Nopen\+\_\+socket.\+cpp}
+\label{_c_a_nopen__socket_8cpp_source}\index{CANopen\_socket.cpp@{CANopen\_socket.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{_c_a_nopen__socket_8h}{CANopen\_socket.h}}"}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#include <linux/can/raw.h>}}
+\DoxyCodeLine{00004 \textcolor{preprocessor}{\#include <net/if.h>}}
+\DoxyCodeLine{00005 \textcolor{preprocessor}{\#include <stdexcept>}}
+\DoxyCodeLine{00006 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{00007 \textcolor{preprocessor}{\#include <string.h>}}
+\DoxyCodeLine{00008 \textcolor{preprocessor}{\#include <sys/ioctl.h>}}
+\DoxyCodeLine{00009 \textcolor{preprocessor}{\#include <sys/socket.h>}}
+\DoxyCodeLine{00010 \textcolor{preprocessor}{\#include <sys/types.h>}}
+\DoxyCodeLine{00011 \textcolor{preprocessor}{\#include <unistd.h>}}
+\DoxyCodeLine{00012 \textcolor{preprocessor}{\#include <stdarg.h>}}
+\DoxyCodeLine{00013 }
+\DoxyCodeLine{00014 }
+\DoxyCodeLine{00015 }
+\DoxyCodeLine{00016 \textcolor{keyword}{namespace }CANopen \{}
+\DoxyCodeLine{00017 std::mutex g\_verbose\_mutex;}
+\DoxyCodeLine{00018 }
+\DoxyCodeLine{\Hypertarget{_c_a_nopen__socket_8cpp_source_l00019}\mbox{\hyperlink{class_c_a_nopen_1_1_socket_a66c37f6819a5ad8829326380812446e6}{00019}} \mbox{\hyperlink{class_c_a_nopen_1_1_socket_a66c37f6819a5ad8829326380812446e6}{Socket::Socket}}(std::string ifname, \textcolor{keywordtype}{int} verbose\_level)}
+\DoxyCodeLine{00020     : m\_ifname(ifname), m\_verbose\_level(verbose\_level) \{}
+\DoxyCodeLine{00021     \textcolor{keywordflow}{if}((m\_socket = socket(PF\_CAN, SOCK\_RAW, CAN\_RAW)) < 0)}
+\DoxyCodeLine{00022         \textcolor{keywordflow}{throw} std::runtime\_error(std::string(\textcolor{stringliteral}{"Error while opening socket: "}) + strerror(errno));}
+\DoxyCodeLine{00023 }
+\DoxyCodeLine{00024     \textcolor{keywordtype}{int} r = 0;}
+\DoxyCodeLine{00025     \textcolor{keywordflow}{if}((r = \mbox{\hyperlink{class_c_a_nopen_1_1_socket_a6f63808addc451747608c21b958821f4}{bind}}()) < 0) \{}
+\DoxyCodeLine{00026         \textcolor{keywordflow}{throw} std::runtime\_error(std::string(\textcolor{stringliteral}{"Failed to bind socket: "}) + strerror(-\/r));}
+\DoxyCodeLine{00027     \}}
+\DoxyCodeLine{00028 \}}
+\DoxyCodeLine{00029 }
+\DoxyCodeLine{\Hypertarget{_c_a_nopen__socket_8cpp_source_l00030}\mbox{\hyperlink{class_c_a_nopen_1_1_socket_af234eea5568f8f436cb815ab70e75f2f}{00030}} \mbox{\hyperlink{class_c_a_nopen_1_1_socket_a66c37f6819a5ad8829326380812446e6}{Socket::Socket}}(std::string ifname, uint32\_t cob\_id, \textcolor{keywordtype}{int} verbose\_level)}
+\DoxyCodeLine{00031     : \mbox{\hyperlink{class_c_a_nopen_1_1_socket}{Socket}}(ifname, verbose\_level) \{}
+\DoxyCodeLine{00032     \textcolor{keyword}{struct }can\_filter rfilter[1];}
+\DoxyCodeLine{00033 }
+\DoxyCodeLine{00034     rfilter[0].can\_id = cob\_id;}
+\DoxyCodeLine{00035     rfilter[0].can\_mask = CAN\_SFF\_MASK;}
+\DoxyCodeLine{00036     setsockopt(m\_socket, SOL\_CAN\_RAW, CAN\_RAW\_FILTER, \&rfilter, \textcolor{keyword}{sizeof}(rfilter));}
+\DoxyCodeLine{00037 \};}
+\DoxyCodeLine{00038 }
+\DoxyCodeLine{00039 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00040 Socket::add\_filter(std::initializer\_list<struct can\_filter> rfilter\_) \{}
+\DoxyCodeLine{00041     \textcolor{keyword}{struct }can\_filter rfilter[rfilter\_.size()];}
+\DoxyCodeLine{00042     \textcolor{keywordtype}{int} i=0;}
+\DoxyCodeLine{00043     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} filter :rfilter\_)}
+\DoxyCodeLine{00044     \{}
+\DoxyCodeLine{00045         rfilter[i].can\_id = filter.can\_id;}
+\DoxyCodeLine{00046         rfilter[i++].can\_mask = filter.can\_mask;\textcolor{comment}{//CAN\_SFF\_MASK;}}
+\DoxyCodeLine{00047     \}}
+\DoxyCodeLine{00048     }
+\DoxyCodeLine{00049 }
+\DoxyCodeLine{00050     setsockopt(m\_socket, SOL\_CAN\_RAW, CAN\_RAW\_FILTER, \&rfilter, \textcolor{keyword}{sizeof}(rfilter));}
+\DoxyCodeLine{00051 \};}
+\DoxyCodeLine{00052 }
+\DoxyCodeLine{00053 \textcolor{keywordtype}{int}}
+\DoxyCodeLine{\Hypertarget{_c_a_nopen__socket_8cpp_source_l00054}\mbox{\hyperlink{class_c_a_nopen_1_1_socket_a6f63808addc451747608c21b958821f4}{00054}} \mbox{\hyperlink{class_c_a_nopen_1_1_socket_a6f63808addc451747608c21b958821f4}{Socket::bind}}() \{}
+\DoxyCodeLine{00055     \textcolor{keyword}{struct }ifreq ifr;}
+\DoxyCodeLine{00056     strcpy(ifr.ifr\_name, m\_ifname.c\_str());}
+\DoxyCodeLine{00057     \textcolor{keywordflow}{if}(ioctl(m\_socket, SIOCGIFINDEX, \&ifr) < 0) \{}
+\DoxyCodeLine{00058         \textcolor{keywordflow}{return} -\/errno;}
+\DoxyCodeLine{00059     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00060         \textcolor{keyword}{struct }sockaddr\_can addr;}
+\DoxyCodeLine{00061         addr.can\_family = AF\_CAN;}
+\DoxyCodeLine{00062         addr.can\_ifindex = ifr.ifr\_ifindex;}
+\DoxyCodeLine{00063 }
+\DoxyCodeLine{00064         IF\_VERBOSE(1, std::cout << m\_ifname << \textcolor{stringliteral}{" at index "} << ifr.ifr\_ifindex << std::endl, m\_verbose\_level)}
+\DoxyCodeLine{00065 }
+\DoxyCodeLine{00066         \textcolor{keywordflow}{if}(::\mbox{\hyperlink{class_c_a_nopen_1_1_socket_a6f63808addc451747608c21b958821f4}{bind}}(m\_socket, (\textcolor{keyword}{struct} sockaddr *)\&addr, \textcolor{keyword}{sizeof}(addr)) < 0)}
+\DoxyCodeLine{00067             \textcolor{keywordflow}{return} -\/errno;}
+\DoxyCodeLine{00068     \}}
+\DoxyCodeLine{00069     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00070 \}}
+\DoxyCodeLine{00071 }
+\DoxyCodeLine{00072 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{_c_a_nopen__socket_8cpp_source_l00073}\mbox{\hyperlink{class_c_a_nopen_1_1_socket_aa147801723e58f287d06b6df28837c44}{00073}} \mbox{\hyperlink{class_c_a_nopen_1_1_socket_aa147801723e58f287d06b6df28837c44}{Socket::send}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_c_a_nopen_1_1_message}{Message}} \&\&msg) \{}
+\DoxyCodeLine{00074     int32\_t n = write(m\_socket, msg, \textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} can\_frame));}
+\DoxyCodeLine{00075     \textcolor{keywordflow}{if}(n < \textcolor{keyword}{static\_cast<}ssize\_t\textcolor{keyword}{>}(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} can\_frame))) \{}
+\DoxyCodeLine{00076         \textcolor{keywordflow}{throw} std::runtime\_error(\textcolor{stringliteral}{"Failed to send message (n="} + std::to\_string(n) + \textcolor{stringliteral}{")"});}
+\DoxyCodeLine{00077     \}}
+\DoxyCodeLine{00078 \}}
+\DoxyCodeLine{00079 }
+\DoxyCodeLine{00080 std::shared\_ptr<Message>}
+\DoxyCodeLine{00081 Socket::receive() \{}
+\DoxyCodeLine{00082     \mbox{\hyperlink{class_c_a_nopen_1_1_message}{Message}} ans;}
+\DoxyCodeLine{00083     int32\_t n = read(m\_socket, ans, \textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} can\_frame));}
+\DoxyCodeLine{00084     }
+\DoxyCodeLine{00085 }
+\DoxyCodeLine{00086     \textcolor{keywordflow}{if}(n < 0) \{}
+\DoxyCodeLine{00087         IF\_VERBOSE(1, std::cout << \textcolor{stringliteral}{"CANopen::Socket::receive: nothing to read"} << std::endl, m\_verbose\_level)}
+\DoxyCodeLine{00088         \textcolor{keywordflow}{return} std::shared\_ptr<Message>();}
+\DoxyCodeLine{00089     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(n < \textcolor{keyword}{static\_cast<}ssize\_t\textcolor{keyword}{>}(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} can\_frame))) \{}
+\DoxyCodeLine{00090         IF\_VERBOSE(1, std::cerr << \textcolor{stringliteral}{"CANopen::Socket::receive: incomplete CAN frame"} << std::endl, m\_verbose\_level)}
+\DoxyCodeLine{00091         \textcolor{keywordflow}{return} std::shared\_ptr<Message>();}
+\DoxyCodeLine{00092     \}}
+\DoxyCodeLine{00093 }
+\DoxyCodeLine{00094     std::shared\_ptr<Message> ret;}
+\DoxyCodeLine{00095     \textcolor{keywordflow}{switch}(ans.\mbox{\hyperlink{class_c_a_nopen_1_1_message_aa0b2fbf64579563a763e3efbe1766c3a}{function\_code}}()) \{}
+\DoxyCodeLine{00096     \textcolor{keywordflow}{case} \mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468a9772de90d6832671c05553ecc93168ce}{Message::NMT}}:}
+\DoxyCodeLine{00097         ret = std::make\_shared<NMTMessage>(ans);}
+\DoxyCodeLine{00098         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00099     \textcolor{keywordflow}{case} \mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468acf827d4fddf4af5908ff22d480ec3f9f}{Message::Emergency}}:}
+\DoxyCodeLine{00100         \textcolor{keywordflow}{if}(ans.\mbox{\hyperlink{class_c_a_nopen_1_1_message_adc93c710fd35ab61e46a0881326d0336}{node\_id}}() == 0) \{ \textcolor{comment}{// Sync frame}}
+\DoxyCodeLine{00101         \} \textcolor{keywordflow}{else} \{                 \textcolor{comment}{// Emergency frame}}
+\DoxyCodeLine{00102             ret = std::make\_shared<EMCYMessage>(ans);}
+\DoxyCodeLine{00103         \}}
+\DoxyCodeLine{00104         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00105     \textcolor{keywordflow}{case} \mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468a4cce8d38cc9a387ac2553c97082934c7}{Message::TimeStamp}}:}
+\DoxyCodeLine{00106         ret = std::make\_shared<Message>(ans);}
+\DoxyCodeLine{00107         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00108     \textcolor{keywordflow}{case} \mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468aea8753e3c4fecde547db28a4a01f4fea}{Message::PDO1Transmit}}:}
+\DoxyCodeLine{00109     \textcolor{keywordflow}{case} \mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468a644cdb60cf2ec10f6f509c6dac09c7e7}{Message::PDO2Transmit}}:}
+\DoxyCodeLine{00110     \textcolor{keywordflow}{case} \mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468ac15c2cbe07eac4f1fdc102927deadcdc}{Message::PDO3Transmit}}:}
+\DoxyCodeLine{00111     \textcolor{keywordflow}{case} \mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468a46d53ca55e462afcab565303b212656c}{Message::PDO4Transmit}}:}
+\DoxyCodeLine{00112     \textcolor{keywordflow}{case} \mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468a289816747eb21454c97a2c0de54bd7bd}{Message::PDO1Receive}}:}
+\DoxyCodeLine{00113     \textcolor{keywordflow}{case} \mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468ae19e8c5160acfaab1c140c21789138e3}{Message::PDO2Receive}}:}
+\DoxyCodeLine{00114     \textcolor{keywordflow}{case} \mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468ab059d1f4ab6ed9bb993e5d37aea6eba1}{Message::PDO3Receive}}:}
+\DoxyCodeLine{00115     \textcolor{keywordflow}{case} \mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468a45f4fc29142533ab1395bd971c12be9b}{Message::PDO4Receive}}:}
+\DoxyCodeLine{00116         ret = std::make\_shared<PDOMessage>(ans);}
+\DoxyCodeLine{00117         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00118     \textcolor{keywordflow}{case} \mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468ab54b9a53105e0549e5fc07ef1ee6b91a}{Message::SDOTransmit}}:}
+\DoxyCodeLine{00119         ret = std::make\_shared<SDOInbound>(ans);}
+\DoxyCodeLine{00120         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00121     \textcolor{keywordflow}{case} \mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468a720fb5202eef37017f7f58ac195c5949}{Message::SDOReceive}}:}
+\DoxyCodeLine{00122         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00123     \textcolor{keywordflow}{case} \mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468aea5e380d61d7dbbbb5f4655e3fbdc65c}{Message::Heartbeat}}:}
+\DoxyCodeLine{00124         ret = std::make\_shared<Message>(ans);}
+\DoxyCodeLine{00125         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00126     \}}
+\DoxyCodeLine{00127 }
+\DoxyCodeLine{00128     \textcolor{keywordflow}{return} ret;}
+\DoxyCodeLine{00129 \}}
+\DoxyCodeLine{00130 \} \textcolor{comment}{// namespace CANopen}}
+
+\end{DoxyCode}

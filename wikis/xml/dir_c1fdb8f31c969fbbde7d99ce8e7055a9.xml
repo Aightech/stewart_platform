@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_c1fdb8f31c969fbbde7d99ce8e7055a9" kind="dir">
+    <compoundname>src</compoundname>
+    <innerfile refid="_c_a_nopen__socket_8cpp">CANopen_socket.cpp</innerfile>
+    <innerfile refid="emcy_8cpp">emcy.cpp</innerfile>
+    <innerfile refid="lib_2lxm32_2lib_2canopen_2src_2main_8cpp">lib/lxm32/lib/canopen/src/main.cpp</innerfile>
+    <innerfile refid="message_8cpp">message.cpp</innerfile>
+    <innerfile refid="nmt_8cpp">nmt.cpp</innerfile>
+    <innerfile refid="payload_8cpp">payload.cpp</innerfile>
+    <innerfile refid="pdo_8cpp">pdo.cpp</innerfile>
+    <innerfile refid="sdo_8cpp">sdo.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/src/"/>
+  </compounddef>
+</doxygen>

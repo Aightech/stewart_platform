@@ -1,0 +1,385 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="parameter_8h" kind="file" language="C++">
+    <compoundname>parameter.h</compoundname>
+    <includes refid="_c_a_nopen__socket_8h" local="yes">CANopen_socket.h</includes>
+    <includes local="no">algorithm</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">map</includes>
+    <includes local="no">mutex</includes>
+    <includes local="no">string</includes>
+    <includes local="no">thread</includes>
+    <includedby refid="_c_a_nopen__driver_8h" local="yes">CANopen_driver.h</includedby>
+    <includedby refid="parameter_8cpp" local="yes">parameter.cpp</includedby>
+    <incdepgraph>
+      <node id="19">
+        <label>emcy.h</label>
+        <link refid="emcy_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>cstdint</label>
+      </node>
+      <node id="17">
+        <label>pdo.h</label>
+        <link refid="pdo_8h_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>stdexcept</label>
+      </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+      <node id="5">
+        <label>linux/can/raw.h</label>
+      </node>
+      <node id="22">
+        <label>map</label>
+      </node>
+      <node id="1">
+        <label>parameter.h</label>
+        <link refid="parameter_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>linux/can.h</label>
+      </node>
+      <node id="2">
+        <label>CANopen_socket.h</label>
+        <link refid="_c_a_nopen__socket_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>vector</label>
+      </node>
+      <node id="16">
+        <label>sdo.h</label>
+        <link refid="sdo_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>sstream</label>
+      </node>
+      <node id="18">
+        <label>nmt.h</label>
+        <link refid="nmt_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>iostream</label>
+      </node>
+      <node id="9">
+        <label>message.h</label>
+        <link refid="message_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>mutex</label>
+      </node>
+      <node id="6">
+        <label>sys/socket.h</label>
+      </node>
+      <node id="23">
+        <label>thread</label>
+      </node>
+      <node id="20">
+        <label>algorithm</label>
+      </node>
+      <node id="10">
+        <label>payload.h</label>
+        <link refid="payload_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>memory</label>
+      </node>
+      <node id="8">
+        <label>initializer_list</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="11">
+        <label>CANopen_driver.cpp</label>
+        <link refid="_c_a_nopen__driver_8cpp_source"/>
+      </node>
+      <node id="12">
+        <label>parameter.cpp</label>
+        <link refid="parameter_8cpp_source"/>
+      </node>
+      <node id="7">
+        <label>mainwindow.cpp</label>
+        <link refid="mainwindow_8cpp_source"/>
+      </node>
+      <node id="1">
+        <label>parameter.h</label>
+        <link refid="parameter_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>platform.cpp</label>
+        <link refid="platform_8cpp_source"/>
+      </node>
+      <node id="6">
+        <label>main.cpp</label>
+        <link refid="src_2main_8cpp_source"/>
+      </node>
+      <node id="4">
+        <label>platform.hpp</label>
+        <link refid="platform_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>CANopen_lxm32.h</label>
+        <link refid="_c_a_nopen__lxm32_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>CANopen_driver.h</label>
+        <link refid="_c_a_nopen__driver_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>mainwindow.h</label>
+        <link refid="mainwindow_8h_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>main.cpp</label>
+        <link refid="lib_2lxm32_2src_2main_8cpp_source"/>
+      </node>
+      <node id="9">
+        <label>CANopen_lxm32.cpp</label>
+        <link refid="_c_a_nopen__lxm32_8cpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_c_a_nopen_1_1_parameter" prot="public">CANopen::Parameter</innerclass>
+    <innernamespace refid="namespace_c_a_nopen">CANopen</innernamespace>
+    <briefdescription>
+<para>Device Object from the object dictionary of a remote CANopen device. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Alexis Devillard </para>
+</simplesect>
+<simplesect kind="version"><para>1.0 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_PARAMETER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_PARAMETER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_c_a_nopen__socket_8h" kindref="compound">CANopen_socket.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mutex&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;thread&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">CANopen<sp/>{</highlight></codeline>
+<codeline lineno="24" refid="struct_c_a_nopen_1_1_parameter" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_c_a_nopen_1_1_parameter" kindref="compound">Parameter</ref><sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="struct_c_a_nopen_1_1_parameter_1aa7232c26e1cf4daa3e5719007872ddc5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="struct_c_a_nopen_1_1_parameter_1aa7232c26e1cf4daa3e5719007872ddc5" kindref="member">param_cb_t</ref>)(<ref refid="struct_c_a_nopen_1_1_parameter" kindref="compound">Parameter</ref><sp/>*);<sp/></highlight><highlight class="comment">//type<sp/>of<sp/>the<sp/>parameter<sp/>callback<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="struct_c_a_nopen_1_1_parameter_1a4870a26654749daa1ef95bdcb6d01d59" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="struct_c_a_nopen_1_1_parameter_1a4870a26654749daa1ef95bdcb6d01d59" kindref="member">PDOFunctionCode</ref><sp/>:<sp/>uint32_t<sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PDO1Transmit<sp/>=<sp/><ref refid="class_c_a_nopen_1_1_message_1a0f8f95e4ea1284011cd122629edc5468aea8753e3c4fecde547db28a4a01f4fea" kindref="member">Message::PDO1Transmit</ref>,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PDO1Receive<sp/>=<sp/><ref refid="class_c_a_nopen_1_1_message_1a0f8f95e4ea1284011cd122629edc5468a289816747eb21454c97a2c0de54bd7bd" kindref="member">Message::PDO1Receive</ref>,</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PDO2Transmit<sp/>=<sp/><ref refid="class_c_a_nopen_1_1_message_1a0f8f95e4ea1284011cd122629edc5468a644cdb60cf2ec10f6f509c6dac09c7e7" kindref="member">Message::PDO2Transmit</ref>,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PDO2Receive<sp/>=<sp/><ref refid="class_c_a_nopen_1_1_message_1a0f8f95e4ea1284011cd122629edc5468ae19e8c5160acfaab1c140c21789138e3" kindref="member">Message::PDO2Receive</ref>,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PDO3Transmit<sp/>=<sp/><ref refid="class_c_a_nopen_1_1_message_1a0f8f95e4ea1284011cd122629edc5468ac15c2cbe07eac4f1fdc102927deadcdc" kindref="member">Message::PDO3Transmit</ref>,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PDO3Receive<sp/>=<sp/><ref refid="class_c_a_nopen_1_1_message_1a0f8f95e4ea1284011cd122629edc5468ab059d1f4ab6ed9bb993e5d37aea6eba1" kindref="member">Message::PDO3Receive</ref>,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PDO4Transmit<sp/>=<sp/><ref refid="class_c_a_nopen_1_1_message_1a0f8f95e4ea1284011cd122629edc5468a46d53ca55e462afcab565303b212656c" kindref="member">Message::PDO4Transmit</ref>,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PDO4Receive<sp/>=<sp/><ref refid="class_c_a_nopen_1_1_message_1a0f8f95e4ea1284011cd122629edc5468a45f4fc29142533ab1395bd971c12be9b" kindref="member">Message::PDO4Receive</ref>,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_c_a_nopen_1_1_parameter" kindref="compound">Parameter</ref>()<sp/>{<sp/>var<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>int32_t;<sp/>};</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="56" refid="struct_c_a_nopen_1_1_parameter_1ab53571d27af3fba545a250f87320aa64" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_c_a_nopen_1_1_parameter_1ab53571d27af3fba545a250f87320aa64" kindref="member">Parameter</ref>(std::string<sp/>name_,<sp/>T<sp/>val,<sp/>uint16_t<sp/>index_,<sp/>uint8_t<sp/>subindex_,<sp/><ref refid="struct_c_a_nopen_1_1_parameter_1aa7232c26e1cf4daa3e5719007872ddc5" kindref="member">param_cb_t</ref><sp/>cb<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)<sp/>:<sp/>name(name_),<sp/>index(index_),<sp/>subindex(subindex_),<sp/>_cb(cb)<sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mutex.lock();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>var<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>T;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*(T<sp/>*)var<sp/>=<sp/>(T)val;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_should_be_sent<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mutex.unlock();</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>size<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(T);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="73" refid="struct_c_a_nopen_1_1_parameter_1ac2e3642934ae7736c045e70b0e08e83c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_c_a_nopen_1_1_parameter_1ac2e3642934ae7736c045e70b0e08e83c" kindref="member">Parameter</ref>(std::string<sp/>name_,<sp/>T<sp/>val,<sp/>uint32_t<sp/>index__sub,<sp/><ref refid="struct_c_a_nopen_1_1_parameter_1aa7232c26e1cf4daa3e5719007872ddc5" kindref="member">param_cb_t</ref><sp/>cb<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)<sp/>:<sp/><ref refid="struct_c_a_nopen_1_1_parameter" kindref="compound">Parameter</ref>(name_,<sp/>val,<sp/>(uint16_t)(index__sub<sp/>&gt;&gt;<sp/>16),<sp/>(uint8_t)index__sub,<sp/>cb){};</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>~<ref refid="struct_c_a_nopen_1_1_parameter" kindref="compound">Parameter</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">(int32_t<sp/>*)var;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_c_a_nopen_1_1_parameter_1a6f66686b516733d6506e8efdedd67862" kindref="member">link_to_pdo</ref>(<ref refid="struct_c_a_nopen_1_1_parameter_1a4870a26654749daa1ef95bdcb6d01d59" kindref="member">PDOFunctionCode</ref><sp/>fn,<sp/>int8_t<sp/>slot);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="struct_c_a_nopen_1_1_parameter_1a56877b06fefded5cf3353844604d59f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_c_a_nopen_1_1_parameter_1a56877b06fefded5cf3353844604d59f7" kindref="member">set</ref>(T<sp/>val,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>force_update<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>received_data<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>was_updated<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(T)<sp/>==<sp/>size)<sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mutex.lock();</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!m_should_be_sent<sp/>||<sp/>force_update)<sp/></highlight><highlight class="comment">//if<sp/>force<sp/>update<sp/>(even<sp/>if<sp/>the<sp/>previous<sp/>value<sp/>was<sp/>not<sp/>sent<sp/>yet)<sp/>or<sp/>value<sp/>already<sp/>update</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(*(T<sp/>*)var<sp/>!=<sp/>(T)val)<sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>was_updated<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*(T<sp/>*)var<sp/>=<sp/>(T)val;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!received_data)</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_should_be_sent<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mutex.unlock();</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>was_updated;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="struct_c_a_nopen_1_1_parameter_1a3ec2c4a4da29908a2e69de9187325a11" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_c_a_nopen_1_1_parameter_1a3ec2c4a4da29908a2e69de9187325a11" kindref="member">operator=</ref>(int8_t<sp/>val)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;set&lt;int8_t&gt;(val,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);<sp/>}<sp/></highlight><highlight class="comment">//return<sp/>fakse<sp/>if<sp/>the<sp/>assignement<sp/>didn&apos;t<sp/>succeed<sp/>(wrong<sp/>type<sp/>size,<sp/>not<sp/>updated<sp/>yet)</highlight></codeline>
+<codeline lineno="127"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="struct_c_a_nopen_1_1_parameter_1ae2f287d5d0abc2b4693d3ec81b53cdd1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_c_a_nopen_1_1_parameter_1ae2f287d5d0abc2b4693d3ec81b53cdd1" kindref="member">operator=</ref>(int16_t<sp/>val)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;set&lt;int16_t&gt;(val,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);<sp/>}<sp/></highlight><highlight class="comment">//return<sp/>fakse<sp/>if<sp/>the<sp/>assignement<sp/>didn&apos;t<sp/>succeed<sp/>(wrong<sp/>type<sp/>size,<sp/>not<sp/>updated<sp/>yet)</highlight></codeline>
+<codeline lineno="134"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135" refid="struct_c_a_nopen_1_1_parameter_1aea3dee9f4e137c2e5627d23836f18a6b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_c_a_nopen_1_1_parameter_1aea3dee9f4e137c2e5627d23836f18a6b" kindref="member">operator=</ref>(int32_t<sp/>val)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;set&lt;int32_t&gt;(val,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);<sp/>}<sp/></highlight><highlight class="comment">//return<sp/>fakse<sp/>if<sp/>the<sp/>assignement<sp/>didn&apos;t<sp/>succeed<sp/>(wrong<sp/>type<sp/>size,<sp/>not<sp/>updated<sp/>yet)</highlight></codeline>
+<codeline lineno="141"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142" refid="struct_c_a_nopen_1_1_parameter_1ad72cd626ccab044f0295b092d41668ca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_c_a_nopen_1_1_parameter_1ad72cd626ccab044f0295b092d41668ca" kindref="member">operator=</ref>(uint8_t<sp/>val)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;set&lt;uint8_t&gt;(val,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);<sp/>}<sp/></highlight><highlight class="comment">//return<sp/>fakse<sp/>if<sp/>the<sp/>assignement<sp/>didn&apos;t<sp/>succeed<sp/>(wrong<sp/>type<sp/>size,<sp/>not<sp/>updated<sp/>yet)</highlight></codeline>
+<codeline lineno="148"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149" refid="struct_c_a_nopen_1_1_parameter_1a77c306435be2eaf34c1ceb15edd559ff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_c_a_nopen_1_1_parameter_1a77c306435be2eaf34c1ceb15edd559ff" kindref="member">operator=</ref>(uint16_t<sp/>val)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;set&lt;uint16_t&gt;(val,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);<sp/>}<sp/></highlight><highlight class="comment">//return<sp/>fakse<sp/>if<sp/>the<sp/>assignement<sp/>didn&apos;t<sp/>succeed<sp/>(wrong<sp/>type<sp/>size,<sp/>not<sp/>updated<sp/>yet)</highlight></codeline>
+<codeline lineno="155"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156" refid="struct_c_a_nopen_1_1_parameter_1a9984a99c5627b35e3bbe3992a2f6bad2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_c_a_nopen_1_1_parameter_1a9984a99c5627b35e3bbe3992a2f6bad2" kindref="member">operator=</ref>(uint32_t<sp/>val)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;set&lt;uint32_t&gt;(val,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);<sp/>}<sp/></highlight><highlight class="comment">//return<sp/>fakse<sp/>if<sp/>the<sp/>assignement<sp/>didn&apos;t<sp/>succeed<sp/>(wrong<sp/>type<sp/>size,<sp/>not<sp/>updated<sp/>yet)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>T</highlight></codeline>
+<codeline lineno="164" refid="struct_c_a_nopen_1_1_parameter_1acb8721ccbdd90aed8f347296dca9e7e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_c_a_nopen_1_1_parameter_1acb8721ccbdd90aed8f347296dca9e7e1" kindref="member">get</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>T<sp/>val={};</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(T)<sp/>==<sp/>size)<sp/>{</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mutex.lock();</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>val<sp/>=<sp/>*(T<sp/>*)var;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mutex.unlock();</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>val;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177" refid="struct_c_a_nopen_1_1_parameter_1a83099406a35bd9501b421e514dffde73" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/>int8_t()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;get&lt;int8_t&gt;();<sp/>};</highlight></codeline>
+<codeline lineno="181" refid="struct_c_a_nopen_1_1_parameter_1a32b09e89de697d8040ac634ca8bc9f87" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/>int16_t()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;get&lt;int16_t&gt;();<sp/>};</highlight></codeline>
+<codeline lineno="185" refid="struct_c_a_nopen_1_1_parameter_1a4703b3922e5630ac1b8808d4980542bb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/>int32_t()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;get&lt;int32_t&gt;();<sp/>};</highlight></codeline>
+<codeline lineno="189" refid="struct_c_a_nopen_1_1_parameter_1aaf0db9d918b06945cb59154745866d50" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/>uint8_t()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;get&lt;uint8_t&gt;();<sp/>};</highlight></codeline>
+<codeline lineno="193" refid="struct_c_a_nopen_1_1_parameter_1abcdc291fd736380c80e401a05c3fa7dd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/>uint16_t()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;get&lt;uint16_t&gt;();<sp/>};</highlight></codeline>
+<codeline lineno="197" refid="struct_c_a_nopen_1_1_parameter_1a5e098f5a04dbd1e1f07f728f0c98cad0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/>uint32_t()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;get&lt;uint32_t&gt;();<sp/>};</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_c_a_nopen_1_1_parameter_1a2a80caa7af7b8df1ee93999e27f493f6" kindref="member">from_payload</ref>(<ref refid="class_c_a_nopen_1_1_payload" kindref="compound">Payload</ref><sp/>&amp;p,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>slot<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>received_data<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214" refid="struct_c_a_nopen_1_1_parameter_1a78c2b557f058aee3bc6997cbdd6d99a6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_c_a_nopen_1_1_parameter_1a78c2b557f058aee3bc6997cbdd6d99a6" kindref="member">has_been_sent</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::lock_guard&lt;std::mutex&gt;<sp/>lock(mutex);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>!m_should_be_sent;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_c_a_nopen_1_1_parameter_1a6423121211fcdcdfc086d36217872fce" kindref="member">callback</ref>();</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_nopen_1_1_payload" kindref="compound">Payload</ref></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_c_a_nopen_1_1_parameter_1a0b5d5729fe8b242797e0ab7b49d4519d" kindref="member">payload</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>*should_be_sent<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>name;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>index<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>subindex<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_c_a_nopen_1_1_parameter_1a4870a26654749daa1ef95bdcb6d01d59" kindref="member">PDOFunctionCode</ref><sp/>pdo_fn;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/>pdo_slot<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/>std::atomic_flag<sp/>sdo_flag;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*var<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_c_a_nopen_1_1_parameter_1aa7232c26e1cf4daa3e5719007872ddc5" kindref="member">param_cb_t</ref><sp/>_cb<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>m_should_be_sent;</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/>std::mutex<sp/>mutex;</highlight></codeline>
+<codeline lineno="248"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="249"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>CANopen</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/parameter.h"/>
+  </compounddef>
+</doxygen>

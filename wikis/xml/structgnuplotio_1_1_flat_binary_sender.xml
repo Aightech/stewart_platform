@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structgnuplotio_1_1_flat_binary_sender" kind="struct" language="C++" prot="public">
+    <compoundname>gnuplotio::FlatBinarySender</compoundname>
+    <includes refid="gnuplot-iostream_8h" local="no">gnuplot-iostream.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structgnuplotio_1_1_flat_binary_sender_1a24d085492f2539c14033cd5c6ba75ba5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void gnuplotio::FlatBinarySender&lt; T &gt;::send</definition>
+        <argsstring>(std::ostream &amp;stream, const T &amp;v)</argsstring>
+        <name>send</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/gnuplot-iostream.h" line="452" column="13" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/gnuplot-iostream.h" bodystart="452" bodyend="454"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>gnuplotio::BinarySender&lt; boost::uint8_t &gt;</label>
+        <link refid="structgnuplotio_1_1_binary_sender_3_01boost_1_1uint8__t_01_4"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>gnuplotio::FlatBinarySender&lt; boost::uint16_t &gt;</label>
+        <link refid="structgnuplotio_1_1_flat_binary_sender"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; boost::uint16_t &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>gnuplotio::FlatBinarySender&lt; boost::int16_t &gt;</label>
+        <link refid="structgnuplotio_1_1_flat_binary_sender"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; boost::int16_t &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="20">
+        <label>gnuplotio::FlatBinarySender&lt; boost::int64_t &gt;</label>
+        <link refid="structgnuplotio_1_1_flat_binary_sender"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; boost::int64_t &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="21">
+        <label>gnuplotio::BinarySender&lt; boost::int64_t &gt;</label>
+        <link refid="structgnuplotio_1_1_binary_sender_3_01boost_1_1int64__t_01_4"/>
+        <childnode refid="20" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>gnuplotio::FlatBinarySender&lt; boost::uint32_t &gt;</label>
+        <link refid="structgnuplotio_1_1_flat_binary_sender"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; boost::uint32_t &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>gnuplotio::FlatBinarySender&lt; double &gt;</label>
+        <link refid="structgnuplotio_1_1_flat_binary_sender"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; double &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>gnuplotio::BinarySender&lt; boost::int16_t &gt;</label>
+        <link refid="structgnuplotio_1_1_binary_sender_3_01boost_1_1int16__t_01_4"/>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>gnuplotio::BinarySender&lt; boost::int32_t &gt;</label>
+        <link refid="structgnuplotio_1_1_binary_sender_3_01boost_1_1int32__t_01_4"/>
+        <childnode refid="14" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>gnuplotio::FlatBinarySender&lt; boost::int8_t &gt;</label>
+        <link refid="structgnuplotio_1_1_flat_binary_sender"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; boost::int8_t &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="18">
+        <label>gnuplotio::FlatBinarySender&lt; boost::uint64_t &gt;</label>
+        <link refid="structgnuplotio_1_1_flat_binary_sender"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; boost::uint64_t &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="19">
+        <label>gnuplotio::BinarySender&lt; boost::uint64_t &gt;</label>
+        <link refid="structgnuplotio_1_1_binary_sender_3_01boost_1_1uint64__t_01_4"/>
+        <childnode refid="18" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>gnuplotio::BinarySender&lt; boost::uint16_t &gt;</label>
+        <link refid="structgnuplotio_1_1_binary_sender_3_01boost_1_1uint16__t_01_4"/>
+        <childnode refid="16" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>gnuplotio::BinarySender&lt; boost::uint32_t &gt;</label>
+        <link refid="structgnuplotio_1_1_binary_sender_3_01boost_1_1uint32__t_01_4"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>gnuplotio::FlatBinarySender&lt; boost::uint8_t &gt;</label>
+        <link refid="structgnuplotio_1_1_flat_binary_sender"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; boost::uint8_t &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>gnuplotio::FlatBinarySender&lt; T &gt;</label>
+        <link refid="structgnuplotio_1_1_flat_binary_sender"/>
+      </node>
+      <node id="11">
+        <label>gnuplotio::BinarySender&lt; boost::int8_t &gt;</label>
+        <link refid="structgnuplotio_1_1_binary_sender_3_01boost_1_1int8__t_01_4"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>gnuplotio::BinarySender&lt; float &gt;</label>
+        <link refid="structgnuplotio_1_1_binary_sender_3_01float_01_4"/>
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>gnuplotio::FlatBinarySender&lt; boost::int32_t &gt;</label>
+        <link refid="structgnuplotio_1_1_flat_binary_sender"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; boost::int32_t &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>gnuplotio::FlatBinarySender&lt; float &gt;</label>
+        <link refid="structgnuplotio_1_1_flat_binary_sender"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; float &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>gnuplotio::BinarySender&lt; double &gt;</label>
+        <link refid="structgnuplotio_1_1_binary_sender_3_01double_01_4"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/home/adev/Documents/STECH/stewart_platform/include/gnuplot-iostream.h" line="451" column="23" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/gnuplot-iostream.h" bodystart="451" bodyend="455"/>
+    <listofallmembers>
+      <member refid="structgnuplotio_1_1_flat_binary_sender_1a24d085492f2539c14033cd5c6ba75ba5" prot="public" virt="non-virtual"><scope>gnuplotio::FlatBinarySender</scope><name>send</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

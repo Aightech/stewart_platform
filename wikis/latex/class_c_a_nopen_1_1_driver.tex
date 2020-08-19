@@ -1,0 +1,1031 @@
+\hypertarget{class_c_a_nopen_1_1_driver}{}\doxysection{C\+A\+Nopen\+::Driver Class Reference}
+\label{class_c_a_nopen_1_1_driver}\index{CANopen::Driver@{CANopen::Driver}}
+
+
+Device Profile Drives and Motion Control.  
+
+
+
+
+{\ttfamily \#include $<$C\+A\+Nopen\+\_\+driver.\+h$>$}
+
+
+
+Inheritance diagram for C\+A\+Nopen\+::Driver\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{class_c_a_nopen_1_1_driver__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for C\+A\+Nopen\+::Driver\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{class_c_a_nopen_1_1_driver__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7}{Register}} \+: uint32\+\_\+t \{ \newline
+\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7ad4d184bb0cd942f6bdd5ae4435ba1469}{\+\_\+\+D\+C\+O\+Mstatus}} = 0x60410000, 
+\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a41294d34718a36687c2183a45ef06258}{D\+C\+O\+Mcontrol}} = 0x60400000, 
+\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a838ff7614cdd25d687a7b44f6fcd5112}{D\+C\+O\+Mopmode}} = 0x60600000, 
+\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a27c60a5c7499691fa7a8927c3d4e4376}{\+\_\+\+D\+C\+O\+Mopmd\+\_\+act}} = 0x60610000, 
+\newline
+\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a9388c18e3ec79d918b872aab89a47387}{P\+Pp\+\_\+target}} = 0x607\+A0000, 
+\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a97069ba1c67700d01ba84c05f2a31adb}{P\+Pv\+\_\+target}} = 0x60810000, 
+\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a9a00b3971b7ee9985f91dd48ea7e1c73}{P\+Vv\+\_\+target}} = 0x60\+F\+F0000, 
+\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a68422e03c559dee45c67d4743784c193}{P\+Ttq\+\_\+target}} = 0x60710000, 
+\newline
+\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7ae34a009131bb4956dbb9a5c9e76b1c5a}{R\+A\+M\+P\+\_\+v\+\_\+acc}} = 0x60830000, 
+\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a6f355b7bef6158931cc8cf5e4b1f9c83}{R\+A\+M\+P\+\_\+v\+\_\+dec}} = 0x60840000, 
+\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7af361a27c780c9ab4fe29763c80456258}{\+\_\+p\+\_\+act}} = 0x60640000, 
+\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a5790a9abb07781ba9d63ed64d7e0d7fc}{\+\_\+v\+\_\+act}} = 0x606\+C0000, 
+\newline
+\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a0ab750decb5de6f5b2d380776dec09cc}{\+\_\+tq\+\_\+act}} = 0x60770000, 
+\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a503823e06d7db891f898f6976aa7a514}{H\+Mmethod}} = 0x60980000, 
+\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7ad34e94f677df757d01d787a403a66a2a}{H\+Mv}} = 0x60990001, 
+\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a796f4544102d3244ab451b229afbfb58}{H\+Mv\+\_\+out}} = 0x60990002
+ \}
+\item 
+enum \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a47ce7e20890160451d8b43b4e32d3ceb}{Operation\+Mode}} \+: int8\+\_\+t \{ \newline
+\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a47ce7e20890160451d8b43b4e32d3ceba3502834b10b8f0201a628b9a0e227425}{Profile\+Position}} = 1, 
+\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a47ce7e20890160451d8b43b4e32d3cebacaf4b433be6b0476e7f157e086fea379}{Velocity}} = 2, 
+\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a47ce7e20890160451d8b43b4e32d3cebadb9f0017145112261254a48699a41961}{Profile\+Velocity}} = 3, 
+\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a47ce7e20890160451d8b43b4e32d3cebaff42df87ec625334500bb240f76989ed}{Profile\+Torque}} = 4, 
+\newline
+\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a47ce7e20890160451d8b43b4e32d3ceba080efe911eeba1ae575bfaa70b1bb579}{Homing}} = 6, 
+\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a47ce7e20890160451d8b43b4e32d3cebab11858fe79ae30e3723a3cdb66360287}{Interpolated\+Position}} = 7
+ \}
+\item 
+enum \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a16a451fc3593c0f174911e969a7be02d}{State}} \+: uint16\+\_\+t \{ \newline
+\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a16a451fc3593c0f174911e969a7be02dac8ab6913526ea2fc62be30139261fbc6}{mask}} = 0x006f, 
+\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a16a451fc3593c0f174911e969a7be02da94d00ab583965d1d22f48674f7aefa7a}{Not\+Ready\+To\+Switcht\+ON}} = 0x0000, 
+\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a16a451fc3593c0f174911e969a7be02da52c43c11131a9d753319d5e065d031c3}{Switch\+O\+N\+Disabled}} = 0x0040, 
+\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a16a451fc3593c0f174911e969a7be02dafa947edce547a30b314910e6931235a4}{Ready\+To\+Switch\+ON}} = 0x0021, 
+\newline
+\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a16a451fc3593c0f174911e969a7be02dac2e13098b6500cdcde217d2a9cc9ebb6}{Switched\+ON}} = 0x0023, 
+\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a16a451fc3593c0f174911e969a7be02da1692c431e1cf20446dbf23a53913af0c}{Operation\+Enabled}} = 0x0037, 
+\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a16a451fc3593c0f174911e969a7be02da9028b5332c8352a087606c2cc79e9517}{Fault}} = 0x000f, 
+\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a16a451fc3593c0f174911e969a7be02dabafb33b6c4f43661a3257ca5b7569372}{Fault\+Reaction\+Active}} = 0x000f, 
+\newline
+\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a16a451fc3593c0f174911e969a7be02da8accb6a0a36eebcd88f85e0b92faf68a}{Quick\+Stop\+Active}} = 0x0007
+ \}
+\item 
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a02eea97cb3b192f0e00925ded764b32b}\label{class_c_a_nopen_1_1_driver_a02eea97cb3b192f0e00925ded764b32b}} 
+enum {\bfseries Status\+Bits} \+: uint16\+\_\+t \{ \newline
+{\bfseries Ready\+To\+Switch\+On\+\_\+bit} = 0x0001, 
+{\bfseries Switched\+On\+\_\+bit} = 0x0002, 
+{\bfseries Operation\+Enabled\+\_\+bit} = 0x0004, 
+{\bfseries Fault\+\_\+bit} = 0x0008, 
+\newline
+{\bfseries Voltage\+Enabled\+\_\+bit} = 0x0010, 
+{\bfseries Quick\+Stop\+\_\+bit} = 0x0020, 
+{\bfseries Switch\+O\+N\+Disabled\+\_\+bit} = 0x0040, 
+{\bfseries Error0\+\_\+bit} = 0x0080, 
+\newline
+{\bfseries Halt\+Request\+\_\+bit} = 0x0100, 
+{\bfseries Remote\+\_\+bit} = 0x0200, 
+{\bfseries Target\+Reached\+\_\+bit} = 0x0400, 
+{\bfseries Internal\+Limit\+Reached\+\_\+bit} = 0x0800, 
+\newline
+{\bfseries Operation\+Mode\+\_\+bit} = 0x1000, 
+{\bfseries Blocking\+Error\+\_\+bit} = 0x2000, 
+{\bfseries Operation\+Mode\+Start\+\_\+bit} = 0x4000, 
+{\bfseries Valid\+Ref\+\_\+bit} = 0x8000
+ \}
+\item 
+enum \mbox{\hyperlink{class_c_a_nopen_1_1_driver_af4031601d8ef94250316995e8339903a}{Control}} \+: uint16\+\_\+t \{ \newline
+\mbox{\hyperlink{class_c_a_nopen_1_1_driver_af4031601d8ef94250316995e8339903aa6ccc4c2738c634abe2fd21cbe93f9fdb}{Shutdown}} = 0x0006, 
+\mbox{\hyperlink{class_c_a_nopen_1_1_driver_af4031601d8ef94250316995e8339903aae98ed55dcd60bdd15d179ec32f651b8d}{Switch\+ON}} = 0x0007, 
+\mbox{\hyperlink{class_c_a_nopen_1_1_driver_af4031601d8ef94250316995e8339903aa81c0fb39e9e145721e1cf45a52f8786f}{Disable\+Voltage}} = 0x0000, 
+\mbox{\hyperlink{class_c_a_nopen_1_1_driver_af4031601d8ef94250316995e8339903aa6e8fc43d0b5f1ef14ac7ba475572c9b6}{Quick\+Stop}} = 0x0002, 
+\newline
+\mbox{\hyperlink{class_c_a_nopen_1_1_driver_af4031601d8ef94250316995e8339903aaa366dac5dbc508501f36112bf5472572}{Disable\+Operation}} = 0x0007, 
+\mbox{\hyperlink{class_c_a_nopen_1_1_driver_af4031601d8ef94250316995e8339903aaff77b9045071e916120fc49e159d2f77}{Enable\+Operation}} = 0x000f, 
+\mbox{\hyperlink{class_c_a_nopen_1_1_driver_af4031601d8ef94250316995e8339903aaa433113dfe71a54d4333344a339a9bbf}{Fault\+Resest}} = 0x0080
+ \}
+\item 
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_af1538f81dbeb9dcafee3ff1a71c95be4}\label{class_c_a_nopen_1_1_driver_af1538f81dbeb9dcafee3ff1a71c95be4}} 
+enum {\bfseries P\+D\+O\+Function\+Code} \+: uint32\+\_\+t \{ \newline
+{\bfseries P\+D\+O1\+Transmit} = Message\+::P\+D\+O1\+Transmit, 
+{\bfseries P\+D\+O1\+Receive} = Message\+::P\+D\+O1\+Receive, 
+{\bfseries P\+D\+O2\+Transmit} = Message\+::P\+D\+O2\+Transmit, 
+{\bfseries P\+D\+O2\+Receive} = Message\+::P\+D\+O2\+Receive, 
+\newline
+{\bfseries P\+D\+O3\+Transmit} = Message\+::P\+D\+O3\+Transmit, 
+{\bfseries P\+D\+O3\+Receive} = Message\+::P\+D\+O3\+Receive, 
+{\bfseries P\+D\+O4\+Transmit} = Message\+::P\+D\+O4\+Transmit, 
+{\bfseries P\+D\+O4\+Receive} = Message\+::P\+D\+O4\+Receive
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a0272315f94cb7bff729abeb8b8b052df}{Driver}} (const char $\ast$ifname, uint16\+\_\+t can\+\_\+id, int verbose\+\_\+lvl=0)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a0da074f8cf3498e5d1c721ceaaa81a6e}{set}} (\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7}{Register}} reg, T val, bool force\+\_\+sdo=false, bool wait=false)
+\begin{DoxyCompactList}\small\item\em Enables to store a value in a specified registers. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{class_c_a_nopen_1_1_driver_ae34094765084838267ac2ec088cf6554}{get}} (\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7}{Register}} reg, bool force\+\_\+sdo=false)
+\begin{DoxyCompactList}\small\item\em get Gets the value of a specified registers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_a_nopen_1_1_driver_aa831bccff07ba4c794952c8477e6810a}{set\+\_\+control}} (\mbox{\hyperlink{class_c_a_nopen_1_1_driver_af4031601d8ef94250316995e8339903a}{Control}} ctrl)
+\begin{DoxyCompactList}\small\item\em set\+\_\+control \+: Send transition states order. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a16a451fc3593c0f174911e969a7be02d}{State}} \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a3087f343d739cb1cd138250ed6925eb8}{get\+\_\+state}} ()
+\begin{DoxyCompactList}\small\item\em Returns the current state of the driver by reading the status word. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a6d875fd4488248671fb060c6a73030e2}{wait\+\_\+state}} (\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a16a451fc3593c0f174911e969a7be02d}{State}} state, uint16\+\_\+t \+\_\+mask=\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a16a451fc3593c0f174911e969a7be02dac8ab6913526ea2fc62be30139261fbc6}{mask}})
+\begin{DoxyCompactList}\small\item\em wait\+\_\+state loop until the driver state is different from the one passed while(actual\+\_\+state()\&mask) != (state\&mask)) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a7e215f070766749f80655042cf70b6c2}{set\+\_\+mode}} (\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a47ce7e20890160451d8b43b4e32d3ceb}{Operation\+Mode}} mode, bool wait=false)
+\begin{DoxyCompactList}\small\item\em set\+\_\+mode Set the desired opereration mode. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a47ce7e20890160451d8b43b4e32d3ceb}{Operation\+Mode}} \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a0ece511729874fd45f24f5c517d84eae}{get\+\_\+mode}} (bool force\+\_\+sdo=true)
+\begin{DoxyCompactList}\small\item\em get\+\_\+mode Returns the actual operation mode of the driver. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a20967f674c7bfa52407350933248a300}{set\+\_\+position}} (int32\+\_\+t target, bool absolute=true)
+\begin{DoxyCompactList}\small\item\em set\+\_\+position Send the new position to reach. Has to be in Profil\+Positon mode to have some effect. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a7a249fdda103c6c8d11e840d66514137}{set\+\_\+velocity}} (int32\+\_\+t target)
+\begin{DoxyCompactList}\small\item\em set\+\_\+velocity Send the new velocity to reach. Has to be in Profil\+Positon or Profil\+Velocity mode to have some effect. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a4b97e1e92f96eb579a85a4d33ef0592a}{set\+\_\+torque}} (int16\+\_\+t target)
+\begin{DoxyCompactList}\small\item\em set\+\_\+torque Send the new torque to reach. Has to be in Profil\+Torque mode to have some effect. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a80f9eac00de5ae6c07d6d4fd56a3b110}{get\+\_\+position}} ()
+\begin{DoxyCompactList}\small\item\em get\+\_\+position Returns the actual postion of the motor. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a0345a38f5dc54e5bcacd8cc86f6b903a}{get\+\_\+velocity}} ()
+\begin{DoxyCompactList}\small\item\em get\+\_\+velocity Returns the actual velocity of the motor. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a32a2469e5958bf328b7df6ad7b7d49c1}{get\+\_\+torque}} ()
+\begin{DoxyCompactList}\small\item\em get\+\_\+torque Returns the actual torque of the motor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9f5910067bb7489887a9ed25ba6199f8}{set\+\_\+position\+\_\+offset}} (int32\+\_\+t offset\+\_\+pos)
+\begin{DoxyCompactList}\small\item\em set\+\_\+position\+\_\+offset Set the postion offset of the motor. Rq better to have a large offset to avoid letting the motor switch off in negativ position\+: it would result in a wrong position when restarting \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_ad8ac07202c14ad344004146e126ecbf4}\label{class_c_a_nopen_1_1_driver_ad8ac07202c14ad344004146e126ecbf4}} 
+void \mbox{\hyperlink{class_c_a_nopen_1_1_driver_ad8ac07202c14ad344004146e126ecbf4}{start}} ()
+\begin{DoxyCompactList}\small\item\em start \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a05da9b5bdd80efed46b0629721d0664b}\label{class_c_a_nopen_1_1_driver_a05da9b5bdd80efed46b0629721d0664b}} 
+void \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a05da9b5bdd80efed46b0629721d0664b}{pause}} ()
+\begin{DoxyCompactList}\small\item\em pause \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_abd7d88699d02c007d5f23e608d8f0a0a}\label{class_c_a_nopen_1_1_driver_abd7d88699d02c007d5f23e608d8f0a0a}} 
+void \mbox{\hyperlink{class_c_a_nopen_1_1_driver_abd7d88699d02c007d5f23e608d8f0a0a}{stop}} ()
+\begin{DoxyCompactList}\small\item\em stop \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_aa94db47b419a6afcc409c63c2685e1b6}\label{class_c_a_nopen_1_1_driver_aa94db47b419a6afcc409c63c2685e1b6}} 
+void \mbox{\hyperlink{class_c_a_nopen_1_1_driver_aa94db47b419a6afcc409c63c2685e1b6}{profile\+Position\+\_\+mode}} ()
+\begin{DoxyCompactList}\small\item\em profile\+Position\+\_\+mode \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a32db059a1723f5c8db8986324ce21f8f}\label{class_c_a_nopen_1_1_driver_a32db059a1723f5c8db8986324ce21f8f}} 
+void \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a32db059a1723f5c8db8986324ce21f8f}{profile\+Velocity\+\_\+mode}} ()
+\begin{DoxyCompactList}\small\item\em profile\+Velocity\+\_\+mode \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a4f2bd3e58752dfd0bc37b749452ebcfd}\label{class_c_a_nopen_1_1_driver_a4f2bd3e58752dfd0bc37b749452ebcfd}} 
+void \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a4f2bd3e58752dfd0bc37b749452ebcfd}{profile\+Torque\+\_\+mode}} ()
+\begin{DoxyCompactList}\small\item\em profile\+Torque\+\_\+mode \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a2fe863ef0d5d66f3241eda596a507377}\label{class_c_a_nopen_1_1_driver_a2fe863ef0d5d66f3241eda596a507377}} 
+void \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a2fe863ef0d5d66f3241eda596a507377}{homing}} ()
+\begin{DoxyCompactList}\small\item\em homing \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a1cc9720ef3f1d1a671e5b696d688df3c}\label{class_c_a_nopen_1_1_driver_a1cc9720ef3f1d1a671e5b696d688df3c}} 
+\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter}{Parameter}} $\ast$ {\bfseries get\+\_\+param} (\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7}{Register}} reg)
+\item 
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_af3663cfb3627f928e7bb71a1358e4e00}\label{class_c_a_nopen_1_1_driver_af3663cfb3627f928e7bb71a1358e4e00}} 
+virtual void {\bfseries print\+\_\+manufacturer\+\_\+status} ()=0
+\item 
+std\+::string \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a05fb7b074555086b45918179c64494a6}{ctrl\+\_\+to\+\_\+str}} (\mbox{\hyperlink{class_c_a_nopen_1_1_driver_af4031601d8ef94250316995e8339903a}{Control}} control)
+\item 
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a249f11262c9264cf53486c247d004b99}\label{class_c_a_nopen_1_1_driver_a249f11262c9264cf53486c247d004b99}} 
+bool \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a249f11262c9264cf53486c247d004b99}{is\+\_\+available}} ()
+\begin{DoxyCompactList}\small\item\em return true if the can interface is available \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_c_a_nopen_1_1_driver_ad22705c4ee8cfee391113d359e790e67}{send}} (\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter}{Parameter}} $\ast$param)
+\begin{DoxyCompactList}\small\item\em send the parameter via a Writting S\+DO message to the driver \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a96123f2965334f4fda9c01ae7b0f8f46}{update}} (\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter}{Parameter}} $\ast$param)
+\begin{DoxyCompactList}\small\item\em Request an update of the parameter via a Reading S\+DO message. (the parameter has been updated when param-\/$>$sdo\+\_\+flag is down. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_a_nopen_1_1_driver_abd3e2b466b31e906ae7bcb390277f3dd}{map\+\_\+\+P\+DO}} (P\+D\+O\+Function\+Code fn, \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter}{Parameter}} $\ast$param, int slot)
+\begin{DoxyCompactList}\small\item\em Enables to map the different parameters of the driver to the Transmit P\+DO. When a P\+DO is received in the T\+\_\+\+P\+D\+O\+\_\+socket() thread, the value of the pdo will be stored in the mapped parameter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a6cfa4f397be17e661e93bfb8f74ddb90}{activate\+\_\+\+P\+DO}} (P\+D\+O\+Function\+Code fn, bool \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a0da074f8cf3498e5d1c721ceaaa81a6e}{set}}=true)
+\begin{DoxyCompactList}\small\item\em Sends a S\+DO message to activate the specified P\+DO. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a535cd1c9eaf129d3b8b51cd636cb3ac0}\label{class_c_a_nopen_1_1_driver_a535cd1c9eaf129d3b8b51cd636cb3ac0}} 
+void {\bfseries T\+\_\+socket} ()
+\item 
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a4e2a54808fafdde192c0550bf8612274}\label{class_c_a_nopen_1_1_driver_a4e2a54808fafdde192c0550bf8612274}} 
+void {\bfseries R\+P\+D\+O\+\_\+socket} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a11f0158da7cc70943c23a0fa32f8f106}\label{class_c_a_nopen_1_1_driver_a11f0158da7cc70943c23a0fa32f8f106}} 
+std\+::thread $\ast$ {\bfseries m\+\_\+rpdo\+\_\+socket\+\_\+thread}
+\item 
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a001afe91237b33a88254cc86fc5d7452}\label{class_c_a_nopen_1_1_driver_a001afe91237b33a88254cc86fc5d7452}} 
+std\+::atomic\+\_\+flag {\bfseries rpdo\+\_\+socket\+\_\+flag}
+\item 
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a657422553d9c1c0b859c21e90b637961}\label{class_c_a_nopen_1_1_driver_a657422553d9c1c0b859c21e90b637961}} 
+std\+::mutex {\bfseries rpdo\+\_\+mutex}
+\item 
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a2e64fa4286ab8e37afedd6d28d3f747c}\label{class_c_a_nopen_1_1_driver_a2e64fa4286ab8e37afedd6d28d3f747c}} 
+std\+::thread $\ast$ {\bfseries m\+\_\+t\+\_\+socket\+\_\+thread}
+\item 
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a3178e7bc0783980c4523703b586d9da7}\label{class_c_a_nopen_1_1_driver_a3178e7bc0783980c4523703b586d9da7}} 
+std\+::atomic\+\_\+flag {\bfseries t\+\_\+socket\+\_\+flag}
+\item 
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_aa72de21b55123ea624ff8c359484e8cd}\label{class_c_a_nopen_1_1_driver_aa72de21b55123ea624ff8c359484e8cd}} 
+const char $\ast$ {\bfseries m\+\_\+ifname}
+\item 
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_ae4998ef8bfce528498191cae7226349f}\label{class_c_a_nopen_1_1_driver_ae4998ef8bfce528498191cae7226349f}} 
+int {\bfseries m\+\_\+verbose\+\_\+level}
+\item 
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a042844b5c94052c0e8cbf5eab5a04791}\label{class_c_a_nopen_1_1_driver_a042844b5c94052c0e8cbf5eab5a04791}} 
+bool {\bfseries m\+\_\+available}
+\item 
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a7978ee3b77f1e12a478f54d769a80842}\label{class_c_a_nopen_1_1_driver_a7978ee3b77f1e12a478f54d769a80842}} 
+\mbox{\hyperlink{class_c_a_nopen_1_1_socket}{C\+A\+Nopen\+::\+Socket}} {\bfseries m\+\_\+socket}
+\item 
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_acd1365f30661ee2f7a981d5e846c66b5}\label{class_c_a_nopen_1_1_driver_acd1365f30661ee2f7a981d5e846c66b5}} 
+std\+::map$<$ P\+D\+O\+Function\+Code, std\+::vector$<$ \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter}{Parameter}} $\ast$ $>$ $>$ {\bfseries m\+\_\+\+P\+D\+O\+\_\+map}
+\item 
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_aceacce4df52b5f3ee7e64f6e20059555}\label{class_c_a_nopen_1_1_driver_aceacce4df52b5f3ee7e64f6e20059555}} 
+std\+::map$<$ \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7}{Register}}, \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter}{Parameter}} $\ast$ $>$ {\bfseries m\+\_\+parameters}
+\item 
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_ad97ef262c000db38000137395c7965d9}\label{class_c_a_nopen_1_1_driver_ad97ef262c000db38000137395c7965d9}} 
+uint8\+\_\+t {\bfseries m\+\_\+node\+\_\+id}
+\item 
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_ae208e82352b57ee7db7c2a92f4b0a7d1}\label{class_c_a_nopen_1_1_driver_ae208e82352b57ee7db7c2a92f4b0a7d1}} 
+uint16\+\_\+t {\bfseries m\+\_\+can\+\_\+baud}
+\item 
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_abdec4604d2f5bfdc76b0db7430e76d8c}\label{class_c_a_nopen_1_1_driver_abdec4604d2f5bfdc76b0db7430e76d8c}} 
+int32\+\_\+t {\bfseries m\+\_\+offset\+\_\+pos} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Device Profile Drives and Motion Control. 
+
+Definition at line \mbox{\hyperlink{_c_a_nopen__driver_8h_source_l00027}{27}} of file \mbox{\hyperlink{_c_a_nopen__driver_8h_source}{C\+A\+Nopen\+\_\+driver.\+h}}.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_af4031601d8ef94250316995e8339903a}\label{class_c_a_nopen_1_1_driver_af4031601d8ef94250316995e8339903a}} 
+\index{CANopen::Driver@{CANopen::Driver}!Control@{Control}}
+\index{Control@{Control}!CANopen::Driver@{CANopen::Driver}}
+\doxysubsubsection{\texorpdfstring{Control}{Control}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_c_a_nopen_1_1_driver_af4031601d8ef94250316995e8339903a}{C\+A\+Nopen\+::\+Driver\+::\+Control}} \+: uint16\+\_\+t}
+
+Possible Control commands \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Shutdown@{Shutdown}!CANopen::Driver@{CANopen::Driver}}\index{CANopen::Driver@{CANopen::Driver}!Shutdown@{Shutdown}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_af4031601d8ef94250316995e8339903aa6ccc4c2738c634abe2fd21cbe93f9fdb}\label{class_c_a_nopen_1_1_driver_af4031601d8ef94250316995e8339903aa6ccc4c2738c634abe2fd21cbe93f9fdb}} 
+Shutdown&goto Ready\+Switch\+ON \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SwitchON@{SwitchON}!CANopen::Driver@{CANopen::Driver}}\index{CANopen::Driver@{CANopen::Driver}!SwitchON@{SwitchON}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_af4031601d8ef94250316995e8339903aae98ed55dcd60bdd15d179ec32f651b8d}\label{class_c_a_nopen_1_1_driver_af4031601d8ef94250316995e8339903aae98ed55dcd60bdd15d179ec32f651b8d}} 
+Switch\+ON&goto Switched\+ON \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DisableVoltage@{DisableVoltage}!CANopen::Driver@{CANopen::Driver}}\index{CANopen::Driver@{CANopen::Driver}!DisableVoltage@{DisableVoltage}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_af4031601d8ef94250316995e8339903aa81c0fb39e9e145721e1cf45a52f8786f}\label{class_c_a_nopen_1_1_driver_af4031601d8ef94250316995e8339903aa81c0fb39e9e145721e1cf45a52f8786f}} 
+Disable\+Voltage&goto Switch\+O\+N\+Disabled \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QuickStop@{QuickStop}!CANopen::Driver@{CANopen::Driver}}\index{CANopen::Driver@{CANopen::Driver}!QuickStop@{QuickStop}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_af4031601d8ef94250316995e8339903aa6e8fc43d0b5f1ef14ac7ba475572c9b6}\label{class_c_a_nopen_1_1_driver_af4031601d8ef94250316995e8339903aa6e8fc43d0b5f1ef14ac7ba475572c9b6}} 
+Quick\+Stop&goto Quick\+Stop\+Activ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DisableOperation@{DisableOperation}!CANopen::Driver@{CANopen::Driver}}\index{CANopen::Driver@{CANopen::Driver}!DisableOperation@{DisableOperation}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_af4031601d8ef94250316995e8339903aaa366dac5dbc508501f36112bf5472572}\label{class_c_a_nopen_1_1_driver_af4031601d8ef94250316995e8339903aaa366dac5dbc508501f36112bf5472572}} 
+Disable\+Operation&goto Switched\+ON \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EnableOperation@{EnableOperation}!CANopen::Driver@{CANopen::Driver}}\index{CANopen::Driver@{CANopen::Driver}!EnableOperation@{EnableOperation}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_af4031601d8ef94250316995e8339903aaff77b9045071e916120fc49e159d2f77}\label{class_c_a_nopen_1_1_driver_af4031601d8ef94250316995e8339903aaff77b9045071e916120fc49e159d2f77}} 
+Enable\+Operation&goto Operation\+Enabled \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FaultResest@{FaultResest}!CANopen::Driver@{CANopen::Driver}}\index{CANopen::Driver@{CANopen::Driver}!FaultResest@{FaultResest}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_af4031601d8ef94250316995e8339903aaa433113dfe71a54d4333344a339a9bbf}\label{class_c_a_nopen_1_1_driver_af4031601d8ef94250316995e8339903aaa433113dfe71a54d4333344a339a9bbf}} 
+Fault\+Resest&goto Switch\+O\+N\+Disabled \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{_c_a_nopen__driver_8h_source_l00160}{160}} of file \mbox{\hyperlink{_c_a_nopen__driver_8h_source}{C\+A\+Nopen\+\_\+driver.\+h}}.
+
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a47ce7e20890160451d8b43b4e32d3ceb}\label{class_c_a_nopen_1_1_driver_a47ce7e20890160451d8b43b4e32d3ceb}} 
+\index{CANopen::Driver@{CANopen::Driver}!OperationMode@{OperationMode}}
+\index{OperationMode@{OperationMode}!CANopen::Driver@{CANopen::Driver}}
+\doxysubsubsection{\texorpdfstring{OperationMode}{OperationMode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a47ce7e20890160451d8b43b4e32d3ceb}{C\+A\+Nopen\+::\+Driver\+::\+Operation\+Mode}} \+: int8\+\_\+t}
+
+Operational modes \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ProfilePosition@{ProfilePosition}!CANopen::Driver@{CANopen::Driver}}\index{CANopen::Driver@{CANopen::Driver}!ProfilePosition@{ProfilePosition}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a47ce7e20890160451d8b43b4e32d3ceba3502834b10b8f0201a628b9a0e227425}\label{class_c_a_nopen_1_1_driver_a47ce7e20890160451d8b43b4e32d3ceba3502834b10b8f0201a628b9a0e227425}} 
+Profile\+Position&The positioning of the drive is defined in this mode. Speed, position and acceleration can be limited and profiled moves using a Trajectory Generator are possible as well. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Velocity@{Velocity}!CANopen::Driver@{CANopen::Driver}}\index{CANopen::Driver@{CANopen::Driver}!Velocity@{Velocity}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a47ce7e20890160451d8b43b4e32d3cebacaf4b433be6b0476e7f157e086fea379}\label{class_c_a_nopen_1_1_driver_a47ce7e20890160451d8b43b4e32d3cebacaf4b433be6b0476e7f157e086fea379}} 
+Velocity&Many frequency inverters use this simple mode to control the velocity of the drive with limits and ramp functions. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ProfileVelocity@{ProfileVelocity}!CANopen::Driver@{CANopen::Driver}}\index{CANopen::Driver@{CANopen::Driver}!ProfileVelocity@{ProfileVelocity}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a47ce7e20890160451d8b43b4e32d3cebadb9f0017145112261254a48699a41961}\label{class_c_a_nopen_1_1_driver_a47ce7e20890160451d8b43b4e32d3cebadb9f0017145112261254a48699a41961}} 
+Profile\+Velocity&The Profile Velocity Mode is used to control the velocity of the drive with no special regard of the position. It supplies limit functions and Trajectory Generation. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ProfileTorque@{ProfileTorque}!CANopen::Driver@{CANopen::Driver}}\index{CANopen::Driver@{CANopen::Driver}!ProfileTorque@{ProfileTorque}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a47ce7e20890160451d8b43b4e32d3cebaff42df87ec625334500bb240f76989ed}\label{class_c_a_nopen_1_1_driver_a47ce7e20890160451d8b43b4e32d3cebaff42df87ec625334500bb240f76989ed}} 
+Profile\+Torque&The profile torque mode allows a host (external) control system (i.\+e. closed-\/loop speed controller, open-\/loop transmission force controller) to transmit the target torque value, which is processed via the trajectory generator. The torque slope and torque profile type parameters are required. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Homing@{Homing}!CANopen::Driver@{CANopen::Driver}}\index{CANopen::Driver@{CANopen::Driver}!Homing@{Homing}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a47ce7e20890160451d8b43b4e32d3ceba080efe911eeba1ae575bfaa70b1bb579}\label{class_c_a_nopen_1_1_driver_a47ce7e20890160451d8b43b4e32d3ceba080efe911eeba1ae575bfaa70b1bb579}} 
+Homing&Homming mode. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{InterpolatedPosition@{InterpolatedPosition}!CANopen::Driver@{CANopen::Driver}}\index{CANopen::Driver@{CANopen::Driver}!InterpolatedPosition@{InterpolatedPosition}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a47ce7e20890160451d8b43b4e32d3cebab11858fe79ae30e3723a3cdb66360287}\label{class_c_a_nopen_1_1_driver_a47ce7e20890160451d8b43b4e32d3cebab11858fe79ae30e3723a3cdb66360287}} 
+Interpolated\+Position&The interpolated position mode is used to control multiple coordinated axles or a single axle with the need for time-\/interpolation of set-\/point data. The interpolated position mode normally uses time synchronization mechanisms like the sync object defined in /3/ for a time coordination of the related drive units. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{_c_a_nopen__driver_8h_source_l00072}{72}} of file \mbox{\hyperlink{_c_a_nopen__driver_8h_source}{C\+A\+Nopen\+\_\+driver.\+h}}.
+
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7}\label{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7}} 
+\index{CANopen::Driver@{CANopen::Driver}!Register@{Register}}
+\index{Register@{Register}!CANopen::Driver@{CANopen::Driver}}
+\doxysubsubsection{\texorpdfstring{Register}{Register}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7}{C\+A\+Nopen\+::\+Driver\+::\+Register}} \+: uint32\+\_\+t}
+
+C\+IA 402 C\+A\+Nopen \mbox{\hyperlink{class_c_a_nopen_1_1_driver}{Driver}} \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\_DCOMstatus@{\_DCOMstatus}!CANopen::Driver@{CANopen::Driver}}\index{CANopen::Driver@{CANopen::Driver}!\_DCOMstatus@{\_DCOMstatus}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7ad4d184bb0cd942f6bdd5ae4435ba1469}\label{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7ad4d184bb0cd942f6bdd5ae4435ba1469}} 
+\+\_\+\+D\+C\+O\+Mstatus&{\bfseries{6041\textsubscript{h}}} -\/ The statusword indicates the current state of the drive. No bits are latched. The statusword consist of bits for\+:
+\begin{DoxyItemize}
+\item the current state of the drive,
+\item the operating state of the mode and
+\item manufacturer specific options. 
+\end{DoxyItemize}\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DCOMcontrol@{DCOMcontrol}!CANopen::Driver@{CANopen::Driver}}\index{CANopen::Driver@{CANopen::Driver}!DCOMcontrol@{DCOMcontrol}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a41294d34718a36687c2183a45ef06258}\label{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a41294d34718a36687c2183a45ef06258}} 
+D\+C\+O\+Mcontrol&{\bfseries{6040\textsubscript{h}}} -\/ The controlword consist of bits for\+:
+\begin{DoxyItemize}
+\item the controlling of the state,
+\item the controlling of operating modes and
+\item manufacturer specific options. 
+\end{DoxyItemize}\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DCOMopmode@{DCOMopmode}!CANopen::Driver@{CANopen::Driver}}\index{CANopen::Driver@{CANopen::Driver}!DCOMopmode@{DCOMopmode}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a838ff7614cdd25d687a7b44f6fcd5112}\label{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a838ff7614cdd25d687a7b44f6fcd5112}} 
+D\+C\+O\+Mopmode&{\bfseries{6060\textsubscript{h}}} -\/ The parameter modes of operation switches the actually choosen operation mode. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\_DCOMopmd\_act@{\_DCOMopmd\_act}!CANopen::Driver@{CANopen::Driver}}\index{CANopen::Driver@{CANopen::Driver}!\_DCOMopmd\_act@{\_DCOMopmd\_act}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a27c60a5c7499691fa7a8927c3d4e4376}\label{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a27c60a5c7499691fa7a8927c3d4e4376}} 
+\+\_\+\+D\+C\+O\+Mopmd\+\_\+act&{\bfseries{6061\textsubscript{h}}} -\/ The modes of operation display shows the current mode of operation. The meaning of the returned value corresponds to that of the modes of operation option code \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PPp\_target@{PPp\_target}!CANopen::Driver@{CANopen::Driver}}\index{CANopen::Driver@{CANopen::Driver}!PPp\_target@{PPp\_target}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a9388c18e3ec79d918b872aab89a47387}\label{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a9388c18e3ec79d918b872aab89a47387}} 
+P\+Pp\+\_\+target&{\bfseries{607A\textsubscript{h}}} -\/ The target position is the position that the drive should move to in position profile mode using the current settings of motion control parameters such as velocity, acceleration, deceleration, motion profile type etc. The target position is given in user defined position units. It is converted to position increments using the position factor. The target position will be interpreted as absolute or relative depending on the ‘abs / rel\textquotesingle{} flag in the controlword. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PPv\_target@{PPv\_target}!CANopen::Driver@{CANopen::Driver}}\index{CANopen::Driver@{CANopen::Driver}!PPv\_target@{PPv\_target}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a97069ba1c67700d01ba84c05f2a31adb}\label{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a97069ba1c67700d01ba84c05f2a31adb}} 
+P\+Pv\+\_\+target&{\bfseries{6081\textsubscript{h}}} -\/ The profile velocity is the velocity normally attained at the end of the acceleration ramp during a profiled move and is valid for both directions of motion. The profile velocity is given in user defined speed units. It is converted to position increments per second using the velocity encoder factor. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PVv\_target@{PVv\_target}!CANopen::Driver@{CANopen::Driver}}\index{CANopen::Driver@{CANopen::Driver}!PVv\_target@{PVv\_target}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a9a00b3971b7ee9985f91dd48ea7e1c73}\label{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a9a00b3971b7ee9985f91dd48ea7e1c73}} 
+P\+Vv\+\_\+target&{\bfseries{60FF\textsubscript{h}}} -\/ The target velocity is the input for the trajectory generator and the value is given in velocity units. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PTtq\_target@{PTtq\_target}!CANopen::Driver@{CANopen::Driver}}\index{CANopen::Driver@{CANopen::Driver}!PTtq\_target@{PTtq\_target}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a68422e03c559dee45c67d4743784c193}\label{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a68422e03c559dee45c67d4743784c193}} 
+P\+Ttq\+\_\+target&{\bfseries{6071\textsubscript{h}}} -\/ This parameter is the input value for the torque controller in profile torque mode and the value is given per thousand of rated torque. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RAMP\_v\_acc@{RAMP\_v\_acc}!CANopen::Driver@{CANopen::Driver}}\index{CANopen::Driver@{CANopen::Driver}!RAMP\_v\_acc@{RAMP\_v\_acc}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7ae34a009131bb4956dbb9a5c9e76b1c5a}\label{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7ae34a009131bb4956dbb9a5c9e76b1c5a}} 
+R\+A\+M\+P\+\_\+v\+\_\+acc&{\bfseries{6083\textsubscript{h}}} -\/ The profile acceleration is given in user defined acceleration units. It is converted to position increments per second 2 using the normalizing factors. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RAMP\_v\_dec@{RAMP\_v\_dec}!CANopen::Driver@{CANopen::Driver}}\index{CANopen::Driver@{CANopen::Driver}!RAMP\_v\_dec@{RAMP\_v\_dec}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a6f355b7bef6158931cc8cf5e4b1f9c83}\label{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a6f355b7bef6158931cc8cf5e4b1f9c83}} 
+R\+A\+M\+P\+\_\+v\+\_\+dec&{\bfseries{6084\textsubscript{h}}} -\/ The profile deceleration is given in the same units as profile acceleration. If this parameter is not supported, then the profile acceleration value is also used for deceleration. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\_p\_act@{\_p\_act}!CANopen::Driver@{CANopen::Driver}}\index{CANopen::Driver@{CANopen::Driver}!\_p\_act@{\_p\_act}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7af361a27c780c9ab4fe29763c80456258}\label{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7af361a27c780c9ab4fe29763c80456258}} 
+\+\_\+p\+\_\+act&{\bfseries{6064\textsubscript{h}}} -\/ This object represents the actual value of the position measurement device in user defined units. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\_v\_act@{\_v\_act}!CANopen::Driver@{CANopen::Driver}}\index{CANopen::Driver@{CANopen::Driver}!\_v\_act@{\_v\_act}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a5790a9abb07781ba9d63ed64d7e0d7fc}\label{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a5790a9abb07781ba9d63ed64d7e0d7fc}} 
+\+\_\+v\+\_\+act&{\bfseries{606C\textsubscript{h}}} -\/ The velocity actual value is also represented in velocity units and is coupled to the velocity used as input to the velocity controller. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\_tq\_act@{\_tq\_act}!CANopen::Driver@{CANopen::Driver}}\index{CANopen::Driver@{CANopen::Driver}!\_tq\_act@{\_tq\_act}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a0ab750decb5de6f5b2d380776dec09cc}\label{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a0ab750decb5de6f5b2d380776dec09cc}} 
+\+\_\+tq\+\_\+act&{\bfseries{6077\textsubscript{h}}} -\/ The torque actual value corresponds to the instantaneous torque in the drive motor. The value is given per thousand of rated torque. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HMmethod@{HMmethod}!CANopen::Driver@{CANopen::Driver}}\index{CANopen::Driver@{CANopen::Driver}!HMmethod@{HMmethod}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a503823e06d7db891f898f6976aa7a514}\label{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a503823e06d7db891f898f6976aa7a514}} 
+H\+Mmethod&{\bfseries{6098\textsubscript{h}}} -\/ The homing method object determines the method that will be used during homing. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HMv@{HMv}!CANopen::Driver@{CANopen::Driver}}\index{CANopen::Driver@{CANopen::Driver}!HMv@{HMv}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7ad34e94f677df757d01d787a403a66a2a}\label{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7ad34e94f677df757d01d787a403a66a2a}} 
+H\+Mv&{\bfseries{6099\textsubscript{h}01}} -\/ Speed during search for switch. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HMv\_out@{HMv\_out}!CANopen::Driver@{CANopen::Driver}}\index{CANopen::Driver@{CANopen::Driver}!HMv\_out@{HMv\_out}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a796f4544102d3244ab451b229afbfb58}\label{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7a796f4544102d3244ab451b229afbfb58}} 
+H\+Mv\+\_\+out&{\bfseries{6099\textsubscript{h}02}} -\/ Speed during search for zero \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{_c_a_nopen__driver_8h_source_l00034}{34}} of file \mbox{\hyperlink{_c_a_nopen__driver_8h_source}{C\+A\+Nopen\+\_\+driver.\+h}}.
+
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a16a451fc3593c0f174911e969a7be02d}\label{class_c_a_nopen_1_1_driver_a16a451fc3593c0f174911e969a7be02d}} 
+\index{CANopen::Driver@{CANopen::Driver}!State@{State}}
+\index{State@{State}!CANopen::Driver@{CANopen::Driver}}
+\doxysubsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a16a451fc3593c0f174911e969a7be02d}{C\+A\+Nopen\+::\+Driver\+::\+State}} \+: uint16\+\_\+t}
+
+Possible States \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{mask@{mask}!CANopen::Driver@{CANopen::Driver}}\index{CANopen::Driver@{CANopen::Driver}!mask@{mask}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a16a451fc3593c0f174911e969a7be02dac8ab6913526ea2fc62be30139261fbc6}\label{class_c_a_nopen_1_1_driver_a16a451fc3593c0f174911e969a7be02dac8ab6913526ea2fc62be30139261fbc6}} 
+mask&Keeping only main state bytes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NotReadyToSwitchtON@{NotReadyToSwitchtON}!CANopen::Driver@{CANopen::Driver}}\index{CANopen::Driver@{CANopen::Driver}!NotReadyToSwitchtON@{NotReadyToSwitchtON}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a16a451fc3593c0f174911e969a7be02da94d00ab583965d1d22f48674f7aefa7a}\label{class_c_a_nopen_1_1_driver_a16a451fc3593c0f174911e969a7be02da94d00ab583965d1d22f48674f7aefa7a}} 
+Not\+Ready\+To\+Switcht\+ON&Not Ready to Switch ON\+:
+\begin{DoxyItemize}
+\item Low level Power (e.\+g. 15V, 5V) has been applied to the drive.
+\item The drive is being initialized or is running self test.
+\item A brake, if present, has to be applied in this state.
+\item The drive function is disabled. 
+\end{DoxyItemize}\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SwitchONDisabled@{SwitchONDisabled}!CANopen::Driver@{CANopen::Driver}}\index{CANopen::Driver@{CANopen::Driver}!SwitchONDisabled@{SwitchONDisabled}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a16a451fc3593c0f174911e969a7be02da52c43c11131a9d753319d5e065d031c3}\label{class_c_a_nopen_1_1_driver_a16a451fc3593c0f174911e969a7be02da52c43c11131a9d753319d5e065d031c3}} 
+Switch\+O\+N\+Disabled&Switch ON Disabled\+:
+\begin{DoxyItemize}
+\item Drive Initialisation is complete.
+\item The drive parameters have been set up.
+\item Drive parameters may be changed.
+\item High Voltage may not be applied to the drive, (e.\+g. for safety reasons).
+\item The drive function is disabled. 
+\end{DoxyItemize}\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ReadyToSwitchON@{ReadyToSwitchON}!CANopen::Driver@{CANopen::Driver}}\index{CANopen::Driver@{CANopen::Driver}!ReadyToSwitchON@{ReadyToSwitchON}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a16a451fc3593c0f174911e969a7be02dafa947edce547a30b314910e6931235a4}\label{class_c_a_nopen_1_1_driver_a16a451fc3593c0f174911e969a7be02dafa947edce547a30b314910e6931235a4}} 
+Ready\+To\+Switch\+ON&Ready to Switch ON\+:
+\begin{DoxyItemize}
+\item High Voltage may be applied to the drive.
+\item The drive parameters may be changed.
+\item The drive function is disabled 
+\end{DoxyItemize}\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SwitchedON@{SwitchedON}!CANopen::Driver@{CANopen::Driver}}\index{CANopen::Driver@{CANopen::Driver}!SwitchedON@{SwitchedON}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a16a451fc3593c0f174911e969a7be02dac2e13098b6500cdcde217d2a9cc9ebb6}\label{class_c_a_nopen_1_1_driver_a16a451fc3593c0f174911e969a7be02dac2e13098b6500cdcde217d2a9cc9ebb6}} 
+Switched\+ON&Switched ON\+:
+\begin{DoxyItemize}
+\item High Voltage has been applied to the drive.
+\item The Power Amplifier is ready.
+\item The drive parameters may be changed.
+\item The drive function is disabled. 
+\end{DoxyItemize}\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OperationEnabled@{OperationEnabled}!CANopen::Driver@{CANopen::Driver}}\index{CANopen::Driver@{CANopen::Driver}!OperationEnabled@{OperationEnabled}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a16a451fc3593c0f174911e969a7be02da1692c431e1cf20446dbf23a53913af0c}\label{class_c_a_nopen_1_1_driver_a16a451fc3593c0f174911e969a7be02da1692c431e1cf20446dbf23a53913af0c}} 
+Operation\+Enabled&Operation Enabled\+:
+\begin{DoxyItemize}
+\item No faults have been detected.
+\item The drive function is enabled and power is applied to the motor.
+\item The drive parameters may be changed.(This corresponds to normal operation of the drive.) 
+\end{DoxyItemize}\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Fault@{Fault}!CANopen::Driver@{CANopen::Driver}}\index{CANopen::Driver@{CANopen::Driver}!Fault@{Fault}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a16a451fc3593c0f174911e969a7be02da9028b5332c8352a087606c2cc79e9517}\label{class_c_a_nopen_1_1_driver_a16a451fc3593c0f174911e969a7be02da9028b5332c8352a087606c2cc79e9517}} 
+Fault&Fault\+:
+\begin{DoxyItemize}
+\item The drive parameters may be changed.
+\item A fault has occured in the drive.
+\item The drive function is disabled. 
+\end{DoxyItemize}\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FaultReactionActive@{FaultReactionActive}!CANopen::Driver@{CANopen::Driver}}\index{CANopen::Driver@{CANopen::Driver}!FaultReactionActive@{FaultReactionActive}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a16a451fc3593c0f174911e969a7be02dabafb33b6c4f43661a3257ca5b7569372}\label{class_c_a_nopen_1_1_driver_a16a451fc3593c0f174911e969a7be02dabafb33b6c4f43661a3257ca5b7569372}} 
+Fault\+Reaction\+Active&Fault Reaction Active\+:
+\begin{DoxyItemize}
+\item The drive parameters may be changed.
+\item A non-\/fatal fault has occured in the drive.
+\item The Quick Stop function is being executed.
+\item The drive function is enabled and power is applied to the motor. 
+\end{DoxyItemize}\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QuickStopActive@{QuickStopActive}!CANopen::Driver@{CANopen::Driver}}\index{CANopen::Driver@{CANopen::Driver}!QuickStopActive@{QuickStopActive}}}\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a16a451fc3593c0f174911e969a7be02da8accb6a0a36eebcd88f85e0b92faf68a}\label{class_c_a_nopen_1_1_driver_a16a451fc3593c0f174911e969a7be02da8accb6a0a36eebcd88f85e0b92faf68a}} 
+Quick\+Stop\+Active&Quick Stop Active\+:
+\begin{DoxyItemize}
+\item The drive parameters may be changed.\+The Quick Stop function is being executed.
+\item The drive function is enabled and power is applied to the motor. If the ‘\+Quick-\/\+Stop-\/\+Option-\/\+Code’ is switched to 5 (Stay in Quick-\/\+Stop), you can’t leave the Quick-\/\+Stop-\/\+State, but you can transmit to ‘\+Operation Enable’ with the command‘\+Enable Operation’ 
+\end{DoxyItemize}\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{_c_a_nopen__driver_8h_source_l00091}{91}} of file \mbox{\hyperlink{_c_a_nopen__driver_8h_source}{C\+A\+Nopen\+\_\+driver.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a0272315f94cb7bff729abeb8b8b052df}\label{class_c_a_nopen_1_1_driver_a0272315f94cb7bff729abeb8b8b052df}} 
+\index{CANopen::Driver@{CANopen::Driver}!Driver@{Driver}}
+\index{Driver@{Driver}!CANopen::Driver@{CANopen::Driver}}
+\doxysubsubsection{\texorpdfstring{Driver()}{Driver()}}
+{\footnotesize\ttfamily C\+A\+Nopen\+::\+Driver\+::\+Driver (\begin{DoxyParamCaption}\item[{const char $\ast$}]{ifname,  }\item[{uint16\+\_\+t}]{can\+\_\+id,  }\item[{int}]{verbose\+\_\+lvl = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ifname} & \+: Name of the C\+AN interface. \\
+\hline
+{\em can\+\_\+id} & \+: Node C\+AN ID of the driver. \\
+\hline
+{\em verbose\+\_\+lvl} & \+: Level of verbosity. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_c_a_nopen__driver_8cpp_source_l00004}{4}} of file \mbox{\hyperlink{_c_a_nopen__driver_8cpp_source}{C\+A\+Nopen\+\_\+driver.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_c_a_nopen__driver_8h_source_l00035}{\+\_\+\+D\+C\+O\+Mstatus}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a6cfa4f397be17e661e93bfb8f74ddb90}\label{class_c_a_nopen_1_1_driver_a6cfa4f397be17e661e93bfb8f74ddb90}} 
+\index{CANopen::Driver@{CANopen::Driver}!activate\_PDO@{activate\_PDO}}
+\index{activate\_PDO@{activate\_PDO}!CANopen::Driver@{CANopen::Driver}}
+\doxysubsubsection{\texorpdfstring{activate\_PDO()}{activate\_PDO()}}
+{\footnotesize\ttfamily void C\+A\+Nopen\+::\+Driver\+::activate\+\_\+\+P\+DO (\begin{DoxyParamCaption}\item[{P\+D\+O\+Function\+Code}]{fn,  }\item[{bool}]{set = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Sends a S\+DO message to activate the specified P\+DO. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ifname} & \+: N \\
+\hline
+{\em can\+\_\+id} & \+: Node C\+AN ID of the driver. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_c_a_nopen__driver_8cpp_source_l00059}{59}} of file \mbox{\hyperlink{_c_a_nopen__driver_8cpp_source}{C\+A\+Nopen\+\_\+driver.\+cpp}}.
+
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a05fb7b074555086b45918179c64494a6}\label{class_c_a_nopen_1_1_driver_a05fb7b074555086b45918179c64494a6}} 
+\index{CANopen::Driver@{CANopen::Driver}!ctrl\_to\_str@{ctrl\_to\_str}}
+\index{ctrl\_to\_str@{ctrl\_to\_str}!CANopen::Driver@{CANopen::Driver}}
+\doxysubsubsection{\texorpdfstring{ctrl\_to\_str()}{ctrl\_to\_str()}}
+{\footnotesize\ttfamily std\+::string C\+A\+Nopen\+::\+Driver\+::ctrl\+\_\+to\+\_\+str (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_a_nopen_1_1_driver_af4031601d8ef94250316995e8339903a}{Control}}}]{control }\end{DoxyParamCaption})}
+
+$<$ goto Ready\+Switch\+ON
+
+$<$ goto Switched\+ON
+
+$<$ goto Switch\+O\+N\+Disabled
+
+$<$ goto Quick\+Stop\+Activ
+
+$<$ goto Operation\+Enabled
+
+Definition at line \mbox{\hyperlink{_c_a_nopen__driver_8cpp_source_l00346}{346}} of file \mbox{\hyperlink{_c_a_nopen__driver_8cpp_source}{C\+A\+Nopen\+\_\+driver.\+cpp}}.
+
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_ae34094765084838267ac2ec088cf6554}\label{class_c_a_nopen_1_1_driver_ae34094765084838267ac2ec088cf6554}} 
+\index{CANopen::Driver@{CANopen::Driver}!get@{get}}
+\index{get@{get}!CANopen::Driver@{CANopen::Driver}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T C\+A\+Nopen\+::\+Driver\+::get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7}{Register}}}]{reg,  }\item[{bool}]{force\+\_\+sdo = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get Gets the value of a specified registers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reg} & \+: The register to get. (In the format ind\+\_\+\+\_\+sub) \\
+\hline
+{\em force\+\_\+sdo} & \+: If true, the parameter will be updated via a reading S\+DO. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value of the register in the templated format T selected. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_c_a_nopen__driver_8h_source_l00218}{218}} of file \mbox{\hyperlink{_c_a_nopen__driver_8h_source}{C\+A\+Nopen\+\_\+driver.\+h}}.
+
+
+
+References \mbox{\hyperlink{_c_a_nopen__driver_8cpp_source_l00112}{update()}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_c_a_nopen_1_1_driver_ae34094765084838267ac2ec088cf6554_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a0ece511729874fd45f24f5c517d84eae}\label{class_c_a_nopen_1_1_driver_a0ece511729874fd45f24f5c517d84eae}} 
+\index{CANopen::Driver@{CANopen::Driver}!get\_mode@{get\_mode}}
+\index{get\_mode@{get\_mode}!CANopen::Driver@{CANopen::Driver}}
+\doxysubsubsection{\texorpdfstring{get\_mode()}{get\_mode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a47ce7e20890160451d8b43b4e32d3ceb}{Operation\+Mode}} C\+A\+Nopen\+::\+Driver\+::get\+\_\+mode (\begin{DoxyParamCaption}\item[{bool}]{force\+\_\+sdo = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+\_\+mode Returns the actual operation mode of the driver. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em force\+\_\+sdo} & If set a sdo read message will be send to get the mode. Set to false to save some communication time. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The actual operational mode 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_c_a_nopen__driver_8h_source_l00267}{267}} of file \mbox{\hyperlink{_c_a_nopen__driver_8h_source}{C\+A\+Nopen\+\_\+driver.\+h}}.
+
+
+
+References \mbox{\hyperlink{_c_a_nopen__driver_8h_source_l00044}{\+\_\+\+D\+C\+O\+Mopmd\+\_\+act}}.
+
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a80f9eac00de5ae6c07d6d4fd56a3b110}\label{class_c_a_nopen_1_1_driver_a80f9eac00de5ae6c07d6d4fd56a3b110}} 
+\index{CANopen::Driver@{CANopen::Driver}!get\_position@{get\_position}}
+\index{get\_position@{get\_position}!CANopen::Driver@{CANopen::Driver}}
+\doxysubsubsection{\texorpdfstring{get\_position()}{get\_position()}}
+{\footnotesize\ttfamily int32\+\_\+t C\+A\+Nopen\+::\+Driver\+::get\+\_\+position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+\_\+position Returns the actual postion of the motor. 
+
+\begin{DoxyReturn}{Returns}
+The actual postion of the motor. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_c_a_nopen__driver_8h_source_l00297}{297}} of file \mbox{\hyperlink{_c_a_nopen__driver_8h_source}{C\+A\+Nopen\+\_\+driver.\+h}}.
+
+
+
+References \mbox{\hyperlink{_c_a_nopen__driver_8h_source_l00061}{\+\_\+p\+\_\+act}}.
+
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a3087f343d739cb1cd138250ed6925eb8}\label{class_c_a_nopen_1_1_driver_a3087f343d739cb1cd138250ed6925eb8}} 
+\index{CANopen::Driver@{CANopen::Driver}!get\_state@{get\_state}}
+\index{get\_state@{get\_state}!CANopen::Driver@{CANopen::Driver}}
+\doxysubsubsection{\texorpdfstring{get\_state()}{get\_state()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a16a451fc3593c0f174911e969a7be02d}{State}} C\+A\+Nopen\+::\+Driver\+::get\+\_\+state (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the current state of the driver by reading the status word. 
+
+\begin{DoxyReturn}{Returns}
+The current state. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_c_a_nopen__driver_8h_source_l00240}{240}} of file \mbox{\hyperlink{_c_a_nopen__driver_8h_source}{C\+A\+Nopen\+\_\+driver.\+h}}.
+
+
+
+References \mbox{\hyperlink{_c_a_nopen__driver_8h_source_l00035}{\+\_\+\+D\+C\+O\+Mstatus}}.
+
+
+
+Referenced by \mbox{\hyperlink{_c_a_nopen__driver_8h_source_l00248}{wait\+\_\+state()}}.
+
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a32a2469e5958bf328b7df6ad7b7d49c1}\label{class_c_a_nopen_1_1_driver_a32a2469e5958bf328b7df6ad7b7d49c1}} 
+\index{CANopen::Driver@{CANopen::Driver}!get\_torque@{get\_torque}}
+\index{get\_torque@{get\_torque}!CANopen::Driver@{CANopen::Driver}}
+\doxysubsubsection{\texorpdfstring{get\_torque()}{get\_torque()}}
+{\footnotesize\ttfamily int32\+\_\+t C\+A\+Nopen\+::\+Driver\+::get\+\_\+torque (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+\_\+torque Returns the actual torque of the motor. 
+
+\begin{DoxyReturn}{Returns}
+The actual torque of the motor. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_c_a_nopen__driver_8h_source_l00309}{309}} of file \mbox{\hyperlink{_c_a_nopen__driver_8h_source}{C\+A\+Nopen\+\_\+driver.\+h}}.
+
+
+
+References \mbox{\hyperlink{_c_a_nopen__driver_8h_source_l00064}{\+\_\+tq\+\_\+act}}.
+
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a0345a38f5dc54e5bcacd8cc86f6b903a}\label{class_c_a_nopen_1_1_driver_a0345a38f5dc54e5bcacd8cc86f6b903a}} 
+\index{CANopen::Driver@{CANopen::Driver}!get\_velocity@{get\_velocity}}
+\index{get\_velocity@{get\_velocity}!CANopen::Driver@{CANopen::Driver}}
+\doxysubsubsection{\texorpdfstring{get\_velocity()}{get\_velocity()}}
+{\footnotesize\ttfamily int32\+\_\+t C\+A\+Nopen\+::\+Driver\+::get\+\_\+velocity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+\_\+velocity Returns the actual velocity of the motor. 
+
+\begin{DoxyReturn}{Returns}
+The actual velocity of the motor. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_c_a_nopen__driver_8h_source_l00303}{303}} of file \mbox{\hyperlink{_c_a_nopen__driver_8h_source}{C\+A\+Nopen\+\_\+driver.\+h}}.
+
+
+
+References \mbox{\hyperlink{_c_a_nopen__driver_8h_source_l00062}{\+\_\+v\+\_\+act}}.
+
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_abd3e2b466b31e906ae7bcb390277f3dd}\label{class_c_a_nopen_1_1_driver_abd3e2b466b31e906ae7bcb390277f3dd}} 
+\index{CANopen::Driver@{CANopen::Driver}!map\_PDO@{map\_PDO}}
+\index{map\_PDO@{map\_PDO}!CANopen::Driver@{CANopen::Driver}}
+\doxysubsubsection{\texorpdfstring{map\_PDO()}{map\_PDO()}}
+{\footnotesize\ttfamily void C\+A\+Nopen\+::\+Driver\+::map\+\_\+\+P\+DO (\begin{DoxyParamCaption}\item[{P\+D\+O\+Function\+Code}]{fn,  }\item[{\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter}{Parameter}} $\ast$}]{param,  }\item[{int}]{slot }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Enables to map the different parameters of the driver to the Transmit P\+DO. When a P\+DO is received in the T\+\_\+\+P\+D\+O\+\_\+socket() thread, the value of the pdo will be stored in the mapped parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fn} & \+: Function code of the P\+DO. \\
+\hline
+{\em param} & \+: \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter}{Parameter}} to map. \\
+\hline
+{\em slot} & \+: Slot of the parameter in the P\+DO message. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_c_a_nopen__driver_8cpp_source_l00050}{50}} of file \mbox{\hyperlink{_c_a_nopen__driver_8cpp_source}{C\+A\+Nopen\+\_\+driver.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{parameter_8cpp_source_l00004}{C\+A\+Nopen\+::\+Parameter\+::link\+\_\+to\+\_\+pdo()}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_c_a_nopen_1_1_driver_abd3e2b466b31e906ae7bcb390277f3dd_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_ad22705c4ee8cfee391113d359e790e67}\label{class_c_a_nopen_1_1_driver_ad22705c4ee8cfee391113d359e790e67}} 
+\index{CANopen::Driver@{CANopen::Driver}!send@{send}}
+\index{send@{send}!CANopen::Driver@{CANopen::Driver}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily void C\+A\+Nopen\+::\+Driver\+::send (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter}{Parameter}} $\ast$}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+send the parameter via a Writting S\+DO message to the driver 
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter}{Parameter}} to send. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_c_a_nopen__driver_8cpp_source_l00096}{96}} of file \mbox{\hyperlink{_c_a_nopen__driver_8cpp_source}{C\+A\+Nopen\+\_\+driver.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{parameter_8cpp_source_l00029}{C\+A\+Nopen\+::\+Parameter\+::payload()}}.
+
+
+
+Referenced by \mbox{\hyperlink{_c_a_nopen__driver_8h_source_l00198}{set()}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_c_a_nopen_1_1_driver_ad22705c4ee8cfee391113d359e790e67_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a0da074f8cf3498e5d1c721ceaaa81a6e}\label{class_c_a_nopen_1_1_driver_a0da074f8cf3498e5d1c721ceaaa81a6e}} 
+\index{CANopen::Driver@{CANopen::Driver}!set@{set}}
+\index{set@{set}!CANopen::Driver@{CANopen::Driver}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void C\+A\+Nopen\+::\+Driver\+::set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9504ce08c5bec248880fe4e6803565f7}{Register}}}]{reg,  }\item[{T}]{val,  }\item[{bool}]{force\+\_\+sdo = {\ttfamily false},  }\item[{bool}]{wait = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Enables to store a value in a specified registers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reg} & \+: The register to set. (In the format ind\+\_\+\+\_\+sub) \\
+\hline
+{\em val} & \+: The value to store in the register. \\
+\hline
+{\em force\+\_\+sdo} & \+: If true, the parameter will be send to the driver via a S\+DO. Else the parametr will be sent via P\+DO if it was mapped to an activated R\+P\+DO. \\
+\hline
+{\em wait} & \+: If set, the function is blocking and wait for the parameter to be sent via S\+DO. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_c_a_nopen__driver_8h_source_l00198}{198}} of file \mbox{\hyperlink{_c_a_nopen__driver_8h_source}{C\+A\+Nopen\+\_\+driver.\+h}}.
+
+
+
+References \mbox{\hyperlink{_c_a_nopen__driver_8cpp_source_l00096}{send()}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_c_a_nopen_1_1_driver_a0da074f8cf3498e5d1c721ceaaa81a6e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_aa831bccff07ba4c794952c8477e6810a}\label{class_c_a_nopen_1_1_driver_aa831bccff07ba4c794952c8477e6810a}} 
+\index{CANopen::Driver@{CANopen::Driver}!set\_control@{set\_control}}
+\index{set\_control@{set\_control}!CANopen::Driver@{CANopen::Driver}}
+\doxysubsubsection{\texorpdfstring{set\_control()}{set\_control()}}
+{\footnotesize\ttfamily void C\+A\+Nopen\+::\+Driver\+::set\+\_\+control (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_a_nopen_1_1_driver_af4031601d8ef94250316995e8339903a}{Control}}}]{ctrl }\end{DoxyParamCaption})}
+
+
+
+set\+\_\+control \+: Send transition states order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctrl} & \+: Control to send. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_c_a_nopen__driver_8cpp_source_l00439}{439}} of file \mbox{\hyperlink{_c_a_nopen__driver_8cpp_source}{C\+A\+Nopen\+\_\+driver.\+cpp}}.
+
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a7e215f070766749f80655042cf70b6c2}\label{class_c_a_nopen_1_1_driver_a7e215f070766749f80655042cf70b6c2}} 
+\index{CANopen::Driver@{CANopen::Driver}!set\_mode@{set\_mode}}
+\index{set\_mode@{set\_mode}!CANopen::Driver@{CANopen::Driver}}
+\doxysubsubsection{\texorpdfstring{set\_mode()}{set\_mode()}}
+{\footnotesize\ttfamily void C\+A\+Nopen\+::\+Driver\+::set\+\_\+mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a47ce7e20890160451d8b43b4e32d3ceb}{Operation\+Mode}}}]{mode,  }\item[{bool}]{wait = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+set\+\_\+mode Set the desired opereration mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & Mode to set. \\
+\hline
+{\em wait} & Repeatidly test the actual operation mode register until it is eqaual to the selected mode. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_c_a_nopen__driver_8cpp_source_l00429}{429}} of file \mbox{\hyperlink{_c_a_nopen__driver_8cpp_source}{C\+A\+Nopen\+\_\+driver.\+cpp}}.
+
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a20967f674c7bfa52407350933248a300}\label{class_c_a_nopen_1_1_driver_a20967f674c7bfa52407350933248a300}} 
+\index{CANopen::Driver@{CANopen::Driver}!set\_position@{set\_position}}
+\index{set\_position@{set\_position}!CANopen::Driver@{CANopen::Driver}}
+\doxysubsubsection{\texorpdfstring{set\_position()}{set\_position()}}
+{\footnotesize\ttfamily bool C\+A\+Nopen\+::\+Driver\+::set\+\_\+position (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{target,  }\item[{bool}]{absolute = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+set\+\_\+position Send the new position to reach. Has to be in Profil\+Positon mode to have some effect. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Position to reach (in internal unit) \\
+\hline
+{\em absolute} & If set the target will be process as an absolute value. Else it will be procecced as a relative (to the current position) value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if successfully sent. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_c_a_nopen__driver_8cpp_source_l00239}{239}} of file \mbox{\hyperlink{_c_a_nopen__driver_8cpp_source}{C\+A\+Nopen\+\_\+driver.\+cpp}}.
+
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a9f5910067bb7489887a9ed25ba6199f8}\label{class_c_a_nopen_1_1_driver_a9f5910067bb7489887a9ed25ba6199f8}} 
+\index{CANopen::Driver@{CANopen::Driver}!set\_position\_offset@{set\_position\_offset}}
+\index{set\_position\_offset@{set\_position\_offset}!CANopen::Driver@{CANopen::Driver}}
+\doxysubsubsection{\texorpdfstring{set\_position\_offset()}{set\_position\_offset()}}
+{\footnotesize\ttfamily void C\+A\+Nopen\+::\+Driver\+::set\+\_\+position\+\_\+offset (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{offset\+\_\+pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set\+\_\+position\+\_\+offset Set the postion offset of the motor. Rq better to have a large offset to avoid letting the motor switch off in negativ position\+: it would result in a wrong position when restarting 
+
+
+\begin{DoxyParams}{Parameters}
+{\em offset\+\_\+pos} & Offest of the motor in internal Unit \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_c_a_nopen__driver_8h_source_l00316}{316}} of file \mbox{\hyperlink{_c_a_nopen__driver_8h_source}{C\+A\+Nopen\+\_\+driver.\+h}}.
+
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a4b97e1e92f96eb579a85a4d33ef0592a}\label{class_c_a_nopen_1_1_driver_a4b97e1e92f96eb579a85a4d33ef0592a}} 
+\index{CANopen::Driver@{CANopen::Driver}!set\_torque@{set\_torque}}
+\index{set\_torque@{set\_torque}!CANopen::Driver@{CANopen::Driver}}
+\doxysubsubsection{\texorpdfstring{set\_torque()}{set\_torque()}}
+{\footnotesize\ttfamily bool C\+A\+Nopen\+::\+Driver\+::set\+\_\+torque (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{target }\end{DoxyParamCaption})}
+
+
+
+set\+\_\+torque Send the new torque to reach. Has to be in Profil\+Torque mode to have some effect. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Torque to reach (in internal unit) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if successfully sent. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_c_a_nopen__driver_8cpp_source_l00275}{275}} of file \mbox{\hyperlink{_c_a_nopen__driver_8cpp_source}{C\+A\+Nopen\+\_\+driver.\+cpp}}.
+
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a7a249fdda103c6c8d11e840d66514137}\label{class_c_a_nopen_1_1_driver_a7a249fdda103c6c8d11e840d66514137}} 
+\index{CANopen::Driver@{CANopen::Driver}!set\_velocity@{set\_velocity}}
+\index{set\_velocity@{set\_velocity}!CANopen::Driver@{CANopen::Driver}}
+\doxysubsubsection{\texorpdfstring{set\_velocity()}{set\_velocity()}}
+{\footnotesize\ttfamily bool C\+A\+Nopen\+::\+Driver\+::set\+\_\+velocity (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{target }\end{DoxyParamCaption})}
+
+
+
+set\+\_\+velocity Send the new velocity to reach. Has to be in Profil\+Positon or Profil\+Velocity mode to have some effect. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Velocity to reach (in internal unit) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if successfully sent. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_c_a_nopen__driver_8cpp_source_l00260}{260}} of file \mbox{\hyperlink{_c_a_nopen__driver_8cpp_source}{C\+A\+Nopen\+\_\+driver.\+cpp}}.
+
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a96123f2965334f4fda9c01ae7b0f8f46}\label{class_c_a_nopen_1_1_driver_a96123f2965334f4fda9c01ae7b0f8f46}} 
+\index{CANopen::Driver@{CANopen::Driver}!update@{update}}
+\index{update@{update}!CANopen::Driver@{CANopen::Driver}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void C\+A\+Nopen\+::\+Driver\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter}{Parameter}} $\ast$}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Request an update of the parameter via a Reading S\+DO message. (the parameter has been updated when param-\/$>$sdo\+\_\+flag is down. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter}{Parameter}} to update. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_c_a_nopen__driver_8cpp_source_l00112}{112}} of file \mbox{\hyperlink{_c_a_nopen__driver_8cpp_source}{C\+A\+Nopen\+\_\+driver.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_c_a_nopen__driver_8h_source_l00218}{get()}}.
+
+\mbox{\Hypertarget{class_c_a_nopen_1_1_driver_a6d875fd4488248671fb060c6a73030e2}\label{class_c_a_nopen_1_1_driver_a6d875fd4488248671fb060c6a73030e2}} 
+\index{CANopen::Driver@{CANopen::Driver}!wait\_state@{wait\_state}}
+\index{wait\_state@{wait\_state}!CANopen::Driver@{CANopen::Driver}}
+\doxysubsubsection{\texorpdfstring{wait\_state()}{wait\_state()}}
+{\footnotesize\ttfamily void C\+A\+Nopen\+::\+Driver\+::wait\+\_\+state (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a16a451fc3593c0f174911e969a7be02d}{State}}}]{state,  }\item[{uint16\+\_\+t}]{\+\_\+mask = {\ttfamily \mbox{\hyperlink{class_c_a_nopen_1_1_driver_a16a451fc3593c0f174911e969a7be02dac8ab6913526ea2fc62be30139261fbc6}{mask}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+wait\+\_\+state loop until the driver state is different from the one passed while(actual\+\_\+state()\&mask) != (state\&mask)) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & State to wait for. \\
+\hline
+{\em \+\_\+mask} & Mask to selected specific bits of the state. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_c_a_nopen__driver_8h_source_l00248}{248}} of file \mbox{\hyperlink{_c_a_nopen__driver_8h_source}{C\+A\+Nopen\+\_\+driver.\+h}}.
+
+
+
+References \mbox{\hyperlink{_c_a_nopen__driver_8h_source_l00240}{get\+\_\+state()}}, and \mbox{\hyperlink{_c_a_nopen__driver_8h_source_l00092}{mask}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_c_a_nopen_1_1_driver_a6d875fd4488248671fb060c6a73030e2_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_c_a_nopen__driver_8h}{C\+A\+Nopen\+\_\+driver.\+h}}\item 
+C\+A\+Nopen\+\_\+driver.\+cpp\end{DoxyCompactItemize}

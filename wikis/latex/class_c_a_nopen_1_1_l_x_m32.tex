@@ -1,0 +1,138 @@
+\hypertarget{class_c_a_nopen_1_1_l_x_m32}{}\doxysection{C\+A\+Nopen\+::L\+X\+M32 Class Reference}
+\label{class_c_a_nopen_1_1_l_x_m32}\index{CANopen::LXM32@{CANopen::LXM32}}
+
+
+Implementation of the \mbox{\hyperlink{class_c_a_nopen_1_1_driver}{Driver}} Class for a \mbox{\hyperlink{class_c_a_nopen_1_1_l_x_m32}{L\+X\+M32}} driver.  
+
+
+
+
+{\ttfamily \#include $<$C\+A\+Nopen\+\_\+lxm32.\+h$>$}
+
+
+
+Inheritance diagram for C\+A\+Nopen\+::L\+X\+M32\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{class_c_a_nopen_1_1_l_x_m32__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for C\+A\+Nopen\+::L\+X\+M32\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{class_c_a_nopen_1_1_l_x_m32__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_a_nopen_1_1_l_x_m32_a30aafa4f881079e83bcb9de63f26c30e}{L\+X\+M32}} (const char $\ast$ifname, uint16\+\_\+t can\+\_\+id, bool verbose=false)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_c_a_nopen_1_1_l_x_m32_a04d84237ca467e2a3f39370b1183293c}{set\+\_\+angle}} (double ang, bool absolute=true, bool radian=true)
+\begin{DoxyCompactList}\small\item\em set\+\_\+angle Sets the motor at a desired angle. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_c_a_nopen_1_1_l_x_m32_a40b15f47ae3270b987bc8eb8004b4c92}{get\+\_\+angle}} (bool radian=true)
+\begin{DoxyCompactList}\small\item\em get\+\_\+angle Gets the motor at a desired angle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_a_nopen_1_1_l_x_m32_a28fce51b02b587666c8ac7c550bd3b4b}\label{class_c_a_nopen_1_1_l_x_m32_a28fce51b02b587666c8ac7c550bd3b4b}} 
+void {\bfseries print\+\_\+manufacturer\+\_\+status} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_a_nopen_1_1_l_x_m32_a0ec3a74a12cd898808fce514c296e6e6}\label{class_c_a_nopen_1_1_l_x_m32_a0ec3a74a12cd898808fce514c296e6e6}} 
+int {\bfseries nb\+\_\+index\+\_\+per\+\_\+turn} = 737280
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Implementation of the \mbox{\hyperlink{class_c_a_nopen_1_1_driver}{Driver}} Class for a \mbox{\hyperlink{class_c_a_nopen_1_1_l_x_m32}{L\+X\+M32}} driver. 
+
+Definition at line \mbox{\hyperlink{_c_a_nopen__lxm32_8h_source_l00022}{22}} of file \mbox{\hyperlink{_c_a_nopen__lxm32_8h_source}{C\+A\+Nopen\+\_\+lxm32.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_c_a_nopen_1_1_l_x_m32_a30aafa4f881079e83bcb9de63f26c30e}\label{class_c_a_nopen_1_1_l_x_m32_a30aafa4f881079e83bcb9de63f26c30e}} 
+\index{CANopen::LXM32@{CANopen::LXM32}!LXM32@{LXM32}}
+\index{LXM32@{LXM32}!CANopen::LXM32@{CANopen::LXM32}}
+\doxysubsubsection{\texorpdfstring{LXM32()}{LXM32()}}
+{\footnotesize\ttfamily C\+A\+Nopen\+::\+L\+X\+M32\+::\+L\+X\+M32 (\begin{DoxyParamCaption}\item[{const char $\ast$}]{ifname,  }\item[{uint16\+\_\+t}]{can\+\_\+id,  }\item[{bool}]{verbose = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ifname} & \+: Name of the C\+AN interface. \\
+\hline
+{\em can\+\_\+id} & \+: Node C\+AN ID of the driver. \\
+\hline
+{\em verbose} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_c_a_nopen__lxm32_8cpp_source_l00003}{3}} of file \mbox{\hyperlink{_c_a_nopen__lxm32_8cpp_source}{C\+A\+Nopen\+\_\+lxm32.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_a_nopen_1_1_l_x_m32_a40b15f47ae3270b987bc8eb8004b4c92}\label{class_c_a_nopen_1_1_l_x_m32_a40b15f47ae3270b987bc8eb8004b4c92}} 
+\index{CANopen::LXM32@{CANopen::LXM32}!get\_angle@{get\_angle}}
+\index{get\_angle@{get\_angle}!CANopen::LXM32@{CANopen::LXM32}}
+\doxysubsubsection{\texorpdfstring{get\_angle()}{get\_angle()}}
+{\footnotesize\ttfamily double C\+A\+Nopen\+::\+L\+X\+M32\+::get\+\_\+angle (\begin{DoxyParamCaption}\item[{bool}]{radian = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+get\+\_\+angle Gets the motor at a desired angle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radian} & If set the angle return in radian else degree. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The actual motor angle. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_c_a_nopen__lxm32_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{_c_a_nopen__lxm32_8cpp_source}{C\+A\+Nopen\+\_\+lxm32.\+cpp}}.
+
+\mbox{\Hypertarget{class_c_a_nopen_1_1_l_x_m32_a04d84237ca467e2a3f39370b1183293c}\label{class_c_a_nopen_1_1_l_x_m32_a04d84237ca467e2a3f39370b1183293c}} 
+\index{CANopen::LXM32@{CANopen::LXM32}!set\_angle@{set\_angle}}
+\index{set\_angle@{set\_angle}!CANopen::LXM32@{CANopen::LXM32}}
+\doxysubsubsection{\texorpdfstring{set\_angle()}{set\_angle()}}
+{\footnotesize\ttfamily bool C\+A\+Nopen\+::\+L\+X\+M32\+::set\+\_\+angle (\begin{DoxyParamCaption}\item[{double}]{ang,  }\item[{bool}]{absolute = {\ttfamily true},  }\item[{bool}]{radian = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+set\+\_\+angle Sets the motor at a desired angle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ang} & Angle to reached. \\
+\hline
+{\em absolute} & If set the angle will be interpreted as a absolute angle. Else it will be interpreted as a relative angle. \\
+\hline
+{\em radian} & If set the angle will be interpreted in radian else degree. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the position was sent. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_c_a_nopen__lxm32_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{_c_a_nopen__lxm32_8cpp_source}{C\+A\+Nopen\+\_\+lxm32.\+cpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_c_a_nopen__lxm32_8h}{C\+A\+Nopen\+\_\+lxm32.\+h}}\item 
+C\+A\+Nopen\+\_\+lxm32.\+cpp\end{DoxyCompactItemize}

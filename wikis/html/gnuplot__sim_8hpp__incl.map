@@ -1,6 +1,5 @@
-<map id="include/gnuplot_sim.hpp" name="include/gnuplot_sim.hpp">
-<area shape="rect" id="node2" href="$gnuplot-iostream_8h.html" title="gnuplot&#45;iostream.h" alt="" coords="1097,160,1252,189"/>
-<area shape="rect" id="node25" href="$_lexium32_a__canopen_8h.html" title="Lexium32A_canopen.h" alt="" coords="2619,160,2805,189"/>
-<area shape="rect" id="node37" href="$model_8hpp.html" title="model.hpp" alt="" coords="2663,83,2761,112"/>
-<area shape="rect" id="node26" href="$canopen__socket_8h.html" title="Canopen object able to send command through a CAN interface using the UNIX socket. " alt="" coords="2888,246,3040,275"/>
+<map id="/home/adev/Documents/STECH/stewart_platform/include/gnuplot_sim.hpp" name="/home/adev/Documents/STECH/stewart_platform/include/gnuplot_sim.hpp">
+<area shape="rect" id="node1" title=" " alt="" coords="63,5,283,69"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,117,179,147"/>
+<area shape="rect" id="node3" href="$model_8hpp.html" title=" " alt="" coords="203,117,309,147"/>
 </map>

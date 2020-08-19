@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="lib_2lxm32_2lib_2canopen_2_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>lib/lxm32/lib/canopen/README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>canopen</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Information</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Brief**:<sp/>Canopen<sp/>object<sp/>able<sp/>to<sp/>send<sp/>command<sp/>through<sp/>a<sp/>CAN<sp/>interface<sp/>using<sp/>the<sp/>UNIX<sp/>socket.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Languages**:<sp/>C++</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Libraries**:<sp/></highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Note**:<sp/>/</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Compatibility**:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">|<sp/>Ubuntu<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Window10<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>MacOS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|:----------------:|:----------------:|:----------------:|</highlight></codeline>
+<codeline><highlight class="normal">|:heavy_check_mark:|:grey_question:|:grey_question:<sp/><sp/><sp/>|</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Building</highlight></codeline>
+<codeline><highlight class="normal">###<sp/>Ubuntu</highlight></codeline>
+<codeline><highlight class="normal">####<sp/>Steps</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Clone<sp/>the<sp/>repository<sp/>and<sp/>go<sp/>inside.</highlight></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">git<sp/>clone<sp/>https://gitlab-dev.isir.upmc.fr/devillard/canopen.git<sp/>&amp;&amp;<sp/>cd<sp/>canpen</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Create<sp/>a<sp/>build<sp/>directory<sp/>and<sp/>go<sp/>inside.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Configure<sp/>the<sp/>project.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Build<sp/>the<sp/>project.</highlight></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">mkdir<sp/>build<sp/>&amp;&amp;<sp/>cd<sp/>build<sp/>&amp;&amp;<sp/>cmake<sp/>..<sp/>&amp;&amp;<sp/>cmake<sp/>--build<sp/>.</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Testing</highlight></codeline>
+<codeline><highlight class="normal">#####<sp/>Install<sp/>can<sp/>tools</highlight></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">sudo<sp/>apt<sp/>install<sp/>can-utilis</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#####<sp/>Setup<sp/>a<sp/>virtual<sp/>CAN<sp/>bus</highlight></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">sudo<sp/>ip<sp/>link<sp/>add<sp/>dev<sp/>vcan0<sp/>type<sp/>vcan<sp/>&amp;&amp;<sp/>ip<sp/>link<sp/>set<sp/>up<sp/>vcan0</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#####<sp/>Listen<sp/>to<sp/>the<sp/>CAN<sp/>bus</highlight></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">candump<sp/>vcan0</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Canopen<sp/>program</highlight></codeline>
+<codeline><highlight class="normal">The<sp/>executable<sp/>file<sp/>canopen<sp/>enable<sp/>you<sp/>to<sp/>send<sp/>SDO<sp/>message<sp/>to<sp/>a<sp/>CAN<sp/>bus.</highlight></codeline>
+<codeline><highlight class="normal">###<sp/>usage:<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>./canopen<sp/>ifname<sp/>0xindex<sp/>0xsub<sp/>[<sp/>size<sp/>base<sp/>data<sp/>]</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Arg:<sp/><sp/><sp/><sp/>ifname<sp/><sp/>:<sp/>CAN<sp/>interface<sp/>name</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xindex<sp/>:<sp/>Object<sp/>register<sp/>index</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xsub<sp/><sp/><sp/>:<sp/>Object<sp/>register<sp/>subindex</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>size<sp/>:<sp/>Data<sp/>size<sp/>(number<sp/>of<sp/>bytes)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>base<sp/>:<sp/>Numerical<sp/>base<sp/>of<sp/>the<sp/>value<sp/>passed.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data<sp/>:<sp/>Value<sp/>to<sp/>write.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Ex:<sp/>To<sp/>read<sp/>register<sp/>0x1000:2<sp/>of<sp/>node<sp/>4<sp/>on<sp/>&quot;can0&quot;:<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>./canopen<sp/>can0<sp/>4<sp/>1000<sp/>2</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>To<sp/>write<sp/>in<sp/>register<sp/>0x2000:F<sp/>of<sp/>node<sp/>3<sp/>the<sp/>value<sp/>0x1234<sp/>on<sp/>&quot;can0&quot;:<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>./canopen<sp/>can0<sp/>3<sp/>2000<sp/>F<sp/>2<sp/>x<sp/>1234</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+    </programlisting>
+    <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/README.md"/>
+  </compounddef>
+</doxygen>

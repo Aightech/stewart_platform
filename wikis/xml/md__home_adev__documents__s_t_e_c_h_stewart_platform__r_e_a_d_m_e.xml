@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="md__home_adev__documents__s_t_e_c_h_stewart_platform__r_e_a_d_m_e" kind="page">
+    <compoundname>md__home_adev_Documents_STECH_stewart_platform_README</compoundname>
+    <title>stewart_platform</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Project to control the Stewart platform. The platform use to be control via an OLIMEX board doing the interface IP/CAN to communicate with the servo’s drivers. This project aims to bypass this hardware to communicate directly on the CANopen bus.</para>
+<para><heading level="1">Electrical Design</heading>
+</para>
+<para><image type="html" name="electrical_schematics.png" inline="yes"></image>
+</para>
+<para><heading level="1">Stucture and Parameters used</heading>
+</para>
+<para><heading level="2">Globale</heading>
+</para>
+<para><image type="html" name="geogebra-export.png" inline="yes"></image>
+</para>
+<para><heading level="2">Base</heading>
+</para>
+<para><image type="html" name="fig1.png" inline="yes"></image>
+ </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

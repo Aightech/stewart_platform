@@ -1,0 +1,238 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="class_c_a_nopen_1_1_socket" kind="class" language="C++" prot="public">
+    <compoundname>CANopen::Socket</compoundname>
+    <includes refid="_c_a_nopen__socket_8h" local="no">CANopen_socket.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_c_a_nopen_1_1_socket_1a39635df87fb1755fb9c2ce3d7ad6b6e3" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CANopen::Socket::m_socket</definition>
+        <argsstring></argsstring>
+        <name>m_socket</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Can socket </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/include/CANopen_socket.h" line="74" column="9" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/include/CANopen_socket.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_a_nopen_1_1_socket_1ae4954058b8e521b52a26065924cbea2b" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string CANopen::Socket::m_ifname</definition>
+        <argsstring></argsstring>
+        <name>m_ifname</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>CAN interface name </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/include/CANopen_socket.h" line="75" column="17" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/include/CANopen_socket.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_a_nopen_1_1_socket_1a4911481144bf02f1dacfa74563ed8eab" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CANopen::Socket::m_verbose_level</definition>
+        <argsstring></argsstring>
+        <name>m_verbose_level</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Verbose mode </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/include/CANopen_socket.h" line="77" column="9" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/include/CANopen_socket.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_c_a_nopen_1_1_socket_1a66c37f6819a5ad8829326380812446e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CANopen::Socket::Socket</definition>
+        <argsstring>(std::string ifname, int verbose_level=0)</argsstring>
+        <name>Socket</name>
+        <param>
+          <type>std::string</type>
+          <declname>ifname</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>verbose_level</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ifname</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Name of the can interface ex:&quot;can0&quot; </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>verbose</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Display the different message sent. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/include/CANopen_socket.h" line="46" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/src/CANopen_socket.cpp" bodystart="19" bodyend="28"/>
+        <references refid="class_c_a_nopen_1_1_socket_1a6f63808addc451747608c21b958821f4" compoundref="_c_a_nopen__socket_8cpp" startline="54" endline="70">bind</references>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_socket_1af234eea5568f8f436cb815ab70e75f2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CANopen::Socket::Socket</definition>
+        <argsstring>(std::string ifname, uint32_t cob_id, int verbose_level=0)</argsstring>
+        <name>Socket</name>
+        <param>
+          <type>std::string</type>
+          <declname>ifname</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>cob_id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>verbose_level</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ifname</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Name of the can interface ex:&quot;can0&quot; </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cob_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Filtering only frame with this ID. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>verbose</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Display the different message sent. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/include/CANopen_socket.h" line="54" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/src/CANopen_socket.cpp" bodystart="30" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_socket_1a058eedc1db11274b21421171b554c7e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CANopen::Socket::add_filter</definition>
+        <argsstring>(std::initializer_list&lt; struct can_filter &gt; rfilter)</argsstring>
+        <name>add_filter</name>
+        <param>
+          <type>std::initializer_list&lt; struct can_filter &gt;</type>
+          <declname>rfilter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/include/CANopen_socket.h" line="58" column="8" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/src/CANopen_socket.cpp" bodystart="40" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_socket_1a6f63808addc451747608c21b958821f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int CANopen::Socket::bind</definition>
+        <argsstring>()</argsstring>
+        <name>bind</name>
+        <briefdescription>
+<para>return true if the can interface is successfully bound </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/include/CANopen_socket.h" line="63" column="9" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/src/CANopen_socket.cpp" bodystart="54" bodyend="70"/>
+        <referencedby refid="class_c_a_nopen_1_1_socket_1a66c37f6819a5ad8829326380812446e6" compoundref="_c_a_nopen__socket_8cpp" startline="19" endline="28">Socket</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_socket_1aa147801723e58f287d06b6df28837c44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CANopen::Socket::send</definition>
+        <argsstring>(const Message &amp;&amp;msg)</argsstring>
+        <name>send</name>
+        <param>
+          <type>const <ref refid="class_c_a_nopen_1_1_message" kindref="compound">Message</ref> &amp;&amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+<para>Function to send a CAN message. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: CAN frame to send </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/include/CANopen_socket.h" line="69" column="10" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/src/CANopen_socket.cpp" bodystart="73" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_socket_1a15363c054b276777b4290c91fd05edd5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="class_c_a_nopen_1_1_message" kindref="compound">Message</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; Message &gt; CANopen::Socket::receive</definition>
+        <argsstring>()</argsstring>
+        <name>receive</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/include/CANopen_socket.h" line="71" column="21" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/src/CANopen_socket.cpp" bodystart="81" bodyend="129"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>CANopen object able to send <ref refid="class_c_a_nopen_1_1_message" kindref="compound">Message</ref> through a CAN interface using UNIX sockets. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/include/CANopen_socket.h" line="39" column="13" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/include/CANopen_socket.h" bodystart="39" bodyend="78"/>
+    <listofallmembers>
+      <member refid="class_c_a_nopen_1_1_socket_1a058eedc1db11274b21421171b554c7e9" prot="public" virt="non-virtual"><scope>CANopen::Socket</scope><name>add_filter</name></member>
+      <member refid="class_c_a_nopen_1_1_socket_1a6f63808addc451747608c21b958821f4" prot="public" virt="non-virtual"><scope>CANopen::Socket</scope><name>bind</name></member>
+      <member refid="class_c_a_nopen_1_1_socket_1ae4954058b8e521b52a26065924cbea2b" prot="private" virt="non-virtual"><scope>CANopen::Socket</scope><name>m_ifname</name></member>
+      <member refid="class_c_a_nopen_1_1_socket_1a39635df87fb1755fb9c2ce3d7ad6b6e3" prot="private" virt="non-virtual"><scope>CANopen::Socket</scope><name>m_socket</name></member>
+      <member refid="class_c_a_nopen_1_1_socket_1a4911481144bf02f1dacfa74563ed8eab" prot="private" virt="non-virtual"><scope>CANopen::Socket</scope><name>m_verbose_level</name></member>
+      <member refid="class_c_a_nopen_1_1_socket_1a15363c054b276777b4290c91fd05edd5" prot="public" virt="non-virtual"><scope>CANopen::Socket</scope><name>receive</name></member>
+      <member refid="class_c_a_nopen_1_1_socket_1aa147801723e58f287d06b6df28837c44" prot="public" virt="non-virtual"><scope>CANopen::Socket</scope><name>send</name></member>
+      <member refid="class_c_a_nopen_1_1_socket_1a66c37f6819a5ad8829326380812446e6" prot="public" virt="non-virtual"><scope>CANopen::Socket</scope><name>Socket</name></member>
+      <member refid="class_c_a_nopen_1_1_socket_1af234eea5568f8f436cb815ab70e75f2f" prot="public" virt="non-virtual"><scope>CANopen::Socket</scope><name>Socket</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

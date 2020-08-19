@@ -1,74 +1,43 @@
-\hypertarget{classc_joystick}{}\section{c\+Joystick Class Reference}
-\label{classc_joystick}\index{c\+Joystick@{c\+Joystick}}
+\hypertarget{classc_joystick}{}\doxysection{c\+Joystick Class Reference}
+\label{classc_joystick}\index{cJoystick@{cJoystick}}
 
 
 {\ttfamily \#include $<$joystick.\+h$>$}
 
-
-
-Collaboration diagram for c\+Joystick\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=184pt]{classc_joystick__coll__graph}
-\end{center}
-\end{figure}
-\subsection*{Public Member Functions}
+\doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classc_joystick_ae4edecc3589f19b068113cdb79f7b39d}{c\+Joystick} ()
+\mbox{\hyperlink{classc_joystick_ae4edecc3589f19b068113cdb79f7b39d}{c\+Joystick}} ()
 \item 
-\hyperlink{classc_joystick_a9e429f765dee1dc7dc3d31dc0f50ae0e}{$\sim$c\+Joystick} ()
+\mbox{\hyperlink{classc_joystick_a9e429f765dee1dc7dc3d31dc0f50ae0e}{$\sim$c\+Joystick}} ()
 \item 
-void \hyperlink{classc_joystick_a8c04dc903aac9588db3b3e81f495705a}{read\+Ev} ()
+void \mbox{\hyperlink{classc_joystick_a8c04dc903aac9588db3b3e81f495705a}{read\+Ev}} ()
 \item 
-\hyperlink{structjoystick__position}{joystick\+\_\+position} \hyperlink{classc_joystick_a30d938005453ad77f512094c8a7a99f5}{joystick\+Position} (int n)
+\mbox{\hyperlink{structjoystick__position}{joystick\+\_\+position}} \mbox{\hyperlink{classc_joystick_a30d938005453ad77f512094c8a7a99f5}{joystick\+Position}} (int n)
 \item 
-int \hyperlink{classc_joystick_a2954017eb51ef6f4658450199e5df5b4}{joystick\+Value} (int n)
+int \mbox{\hyperlink{classc_joystick_a2954017eb51ef6f4658450199e5df5b4}{joystick\+Value}} (int n)
 \item 
-bool \hyperlink{classc_joystick_a10375763b82c2da3e904d118d5cf2ecb}{button\+Pressed} (int n)
+bool \mbox{\hyperlink{classc_joystick_a10375763b82c2da3e904d118d5cf2ecb}{button\+Pressed}} (int n)
 \end{DoxyCompactItemize}
-\subsection*{Static Public Member Functions}
+\doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static void $\ast$ \hyperlink{classc_joystick_aafa52c2e4d67c71f3d1e31b80d1dd324}{loop} (void $\ast$obj)
-\end{DoxyCompactItemize}
-\subsection*{Private Attributes}
-\begin{DoxyCompactItemize}
-\item 
-pthread\+\_\+t \hyperlink{classc_joystick_ac95e179f087f21a4d364cf6e9984d60b}{thread}
-\item 
-bool \hyperlink{classc_joystick_a76b927cfdc179f053256952d0d94656d}{active}
-\item 
-int \hyperlink{classc_joystick_a23bb9ae8f441e6974b383aae6ae8bea6}{joystick\+\_\+fd}
-\item 
-js\+\_\+event $\ast$ \hyperlink{classc_joystick_ae4af08aaa67a7f0c0575d65ff4987017}{joystick\+\_\+ev}
-\item 
-\hyperlink{structjoystick__state}{joystick\+\_\+state} $\ast$ \hyperlink{classc_joystick_a6962bb01a3326201b9cf3ba403fe0f21}{joystick\+\_\+st}
-\item 
-\+\_\+\+\_\+u32 \hyperlink{classc_joystick_afefd351be965e4953b5eb03073e99ad9}{version}
-\item 
-\+\_\+\+\_\+u8 \hyperlink{classc_joystick_ada53890948b0afe1b49b4c2ff2970c77}{axes}
-\item 
-\+\_\+\+\_\+u8 \hyperlink{classc_joystick_ae493e39825c273556d4807cb31d047e0}{buttons}
-\item 
-char \hyperlink{classc_joystick_a4352d02cdee851f9c8c104915d3c006c}{name} \mbox{[}256\mbox{]}
+static void $\ast$ \mbox{\hyperlink{classc_joystick_aafa52c2e4d67c71f3d1e31b80d1dd324}{loop}} (void $\ast$obj)
 \end{DoxyCompactItemize}
 
 
-\subsection{Detailed Description}
+\doxysubsection{Detailed Description}
 
 
 Definition at line 23 of file joystick.\+h.
 
 
 
-\subsection{Constructor \& Destructor Documentation}
+\doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classc_joystick_ae4edecc3589f19b068113cdb79f7b39d}\label{classc_joystick_ae4edecc3589f19b068113cdb79f7b39d}} 
-\index{c\+Joystick@{c\+Joystick}!c\+Joystick@{c\+Joystick}}
-\index{c\+Joystick@{c\+Joystick}!c\+Joystick@{c\+Joystick}}
-\subsubsection{\texorpdfstring{c\+Joystick()}{cJoystick()}}
+\index{cJoystick@{cJoystick}!cJoystick@{cJoystick}}
+\index{cJoystick@{cJoystick}!cJoystick@{cJoystick}}
+\doxysubsubsection{\texorpdfstring{cJoystick()}{cJoystick()}}
 {\footnotesize\ttfamily c\+Joystick\+::c\+Joystick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -77,7 +46,7 @@ Definition at line 3 of file joystick.\+cpp.
 
 
 
-References active, axes, joystick\+\_\+state\+::axis, joystick\+\_\+state\+::button, buttons, J\+O\+Y\+S\+T\+I\+C\+K\+\_\+\+D\+EV, joystick\+\_\+ev, joystick\+\_\+fd, joystick\+\_\+st, loop(), name, thread, and version.
+References joystick\+\_\+state\+::axis, joystick\+\_\+state\+::button, J\+O\+Y\+S\+T\+I\+C\+K\+\_\+\+D\+EV, and loop().
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -87,9 +56,9 @@ Here is the call graph for this function\+:\nopagebreak
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classc_joystick_a9e429f765dee1dc7dc3d31dc0f50ae0e}\label{classc_joystick_a9e429f765dee1dc7dc3d31dc0f50ae0e}} 
-\index{c\+Joystick@{c\+Joystick}!````~c\+Joystick@{$\sim$c\+Joystick}}
-\index{````~c\+Joystick@{$\sim$c\+Joystick}!c\+Joystick@{c\+Joystick}}
-\subsubsection{\texorpdfstring{$\sim$c\+Joystick()}{~cJoystick()}}
+\index{cJoystick@{cJoystick}!````~cJoystick@{$\sim$cJoystick}}
+\index{````~cJoystick@{$\sim$cJoystick}!cJoystick@{cJoystick}}
+\doxysubsubsection{\texorpdfstring{$\sim$cJoystick()}{~cJoystick()}}
 {\footnotesize\ttfamily c\+Joystick\+::$\sim$c\+Joystick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -98,65 +67,57 @@ Definition at line 25 of file joystick.\+cpp.
 
 
 
-References active, joystick\+\_\+ev, joystick\+\_\+fd, joystick\+\_\+st, and thread.
-
-
-
-\subsection{Member Function Documentation}
+\doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classc_joystick_a10375763b82c2da3e904d118d5cf2ecb}\label{classc_joystick_a10375763b82c2da3e904d118d5cf2ecb}} 
-\index{c\+Joystick@{c\+Joystick}!button\+Pressed@{button\+Pressed}}
-\index{button\+Pressed@{button\+Pressed}!c\+Joystick@{c\+Joystick}}
-\subsubsection{\texorpdfstring{button\+Pressed()}{buttonPressed()}}
+\index{cJoystick@{cJoystick}!buttonPressed@{buttonPressed}}
+\index{buttonPressed@{buttonPressed}!cJoystick@{cJoystick}}
+\doxysubsubsection{\texorpdfstring{buttonPressed()}{buttonPressed()}}
 {\footnotesize\ttfamily bool c\+Joystick\+::button\+Pressed (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
 
 
 
-Definition at line 79 of file joystick.\+cpp.
+Definition at line 80 of file joystick.\+cpp.
 
 
 
-References joystick\+\_\+state\+::button, buttons, and joystick\+\_\+st.
-
-
-
-Referenced by main().
+References joystick\+\_\+state\+::button.
 
 \mbox{\Hypertarget{classc_joystick_a30d938005453ad77f512094c8a7a99f5}\label{classc_joystick_a30d938005453ad77f512094c8a7a99f5}} 
-\index{c\+Joystick@{c\+Joystick}!joystick\+Position@{joystick\+Position}}
-\index{joystick\+Position@{joystick\+Position}!c\+Joystick@{c\+Joystick}}
-\subsubsection{\texorpdfstring{joystick\+Position()}{joystickPosition()}}
-{\footnotesize\ttfamily \hyperlink{structjoystick__position}{joystick\+\_\+position} c\+Joystick\+::joystick\+Position (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+\index{cJoystick@{cJoystick}!joystickPosition@{joystickPosition}}
+\index{joystickPosition@{joystickPosition}!cJoystick@{cJoystick}}
+\doxysubsubsection{\texorpdfstring{joystickPosition()}{joystickPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structjoystick__position}{joystick\+\_\+position}} c\+Joystick\+::joystick\+Position (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
 
 
 
-Definition at line 55 of file joystick.\+cpp.
+Definition at line 56 of file joystick.\+cpp.
 
 
 
-References axes, joystick\+\_\+state\+::axis, joystick\+\_\+st, joystick\+\_\+position\+::r, joystick\+\_\+position\+::theta, joystick\+\_\+position\+::x, and joystick\+\_\+position\+::y.
+References joystick\+\_\+state\+::axis, joystick\+\_\+position\+::r, joystick\+\_\+position\+::theta, joystick\+\_\+position\+::x, and joystick\+\_\+position\+::y.
 
 \mbox{\Hypertarget{classc_joystick_a2954017eb51ef6f4658450199e5df5b4}\label{classc_joystick_a2954017eb51ef6f4658450199e5df5b4}} 
-\index{c\+Joystick@{c\+Joystick}!joystick\+Value@{joystick\+Value}}
-\index{joystick\+Value@{joystick\+Value}!c\+Joystick@{c\+Joystick}}
-\subsubsection{\texorpdfstring{joystick\+Value()}{joystickValue()}}
+\index{cJoystick@{cJoystick}!joystickValue@{joystickValue}}
+\index{joystickValue@{joystickValue}!cJoystick@{cJoystick}}
+\doxysubsubsection{\texorpdfstring{joystickValue()}{joystickValue()}}
 {\footnotesize\ttfamily int c\+Joystick\+::joystick\+Value (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
 
 
 
-Definition at line 74 of file joystick.\+cpp.
+Definition at line 75 of file joystick.\+cpp.
 
 
 
-References axes, joystick\+\_\+state\+::axis, and joystick\+\_\+st.
+References joystick\+\_\+state\+::axis.
 
 
 
 Referenced by main().
 
 \mbox{\Hypertarget{classc_joystick_aafa52c2e4d67c71f3d1e31b80d1dd324}\label{classc_joystick_aafa52c2e4d67c71f3d1e31b80d1dd324}} 
-\index{c\+Joystick@{c\+Joystick}!loop@{loop}}
-\index{loop@{loop}!c\+Joystick@{c\+Joystick}}
-\subsubsection{\texorpdfstring{loop()}{loop()}}
+\index{cJoystick@{cJoystick}!loop@{loop}}
+\index{loop@{loop}!cJoystick@{cJoystick}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
 {\footnotesize\ttfamily void $\ast$ c\+Joystick\+::loop (\begin{DoxyParamCaption}\item[{void $\ast$}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
@@ -165,7 +126,7 @@ Definition at line 36 of file joystick.\+cpp.
 
 
 
-References active, and read\+Ev().
+References read\+Ev().
 
 
 
@@ -175,22 +136,22 @@ Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=321pt]{classc_joystick_aafa52c2e4d67c71f3d1e31b80d1dd324_cgraph}
+\includegraphics[width=334pt]{classc_joystick_aafa52c2e4d67c71f3d1e31b80d1dd324_cgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classc_joystick_a8c04dc903aac9588db3b3e81f495705a}\label{classc_joystick_a8c04dc903aac9588db3b3e81f495705a}} 
-\index{c\+Joystick@{c\+Joystick}!read\+Ev@{read\+Ev}}
-\index{read\+Ev@{read\+Ev}!c\+Joystick@{c\+Joystick}}
-\subsubsection{\texorpdfstring{read\+Ev()}{readEv()}}
+\index{cJoystick@{cJoystick}!readEv@{readEv}}
+\index{readEv@{readEv}!cJoystick@{cJoystick}}
+\doxysubsubsection{\texorpdfstring{readEv()}{readEv()}}
 {\footnotesize\ttfamily void c\+Joystick\+::read\+Ev (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-Definition at line 40 of file joystick.\+cpp.
+Definition at line 41 of file joystick.\+cpp.
 
 
 
-References joystick\+\_\+state\+::axis, joystick\+\_\+state\+::button, joystick\+\_\+ev, joystick\+\_\+fd, and joystick\+\_\+st.
+References joystick\+\_\+state\+::axis, and joystick\+\_\+state\+::button.
 
 
 
@@ -198,136 +159,7 @@ Referenced by loop().
 
 
 
-\subsection{Member Data Documentation}
-\mbox{\Hypertarget{classc_joystick_a76b927cfdc179f053256952d0d94656d}\label{classc_joystick_a76b927cfdc179f053256952d0d94656d}} 
-\index{c\+Joystick@{c\+Joystick}!active@{active}}
-\index{active@{active}!c\+Joystick@{c\+Joystick}}
-\subsubsection{\texorpdfstring{active}{active}}
-{\footnotesize\ttfamily bool c\+Joystick\+::active\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Definition at line 26 of file joystick.\+h.
-
-
-
-Referenced by c\+Joystick(), loop(), and $\sim$c\+Joystick().
-
-\mbox{\Hypertarget{classc_joystick_ada53890948b0afe1b49b4c2ff2970c77}\label{classc_joystick_ada53890948b0afe1b49b4c2ff2970c77}} 
-\index{c\+Joystick@{c\+Joystick}!axes@{axes}}
-\index{axes@{axes}!c\+Joystick@{c\+Joystick}}
-\subsubsection{\texorpdfstring{axes}{axes}}
-{\footnotesize\ttfamily \+\_\+\+\_\+u8 c\+Joystick\+::axes\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Definition at line 31 of file joystick.\+h.
-
-
-
-Referenced by c\+Joystick(), joystick\+Position(), and joystick\+Value().
-
-\mbox{\Hypertarget{classc_joystick_ae493e39825c273556d4807cb31d047e0}\label{classc_joystick_ae493e39825c273556d4807cb31d047e0}} 
-\index{c\+Joystick@{c\+Joystick}!buttons@{buttons}}
-\index{buttons@{buttons}!c\+Joystick@{c\+Joystick}}
-\subsubsection{\texorpdfstring{buttons}{buttons}}
-{\footnotesize\ttfamily \+\_\+\+\_\+u8 c\+Joystick\+::buttons\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Definition at line 32 of file joystick.\+h.
-
-
-
-Referenced by button\+Pressed(), and c\+Joystick().
-
-\mbox{\Hypertarget{classc_joystick_ae4af08aaa67a7f0c0575d65ff4987017}\label{classc_joystick_ae4af08aaa67a7f0c0575d65ff4987017}} 
-\index{c\+Joystick@{c\+Joystick}!joystick\+\_\+ev@{joystick\+\_\+ev}}
-\index{joystick\+\_\+ev@{joystick\+\_\+ev}!c\+Joystick@{c\+Joystick}}
-\subsubsection{\texorpdfstring{joystick\+\_\+ev}{joystick\_ev}}
-{\footnotesize\ttfamily js\+\_\+event$\ast$ c\+Joystick\+::joystick\+\_\+ev\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Definition at line 28 of file joystick.\+h.
-
-
-
-Referenced by c\+Joystick(), read\+Ev(), and $\sim$c\+Joystick().
-
-\mbox{\Hypertarget{classc_joystick_a23bb9ae8f441e6974b383aae6ae8bea6}\label{classc_joystick_a23bb9ae8f441e6974b383aae6ae8bea6}} 
-\index{c\+Joystick@{c\+Joystick}!joystick\+\_\+fd@{joystick\+\_\+fd}}
-\index{joystick\+\_\+fd@{joystick\+\_\+fd}!c\+Joystick@{c\+Joystick}}
-\subsubsection{\texorpdfstring{joystick\+\_\+fd}{joystick\_fd}}
-{\footnotesize\ttfamily int c\+Joystick\+::joystick\+\_\+fd\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Definition at line 27 of file joystick.\+h.
-
-
-
-Referenced by c\+Joystick(), read\+Ev(), and $\sim$c\+Joystick().
-
-\mbox{\Hypertarget{classc_joystick_a6962bb01a3326201b9cf3ba403fe0f21}\label{classc_joystick_a6962bb01a3326201b9cf3ba403fe0f21}} 
-\index{c\+Joystick@{c\+Joystick}!joystick\+\_\+st@{joystick\+\_\+st}}
-\index{joystick\+\_\+st@{joystick\+\_\+st}!c\+Joystick@{c\+Joystick}}
-\subsubsection{\texorpdfstring{joystick\+\_\+st}{joystick\_st}}
-{\footnotesize\ttfamily \hyperlink{structjoystick__state}{joystick\+\_\+state}$\ast$ c\+Joystick\+::joystick\+\_\+st\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Definition at line 29 of file joystick.\+h.
-
-
-
-Referenced by button\+Pressed(), c\+Joystick(), joystick\+Position(), joystick\+Value(), read\+Ev(), and $\sim$c\+Joystick().
-
-\mbox{\Hypertarget{classc_joystick_a4352d02cdee851f9c8c104915d3c006c}\label{classc_joystick_a4352d02cdee851f9c8c104915d3c006c}} 
-\index{c\+Joystick@{c\+Joystick}!name@{name}}
-\index{name@{name}!c\+Joystick@{c\+Joystick}}
-\subsubsection{\texorpdfstring{name}{name}}
-{\footnotesize\ttfamily char c\+Joystick\+::name\mbox{[}256\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Definition at line 33 of file joystick.\+h.
-
-
-
-Referenced by c\+Joystick().
-
-\mbox{\Hypertarget{classc_joystick_ac95e179f087f21a4d364cf6e9984d60b}\label{classc_joystick_ac95e179f087f21a4d364cf6e9984d60b}} 
-\index{c\+Joystick@{c\+Joystick}!thread@{thread}}
-\index{thread@{thread}!c\+Joystick@{c\+Joystick}}
-\subsubsection{\texorpdfstring{thread}{thread}}
-{\footnotesize\ttfamily pthread\+\_\+t c\+Joystick\+::thread\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Definition at line 25 of file joystick.\+h.
-
-
-
-Referenced by c\+Joystick(), and $\sim$c\+Joystick().
-
-\mbox{\Hypertarget{classc_joystick_afefd351be965e4953b5eb03073e99ad9}\label{classc_joystick_afefd351be965e4953b5eb03073e99ad9}} 
-\index{c\+Joystick@{c\+Joystick}!version@{version}}
-\index{version@{version}!c\+Joystick@{c\+Joystick}}
-\subsubsection{\texorpdfstring{version}{version}}
-{\footnotesize\ttfamily \+\_\+\+\_\+u32 c\+Joystick\+::version\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Definition at line 30 of file joystick.\+h.
-
-
-
-Referenced by c\+Joystick().
-
-
-
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-lib/lxm32/lib/joystick/include/\hyperlink{joystick_8h}{joystick.\+h}\item 
-lib/lxm32/lib/joystick/src/\hyperlink{joystick_8cpp}{joystick.\+cpp}\end{DoxyCompactItemize}
+/home/adev/\+Documents/\+S\+T\+E\+C\+H/stewart\+\_\+platform/lib/lxm32/lib/joystick/include/\mbox{\hyperlink{joystick_8h}{joystick.\+h}}\item 
+/home/adev/\+Documents/\+S\+T\+E\+C\+H/stewart\+\_\+platform/lib/lxm32/lib/joystick/src/\mbox{\hyperlink{joystick_8cpp}{joystick.\+cpp}}\end{DoxyCompactItemize}

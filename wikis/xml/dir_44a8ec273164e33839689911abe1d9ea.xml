@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_44a8ec273164e33839689911abe1d9ea" kind="dir">
+    <compoundname>src</compoundname>
+    <innerfile refid="_c_a_nopen__driver_8cpp">CANopen_driver.cpp</innerfile>
+    <innerfile refid="_c_a_nopen__lxm32_8cpp">CANopen_lxm32.cpp</innerfile>
+    <innerfile refid="lib_2lxm32_2src_2main_8cpp">lib/lxm32/src/main.cpp</innerfile>
+    <innerfile refid="parameter_8cpp">parameter.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/src/"/>
+  </compounddef>
+</doxygen>

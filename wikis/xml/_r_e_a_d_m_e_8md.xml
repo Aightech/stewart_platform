@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>stewart_platform</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Project<sp/>to<sp/>control<sp/>the<sp/>Stewart<sp/>platform.<sp/>The<sp/>platform<sp/>use<sp/>to<sp/>be<sp/>control<sp/>via<sp/>an<sp/>OLIMEX<sp/>board<sp/>doing<sp/>the<sp/>interface<sp/>IP/CAN<sp/>to<sp/>communicate<sp/>with<sp/>the<sp/>servo’s<sp/>drivers.<sp/>This<sp/>project<sp/>aims<sp/>to<sp/>bypass<sp/>this<sp/>hardware<sp/>to<sp/>communicate<sp/>directly<sp/>on<sp/>the<sp/>CANopen<sp/>bus.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Electrical<sp/>Design</highlight></codeline>
+<codeline><highlight class="normal">&lt;img<sp/>src=&quot;fig/electrical_schematics.png&quot;<sp/>width=&quot;800&quot;<sp/><sp/>/&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Stucture<sp/>and<sp/>Parameters<sp/>used</highlight></codeline>
+<codeline><highlight class="normal">###<sp/>Globale</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;img<sp/>src=&quot;fig/geogebra-export.png&quot;<sp/>width=&quot;800&quot;<sp/><sp/>/&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Base</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;img<sp/>src=&quot;fig/fig1.png&quot;<sp/>width=&quot;400&quot;<sp/><sp/>/&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+    </programlisting>
+    <location file="/home/adev/Documents/STECH/stewart_platform/README.md"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,10 @@
+<map id="message.h" name="message.h">
+<area shape="rect" id="node1" title="CAN_frame message sent and received throught CANopen socket." alt="" coords="255,5,364,35"/>
+<area shape="rect" id="node2" href="$payload_8h.html" title="Payload of CANopen message: array of 1 to 8 bytes of data." alt="" coords="215,83,315,112"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,160,80,189"/>
+<area shape="rect" id="node6" title=" " alt="" coords="437,160,504,189"/>
+<area shape="rect" id="node8" title=" " alt="" coords="391,83,499,112"/>
+<area shape="rect" id="node4" title=" " alt="" coords="105,160,191,189"/>
+<area shape="rect" id="node5" title=" " alt="" coords="215,160,315,189"/>
+<area shape="rect" id="node7" title=" " alt="" coords="339,160,413,189"/>
+</map>

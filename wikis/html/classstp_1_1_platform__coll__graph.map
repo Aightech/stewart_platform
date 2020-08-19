@@ -1,5 +1,7 @@
 <map id="stp::Platform" name="stp::Platform">
-<area shape="rect" id="node2" href="$classstp_1_1_model.html" title="stp::Model" alt="" coords="5,187,100,216"/>
-<area shape="rect" id="node3" href="$class_l_x_m32.html" title="LXM32" alt="" coords="124,187,197,216"/>
-<area shape="rect" id="node4" href="$class_canopen__socket.html" title="Canopen object able to send command through a CAN interface using the UNIX socket. " alt="" coords="89,5,232,35"/>
+<area shape="rect" id="node1" title=" " alt="" coords="45,273,168,303"/>
+<area shape="rect" id="node2" href="$classstp_1_1_model.html" title=" " alt="" coords="5,179,109,208"/>
+<area shape="rect" id="node3" href="$class_c_a_nopen_1_1_l_x_m32.html" title="Implementation of the Driver Class for a LXM32 driver." alt="" coords="133,179,293,208"/>
+<area shape="rect" id="node4" href="$class_c_a_nopen_1_1_driver.html" title="Device Profile Drives and Motion Control." alt="" coords="136,100,291,129"/>
+<area shape="rect" id="node5" href="$class_c_a_nopen_1_1_socket.html" title="CANopen object able to send Message through a CAN interface using UNIX sockets." alt="" coords="133,5,293,35"/>
 </map>

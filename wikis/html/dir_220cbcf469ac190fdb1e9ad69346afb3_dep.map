@@ -1,6 +1,5 @@
-<map id="lib/lxm32/lib" name="lib/lxm32/lib">
-<area shape="rect" id="node2" href="dir_23220e5d4eb2412ea02d6ea5bea34c4b.html" title="canopen" alt="" coords="137,65,221,113"/>
-<area shape="rect" id="node3" href="dir_2a6330de5afdb7d838640331df10a186.html" title="joystick" alt="" coords="37,65,112,113"/>
-<area shape="rect" id="clust2" href="dir_220cbcf469ac190fdb1e9ad69346afb3.html" alt="" coords="27,55,328,124"/>
-<area shape="rect" id="clust1" href="dir_0faa4166abffc2d91ba5b47622b31ea7.html" title="lxm32" alt="" coords="16,16,339,135"/>
+<map id="lib" name="lib">
+<area shape="rect" id="node2" href="dir_23220e5d4eb2412ea02d6ea5bea34c4b.html" title="canopen" alt="" coords="37,65,128,113"/>
+<area shape="rect" id="clust2" href="dir_220cbcf469ac190fdb1e9ad69346afb3.html" alt="" coords="27,55,235,124"/>
+<area shape="rect" id="clust1" href="dir_0faa4166abffc2d91ba5b47622b31ea7.html" title="lxm32" alt="" coords="16,16,245,135"/>
 </map>

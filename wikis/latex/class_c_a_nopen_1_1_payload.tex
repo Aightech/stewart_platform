@@ -1,0 +1,211 @@
+\hypertarget{class_c_a_nopen_1_1_payload}{}\doxysection{C\+A\+Nopen\+::Payload Class Reference}
+\label{class_c_a_nopen_1_1_payload}\index{CANopen::Payload@{CANopen::Payload}}
+
+
+\mbox{\hyperlink{class_c_a_nopen_1_1_payload}{Payload}} of C\+A\+Nopen message\+: array of 1 to 8 bytes of data.  
+
+
+
+
+{\ttfamily \#include $<$payload.\+h$>$}
+
+
+
+Inheritance diagram for C\+A\+Nopen\+::Payload\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{class_c_a_nopen_1_1_payload__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for C\+A\+Nopen\+::Payload\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{class_c_a_nopen_1_1_payload__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_a_nopen_1_1_payload_a1177f8bbace9e9779c7549ae7ace1681}\label{class_c_a_nopen_1_1_payload_a1177f8bbace9e9779c7549ae7ace1681}} 
+{\bfseries Payload} (const \mbox{\hyperlink{class_c_a_nopen_1_1_payload}{Payload}} \&)=default
+\item 
+\mbox{\Hypertarget{class_c_a_nopen_1_1_payload_ab0769e01554cc879840463e2a55eab0e}\label{class_c_a_nopen_1_1_payload_ab0769e01554cc879840463e2a55eab0e}} 
+{\bfseries Payload} (const std\+::vector$<$ uint8\+\_\+t $>$ \&other)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{class_c_a_nopen_1_1_payload_a769f01631bd710d3b37f07cc2753b889}{Payload}} (T \mbox{\hyperlink{class_c_a_nopen_1_1_payload_aef05ef8cfc8b9ba4170891f3168a726b}{value}})
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_c_a_nopen_1_1_payload}{Payload}} Constructor from a standard data type variable. It transfrom the n bytes of the data into a array of n bytes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_a_nopen_1_1_payload_a646541a9ec787a3fcdbbcba153e8553c}\label{class_c_a_nopen_1_1_payload_a646541a9ec787a3fcdbbcba153e8553c}} 
+\mbox{\hyperlink{class_c_a_nopen_1_1_payload}{Payload}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_c_a_nopen_1_1_payload}{Payload}} \&)=default
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \& \mbox{\hyperlink{class_c_a_nopen_1_1_payload_aef05ef8cfc8b9ba4170891f3168a726b}{value}} (unsigned begin=0)
+\begin{DoxyCompactList}\small\item\em value Returns the data casted as a variable of type T \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{class_c_a_nopen_1_1_payload}{Payload}} \& \mbox{\hyperlink{class_c_a_nopen_1_1_payload_aeb41b12a7903cb5dee4d2f5ccd1d3f15}{operator$<$$<$}} (T \&\&\mbox{\hyperlink{class_c_a_nopen_1_1_payload_aef05ef8cfc8b9ba4170891f3168a726b}{value}})
+\begin{DoxyCompactList}\small\item\em operator $<$$<$ Adds a variable inside the payload \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_a_nopen_1_1_payload}{Payload}} \& \mbox{\hyperlink{class_c_a_nopen_1_1_payload_ae8e5f1160cc9d6578a315a455d305469}{operator$<$$<$}} (\mbox{\hyperlink{class_c_a_nopen_1_1_payload}{Payload}} \&\&p)
+\begin{DoxyCompactList}\small\item\em operator $<$$<$ Adds a variable inside the payload \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_a_nopen_1_1_payload}{Payload}} \& \mbox{\hyperlink{class_c_a_nopen_1_1_payload_a4d25baad973a414a3b160f366bb92153}{store\+\_\+at}} (\mbox{\hyperlink{class_c_a_nopen_1_1_payload}{Payload}} \&\&p, int slot)
+\begin{DoxyCompactList}\small\item\em store\+\_\+at Stores a variable at a specified index in the data array. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_a_nopen_1_1_payload_a61e7092a555d000dfd59c6942823c9f1}\label{class_c_a_nopen_1_1_payload_a61e7092a555d000dfd59c6942823c9f1}} 
+{\bfseries operator std\+::string} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_c_a_nopen_1_1_payload}{Payload}} of C\+A\+Nopen message\+: array of 1 to 8 bytes of data. 
+
+Definition at line \mbox{\hyperlink{payload_8h_source_l00022}{22}} of file \mbox{\hyperlink{payload_8h_source}{payload.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_c_a_nopen_1_1_payload_a769f01631bd710d3b37f07cc2753b889}\label{class_c_a_nopen_1_1_payload_a769f01631bd710d3b37f07cc2753b889}} 
+\index{CANopen::Payload@{CANopen::Payload}!Payload@{Payload}}
+\index{Payload@{Payload}!CANopen::Payload@{CANopen::Payload}}
+\doxysubsubsection{\texorpdfstring{Payload()}{Payload()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+C\+A\+Nopen\+::\+Payload\+::\+Payload (\begin{DoxyParamCaption}\item[{T}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{class_c_a_nopen_1_1_payload}{Payload}} Constructor from a standard data type variable. It transfrom the n bytes of the data into a array of n bytes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The variable to store in the payload \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{payload_8h_source_l00033}{33}} of file \mbox{\hyperlink{payload_8h_source}{payload.\+h}}.
+
+
+
+References \mbox{\hyperlink{payload_8h_source_l00048}{value()}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_c_a_nopen_1_1_payload_a769f01631bd710d3b37f07cc2753b889_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_a_nopen_1_1_payload_ae8e5f1160cc9d6578a315a455d305469}\label{class_c_a_nopen_1_1_payload_ae8e5f1160cc9d6578a315a455d305469}} 
+\index{CANopen::Payload@{CANopen::Payload}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!CANopen::Payload@{CANopen::Payload}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_a_nopen_1_1_payload}{Payload}}\& C\+A\+Nopen\+::\+Payload\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_a_nopen_1_1_payload}{Payload}} \&\&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+operator $<$$<$ Adds a variable inside the payload 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & The variable to store \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \mbox{\hyperlink{class_c_a_nopen_1_1_payload}{Payload}} reference. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{payload_8h_source_l00074}{74}} of file \mbox{\hyperlink{payload_8h_source}{payload.\+h}}.
+
+\mbox{\Hypertarget{class_c_a_nopen_1_1_payload_aeb41b12a7903cb5dee4d2f5ccd1d3f15}\label{class_c_a_nopen_1_1_payload_aeb41b12a7903cb5dee4d2f5ccd1d3f15}} 
+\index{CANopen::Payload@{CANopen::Payload}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!CANopen::Payload@{CANopen::Payload}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_c_a_nopen_1_1_payload}{Payload}}\& C\+A\+Nopen\+::\+Payload\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{T \&\&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+operator $<$$<$ Adds a variable inside the payload 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The variable to store \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \mbox{\hyperlink{class_c_a_nopen_1_1_payload}{Payload}} reference. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{payload_8h_source_l00062}{62}} of file \mbox{\hyperlink{payload_8h_source}{payload.\+h}}.
+
+
+
+References \mbox{\hyperlink{payload_8h_source_l00048}{value()}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_c_a_nopen_1_1_payload_aeb41b12a7903cb5dee4d2f5ccd1d3f15_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_c_a_nopen_1_1_payload_a4d25baad973a414a3b160f366bb92153}\label{class_c_a_nopen_1_1_payload_a4d25baad973a414a3b160f366bb92153}} 
+\index{CANopen::Payload@{CANopen::Payload}!store\_at@{store\_at}}
+\index{store\_at@{store\_at}!CANopen::Payload@{CANopen::Payload}}
+\doxysubsubsection{\texorpdfstring{store\_at()}{store\_at()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_a_nopen_1_1_payload}{Payload}}\& C\+A\+Nopen\+::\+Payload\+::store\+\_\+at (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_a_nopen_1_1_payload}{Payload}} \&\&}]{p,  }\item[{int}]{slot }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+store\+\_\+at Stores a variable at a specified index in the data array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & The variable to store. \\
+\hline
+{\em slot} & The index in data array where the variable has to be store to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{payload_8h_source_l00087}{87}} of file \mbox{\hyperlink{payload_8h_source}{payload.\+h}}.
+
+\mbox{\Hypertarget{class_c_a_nopen_1_1_payload_aef05ef8cfc8b9ba4170891f3168a726b}\label{class_c_a_nopen_1_1_payload_aef05ef8cfc8b9ba4170891f3168a726b}} 
+\index{CANopen::Payload@{CANopen::Payload}!value@{value}}
+\index{value@{value}!CANopen::Payload@{CANopen::Payload}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T\& C\+A\+Nopen\+::\+Payload\+::value (\begin{DoxyParamCaption}\item[{unsigned}]{begin = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+value Returns the data casted as a variable of type T 
+
+
+\begin{DoxyParams}{Parameters}
+{\em begin} & The index of the data array from where the data must be returned. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The data as a variable of type T. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{payload_8h_source_l00048}{48}} of file \mbox{\hyperlink{payload_8h_source}{payload.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{parameter_8cpp_source_l00014}{C\+A\+Nopen\+::\+Parameter\+::from\+\_\+payload()}}, \mbox{\hyperlink{payload_8h_source_l00062}{operator$<$$<$()}}, and \mbox{\hyperlink{payload_8h_source_l00033}{Payload()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{payload_8h}{payload.\+h}}\item 
+payload.\+cpp\end{DoxyCompactItemize}

@@ -1,3 +1,4 @@
 <map id="cJoystick" name="cJoystick">
-<area shape="rect" id="node2" href="$structjoystick__state.html" title="joystick_state" alt="" coords="5,5,124,35"/>
+<area shape="rect" id="node1" title=" " alt="" coords="25,100,115,129"/>
+<area shape="rect" id="node2" href="$structjoystick__state.html" title=" " alt="" coords="5,5,135,35"/>
 </map>

@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespace_c_a_nopen" kind="namespace" language="C++">
+    <compoundname>CANopen</compoundname>
+    <innerclass refid="class_c_a_nopen_1_1_driver" prot="public">CANopen::Driver</innerclass>
+    <innerclass refid="class_c_a_nopen_1_1_e_m_c_y_message" prot="public">CANopen::EMCYMessage</innerclass>
+    <innerclass refid="class_c_a_nopen_1_1_l_x_m32" prot="public">CANopen::LXM32</innerclass>
+    <innerclass refid="class_c_a_nopen_1_1_message" prot="public">CANopen::Message</innerclass>
+    <innerclass refid="class_c_a_nopen_1_1_n_m_t_message" prot="public">CANopen::NMTMessage</innerclass>
+    <innerclass refid="struct_c_a_nopen_1_1_parameter" prot="public">CANopen::Parameter</innerclass>
+    <innerclass refid="class_c_a_nopen_1_1_payload" prot="public">CANopen::Payload</innerclass>
+    <innerclass refid="class_c_a_nopen_1_1_p_d_o_message" prot="public">CANopen::PDOMessage</innerclass>
+    <innerclass refid="class_c_a_nopen_1_1_s_d_o_inbound" prot="public">CANopen::SDOInbound</innerclass>
+    <innerclass refid="class_c_a_nopen_1_1_s_d_o_message" prot="public">CANopen::SDOMessage</innerclass>
+    <innerclass refid="class_c_a_nopen_1_1_s_d_o_outbound" prot="public">CANopen::SDOOutbound</innerclass>
+    <innerclass refid="class_c_a_nopen_1_1_s_d_o_outbound_read" prot="public">CANopen::SDOOutboundRead</innerclass>
+    <innerclass refid="class_c_a_nopen_1_1_s_d_o_outbound_write" prot="public">CANopen::SDOOutboundWrite</innerclass>
+    <innerclass refid="class_c_a_nopen_1_1_socket" prot="public">CANopen::Socket</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_c_a_nopen__socket_8h_1aaec5501be77093ddca113d18ace1a752" prot="public" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex CANopen::g_verbose_mutex</definition>
+        <argsstring></argsstring>
+        <name>g_verbose_mutex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/src/CANopen_socket.cpp" line="17" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/src/CANopen_socket.cpp" bodystart="17" bodyend="-1" declfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/include/CANopen_socket.h" declline="35" declcolumn="19"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_c_a_nopen__driver_8h_1a4d9cca44e04c78dd31fdb05347ed19a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CANopen::print_status</definition>
+        <argsstring>(Parameter *)</argsstring>
+        <name>print_status</name>
+        <param>
+          <type><ref refid="struct_c_a_nopen_1_1_parameter" kindref="compound">Parameter</ref> *</type>
+          <defname>param</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="23" column="1" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/src/CANopen_driver.cpp" bodystart="288" bodyend="343" declfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" declline="23" declcolumn="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_driver.h" line="21" column="17"/>
+  </compounddef>
+</doxygen>

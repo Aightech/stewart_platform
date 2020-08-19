@@ -1,0 +1,277 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classc_joystick" kind="class" language="C++" prot="public">
+    <compoundname>cJoystick</compoundname>
+    <includes refid="joystick_8h" local="no">joystick.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classc_joystick_1ac95e179f087f21a4d364cf6e9984d60b" prot="private" static="no" mutable="no">
+        <type>pthread_t</type>
+        <definition>pthread_t cJoystick::thread</definition>
+        <argsstring></argsstring>
+        <name>thread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/include/joystick.h" line="25" column="11" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/include/joystick.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_joystick_1a76b927cfdc179f053256952d0d94656d" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cJoystick::active</definition>
+        <argsstring></argsstring>
+        <name>active</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/include/joystick.h" line="26" column="6" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/include/joystick.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_joystick_1a23bb9ae8f441e6974b383aae6ae8bea6" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cJoystick::joystick_fd</definition>
+        <argsstring></argsstring>
+        <name>joystick_fd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/include/joystick.h" line="27" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/include/joystick.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_joystick_1ae4af08aaa67a7f0c0575d65ff4987017" prot="private" static="no" mutable="no">
+        <type>js_event *</type>
+        <definition>js_event* cJoystick::joystick_ev</definition>
+        <argsstring></argsstring>
+        <name>joystick_ev</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/include/joystick.h" line="28" column="10" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/include/joystick.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_joystick_1a6962bb01a3326201b9cf3ba403fe0f21" prot="private" static="no" mutable="no">
+        <type><ref refid="structjoystick__state" kindref="compound">joystick_state</ref> *</type>
+        <definition>joystick_state* cJoystick::joystick_st</definition>
+        <argsstring></argsstring>
+        <name>joystick_st</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/include/joystick.h" line="29" column="16" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/include/joystick.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_joystick_1afefd351be965e4953b5eb03073e99ad9" prot="private" static="no" mutable="no">
+        <type>__u32</type>
+        <definition>__u32 cJoystick::version</definition>
+        <argsstring></argsstring>
+        <name>version</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/include/joystick.h" line="30" column="7" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/include/joystick.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_joystick_1ada53890948b0afe1b49b4c2ff2970c77" prot="private" static="no" mutable="no">
+        <type>__u8</type>
+        <definition>__u8 cJoystick::axes</definition>
+        <argsstring></argsstring>
+        <name>axes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/include/joystick.h" line="31" column="6" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/include/joystick.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_joystick_1ae493e39825c273556d4807cb31d047e0" prot="private" static="no" mutable="no">
+        <type>__u8</type>
+        <definition>__u8 cJoystick::buttons</definition>
+        <argsstring></argsstring>
+        <name>buttons</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/include/joystick.h" line="32" column="6" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/include/joystick.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_joystick_1a4352d02cdee851f9c8c104915d3c006c" prot="private" static="no" mutable="no">
+        <type>char</type>
+        <definition>char cJoystick::name[256]</definition>
+        <argsstring>[256]</argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/include/joystick.h" line="33" column="6" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/include/joystick.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classc_joystick_1ae4edecc3589f19b068113cdb79f7b39d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>cJoystick::cJoystick</definition>
+        <argsstring>()</argsstring>
+        <name>cJoystick</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/include/joystick.h" line="37" column="1" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/src/joystick.cpp" bodystart="3" bodyend="23"/>
+        <references refid="structjoystick__state_1acc10718083ec5603bfcca9d1780239f2" compoundref="joystick_8h" startline="20">joystick_state::axis</references>
+        <references refid="structjoystick__state_1af16d0e2bea842ab4fafa05ce23f45f56" compoundref="joystick_8h" startline="19">joystick_state::button</references>
+        <references refid="joystick_8h_1aa59cbb7e48c4f3c3dfbc694fd2869a3d" compoundref="joystick_8h" startline="12">JOYSTICK_DEV</references>
+        <references refid="classc_joystick_1aafa52c2e4d67c71f3d1e31b80d1dd324" compoundref="joystick_8cpp" startline="36" endline="39">loop</references>
+      </memberdef>
+      <memberdef kind="function" id="classc_joystick_1a9e429f765dee1dc7dc3d31dc0f50ae0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>cJoystick::~cJoystick</definition>
+        <argsstring>()</argsstring>
+        <name>~cJoystick</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/include/joystick.h" line="38" column="1" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/src/joystick.cpp" bodystart="25" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classc_joystick_1a8c04dc903aac9588db3b3e81f495705a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cJoystick::readEv</definition>
+        <argsstring>()</argsstring>
+        <name>readEv</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/include/joystick.h" line="40" column="6" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/src/joystick.cpp" bodystart="41" bodyend="54"/>
+        <references refid="structjoystick__state_1acc10718083ec5603bfcca9d1780239f2" compoundref="joystick_8h" startline="20">joystick_state::axis</references>
+        <references refid="structjoystick__state_1af16d0e2bea842ab4fafa05ce23f45f56" compoundref="joystick_8h" startline="19">joystick_state::button</references>
+        <referencedby refid="classc_joystick_1aafa52c2e4d67c71f3d1e31b80d1dd324" compoundref="joystick_8cpp" startline="36" endline="39">loop</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classc_joystick_1a30d938005453ad77f512094c8a7a99f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structjoystick__position" kindref="compound">joystick_position</ref></type>
+        <definition>joystick_position cJoystick::joystickPosition</definition>
+        <argsstring>(int n)</argsstring>
+        <name>joystickPosition</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/include/joystick.h" line="41" column="19" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/src/joystick.cpp" bodystart="56" bodyend="73"/>
+        <references refid="structjoystick__state_1acc10718083ec5603bfcca9d1780239f2" compoundref="joystick_8h" startline="20">joystick_state::axis</references>
+        <references refid="structjoystick__position_1a0a9043868a14fce25888dd81b80f6c94" compoundref="joystick_8h" startline="15">joystick_position::r</references>
+        <references refid="structjoystick__position_1ad738e8acb3656438c10d2ec7670639e5" compoundref="joystick_8h" startline="15">joystick_position::theta</references>
+        <references refid="structjoystick__position_1a71c3292c1be3c3400a388eac41a47ad3" compoundref="joystick_8h" startline="15">joystick_position::x</references>
+        <references refid="structjoystick__position_1ad8fc27fbd5404a4f8cdc1a045a0d689a" compoundref="joystick_8h" startline="15">joystick_position::y</references>
+      </memberdef>
+      <memberdef kind="function" id="classc_joystick_1a2954017eb51ef6f4658450199e5df5b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int cJoystick::joystickValue</definition>
+        <argsstring>(int n)</argsstring>
+        <name>joystickValue</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/include/joystick.h" line="42" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/src/joystick.cpp" bodystart="75" bodyend="78"/>
+        <references refid="structjoystick__state_1acc10718083ec5603bfcca9d1780239f2" compoundref="joystick_8h" startline="20">joystick_state::axis</references>
+        <referencedby refid="lib_2lxm32_2lib_2joystick_2src_2main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="lib_2lxm32_2lib_2joystick_2src_2main_8cpp" startline="3" endline="9">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classc_joystick_1a10375763b82c2da3e904d118d5cf2ecb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool cJoystick::buttonPressed</definition>
+        <argsstring>(int n)</argsstring>
+        <name>buttonPressed</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/include/joystick.h" line="43" column="14" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/src/joystick.cpp" bodystart="80" bodyend="82"/>
+        <references refid="structjoystick__state_1af16d0e2bea842ab4fafa05ce23f45f56" compoundref="joystick_8h" startline="19">joystick_state::button</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classc_joystick_1aafa52c2e4d67c71f3d1e31b80d1dd324" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void * cJoystick::loop</definition>
+        <argsstring>(void *obj)</argsstring>
+        <name>loop</name>
+        <param>
+          <type>void *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/include/joystick.h" line="39" column="13" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/src/joystick.cpp" bodystart="36" bodyend="39"/>
+        <references refid="classc_joystick_1a8c04dc903aac9588db3b3e81f495705a" compoundref="joystick_8cpp" startline="41" endline="54">readEv</references>
+        <referencedby refid="classc_joystick_1ae4edecc3589f19b068113cdb79f7b39d" compoundref="joystick_8cpp" startline="3" endline="23">cJoystick</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/include/joystick.h" line="23" column="16" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/include/joystick.h" bodystart="23" bodyend="44"/>
+    <listofallmembers>
+      <member refid="classc_joystick_1a76b927cfdc179f053256952d0d94656d" prot="private" virt="non-virtual"><scope>cJoystick</scope><name>active</name></member>
+      <member refid="classc_joystick_1ada53890948b0afe1b49b4c2ff2970c77" prot="private" virt="non-virtual"><scope>cJoystick</scope><name>axes</name></member>
+      <member refid="classc_joystick_1a10375763b82c2da3e904d118d5cf2ecb" prot="public" virt="non-virtual"><scope>cJoystick</scope><name>buttonPressed</name></member>
+      <member refid="classc_joystick_1ae493e39825c273556d4807cb31d047e0" prot="private" virt="non-virtual"><scope>cJoystick</scope><name>buttons</name></member>
+      <member refid="classc_joystick_1ae4edecc3589f19b068113cdb79f7b39d" prot="public" virt="non-virtual"><scope>cJoystick</scope><name>cJoystick</name></member>
+      <member refid="classc_joystick_1ae4af08aaa67a7f0c0575d65ff4987017" prot="private" virt="non-virtual"><scope>cJoystick</scope><name>joystick_ev</name></member>
+      <member refid="classc_joystick_1a23bb9ae8f441e6974b383aae6ae8bea6" prot="private" virt="non-virtual"><scope>cJoystick</scope><name>joystick_fd</name></member>
+      <member refid="classc_joystick_1a6962bb01a3326201b9cf3ba403fe0f21" prot="private" virt="non-virtual"><scope>cJoystick</scope><name>joystick_st</name></member>
+      <member refid="classc_joystick_1a30d938005453ad77f512094c8a7a99f5" prot="public" virt="non-virtual"><scope>cJoystick</scope><name>joystickPosition</name></member>
+      <member refid="classc_joystick_1a2954017eb51ef6f4658450199e5df5b4" prot="public" virt="non-virtual"><scope>cJoystick</scope><name>joystickValue</name></member>
+      <member refid="classc_joystick_1aafa52c2e4d67c71f3d1e31b80d1dd324" prot="public" virt="non-virtual"><scope>cJoystick</scope><name>loop</name></member>
+      <member refid="classc_joystick_1a4352d02cdee851f9c8c104915d3c006c" prot="private" virt="non-virtual"><scope>cJoystick</scope><name>name</name></member>
+      <member refid="classc_joystick_1a8c04dc903aac9588db3b3e81f495705a" prot="public" virt="non-virtual"><scope>cJoystick</scope><name>readEv</name></member>
+      <member refid="classc_joystick_1ac95e179f087f21a4d364cf6e9984d60b" prot="private" virt="non-virtual"><scope>cJoystick</scope><name>thread</name></member>
+      <member refid="classc_joystick_1afefd351be965e4953b5eb03073e99ad9" prot="private" virt="non-virtual"><scope>cJoystick</scope><name>version</name></member>
+      <member refid="classc_joystick_1a9e429f765dee1dc7dc3d31dc0f50ae0e" prot="public" virt="non-virtual"><scope>cJoystick</scope><name>~cJoystick</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

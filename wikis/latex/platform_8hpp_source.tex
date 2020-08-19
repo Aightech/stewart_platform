@@ -1,0 +1,55 @@
+\hypertarget{platform_8hpp_source}{}\doxysection{platform.\+hpp}
+\label{platform_8hpp_source}\index{platform.hpp@{platform.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#ifndef \_PLATFORM\_H\_}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#define \_PLATFORM\_H\_}}
+\DoxyCodeLine{00003 }
+\DoxyCodeLine{00004 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{_c_a_nopen__lxm32_8h}{CANopen\_lxm32.h}}"}}
+\DoxyCodeLine{00005 \textcolor{preprocessor}{\#include "model.hpp"}}
+\DoxyCodeLine{00006 \textcolor{preprocessor}{\#include <eigen3/Eigen/Dense>}}
+\DoxyCodeLine{00007 \textcolor{preprocessor}{\#include <chrono>}}
+\DoxyCodeLine{00008 }
+\DoxyCodeLine{00009 \textcolor{keyword}{namespace }chr = std::chrono;}
+\DoxyCodeLine{00010 }
+\DoxyCodeLine{00011 \textcolor{keyword}{namespace }stp}
+\DoxyCodeLine{00012 \{}
+\DoxyCodeLine{\Hypertarget{platform_8hpp_source_l00013}\mbox{\hyperlink{classstp_1_1_platform}{00013}} \textcolor{keyword}{class }\mbox{\hyperlink{classstp_1_1_platform}{Platform}} : \textcolor{keyword}{public} \mbox{\hyperlink{classstp_1_1_model}{Model}}}
+\DoxyCodeLine{00014 \{}
+\DoxyCodeLine{00015     \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016     \mbox{\hyperlink{classstp_1_1_platform}{Platform}}(\textcolor{keywordtype}{double} deltas[4], \textcolor{keywordtype}{double} a, \textcolor{keywordtype}{double} l, \textcolor{keywordtype}{int} verbose\_level=0) : \mbox{\hyperlink{classstp_1_1_model}{Model}}(deltas, a, l, verbose\_level)\{\};}
+\DoxyCodeLine{00017 }
+\DoxyCodeLine{00018     \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00019     init();}
+\DoxyCodeLine{00020     \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00021     start();}
+\DoxyCodeLine{00022     \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00023     pause();}
+\DoxyCodeLine{00024     \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00025     stop();}
+\DoxyCodeLine{00026 }
+\DoxyCodeLine{00027     \textcolor{keywordtype}{double} *}
+\DoxyCodeLine{00028     new\_pos(\textcolor{keywordtype}{double} T[3], \textcolor{keywordtype}{double} theta[3]);}
+\DoxyCodeLine{00029     }
+\DoxyCodeLine{00030     \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00031     update\_platform();}
+\DoxyCodeLine{00032 }
+\DoxyCodeLine{00033     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{platform_8hpp_source_l00034}\mbox{\hyperlink{classstp_1_1_platform_ae430bcbcc69c375c2b63fdcb391af235}{00034}}     \mbox{\hyperlink{class_c_a_nopen_1_1_l_x_m32}{CANopen::LXM32}} *\mbox{\hyperlink{classstp_1_1_platform_ae430bcbcc69c375c2b63fdcb391af235}{m\_motors}}[NB\_LEGS]; }
+\DoxyCodeLine{00035 \textcolor{keyword}{private}:}
+\DoxyCodeLine{00036     \textcolor{keywordtype}{bool} m\_available;}
+\DoxyCodeLine{00037     \textcolor{keywordtype}{double} m\_motor\_pos[NB\_LEGS];}
+\DoxyCodeLine{00038 }
+\DoxyCodeLine{00039     \textcolor{keywordtype}{int} m\_motor\_lookup[NB\_LEGS] = \{5, 2, 0, 1, 4, 3\};}
+\DoxyCodeLine{00040     int32\_t m\_motor\_position\_offset[NB\_LEGS] = \{ 94500+2*737280, 202100+2*737280, 202500+2*737280, 694800+2*737280, 203500+2*737280, 236000+2*737280\};\textcolor{comment}{//1:207900}}
+\DoxyCodeLine{00041     }
+\DoxyCodeLine{00042     \textcolor{keywordtype}{double} v=0;}
+\DoxyCodeLine{00043     \textcolor{keywordtype}{double} t=0;}
+\DoxyCodeLine{00044     }
+\DoxyCodeLine{00045 \};}
+\DoxyCodeLine{00046 }
+\DoxyCodeLine{00047 \}; \textcolor{comment}{// namespace stp}}
+\DoxyCodeLine{00048 }
+\DoxyCodeLine{00049 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

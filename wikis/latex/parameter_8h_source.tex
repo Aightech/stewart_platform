@@ -1,0 +1,142 @@
+\hypertarget{parameter_8h_source}{}\doxysection{parameter.\+h}
+\label{parameter_8h_source}\index{parameter.h@{parameter.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#ifndef \_PARAMETER\_H\_}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#define \_PARAMETER\_H\_}}
+\DoxyCodeLine{00003 }
+\DoxyCodeLine{00011 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{_c_a_nopen__socket_8h}{CANopen\_socket.h}}"}}
+\DoxyCodeLine{00012 }
+\DoxyCodeLine{00013 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{00014 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{00015 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{00016 \textcolor{preprocessor}{\#include <mutex>}}
+\DoxyCodeLine{00017 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{00018 \textcolor{preprocessor}{\#include <thread>}}
+\DoxyCodeLine{00019 }
+\DoxyCodeLine{00020 \textcolor{keyword}{namespace }CANopen \{}
+\DoxyCodeLine{\Hypertarget{parameter_8h_source_l00024}\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter}{00024}} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter}{Parameter}} \{}
+\DoxyCodeLine{00025 }
+\DoxyCodeLine{\Hypertarget{parameter_8h_source_l00029}\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_aa7232c26e1cf4daa3e5719007872ddc5}{00029}}     \textcolor{keyword}{typedef} void (*\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_aa7232c26e1cf4daa3e5719007872ddc5}{param\_cb\_t}})(\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter}{Parameter}} *); \textcolor{comment}{//type of the parameter callback function}}
+\DoxyCodeLine{00030 }
+\DoxyCodeLine{\Hypertarget{parameter_8h_source_l00034}\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a4870a26654749daa1ef95bdcb6d01d59}{00034}}     \textcolor{keyword}{enum} \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a4870a26654749daa1ef95bdcb6d01d59}{PDOFunctionCode}} : uint32\_t \{}
+\DoxyCodeLine{00035         PDO1Transmit = \mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468aea8753e3c4fecde547db28a4a01f4fea}{Message::PDO1Transmit}},}
+\DoxyCodeLine{00036         PDO1Receive = \mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468a289816747eb21454c97a2c0de54bd7bd}{Message::PDO1Receive}},}
+\DoxyCodeLine{00037         PDO2Transmit = \mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468a644cdb60cf2ec10f6f509c6dac09c7e7}{Message::PDO2Transmit}},}
+\DoxyCodeLine{00038         PDO2Receive = \mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468ae19e8c5160acfaab1c140c21789138e3}{Message::PDO2Receive}},}
+\DoxyCodeLine{00039         PDO3Transmit = \mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468ac15c2cbe07eac4f1fdc102927deadcdc}{Message::PDO3Transmit}},}
+\DoxyCodeLine{00040         PDO3Receive = \mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468ab059d1f4ab6ed9bb993e5d37aea6eba1}{Message::PDO3Receive}},}
+\DoxyCodeLine{00041         PDO4Transmit = \mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468a46d53ca55e462afcab565303b212656c}{Message::PDO4Transmit}},}
+\DoxyCodeLine{00042         PDO4Receive = \mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468a45f4fc29142533ab1395bd971c12be9b}{Message::PDO4Receive}},}
+\DoxyCodeLine{00043     \};}
+\DoxyCodeLine{00044 }
+\DoxyCodeLine{00045     \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter}{Parameter}}() \{ var = \textcolor{keyword}{new} int32\_t; \};}
+\DoxyCodeLine{00046 }
+\DoxyCodeLine{00047     \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{parameter_8h_source_l00056}\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_ab53571d27af3fba545a250f87320aa64}{00056}}     \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_ab53571d27af3fba545a250f87320aa64}{Parameter}}(std::string name\_, T val, uint16\_t index\_, uint8\_t subindex\_, \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_aa7232c26e1cf4daa3e5719007872ddc5}{param\_cb\_t}} cb = \textcolor{keyword}{nullptr}) : name(name\_), index(index\_), subindex(subindex\_), \_cb(cb) \{}
+\DoxyCodeLine{00057         mutex.lock();}
+\DoxyCodeLine{00058         var = \textcolor{keyword}{new} T;}
+\DoxyCodeLine{00059         *(T *)var = (T)val;}
+\DoxyCodeLine{00060         m\_should\_be\_sent = \textcolor{keyword}{false};}
+\DoxyCodeLine{00061         mutex.unlock();}
+\DoxyCodeLine{00062         size = \textcolor{keyword}{sizeof}(T);}
+\DoxyCodeLine{00063     \};}
+\DoxyCodeLine{00064 }
+\DoxyCodeLine{00065     \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{parameter_8h_source_l00073}\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_ac2e3642934ae7736c045e70b0e08e83c}{00073}}     \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_ac2e3642934ae7736c045e70b0e08e83c}{Parameter}}(std::string name\_, T val, uint32\_t index\_\_sub, \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_aa7232c26e1cf4daa3e5719007872ddc5}{param\_cb\_t}} cb = \textcolor{keyword}{nullptr}) : \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter}{Parameter}}(name\_, val, (uint16\_t)(index\_\_sub >> 16), (uint8\_t)index\_\_sub, cb)\{\};}
+\DoxyCodeLine{00074 }
+\DoxyCodeLine{00075     \string~\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter}{Parameter}}() \{}
+\DoxyCodeLine{00076         \textcolor{keyword}{delete}(int32\_t *)var;}
+\DoxyCodeLine{00077     \}}
+\DoxyCodeLine{00078 }
+\DoxyCodeLine{00084     \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00085     \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a6f66686b516733d6506e8efdedd67862}{link\_to\_pdo}}(\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a4870a26654749daa1ef95bdcb6d01d59}{PDOFunctionCode}} fn, int8\_t slot);}
+\DoxyCodeLine{00086 }
+\DoxyCodeLine{00087     \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{00095     \textcolor{keywordtype}{bool}}
+\DoxyCodeLine{\Hypertarget{parameter_8h_source_l00096}\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a56877b06fefded5cf3353844604d59f7}{00096}}     \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a56877b06fefded5cf3353844604d59f7}{set}}(T val, \textcolor{keywordtype}{bool} force\_update = \textcolor{keyword}{false}, \textcolor{keywordtype}{bool} received\_data = \textcolor{keyword}{false}) \{}
+\DoxyCodeLine{00097         \textcolor{keywordtype}{bool} was\_updated = \textcolor{keyword}{false};}
+\DoxyCodeLine{00098         \textcolor{keywordflow}{if}(\textcolor{keyword}{sizeof}(T) == size) \{}
+\DoxyCodeLine{00099             mutex.lock();}
+\DoxyCodeLine{00100             \textcolor{keywordflow}{if}(!m\_should\_be\_sent || force\_update) \textcolor{comment}{//if force update (even if the previous value was not sent yet) or value already update}}
+\DoxyCodeLine{00101             \{}
+\DoxyCodeLine{00102                 \textcolor{keywordflow}{if}(*(T *)var != (T)val) \{}
+\DoxyCodeLine{00103                     was\_updated = \textcolor{keyword}{true};}
+\DoxyCodeLine{00104                     *(T *)var = (T)val;}
+\DoxyCodeLine{00105                 \}}
+\DoxyCodeLine{00106                 \textcolor{keywordflow}{if}(!received\_data)}
+\DoxyCodeLine{00107                     m\_should\_be\_sent = \textcolor{keyword}{true};}
+\DoxyCodeLine{00108             \}}
+\DoxyCodeLine{00109             mutex.unlock();}
+\DoxyCodeLine{00110             \textcolor{keywordflow}{return} was\_updated;}
+\DoxyCodeLine{00111         \}}
+\DoxyCodeLine{00112         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00113     \}}
+\DoxyCodeLine{00114 }
+\DoxyCodeLine{00120     \textcolor{keywordtype}{bool}}
+\DoxyCodeLine{\Hypertarget{parameter_8h_source_l00121}\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a3ec2c4a4da29908a2e69de9187325a11}{00121}}     \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a3ec2c4a4da29908a2e69de9187325a11}{operator=}}(int8\_t val) \{ \textcolor{keywordflow}{return} this-\/>set<int8\_t>(val, \textcolor{keyword}{false}); \} \textcolor{comment}{//return fakse if the assignement didn't succeed (wrong type size, not updated yet)}}
+\DoxyCodeLine{00127 \textcolor{comment}{}    \textcolor{keywordtype}{bool}}
+\DoxyCodeLine{\Hypertarget{parameter_8h_source_l00128}\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_ae2f287d5d0abc2b4693d3ec81b53cdd1}{00128}}     \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_ae2f287d5d0abc2b4693d3ec81b53cdd1}{operator=}}(int16\_t val) \{ \textcolor{keywordflow}{return} this-\/>set<int16\_t>(val, \textcolor{keyword}{false}); \} \textcolor{comment}{//return fakse if the assignement didn't succeed (wrong type size, not updated yet)}}
+\DoxyCodeLine{00134 \textcolor{comment}{}    \textcolor{keywordtype}{bool}}
+\DoxyCodeLine{\Hypertarget{parameter_8h_source_l00135}\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_aea3dee9f4e137c2e5627d23836f18a6b}{00135}}     \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_aea3dee9f4e137c2e5627d23836f18a6b}{operator=}}(int32\_t val) \{ \textcolor{keywordflow}{return} this-\/>set<int32\_t>(val, \textcolor{keyword}{false}); \} \textcolor{comment}{//return fakse if the assignement didn't succeed (wrong type size, not updated yet)}}
+\DoxyCodeLine{00141 \textcolor{comment}{}    \textcolor{keywordtype}{bool}}
+\DoxyCodeLine{\Hypertarget{parameter_8h_source_l00142}\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_ad72cd626ccab044f0295b092d41668ca}{00142}}     \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_ad72cd626ccab044f0295b092d41668ca}{operator=}}(uint8\_t val) \{ \textcolor{keywordflow}{return} this-\/>set<uint8\_t>(val, \textcolor{keyword}{false}); \} \textcolor{comment}{//return fakse if the assignement didn't succeed (wrong type size, not updated yet)}}
+\DoxyCodeLine{00148 \textcolor{comment}{}    \textcolor{keywordtype}{bool}}
+\DoxyCodeLine{\Hypertarget{parameter_8h_source_l00149}\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a77c306435be2eaf34c1ceb15edd559ff}{00149}}     \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a77c306435be2eaf34c1ceb15edd559ff}{operator=}}(uint16\_t val) \{ \textcolor{keywordflow}{return} this-\/>set<uint16\_t>(val, \textcolor{keyword}{false}); \} \textcolor{comment}{//return fakse if the assignement didn't succeed (wrong type size, not updated yet)}}
+\DoxyCodeLine{00155 \textcolor{comment}{}    \textcolor{keywordtype}{bool}}
+\DoxyCodeLine{\Hypertarget{parameter_8h_source_l00156}\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a9984a99c5627b35e3bbe3992a2f6bad2}{00156}}     \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a9984a99c5627b35e3bbe3992a2f6bad2}{operator=}}(uint32\_t val) \{ \textcolor{keywordflow}{return} this-\/>set<uint32\_t>(val, \textcolor{keyword}{false}); \} \textcolor{comment}{//return fakse if the assignement didn't succeed (wrong type size, not updated yet)}}
+\DoxyCodeLine{00157 }
+\DoxyCodeLine{00158     \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{00163     T}
+\DoxyCodeLine{\Hypertarget{parameter_8h_source_l00164}\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_acb8721ccbdd90aed8f347296dca9e7e1}{00164}}     \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_acb8721ccbdd90aed8f347296dca9e7e1}{get}}() \{}
+\DoxyCodeLine{00165       T val=\{\};}
+\DoxyCodeLine{00166         \textcolor{keywordflow}{if}(\textcolor{keyword}{sizeof}(T) == size) \{}
+\DoxyCodeLine{00167             mutex.lock();}
+\DoxyCodeLine{00168             val = *(T *)var;}
+\DoxyCodeLine{00169             mutex.unlock();}
+\DoxyCodeLine{00170         \}}
+\DoxyCodeLine{00171         \textcolor{keywordflow}{return} val;}
+\DoxyCodeLine{00172     \}}
+\DoxyCodeLine{00173 }
+\DoxyCodeLine{\Hypertarget{parameter_8h_source_l00177}\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a83099406a35bd9501b421e514dffde73}{00177}}     \textcolor{keyword}{operator} int8\_t() \{ \textcolor{keywordflow}{return} this-\/>get<int8\_t>(); \};}
+\DoxyCodeLine{\Hypertarget{parameter_8h_source_l00181}\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a32b09e89de697d8040ac634ca8bc9f87}{00181}}     \textcolor{keyword}{operator} int16\_t() \{ \textcolor{keywordflow}{return} this-\/>get<int16\_t>(); \};}
+\DoxyCodeLine{\Hypertarget{parameter_8h_source_l00185}\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a4703b3922e5630ac1b8808d4980542bb}{00185}}     \textcolor{keyword}{operator} int32\_t() \{ \textcolor{keywordflow}{return} this-\/>get<int32\_t>(); \};}
+\DoxyCodeLine{\Hypertarget{parameter_8h_source_l00189}\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_aaf0db9d918b06945cb59154745866d50}{00189}}     \textcolor{keyword}{operator} uint8\_t() \{ \textcolor{keywordflow}{return} this-\/>get<uint8\_t>(); \};}
+\DoxyCodeLine{\Hypertarget{parameter_8h_source_l00193}\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_abcdc291fd736380c80e401a05c3fa7dd}{00193}}     \textcolor{keyword}{operator} uint16\_t() \{ \textcolor{keywordflow}{return} this-\/>get<uint16\_t>(); \};}
+\DoxyCodeLine{\Hypertarget{parameter_8h_source_l00197}\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a5e098f5a04dbd1e1f07f728f0c98cad0}{00197}}     \textcolor{keyword}{operator} uint32\_t() \{ \textcolor{keywordflow}{return} this-\/>get<uint32\_t>(); \};}
+\DoxyCodeLine{00198 }
+\DoxyCodeLine{00206     \textcolor{keywordtype}{bool}}
+\DoxyCodeLine{00207     \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a2a80caa7af7b8df1ee93999e27f493f6}{from\_payload}}(\mbox{\hyperlink{class_c_a_nopen_1_1_payload}{Payload}} \&p, \textcolor{keywordtype}{int} slot = 0, \textcolor{keywordtype}{bool} received\_data = \textcolor{keyword}{true});}
+\DoxyCodeLine{00208 }
+\DoxyCodeLine{00213     \textcolor{keywordtype}{bool}}
+\DoxyCodeLine{\Hypertarget{parameter_8h_source_l00214}\mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a78c2b557f058aee3bc6997cbdd6d99a6}{00214}}     \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a78c2b557f058aee3bc6997cbdd6d99a6}{has\_been\_sent}}() \{}
+\DoxyCodeLine{00215         \textcolor{keyword}{const} std::lock\_guard<std::mutex> lock(mutex);}
+\DoxyCodeLine{00216         \textcolor{keywordflow}{return} !m\_should\_be\_sent;}
+\DoxyCodeLine{00217     \}}
+\DoxyCodeLine{00218 }
+\DoxyCodeLine{00222     \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00223     \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a6423121211fcdcdfc086d36217872fce}{callback}}();}
+\DoxyCodeLine{00224 }
+\DoxyCodeLine{00230     \mbox{\hyperlink{class_c_a_nopen_1_1_payload}{Payload}}}
+\DoxyCodeLine{00231     \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a0b5d5729fe8b242797e0ab7b49d4519d}{payload}}(\textcolor{keywordtype}{bool} *should\_be\_sent = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00232 }
+\DoxyCodeLine{00233     \textcolor{keywordtype}{size\_t} size = 0;}
+\DoxyCodeLine{00234     std::string name;}
+\DoxyCodeLine{00235     uint16\_t index = 0;}
+\DoxyCodeLine{00236     uint8\_t subindex = 0;}
+\DoxyCodeLine{00237 }
+\DoxyCodeLine{00238     \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_a4870a26654749daa1ef95bdcb6d01d59}{PDOFunctionCode}} pdo\_fn;}
+\DoxyCodeLine{00239     int8\_t pdo\_slot = -\/1;}
+\DoxyCodeLine{00240 }
+\DoxyCodeLine{00241     std::atomic\_flag sdo\_flag;}
+\DoxyCodeLine{00242 }
+\DoxyCodeLine{00243     \textcolor{keyword}{private}:}
+\DoxyCodeLine{00244     \textcolor{keywordtype}{void} *var = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00245     \mbox{\hyperlink{struct_c_a_nopen_1_1_parameter_aa7232c26e1cf4daa3e5719007872ddc5}{param\_cb\_t}} \_cb = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00246     \textcolor{keywordtype}{bool} m\_should\_be\_sent;}
+\DoxyCodeLine{00247     std::mutex mutex;}
+\DoxyCodeLine{00248 \};}
+\DoxyCodeLine{00249 \} \textcolor{comment}{// namespace CANopen}}
+\DoxyCodeLine{00250 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

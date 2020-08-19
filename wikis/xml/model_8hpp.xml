@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="model_8hpp" kind="file" language="C++">
+    <compoundname>model.hpp</compoundname>
+    <includedby refid="gazebo__sim_8hpp" local="yes">gazebo_sim.hpp</includedby>
+    <includedby refid="gnuplot__sim_8hpp" local="yes">gnuplot_sim.hpp</includedby>
+    <includedby refid="platform_8hpp" local="yes">platform.hpp</includedby>
+    <includedby refid="model_8cpp" local="yes">model.cpp</includedby>
+    <invincdepgraph>
+      <node id="4">
+        <label>gnuplot_sim.hpp</label>
+        <link refid="gnuplot__sim_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>mainwindow.cpp</label>
+        <link refid="mainwindow_8cpp_source"/>
+      </node>
+      <node id="5">
+        <label>gnuplot_sim.cpp</label>
+        <link refid="gnuplot__sim_8cpp_source"/>
+      </node>
+      <node id="11">
+        <label>model.cpp</label>
+        <link refid="model_8cpp_source"/>
+      </node>
+      <node id="2">
+        <label>gazebo_sim.hpp</label>
+        <link refid="gazebo__sim_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>platform.cpp</label>
+        <link refid="platform_8cpp_source"/>
+      </node>
+      <node id="8">
+        <label>main.cpp</label>
+        <link refid="src_2main_8cpp_source"/>
+      </node>
+      <node id="1">
+        <label>model.hpp</label>
+        <link refid="model_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>gazebo_sim.cpp</label>
+        <link refid="gazebo__sim_8cpp_source"/>
+      </node>
+      <node id="6">
+        <label>platform.hpp</label>
+        <link refid="platform_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>mainwindow.h</label>
+        <link refid="mainwindow_8h_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classstp_1_1_model" prot="public">stp::Model</innerclass>
+    <innernamespace refid="namespacestp">stp</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="model_8hpp_1ae71449b1cc6e6250b91f539153a7a0d3" prot="public" static="no">
+        <name>M_PI</name>
+        <initializer>3.14159265358979323846 /* pi */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" line="4" column="9" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="model_8hpp_1ae44092ed043cb4350e2df47fdee890b9" prot="public" static="no">
+        <name>NB_LEGS</name>
+        <initializer>6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" line="5" column="9" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/model.hpp" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_MODEL_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_MODEL_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>M_PI<sp/>3.14159265358979323846<sp/></highlight><highlight class="comment">/*<sp/>pi<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NB_LEGS<sp/>6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">stp</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="classstp_1_1_model" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classstp_1_1_model" kindref="compound">Model</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classstp_1_1_model" kindref="compound">Model</ref>(){};</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classstp_1_1_model" kindref="compound">Model</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>deltas[4],<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>a,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>l,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>verbose_level=0);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>new_pos(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>T[3],<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>theta[3]);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>get_T(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>get_theta(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>init_pos();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>compute_R(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>theta[3]);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>print_pos();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>set_T(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>t0,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>t1,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>t2);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>set_T_spd(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>t0,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>t1,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>t2);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>set_theta(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>t0,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>t1,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>t2);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>set_theta_spd(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>t0,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>t1,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>t2);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>m_radius[2];<sp/></highlight></codeline>
+<codeline lineno="50" refid="classstp_1_1_model_1ad189b43e75b3b4a7a947e8142adce17c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>m_a,<sp/><ref refid="classstp_1_1_model_1ad189b43e75b3b4a7a947e8142adce17c" kindref="member">m_a2</ref>;<sp/></highlight></codeline>
+<codeline lineno="51" refid="classstp_1_1_model_1a9a16f1c28c96157d51bedbf67a1a7a81" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>m_l,<sp/><ref refid="classstp_1_1_model_1a9a16f1c28c96157d51bedbf67a1a7a81" kindref="member">m_l2</ref>;<sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classstp_1_1_model_1ac031672ca5aae4c192c38b1103fdf2dd" kindref="member">_d2</ref></highlight></codeline>
+<codeline lineno="53" refid="classstp_1_1_model_1ac031672ca5aae4c192c38b1103fdf2dd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[NB_LEGS];<sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classstp_1_1_model_1a773d6f9a6ee4f6dd580229e0dc3d741c" kindref="member">m_P</ref></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[NB_LEGS]</highlight></codeline>
+<codeline lineno="57" refid="classstp_1_1_model_1a773d6f9a6ee4f6dd580229e0dc3d741c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[3];<sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classstp_1_1_model_1a82e25ba756ecbe2f929505ef4d97b317" kindref="member">m_P1</ref></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[NB_LEGS]</highlight></codeline>
+<codeline lineno="60" refid="classstp_1_1_model_1a82e25ba756ecbe2f929505ef4d97b317" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[3];<sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classstp_1_1_model_1ad1f36bbb9a3f9aac7054b991bb02fe70" kindref="member">m_B</ref>[NB_LEGS]</highlight></codeline>
+<codeline lineno="63" refid="classstp_1_1_model_1ad1f36bbb9a3f9aac7054b991bb02fe70" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[3];<sp/></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classstp_1_1_model_1a4aaa7aee9ac9d9903d29d06cf15ed601" kindref="member">m_A</ref>[NB_LEGS]</highlight></codeline>
+<codeline lineno="65" refid="classstp_1_1_model_1a4aaa7aee9ac9d9903d29d06cf15ed601" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[3];<sp/></highlight></codeline>
+<codeline lineno="67" refid="classstp_1_1_model_1a3c26b01a6c5e533e25ec3de71c7f132c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classstp_1_1_model_1a3c26b01a6c5e533e25ec3de71c7f132c" kindref="member">m_parity</ref>[NB_LEGS];<sp/></highlight></codeline>
+<codeline lineno="68" refid="classstp_1_1_model_1a0dde329f8445840075590404c4f2c0de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classstp_1_1_model_1a0dde329f8445840075590404c4f2c0de" kindref="member">m_beta</ref>[NB_LEGS];<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="69" refid="classstp_1_1_model_1a8faca0ba2206f1ac384b80b2223a0c34" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classstp_1_1_model_1a8faca0ba2206f1ac384b80b2223a0c34" kindref="member">m_alpha</ref>[NB_LEGS];<sp/><sp/></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classstp_1_1_model_1a60eab0062d4e65c720ed2ac39d51779b" kindref="member">m_gamma</ref>[2]</highlight></codeline>
+<codeline lineno="71" refid="classstp_1_1_model_1a60eab0062d4e65c720ed2ac39d51779b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[NB_LEGS];<sp/></highlight></codeline>
+<codeline lineno="73" refid="classstp_1_1_model_1a61d8b4957be741fa473468065c2a5d0d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classstp_1_1_model_1a61d8b4957be741fa473468065c2a5d0d" kindref="member">m_T</ref>[3];<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="74" refid="classstp_1_1_model_1a826586afc60c2c076b271413f5c3e382" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classstp_1_1_model_1a826586afc60c2c076b271413f5c3e382" kindref="member">m_theta</ref>[3];<sp/></highlight></codeline>
+<codeline lineno="75" refid="classstp_1_1_model_1ae1c80dd8cb28d3bd7966c1f289fb291e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classstp_1_1_model_1ae1c80dd8cb28d3bd7966c1f289fb291e" kindref="member">m_R</ref>[3][3];<sp/><sp/></highlight></codeline>
+<codeline lineno="76" refid="classstp_1_1_model_1afdc7491e9be320ad94775ca046667f9b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classstp_1_1_model_1afdc7491e9be320ad94775ca046667f9b" kindref="member">m_trig</ref>[6];<sp/><sp/></highlight></codeline>
+<codeline lineno="78" refid="classstp_1_1_model_1a0ba1c1143089052ffad8133ff40d972f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classstp_1_1_model_1a0ba1c1143089052ffad8133ff40d972f" kindref="member">m_T_spd</ref>[3];<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="79" refid="classstp_1_1_model_1aa12970f18bc4258b9ad185f54a9cfe70" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classstp_1_1_model_1aa12970f18bc4258b9ad185f54a9cfe70" kindref="member">m_theta_spd</ref>[3];<sp/></highlight></codeline>
+<codeline lineno="80" refid="classstp_1_1_model_1a0b4fbb6fdec8106993ddffbd9f61d6ce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classstp_1_1_model_1a0b4fbb6fdec8106993ddffbd9f61d6ce" kindref="member">m_alpha_spd</ref>[6];<sp/></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_alphaI[6];</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m_verbose_level<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal">};<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>stp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/adev/Documents/STECH/stewart_platform/include/model.hpp"/>
+  </compounddef>
+</doxygen>

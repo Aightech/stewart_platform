@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="joystick_8cpp" kind="file" language="C++">
+    <compoundname>joystick.cpp</compoundname>
+    <includes refid="joystick_8h" local="yes">joystick.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>joystick.h</label>
+        <link refid="joystick_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>fcntl.h</label>
+      </node>
+      <node id="1">
+        <label>/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/src/joystick.cpp</label>
+        <link refid="joystick_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>pthread.h</label>
+      </node>
+      <node id="9">
+        <label>unistd.h</label>
+      </node>
+      <node id="8">
+        <label>vector</label>
+      </node>
+      <node id="7">
+        <label>linux/joystick.h</label>
+      </node>
+      <node id="6">
+        <label>math.h</label>
+      </node>
+      <node id="3">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="joystick_8h" kindref="compound">joystick.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="classc_joystick_1ae4edecc3589f19b068113cdb79f7b39d" refkind="member"><highlight class="normal"><ref refid="classc_joystick_1ae4edecc3589f19b068113cdb79f7b39d" kindref="member">cJoystick::cJoystick</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>active<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>joystick_fd<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>joystick_ev<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>js_event();</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>joystick_st<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="structjoystick__state" kindref="compound">joystick_state</ref>();</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>joystick_fd<sp/>=<sp/>open(<ref refid="joystick_8h_1aa59cbb7e48c4f3c3dfbc694fd2869a3d" kindref="member">JOYSTICK_DEV</ref>,<sp/>O_RDONLY<sp/>|<sp/>O_NONBLOCK);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(joystick_fd<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ioctl(joystick_fd,<sp/>JSIOCGNAME(256),<sp/>name);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ioctl(joystick_fd,<sp/>JSIOCGVERSION,<sp/>&amp;version);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ioctl(joystick_fd,<sp/>JSIOCGAXES,<sp/>&amp;axes);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ioctl(joystick_fd,<sp/>JSIOCGBUTTONS,<sp/>&amp;buttons);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/>Name:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>name<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Version:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>version<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/>Axes:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>(int)axes<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Buttons:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>(int)buttons<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>joystick_st-&gt;<ref refid="structjoystick__state_1acc10718083ec5603bfcca9d1780239f2" kindref="member">axis</ref>.reserve(axes);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>joystick_st-&gt;<ref refid="structjoystick__state_1af16d0e2bea842ab4fafa05ce23f45f56" kindref="member">button</ref>.reserve(buttons);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>active<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pthread_create(&amp;thread,<sp/>0,<sp/>&amp;<ref refid="classc_joystick_1aafa52c2e4d67c71f3d1e31b80d1dd324" kindref="member">cJoystick::loop</ref>,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="classc_joystick_1a9e429f765dee1dc7dc3d31dc0f50ae0e" refkind="member"><highlight class="normal"><ref refid="classc_joystick_1a9e429f765dee1dc7dc3d31dc0f50ae0e" kindref="member">cJoystick::~cJoystick</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(joystick_fd<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>active<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pthread_join(thread,<sp/>0);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>close(joystick_fd);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>joystick_st;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>joystick_ev;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>joystick_fd<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="classc_joystick_1aafa52c2e4d67c71f3d1e31b80d1dd324" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="classc_joystick_1aafa52c2e4d67c71f3d1e31b80d1dd324" kindref="member">cJoystick::loop</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*obj)<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="normal"><ref refid="classc_joystick" kindref="compound">cJoystick</ref><sp/>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(obj)-&gt;active)<sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="normal"><ref refid="classc_joystick" kindref="compound">cJoystick</ref><sp/>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(obj)-&gt;<ref refid="classc_joystick_1a8c04dc903aac9588db3b3e81f495705a" kindref="member">readEv</ref>();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="classc_joystick_1a8c04dc903aac9588db3b3e81f495705a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classc_joystick_1a8c04dc903aac9588db3b3e81f495705a" kindref="member">cJoystick::readEv</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bytes<sp/>=<sp/>read(joystick_fd,<sp/>joystick_ev,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(*joystick_ev));</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(bytes<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>joystick_ev-&gt;type<sp/>&amp;=<sp/>~JS_EVENT_INIT;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(joystick_ev-&gt;type<sp/>&amp;<sp/>JS_EVENT_BUTTON)<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>joystick_st-&gt;<ref refid="structjoystick__state_1af16d0e2bea842ab4fafa05ce23f45f56" kindref="member">button</ref>[joystick_ev-&gt;number]<sp/>=<sp/>joystick_ev-&gt;value;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//std::cout<sp/>&lt;&lt;<sp/>&quot;Buttons<sp/>n°<sp/>&quot;<sp/>&lt;&lt;<sp/>(int)joystick_ev-&gt;number<sp/>&lt;&lt;<sp/>&quot;<sp/>:&quot;<sp/>&lt;&lt;<sp/>joystick_st-&gt;button[joystick_ev-&gt;number]<sp/>&lt;&lt;<sp/>std::endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(joystick_ev-&gt;type<sp/>&amp;<sp/>JS_EVENT_AXIS)<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>joystick_st-&gt;<ref refid="structjoystick__state_1acc10718083ec5603bfcca9d1780239f2" kindref="member">axis</ref>[joystick_ev-&gt;number]<sp/>=<sp/>joystick_ev-&gt;value;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//std::cout<sp/>&lt;&lt;<sp/>&quot;Axis<sp/>n°<sp/>&quot;<sp/>&lt;&lt;<sp/>(int)joystick_ev-&gt;number<sp/>&lt;&lt;<sp/>&quot;<sp/>:&quot;<sp/>&lt;&lt;<sp/>joystick_st-&gt;axis[joystick_ev-&gt;number]<sp/>&lt;&lt;<sp/>std::endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="classc_joystick_1a30d938005453ad77f512094c8a7a99f5" refkind="member"><highlight class="normal"><ref refid="structjoystick__position" kindref="compound">joystick_position</ref><sp/><ref refid="classc_joystick_1a30d938005453ad77f512094c8a7a99f5" kindref="member">cJoystick::joystickPosition</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n)<sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structjoystick__position" kindref="compound">joystick_position</ref><sp/>pos;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(n<sp/>&gt;<sp/>-1<sp/>&amp;&amp;<sp/>n<sp/>&lt;<sp/>axes)<sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i0<sp/>=<sp/>n*2,<sp/>i1<sp/>=<sp/>n*2+1;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x0<sp/>=<sp/>joystick_st-&gt;<ref refid="structjoystick__state_1acc10718083ec5603bfcca9d1780239f2" kindref="member">axis</ref>[i0]/32767.0f,<sp/>y0<sp/>=<sp/>-joystick_st-&gt;<ref refid="structjoystick__state_1acc10718083ec5603bfcca9d1780239f2" kindref="member">axis</ref>[i1]/32767.0f;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x<sp/><sp/>=<sp/>x0<sp/>*<sp/>sqrt(1<sp/>-<sp/>pow(y0,<sp/>2)/2.0f),<sp/>y<sp/><sp/>=<sp/>y0<sp/>*<sp/>sqrt(1<sp/>-<sp/>pow(x0,<sp/>2)/2.0f);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pos.<ref refid="structjoystick__position_1a71c3292c1be3c3400a388eac41a47ad3" kindref="member">x</ref><sp/>=<sp/>x0;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pos.<ref refid="structjoystick__position_1ad8fc27fbd5404a4f8cdc1a045a0d689a" kindref="member">y</ref><sp/>=<sp/>y0;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pos.<ref refid="structjoystick__position_1ad738e8acb3656438c10d2ec7670639e5" kindref="member">theta</ref><sp/>=<sp/>atan2(y,<sp/>x);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pos.<ref refid="structjoystick__position_1a0a9043868a14fce25888dd81b80f6c94" kindref="member">r</ref><sp/>=<sp/>sqrt(pow(y,<sp/>2)<sp/>+<sp/>pow(x,<sp/>2));</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pos.<ref refid="structjoystick__position_1ad738e8acb3656438c10d2ec7670639e5" kindref="member">theta</ref><sp/>=<sp/>pos.<ref refid="structjoystick__position_1a0a9043868a14fce25888dd81b80f6c94" kindref="member">r</ref><sp/>=<sp/>pos.<ref refid="structjoystick__position_1a71c3292c1be3c3400a388eac41a47ad3" kindref="member">x</ref><sp/>=<sp/>pos.<ref refid="structjoystick__position_1ad8fc27fbd5404a4f8cdc1a045a0d689a" kindref="member">y</ref><sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pos;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="classc_joystick_1a2954017eb51ef6f4658450199e5df5b4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classc_joystick_1a2954017eb51ef6f4658450199e5df5b4" kindref="member">cJoystick::joystickValue</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n)<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>n<sp/>&gt;<sp/>-1<sp/>&amp;&amp;<sp/>n<sp/>&lt;<sp/>axes<sp/>?<sp/>joystick_st-&gt;<ref refid="structjoystick__state_1acc10718083ec5603bfcca9d1780239f2" kindref="member">axis</ref>[n]<sp/>:<sp/>0;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="classc_joystick_1a10375763b82c2da3e904d118d5cf2ecb" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classc_joystick_1a10375763b82c2da3e904d118d5cf2ecb" kindref="member">cJoystick::buttonPressed</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n)<sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>n<sp/>&gt;<sp/>-1<sp/>&amp;&amp;<sp/>n<sp/>&lt;<sp/>buttons<sp/>?<sp/>joystick_st-&gt;<ref refid="structjoystick__state_1af16d0e2bea842ab4fafa05ce23f45f56" kindref="member">button</ref>[n]<sp/>:<sp/>0;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/src/joystick.cpp"/>
+  </compounddef>
+</doxygen>

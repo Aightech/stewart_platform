@@ -1,0 +1,102 @@
+\hypertarget{sdo_8h_source}{}\doxysection{sdo.\+h}
+\label{sdo_8h_source}\index{sdo.h@{sdo.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#ifndef \_CANOPEN\_SDO\_MESSAGE\_H\_}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#define \_CANOPEN\_SDO\_MESSAGE\_H\_}}
+\DoxyCodeLine{00003 }
+\DoxyCodeLine{00011 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{message_8h}{message.h}}"}}
+\DoxyCodeLine{00012 }
+\DoxyCodeLine{00013 \textcolor{keyword}{namespace }CANopen \{}
+\DoxyCodeLine{\Hypertarget{sdo_8h_source_l00017}\mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_message}{00017}} \textcolor{keyword}{class }\mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_message}{SDOMessage}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_c_a_nopen_1_1_message}{Message}} \{}
+\DoxyCodeLine{00018     \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019     \textcolor{keyword}{enum} RDWR \{}
+\DoxyCodeLine{00020         Read,}
+\DoxyCodeLine{00021         Write}
+\DoxyCodeLine{00022     \};}
+\DoxyCodeLine{00023 }
+\DoxyCodeLine{00024     \textcolor{keyword}{enum} CCS \{}
+\DoxyCodeLine{00025         SegmentDownload = 0,}
+\DoxyCodeLine{00026         InitiateDownload = 1,}
+\DoxyCodeLine{00027         InitiateUpload = 2,}
+\DoxyCodeLine{00028         SegmentUpload = 3,}
+\DoxyCodeLine{00029         AbortTransfer = 4,}
+\DoxyCodeLine{00030         BlockUpload = 5,}
+\DoxyCodeLine{00031         BlockDownload = 6}
+\DoxyCodeLine{00032     \};}
+\DoxyCodeLine{00033 }
+\DoxyCodeLine{00034     \mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_message}{SDOMessage}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00035     \mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_message}{SDOMessage}}(\textcolor{keyword}{const} can\_frame \&other);}
+\DoxyCodeLine{00036     \mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_message}{SDOMessage}}(\mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468}{FunctionCode}} fn,}
+\DoxyCodeLine{00037                uint8\_t \mbox{\hyperlink{class_c_a_nopen_1_1_message_adc93c710fd35ab61e46a0881326d0336}{node\_id}},}
+\DoxyCodeLine{00038                CCS spec,}
+\DoxyCodeLine{00039                uint8\_t n,}
+\DoxyCodeLine{00040                uint8\_t e,}
+\DoxyCodeLine{00041                uint8\_t s,}
+\DoxyCodeLine{00042                uint16\_t \mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_message_a1e31a75dd442c32eaf42d74937b71cbb}{index}},}
+\DoxyCodeLine{00043                uint8\_t \mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_message_acec40b62f1a77ab566fed5d9707ea619}{subindex}},}
+\DoxyCodeLine{00044                \mbox{\hyperlink{class_c_a_nopen_1_1_payload}{Payload}} \mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_message_a1c98a42d8af59c1b91d91ff2014cc276}{payload}});}
+\DoxyCodeLine{00045 }
+\DoxyCodeLine{00050     uint16\_t}
+\DoxyCodeLine{00051     \mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_message_a1e31a75dd442c32eaf42d74937b71cbb}{index}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{00052     }
+\DoxyCodeLine{\Hypertarget{sdo_8h_source_l00057}\mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_message_a8889e754f2faf789a1df98f7f8f03310}{00057}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_message_a8889e754f2faf789a1df98f7f8f03310}{is\_confirmation}}()}
+\DoxyCodeLine{00058     \{}
+\DoxyCodeLine{00059         \textcolor{keywordflow}{if}(data[0]==0x60)}
+\DoxyCodeLine{00060             \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00061         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00062             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00063     \};}
+\DoxyCodeLine{00064 }
+\DoxyCodeLine{\Hypertarget{sdo_8h_source_l00069}\mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_message_a5951f11447f25d3f9b9fb976446f1044}{00069}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_message_a5951f11447f25d3f9b9fb976446f1044}{is\_error}}()}
+\DoxyCodeLine{00070     \{}
+\DoxyCodeLine{00071         \textcolor{keywordflow}{if}(data[0]==0x80)}
+\DoxyCodeLine{00072             \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00073         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00074             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00075     \};}
+\DoxyCodeLine{00076 }
+\DoxyCodeLine{00081     uint8\_t}
+\DoxyCodeLine{00082     \mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_message_acec40b62f1a77ab566fed5d9707ea619}{subindex}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{00083 }
+\DoxyCodeLine{00088     uint32\_t}
+\DoxyCodeLine{00089     \mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_message_aa12187c7761d4ef34de349270bb654d4}{index\_\_sub}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{00090 }
+\DoxyCodeLine{00095     uint32\_t}
+\DoxyCodeLine{\Hypertarget{sdo_8h_source_l00096}\mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_message_af81e301ad58fcf18fecbe359f1587d2f}{00096}}     \mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_message_af81e301ad58fcf18fecbe359f1587d2f}{id}}()\textcolor{keyword}{ const}\{}
+\DoxyCodeLine{00097         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_message_aa12187c7761d4ef34de349270bb654d4}{index\_\_sub}}();}
+\DoxyCodeLine{00098     \}}
+\DoxyCodeLine{00099     }
+\DoxyCodeLine{00104     uint8\_t }
+\DoxyCodeLine{00105     \mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_message_ada403b64e3e300c54f9f941cf65a3da9}{size\_data}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{00106 }
+\DoxyCodeLine{00111     \mbox{\hyperlink{class_c_a_nopen_1_1_payload}{Payload}}}
+\DoxyCodeLine{00112     \mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_message_a1c98a42d8af59c1b91d91ff2014cc276}{payload}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{00113 \};}
+\DoxyCodeLine{00114 }
+\DoxyCodeLine{\Hypertarget{sdo_8h_source_l00118}\mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_inbound}{00118}} \textcolor{keyword}{class }\mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_inbound}{SDOInbound}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_message}{SDOMessage}} \{}
+\DoxyCodeLine{00119     \textcolor{keyword}{public}:}
+\DoxyCodeLine{00120     \mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_inbound}{SDOInbound}}(\textcolor{keyword}{const} can\_frame \&other);}
+\DoxyCodeLine{00121 \};}
+\DoxyCodeLine{00122 }
+\DoxyCodeLine{\Hypertarget{sdo_8h_source_l00126}\mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_outbound}{00126}} \textcolor{keyword}{class }\mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_outbound}{SDOOutbound}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_message}{SDOMessage}} \{}
+\DoxyCodeLine{00127     \textcolor{keyword}{public}:}
+\DoxyCodeLine{00128     \mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_outbound}{SDOOutbound}}(uint8\_t \mbox{\hyperlink{class_c_a_nopen_1_1_message_adc93c710fd35ab61e46a0881326d0336}{node\_id}}, RDWR dir, uint16\_t \mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_message_a1e31a75dd442c32eaf42d74937b71cbb}{index}}, uint8\_t \mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_message_acec40b62f1a77ab566fed5d9707ea619}{subindex}}, \mbox{\hyperlink{class_c_a_nopen_1_1_payload}{Payload}} \mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_message_a1c98a42d8af59c1b91d91ff2014cc276}{payload}});}
+\DoxyCodeLine{00129 \};}
+\DoxyCodeLine{00130 }
+\DoxyCodeLine{\Hypertarget{sdo_8h_source_l00134}\mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_outbound_read}{00134}} \textcolor{keyword}{class }\mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_outbound_read}{SDOOutboundRead}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_outbound}{SDOOutbound}} \{}
+\DoxyCodeLine{00135     \textcolor{keyword}{public}:}
+\DoxyCodeLine{00136     \mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_outbound_read}{SDOOutboundRead}}(uint8\_t \mbox{\hyperlink{class_c_a_nopen_1_1_message_adc93c710fd35ab61e46a0881326d0336}{node\_id}}, uint16\_t \mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_message_a1e31a75dd442c32eaf42d74937b71cbb}{index}}, uint8\_t \mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_message_acec40b62f1a77ab566fed5d9707ea619}{subindex}});}
+\DoxyCodeLine{00137     \mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_outbound_read}{SDOOutboundRead}}(uint8\_t \mbox{\hyperlink{class_c_a_nopen_1_1_message_adc93c710fd35ab61e46a0881326d0336}{node\_id}}, uint32\_t \mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_message_aa12187c7761d4ef34de349270bb654d4}{index\_\_sub}});}
+\DoxyCodeLine{00138 \};}
+\DoxyCodeLine{00139 }
+\DoxyCodeLine{\Hypertarget{sdo_8h_source_l00143}\mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_outbound_write}{00143}} \textcolor{keyword}{class }\mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_outbound_write}{SDOOutboundWrite}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_outbound}{SDOOutbound}} \{}
+\DoxyCodeLine{00144     \textcolor{keyword}{public}:}
+\DoxyCodeLine{00145     \mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_outbound_write}{SDOOutboundWrite}}(uint8\_t \mbox{\hyperlink{class_c_a_nopen_1_1_message_adc93c710fd35ab61e46a0881326d0336}{node\_id}}, uint16\_t \mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_message_a1e31a75dd442c32eaf42d74937b71cbb}{index}}, uint8\_t \mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_message_acec40b62f1a77ab566fed5d9707ea619}{subindex}}, \mbox{\hyperlink{class_c_a_nopen_1_1_payload}{Payload}} \mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_message_a1c98a42d8af59c1b91d91ff2014cc276}{payload}});}
+\DoxyCodeLine{00146     \mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_outbound_write}{SDOOutboundWrite}}(uint8\_t \mbox{\hyperlink{class_c_a_nopen_1_1_message_adc93c710fd35ab61e46a0881326d0336}{node\_id}}, uint32\_t \mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_message_aa12187c7761d4ef34de349270bb654d4}{index\_\_sub}}, \mbox{\hyperlink{class_c_a_nopen_1_1_payload}{Payload}} \mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_message_a1c98a42d8af59c1b91d91ff2014cc276}{payload}});}
+\DoxyCodeLine{00147 \};}
+\DoxyCodeLine{00148 \} \textcolor{comment}{// namespace CANopen}}
+\DoxyCodeLine{00149 }
+\DoxyCodeLine{00150 \textcolor{preprocessor}{\#endif // \_CANOPEN\_SDO\_MESSAGE\_H\_}}
+
+\end{DoxyCode}

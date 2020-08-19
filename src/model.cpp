@@ -39,7 +39,6 @@ stp::Model::Model(double deltas[4], double a, double l, int verbose_level): m_ve
                                     (2 * deltas[2 * i] + deltas[2 * i + 1]))));
     m_radius[0]=0.413;
     m_radius[1]=0.244;
-     std::cout << m_radius[0] << " ddd " << m_radius[1] << "\n";
 
     //Set the constant coordinate of B and P1 (P in B1).
     for(int i = 0; i < NB_LEGS; i++)
@@ -89,7 +88,6 @@ stp::Model::init_pos()
 
     new_pos(m_T, m_theta);
     h0*=0.99;
-    std::cout << h0 << "\n";
     
     }
 

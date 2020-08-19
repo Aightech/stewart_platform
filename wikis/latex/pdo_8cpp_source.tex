@@ -1,0 +1,23 @@
+\hypertarget{pdo_8cpp_source}{}\doxysection{pdo.\+cpp}
+\label{pdo_8cpp_source}\index{pdo.cpp@{pdo.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include "pdo.h"}}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 \textcolor{keyword}{namespace }CANopen \{}
+\DoxyCodeLine{00004 PDOMessage::PDOMessage(\textcolor{keyword}{const} can\_frame \&other)}
+\DoxyCodeLine{00005     : Message(other) \{}
+\DoxyCodeLine{00006 \}}
+\DoxyCodeLine{00007 }
+\DoxyCodeLine{00008 PDOMessage::PDOMessage(PDOFunctionCode fn, uint8\_t node\_id, Payload payload)}
+\DoxyCodeLine{00009     : Message(fn + node\_id, payload) \{}
+\DoxyCodeLine{00010 \}}
+\DoxyCodeLine{00011 }
+\DoxyCodeLine{00012 uint8\_t PDOMessage::num()}
+\DoxyCodeLine{00013 \{}
+\DoxyCodeLine{00014   \textcolor{keywordflow}{return} (\mbox{\hyperlink{class_c_a_nopen_1_1_message_aa0b2fbf64579563a763e3efbe1766c3a}{function\_code}}() >> 8)-\/1;}
+\DoxyCodeLine{00015 \}}
+\DoxyCodeLine{00016 }
+\DoxyCodeLine{00017 \} \textcolor{comment}{// namespace CANopen}}
+
+\end{DoxyCode}

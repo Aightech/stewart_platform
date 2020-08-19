@@ -1,0 +1,4 @@
+<map id="CANopen::Driver::get" name="CANopen::Driver::get">
+<area shape="rect" id="node1" title="get Gets the value of a specified registers." alt="" coords="5,5,196,35"/>
+<area shape="rect" id="node2" href="$class_c_a_nopen_1_1_driver.html#a96123f2965334f4fda9c01ae7b0f8f46" title="Request an update of the parameter via a Reading SDO message. (the parameter has been updated when pa..." alt="" coords="244,5,464,35"/>
+</map>

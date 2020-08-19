@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="config_8h" kind="file" language="C++">
+    <compoundname>config.h</compoundname>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="config_8h_1a09b4b1112f415df588cded8b25bb9289" prot="public" static="no">
+        <name>CANLIB_VERSION</name>
+        <initializer>1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/include/config.h" line="2" column="9" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/include/config.h" bodystart="2" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>the<sp/>configured<sp/>options<sp/>and<sp/>settings<sp/>for<sp/>Tutorial</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2" refid="config_8h_1a09b4b1112f415df588cded8b25bb9289" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CANLIB_VERSION<sp/>1.0</highlight></codeline>
+    </programlisting>
+    <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/include/config.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,84 @@
+\hypertarget{platform_8cpp_source}{}\doxysection{platform.\+cpp}
+\label{platform_8cpp_source}\index{platform.cpp@{platform.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include "platform.hpp"}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{_c_a_nopen__lxm32_8h}{CANopen\_lxm32.h}}"}}
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{00004 }
+\DoxyCodeLine{00005 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00006 stp::Platform::init()}
+\DoxyCodeLine{00007 \{}
+\DoxyCodeLine{00008     m\_available = \textcolor{keyword}{true};}
+\DoxyCodeLine{00009     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < NB\_LEGS; i++)}
+\DoxyCodeLine{00010     \{}
+\DoxyCodeLine{00011         \mbox{\hyperlink{classstp_1_1_platform_ae430bcbcc69c375c2b63fdcb391af235}{m\_motors}}[i] = \textcolor{keyword}{new} \mbox{\hyperlink{class_c_a_nopen_1_1_l_x_m32}{CANopen::LXM32}}(\textcolor{stringliteral}{"can0"}, i + 1, m\_verbose\_level);}
+\DoxyCodeLine{00012         \textcolor{keywordflow}{if}(\mbox{\hyperlink{classstp_1_1_platform_ae430bcbcc69c375c2b63fdcb391af235}{m\_motors}}[i]-\/>is\_available())}
+\DoxyCodeLine{00013         \{}
+\DoxyCodeLine{00014             \mbox{\hyperlink{classstp_1_1_platform_ae430bcbcc69c375c2b63fdcb391af235}{m\_motors}}[i]-\/>\mbox{\hyperlink{class_c_a_nopen_1_1_driver_ad8ac07202c14ad344004146e126ecbf4}{start}}();}
+\DoxyCodeLine{00015             \mbox{\hyperlink{classstp_1_1_platform_ae430bcbcc69c375c2b63fdcb391af235}{m\_motors}}[i]-\/>\mbox{\hyperlink{class_c_a_nopen_1_1_driver_aa94db47b419a6afcc409c63c2685e1b6}{profilePosition\_mode}}();}
+\DoxyCodeLine{00016             \mbox{\hyperlink{classstp_1_1_platform_ae430bcbcc69c375c2b63fdcb391af235}{m\_motors}}[i]-\/>\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a9f5910067bb7489887a9ed25ba6199f8}{set\_position\_offset}}(m\_motor\_position\_offset[i]);}
+\DoxyCodeLine{00017         \}}
+\DoxyCodeLine{00018         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00019         \{}
+\DoxyCodeLine{00020             std::cout << \textcolor{stringliteral}{"Driver n"} << i << \textcolor{stringliteral}{" unavailable..."} << std::endl;}
+\DoxyCodeLine{00021             m\_available = \textcolor{keyword}{false};}
+\DoxyCodeLine{00022         \}}
+\DoxyCodeLine{00023         \mbox{\hyperlink{classstp_1_1_platform_ae430bcbcc69c375c2b63fdcb391af235}{m\_motors}}[i]-\/>\mbox{\hyperlink{class_c_a_nopen_1_1_driver_a2fe863ef0d5d66f3241eda596a507377}{homing}}();}
+\DoxyCodeLine{00024         m\_motor\_pos[i] = \mbox{\hyperlink{classstp_1_1_platform_ae430bcbcc69c375c2b63fdcb391af235}{m\_motors}}[i]-\/>\mbox{\hyperlink{class_c_a_nopen_1_1_l_x_m32_a40b15f47ae3270b987bc8eb8004b4c92}{get\_angle}}();}
+\DoxyCodeLine{00025     \}}
+\DoxyCodeLine{00026 \}}
+\DoxyCodeLine{00027 }
+\DoxyCodeLine{00028 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00029 stp::Platform::start()}
+\DoxyCodeLine{00030 \{}
+\DoxyCodeLine{00031     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < NB\_LEGS; i++)}
+\DoxyCodeLine{00032     \{}
+\DoxyCodeLine{00033         \textcolor{keywordflow}{if}(m\_motors[i]-\/>is\_available())}
+\DoxyCodeLine{00034         \{}
+\DoxyCodeLine{00035             m\_motors[i]-\/>start();}
+\DoxyCodeLine{00036             m\_motors[i]-\/>profilePosition\_mode();}
+\DoxyCodeLine{00037         \}}
+\DoxyCodeLine{00038         }
+\DoxyCodeLine{00039     \}}
+\DoxyCodeLine{00040 \}}
+\DoxyCodeLine{00041 }
+\DoxyCodeLine{00042 }
+\DoxyCodeLine{00043 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00044 stp::Platform::pause()}
+\DoxyCodeLine{00045 \{}
+\DoxyCodeLine{00046     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < NB\_LEGS; i++)}
+\DoxyCodeLine{00047         \textcolor{keywordflow}{if}(m\_motors[i]-\/>is\_available())}
+\DoxyCodeLine{00048             m\_motors[i]-\/>pause();}
+\DoxyCodeLine{00049 \}}
+\DoxyCodeLine{00050 }
+\DoxyCodeLine{00051 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00052 stp::Platform::stop()}
+\DoxyCodeLine{00053 \{}
+\DoxyCodeLine{00054     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < NB\_LEGS; i++)}
+\DoxyCodeLine{00055         \textcolor{keywordflow}{if}(m\_motors[i]-\/>is\_available())}
+\DoxyCodeLine{00056             m\_motors[i]-\/>pause();}
+\DoxyCodeLine{00057 \}}
+\DoxyCodeLine{00058 \textcolor{keywordtype}{double} *}
+\DoxyCodeLine{00059 stp::Platform::new\_pos(\textcolor{keywordtype}{double} T[3], \textcolor{keywordtype}{double} theta[3])}
+\DoxyCodeLine{00060 \{}
+\DoxyCodeLine{00061     stp::Model::new\_pos(T, theta);}
+\DoxyCodeLine{00062     update\_platform();}
+\DoxyCodeLine{00063     \textcolor{keywordflow}{return} m\_alpha;}
+\DoxyCodeLine{00064 \}}
+\DoxyCodeLine{00065 }
+\DoxyCodeLine{00066 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00067 stp::Platform::update\_platform()}
+\DoxyCodeLine{00068 \{}
+\DoxyCodeLine{00069     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < NB\_LEGS; i++)}
+\DoxyCodeLine{00070     \{}
+\DoxyCodeLine{00071         \textcolor{keywordtype}{int} i\_n = m\_motor\_lookup[i];}
+\DoxyCodeLine{00072         m\_motor\_pos[i] = m\_motors[i\_n]-\/>get\_angle();}
+\DoxyCodeLine{00073         \textcolor{keywordflow}{if}(fabs(m\_motor\_pos[i] + m\_alpha[i]) > 0.0001)}
+\DoxyCodeLine{00074             m\_motors[i\_n]-\/>set\_angle(m\_alpha[i]);}
+\DoxyCodeLine{00075     \}}
+\DoxyCodeLine{00076 \}}
+\DoxyCodeLine{00077 }
+\DoxyCodeLine{00078 }
+
+\end{DoxyCode}

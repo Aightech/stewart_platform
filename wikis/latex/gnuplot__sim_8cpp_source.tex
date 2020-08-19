@@ -1,0 +1,64 @@
+\hypertarget{gnuplot__sim_8cpp_source}{}\doxysection{gnuplot\+\_\+sim.\+cpp}
+\label{gnuplot__sim_8cpp_source}\index{gnuplot\_sim.cpp@{gnuplot\_sim.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include "gnuplot\_sim.hpp"}}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00004 stp::Gnuplot\_sim::draw()}
+\DoxyCodeLine{00005 \{}
+\DoxyCodeLine{00006     std::vector<std::vector<std::vector<std::vector<double>>>> lines(15);}
+\DoxyCodeLine{00007     std::vector<double> pt;}
+\DoxyCodeLine{00008 }
+\DoxyCodeLine{00009     lines[0].resize(1);}
+\DoxyCodeLine{00010     lines[1].resize(1);}
+\DoxyCodeLine{00011     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < NB\_LEGS; i++)}
+\DoxyCodeLine{00012     \{}
+\DoxyCodeLine{00013         lines[0][0].push\_back(m\_plot.B[i]);}
+\DoxyCodeLine{00014         lines[1][0].push\_back(m\_plot.P[i]);}
+\DoxyCodeLine{00015 }
+\DoxyCodeLine{00016         lines[i + 3].resize(1);}
+\DoxyCodeLine{00017         lines[i + 3][0].push\_back(m\_plot.B[i]);}
+\DoxyCodeLine{00018         lines[i + 3][0].push\_back(m\_plot.A[i]);}
+\DoxyCodeLine{00019 }
+\DoxyCodeLine{00020         lines[i + 3 + 6].resize(1);}
+\DoxyCodeLine{00021         lines[i + 3 + 6][0].push\_back(m\_plot.A[i]);}
+\DoxyCodeLine{00022         lines[i + 3 + 6][0].push\_back(m\_plot.P[i]);}
+\DoxyCodeLine{00023     \}}
+\DoxyCodeLine{00024     lines[0][0].push\_back(m\_plot.B[0]);}
+\DoxyCodeLine{00025     lines[1][0].push\_back(m\_plot.P[0]);}
+\DoxyCodeLine{00026 }
+\DoxyCodeLine{00027     lines[2].resize(1);}
+\DoxyCodeLine{00028     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < 360; i++)}
+\DoxyCodeLine{00029     \{}
+\DoxyCodeLine{00030         std::vector<double> v(3);}
+\DoxyCodeLine{00031         v[0] = m\_radius[0] * cos(M\_PI / 180 * i);}
+\DoxyCodeLine{00032         v[1] = m\_radius[0] * sin(M\_PI / 180 * i);}
+\DoxyCodeLine{00033         v[2] = \mbox{\hyperlink{classstp_1_1_model_ad1f36bbb9a3f9aac7054b991bb02fe70}{m\_B}}[0][2];}
+\DoxyCodeLine{00034         lines[2][0].push\_back(v);}
+\DoxyCodeLine{00035     \}}
+\DoxyCodeLine{00036 }
+\DoxyCodeLine{00037     m\_plot.gp << \textcolor{stringliteral}{"set zrange [-\/0.2:1]\(\backslash\)n"};}
+\DoxyCodeLine{00038     m\_plot.gp << \textcolor{stringliteral}{"set hidden3d nooffset\(\backslash\)n"};}
+\DoxyCodeLine{00039     m\_plot.gp << \textcolor{stringliteral}{"splot "};}
+\DoxyCodeLine{00040     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 1; i < 3; i++)}
+\DoxyCodeLine{00041     \{}
+\DoxyCodeLine{00042         m\_plot.gp << m\_plot.gp.binFile2d(lines[i], \textcolor{stringliteral}{"record"});}
+\DoxyCodeLine{00043         m\_plot.gp << \textcolor{stringliteral}{"with lines notitle,"};}
+\DoxyCodeLine{00044     \}}
+\DoxyCodeLine{00045     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 3; i < lines.size(); i++)}
+\DoxyCodeLine{00046     \{}
+\DoxyCodeLine{00047         m\_plot.gp << m\_plot.gp.binFile2d(lines[i], \textcolor{stringliteral}{"record"});}
+\DoxyCodeLine{00048         m\_plot.gp << \textcolor{stringliteral}{"with lines notitle lw 2,"};}
+\DoxyCodeLine{00049     \}}
+\DoxyCodeLine{00050 }
+\DoxyCodeLine{00051     m\_plot.gp << \textcolor{stringliteral}{" \(\backslash\)n"};}
+\DoxyCodeLine{00052     }
+\DoxyCodeLine{00053 \textcolor{comment}{//    for(int i = 0; i < NB\_LEGS; i++)}}
+\DoxyCodeLine{00054 \textcolor{comment}{//    \{}}
+\DoxyCodeLine{00055 \textcolor{comment}{//        std::cout << "\(\backslash\)t" << m\_alpha[i];//m\_motors[m\_motor\_lookup[i]]-\/>set\_angle(m\_alpha[i]);}}
+\DoxyCodeLine{00056 \textcolor{comment}{//    \}}}
+\DoxyCodeLine{00057 \textcolor{comment}{//    std::cout << "\(\backslash\)n";}}
+\DoxyCodeLine{00058 \}}
+
+\end{DoxyCode}

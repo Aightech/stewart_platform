@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_220cbcf469ac190fdb1e9ad69346afb3" kind="dir">
+    <compoundname>lib</compoundname>
+    <innerdir refid="dir_23220e5d4eb2412ea02d6ea5bea34c4b">canopen</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/"/>
+  </compounddef>
+</doxygen>

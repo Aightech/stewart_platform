@@ -1,0 +1,46 @@
+\hypertarget{message_8cpp_source}{}\doxysection{message.\+cpp}
+\label{message_8cpp_source}\index{message.cpp@{message.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{message_8h}{message.h}}"}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#include <sstream>}}
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#include <string.h>}}
+\DoxyCodeLine{00004 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{00005 }
+\DoxyCodeLine{00006 \textcolor{keyword}{namespace }CANopen \{}
+\DoxyCodeLine{00007 Message::Message(uint32\_t cob\_id, Payload payload)}
+\DoxyCodeLine{00008 \{}
+\DoxyCodeLine{00009     can\_id = cob\_id;}
+\DoxyCodeLine{00010     can\_dlc = \mbox{\hyperlink{class_c_a_nopen_1_1_message_a231049034467f68a5a919a9267f9151f}{payload}}.size();}
+\DoxyCodeLine{00011     memcpy(data, \mbox{\hyperlink{class_c_a_nopen_1_1_message_a231049034467f68a5a919a9267f9151f}{payload}}.data(), can\_dlc);}
+\DoxyCodeLine{00012 \}}
+\DoxyCodeLine{00013 }
+\DoxyCodeLine{00014 Message::Message(\textcolor{keyword}{const} can\_frame\& other)}
+\DoxyCodeLine{00015     : can\_frame(other)}
+\DoxyCodeLine{00016 \{}
+\DoxyCodeLine{00017 \}}
+\DoxyCodeLine{00018 }
+\DoxyCodeLine{\Hypertarget{message_8cpp_source_l00019}\mbox{\hyperlink{class_c_a_nopen_1_1_message_aa0b2fbf64579563a763e3efbe1766c3a}{00019}} \mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468}{Message::FunctionCode}} Message::function\_code()\textcolor{keyword}{ const}}
+\DoxyCodeLine{00020 \textcolor{keyword}{}\{}
+\DoxyCodeLine{00021     \textcolor{keywordflow}{return} \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{class_c_a_nopen_1_1_message_a0f8f95e4ea1284011cd122629edc5468}{FunctionCode}}\textcolor{keyword}{>}(can\_id \& 0xff80);}
+\DoxyCodeLine{00022 \}}
+\DoxyCodeLine{00023 }
+\DoxyCodeLine{\Hypertarget{message_8cpp_source_l00024}\mbox{\hyperlink{class_c_a_nopen_1_1_message_adc93c710fd35ab61e46a0881326d0336}{00024}} uint8\_t Message::node\_id()\textcolor{keyword}{ const}}
+\DoxyCodeLine{00025 \textcolor{keyword}{}\{}
+\DoxyCodeLine{00026     \textcolor{keywordflow}{return} can\_id \& 0x7f;}
+\DoxyCodeLine{00027 \}}
+\DoxyCodeLine{00028 }
+\DoxyCodeLine{\Hypertarget{message_8cpp_source_l00029}\mbox{\hyperlink{class_c_a_nopen_1_1_message_a231049034467f68a5a919a9267f9151f}{00029}} \mbox{\hyperlink{class_c_a_nopen_1_1_payload}{Payload}} Message::payload()\textcolor{keyword}{ const}}
+\DoxyCodeLine{00030 \textcolor{keyword}{}\{}
+\DoxyCodeLine{00031     \textcolor{keywordflow}{return} std::vector<uint8\_t>(data, data + can\_dlc);}
+\DoxyCodeLine{00032 \}}
+\DoxyCodeLine{00033 }
+\DoxyCodeLine{00034 std::string Message::to\_string()\textcolor{keyword}{ const}}
+\DoxyCodeLine{00035 \textcolor{keyword}{}\{}
+\DoxyCodeLine{00036     std::stringstream ss;}
+\DoxyCodeLine{00037     ss << std::hex << \textcolor{stringliteral}{"0x"} << function\_code() << \textcolor{stringliteral}{" | 0x"} << (int)node\_id() << \textcolor{stringliteral}{" | "} << payload();}
+\DoxyCodeLine{00038     \textcolor{keywordflow}{return} ss.str();}
+\DoxyCodeLine{00039 \}}
+\DoxyCodeLine{00040 \}}
+
+\end{DoxyCode}

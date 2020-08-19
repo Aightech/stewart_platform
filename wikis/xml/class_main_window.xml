@@ -1,0 +1,290 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="class_main_window" kind="class" language="C++" prot="public">
+    <compoundname>MainWindow</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QMainWindow</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_main_window_1a35466a70ed47252a0191168126a352a5" prot="private" static="no" mutable="no">
+        <type>Ui::MainWindow *</type>
+        <definition>Ui::MainWindow* MainWindow::ui</definition>
+        <argsstring></argsstring>
+        <name>ui</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/mainwindow.h" line="38" column="20" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/mainwindow.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1aa1a332115b78f5e211b82c0f515a3f8c" prot="private" static="no" mutable="no">
+        <type><ref refid="classstp_1_1_platform" kindref="compound">stp::Platform</ref> *</type>
+        <definition>stp::Platform* MainWindow::m_sp</definition>
+        <argsstring></argsstring>
+        <name>m_sp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/mainwindow.h" line="39" column="19" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/mainwindow.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a2dc78344ad37cb35ef6d8dfc756f5809" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool MainWindow::m_running</definition>
+        <argsstring></argsstring>
+        <name>m_running</name>
+        <initializer>=false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/mainwindow.h" line="40" column="10" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/mainwindow.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a4348c5344b00fee834f71e267f9a1e6a" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MainWindow::m_T[3]</definition>
+        <argsstring>[3]</argsstring>
+        <name>m_T</name>
+        <initializer>= {0, 0, 0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/mainwindow.h" line="41" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/mainwindow.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1ab56896fe93dcfa017f2ca9414158f141" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MainWindow::m_T_mid[3]</definition>
+        <argsstring>[3]</argsstring>
+        <name>m_T_mid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/mainwindow.h" line="42" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/mainwindow.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a24b1dc395d58cc618ff8ff67300ab00a" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MainWindow::m_theta[3]</definition>
+        <argsstring>[3]</argsstring>
+        <name>m_theta</name>
+        <initializer>= {0, 0, 0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/mainwindow.h" line="43" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/mainwindow.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1ab7bd68a358ebb64298a813429da9c917" prot="private" static="no" mutable="no">
+        <type>QDoubleSpinBox *</type>
+        <definition>QDoubleSpinBox* MainWindow::m_cart_trans[3]</definition>
+        <argsstring>[3]</argsstring>
+        <name>m_cart_trans</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/mainwindow.h" line="45" column="20" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/mainwindow.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a44e2c9990b99f6e60a3417bc4831db9d" prot="private" static="no" mutable="no">
+        <type>QDoubleSpinBox *</type>
+        <definition>QDoubleSpinBox* MainWindow::m_cart_anlge[3]</definition>
+        <argsstring>[3]</argsstring>
+        <name>m_cart_anlge</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/mainwindow.h" line="46" column="20" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/mainwindow.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a7b33eb14399e057d13f279fbc8ad3f1c" prot="private" static="no" mutable="no">
+        <type>QDoubleSpinBox *</type>
+        <definition>QDoubleSpinBox* MainWindow::m_sin_dir[3]</definition>
+        <argsstring>[3]</argsstring>
+        <name>m_sin_dir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/mainwindow.h" line="47" column="20" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/mainwindow.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a6579964dbeda5a8f67cdec6860ba85e9" prot="private" static="no" mutable="no">
+        <type>std::chrono::time_point&lt; std::chrono::system_clock &gt;</type>
+        <definition>std::chrono::time_point&lt;std::chrono::system_clock&gt; MainWindow::m_prev_time</definition>
+        <argsstring></argsstring>
+        <name>m_prev_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/mainwindow.h" line="49" column="29" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/mainwindow.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_main_window_1a996c5a2b6f77944776856f08ec30858d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MainWindow::MainWindow</definition>
+        <argsstring>(QWidget *parent=nullptr)</argsstring>
+        <name>MainWindow</name>
+        <param>
+          <type>QWidget *</type>
+          <declname>parent</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/mainwindow.h" line="19" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/src/mainwindow.cpp" bodystart="6" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_main_window_1ae98d00a93bc118200eeef9f9bba1dba7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MainWindow::~MainWindow</definition>
+        <argsstring>()</argsstring>
+        <name>~MainWindow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/mainwindow.h" line="20" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/src/mainwindow.cpp" bodystart="36" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_main_window_1aed18d5fa47cd919da8dedbf4edd8e37e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::update_pos</definition>
+        <argsstring>()</argsstring>
+        <name>update_pos</name>
+        <briefdescription>
+<para>update_pos Update the GUI to display the current position of the platform. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/mainwindow.h" line="25" column="10" bodyfile="/home/adev/Documents/STECH/stewart_platform/src/mainwindow.cpp" bodystart="100" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="class_main_window_1aba8ebc22f101fa59e1e2efa7a3ae1616" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::loop</definition>
+        <argsstring>()</argsstring>
+        <name>loop</name>
+        <briefdescription>
+<para>loop Called every 1ms to send order depending of the mode. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/mainwindow.h" line="30" column="10" bodyfile="/home/adev/Documents/STECH/stewart_platform/src/mainwindow.cpp" bodystart="41" bodyend="64"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-slot">
+      <memberdef kind="slot" id="class_main_window_1a535e5b3faa553f87eb9e42fababa08b5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_pushButton_start_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_pushButton_start_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/mainwindow.h" line="33" column="10" bodyfile="/home/adev/Documents/STECH/stewart_platform/src/mainwindow.cpp" bodystart="66" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a62e7a67f097d5c7a21edb8179da136ed" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_pushButton_pause_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_pushButton_pause_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/mainwindow.h" line="34" column="10" bodyfile="/home/adev/Documents/STECH/stewart_platform/src/mainwindow.cpp" bodystart="88" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a71332a9e3ffc7d39793806dfec728d49" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_pushButton_stop_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_pushButton_stop_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/mainwindow.h" line="35" column="10" bodyfile="/home/adev/Documents/STECH/stewart_platform/src/mainwindow.cpp" bodystart="94" bodyend="98"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>QMainWindow</label>
+      </node>
+      <node id="1">
+        <label>MainWindow</label>
+        <link refid="class_main_window"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>QMainWindow</label>
+      </node>
+      <node id="1">
+        <label>MainWindow</label>
+        <link refid="class_main_window"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/adev/Documents/STECH/stewart_platform/include/mainwindow.h" line="15" column="1" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/mainwindow.h" bodystart="14" bodyend="51"/>
+    <listofallmembers>
+      <member refid="class_main_window_1aba8ebc22f101fa59e1e2efa7a3ae1616" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>loop</name></member>
+      <member refid="class_main_window_1a44e2c9990b99f6e60a3417bc4831db9d" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>m_cart_anlge</name></member>
+      <member refid="class_main_window_1ab7bd68a358ebb64298a813429da9c917" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>m_cart_trans</name></member>
+      <member refid="class_main_window_1a6579964dbeda5a8f67cdec6860ba85e9" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>m_prev_time</name></member>
+      <member refid="class_main_window_1a2dc78344ad37cb35ef6d8dfc756f5809" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>m_running</name></member>
+      <member refid="class_main_window_1a7b33eb14399e057d13f279fbc8ad3f1c" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>m_sin_dir</name></member>
+      <member refid="class_main_window_1aa1a332115b78f5e211b82c0f515a3f8c" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>m_sp</name></member>
+      <member refid="class_main_window_1a4348c5344b00fee834f71e267f9a1e6a" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>m_T</name></member>
+      <member refid="class_main_window_1ab56896fe93dcfa017f2ca9414158f141" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>m_T_mid</name></member>
+      <member refid="class_main_window_1a24b1dc395d58cc618ff8ff67300ab00a" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>m_theta</name></member>
+      <member refid="class_main_window_1a996c5a2b6f77944776856f08ec30858d" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>MainWindow</name></member>
+      <member refid="class_main_window_1a62e7a67f097d5c7a21edb8179da136ed" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_pushButton_pause_clicked</name></member>
+      <member refid="class_main_window_1a535e5b3faa553f87eb9e42fababa08b5" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_pushButton_start_clicked</name></member>
+      <member refid="class_main_window_1a71332a9e3ffc7d39793806dfec728d49" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_pushButton_stop_clicked</name></member>
+      <member refid="class_main_window_1a35466a70ed47252a0191168126a352a5" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>ui</name></member>
+      <member refid="class_main_window_1aed18d5fa47cd919da8dedbf4edd8e37e" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>update_pos</name></member>
+      <member refid="class_main_window_1ae98d00a93bc118200eeef9f9bba1dba7" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>~MainWindow</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

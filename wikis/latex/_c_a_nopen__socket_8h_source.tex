@@ -1,0 +1,58 @@
+\hypertarget{_c_a_nopen__socket_8h_source}{}\doxysection{C\+A\+Nopen\+\_\+socket.\+h}
+\label{_c_a_nopen__socket_8h_source}\index{CANopen\_socket.h@{CANopen\_socket.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#ifndef \_CANOPEN\_SOCKET\_H\_}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#define \_CANOPEN\_SOCKET\_H\_}}
+\DoxyCodeLine{00003 }
+\DoxyCodeLine{00011 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{00012 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{00013 \textcolor{preprocessor}{\#include <linux/can/raw.h>}}
+\DoxyCodeLine{00014 \textcolor{preprocessor}{\#include <sys/socket.h>}}
+\DoxyCodeLine{00015 \textcolor{preprocessor}{\#include <mutex>}}
+\DoxyCodeLine{00016 \textcolor{preprocessor}{\#include <initializer\_list>}}
+\DoxyCodeLine{00017 }
+\DoxyCodeLine{00018 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{message_8h}{message.h}}"}}
+\DoxyCodeLine{00019 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{payload_8h}{payload.h}}"}}
+\DoxyCodeLine{00020 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{sdo_8h}{sdo.h}}"}}
+\DoxyCodeLine{00021 \textcolor{preprocessor}{\#include "pdo.h"}}
+\DoxyCodeLine{00022 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{nmt_8h}{nmt.h}}"}}
+\DoxyCodeLine{00023 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{emcy_8h}{emcy.h}}"}}
+\DoxyCodeLine{00024 }
+\DoxyCodeLine{00025 }
+\DoxyCodeLine{00026 \textcolor{preprocessor}{\#define IF\_VERBOSE(lvl, cmd, m\_lvl)      \(\backslash\)}}
+\DoxyCodeLine{00027 \textcolor{preprocessor}{    if (m\_lvl >= lvl) \{ \(\backslash\)}}
+\DoxyCodeLine{00028 \textcolor{preprocessor}{        CANopen::g\_verbose\_mutex.lock(); \(\backslash\)}}
+\DoxyCodeLine{00029 \textcolor{preprocessor}{        cmd;                      \(\backslash\)}}
+\DoxyCodeLine{00030 \textcolor{preprocessor}{        CANopen::g\_verbose\_mutex.unlock(); \(\backslash\)}}
+\DoxyCodeLine{00031 \textcolor{preprocessor}{    \}}}
+\DoxyCodeLine{00032 }
+\DoxyCodeLine{00033 }
+\DoxyCodeLine{00034 \textcolor{keyword}{namespace }CANopen \{}
+\DoxyCodeLine{00035 \textcolor{keyword}{extern} std::mutex g\_verbose\_mutex;}
+\DoxyCodeLine{\Hypertarget{_c_a_nopen__socket_8h_source_l00039}\mbox{\hyperlink{class_c_a_nopen_1_1_socket}{00039}} \textcolor{keyword}{class }\mbox{\hyperlink{class_c_a_nopen_1_1_socket}{Socket}} \{}
+\DoxyCodeLine{00040 \textcolor{keyword}{public}:}
+\DoxyCodeLine{00046     \mbox{\hyperlink{class_c_a_nopen_1_1_socket_a66c37f6819a5ad8829326380812446e6}{Socket}}(std::string ifname, \textcolor{keywordtype}{int} verbose\_level = 0);}
+\DoxyCodeLine{00047 }
+\DoxyCodeLine{00054     \mbox{\hyperlink{class_c_a_nopen_1_1_socket_a66c37f6819a5ad8829326380812446e6}{Socket}}(std::string ifname, uint32\_t cob\_id, \textcolor{keywordtype}{int} verbose\_level = 0);}
+\DoxyCodeLine{00055 }
+\DoxyCodeLine{00056   }
+\DoxyCodeLine{00057   }
+\DoxyCodeLine{00058   \textcolor{keywordtype}{void} add\_filter(std::initializer\_list<struct can\_filter> rfilter);}
+\DoxyCodeLine{00059   }
+\DoxyCodeLine{00063     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_c_a_nopen_1_1_socket_a6f63808addc451747608c21b958821f4}{bind}}();}
+\DoxyCodeLine{00064 }
+\DoxyCodeLine{00069     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_a_nopen_1_1_socket_aa147801723e58f287d06b6df28837c44}{send}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_c_a_nopen_1_1_message}{Message}}\&\& msg);}
+\DoxyCodeLine{00070 }
+\DoxyCodeLine{00071     std::shared\_ptr<Message> receive();}
+\DoxyCodeLine{00072 }
+\DoxyCodeLine{00073 \textcolor{keyword}{private}:}
+\DoxyCodeLine{00074     \textcolor{keywordtype}{int} m\_socket; }
+\DoxyCodeLine{00075     std::string m\_ifname; }
+\DoxyCodeLine{00077     \textcolor{keywordtype}{int} m\_verbose\_level; }
+\DoxyCodeLine{00078 \};}
+\DoxyCodeLine{00079 \}}
+\DoxyCodeLine{00080 }
+\DoxyCodeLine{00081 \textcolor{preprocessor}{\#endif // \_CANOPEN\_SOCKET\_H\_}}
+
+\end{DoxyCode}

@@ -1,0 +1,327 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classstp_1_1_platform" kind="class" language="C++" prot="public">
+    <compoundname>stp::Platform</compoundname>
+    <basecompoundref refid="classstp_1_1_model" prot="public" virt="non-virtual">stp::Model</basecompoundref>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classstp_1_1_platform_1ae430bcbcc69c375c2b63fdcb391af235" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_c_a_nopen_1_1_l_x_m32" kindref="compound">CANopen::LXM32</ref> *</type>
+        <definition>CANopen::LXM32* stp::Platform::m_motors[NB_LEGS]</definition>
+        <argsstring>[NB_LEGS]</argsstring>
+        <name>m_motors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Driver of the platform. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/platform.hpp" line="34" column="20" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/platform.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classstp_1_1_platform_1a7a896535eaa53686f44f50d3dceee967" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool stp::Platform::m_available</definition>
+        <argsstring></argsstring>
+        <name>m_available</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/platform.hpp" line="36" column="10" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/platform.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classstp_1_1_platform_1a28409e75157c9d16b41336568082ba17" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double stp::Platform::m_motor_pos[NB_LEGS]</definition>
+        <argsstring>[NB_LEGS]</argsstring>
+        <name>m_motor_pos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/platform.hpp" line="37" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/platform.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classstp_1_1_platform_1a5a13db3be1f7180271f5045905c2b5e3" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int stp::Platform::m_motor_lookup[NB_LEGS]</definition>
+        <argsstring>[NB_LEGS]</argsstring>
+        <name>m_motor_lookup</name>
+        <initializer>= {5, 2, 0, 1, 4, 3}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/platform.hpp" line="39" column="9" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/platform.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classstp_1_1_platform_1a45609c8ad50761c3729a8ea8b2ab7ae8" prot="private" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t stp::Platform::m_motor_position_offset[NB_LEGS]</definition>
+        <argsstring>[NB_LEGS]</argsstring>
+        <name>m_motor_position_offset</name>
+        <initializer>= { 94500+2*737280, 202100+2*737280, 202500+2*737280, 694800+2*737280, 203500+2*737280, 236000+2*737280}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/platform.hpp" line="40" column="13" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/platform.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classstp_1_1_platform_1a4d9acaa268e9bfd6bf7f02eb6f7f2b8e" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double stp::Platform::v</definition>
+        <argsstring></argsstring>
+        <name>v</name>
+        <initializer>=0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/platform.hpp" line="42" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/platform.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classstp_1_1_platform_1a7e0a23c194609bf6d34f4f9b9e535895" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double stp::Platform::t</definition>
+        <argsstring></argsstring>
+        <name>t</name>
+        <initializer>=0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/platform.hpp" line="43" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/platform.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classstp_1_1_platform_1a432b143fa841498ffa6b144a2655addb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>stp::Platform::Platform</definition>
+        <argsstring>(double deltas[4], double a, double l, int verbose_level=0)</argsstring>
+        <name>Platform</name>
+        <param>
+          <type>double</type>
+          <declname>deltas</declname>
+          <array>[4]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>verbose_level</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/platform.hpp" line="16" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/platform.hpp" bodystart="16" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classstp_1_1_platform_1ad10b47ba1002a7509154538efd713750" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void stp::Platform::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/platform.hpp" line="19" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/src/platform.cpp" bodystart="6" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classstp_1_1_platform_1ade36b3f4a7cb67bd5854237106cc1dd6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void stp::Platform::start</definition>
+        <argsstring>()</argsstring>
+        <name>start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/platform.hpp" line="21" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/src/platform.cpp" bodystart="29" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classstp_1_1_platform_1a11cea38713f56ddc1b018aa8f3de262d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void stp::Platform::pause</definition>
+        <argsstring>()</argsstring>
+        <name>pause</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/platform.hpp" line="23" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/src/platform.cpp" bodystart="44" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classstp_1_1_platform_1a018551e44e34211bb9299ece76e22bfc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void stp::Platform::stop</definition>
+        <argsstring>()</argsstring>
+        <name>stop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/platform.hpp" line="25" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/src/platform.cpp" bodystart="52" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classstp_1_1_platform_1a7401402bd15c6ac28a0c83d00ff5a61c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double *</type>
+        <definition>double * stp::Platform::new_pos</definition>
+        <argsstring>(double T[3], double theta[3])</argsstring>
+        <name>new_pos</name>
+        <param>
+          <type>double</type>
+          <declname>T</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>theta</declname>
+          <array>[3]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/platform.hpp" line="28" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/src/platform.cpp" bodystart="59" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classstp_1_1_platform_1ade3a53dd2234f57856b25dab957bae41" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void stp::Platform::update_platform</definition>
+        <argsstring>()</argsstring>
+        <name>update_platform</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/include/platform.hpp" line="31" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/src/platform.cpp" bodystart="67" bodyend="76"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>stp::Platform</label>
+        <link refid="classstp_1_1_platform"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stp::Model</label>
+        <link refid="classstp_1_1_model"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>CANopen::Driver</label>
+        <link refid="class_c_a_nopen_1_1_driver"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>m_socket</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>CANopen::LXM32</label>
+        <link refid="class_c_a_nopen_1_1_l_x_m32"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>stp::Platform</label>
+        <link refid="classstp_1_1_platform"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>m_motors</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>CANopen::Socket</label>
+        <link refid="class_c_a_nopen_1_1_socket"/>
+      </node>
+      <node id="2">
+        <label>stp::Model</label>
+        <link refid="classstp_1_1_model"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/adev/Documents/STECH/stewart_platform/include/platform.hpp" line="14" column="1" bodyfile="/home/adev/Documents/STECH/stewart_platform/include/platform.hpp" bodystart="13" bodyend="45"/>
+    <listofallmembers>
+      <member refid="classstp_1_1_model_1a4679e65c69f376bf8f20f5b80635b79b" prot="protected" virt="non-virtual"><scope>stp::Platform</scope><name>_alphaI</name></member>
+      <member refid="classstp_1_1_model_1ac031672ca5aae4c192c38b1103fdf2dd" prot="protected" virt="non-virtual"><scope>stp::Platform</scope><name>_d2</name></member>
+      <member refid="classstp_1_1_model_1afeda6e56bb177dc53c2c3fd1a86a2388" prot="public" virt="non-virtual"><scope>stp::Platform</scope><name>compute_R</name></member>
+      <member refid="classstp_1_1_model_1a96807e2f67ea212b44e89bc567d8fa2a" prot="public" virt="non-virtual"><scope>stp::Platform</scope><name>get_T</name></member>
+      <member refid="classstp_1_1_model_1a7856980516ed1f0613420a402b5b8d8c" prot="public" virt="non-virtual"><scope>stp::Platform</scope><name>get_theta</name></member>
+      <member refid="classstp_1_1_platform_1ad10b47ba1002a7509154538efd713750" prot="public" virt="non-virtual"><scope>stp::Platform</scope><name>init</name></member>
+      <member refid="classstp_1_1_model_1a732e1d29e24600760b53a8e126bb7906" prot="public" virt="non-virtual"><scope>stp::Platform</scope><name>init_pos</name></member>
+      <member refid="classstp_1_1_model_1a446d3fd455f0e44ec6a358b458ba85f2" prot="protected" virt="non-virtual"><scope>stp::Platform</scope><name>m_a</name></member>
+      <member refid="classstp_1_1_model_1a4aaa7aee9ac9d9903d29d06cf15ed601" prot="protected" virt="non-virtual"><scope>stp::Platform</scope><name>m_A</name></member>
+      <member refid="classstp_1_1_model_1ad189b43e75b3b4a7a947e8142adce17c" prot="protected" virt="non-virtual"><scope>stp::Platform</scope><name>m_a2</name></member>
+      <member refid="classstp_1_1_model_1a8faca0ba2206f1ac384b80b2223a0c34" prot="protected" virt="non-virtual"><scope>stp::Platform</scope><name>m_alpha</name></member>
+      <member refid="classstp_1_1_model_1a0b4fbb6fdec8106993ddffbd9f61d6ce" prot="protected" virt="non-virtual"><scope>stp::Platform</scope><name>m_alpha_spd</name></member>
+      <member refid="classstp_1_1_platform_1a7a896535eaa53686f44f50d3dceee967" prot="private" virt="non-virtual"><scope>stp::Platform</scope><name>m_available</name></member>
+      <member refid="classstp_1_1_model_1ad1f36bbb9a3f9aac7054b991bb02fe70" prot="protected" virt="non-virtual"><scope>stp::Platform</scope><name>m_B</name></member>
+      <member refid="classstp_1_1_model_1a0dde329f8445840075590404c4f2c0de" prot="protected" virt="non-virtual"><scope>stp::Platform</scope><name>m_beta</name></member>
+      <member refid="classstp_1_1_model_1a60eab0062d4e65c720ed2ac39d51779b" prot="protected" virt="non-virtual"><scope>stp::Platform</scope><name>m_gamma</name></member>
+      <member refid="classstp_1_1_model_1a4093789451a0491487090daa1c4c9b85" prot="protected" virt="non-virtual"><scope>stp::Platform</scope><name>m_l</name></member>
+      <member refid="classstp_1_1_model_1a9a16f1c28c96157d51bedbf67a1a7a81" prot="protected" virt="non-virtual"><scope>stp::Platform</scope><name>m_l2</name></member>
+      <member refid="classstp_1_1_platform_1a5a13db3be1f7180271f5045905c2b5e3" prot="private" virt="non-virtual"><scope>stp::Platform</scope><name>m_motor_lookup</name></member>
+      <member refid="classstp_1_1_platform_1a28409e75157c9d16b41336568082ba17" prot="private" virt="non-virtual"><scope>stp::Platform</scope><name>m_motor_pos</name></member>
+      <member refid="classstp_1_1_platform_1a45609c8ad50761c3729a8ea8b2ab7ae8" prot="private" virt="non-virtual"><scope>stp::Platform</scope><name>m_motor_position_offset</name></member>
+      <member refid="classstp_1_1_platform_1ae430bcbcc69c375c2b63fdcb391af235" prot="protected" virt="non-virtual"><scope>stp::Platform</scope><name>m_motors</name></member>
+      <member refid="classstp_1_1_model_1a773d6f9a6ee4f6dd580229e0dc3d741c" prot="protected" virt="non-virtual"><scope>stp::Platform</scope><name>m_P</name></member>
+      <member refid="classstp_1_1_model_1a82e25ba756ecbe2f929505ef4d97b317" prot="protected" virt="non-virtual"><scope>stp::Platform</scope><name>m_P1</name></member>
+      <member refid="classstp_1_1_model_1a3c26b01a6c5e533e25ec3de71c7f132c" prot="protected" virt="non-virtual"><scope>stp::Platform</scope><name>m_parity</name></member>
+      <member refid="classstp_1_1_model_1ae1c80dd8cb28d3bd7966c1f289fb291e" prot="protected" virt="non-virtual"><scope>stp::Platform</scope><name>m_R</name></member>
+      <member refid="classstp_1_1_model_1a55f0ee3549b8f7e582ae9958d69cc493" prot="protected" virt="non-virtual"><scope>stp::Platform</scope><name>m_radius</name></member>
+      <member refid="classstp_1_1_model_1a61d8b4957be741fa473468065c2a5d0d" prot="protected" virt="non-virtual"><scope>stp::Platform</scope><name>m_T</name></member>
+      <member refid="classstp_1_1_model_1a0ba1c1143089052ffad8133ff40d972f" prot="protected" virt="non-virtual"><scope>stp::Platform</scope><name>m_T_spd</name></member>
+      <member refid="classstp_1_1_model_1a826586afc60c2c076b271413f5c3e382" prot="protected" virt="non-virtual"><scope>stp::Platform</scope><name>m_theta</name></member>
+      <member refid="classstp_1_1_model_1aa12970f18bc4258b9ad185f54a9cfe70" prot="protected" virt="non-virtual"><scope>stp::Platform</scope><name>m_theta_spd</name></member>
+      <member refid="classstp_1_1_model_1afdc7491e9be320ad94775ca046667f9b" prot="protected" virt="non-virtual"><scope>stp::Platform</scope><name>m_trig</name></member>
+      <member refid="classstp_1_1_model_1ab0f8907bbccb353cbabf625b7370eda1" prot="protected" virt="non-virtual"><scope>stp::Platform</scope><name>m_verbose_level</name></member>
+      <member refid="classstp_1_1_model_1a771583e4fa62890a4c86b30ada77a9e5" prot="public" virt="non-virtual"><scope>stp::Platform</scope><name>Model</name></member>
+      <member refid="classstp_1_1_model_1a6c82f7a11076fb192448a2fd54d872bf" prot="public" virt="non-virtual"><scope>stp::Platform</scope><name>Model</name></member>
+      <member refid="classstp_1_1_platform_1a7401402bd15c6ac28a0c83d00ff5a61c" prot="public" virt="non-virtual"><scope>stp::Platform</scope><name>new_pos</name></member>
+      <member refid="classstp_1_1_platform_1a11cea38713f56ddc1b018aa8f3de262d" prot="public" virt="non-virtual"><scope>stp::Platform</scope><name>pause</name></member>
+      <member refid="classstp_1_1_platform_1a432b143fa841498ffa6b144a2655addb" prot="public" virt="non-virtual"><scope>stp::Platform</scope><name>Platform</name></member>
+      <member refid="classstp_1_1_model_1adacd3ce9b374636df51ce78b5be18c59" prot="public" virt="non-virtual"><scope>stp::Platform</scope><name>print_pos</name></member>
+      <member refid="classstp_1_1_model_1ade58705e09f3edf93f43a51021517f9e" prot="protected" virt="non-virtual"><scope>stp::Platform</scope><name>set_T</name></member>
+      <member refid="classstp_1_1_model_1a84fd6646ed05db5eec86afd968fde65d" prot="protected" virt="non-virtual"><scope>stp::Platform</scope><name>set_T_spd</name></member>
+      <member refid="classstp_1_1_model_1a6a6dcae980e86d84084dc4ccd0de3285" prot="protected" virt="non-virtual"><scope>stp::Platform</scope><name>set_theta</name></member>
+      <member refid="classstp_1_1_model_1afd0f76304578013e1faff062a318dac5" prot="protected" virt="non-virtual"><scope>stp::Platform</scope><name>set_theta_spd</name></member>
+      <member refid="classstp_1_1_platform_1ade36b3f4a7cb67bd5854237106cc1dd6" prot="public" virt="non-virtual"><scope>stp::Platform</scope><name>start</name></member>
+      <member refid="classstp_1_1_platform_1a018551e44e34211bb9299ece76e22bfc" prot="public" virt="non-virtual"><scope>stp::Platform</scope><name>stop</name></member>
+      <member refid="classstp_1_1_platform_1a7e0a23c194609bf6d34f4f9b9e535895" prot="private" virt="non-virtual"><scope>stp::Platform</scope><name>t</name></member>
+      <member refid="classstp_1_1_platform_1ade3a53dd2234f57856b25dab957bae41" prot="public" virt="non-virtual"><scope>stp::Platform</scope><name>update_platform</name></member>
+      <member refid="classstp_1_1_platform_1a4d9acaa268e9bfd6bf7f02eb6f7f2b8e" prot="private" virt="non-virtual"><scope>stp::Platform</scope><name>v</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

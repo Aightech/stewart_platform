@@ -1,0 +1,18 @@
+\hypertarget{nmt_8cpp_source}{}\doxysection{nmt.\+cpp}
+\label{nmt_8cpp_source}\index{nmt.cpp@{nmt.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{nmt_8h}{nmt.h}}"}}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 \textcolor{keyword}{namespace }CANopen \{}
+\DoxyCodeLine{00004 NMTMessage::NMTMessage(\textcolor{keyword}{const} can\_frame\& other)}
+\DoxyCodeLine{00005     : Message(other)}
+\DoxyCodeLine{00006 \{}
+\DoxyCodeLine{00007 \}}
+\DoxyCodeLine{00008 }
+\DoxyCodeLine{00009 NMTMessage::NMTMessage(Code code, uint8\_t node\_id) : Message(0,Payload(\{code,node\_id\}))}
+\DoxyCodeLine{00010 \{}
+\DoxyCodeLine{00011 \}}
+\DoxyCodeLine{00012 \}}
+
+\end{DoxyCode}

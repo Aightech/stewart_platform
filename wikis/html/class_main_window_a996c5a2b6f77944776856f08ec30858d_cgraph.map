@@ -1,0 +1,15 @@
+<map id="MainWindow::MainWindow" name="MainWindow::MainWindow">
+<area shape="rect" id="node1" title=" " alt="" coords="5,239,240,269"/>
+<area shape="rect" id="node2" href="$classstp_1_1_model.html#a96807e2f67ea212b44e89bc567d8fa2a" title=" " alt="" coords="321,157,480,186"/>
+<area shape="rect" id="node3" href="$classstp_1_1_platform.html#ad10b47ba1002a7509154538efd713750" title=" " alt="" coords="322,210,479,239"/>
+<area shape="rect" id="node9" href="$class_main_window.html#aba8ebc22f101fa59e1e2efa7a3ae1616" title="loop Called every 1ms to send order depending of the mode." alt="" coords="317,297,484,326"/>
+<area shape="rect" id="node13" href="$class_main_window.html#aed18d5fa47cd919da8dedbf4edd8e37e" title="update_pos Update the GUI to display the current position of the platform." alt="" coords="288,350,513,379"/>
+<area shape="rect" id="node4" href="$class_c_a_nopen_1_1_l_x_m32.html#a40b15f47ae3270b987bc8eb8004b4c92" title=" " alt="" coords="575,5,771,52"/>
+<area shape="rect" id="node5" href="$class_c_a_nopen_1_1_driver.html#a2fe863ef0d5d66f3241eda596a507377" title="homing" alt="" coords="561,77,785,106"/>
+<area shape="rect" id="node6" href="$class_c_a_nopen_1_1_driver.html#aa94db47b419a6afcc409c63c2685e1b6" title="profilePosition_mode" alt="" coords="566,131,781,177"/>
+<area shape="rect" id="node7" href="$class_c_a_nopen_1_1_driver.html#a9f5910067bb7489887a9ed25ba6199f8" title="set_position_offset Set the postion offset of the motor. Rq better to have a large offset to avoid le..." alt="" coords="579,201,767,248"/>
+<area shape="rect" id="node8" href="$class_c_a_nopen_1_1_driver.html#ad8ac07202c14ad344004146e126ecbf4" title="start" alt="" coords="573,273,774,302"/>
+<area shape="rect" id="node10" href="$classstp_1_1_platform.html#a7401402bd15c6ac28a0c83d00ff5a61c" title=" " alt="" coords="572,326,775,355"/>
+<area shape="rect" id="node12" href="$classstp_1_1_platform.html#ade3a53dd2234f57856b25dab957bae41" title=" " alt="" coords="579,380,768,427"/>
+<area shape="rect" id="node11" href="$classstp_1_1_model.html#a553d9f7f63c97eba26e3522a73531dc1" title=" " alt="" coords="833,326,1016,355"/>
+</map>

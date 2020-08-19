@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_4b7063341a3aa6384a0b6309956e879b" kind="dir">
+    <compoundname>include</compoundname>
+    <innerfile refid="_c_a_nopen__socket_8h">CANopen_socket.h</innerfile>
+    <innerfile refid="emcy_8h">emcy.h</innerfile>
+    <innerfile refid="message_8h">message.h</innerfile>
+    <innerfile refid="nmt_8h">nmt.h</innerfile>
+    <innerfile refid="payload_8h">payload.h</innerfile>
+    <innerfile refid="pdo_8h">pdo.h</innerfile>
+    <innerfile refid="sdo_8h">sdo.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/canopen/include/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,25 @@
+\hypertarget{_c_a_nopen__lxm32_8cpp_source}{}\doxysection{C\+A\+Nopen\+\_\+lxm32.\+cpp}
+\label{_c_a_nopen__lxm32_8cpp_source}\index{CANopen\_lxm32.cpp@{CANopen\_lxm32.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{_c_a_nopen__lxm32_8h}{CANopen\_lxm32.h}}"}}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{\Hypertarget{_c_a_nopen__lxm32_8cpp_source_l00003}\mbox{\hyperlink{class_c_a_nopen_1_1_l_x_m32_a30aafa4f881079e83bcb9de63f26c30e}{00003}} \mbox{\hyperlink{class_c_a_nopen_1_1_l_x_m32_a30aafa4f881079e83bcb9de63f26c30e}{CANopen::LXM32::LXM32}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *ifname, uint16\_t can\_id, \textcolor{keywordtype}{bool} verbose)}
+\DoxyCodeLine{00004   : \mbox{\hyperlink{class_c_a_nopen_1_1_driver}{Driver}}(ifname,can\_id,verbose) \{}
+\DoxyCodeLine{00005 }
+\DoxyCodeLine{00006 \}}
+\DoxyCodeLine{00007 }
+\DoxyCodeLine{00008 \textcolor{keywordtype}{bool}}
+\DoxyCodeLine{\Hypertarget{_c_a_nopen__lxm32_8cpp_source_l00009}\mbox{\hyperlink{class_c_a_nopen_1_1_l_x_m32_a04d84237ca467e2a3f39370b1183293c}{00009}} \mbox{\hyperlink{class_c_a_nopen_1_1_l_x_m32_a04d84237ca467e2a3f39370b1183293c}{CANopen::LXM32::set\_angle}}(\textcolor{keywordtype}{double} ang,\textcolor{keywordtype}{bool} absolute, \textcolor{keywordtype}{bool} radian)}
+\DoxyCodeLine{00010 \{}
+\DoxyCodeLine{00011     uint32\_t target = ang*nb\_index\_per\_turn/((radian)?2*M\_PI:360.0f);}
+\DoxyCodeLine{00012     \textcolor{keywordflow}{return} this-\/>set\_position(target, absolute);}
+\DoxyCodeLine{00013 \}}
+\DoxyCodeLine{00014 }
+\DoxyCodeLine{00015 \textcolor{keywordtype}{double}}
+\DoxyCodeLine{\Hypertarget{_c_a_nopen__lxm32_8cpp_source_l00016}\mbox{\hyperlink{class_c_a_nopen_1_1_l_x_m32_a40b15f47ae3270b987bc8eb8004b4c92}{00016}} \mbox{\hyperlink{class_c_a_nopen_1_1_l_x_m32_a40b15f47ae3270b987bc8eb8004b4c92}{CANopen::LXM32::get\_angle}}(\textcolor{keywordtype}{bool} radian)}
+\DoxyCodeLine{00017 \{}
+\DoxyCodeLine{00018     \textcolor{keywordflow}{return} get\_position()*((radian)?2*M\_PI:360.0f)/nb\_index\_per\_turn;   }
+\DoxyCodeLine{00019 \}}
+
+\end{DoxyCode}

@@ -1,0 +1,4 @@
+<map id="CANopen::Driver::send" name="CANopen::Driver::send">
+<area shape="rect" id="node1" title="send the parameter via a Writting SDO message to the driver" alt="" coords="5,14,208,43"/>
+<area shape="rect" id="node2" href="$struct_c_a_nopen_1_1_parameter.html#a0b5d5729fe8b242797e0ab7b49d4519d" title="payload Returns a payload filled with the parameter data." alt="" coords="256,5,447,52"/>
+</map>

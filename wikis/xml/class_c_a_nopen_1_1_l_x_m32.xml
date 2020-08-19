@@ -1,0 +1,337 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="class_c_a_nopen_1_1_l_x_m32" kind="class" language="C++" prot="public">
+    <compoundname>CANopen::LXM32</compoundname>
+    <basecompoundref refid="class_c_a_nopen_1_1_driver" prot="public" virt="non-virtual">CANopen::Driver</basecompoundref>
+    <includes refid="_c_a_nopen__lxm32_8h" local="no">CANopen_lxm32.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_c_a_nopen_1_1_l_x_m32_1a0ec3a74a12cd898808fce514c296e6e6" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CANopen::LXM32::nb_index_per_turn</definition>
+        <argsstring></argsstring>
+        <name>nb_index_per_turn</name>
+        <initializer>= 737280</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_lxm32.h" line="54" column="9" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_lxm32.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_c_a_nopen_1_1_l_x_m32_1a30aafa4f881079e83bcb9de63f26c30e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CANopen::LXM32::LXM32</definition>
+        <argsstring>(const char *ifname, uint16_t can_id, bool verbose=false)</argsstring>
+        <name>LXM32</name>
+        <param>
+          <type>const char *</type>
+          <declname>ifname</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>can_id</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>verbose</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ifname</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Name of the CAN interface. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>can_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Node CAN ID of the driver. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>verbose</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_lxm32.h" line="30" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/src/CANopen_lxm32.cpp" bodystart="3" bodyend="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_l_x_m32_1a04d84237ca467e2a3f39370b1183293c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CANopen::LXM32::set_angle</definition>
+        <argsstring>(double ang, bool absolute=true, bool radian=true)</argsstring>
+        <name>set_angle</name>
+        <param>
+          <type>double</type>
+          <declname>ang</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>absolute</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>radian</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>set_angle Sets the motor at a desired angle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ang</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Angle to reached. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>absolute</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If set the angle will be interpreted as a absolute angle. Else it will be interpreted as a relative angle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>radian</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If set the angle will be interpreted in radian else degree. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the position was sent. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_lxm32.h" line="40" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/src/CANopen_lxm32.cpp" bodystart="9" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_l_x_m32_1a40b15f47ae3270b987bc8eb8004b4c92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double CANopen::LXM32::get_angle</definition>
+        <argsstring>(bool radian=true)</argsstring>
+        <name>get_angle</name>
+        <param>
+          <type>bool</type>
+          <declname>radian</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>get_angle Gets the motor at a desired angle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>radian</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If set the angle return in radian else degree. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The actual motor angle. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_lxm32.h" line="48" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/src/CANopen_lxm32.cpp" bodystart="16" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_nopen_1_1_l_x_m32_1a28fce51b02b587666c8ac7c550bd3b4b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void CANopen::LXM32::print_manufacturer_status</definition>
+        <argsstring>()</argsstring>
+        <name>print_manufacturer_status</name>
+        <reimplements refid="class_c_a_nopen_1_1_driver_1af3663cfb3627f928e7bb71a1358e4e00">print_manufacturer_status</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_lxm32.h" line="51" column="5" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_lxm32.h" bodystart="51" bodyend="51"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Implementation of the <ref refid="class_c_a_nopen_1_1_driver" kindref="compound">Driver</ref> Class for a <ref refid="class_c_a_nopen_1_1_l_x_m32" kindref="compound">LXM32</ref> driver. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>CANopen::Driver</label>
+        <link refid="class_c_a_nopen_1_1_driver"/>
+      </node>
+      <node id="1">
+        <label>CANopen::LXM32</label>
+        <link refid="class_c_a_nopen_1_1_l_x_m32"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>CANopen::Driver</label>
+        <link refid="class_c_a_nopen_1_1_driver"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>m_socket</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>CANopen::LXM32</label>
+        <link refid="class_c_a_nopen_1_1_l_x_m32"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>CANopen::Socket</label>
+        <link refid="class_c_a_nopen_1_1_socket"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_lxm32.h" line="22" column="26" bodyfile="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/include/CANopen_lxm32.h" bodystart="22" bodyend="55"/>
+    <listofallmembers>
+      <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a27c60a5c7499691fa7a8927c3d4e4376" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>_DCOMopmd_act</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7ad4d184bb0cd942f6bdd5ae4435ba1469" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>_DCOMstatus</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7af361a27c780c9ab4fe29763c80456258" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>_p_act</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a0ab750decb5de6f5b2d380776dec09cc" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>_tq_act</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a5790a9abb07781ba9d63ed64d7e0d7fc" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>_v_act</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a6cfa4f397be17e661e93bfb8f74ddb90" prot="protected" virt="non-virtual"><scope>CANopen::LXM32</scope><name>activate_PDO</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32ba7f839fb209d86b9caf014c150219cc1b" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>BlockingError_bit</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903a" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>Control</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a05fb7b074555086b45918179c64494a6" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>ctrl_to_str</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a41294d34718a36687c2183a45ef06258" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>DCOMcontrol</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a838ff7614cdd25d687a7b44f6fcd5112" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>DCOMopmode</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903aaa366dac5dbc508501f36112bf5472572" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>DisableOperation</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903aa81c0fb39e9e145721e1cf45a52f8786f" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>DisableVoltage</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a0272315f94cb7bff729abeb8b8b052df" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>Driver</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903aaff77b9045071e916120fc49e159d2f77" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>EnableOperation</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32ba60c37953da27b51a6801f480557136df" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>Error0_bit</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02da9028b5332c8352a087606c2cc79e9517" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>Fault</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32baae485d8b16c8e58e89321d0e5b4444bc" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>Fault_bit</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02dabafb33b6c4f43661a3257ca5b7569372" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>FaultReactionActive</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903aaa433113dfe71a54d4333344a339a9bbf" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>FaultResest</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1ae34094765084838267ac2ec088cf6554" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>get</name></member>
+      <member refid="class_c_a_nopen_1_1_l_x_m32_1a40b15f47ae3270b987bc8eb8004b4c92" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>get_angle</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a0ece511729874fd45f24f5c517d84eae" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>get_mode</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a1cc9720ef3f1d1a671e5b696d688df3c" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>get_param</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a80f9eac00de5ae6c07d6d4fd56a3b110" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>get_position</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a3087f343d739cb1cd138250ed6925eb8" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>get_state</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a32a2469e5958bf328b7df6ad7b7d49c1" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>get_torque</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a0345a38f5dc54e5bcacd8cc86f6b903a" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>get_velocity</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32ba984217ec2b962f14623e9afcb3e4998e" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>HaltRequest_bit</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a503823e06d7db891f898f6976aa7a514" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>HMmethod</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7ad34e94f677df757d01d787a403a66a2a" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>HMv</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a796f4544102d3244ab451b229afbfb58" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>HMv_out</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a47ce7e20890160451d8b43b4e32d3ceba080efe911eeba1ae575bfaa70b1bb579" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>Homing</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a2fe863ef0d5d66f3241eda596a507377" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>homing</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32baf97dd0f4413b01fae6966a1630d52a75" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>InternalLimitReached_bit</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a47ce7e20890160451d8b43b4e32d3cebab11858fe79ae30e3723a3cdb66360287" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>InterpolatedPosition</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a249f11262c9264cf53486c247d004b99" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>is_available</name></member>
+      <member refid="class_c_a_nopen_1_1_l_x_m32_1a30aafa4f881079e83bcb9de63f26c30e" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>LXM32</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a042844b5c94052c0e8cbf5eab5a04791" prot="protected" virt="non-virtual"><scope>CANopen::LXM32</scope><name>m_available</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1ae208e82352b57ee7db7c2a92f4b0a7d1" prot="protected" virt="non-virtual"><scope>CANopen::LXM32</scope><name>m_can_baud</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1aa72de21b55123ea624ff8c359484e8cd" prot="protected" virt="non-virtual"><scope>CANopen::LXM32</scope><name>m_ifname</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1ad97ef262c000db38000137395c7965d9" prot="protected" virt="non-virtual"><scope>CANopen::LXM32</scope><name>m_node_id</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1abdec4604d2f5bfdc76b0db7430e76d8c" prot="protected" virt="non-virtual"><scope>CANopen::LXM32</scope><name>m_offset_pos</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1aceacce4df52b5f3ee7e64f6e20059555" prot="protected" virt="non-virtual"><scope>CANopen::LXM32</scope><name>m_parameters</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1acd1365f30661ee2f7a981d5e846c66b5" prot="protected" virt="non-virtual"><scope>CANopen::LXM32</scope><name>m_PDO_map</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a11f0158da7cc70943c23a0fa32f8f106" prot="protected" virt="non-virtual"><scope>CANopen::LXM32</scope><name>m_rpdo_socket_thread</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a7978ee3b77f1e12a478f54d769a80842" prot="protected" virt="non-virtual"><scope>CANopen::LXM32</scope><name>m_socket</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a2e64fa4286ab8e37afedd6d28d3f747c" prot="protected" virt="non-virtual"><scope>CANopen::LXM32</scope><name>m_t_socket_thread</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1ae4998ef8bfce528498191cae7226349f" prot="protected" virt="non-virtual"><scope>CANopen::LXM32</scope><name>m_verbose_level</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1abd3e2b466b31e906ae7bcb390277f3dd" prot="protected" virt="non-virtual"><scope>CANopen::LXM32</scope><name>map_PDO</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02dac8ab6913526ea2fc62be30139261fbc6" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>mask</name></member>
+      <member refid="class_c_a_nopen_1_1_l_x_m32_1a0ec3a74a12cd898808fce514c296e6e6" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>nb_index_per_turn</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02da94d00ab583965d1d22f48674f7aefa7a" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>NotReadyToSwitchtON</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02da1692c431e1cf20446dbf23a53913af0c" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>OperationEnabled</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32bab01de1698165aa4c610dabd12dc234d8" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>OperationEnabled_bit</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a47ce7e20890160451d8b43b4e32d3ceb" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>OperationMode</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32ba0c48a11a55403f1e9e201a7d6f17fd8b" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>OperationMode_bit</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32ba51af307866828b496ff4dc8ba4491b90" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>OperationModeStart_bit</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a05da9b5bdd80efed46b0629721d0664b" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>pause</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1af1538f81dbeb9dcafee3ff1a71c95be4aa97a14880dee29baad7ee8201721c585" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>PDO1Receive</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1af1538f81dbeb9dcafee3ff1a71c95be4aa31dc9b14e225c25d304e6d8d9b886ed" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>PDO1Transmit</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1af1538f81dbeb9dcafee3ff1a71c95be4a9e3e5d76b75896fade4e2537f2e6e2f7" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>PDO2Receive</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1af1538f81dbeb9dcafee3ff1a71c95be4a013baa4e40e72d67279f8e5b5d9b4035" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>PDO2Transmit</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1af1538f81dbeb9dcafee3ff1a71c95be4ad6ff06a6427b5f68ecea8552f1a01ef9" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>PDO3Receive</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1af1538f81dbeb9dcafee3ff1a71c95be4ae5889c8e1d945aa150ba4213617681d5" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>PDO3Transmit</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1af1538f81dbeb9dcafee3ff1a71c95be4a6e9b86ade5180f6dcca330b94d1fd4da" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>PDO4Receive</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1af1538f81dbeb9dcafee3ff1a71c95be4ae5f1f938d9d8b8833be74c805268e9ca" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>PDO4Transmit</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1af1538f81dbeb9dcafee3ff1a71c95be4" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>PDOFunctionCode</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a9388c18e3ec79d918b872aab89a47387" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>PPp_target</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a97069ba1c67700d01ba84c05f2a31adb" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>PPv_target</name></member>
+      <member refid="class_c_a_nopen_1_1_l_x_m32_1a28fce51b02b587666c8ac7c550bd3b4b" prot="public" virt="virtual"><scope>CANopen::LXM32</scope><name>print_manufacturer_status</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a47ce7e20890160451d8b43b4e32d3ceba3502834b10b8f0201a628b9a0e227425" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>ProfilePosition</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1aa94db47b419a6afcc409c63c2685e1b6" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>profilePosition_mode</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a47ce7e20890160451d8b43b4e32d3cebaff42df87ec625334500bb240f76989ed" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>ProfileTorque</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a4f2bd3e58752dfd0bc37b749452ebcfd" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>profileTorque_mode</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a47ce7e20890160451d8b43b4e32d3cebadb9f0017145112261254a48699a41961" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>ProfileVelocity</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a32db059a1723f5c8db8986324ce21f8f" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>profileVelocity_mode</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a68422e03c559dee45c67d4743784c193" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>PTtq_target</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a9a00b3971b7ee9985f91dd48ea7e1c73" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>PVv_target</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903aa6e8fc43d0b5f1ef14ac7ba475572c9b6" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>QuickStop</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32bad894790b9971017bbbe70893a78715fd" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>QuickStop_bit</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02da8accb6a0a36eebcd88f85e0b92faf68a" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>QuickStopActive</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7ae34a009131bb4956dbb9a5c9e76b1c5a" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>RAMP_v_acc</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7a6f355b7bef6158931cc8cf5e4b1f9c83" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>RAMP_v_dec</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02dafa947edce547a30b314910e6931235a4" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>ReadyToSwitchON</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32ba372bcbff592b4489af4a65e4952d5a81" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>ReadyToSwitchOn_bit</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a9504ce08c5bec248880fe4e6803565f7" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>Register</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32ba127fe4e9ceb301d180a2f2cea0cfc76b" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>Remote_bit</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a657422553d9c1c0b859c21e90b637961" prot="protected" virt="non-virtual"><scope>CANopen::LXM32</scope><name>rpdo_mutex</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a4e2a54808fafdde192c0550bf8612274" prot="protected" virt="non-virtual"><scope>CANopen::LXM32</scope><name>RPDO_socket</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a001afe91237b33a88254cc86fc5d7452" prot="protected" virt="non-virtual"><scope>CANopen::LXM32</scope><name>rpdo_socket_flag</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1ad22705c4ee8cfee391113d359e790e67" prot="protected" virt="non-virtual"><scope>CANopen::LXM32</scope><name>send</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a0da074f8cf3498e5d1c721ceaaa81a6e" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>set</name></member>
+      <member refid="class_c_a_nopen_1_1_l_x_m32_1a04d84237ca467e2a3f39370b1183293c" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>set_angle</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1aa831bccff07ba4c794952c8477e6810a" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>set_control</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a7e215f070766749f80655042cf70b6c2" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>set_mode</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a20967f674c7bfa52407350933248a300" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>set_position</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a9f5910067bb7489887a9ed25ba6199f8" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>set_position_offset</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a4b97e1e92f96eb579a85a4d33ef0592a" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>set_torque</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a7a249fdda103c6c8d11e840d66514137" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>set_velocity</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903aa6ccc4c2738c634abe2fd21cbe93f9fdb" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>Shutdown</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1ad8ac07202c14ad344004146e126ecbf4" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>start</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02d" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>State</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32b" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>StatusBits</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1abd7d88699d02c007d5f23e608d8f0a0a" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>stop</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02dac2e13098b6500cdcde217d2a9cc9ebb6" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>SwitchedON</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32ba16ae91b87294fb45b6f802202f3baef0" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>SwitchedOn_bit</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1af4031601d8ef94250316995e8339903aae98ed55dcd60bdd15d179ec32f651b8d" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>SwitchON</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a16a451fc3593c0f174911e969a7be02da52c43c11131a9d753319d5e065d031c3" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>SwitchONDisabled</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32ba2a920673c9a04465308edfcf8a56b079" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>SwitchONDisabled_bit</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a535cd1c9eaf129d3b8b51cd636cb3ac0" prot="protected" virt="non-virtual"><scope>CANopen::LXM32</scope><name>T_socket</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a3178e7bc0783980c4523703b586d9da7" prot="protected" virt="non-virtual"><scope>CANopen::LXM32</scope><name>t_socket_flag</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32ba85e31a4e46272d9dfa78d793396f985b" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>TargetReached_bit</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a96123f2965334f4fda9c01ae7b0f8f46" prot="protected" virt="non-virtual"><scope>CANopen::LXM32</scope><name>update</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32baafb3ac06d4413f6f4c325387c216c3f7" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>ValidRef_bit</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a47ce7e20890160451d8b43b4e32d3cebacaf4b433be6b0476e7f157e086fea379" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>Velocity</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a02eea97cb3b192f0e00925ded764b32ba9937b12559ca3fb1023e76462c7b8aa5" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>VoltageEnabled_bit</name></member>
+      <member refid="class_c_a_nopen_1_1_driver_1a6d875fd4488248671fb060c6a73030e2" prot="public" virt="non-virtual"><scope>CANopen::LXM32</scope><name>wait_state</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

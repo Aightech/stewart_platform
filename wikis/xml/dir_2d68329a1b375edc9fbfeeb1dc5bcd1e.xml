@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_2d68329a1b375edc9fbfeeb1dc5bcd1e" kind="dir">
+    <compoundname>/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/src</compoundname>
+    <innerfile refid="joystick_8cpp">joystick.cpp</innerfile>
+    <innerfile refid="lib_2lxm32_2lib_2joystick_2src_2main_8cpp">main.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/lib/joystick/src/"/>
+  </compounddef>
+</doxygen>

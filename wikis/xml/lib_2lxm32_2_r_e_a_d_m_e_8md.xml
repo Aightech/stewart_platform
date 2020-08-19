@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="lib_2lxm32_2_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>lib/lxm32/README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>lxm32</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Information</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Brief**:<sp/>Library<sp/>to<sp/>control<sp/>a<sp/>Lexium32A<sp/>driver<sp/>from<sp/>Schneider.<sp/></highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Languages**:<sp/>C++</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Libraries**:<sp/></highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Note**:<sp/>/</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Compatibility**:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">|<sp/>Ubuntu<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Window10<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>MacOS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|:----------------:|:----------------:|:----------------:|</highlight></codeline>
+<codeline><highlight class="normal">|:heavy_check_mark:|:grey_question:|:grey_question:<sp/><sp/><sp/>|</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Building</highlight></codeline>
+<codeline><highlight class="normal">###<sp/>Ubuntu</highlight></codeline>
+<codeline><highlight class="normal">####<sp/>Steps</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Clone<sp/>the<sp/>repository<sp/>and<sp/>go<sp/>inside.</highlight></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">git<sp/>clone<sp/>https://gitlab-dev.isir.upmc.fr/devillard/lxm32.git<sp/>&amp;&amp;<sp/>cd<sp/>lxm32</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Create<sp/>a<sp/>build<sp/>directory<sp/>and<sp/>go<sp/>inside.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Configure<sp/>the<sp/>project.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Build<sp/>the<sp/>project.</highlight></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">mkdir<sp/>build<sp/>&amp;&amp;<sp/>cd<sp/>build<sp/>&amp;&amp;<sp/>cmake<sp/>..<sp/>&amp;&amp;<sp/>cmake<sp/>--build<sp/>.</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Schematics</highlight></codeline>
+<codeline><highlight class="normal">![test](docs/steps.png)</highlight></codeline>
+<codeline><highlight class="normal">![test](docs/registers.png)</highlight></codeline>
+    </programlisting>
+    <location file="/home/adev/Documents/STECH/stewart_platform/lib/lxm32/README.md"/>
+  </compounddef>
+</doxygen>

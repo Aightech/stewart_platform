@@ -1,0 +1,24 @@
+\hypertarget{emcy_8h_source}{}\doxysection{emcy.\+h}
+\label{emcy_8h_source}\index{emcy.h@{emcy.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#ifndef \_CANOPEN\_EMCY\_MESSAGE\_H\_}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#define \_CANOPEN\_EMCY\_MESSAGE\_H\_}}
+\DoxyCodeLine{00003 }
+\DoxyCodeLine{00011 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{message_8h}{message.h}}"}}
+\DoxyCodeLine{00012 }
+\DoxyCodeLine{00013 \textcolor{keyword}{namespace }CANopen \{}
+\DoxyCodeLine{\Hypertarget{emcy_8h_source_l00017}\mbox{\hyperlink{class_c_a_nopen_1_1_e_m_c_y_message}{00017}} \textcolor{keyword}{class }\mbox{\hyperlink{class_c_a_nopen_1_1_e_m_c_y_message}{EMCYMessage}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_c_a_nopen_1_1_message}{Message}} \{}
+\DoxyCodeLine{00018     \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019 }
+\DoxyCodeLine{00020     \mbox{\hyperlink{class_c_a_nopen_1_1_e_m_c_y_message}{EMCYMessage}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00021     \mbox{\hyperlink{class_c_a_nopen_1_1_e_m_c_y_message}{EMCYMessage}}(\textcolor{keyword}{const} can\_frame \&other);}
+\DoxyCodeLine{00022     }
+\DoxyCodeLine{00023     uint16\_t code() \textcolor{keyword}{const};}
+\DoxyCodeLine{00024     uint8\_t reg() \textcolor{keyword}{const};}
+\DoxyCodeLine{00025 \};}
+\DoxyCodeLine{00026 \} \textcolor{comment}{// namespace CANopen}}
+\DoxyCodeLine{00027 }
+\DoxyCodeLine{00028 \textcolor{preprocessor}{\#endif // \_CANOPEN\_NMT\_MESSAGE\_H\_}}
+
+\end{DoxyCode}

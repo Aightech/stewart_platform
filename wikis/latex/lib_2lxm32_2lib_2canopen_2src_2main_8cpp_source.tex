@@ -1,0 +1,91 @@
+\hypertarget{lib_2lxm32_2lib_2canopen_2src_2main_8cpp_source}{}\doxysection{lib/lxm32/lib/canopen/src/main.cpp}
+\label{lib_2lxm32_2lib_2canopen_2src_2main_8cpp_source}\index{main.cpp@{main.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{_c_a_nopen__socket_8h}{CANopen\_socket.h}}"}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{00003 }
+\DoxyCodeLine{00004 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00005 usage(\textcolor{keywordtype}{char} **argv) \{}
+\DoxyCodeLine{00006     printf(\textcolor{stringliteral}{"usage: \(\backslash\)n\(\backslash\)t\%s ifname 0xindex 0xsub [ size base data ]\(\backslash\)n"}, argv[0]);}
+\DoxyCodeLine{00007     printf(\textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)tArg:\(\backslash\)tifname  : CAN interface name\(\backslash\)n"});}
+\DoxyCodeLine{00008     printf(\textcolor{stringliteral}{"\(\backslash\)t\(\backslash\)t0xindex : Object register index\(\backslash\)n"});}
+\DoxyCodeLine{00009     printf(\textcolor{stringliteral}{"\(\backslash\)t\(\backslash\)t0xsub   : Object register subindex\(\backslash\)n"});}
+\DoxyCodeLine{00010     printf(\textcolor{stringliteral}{"\(\backslash\)t\(\backslash\)tsize : Data size (number of bytes)\(\backslash\)n"});}
+\DoxyCodeLine{00011     printf(\textcolor{stringliteral}{"\(\backslash\)t\(\backslash\)tbase : Numerical base of the value passed.\(\backslash\)n"});}
+\DoxyCodeLine{00012     printf(\textcolor{stringliteral}{"\(\backslash\)t\(\backslash\)tdata : Value to write.\(\backslash\)n"});}
+\DoxyCodeLine{00013     printf(\textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)tEx:\(\backslash\)tTo read register 0x1000:2 of node 4 on \(\backslash\)"can0\(\backslash\)": \(\backslash\)n\(\backslash\)t\(\backslash\)t\%s can0 4 1000 2\(\backslash\)n"}, argv[0]);}
+\DoxyCodeLine{00014     printf(\textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)t\(\backslash\)tTo write in register 0x2000:F of node 3 the value 0x1234 on \(\backslash\)"can0\(\backslash\)": \(\backslash\)n\(\backslash\)t\(\backslash\)t\%s can0 3 2000 F 2 x 1234\(\backslash\)n"}, argv[0]);}
+\DoxyCodeLine{00015 \}}
+\DoxyCodeLine{00016 }
+\DoxyCodeLine{00017 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{00018 \textcolor{keyword}{struct }sss \{}
+\DoxyCodeLine{00019     T a;}
+\DoxyCodeLine{00020 \};}
+\DoxyCodeLine{00021 }
+\DoxyCodeLine{00022 \textcolor{keywordtype}{int}}
+\DoxyCodeLine{00023 main(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char} **argv) \{}
+\DoxyCodeLine{00024     printf(\textcolor{stringliteral}{"\#\#\#\# CANopen SDO sender \#\#\#\#\(\backslash\)n"});}
+\DoxyCodeLine{00025     \textcolor{keywordflow}{if}(argc == 2)}
+\DoxyCodeLine{00026     \{}
+\DoxyCodeLine{00027         \textcolor{keywordtype}{char} *ifname = argv[1];}
+\DoxyCodeLine{00028         printf(\textcolor{stringliteral}{"Opening CAN socket on inteface : "});}
+\DoxyCodeLine{00029         \mbox{\hyperlink{class_c_a_nopen_1_1_socket}{CANopen::Socket}} can(ifname, \textcolor{keyword}{true});}
+\DoxyCodeLine{00030         std::cout << \textcolor{stringliteral}{"Reply: "}; }
+\DoxyCodeLine{00031         can.send(\mbox{\hyperlink{class_c_a_nopen_1_1_n_m_t_message}{CANopen::NMTMessage}}(CANopen::NMTMessage::GoToOperational,0));}
+\DoxyCodeLine{00032         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00033     \}}
+\DoxyCodeLine{00034     \textcolor{keywordflow}{if}(argc == 5 || argc == 8) \{}
+\DoxyCodeLine{00035         uint8\_t i = 1;}
+\DoxyCodeLine{00036         \textcolor{keywordtype}{char} *ifname = argv[i++];}
+\DoxyCodeLine{00037         uint8\_t node = (uint8\_t)strtol(argv[i++], NULL, 16);}
+\DoxyCodeLine{00038         uint16\_t index = (uint16\_t)strtol(argv[i++], NULL, 16);}
+\DoxyCodeLine{00039         uint8\_t subindex = (uint8\_t)strtol(argv[i++], NULL, 16);}
+\DoxyCodeLine{00040 }
+\DoxyCodeLine{00041         printf(\textcolor{stringliteral}{"Opening CAN socket on inteface : "});}
+\DoxyCodeLine{00042         \mbox{\hyperlink{class_c_a_nopen_1_1_socket}{CANopen::Socket}} can(ifname, \textcolor{keyword}{true});}
+\DoxyCodeLine{00043         \textcolor{keywordflow}{if}(argc == 5) \{}
+\DoxyCodeLine{00044             can.send(\mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_outbound_read}{CANopen::SDOOutboundRead}}(node, index, subindex));}
+\DoxyCodeLine{00045             \mbox{\hyperlink{class_c_a_nopen_1_1_payload}{CANopen::Payload}} p= can.receive()-\/>payload();}
+\DoxyCodeLine{00046         std::cout << \textcolor{stringliteral}{"Reply: "} << p << \textcolor{stringliteral}{" -\/> "} << p.\mbox{\hyperlink{class_c_a_nopen_1_1_payload_aef05ef8cfc8b9ba4170891f3168a726b}{value}}<uint32\_t>() << std::endl;}
+\DoxyCodeLine{00047 }
+\DoxyCodeLine{00048         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00049             uint8\_t s = (uint8\_t)strtol(argv[i++], NULL, 10); \textcolor{comment}{// size of the data to send}}
+\DoxyCodeLine{00050             uint8\_t b = (argv[i++][0] == \textcolor{charliteral}{'d'}) ? 10 : 16;      \textcolor{comment}{// base of the value writen}}
+\DoxyCodeLine{00051             \textcolor{keywordtype}{char} *v = argv[i++];}
+\DoxyCodeLine{00052 }
+\DoxyCodeLine{00053             \mbox{\hyperlink{class_c_a_nopen_1_1_payload}{CANopen::Payload}} p;}
+\DoxyCodeLine{00054             \textcolor{keywordflow}{if}(s == 1) \{}
+\DoxyCodeLine{00055                 int8\_t data = (uint32\_t)strtol(v, NULL, b);}
+\DoxyCodeLine{00056                 p << data;}
+\DoxyCodeLine{00057             \}}
+\DoxyCodeLine{00058             \textcolor{keywordflow}{if}(s == 2) \{}
+\DoxyCodeLine{00059                 int16\_t data = (uint32\_t)strtol(v, NULL, b);}
+\DoxyCodeLine{00060                 p << data;}
+\DoxyCodeLine{00061             \}}
+\DoxyCodeLine{00062             \textcolor{keywordflow}{if}(s == 4) \{}
+\DoxyCodeLine{00063                 int32\_t data = (uint32\_t)strtol(v, NULL, b);}
+\DoxyCodeLine{00064                 p << data;}
+\DoxyCodeLine{00065             \}}
+\DoxyCodeLine{00066 }
+\DoxyCodeLine{00067             \textcolor{comment}{// Use the methode value to acces the value of the payload}}
+\DoxyCodeLine{00068             \textcolor{comment}{/*p.value<uint16\_t>(2) = 0x6789;}}
+\DoxyCodeLine{00069 \textcolor{comment}{          std::cout << "The second block of 2bytes is equale to (uint16\_t):}}
+\DoxyCodeLine{00070 \textcolor{comment}{          stdccout << "value of two byte at place 2" << std::hex << p.value<uint16\_t>(2) << std::endl;}}
+\DoxyCodeLine{00071 \textcolor{comment}{          CANopen::SDOOutboundWrite msg2 = CANopen::PDOMessage::set(3, CANopen::PDOMessage::PDO2Transmit);}}
+\DoxyCodeLine{00072 \textcolor{comment}{                */}}
+\DoxyCodeLine{00073 }
+\DoxyCodeLine{00074             \mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_outbound_write}{CANopen::SDOOutboundWrite}} msg = \mbox{\hyperlink{class_c_a_nopen_1_1_s_d_o_outbound_write}{CANopen::SDOOutboundWrite}}(node, index, subindex, p);}
+\DoxyCodeLine{00075 }
+\DoxyCodeLine{00076             std::cout << \textcolor{stringliteral}{"payload sent: "} << p << std::endl;}
+\DoxyCodeLine{00077             std::cout << \textcolor{stringliteral}{"Message  sent: "} << msg.to\_string() << std::endl;}
+\DoxyCodeLine{00078 }
+\DoxyCodeLine{00079             can.send(std::move(msg));}
+\DoxyCodeLine{00080         \}}
+\DoxyCodeLine{00081     \} \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00082         usage(argv);}
+\DoxyCodeLine{00083 }
+\DoxyCodeLine{00084     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00085 \}}
+
+\end{DoxyCode}

@@ -1,0 +1,1228 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="class_ui___main_window" kind="class" language="C++" prot="public">
+    <compoundname>Ui_MainWindow</compoundname>
+    <derivedcompoundref refid="class_ui_1_1_main_window" prot="public" virt="non-virtual">Ui::MainWindow</derivedcompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_ui___main_window_1a356f1cf3ebda15f1fac59467ee081b74" prot="public" static="no" mutable="no">
+        <type>QWidget *</type>
+        <definition>QWidget* Ui_MainWindow::centralwidget</definition>
+        <argsstring></argsstring>
+        <name>centralwidget</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="40" column="13" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a6b2a0c5f7e8ff2a87134908dd770d2d2" prot="public" static="no" mutable="no">
+        <type>QGridLayout *</type>
+        <definition>QGridLayout* Ui_MainWindow::gridLayout_2</definition>
+        <argsstring></argsstring>
+        <name>gridLayout_2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="41" column="17" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1afcc20a3d5058037a00cdc6122f231848" prot="public" static="no" mutable="no">
+        <type>QVBoxLayout *</type>
+        <definition>QVBoxLayout* Ui_MainWindow::verticalLayout_5</definition>
+        <argsstring></argsstring>
+        <name>verticalLayout_5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="42" column="17" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1ac1cbc41e9dbaeb3d0bdc2189d8e9ee1d" prot="public" static="no" mutable="no">
+        <type>QLabel *</type>
+        <definition>QLabel* Ui_MainWindow::label_13</definition>
+        <argsstring></argsstring>
+        <name>label_13</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="43" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a2afb915e1492b7e6704db4918c1e5e80" prot="public" static="no" mutable="no">
+        <type>QHBoxLayout *</type>
+        <definition>QHBoxLayout* Ui_MainWindow::horizontalLayout_7</definition>
+        <argsstring></argsstring>
+        <name>horizontalLayout_7</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="44" column="17" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1aa2621565827195e88436fb54220bb48d" prot="public" static="no" mutable="no">
+        <type>QLabel *</type>
+        <definition>QLabel* Ui_MainWindow::label_12</definition>
+        <argsstring></argsstring>
+        <name>label_12</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="45" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a05a6cd080251713c8c5939c063bfab4f" prot="public" static="no" mutable="no">
+        <type>QDoubleSpinBox *</type>
+        <definition>QDoubleSpinBox* Ui_MainWindow::doubleSpinBox_sin_x</definition>
+        <argsstring></argsstring>
+        <name>doubleSpinBox_sin_x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="46" column="20" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1ab48e49d68609b4c66e5169e2f87e3eb9" prot="public" static="no" mutable="no">
+        <type>QHBoxLayout *</type>
+        <definition>QHBoxLayout* Ui_MainWindow::horizontalLayout_9</definition>
+        <argsstring></argsstring>
+        <name>horizontalLayout_9</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="47" column="17" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1ab6ac4329a89041f557332f6569d94493" prot="public" static="no" mutable="no">
+        <type>QLabel *</type>
+        <definition>QLabel* Ui_MainWindow::label_16</definition>
+        <argsstring></argsstring>
+        <name>label_16</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="48" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a804eaedb9bb0704958f96b2a3ff970a0" prot="public" static="no" mutable="no">
+        <type>QDoubleSpinBox *</type>
+        <definition>QDoubleSpinBox* Ui_MainWindow::doubleSpinBox_sin_y</definition>
+        <argsstring></argsstring>
+        <name>doubleSpinBox_sin_y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="49" column="20" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a8ead8fc876ee91c30864822eedb9c370" prot="public" static="no" mutable="no">
+        <type>QHBoxLayout *</type>
+        <definition>QHBoxLayout* Ui_MainWindow::horizontalLayout_8</definition>
+        <argsstring></argsstring>
+        <name>horizontalLayout_8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="50" column="17" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a882200d8ae16962f5dd3b749ebacbf7e" prot="public" static="no" mutable="no">
+        <type>QLabel *</type>
+        <definition>QLabel* Ui_MainWindow::label_15</definition>
+        <argsstring></argsstring>
+        <name>label_15</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="51" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a9e22a39ea1699287d89c5bb795427c44" prot="public" static="no" mutable="no">
+        <type>QDoubleSpinBox *</type>
+        <definition>QDoubleSpinBox* Ui_MainWindow::doubleSpinBox_sin_z</definition>
+        <argsstring></argsstring>
+        <name>doubleSpinBox_sin_z</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="52" column="20" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1ac67621eaf3c700ae21dba70b5c796fcd" prot="public" static="no" mutable="no">
+        <type>QRadioButton *</type>
+        <definition>QRadioButton* Ui_MainWindow::radioButton_sin_mvt</definition>
+        <argsstring></argsstring>
+        <name>radioButton_sin_mvt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="53" column="18" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a93c190b085c63a667c535ba0bbcfec7c" prot="public" static="no" mutable="no">
+        <type>QVBoxLayout *</type>
+        <definition>QVBoxLayout* Ui_MainWindow::verticalLayout_6</definition>
+        <argsstring></argsstring>
+        <name>verticalLayout_6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="54" column="17" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a8384329c3663ff274e926a12024aab52" prot="public" static="no" mutable="no">
+        <type>QSpacerItem *</type>
+        <definition>QSpacerItem* Ui_MainWindow::verticalSpacer</definition>
+        <argsstring></argsstring>
+        <name>verticalSpacer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="55" column="17" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a55100f53189f25cf8a1ee0beb29be642" prot="public" static="no" mutable="no">
+        <type>QLabel *</type>
+        <definition>QLabel* Ui_MainWindow::label_18</definition>
+        <argsstring></argsstring>
+        <name>label_18</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="56" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1af1a7bbeee705545b94c55c297299118d" prot="public" static="no" mutable="no">
+        <type>QHBoxLayout *</type>
+        <definition>QHBoxLayout* Ui_MainWindow::horizontalLayout_10</definition>
+        <argsstring></argsstring>
+        <name>horizontalLayout_10</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="57" column="17" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a1f4ff90c122fededcc08604401442034" prot="public" static="no" mutable="no">
+        <type>QLabel *</type>
+        <definition>QLabel* Ui_MainWindow::label_17</definition>
+        <argsstring></argsstring>
+        <name>label_17</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="58" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a9fe3891af8b6ca25c37d871df45600a1" prot="public" static="no" mutable="no">
+        <type>QDoubleSpinBox *</type>
+        <definition>QDoubleSpinBox* Ui_MainWindow::doubleSpinBox_sin_omega</definition>
+        <argsstring></argsstring>
+        <name>doubleSpinBox_sin_omega</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="59" column="20" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1adc1f5fdd97fb3729999c56902d0fa591" prot="public" static="no" mutable="no">
+        <type>QSpacerItem *</type>
+        <definition>QSpacerItem* Ui_MainWindow::verticalSpacer_2</definition>
+        <argsstring></argsstring>
+        <name>verticalSpacer_2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="60" column="17" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a17207206e55a605ecc14a3534b7e575f" prot="public" static="no" mutable="no">
+        <type>QFrame *</type>
+        <definition>QFrame* Ui_MainWindow::line_2</definition>
+        <argsstring></argsstring>
+        <name>line_2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="61" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a525ed3c5fe0784ac502ee222fba4e205" prot="public" static="no" mutable="no">
+        <type>QGridLayout *</type>
+        <definition>QGridLayout* Ui_MainWindow::gridLayout</definition>
+        <argsstring></argsstring>
+        <name>gridLayout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="62" column="17" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a0c01bad60d9f422a1258e710635a2f65" prot="public" static="no" mutable="no">
+        <type>QVBoxLayout *</type>
+        <definition>QVBoxLayout* Ui_MainWindow::verticalLayout_2</definition>
+        <argsstring></argsstring>
+        <name>verticalLayout_2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="63" column="17" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a13936e6f18b1c90402b3c7a3c92b6cdb" prot="public" static="no" mutable="no">
+        <type>QLabel *</type>
+        <definition>QLabel* Ui_MainWindow::label_7</definition>
+        <argsstring></argsstring>
+        <name>label_7</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="64" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1acd6fdc9ebacc4b25b834162380d75ce8" prot="public" static="no" mutable="no">
+        <type>QHBoxLayout *</type>
+        <definition>QHBoxLayout* Ui_MainWindow::horizontalLayout</definition>
+        <argsstring></argsstring>
+        <name>horizontalLayout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="65" column="17" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a78c7e10730b43c6700cd7216911ed76a" prot="public" static="no" mutable="no">
+        <type>QLabel *</type>
+        <definition>QLabel* Ui_MainWindow::label_4</definition>
+        <argsstring></argsstring>
+        <name>label_4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="66" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1acdb66ad5541dceb9609f7c9eb61211d6" prot="public" static="no" mutable="no">
+        <type>QDoubleSpinBox *</type>
+        <definition>QDoubleSpinBox* Ui_MainWindow::doubleSpinBox_cart_roll</definition>
+        <argsstring></argsstring>
+        <name>doubleSpinBox_cart_roll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="67" column="20" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a03ce63974cc69b067c91bbf285cceca8" prot="public" static="no" mutable="no">
+        <type>QHBoxLayout *</type>
+        <definition>QHBoxLayout* Ui_MainWindow::horizontalLayout_3</definition>
+        <argsstring></argsstring>
+        <name>horizontalLayout_3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="68" column="17" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a663f728e6244926a795c6e6892673b1d" prot="public" static="no" mutable="no">
+        <type>QLabel *</type>
+        <definition>QLabel* Ui_MainWindow::label_6</definition>
+        <argsstring></argsstring>
+        <name>label_6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="69" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a953d66beb0dfd3502804f692f3acc822" prot="public" static="no" mutable="no">
+        <type>QDoubleSpinBox *</type>
+        <definition>QDoubleSpinBox* Ui_MainWindow::doubleSpinBox_cart_pitch</definition>
+        <argsstring></argsstring>
+        <name>doubleSpinBox_cart_pitch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="70" column="20" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a80867018070156432923d0266cc9fe25" prot="public" static="no" mutable="no">
+        <type>QHBoxLayout *</type>
+        <definition>QHBoxLayout* Ui_MainWindow::horizontalLayout_2</definition>
+        <argsstring></argsstring>
+        <name>horizontalLayout_2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="71" column="17" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1ad6bab8fb8903b8f41afea1218ee52695" prot="public" static="no" mutable="no">
+        <type>QLabel *</type>
+        <definition>QLabel* Ui_MainWindow::label_5</definition>
+        <argsstring></argsstring>
+        <name>label_5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="72" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a07f4c00eab4766202a73b7e16f4d8e91" prot="public" static="no" mutable="no">
+        <type>QDoubleSpinBox *</type>
+        <definition>QDoubleSpinBox* Ui_MainWindow::doubleSpinBox_cart_yaw</definition>
+        <argsstring></argsstring>
+        <name>doubleSpinBox_cart_yaw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="73" column="20" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a9125c3f58951f983d461686ccaabb468" prot="public" static="no" mutable="no">
+        <type>QLabel *</type>
+        <definition>QLabel* Ui_MainWindow::label_20</definition>
+        <argsstring></argsstring>
+        <name>label_20</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="74" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a6f40fc110b15410c00837a446d57bdbe" prot="public" static="no" mutable="no">
+        <type>QVBoxLayout *</type>
+        <definition>QVBoxLayout* Ui_MainWindow::verticalLayout_4</definition>
+        <argsstring></argsstring>
+        <name>verticalLayout_4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="75" column="17" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1af183bfbfb9f38bbdd60caf92b15e23dc" prot="public" static="no" mutable="no">
+        <type>QLabel *</type>
+        <definition>QLabel* Ui_MainWindow::label_8</definition>
+        <argsstring></argsstring>
+        <name>label_8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="76" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1ae183387a7d233b437a637b403ba39ffd" prot="public" static="no" mutable="no">
+        <type>QHBoxLayout *</type>
+        <definition>QHBoxLayout* Ui_MainWindow::horizontalLayout_4</definition>
+        <argsstring></argsstring>
+        <name>horizontalLayout_4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="77" column="17" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a0e90c7e9ad77386881e0b264ddb9dd22" prot="public" static="no" mutable="no">
+        <type>QLabel *</type>
+        <definition>QLabel* Ui_MainWindow::label_9</definition>
+        <argsstring></argsstring>
+        <name>label_9</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="78" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a381762f7049fde8c67cac178caaa2757" prot="public" static="no" mutable="no">
+        <type>QDoubleSpinBox *</type>
+        <definition>QDoubleSpinBox* Ui_MainWindow::doubleSpinBox_cart_x</definition>
+        <argsstring></argsstring>
+        <name>doubleSpinBox_cart_x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="79" column="20" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a14c9d4842c3e97e16e7873ef0aecdb1e" prot="public" static="no" mutable="no">
+        <type>QHBoxLayout *</type>
+        <definition>QHBoxLayout* Ui_MainWindow::horizontalLayout_5</definition>
+        <argsstring></argsstring>
+        <name>horizontalLayout_5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="80" column="17" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a9dc4dba26b83e0c94aa566e1c564420b" prot="public" static="no" mutable="no">
+        <type>QLabel *</type>
+        <definition>QLabel* Ui_MainWindow::label_10</definition>
+        <argsstring></argsstring>
+        <name>label_10</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="81" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1ae804d3a01e893bc74c89343016acd76a" prot="public" static="no" mutable="no">
+        <type>QDoubleSpinBox *</type>
+        <definition>QDoubleSpinBox* Ui_MainWindow::doubleSpinBox_cart_y</definition>
+        <argsstring></argsstring>
+        <name>doubleSpinBox_cart_y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="82" column="20" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a1351e317cba7ca711b6b4d2212b6bf36" prot="public" static="no" mutable="no">
+        <type>QHBoxLayout *</type>
+        <definition>QHBoxLayout* Ui_MainWindow::horizontalLayout_6</definition>
+        <argsstring></argsstring>
+        <name>horizontalLayout_6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="83" column="17" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a4f12a71b4a2fb6f85df2300d83b5ed3e" prot="public" static="no" mutable="no">
+        <type>QLabel *</type>
+        <definition>QLabel* Ui_MainWindow::label_11</definition>
+        <argsstring></argsstring>
+        <name>label_11</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="84" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a3303acbaf828ed141f8414ce3da7687f" prot="public" static="no" mutable="no">
+        <type>QDoubleSpinBox *</type>
+        <definition>QDoubleSpinBox* Ui_MainWindow::doubleSpinBox_cart_z</definition>
+        <argsstring></argsstring>
+        <name>doubleSpinBox_cart_z</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="85" column="20" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1add4061a8dc5a94be04e0579450c2a330" prot="public" static="no" mutable="no">
+        <type>QRadioButton *</type>
+        <definition>QRadioButton* Ui_MainWindow::radioButton_cart_mvt</definition>
+        <argsstring></argsstring>
+        <name>radioButton_cart_mvt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="86" column="18" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a61269a10bc342763a5a51a93a235944d" prot="public" static="no" mutable="no">
+        <type>QRadioButton *</type>
+        <definition>QRadioButton* Ui_MainWindow::radioButton</definition>
+        <argsstring></argsstring>
+        <name>radioButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="87" column="18" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1ad81454913b05646674b1a41c595b8510" prot="public" static="no" mutable="no">
+        <type>QHBoxLayout *</type>
+        <definition>QHBoxLayout* Ui_MainWindow::horizontalLayout_12</definition>
+        <argsstring></argsstring>
+        <name>horizontalLayout_12</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="88" column="17" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a8a0d793710705878e3f433550ca05470" prot="public" static="no" mutable="no">
+        <type>QPushButton *</type>
+        <definition>QPushButton* Ui_MainWindow::pushButton_start</definition>
+        <argsstring></argsstring>
+        <name>pushButton_start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="89" column="17" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a96b1fefd9ac8c6ad2cd5395eeb5ad98b" prot="public" static="no" mutable="no">
+        <type>QPushButton *</type>
+        <definition>QPushButton* Ui_MainWindow::pushButton_pause</definition>
+        <argsstring></argsstring>
+        <name>pushButton_pause</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="90" column="17" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a1c2326996ec6bdb6bd873fc2b0aed709" prot="public" static="no" mutable="no">
+        <type>QPushButton *</type>
+        <definition>QPushButton* Ui_MainWindow::pushButton_stop</definition>
+        <argsstring></argsstring>
+        <name>pushButton_stop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="91" column="17" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1add492bf5763815e82fba9ba9297c50e6" prot="public" static="no" mutable="no">
+        <type>QFrame *</type>
+        <definition>QFrame* Ui_MainWindow::line_4</definition>
+        <argsstring></argsstring>
+        <name>line_4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="92" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a27e0b134c3c12643afbf0b50dd175453" prot="public" static="no" mutable="no">
+        <type>QFrame *</type>
+        <definition>QFrame* Ui_MainWindow::line_3</definition>
+        <argsstring></argsstring>
+        <name>line_3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="93" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a1e64a8da62994a2cb0ff65f32b26639e" prot="public" static="no" mutable="no">
+        <type>QHBoxLayout *</type>
+        <definition>QHBoxLayout* Ui_MainWindow::horizontalLayout_15</definition>
+        <argsstring></argsstring>
+        <name>horizontalLayout_15</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="94" column="17" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a0376fd90247280e7c7957cc70628708c" prot="public" static="no" mutable="no">
+        <type>QLabel *</type>
+        <definition>QLabel* Ui_MainWindow::label_3</definition>
+        <argsstring></argsstring>
+        <name>label_3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="95" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a7b66d5d6ab55f3977317359d09a42345" prot="public" static="no" mutable="no">
+        <type>QVBoxLayout *</type>
+        <definition>QVBoxLayout* Ui_MainWindow::verticalLayout_7</definition>
+        <argsstring></argsstring>
+        <name>verticalLayout_7</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="96" column="17" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1aa53955f35b7d9f3d161525ed8639db84" prot="public" static="no" mutable="no">
+        <type>QHBoxLayout *</type>
+        <definition>QHBoxLayout* Ui_MainWindow::horizontalLayout_14</definition>
+        <argsstring></argsstring>
+        <name>horizontalLayout_14</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="97" column="17" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a29b781f23566d0f91b217459c06929ba" prot="public" static="no" mutable="no">
+        <type>QLabel *</type>
+        <definition>QLabel* Ui_MainWindow::label_24</definition>
+        <argsstring></argsstring>
+        <name>label_24</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="98" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1acf6fc9bce4db154fecbd1ff532918353" prot="public" static="no" mutable="no">
+        <type>QLabel *</type>
+        <definition>QLabel* Ui_MainWindow::label_25</definition>
+        <argsstring></argsstring>
+        <name>label_25</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="99" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1ad5ae91b6f4d0058591082cd6f1df4c96" prot="public" static="no" mutable="no">
+        <type>QLineEdit *</type>
+        <definition>QLineEdit* Ui_MainWindow::lineEdit_pos_x</definition>
+        <argsstring></argsstring>
+        <name>lineEdit_pos_x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="100" column="15" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a1bf8f5e6531b7bc79378d58ee57ba389" prot="public" static="no" mutable="no">
+        <type>QLabel *</type>
+        <definition>QLabel* Ui_MainWindow::label_26</definition>
+        <argsstring></argsstring>
+        <name>label_26</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="101" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a2af9edeacce3ffebd5d11080ca86d2a1" prot="public" static="no" mutable="no">
+        <type>QLineEdit *</type>
+        <definition>QLineEdit* Ui_MainWindow::lineEdit_pos_y</definition>
+        <argsstring></argsstring>
+        <name>lineEdit_pos_y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="102" column="15" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1ac6c19d112b25073d9276c377d00dbadb" prot="public" static="no" mutable="no">
+        <type>QLabel *</type>
+        <definition>QLabel* Ui_MainWindow::label_27</definition>
+        <argsstring></argsstring>
+        <name>label_27</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="103" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a24812c8657bf9ba4bb6fa8497e271a9e" prot="public" static="no" mutable="no">
+        <type>QLineEdit *</type>
+        <definition>QLineEdit* Ui_MainWindow::lineEdit_pos_z</definition>
+        <argsstring></argsstring>
+        <name>lineEdit_pos_z</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="104" column="15" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a3b24c4bb360d79ae2e886fe63c8fdac7" prot="public" static="no" mutable="no">
+        <type>QHBoxLayout *</type>
+        <definition>QHBoxLayout* Ui_MainWindow::horizontalLayout_13</definition>
+        <argsstring></argsstring>
+        <name>horizontalLayout_13</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="105" column="17" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a1c16c0a684617927472e534822a63c7d" prot="public" static="no" mutable="no">
+        <type>QLabel *</type>
+        <definition>QLabel* Ui_MainWindow::label_14</definition>
+        <argsstring></argsstring>
+        <name>label_14</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="106" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a4a18586583a48765b392cbab0ea7545c" prot="public" static="no" mutable="no">
+        <type>QLabel *</type>
+        <definition>QLabel* Ui_MainWindow::label_21</definition>
+        <argsstring></argsstring>
+        <name>label_21</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="107" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a05ab3399270d413c9f4a86e35cc017e0" prot="public" static="no" mutable="no">
+        <type>QLineEdit *</type>
+        <definition>QLineEdit* Ui_MainWindow::lineEdit_pos_roll</definition>
+        <argsstring></argsstring>
+        <name>lineEdit_pos_roll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="108" column="15" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1aa7d5a218f527f204fa7f544dc8c024a7" prot="public" static="no" mutable="no">
+        <type>QLabel *</type>
+        <definition>QLabel* Ui_MainWindow::label_22</definition>
+        <argsstring></argsstring>
+        <name>label_22</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="109" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1ad4c35196e6d4f99c0e889120d03c1639" prot="public" static="no" mutable="no">
+        <type>QLineEdit *</type>
+        <definition>QLineEdit* Ui_MainWindow::lineEdit_pos_pitch</definition>
+        <argsstring></argsstring>
+        <name>lineEdit_pos_pitch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="110" column="15" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a7a9350c6de61e7051850744487d910bd" prot="public" static="no" mutable="no">
+        <type>QLabel *</type>
+        <definition>QLabel* Ui_MainWindow::label_23</definition>
+        <argsstring></argsstring>
+        <name>label_23</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="111" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a60f07cdd17f4c7ba0ba2cc9930e7de1f" prot="public" static="no" mutable="no">
+        <type>QLineEdit *</type>
+        <definition>QLineEdit* Ui_MainWindow::lineEdit_pos_yaw</definition>
+        <argsstring></argsstring>
+        <name>lineEdit_pos_yaw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="112" column="15" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1aecd96a04789fcfec3f98d80390ad8184" prot="public" static="no" mutable="no">
+        <type>QVBoxLayout *</type>
+        <definition>QVBoxLayout* Ui_MainWindow::verticalLayout</definition>
+        <argsstring></argsstring>
+        <name>verticalLayout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="113" column="17" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1ad07bcc9304056b61c4065a1e77ce0ba2" prot="public" static="no" mutable="no">
+        <type>QHBoxLayout *</type>
+        <definition>QHBoxLayout* Ui_MainWindow::horizontalLayout_11</definition>
+        <argsstring></argsstring>
+        <name>horizontalLayout_11</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="114" column="17" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1ad0a5580e9e7432ed041d6c2d587cd13e" prot="public" static="no" mutable="no">
+        <type>QLabel *</type>
+        <definition>QLabel* Ui_MainWindow::label_19</definition>
+        <argsstring></argsstring>
+        <name>label_19</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="115" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a7871ea8c4b6c595d7ccd53960b344719" prot="public" static="no" mutable="no">
+        <type>QSpacerItem *</type>
+        <definition>QSpacerItem* Ui_MainWindow::horizontalSpacer</definition>
+        <argsstring></argsstring>
+        <name>horizontalSpacer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="116" column="17" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1ad9c89133780f28e6efa2ec17ceb9cff5" prot="public" static="no" mutable="no">
+        <type>QLabel *</type>
+        <definition>QLabel* Ui_MainWindow::label</definition>
+        <argsstring></argsstring>
+        <name>label</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="117" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1ade2cd7c7d365ab2ff1841cb0f9481c7d" prot="public" static="no" mutable="no">
+        <type>QLabel *</type>
+        <definition>QLabel* Ui_MainWindow::label_state</definition>
+        <argsstring></argsstring>
+        <name>label_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="118" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a9a022556cf8ce3fa47e51d79cb222ab0" prot="public" static="no" mutable="no">
+        <type>QSpacerItem *</type>
+        <definition>QSpacerItem* Ui_MainWindow::horizontalSpacer_2</definition>
+        <argsstring></argsstring>
+        <name>horizontalSpacer_2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="119" column="17" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a16e802a7ebd4beb9d8aba858565e51b3" prot="public" static="no" mutable="no">
+        <type>QFrame *</type>
+        <definition>QFrame* Ui_MainWindow::line</definition>
+        <argsstring></argsstring>
+        <name>line</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="120" column="12" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1adf43d9a67adaec750aaa956b5e082f09" prot="public" static="no" mutable="no">
+        <type>QMenuBar *</type>
+        <definition>QMenuBar* Ui_MainWindow::menubar</definition>
+        <argsstring></argsstring>
+        <name>menubar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="121" column="14" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ui___main_window_1a1687cceb1e2787aa1f83e50433943a91" prot="public" static="no" mutable="no">
+        <type>QStatusBar *</type>
+        <definition>QStatusBar* Ui_MainWindow::statusbar</definition>
+        <argsstring></argsstring>
+        <name>statusbar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="122" column="16" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_ui___main_window_1acf4a0872c4c77d8f43a2ec66ed849b58" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Ui_MainWindow::setupUi</definition>
+        <argsstring>(QMainWindow *MainWindow)</argsstring>
+        <name>setupUi</name>
+        <param>
+          <type>QMainWindow *</type>
+          <declname>MainWindow</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="124" column="10" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="124" bodyend="630"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ui___main_window_1a097dd160c3534a204904cb374412c618" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Ui_MainWindow::retranslateUi</definition>
+        <argsstring>(QMainWindow *MainWindow)</argsstring>
+        <name>retranslateUi</name>
+        <param>
+          <type>QMainWindow *</type>
+          <declname>MainWindow</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="632" column="10" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="632" bodyend="667"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Ui::MainWindow</label>
+        <link refid="class_ui_1_1_main_window"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Ui_MainWindow</label>
+        <link refid="class_ui___main_window"/>
+      </node>
+    </inheritancegraph>
+    <location file="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" line="32" column="1" bodyfile="/home/adev/Documents/STECH/stewart_platform/build/ui_mainwindow.h" bodystart="31" bodyend="663"/>
+    <listofallmembers>
+      <member refid="class_ui___main_window_1a356f1cf3ebda15f1fac59467ee081b74" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>centralwidget</name></member>
+      <member refid="class_ui___main_window_1a953d66beb0dfd3502804f692f3acc822" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>doubleSpinBox_cart_pitch</name></member>
+      <member refid="class_ui___main_window_1acdb66ad5541dceb9609f7c9eb61211d6" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>doubleSpinBox_cart_roll</name></member>
+      <member refid="class_ui___main_window_1a381762f7049fde8c67cac178caaa2757" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>doubleSpinBox_cart_x</name></member>
+      <member refid="class_ui___main_window_1ae804d3a01e893bc74c89343016acd76a" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>doubleSpinBox_cart_y</name></member>
+      <member refid="class_ui___main_window_1a07f4c00eab4766202a73b7e16f4d8e91" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>doubleSpinBox_cart_yaw</name></member>
+      <member refid="class_ui___main_window_1a3303acbaf828ed141f8414ce3da7687f" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>doubleSpinBox_cart_z</name></member>
+      <member refid="class_ui___main_window_1a9fe3891af8b6ca25c37d871df45600a1" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>doubleSpinBox_sin_omega</name></member>
+      <member refid="class_ui___main_window_1a05a6cd080251713c8c5939c063bfab4f" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>doubleSpinBox_sin_x</name></member>
+      <member refid="class_ui___main_window_1a804eaedb9bb0704958f96b2a3ff970a0" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>doubleSpinBox_sin_y</name></member>
+      <member refid="class_ui___main_window_1a9e22a39ea1699287d89c5bb795427c44" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>doubleSpinBox_sin_z</name></member>
+      <member refid="class_ui___main_window_1a525ed3c5fe0784ac502ee222fba4e205" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>gridLayout</name></member>
+      <member refid="class_ui___main_window_1a6b2a0c5f7e8ff2a87134908dd770d2d2" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>gridLayout_2</name></member>
+      <member refid="class_ui___main_window_1acd6fdc9ebacc4b25b834162380d75ce8" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>horizontalLayout</name></member>
+      <member refid="class_ui___main_window_1af1a7bbeee705545b94c55c297299118d" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>horizontalLayout_10</name></member>
+      <member refid="class_ui___main_window_1ad07bcc9304056b61c4065a1e77ce0ba2" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>horizontalLayout_11</name></member>
+      <member refid="class_ui___main_window_1ad81454913b05646674b1a41c595b8510" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>horizontalLayout_12</name></member>
+      <member refid="class_ui___main_window_1a3b24c4bb360d79ae2e886fe63c8fdac7" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>horizontalLayout_13</name></member>
+      <member refid="class_ui___main_window_1aa53955f35b7d9f3d161525ed8639db84" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>horizontalLayout_14</name></member>
+      <member refid="class_ui___main_window_1a1e64a8da62994a2cb0ff65f32b26639e" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>horizontalLayout_15</name></member>
+      <member refid="class_ui___main_window_1a80867018070156432923d0266cc9fe25" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>horizontalLayout_2</name></member>
+      <member refid="class_ui___main_window_1a03ce63974cc69b067c91bbf285cceca8" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>horizontalLayout_3</name></member>
+      <member refid="class_ui___main_window_1ae183387a7d233b437a637b403ba39ffd" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>horizontalLayout_4</name></member>
+      <member refid="class_ui___main_window_1a14c9d4842c3e97e16e7873ef0aecdb1e" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>horizontalLayout_5</name></member>
+      <member refid="class_ui___main_window_1a1351e317cba7ca711b6b4d2212b6bf36" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>horizontalLayout_6</name></member>
+      <member refid="class_ui___main_window_1a2afb915e1492b7e6704db4918c1e5e80" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>horizontalLayout_7</name></member>
+      <member refid="class_ui___main_window_1a8ead8fc876ee91c30864822eedb9c370" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>horizontalLayout_8</name></member>
+      <member refid="class_ui___main_window_1ab48e49d68609b4c66e5169e2f87e3eb9" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>horizontalLayout_9</name></member>
+      <member refid="class_ui___main_window_1a7871ea8c4b6c595d7ccd53960b344719" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>horizontalSpacer</name></member>
+      <member refid="class_ui___main_window_1a9a022556cf8ce3fa47e51d79cb222ab0" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>horizontalSpacer_2</name></member>
+      <member refid="class_ui___main_window_1ad9c89133780f28e6efa2ec17ceb9cff5" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>label</name></member>
+      <member refid="class_ui___main_window_1a9dc4dba26b83e0c94aa566e1c564420b" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>label_10</name></member>
+      <member refid="class_ui___main_window_1a4f12a71b4a2fb6f85df2300d83b5ed3e" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>label_11</name></member>
+      <member refid="class_ui___main_window_1aa2621565827195e88436fb54220bb48d" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>label_12</name></member>
+      <member refid="class_ui___main_window_1ac1cbc41e9dbaeb3d0bdc2189d8e9ee1d" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>label_13</name></member>
+      <member refid="class_ui___main_window_1a1c16c0a684617927472e534822a63c7d" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>label_14</name></member>
+      <member refid="class_ui___main_window_1a882200d8ae16962f5dd3b749ebacbf7e" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>label_15</name></member>
+      <member refid="class_ui___main_window_1ab6ac4329a89041f557332f6569d94493" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>label_16</name></member>
+      <member refid="class_ui___main_window_1a1f4ff90c122fededcc08604401442034" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>label_17</name></member>
+      <member refid="class_ui___main_window_1a55100f53189f25cf8a1ee0beb29be642" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>label_18</name></member>
+      <member refid="class_ui___main_window_1ad0a5580e9e7432ed041d6c2d587cd13e" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>label_19</name></member>
+      <member refid="class_ui___main_window_1a9125c3f58951f983d461686ccaabb468" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>label_20</name></member>
+      <member refid="class_ui___main_window_1a4a18586583a48765b392cbab0ea7545c" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>label_21</name></member>
+      <member refid="class_ui___main_window_1aa7d5a218f527f204fa7f544dc8c024a7" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>label_22</name></member>
+      <member refid="class_ui___main_window_1a7a9350c6de61e7051850744487d910bd" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>label_23</name></member>
+      <member refid="class_ui___main_window_1a29b781f23566d0f91b217459c06929ba" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>label_24</name></member>
+      <member refid="class_ui___main_window_1acf6fc9bce4db154fecbd1ff532918353" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>label_25</name></member>
+      <member refid="class_ui___main_window_1a1bf8f5e6531b7bc79378d58ee57ba389" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>label_26</name></member>
+      <member refid="class_ui___main_window_1ac6c19d112b25073d9276c377d00dbadb" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>label_27</name></member>
+      <member refid="class_ui___main_window_1a0376fd90247280e7c7957cc70628708c" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>label_3</name></member>
+      <member refid="class_ui___main_window_1a78c7e10730b43c6700cd7216911ed76a" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>label_4</name></member>
+      <member refid="class_ui___main_window_1ad6bab8fb8903b8f41afea1218ee52695" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>label_5</name></member>
+      <member refid="class_ui___main_window_1a663f728e6244926a795c6e6892673b1d" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>label_6</name></member>
+      <member refid="class_ui___main_window_1a13936e6f18b1c90402b3c7a3c92b6cdb" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>label_7</name></member>
+      <member refid="class_ui___main_window_1af183bfbfb9f38bbdd60caf92b15e23dc" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>label_8</name></member>
+      <member refid="class_ui___main_window_1a0e90c7e9ad77386881e0b264ddb9dd22" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>label_9</name></member>
+      <member refid="class_ui___main_window_1ade2cd7c7d365ab2ff1841cb0f9481c7d" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>label_state</name></member>
+      <member refid="class_ui___main_window_1a16e802a7ebd4beb9d8aba858565e51b3" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>line</name></member>
+      <member refid="class_ui___main_window_1a17207206e55a605ecc14a3534b7e575f" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>line_2</name></member>
+      <member refid="class_ui___main_window_1a27e0b134c3c12643afbf0b50dd175453" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>line_3</name></member>
+      <member refid="class_ui___main_window_1add492bf5763815e82fba9ba9297c50e6" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>line_4</name></member>
+      <member refid="class_ui___main_window_1ad4c35196e6d4f99c0e889120d03c1639" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>lineEdit_pos_pitch</name></member>
+      <member refid="class_ui___main_window_1a05ab3399270d413c9f4a86e35cc017e0" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>lineEdit_pos_roll</name></member>
+      <member refid="class_ui___main_window_1ad5ae91b6f4d0058591082cd6f1df4c96" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>lineEdit_pos_x</name></member>
+      <member refid="class_ui___main_window_1a2af9edeacce3ffebd5d11080ca86d2a1" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>lineEdit_pos_y</name></member>
+      <member refid="class_ui___main_window_1a60f07cdd17f4c7ba0ba2cc9930e7de1f" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>lineEdit_pos_yaw</name></member>
+      <member refid="class_ui___main_window_1a24812c8657bf9ba4bb6fa8497e271a9e" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>lineEdit_pos_z</name></member>
+      <member refid="class_ui___main_window_1adf43d9a67adaec750aaa956b5e082f09" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>menubar</name></member>
+      <member refid="class_ui___main_window_1a96b1fefd9ac8c6ad2cd5395eeb5ad98b" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>pushButton_pause</name></member>
+      <member refid="class_ui___main_window_1a8a0d793710705878e3f433550ca05470" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>pushButton_start</name></member>
+      <member refid="class_ui___main_window_1a1c2326996ec6bdb6bd873fc2b0aed709" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>pushButton_stop</name></member>
+      <member refid="class_ui___main_window_1a61269a10bc342763a5a51a93a235944d" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>radioButton</name></member>
+      <member refid="class_ui___main_window_1add4061a8dc5a94be04e0579450c2a330" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>radioButton_cart_mvt</name></member>
+      <member refid="class_ui___main_window_1ac67621eaf3c700ae21dba70b5c796fcd" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>radioButton_sin_mvt</name></member>
+      <member refid="class_ui___main_window_1a097dd160c3534a204904cb374412c618" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>retranslateUi</name></member>
+      <member refid="class_ui___main_window_1acf4a0872c4c77d8f43a2ec66ed849b58" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>setupUi</name></member>
+      <member refid="class_ui___main_window_1a1687cceb1e2787aa1f83e50433943a91" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>statusbar</name></member>
+      <member refid="class_ui___main_window_1aecd96a04789fcfec3f98d80390ad8184" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>verticalLayout</name></member>
+      <member refid="class_ui___main_window_1a0c01bad60d9f422a1258e710635a2f65" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>verticalLayout_2</name></member>
+      <member refid="class_ui___main_window_1a6f40fc110b15410c00837a446d57bdbe" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>verticalLayout_4</name></member>
+      <member refid="class_ui___main_window_1afcc20a3d5058037a00cdc6122f231848" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>verticalLayout_5</name></member>
+      <member refid="class_ui___main_window_1a93c190b085c63a667c535ba0bbcfec7c" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>verticalLayout_6</name></member>
+      <member refid="class_ui___main_window_1a7b66d5d6ab55f3977317359d09a42345" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>verticalLayout_7</name></member>
+      <member refid="class_ui___main_window_1a8384329c3663ff274e926a12024aab52" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>verticalSpacer</name></member>
+      <member refid="class_ui___main_window_1adc1f5fdd97fb3729999c56902d0fa591" prot="public" virt="non-virtual"><scope>Ui_MainWindow</scope><name>verticalSpacer_2</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

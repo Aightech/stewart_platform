@@ -1,632 +1,300 @@
-\hypertarget{classstp_1_1_model}{}\section{stp\+:\+:Model Class Reference}
-\label{classstp_1_1_model}\index{stp\+::\+Model@{stp\+::\+Model}}
+\hypertarget{classstp_1_1_model}{}\doxysection{stp\+::Model Class Reference}
+\label{classstp_1_1_model}\index{stp::Model@{stp::Model}}
 
 
-{\ttfamily \#include $<$model.\+hpp$>$}
-
-
-
-Inheritance diagram for stp\+:\+:Model\+:
-\nopagebreak
+Inheritance diagram for stp\+::Model\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=288pt]{classstp_1_1_model__inherit__graph}
+\includegraphics[width=350pt]{classstp_1_1_model__inherit__graph}
 \end{center}
 \end{figure}
-\subsection*{Public Member Functions}
+\doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classstp_1_1_model_a771583e4fa62890a4c86b30ada77a9e5}{Model} ()
+\mbox{\Hypertarget{classstp_1_1_model_a6c82f7a11076fb192448a2fd54d872bf}\label{classstp_1_1_model_a6c82f7a11076fb192448a2fd54d872bf}} 
+{\bfseries Model} (double deltas\mbox{[}4\mbox{]}, double a, double l, int verbose\+\_\+level=0)
 \item 
-\hyperlink{classstp_1_1_model_ac5ce800e21e055dcd219fcc16bb84554}{Model} (double deltas\mbox{[}4\mbox{]}, double a, double l)
-\item 
-double $\ast$ \hyperlink{classstp_1_1_model_a553d9f7f63c97eba26e3522a73531dc1}{new\+\_\+pos} (double T\mbox{[}3\mbox{]}, double theta\mbox{[}3\mbox{]})
-\item 
-double \hyperlink{classstp_1_1_model_a96807e2f67ea212b44e89bc567d8fa2a}{get\+\_\+T} (int i)
-\item 
-double \hyperlink{classstp_1_1_model_a7856980516ed1f0613420a402b5b8d8c}{get\+\_\+theta} (int i)
-\item 
-void \hyperlink{classstp_1_1_model_a732e1d29e24600760b53a8e126bb7906}{init\+\_\+pos} ()
-\item 
-void \hyperlink{classstp_1_1_model_afeda6e56bb177dc53c2c3fd1a86a2388}{compute\+\_\+R} (double theta\mbox{[}3\mbox{]})
-\end{DoxyCompactItemize}
-\subsection*{Protected Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-void \hyperlink{classstp_1_1_model_ade58705e09f3edf93f43a51021517f9e}{set\+\_\+T} (double t0, double t1, double t2)
-\item 
-void \hyperlink{classstp_1_1_model_a84fd6646ed05db5eec86afd968fde65d}{set\+\_\+\+T\+\_\+spd} (double t0, double t1, double t2)
-\item 
-void \hyperlink{classstp_1_1_model_a6a6dcae980e86d84084dc4ccd0de3285}{set\+\_\+theta} (double t0, double t1, double t2)
-\item 
-void \hyperlink{classstp_1_1_model_afd0f76304578013e1faff062a318dac5}{set\+\_\+theta\+\_\+spd} (double t0, double t1, double t2)
-\end{DoxyCompactItemize}
-\subsection*{Protected Attributes}
-\begin{DoxyCompactItemize}
-\item 
-double \hyperlink{classstp_1_1_model_a55f0ee3549b8f7e582ae9958d69cc493}{m\+\_\+radius} \mbox{[}2\mbox{]}
-\item 
-double \hyperlink{classstp_1_1_model_a446d3fd455f0e44ec6a358b458ba85f2}{m\+\_\+a}
-\item 
-double \hyperlink{classstp_1_1_model_ad189b43e75b3b4a7a947e8142adce17c}{m\+\_\+a2}
-\item 
-double \hyperlink{classstp_1_1_model_a4093789451a0491487090daa1c4c9b85}{m\+\_\+l}
-\item 
-double \hyperlink{classstp_1_1_model_a9a16f1c28c96157d51bedbf67a1a7a81}{m\+\_\+l2}
-\item 
-double \hyperlink{classstp_1_1_model_ac031672ca5aae4c192c38b1103fdf2dd}{\+\_\+d2} \mbox{[}\hyperlink{model_8hpp_ae44092ed043cb4350e2df47fdee890b9}{N\+B\+\_\+\+L\+E\+GS}\mbox{]}
-\item 
-double \hyperlink{classstp_1_1_model_a773d6f9a6ee4f6dd580229e0dc3d741c}{m\+\_\+P} \mbox{[}\hyperlink{model_8hpp_ae44092ed043cb4350e2df47fdee890b9}{N\+B\+\_\+\+L\+E\+GS}\mbox{]}\mbox{[}3\mbox{]}
-\item 
-double \hyperlink{classstp_1_1_model_a82e25ba756ecbe2f929505ef4d97b317}{m\+\_\+\+P1} \mbox{[}\hyperlink{model_8hpp_ae44092ed043cb4350e2df47fdee890b9}{N\+B\+\_\+\+L\+E\+GS}\mbox{]}\mbox{[}3\mbox{]}
-\item 
-double \hyperlink{classstp_1_1_model_ad1f36bbb9a3f9aac7054b991bb02fe70}{m\+\_\+B} \mbox{[}\hyperlink{model_8hpp_ae44092ed043cb4350e2df47fdee890b9}{N\+B\+\_\+\+L\+E\+GS}\mbox{]}\mbox{[}3\mbox{]}
-\item 
-double \hyperlink{classstp_1_1_model_a4aaa7aee9ac9d9903d29d06cf15ed601}{m\+\_\+A} \mbox{[}\hyperlink{model_8hpp_ae44092ed043cb4350e2df47fdee890b9}{N\+B\+\_\+\+L\+E\+GS}\mbox{]}\mbox{[}3\mbox{]}
-\item 
-double \hyperlink{classstp_1_1_model_a3c26b01a6c5e533e25ec3de71c7f132c}{m\+\_\+parity} \mbox{[}\hyperlink{model_8hpp_ae44092ed043cb4350e2df47fdee890b9}{N\+B\+\_\+\+L\+E\+GS}\mbox{]}
-\item 
-double \hyperlink{classstp_1_1_model_a0dde329f8445840075590404c4f2c0de}{m\+\_\+beta} \mbox{[}\hyperlink{model_8hpp_ae44092ed043cb4350e2df47fdee890b9}{N\+B\+\_\+\+L\+E\+GS}\mbox{]}
-\item 
-double \hyperlink{classstp_1_1_model_a8faca0ba2206f1ac384b80b2223a0c34}{m\+\_\+alpha} \mbox{[}\hyperlink{model_8hpp_ae44092ed043cb4350e2df47fdee890b9}{N\+B\+\_\+\+L\+E\+GS}\mbox{]}
-\item 
-double \hyperlink{classstp_1_1_model_a60eab0062d4e65c720ed2ac39d51779b}{m\+\_\+gamma} \mbox{[}2\mbox{]}\mbox{[}\hyperlink{model_8hpp_ae44092ed043cb4350e2df47fdee890b9}{N\+B\+\_\+\+L\+E\+GS}\mbox{]}
-\item 
-double \hyperlink{classstp_1_1_model_a61d8b4957be741fa473468065c2a5d0d}{m\+\_\+T} \mbox{[}3\mbox{]}
-\item 
-double \hyperlink{classstp_1_1_model_a826586afc60c2c076b271413f5c3e382}{m\+\_\+theta} \mbox{[}3\mbox{]}
-\item 
-double \hyperlink{classstp_1_1_model_ae1c80dd8cb28d3bd7966c1f289fb291e}{m\+\_\+R} \mbox{[}3\mbox{]}\mbox{[}3\mbox{]}
-\item 
-double \hyperlink{classstp_1_1_model_afdc7491e9be320ad94775ca046667f9b}{m\+\_\+trig} \mbox{[}6\mbox{]}
-\item 
-double \hyperlink{classstp_1_1_model_a0ba1c1143089052ffad8133ff40d972f}{m\+\_\+\+T\+\_\+spd} \mbox{[}3\mbox{]}
-\item 
-double \hyperlink{classstp_1_1_model_aa12970f18bc4258b9ad185f54a9cfe70}{m\+\_\+theta\+\_\+spd} \mbox{[}3\mbox{]}
-\item 
-double \hyperlink{classstp_1_1_model_a0b4fbb6fdec8106993ddffbd9f61d6ce}{m\+\_\+alpha\+\_\+spd} \mbox{[}6\mbox{]}
-\item 
-double \hyperlink{classstp_1_1_model_a4679e65c69f376bf8f20f5b80635b79b}{\+\_\+alphaI} \mbox{[}6\mbox{]}
-\end{DoxyCompactItemize}
-
-
-\subsection{Detailed Description}
-
-
-Definition at line 13 of file model.\+hpp.
-
-
-
-\subsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classstp_1_1_model_a771583e4fa62890a4c86b30ada77a9e5}\label{classstp_1_1_model_a771583e4fa62890a4c86b30ada77a9e5}} 
-\index{stp\+::\+Model@{stp\+::\+Model}!Model@{Model}}
-\index{Model@{Model}!stp\+::\+Model@{stp\+::\+Model}}
-\subsubsection{\texorpdfstring{Model()}{Model()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily stp\+::\+Model\+::\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Definition at line 16 of file model.\+hpp.
-
-
-
-References compute\+\_\+\+R(), get\+\_\+\+T(), get\+\_\+theta(), init\+\_\+pos(), new\+\_\+pos(), set\+\_\+\+T(), set\+\_\+\+T\+\_\+spd(), set\+\_\+theta(), and set\+\_\+theta\+\_\+spd().
-
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classstp_1_1_model_a771583e4fa62890a4c86b30ada77a9e5_cgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{classstp_1_1_model_ac5ce800e21e055dcd219fcc16bb84554}\label{classstp_1_1_model_ac5ce800e21e055dcd219fcc16bb84554}} 
-\index{stp\+::\+Model@{stp\+::\+Model}!Model@{Model}}
-\index{Model@{Model}!stp\+::\+Model@{stp\+::\+Model}}
-\subsubsection{\texorpdfstring{Model()}{Model()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily stp\+::\+Model\+::\+Model (\begin{DoxyParamCaption}\item[{double}]{deltas\mbox{[}4\mbox{]},  }\item[{double}]{a,  }\item[{double}]{l }\end{DoxyParamCaption})}
-
-
-
-Definition at line 8 of file model.\+cpp.
-
-
-
-References m\+\_\+a, m\+\_\+a2, m\+\_\+alpha\+\_\+spd, m\+\_\+B, m\+\_\+beta, m\+\_\+gamma, m\+\_\+l, m\+\_\+l2, m\+\_\+\+P1, m\+\_\+parity, M\+\_\+\+PI, m\+\_\+radius, and N\+B\+\_\+\+L\+E\+GS.
-
-
-
-\subsection{Member Function Documentation}
-\mbox{\Hypertarget{classstp_1_1_model_afeda6e56bb177dc53c2c3fd1a86a2388}\label{classstp_1_1_model_afeda6e56bb177dc53c2c3fd1a86a2388}} 
-\index{stp\+::\+Model@{stp\+::\+Model}!compute\+\_\+R@{compute\+\_\+R}}
-\index{compute\+\_\+R@{compute\+\_\+R}!stp\+::\+Model@{stp\+::\+Model}}
-\subsubsection{\texorpdfstring{compute\+\_\+\+R()}{compute\_R()}}
-{\footnotesize\ttfamily void stp\+::\+Model\+::compute\+\_\+R (\begin{DoxyParamCaption}\item[{double}]{theta\mbox{[}3\mbox{]} }\end{DoxyParamCaption})}
-
-
-
-Definition at line 117 of file model.\+cpp.
-
-
-
-References m\+\_\+R, m\+\_\+theta, and m\+\_\+trig.
-
-
-
-Referenced by Model(), and new\+\_\+pos().
-
-\mbox{\Hypertarget{classstp_1_1_model_a96807e2f67ea212b44e89bc567d8fa2a}\label{classstp_1_1_model_a96807e2f67ea212b44e89bc567d8fa2a}} 
-\index{stp\+::\+Model@{stp\+::\+Model}!get\+\_\+T@{get\+\_\+T}}
-\index{get\+\_\+T@{get\+\_\+T}!stp\+::\+Model@{stp\+::\+Model}}
-\subsubsection{\texorpdfstring{get\+\_\+\+T()}{get\_T()}}
-{\footnotesize\ttfamily double stp\+::\+Model\+::get\+\_\+T (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
-
-
-
-Definition at line 154 of file model.\+cpp.
-
-
-
-References m\+\_\+T.
-
-
-
-Referenced by main(), and Model().
-
-\mbox{\Hypertarget{classstp_1_1_model_a7856980516ed1f0613420a402b5b8d8c}\label{classstp_1_1_model_a7856980516ed1f0613420a402b5b8d8c}} 
-\index{stp\+::\+Model@{stp\+::\+Model}!get\+\_\+theta@{get\+\_\+theta}}
-\index{get\+\_\+theta@{get\+\_\+theta}!stp\+::\+Model@{stp\+::\+Model}}
-\subsubsection{\texorpdfstring{get\+\_\+theta()}{get\_theta()}}
-{\footnotesize\ttfamily double stp\+::\+Model\+::get\+\_\+theta (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
-
-
-
-Definition at line 160 of file model.\+cpp.
-
-
-
-References m\+\_\+theta.
-
-
-
-Referenced by Model().
-
-\mbox{\Hypertarget{classstp_1_1_model_a732e1d29e24600760b53a8e126bb7906}\label{classstp_1_1_model_a732e1d29e24600760b53a8e126bb7906}} 
-\index{stp\+::\+Model@{stp\+::\+Model}!init\+\_\+pos@{init\+\_\+pos}}
-\index{init\+\_\+pos@{init\+\_\+pos}!stp\+::\+Model@{stp\+::\+Model}}
-\subsubsection{\texorpdfstring{init\+\_\+pos()}{init\_pos()}}
-{\footnotesize\ttfamily void stp\+::\+Model\+::init\+\_\+pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Definition at line 49 of file model.\+cpp.
-
-
-
-References \+\_\+alphaI, m\+\_\+a2, m\+\_\+alpha, m\+\_\+B, m\+\_\+l2, m\+\_\+\+P1, m\+\_\+T, m\+\_\+theta, new\+\_\+pos(), set\+\_\+\+T(), set\+\_\+\+T\+\_\+spd(), set\+\_\+theta(), and set\+\_\+theta\+\_\+spd().
-
-
-
-Referenced by main(), and Model().
-
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classstp_1_1_model_a732e1d29e24600760b53a8e126bb7906_cgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{classstp_1_1_model_a553d9f7f63c97eba26e3522a73531dc1}\label{classstp_1_1_model_a553d9f7f63c97eba26e3522a73531dc1}} 
-\index{stp\+::\+Model@{stp\+::\+Model}!new\+\_\+pos@{new\+\_\+pos}}
-\index{new\+\_\+pos@{new\+\_\+pos}!stp\+::\+Model@{stp\+::\+Model}}
-\subsubsection{\texorpdfstring{new\+\_\+pos()}{new\_pos()}}
-{\footnotesize\ttfamily double $\ast$ stp\+::\+Model\+::new\+\_\+pos (\begin{DoxyParamCaption}\item[{double}]{T\mbox{[}3\mbox{]},  }\item[{double}]{theta\mbox{[}3\mbox{]} }\end{DoxyParamCaption})}
-
-
-
-Definition at line 68 of file model.\+cpp.
-
-
-
-References \+\_\+d2, compute\+\_\+\+R(), m\+\_\+a, m\+\_\+a2, m\+\_\+alpha, m\+\_\+B, m\+\_\+beta, m\+\_\+l2, m\+\_\+P, m\+\_\+\+P1, m\+\_\+R, m\+\_\+T, m\+\_\+theta, and N\+B\+\_\+\+L\+E\+GS.
-
-
-
-Referenced by init\+\_\+pos(), Model(), stp\+::\+Gnuplot\+\_\+sim\+::new\+\_\+pos(), and stp\+::\+Platform\+::new\+\_\+pos().
-
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classstp_1_1_model_a553d9f7f63c97eba26e3522a73531dc1_cgraph}
-\end{center}
-\end{figure}
+double $\ast$ {\bfseries new\+\_\+pos} (double T\mbox{[}3\mbox{]}, double theta\mbox{[}3\mbox{]})
+\item 
+\mbox{\Hypertarget{classstp_1_1_model_a96807e2f67ea212b44e89bc567d8fa2a}\label{classstp_1_1_model_a96807e2f67ea212b44e89bc567d8fa2a}} 
+double {\bfseries get\+\_\+T} (int i)
+\item 
+\mbox{\Hypertarget{classstp_1_1_model_a7856980516ed1f0613420a402b5b8d8c}\label{classstp_1_1_model_a7856980516ed1f0613420a402b5b8d8c}} 
+double {\bfseries get\+\_\+theta} (int i)
+\item 
+\mbox{\Hypertarget{classstp_1_1_model_a732e1d29e24600760b53a8e126bb7906}\label{classstp_1_1_model_a732e1d29e24600760b53a8e126bb7906}} 
+void {\bfseries init\+\_\+pos} ()
+\item 
+\mbox{\Hypertarget{classstp_1_1_model_afeda6e56bb177dc53c2c3fd1a86a2388}\label{classstp_1_1_model_afeda6e56bb177dc53c2c3fd1a86a2388}} 
+void {\bfseries compute\+\_\+R} (double theta\mbox{[}3\mbox{]})
+\item 
+\mbox{\Hypertarget{classstp_1_1_model_adacd3ce9b374636df51ce78b5be18c59}\label{classstp_1_1_model_adacd3ce9b374636df51ce78b5be18c59}} 
+void {\bfseries print\+\_\+pos} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
 \mbox{\Hypertarget{classstp_1_1_model_ade58705e09f3edf93f43a51021517f9e}\label{classstp_1_1_model_ade58705e09f3edf93f43a51021517f9e}} 
-\index{stp\+::\+Model@{stp\+::\+Model}!set\+\_\+T@{set\+\_\+T}}
-\index{set\+\_\+T@{set\+\_\+T}!stp\+::\+Model@{stp\+::\+Model}}
-\subsubsection{\texorpdfstring{set\+\_\+\+T()}{set\_T()}}
-{\footnotesize\ttfamily void stp\+::\+Model\+::set\+\_\+T (\begin{DoxyParamCaption}\item[{double}]{t0,  }\item[{double}]{t1,  }\item[{double}]{t2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-Definition at line 138 of file model.\+cpp.
-
-
-
-References m\+\_\+T.
-
-
-
-Referenced by init\+\_\+pos(), and Model().
-
+void {\bfseries set\+\_\+T} (double t0, double t1, double t2)
+\item 
 \mbox{\Hypertarget{classstp_1_1_model_a84fd6646ed05db5eec86afd968fde65d}\label{classstp_1_1_model_a84fd6646ed05db5eec86afd968fde65d}} 
-\index{stp\+::\+Model@{stp\+::\+Model}!set\+\_\+\+T\+\_\+spd@{set\+\_\+\+T\+\_\+spd}}
-\index{set\+\_\+\+T\+\_\+spd@{set\+\_\+\+T\+\_\+spd}!stp\+::\+Model@{stp\+::\+Model}}
-\subsubsection{\texorpdfstring{set\+\_\+\+T\+\_\+spd()}{set\_T\_spd()}}
-{\footnotesize\ttfamily void stp\+::\+Model\+::set\+\_\+\+T\+\_\+spd (\begin{DoxyParamCaption}\item[{double}]{t0,  }\item[{double}]{t1,  }\item[{double}]{t2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-Definition at line 146 of file model.\+cpp.
-
-
-
-References m\+\_\+\+T\+\_\+spd.
-
-
-
-Referenced by init\+\_\+pos(), and Model().
-
+void {\bfseries set\+\_\+\+T\+\_\+spd} (double t0, double t1, double t2)
+\item 
 \mbox{\Hypertarget{classstp_1_1_model_a6a6dcae980e86d84084dc4ccd0de3285}\label{classstp_1_1_model_a6a6dcae980e86d84084dc4ccd0de3285}} 
-\index{stp\+::\+Model@{stp\+::\+Model}!set\+\_\+theta@{set\+\_\+theta}}
-\index{set\+\_\+theta@{set\+\_\+theta}!stp\+::\+Model@{stp\+::\+Model}}
-\subsubsection{\texorpdfstring{set\+\_\+theta()}{set\_theta()}}
-{\footnotesize\ttfamily void stp\+::\+Model\+::set\+\_\+theta (\begin{DoxyParamCaption}\item[{double}]{t0,  }\item[{double}]{t1,  }\item[{double}]{t2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-Definition at line 166 of file model.\+cpp.
-
-
-
-References m\+\_\+theta.
-
-
-
-Referenced by init\+\_\+pos(), and Model().
-
+void {\bfseries set\+\_\+theta} (double t0, double t1, double t2)
+\item 
 \mbox{\Hypertarget{classstp_1_1_model_afd0f76304578013e1faff062a318dac5}\label{classstp_1_1_model_afd0f76304578013e1faff062a318dac5}} 
-\index{stp\+::\+Model@{stp\+::\+Model}!set\+\_\+theta\+\_\+spd@{set\+\_\+theta\+\_\+spd}}
-\index{set\+\_\+theta\+\_\+spd@{set\+\_\+theta\+\_\+spd}!stp\+::\+Model@{stp\+::\+Model}}
-\subsubsection{\texorpdfstring{set\+\_\+theta\+\_\+spd()}{set\_theta\_spd()}}
-{\footnotesize\ttfamily void stp\+::\+Model\+::set\+\_\+theta\+\_\+spd (\begin{DoxyParamCaption}\item[{double}]{t0,  }\item[{double}]{t1,  }\item[{double}]{t2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-Definition at line 173 of file model.\+cpp.
-
-
-
-References m\+\_\+theta\+\_\+spd.
-
-
-
-Referenced by init\+\_\+pos(), and Model().
-
-
-
-\subsection{Member Data Documentation}
+void {\bfseries set\+\_\+theta\+\_\+spd} (double t0, double t1, double t2)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classstp_1_1_model_a55f0ee3549b8f7e582ae9958d69cc493}\label{classstp_1_1_model_a55f0ee3549b8f7e582ae9958d69cc493}} 
+double {\bfseries m\+\_\+radius} \mbox{[}2\mbox{]}
+\item 
+\mbox{\Hypertarget{classstp_1_1_model_a446d3fd455f0e44ec6a358b458ba85f2}\label{classstp_1_1_model_a446d3fd455f0e44ec6a358b458ba85f2}} 
+double {\bfseries m\+\_\+a}
+\item 
+double \mbox{\hyperlink{classstp_1_1_model_ad189b43e75b3b4a7a947e8142adce17c}{m\+\_\+a2}}
+\item 
+\mbox{\Hypertarget{classstp_1_1_model_a4093789451a0491487090daa1c4c9b85}\label{classstp_1_1_model_a4093789451a0491487090daa1c4c9b85}} 
+double {\bfseries m\+\_\+l}
+\item 
+double \mbox{\hyperlink{classstp_1_1_model_a9a16f1c28c96157d51bedbf67a1a7a81}{m\+\_\+l2}}
+\item 
+double \mbox{\hyperlink{classstp_1_1_model_ac031672ca5aae4c192c38b1103fdf2dd}{\+\_\+d2}} \mbox{[}N\+B\+\_\+\+L\+E\+GS\mbox{]}
+\item 
+double \mbox{\hyperlink{classstp_1_1_model_a773d6f9a6ee4f6dd580229e0dc3d741c}{m\+\_\+P}} \mbox{[}N\+B\+\_\+\+L\+E\+GS\mbox{]}\mbox{[}3\mbox{]}
+\item 
+double \mbox{\hyperlink{classstp_1_1_model_a82e25ba756ecbe2f929505ef4d97b317}{m\+\_\+\+P1}} \mbox{[}N\+B\+\_\+\+L\+E\+GS\mbox{]}\mbox{[}3\mbox{]}
+\item 
+double \mbox{\hyperlink{classstp_1_1_model_ad1f36bbb9a3f9aac7054b991bb02fe70}{m\+\_\+B}} \mbox{[}N\+B\+\_\+\+L\+E\+GS\mbox{]}\mbox{[}3\mbox{]}
+\item 
+double \mbox{\hyperlink{classstp_1_1_model_a4aaa7aee9ac9d9903d29d06cf15ed601}{m\+\_\+A}} \mbox{[}N\+B\+\_\+\+L\+E\+GS\mbox{]}\mbox{[}3\mbox{]}
+\item 
+double \mbox{\hyperlink{classstp_1_1_model_a3c26b01a6c5e533e25ec3de71c7f132c}{m\+\_\+parity}} \mbox{[}N\+B\+\_\+\+L\+E\+GS\mbox{]}
+\item 
+double \mbox{\hyperlink{classstp_1_1_model_a0dde329f8445840075590404c4f2c0de}{m\+\_\+beta}} \mbox{[}N\+B\+\_\+\+L\+E\+GS\mbox{]}
+\item 
+double \mbox{\hyperlink{classstp_1_1_model_a8faca0ba2206f1ac384b80b2223a0c34}{m\+\_\+alpha}} \mbox{[}N\+B\+\_\+\+L\+E\+GS\mbox{]}
+\item 
+double \mbox{\hyperlink{classstp_1_1_model_a60eab0062d4e65c720ed2ac39d51779b}{m\+\_\+gamma}} \mbox{[}2\mbox{]}\mbox{[}N\+B\+\_\+\+L\+E\+GS\mbox{]}
+\item 
+double \mbox{\hyperlink{classstp_1_1_model_a61d8b4957be741fa473468065c2a5d0d}{m\+\_\+T}} \mbox{[}3\mbox{]}
+\item 
+double \mbox{\hyperlink{classstp_1_1_model_a826586afc60c2c076b271413f5c3e382}{m\+\_\+theta}} \mbox{[}3\mbox{]}
+\item 
+double \mbox{\hyperlink{classstp_1_1_model_ae1c80dd8cb28d3bd7966c1f289fb291e}{m\+\_\+R}} \mbox{[}3\mbox{]}\mbox{[}3\mbox{]}
+\item 
+double \mbox{\hyperlink{classstp_1_1_model_afdc7491e9be320ad94775ca046667f9b}{m\+\_\+trig}} \mbox{[}6\mbox{]}
+\item 
+double \mbox{\hyperlink{classstp_1_1_model_a0ba1c1143089052ffad8133ff40d972f}{m\+\_\+\+T\+\_\+spd}} \mbox{[}3\mbox{]}
+\item 
+double \mbox{\hyperlink{classstp_1_1_model_aa12970f18bc4258b9ad185f54a9cfe70}{m\+\_\+theta\+\_\+spd}} \mbox{[}3\mbox{]}
+\item 
+double \mbox{\hyperlink{classstp_1_1_model_a0b4fbb6fdec8106993ddffbd9f61d6ce}{m\+\_\+alpha\+\_\+spd}} \mbox{[}6\mbox{]}
+\item 
 \mbox{\Hypertarget{classstp_1_1_model_a4679e65c69f376bf8f20f5b80635b79b}\label{classstp_1_1_model_a4679e65c69f376bf8f20f5b80635b79b}} 
-\index{stp\+::\+Model@{stp\+::\+Model}!\+\_\+alphaI@{\+\_\+alphaI}}
-\index{\+\_\+alphaI@{\+\_\+alphaI}!stp\+::\+Model@{stp\+::\+Model}}
-\subsubsection{\texorpdfstring{\+\_\+alphaI}{\_alphaI}}
-{\footnotesize\ttfamily double stp\+::\+Model\+::\+\_\+alphaI\mbox{[}6\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+double {\bfseries \+\_\+alphaI} \mbox{[}6\mbox{]}
+\item 
+\mbox{\Hypertarget{classstp_1_1_model_ab0f8907bbccb353cbabf625b7370eda1}\label{classstp_1_1_model_ab0f8907bbccb353cbabf625b7370eda1}} 
+int {\bfseries m\+\_\+verbose\+\_\+level} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{model_8hpp_source_l00011}{11}} of file \mbox{\hyperlink{model_8hpp_source}{model.\+hpp}}.
 
 
 
-Definition at line 81 of file model.\+hpp.
-
-
-
-Referenced by init\+\_\+pos().
-
+\doxysubsection{Member Data Documentation}
 \mbox{\Hypertarget{classstp_1_1_model_ac031672ca5aae4c192c38b1103fdf2dd}\label{classstp_1_1_model_ac031672ca5aae4c192c38b1103fdf2dd}} 
-\index{stp\+::\+Model@{stp\+::\+Model}!\+\_\+d2@{\+\_\+d2}}
-\index{\+\_\+d2@{\+\_\+d2}!stp\+::\+Model@{stp\+::\+Model}}
-\subsubsection{\texorpdfstring{\+\_\+d2}{\_d2}}
-{\footnotesize\ttfamily double stp\+::\+Model\+::\+\_\+d2\mbox{[}\hyperlink{model_8hpp_ae44092ed043cb4350e2df47fdee890b9}{N\+B\+\_\+\+L\+E\+GS}\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+\index{stp::Model@{stp::Model}!\_d2@{\_d2}}
+\index{\_d2@{\_d2}!stp::Model@{stp::Model}}
+\doxysubsubsection{\texorpdfstring{\_d2}{\_d2}}
+{\footnotesize\ttfamily double stp\+::\+Model\+::\+\_\+d2\mbox{[}N\+B\+\_\+\+L\+E\+GS\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
 
 Distance between the axe of the motors and the coresponding legs-\/platform articulation. 
 
-Definition at line 52 of file model.\+hpp.
-
-
-
-Referenced by new\+\_\+pos().
-
-\mbox{\Hypertarget{classstp_1_1_model_a446d3fd455f0e44ec6a358b458ba85f2}\label{classstp_1_1_model_a446d3fd455f0e44ec6a358b458ba85f2}} 
-\index{stp\+::\+Model@{stp\+::\+Model}!m\+\_\+a@{m\+\_\+a}}
-\index{m\+\_\+a@{m\+\_\+a}!stp\+::\+Model@{stp\+::\+Model}}
-\subsubsection{\texorpdfstring{m\+\_\+a}{m\_a}}
-{\footnotesize\ttfamily double stp\+::\+Model\+::m\+\_\+a\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-Definition at line 49 of file model.\+hpp.
-
-
-
-Referenced by Model(), new\+\_\+pos(), and stp\+::\+Gnuplot\+\_\+sim\+::update\+\_\+draw().
+Definition at line \mbox{\hyperlink{model_8hpp_source_l00053}{53}} of file \mbox{\hyperlink{model_8hpp_source}{model.\+hpp}}.
 
 \mbox{\Hypertarget{classstp_1_1_model_a4aaa7aee9ac9d9903d29d06cf15ed601}\label{classstp_1_1_model_a4aaa7aee9ac9d9903d29d06cf15ed601}} 
-\index{stp\+::\+Model@{stp\+::\+Model}!m\+\_\+A@{m\+\_\+A}}
-\index{m\+\_\+A@{m\+\_\+A}!stp\+::\+Model@{stp\+::\+Model}}
-\subsubsection{\texorpdfstring{m\+\_\+A}{m\_A}}
-{\footnotesize\ttfamily double stp\+::\+Model\+::m\+\_\+A\mbox{[}\hyperlink{model_8hpp_ae44092ed043cb4350e2df47fdee890b9}{N\+B\+\_\+\+L\+E\+GS}\mbox{]}\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+\index{stp::Model@{stp::Model}!m\_A@{m\_A}}
+\index{m\_A@{m\_A}!stp::Model@{stp::Model}}
+\doxysubsubsection{\texorpdfstring{m\_A}{m\_A}}
+{\footnotesize\ttfamily double stp\+::\+Model\+::m\+\_\+A\mbox{[}N\+B\+\_\+\+L\+E\+GS\mbox{]}\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
 
 Position of the arms-\/legs articulation in the base B0. 
 
-Definition at line 64 of file model.\+hpp.
-
-
-
-Referenced by stp\+::\+Gnuplot\+\_\+sim\+::update\+\_\+draw().
+Definition at line \mbox{\hyperlink{model_8hpp_source_l00065}{65}} of file \mbox{\hyperlink{model_8hpp_source}{model.\+hpp}}.
 
 \mbox{\Hypertarget{classstp_1_1_model_ad189b43e75b3b4a7a947e8142adce17c}\label{classstp_1_1_model_ad189b43e75b3b4a7a947e8142adce17c}} 
-\index{stp\+::\+Model@{stp\+::\+Model}!m\+\_\+a2@{m\+\_\+a2}}
-\index{m\+\_\+a2@{m\+\_\+a2}!stp\+::\+Model@{stp\+::\+Model}}
-\subsubsection{\texorpdfstring{m\+\_\+a2}{m\_a2}}
+\index{stp::Model@{stp::Model}!m\_a2@{m\_a2}}
+\index{m\_a2@{m\_a2}!stp::Model@{stp::Model}}
+\doxysubsubsection{\texorpdfstring{m\_a2}{m\_a2}}
 {\footnotesize\ttfamily double stp\+::\+Model\+::m\+\_\+a2\hspace{0.3cm}{\ttfamily [protected]}}
 
 Size of the motors\textquotesingle{} arms. 
 
-Definition at line 49 of file model.\+hpp.
-
-
-
-Referenced by init\+\_\+pos(), Model(), and new\+\_\+pos().
+Definition at line \mbox{\hyperlink{model_8hpp_source_l00050}{50}} of file \mbox{\hyperlink{model_8hpp_source}{model.\+hpp}}.
 
 \mbox{\Hypertarget{classstp_1_1_model_a8faca0ba2206f1ac384b80b2223a0c34}\label{classstp_1_1_model_a8faca0ba2206f1ac384b80b2223a0c34}} 
-\index{stp\+::\+Model@{stp\+::\+Model}!m\+\_\+alpha@{m\+\_\+alpha}}
-\index{m\+\_\+alpha@{m\+\_\+alpha}!stp\+::\+Model@{stp\+::\+Model}}
-\subsubsection{\texorpdfstring{m\+\_\+alpha}{m\_alpha}}
-{\footnotesize\ttfamily double stp\+::\+Model\+::m\+\_\+alpha\mbox{[}\hyperlink{model_8hpp_ae44092ed043cb4350e2df47fdee890b9}{N\+B\+\_\+\+L\+E\+GS}\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+\index{stp::Model@{stp::Model}!m\_alpha@{m\_alpha}}
+\index{m\_alpha@{m\_alpha}!stp::Model@{stp::Model}}
+\doxysubsubsection{\texorpdfstring{m\_alpha}{m\_alpha}}
+{\footnotesize\ttfamily double stp\+::\+Model\+::m\+\_\+alpha\mbox{[}N\+B\+\_\+\+L\+E\+GS\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
 
 Angular postion of the rotor. 
 
-Definition at line 68 of file model.\+hpp.
-
-
-
-Referenced by init\+\_\+pos(), new\+\_\+pos(), stp\+::\+Gnuplot\+\_\+sim\+::new\+\_\+pos(), stp\+::\+Platform\+::new\+\_\+pos(), stp\+::\+Gnuplot\+\_\+sim\+::update\+\_\+draw(), and stp\+::\+Platform\+::update\+\_\+platform().
+Definition at line \mbox{\hyperlink{model_8hpp_source_l00069}{69}} of file \mbox{\hyperlink{model_8hpp_source}{model.\+hpp}}.
 
 \mbox{\Hypertarget{classstp_1_1_model_a0b4fbb6fdec8106993ddffbd9f61d6ce}\label{classstp_1_1_model_a0b4fbb6fdec8106993ddffbd9f61d6ce}} 
-\index{stp\+::\+Model@{stp\+::\+Model}!m\+\_\+alpha\+\_\+spd@{m\+\_\+alpha\+\_\+spd}}
-\index{m\+\_\+alpha\+\_\+spd@{m\+\_\+alpha\+\_\+spd}!stp\+::\+Model@{stp\+::\+Model}}
-\subsubsection{\texorpdfstring{m\+\_\+alpha\+\_\+spd}{m\_alpha\_spd}}
+\index{stp::Model@{stp::Model}!m\_alpha\_spd@{m\_alpha\_spd}}
+\index{m\_alpha\_spd@{m\_alpha\_spd}!stp::Model@{stp::Model}}
+\doxysubsubsection{\texorpdfstring{m\_alpha\_spd}{m\_alpha\_spd}}
 {\footnotesize\ttfamily double stp\+::\+Model\+::m\+\_\+alpha\+\_\+spd\mbox{[}6\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
 
 Rotation speed of the motors. 
 
-Definition at line 79 of file model.\+hpp.
-
-
-
-Referenced by Model().
+Definition at line \mbox{\hyperlink{model_8hpp_source_l00080}{80}} of file \mbox{\hyperlink{model_8hpp_source}{model.\+hpp}}.
 
 \mbox{\Hypertarget{classstp_1_1_model_ad1f36bbb9a3f9aac7054b991bb02fe70}\label{classstp_1_1_model_ad1f36bbb9a3f9aac7054b991bb02fe70}} 
-\index{stp\+::\+Model@{stp\+::\+Model}!m\+\_\+B@{m\+\_\+B}}
-\index{m\+\_\+B@{m\+\_\+B}!stp\+::\+Model@{stp\+::\+Model}}
-\subsubsection{\texorpdfstring{m\+\_\+B}{m\_B}}
-{\footnotesize\ttfamily double stp\+::\+Model\+::m\+\_\+B\mbox{[}\hyperlink{model_8hpp_ae44092ed043cb4350e2df47fdee890b9}{N\+B\+\_\+\+L\+E\+GS}\mbox{]}\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+\index{stp::Model@{stp::Model}!m\_B@{m\_B}}
+\index{m\_B@{m\_B}!stp::Model@{stp::Model}}
+\doxysubsubsection{\texorpdfstring{m\_B}{m\_B}}
+{\footnotesize\ttfamily double stp\+::\+Model\+::m\+\_\+B\mbox{[}N\+B\+\_\+\+L\+E\+GS\mbox{]}\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
 
 Position of the motors-\/arms articulation in the base B0. 
 
-Definition at line 62 of file model.\+hpp.
-
-
-
-Referenced by stp\+::\+Gnuplot\+\_\+sim\+::draw(), stp\+::\+Gnuplot\+\_\+sim\+::\+Gnuplot\+\_\+sim(), init\+\_\+pos(), Model(), new\+\_\+pos(), and stp\+::\+Gnuplot\+\_\+sim\+::update\+\_\+draw().
+Definition at line \mbox{\hyperlink{model_8hpp_source_l00063}{63}} of file \mbox{\hyperlink{model_8hpp_source}{model.\+hpp}}.
 
 \mbox{\Hypertarget{classstp_1_1_model_a0dde329f8445840075590404c4f2c0de}\label{classstp_1_1_model_a0dde329f8445840075590404c4f2c0de}} 
-\index{stp\+::\+Model@{stp\+::\+Model}!m\+\_\+beta@{m\+\_\+beta}}
-\index{m\+\_\+beta@{m\+\_\+beta}!stp\+::\+Model@{stp\+::\+Model}}
-\subsubsection{\texorpdfstring{m\+\_\+beta}{m\_beta}}
-{\footnotesize\ttfamily double stp\+::\+Model\+::m\+\_\+beta\mbox{[}\hyperlink{model_8hpp_ae44092ed043cb4350e2df47fdee890b9}{N\+B\+\_\+\+L\+E\+GS}\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+\index{stp::Model@{stp::Model}!m\_beta@{m\_beta}}
+\index{m\_beta@{m\_beta}!stp::Model@{stp::Model}}
+\doxysubsubsection{\texorpdfstring{m\_beta}{m\_beta}}
+{\footnotesize\ttfamily double stp\+::\+Model\+::m\+\_\+beta\mbox{[}N\+B\+\_\+\+L\+E\+GS\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
 
 Orientation of the motor on the base. 
 
-Definition at line 67 of file model.\+hpp.
-
-
-
-Referenced by Model(), new\+\_\+pos(), and stp\+::\+Gnuplot\+\_\+sim\+::update\+\_\+draw().
+Definition at line \mbox{\hyperlink{model_8hpp_source_l00068}{68}} of file \mbox{\hyperlink{model_8hpp_source}{model.\+hpp}}.
 
 \mbox{\Hypertarget{classstp_1_1_model_a60eab0062d4e65c720ed2ac39d51779b}\label{classstp_1_1_model_a60eab0062d4e65c720ed2ac39d51779b}} 
-\index{stp\+::\+Model@{stp\+::\+Model}!m\+\_\+gamma@{m\+\_\+gamma}}
-\index{m\+\_\+gamma@{m\+\_\+gamma}!stp\+::\+Model@{stp\+::\+Model}}
-\subsubsection{\texorpdfstring{m\+\_\+gamma}{m\_gamma}}
-{\footnotesize\ttfamily double stp\+::\+Model\+::m\+\_\+gamma\mbox{[}2\mbox{]}\mbox{[}\hyperlink{model_8hpp_ae44092ed043cb4350e2df47fdee890b9}{N\+B\+\_\+\+L\+E\+GS}\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+\index{stp::Model@{stp::Model}!m\_gamma@{m\_gamma}}
+\index{m\_gamma@{m\_gamma}!stp::Model@{stp::Model}}
+\doxysubsubsection{\texorpdfstring{m\_gamma}{m\_gamma}}
+{\footnotesize\ttfamily double stp\+::\+Model\+::m\+\_\+gamma\mbox{[}2\mbox{]}\mbox{[}N\+B\+\_\+\+L\+E\+GS\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
 
 Angular position of the motor on the base 
 
-Definition at line 70 of file model.\+hpp.
-
-
-
-Referenced by Model().
-
-\mbox{\Hypertarget{classstp_1_1_model_a4093789451a0491487090daa1c4c9b85}\label{classstp_1_1_model_a4093789451a0491487090daa1c4c9b85}} 
-\index{stp\+::\+Model@{stp\+::\+Model}!m\+\_\+l@{m\+\_\+l}}
-\index{m\+\_\+l@{m\+\_\+l}!stp\+::\+Model@{stp\+::\+Model}}
-\subsubsection{\texorpdfstring{m\+\_\+l}{m\_l}}
-{\footnotesize\ttfamily double stp\+::\+Model\+::m\+\_\+l\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-Definition at line 50 of file model.\+hpp.
-
-
-
-Referenced by Model().
+Definition at line \mbox{\hyperlink{model_8hpp_source_l00071}{71}} of file \mbox{\hyperlink{model_8hpp_source}{model.\+hpp}}.
 
 \mbox{\Hypertarget{classstp_1_1_model_a9a16f1c28c96157d51bedbf67a1a7a81}\label{classstp_1_1_model_a9a16f1c28c96157d51bedbf67a1a7a81}} 
-\index{stp\+::\+Model@{stp\+::\+Model}!m\+\_\+l2@{m\+\_\+l2}}
-\index{m\+\_\+l2@{m\+\_\+l2}!stp\+::\+Model@{stp\+::\+Model}}
-\subsubsection{\texorpdfstring{m\+\_\+l2}{m\_l2}}
+\index{stp::Model@{stp::Model}!m\_l2@{m\_l2}}
+\index{m\_l2@{m\_l2}!stp::Model@{stp::Model}}
+\doxysubsubsection{\texorpdfstring{m\_l2}{m\_l2}}
 {\footnotesize\ttfamily double stp\+::\+Model\+::m\+\_\+l2\hspace{0.3cm}{\ttfamily [protected]}}
 
 Size of the legs. 
 
-Definition at line 50 of file model.\+hpp.
-
-
-
-Referenced by init\+\_\+pos(), Model(), and new\+\_\+pos().
+Definition at line \mbox{\hyperlink{model_8hpp_source_l00051}{51}} of file \mbox{\hyperlink{model_8hpp_source}{model.\+hpp}}.
 
 \mbox{\Hypertarget{classstp_1_1_model_a773d6f9a6ee4f6dd580229e0dc3d741c}\label{classstp_1_1_model_a773d6f9a6ee4f6dd580229e0dc3d741c}} 
-\index{stp\+::\+Model@{stp\+::\+Model}!m\+\_\+P@{m\+\_\+P}}
-\index{m\+\_\+P@{m\+\_\+P}!stp\+::\+Model@{stp\+::\+Model}}
-\subsubsection{\texorpdfstring{m\+\_\+P}{m\_P}}
-{\footnotesize\ttfamily double stp\+::\+Model\+::m\+\_\+P\mbox{[}\hyperlink{model_8hpp_ae44092ed043cb4350e2df47fdee890b9}{N\+B\+\_\+\+L\+E\+GS}\mbox{]}\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+\index{stp::Model@{stp::Model}!m\_P@{m\_P}}
+\index{m\_P@{m\_P}!stp::Model@{stp::Model}}
+\doxysubsubsection{\texorpdfstring{m\_P}{m\_P}}
+{\footnotesize\ttfamily double stp\+::\+Model\+::m\+\_\+P\mbox{[}N\+B\+\_\+\+L\+E\+GS\mbox{]}\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
 
 Position of the legs-\/platform articulation in the base B0. 
 
-Definition at line 56 of file model.\+hpp.
-
-
-
-Referenced by new\+\_\+pos(), and stp\+::\+Gnuplot\+\_\+sim\+::update\+\_\+draw().
+Definition at line \mbox{\hyperlink{model_8hpp_source_l00057}{57}} of file \mbox{\hyperlink{model_8hpp_source}{model.\+hpp}}.
 
 \mbox{\Hypertarget{classstp_1_1_model_a82e25ba756ecbe2f929505ef4d97b317}\label{classstp_1_1_model_a82e25ba756ecbe2f929505ef4d97b317}} 
-\index{stp\+::\+Model@{stp\+::\+Model}!m\+\_\+\+P1@{m\+\_\+\+P1}}
-\index{m\+\_\+\+P1@{m\+\_\+\+P1}!stp\+::\+Model@{stp\+::\+Model}}
-\subsubsection{\texorpdfstring{m\+\_\+\+P1}{m\_P1}}
-{\footnotesize\ttfamily double stp\+::\+Model\+::m\+\_\+\+P1\mbox{[}\hyperlink{model_8hpp_ae44092ed043cb4350e2df47fdee890b9}{N\+B\+\_\+\+L\+E\+GS}\mbox{]}\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+\index{stp::Model@{stp::Model}!m\_P1@{m\_P1}}
+\index{m\_P1@{m\_P1}!stp::Model@{stp::Model}}
+\doxysubsubsection{\texorpdfstring{m\_P1}{m\_P1}}
+{\footnotesize\ttfamily double stp\+::\+Model\+::m\+\_\+\+P1\mbox{[}N\+B\+\_\+\+L\+E\+GS\mbox{]}\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
 
 Position of the legs-\/platform articulation in the base B1. 
 
-Definition at line 59 of file model.\+hpp.
-
-
-
-Referenced by init\+\_\+pos(), Model(), and new\+\_\+pos().
+Definition at line \mbox{\hyperlink{model_8hpp_source_l00060}{60}} of file \mbox{\hyperlink{model_8hpp_source}{model.\+hpp}}.
 
 \mbox{\Hypertarget{classstp_1_1_model_a3c26b01a6c5e533e25ec3de71c7f132c}\label{classstp_1_1_model_a3c26b01a6c5e533e25ec3de71c7f132c}} 
-\index{stp\+::\+Model@{stp\+::\+Model}!m\+\_\+parity@{m\+\_\+parity}}
-\index{m\+\_\+parity@{m\+\_\+parity}!stp\+::\+Model@{stp\+::\+Model}}
-\subsubsection{\texorpdfstring{m\+\_\+parity}{m\_parity}}
-{\footnotesize\ttfamily double stp\+::\+Model\+::m\+\_\+parity\mbox{[}\hyperlink{model_8hpp_ae44092ed043cb4350e2df47fdee890b9}{N\+B\+\_\+\+L\+E\+GS}\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+\index{stp::Model@{stp::Model}!m\_parity@{m\_parity}}
+\index{m\_parity@{m\_parity}!stp::Model@{stp::Model}}
+\doxysubsubsection{\texorpdfstring{m\_parity}{m\_parity}}
+{\footnotesize\ttfamily double stp\+::\+Model\+::m\+\_\+parity\mbox{[}N\+B\+\_\+\+L\+E\+GS\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
 
 Use to represent the side of the motor arm. 
 
-Definition at line 66 of file model.\+hpp.
-
-
-
-Referenced by Model().
+Definition at line \mbox{\hyperlink{model_8hpp_source_l00067}{67}} of file \mbox{\hyperlink{model_8hpp_source}{model.\+hpp}}.
 
 \mbox{\Hypertarget{classstp_1_1_model_ae1c80dd8cb28d3bd7966c1f289fb291e}\label{classstp_1_1_model_ae1c80dd8cb28d3bd7966c1f289fb291e}} 
-\index{stp\+::\+Model@{stp\+::\+Model}!m\+\_\+R@{m\+\_\+R}}
-\index{m\+\_\+R@{m\+\_\+R}!stp\+::\+Model@{stp\+::\+Model}}
-\subsubsection{\texorpdfstring{m\+\_\+R}{m\_R}}
+\index{stp::Model@{stp::Model}!m\_R@{m\_R}}
+\index{m\_R@{m\_R}!stp::Model@{stp::Model}}
+\doxysubsubsection{\texorpdfstring{m\_R}{m\_R}}
 {\footnotesize\ttfamily double stp\+::\+Model\+::m\+\_\+R\mbox{[}3\mbox{]}\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
 
 Matrix of rotation. 
 
-Definition at line 74 of file model.\+hpp.
-
-
-
-Referenced by compute\+\_\+\+R(), and new\+\_\+pos().
-
-\mbox{\Hypertarget{classstp_1_1_model_a55f0ee3549b8f7e582ae9958d69cc493}\label{classstp_1_1_model_a55f0ee3549b8f7e582ae9958d69cc493}} 
-\index{stp\+::\+Model@{stp\+::\+Model}!m\+\_\+radius@{m\+\_\+radius}}
-\index{m\+\_\+radius@{m\+\_\+radius}!stp\+::\+Model@{stp\+::\+Model}}
-\subsubsection{\texorpdfstring{m\+\_\+radius}{m\_radius}}
-{\footnotesize\ttfamily double stp\+::\+Model\+::m\+\_\+radius\mbox{[}2\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-Definition at line 47 of file model.\+hpp.
-
-
-
-Referenced by stp\+::\+Gnuplot\+\_\+sim\+::draw(), and Model().
+Definition at line \mbox{\hyperlink{model_8hpp_source_l00075}{75}} of file \mbox{\hyperlink{model_8hpp_source}{model.\+hpp}}.
 
 \mbox{\Hypertarget{classstp_1_1_model_a61d8b4957be741fa473468065c2a5d0d}\label{classstp_1_1_model_a61d8b4957be741fa473468065c2a5d0d}} 
-\index{stp\+::\+Model@{stp\+::\+Model}!m\+\_\+T@{m\+\_\+T}}
-\index{m\+\_\+T@{m\+\_\+T}!stp\+::\+Model@{stp\+::\+Model}}
-\subsubsection{\texorpdfstring{m\+\_\+T}{m\_T}}
+\index{stp::Model@{stp::Model}!m\_T@{m\_T}}
+\index{m\_T@{m\_T}!stp::Model@{stp::Model}}
+\doxysubsubsection{\texorpdfstring{m\_T}{m\_T}}
 {\footnotesize\ttfamily double stp\+::\+Model\+::m\+\_\+T\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
 
 Postion of the center of the platform. 
 
-Definition at line 72 of file model.\+hpp.
-
-
-
-Referenced by get\+\_\+\+T(), init\+\_\+pos(), new\+\_\+pos(), and set\+\_\+\+T().
+Definition at line \mbox{\hyperlink{model_8hpp_source_l00073}{73}} of file \mbox{\hyperlink{model_8hpp_source}{model.\+hpp}}.
 
 \mbox{\Hypertarget{classstp_1_1_model_a0ba1c1143089052ffad8133ff40d972f}\label{classstp_1_1_model_a0ba1c1143089052ffad8133ff40d972f}} 
-\index{stp\+::\+Model@{stp\+::\+Model}!m\+\_\+\+T\+\_\+spd@{m\+\_\+\+T\+\_\+spd}}
-\index{m\+\_\+\+T\+\_\+spd@{m\+\_\+\+T\+\_\+spd}!stp\+::\+Model@{stp\+::\+Model}}
-\subsubsection{\texorpdfstring{m\+\_\+\+T\+\_\+spd}{m\_T\_spd}}
+\index{stp::Model@{stp::Model}!m\_T\_spd@{m\_T\_spd}}
+\index{m\_T\_spd@{m\_T\_spd}!stp::Model@{stp::Model}}
+\doxysubsubsection{\texorpdfstring{m\_T\_spd}{m\_T\_spd}}
 {\footnotesize\ttfamily double stp\+::\+Model\+::m\+\_\+\+T\+\_\+spd\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
 
 Velocity of the platform. 
 
-Definition at line 77 of file model.\+hpp.
-
-
-
-Referenced by set\+\_\+\+T\+\_\+spd().
+Definition at line \mbox{\hyperlink{model_8hpp_source_l00078}{78}} of file \mbox{\hyperlink{model_8hpp_source}{model.\+hpp}}.
 
 \mbox{\Hypertarget{classstp_1_1_model_a826586afc60c2c076b271413f5c3e382}\label{classstp_1_1_model_a826586afc60c2c076b271413f5c3e382}} 
-\index{stp\+::\+Model@{stp\+::\+Model}!m\+\_\+theta@{m\+\_\+theta}}
-\index{m\+\_\+theta@{m\+\_\+theta}!stp\+::\+Model@{stp\+::\+Model}}
-\subsubsection{\texorpdfstring{m\+\_\+theta}{m\_theta}}
+\index{stp::Model@{stp::Model}!m\_theta@{m\_theta}}
+\index{m\_theta@{m\_theta}!stp::Model@{stp::Model}}
+\doxysubsubsection{\texorpdfstring{m\_theta}{m\_theta}}
 {\footnotesize\ttfamily double stp\+::\+Model\+::m\+\_\+theta\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
 
 Orientation of the platform. 
 
-Definition at line 73 of file model.\+hpp.
-
-
-
-Referenced by compute\+\_\+\+R(), get\+\_\+theta(), init\+\_\+pos(), new\+\_\+pos(), and set\+\_\+theta().
+Definition at line \mbox{\hyperlink{model_8hpp_source_l00074}{74}} of file \mbox{\hyperlink{model_8hpp_source}{model.\+hpp}}.
 
 \mbox{\Hypertarget{classstp_1_1_model_aa12970f18bc4258b9ad185f54a9cfe70}\label{classstp_1_1_model_aa12970f18bc4258b9ad185f54a9cfe70}} 
-\index{stp\+::\+Model@{stp\+::\+Model}!m\+\_\+theta\+\_\+spd@{m\+\_\+theta\+\_\+spd}}
-\index{m\+\_\+theta\+\_\+spd@{m\+\_\+theta\+\_\+spd}!stp\+::\+Model@{stp\+::\+Model}}
-\subsubsection{\texorpdfstring{m\+\_\+theta\+\_\+spd}{m\_theta\_spd}}
+\index{stp::Model@{stp::Model}!m\_theta\_spd@{m\_theta\_spd}}
+\index{m\_theta\_spd@{m\_theta\_spd}!stp::Model@{stp::Model}}
+\doxysubsubsection{\texorpdfstring{m\_theta\_spd}{m\_theta\_spd}}
 {\footnotesize\ttfamily double stp\+::\+Model\+::m\+\_\+theta\+\_\+spd\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
 
 Rotation speed of the platform. 
 
-Definition at line 78 of file model.\+hpp.
-
-
-
-Referenced by set\+\_\+theta\+\_\+spd().
+Definition at line \mbox{\hyperlink{model_8hpp_source_l00079}{79}} of file \mbox{\hyperlink{model_8hpp_source}{model.\+hpp}}.
 
 \mbox{\Hypertarget{classstp_1_1_model_afdc7491e9be320ad94775ca046667f9b}\label{classstp_1_1_model_afdc7491e9be320ad94775ca046667f9b}} 
-\index{stp\+::\+Model@{stp\+::\+Model}!m\+\_\+trig@{m\+\_\+trig}}
-\index{m\+\_\+trig@{m\+\_\+trig}!stp\+::\+Model@{stp\+::\+Model}}
-\subsubsection{\texorpdfstring{m\+\_\+trig}{m\_trig}}
+\index{stp::Model@{stp::Model}!m\_trig@{m\_trig}}
+\index{m\_trig@{m\_trig}!stp::Model@{stp::Model}}
+\doxysubsubsection{\texorpdfstring{m\_trig}{m\_trig}}
 {\footnotesize\ttfamily double stp\+::\+Model\+::m\+\_\+trig\mbox{[}6\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
 
 (cos(theta\+\_\+i),sin(theta\+\_\+i)) 
 
-Definition at line 75 of file model.\+hpp.
-
-
-
-Referenced by compute\+\_\+\+R().
+Definition at line \mbox{\hyperlink{model_8hpp_source_l00076}{76}} of file \mbox{\hyperlink{model_8hpp_source}{model.\+hpp}}.
 
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/\hyperlink{model_8hpp}{model.\+hpp}\item 
-src/\hyperlink{model_8cpp}{model.\+cpp}\end{DoxyCompactItemize}
+model.\+hpp\item 
+model.\+cpp\end{DoxyCompactItemize}

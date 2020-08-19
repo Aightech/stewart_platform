@@ -1,0 +1,33 @@
+\hypertarget{nmt_8h_source}{}\doxysection{nmt.\+h}
+\label{nmt_8h_source}\index{nmt.h@{nmt.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#ifndef \_CANOPEN\_NMT\_MESSAGE\_H\_}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#define \_CANOPEN\_NMT\_MESSAGE\_H\_}}
+\DoxyCodeLine{00003 }
+\DoxyCodeLine{00011 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{message_8h}{message.h}}"}}
+\DoxyCodeLine{00012 }
+\DoxyCodeLine{00013 \textcolor{keyword}{namespace }CANopen \{}
+\DoxyCodeLine{\Hypertarget{nmt_8h_source_l00017}\mbox{\hyperlink{class_c_a_nopen_1_1_n_m_t_message}{00017}} \textcolor{keyword}{class }\mbox{\hyperlink{class_c_a_nopen_1_1_n_m_t_message}{NMTMessage}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_c_a_nopen_1_1_message}{Message}} \{}
+\DoxyCodeLine{00018     \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019     \textcolor{keyword}{enum} Code : uint8\_t \{}
+\DoxyCodeLine{00020         Initialising = 0,}
+\DoxyCodeLine{00021         GoToOperational = 0x01,}
+\DoxyCodeLine{00022         GoToStopped = 0x02,}
+\DoxyCodeLine{00023         Stopped = 0x04,}
+\DoxyCodeLine{00024         Operational = 0x05,}
+\DoxyCodeLine{00025         PreOperational = 0x7f,}
+\DoxyCodeLine{00026         GoToPreOperational = 0x80,}
+\DoxyCodeLine{00027         GoToResetNode = 0x81,}
+\DoxyCodeLine{00028         GoToResetCommunication = 0x82}
+\DoxyCodeLine{00029     \};}
+\DoxyCodeLine{00030 }
+\DoxyCodeLine{00031     \mbox{\hyperlink{class_c_a_nopen_1_1_n_m_t_message}{NMTMessage}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00032     \mbox{\hyperlink{class_c_a_nopen_1_1_n_m_t_message}{NMTMessage}}(\textcolor{keyword}{const} can\_frame \&other);}
+\DoxyCodeLine{00033     \mbox{\hyperlink{class_c_a_nopen_1_1_n_m_t_message}{NMTMessage}}(Code code, uint8\_t \mbox{\hyperlink{class_c_a_nopen_1_1_message_adc93c710fd35ab61e46a0881326d0336}{node\_id}});}
+\DoxyCodeLine{00034 \};}
+\DoxyCodeLine{00035 \} \textcolor{comment}{// namespace CANopen}}
+\DoxyCodeLine{00036 }
+\DoxyCodeLine{00037 \textcolor{preprocessor}{\#endif // \_CANOPEN\_NMT\_MESSAGE\_H\_}}
+
+\end{DoxyCode}
