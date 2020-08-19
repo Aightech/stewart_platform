@@ -12,6 +12,8 @@
 !/config/*
 !/docs
 !/docs/*
+!/forms
+!/forms/*
 !/fig
 !/fig/*
 !/models
