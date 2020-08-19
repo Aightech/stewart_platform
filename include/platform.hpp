@@ -3,27 +3,17 @@
 
 #include "CANopen_lxm32.h"
 #include "model.hpp"
-
-
-
-
 #include <eigen3/Eigen/Dense>
 #include <chrono>
 
 namespace chr = std::chrono;
 
-
-
-//extern std::mutex CANopen::g_verbose_mutex;
 namespace stp
 {
 class Platform : public Model
 {
     public:
-    Platform(double deltas[4], double a, double l, int verbose_level=0) : Model(deltas, a, l, verbose_level)
-    {
-    	//init();
-    };
+    Platform(double deltas[4], double a, double l, int verbose_level=0) : Model(deltas, a, l, verbose_level){};
 
     void
     init();
@@ -43,8 +33,9 @@ class Platform : public Model
     void
     update_platform();
 
-    private:
+    protected:
     CANopen::LXM32 *m_motors[NB_LEGS]; /*!< Driver of the platform.*/
+private:
     bool m_available;
     double m_motor_pos[NB_LEGS];
 

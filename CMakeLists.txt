@@ -42,14 +42,17 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 
-
 message("\n> EXTERN LIB:")
 ###### Special libraries ######
+set(REMOVED_SRC "none")
+set(REMOVED_HEADER "none")
+
+
 if(0)
   set(EXTRA_LIBS "pthread" "util")
 endif()
 
-find_package(Boost 1.56 REQUIRED COMPONENTS system filesystem iostreams)
+find_package(Boost 1.56 REQUIRED COMPONENTS system filesystem iostreams QUIET)
 if (Boost_FOUND)
   message("-- Boost \t[OK]")
   list(APPEND EXTRA_LIBS ${Boost_IOSTREAMS_LIBRARY} ${Boost_SYSTEM_LIBRARY} ${Boost_FILESYSTEM_LIBRARY})
@@ -92,7 +95,7 @@ file(GLOB LIB_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp" "${CMAKE_CURRENT_SOUR
 list(REMOVE_ITEM LIB_SRCS ${MAIN_FILE})
 list(REMOVE_ITEM LIB_SRCS ${REMOVED_SRC})
 file(GLOB LIB_HEADERS "${CMAKE_CURRENT_SOURCE_DIR}/include/*.h" "${CMAKE_CURRENT_SOURCE_DIR}/include/*.hpp" )
-#file(GLOB LIB_HEADERS "${CMAKE_CURRENT_SOURCE_DIR}/forms/*.ui")
+
 message("${LIB_SRCS}")
 list(REMOVE_ITEM LIB_SRCS ${REMOVED_SRC})
 list(REMOVE_ITEM LIB_HEADERS ${REMOVED_HEADER})
@@ -141,14 +144,15 @@ message("\n>  BUILD:")
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 qt5_wrap_cpp(EXEC_SRC ${CMAKE_CURRENT_SOURCE_DIR}/include/mainwindow.h)
 qt5_wrap_ui(EXEC_UI ${CMAKE_CURRENT_SOURCE_DIR}/forms/mainwindow.ui)
-set(LIB_SRCS ${LIB_SRCS} ${EXEC_UI} ${EXEC_SRC})
+set(LIB_SRCS ${LIB_SRCS}  ${EXEC_SRC})
 
 
 add_executable(${EXEC_NAME} ${MAIN_FILE} ${LIB_SRCS})
 target_link_libraries (${EXEC_NAME} ${EXTRA_LIBS})
 target_include_directories(${EXEC_NAME}
   PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include"
-  PUBLIC "${EXTRA_INCLUDE}")
+  PUBLIC "${EXTRA_INCLUDE}"
+  PRIVATE "${EXEC_UI}")
 
 
 

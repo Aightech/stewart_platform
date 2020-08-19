@@ -19,15 +19,19 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+    /**
+     * @brief update_pos Update the GUI to display the current position of the platform.
+     */
     void update_pos();
 
+    /**
+     * @brief loop  Called every 1ms to send order depending of the mode.
+     */
     void loop();
 
 private slots:
     void on_pushButton_start_clicked();
-
     void on_pushButton_pause_clicked();
-
     void on_pushButton_stop_clicked();
 
 private:

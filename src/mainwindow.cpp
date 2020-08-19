@@ -12,7 +12,7 @@ MainWindow::MainWindow(QWidget *parent)
     m_sp = new stp::Platform(deltas, 0.08, 0.44,0);
     m_T[2] = m_sp->get_T(2);
     m_sp->init();
-    usleep(3000000);
+    usleep(3000000);// wait to ensure th emotor reached their initial pos
     m_sp->stop();
     std::cout << "Initialized\n";
 
