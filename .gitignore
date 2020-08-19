@@ -27,6 +27,6 @@
 !/.dir-locals.el
 
 !/.clang-format
-
+!/switchon_can_interface.sh
 !/wikis
 !/wikis/*
