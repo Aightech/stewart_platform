@@ -147,12 +147,35 @@ void MainWindow::on_pushButton_stop_clicked()
 
 void MainWindow::update_pos()
 {
-    ui->lineEdit_pos_x->setText(QString::number(m_sp->get_T(0)));
-    ui->lineEdit_pos_y->setText(QString::number(m_sp->get_T(1)));
-    ui->lineEdit_pos_z->setText(QString::number(m_sp->get_T(2)));
+    double t[3] = {m_sp->get_T(0), m_sp->get_T(1), m_sp->get_T(2) };
+    double theta[3] = {m_sp->get_theta(0), m_sp->get_theta(1), m_sp->get_theta(2) };
+    ui->lineEdit_pos_x->setText(QString::number(t[0]));
+    ui->lineEdit_pos_y->setText(QString::number(t[1]));
+    ui->lineEdit_pos_z->setText(QString::number(t[2]));
 
 
-    ui->lineEdit_pos_roll->setText(QString::number(m_sp->get_theta(0)));
-    ui->lineEdit_pos_pitch->setText(QString::number(m_sp->get_theta(1)));
-    ui->lineEdit_pos_yaw->setText(QString::number(m_sp->get_theta(2)));
+    ui->lineEdit_pos_roll->setText(QString::number(theta[0]));
+    ui->lineEdit_pos_pitch->setText(QString::number(theta[1]));
+    ui->lineEdit_pos_yaw->setText(QString::number(theta[2]));
+
+    if(m_gnuplot==true)
+        m_sim->new_pos(t, theta);
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+    std::cout << "gnuplot" << std::endl;
+
+    if(m_gnuplot==false)
+    {
+        std::cout << "gnuplot" << std::endl;
+        m_sim = new stp::Gnuplot_sim({.radius_base=0.45,
+                                  .radius_platform=0.244,
+                                  .delta_base=0.63,
+                                  .delta_platform=0.075,
+                                  .arm=0.075,
+                                  .leg=0.4375});
+        m_gnuplot=true;
+        update_pos();
+    }
 }

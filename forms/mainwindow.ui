@@ -704,6 +704,13 @@
           </property>
          </spacer>
         </item>
+        <item>
+         <widget class="QPushButton" name="pushButton">
+          <property name="text">
+           <string>gnuplot</string>
+          </property>
+         </widget>
+        </item>
        </layout>
       </item>
       <item>

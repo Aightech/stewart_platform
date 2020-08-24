@@ -5,6 +5,7 @@
 #include <QDoubleSpinBox>
 
 #include "platform.hpp"
+#include "gnuplot_sim.hpp"
 #include "joystick.h"
 
 QT_BEGIN_NAMESPACE
@@ -35,6 +36,8 @@ private slots:
     void on_pushButton_stop_clicked();
 
 
+    void on_pushButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     stp::Platform *m_sp;
@@ -50,6 +53,9 @@ private:
     std::chrono::time_point<std::chrono::system_clock> m_prev_time;
 
     cJoystick m_js;
+
+    bool m_gnuplot = false;
+    stp::Gnuplot_sim *m_sim;
 
 
 };
