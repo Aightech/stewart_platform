@@ -11,6 +11,7 @@ namespace stp
 class Model
 {
     public:
+
     typedef struct {
         double radius_base;
         double radius_platform;
