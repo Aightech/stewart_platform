@@ -11,7 +11,7 @@ namespace stp
 class Gnuplot_sim : public Model
 {
     public:
-    Gnuplot_sim(double deltas[4], double a, double l) : Model(deltas, a, l)
+    Gnuplot_sim(Geometry_stp geometry) : Model(geometry)
     {
         //setup the vector used to draw the platform
         m_plot.P.resize(6);

@@ -13,7 +13,7 @@ namespace stp
 class Platform : public Model
 {
     public:
-    Platform(double deltas[4], double a, double l, int verbose_level=0) : Model(deltas, a, l, verbose_level){};
+    Platform(Geometry_stp geometry, int verbose_level=0) : Model(geometry, verbose_level){};
 
     void
     init();

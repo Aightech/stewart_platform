@@ -5,7 +5,7 @@
 #include "model.hpp"
 #include <cstdlib>
 
-stp::Model::Model(double deltas[4], double a, double l, int verbose_level): m_verbose_level(verbose_level)
+stp::Model::Model(Geometry_stp geometry, int verbose_level): m_verbose_level(verbose_level)
 {
 
     /*
@@ -27,18 +27,13 @@ stp::Model::Model(double deltas[4], double a, double l, int verbose_level): m_ve
      */
 
     //set the length of the arms and legs
-    m_a = a; //arm of the motor
-    m_l = l; //leg link to the arm and the platform
-    m_a2 = a * a;
-    m_l2 = l * l;
+    m_a = geometry.arm; //arm of the motor
+    m_l = geometry.leg; //leg link to the arm and the platform
+    m_a2 = m_a * m_a;
+    m_l2 = m_l * m_l;
 
-    //compute the radius of the base and the platform from the delta lengths.
-    for(int i = 0; i < 2; i++)
-        m_radius[i] = deltas[2 * i + 1] /
-                      (2 * sin(atan(deltas[2 * i + 1] /
-                                    (2 * deltas[2 * i] + deltas[2 * i + 1]))));
-    m_radius[0]=0.413;
-    m_radius[1]=0.244;
+    m_radius[0]=geometry.radius_base;//0.413;
+    m_radius[1]=geometry.radius_platform;//0.244;
 
     //Set the constant coordinate of B and P1 (P in B1).
     for(int i = 0; i < NB_LEGS; i++)
@@ -49,10 +44,10 @@ stp::Model::Model(double deltas[4], double a, double l, int verbose_level): m_ve
         //angle of the motor on the base circle.
         m_gamma[0][i] =
             m_beta[i] + (2 * m_parity[i] - 1) * M_PI / 2 +
-            (2 * m_parity[i] - 1) * asin(deltas[0] / 2 / m_radius[0]);
+            (2 * m_parity[i] - 1) * asin(geometry.delta_base / 2 / m_radius[0]);
         m_gamma[1][i] =
             m_beta[i] + (2 * m_parity[i] - 1) * M_PI / 2 +
-            (2 * m_parity[i] - 1) * asin(deltas[2] / 2 / m_radius[1]);
+            (2 * m_parity[i] - 1) * asin(geometry.delta_platform / 2 / m_radius[1]);
 
         m_B[i][0] = m_radius[0] * cos(m_gamma[0][i]);
         m_B[i][1] = m_radius[0] * sin(m_gamma[0][i]);
@@ -68,6 +63,19 @@ stp::Model::Model(double deltas[4], double a, double l, int verbose_level): m_ve
         m_alpha_spd[i] = 0;
     }
     init_pos();
+}
+
+void stp::Model::find_r(double n_r)
+{
+    m_radius[0]=n_r;
+
+    //Set the constant coordinate of B and P1 (P in B1).
+    for(int i = 0; i < NB_LEGS; i++)
+    {
+        m_B[i][0] = m_radius[0] * cos(m_gamma[0][i]);
+        m_B[i][1] = m_radius[0] * sin(m_gamma[0][i]);
+        m_B[i][2] = 0;
+    }
 }
 
 void
@@ -135,8 +143,8 @@ stp::Model::new_pos(double T[3], double theta[3])
         double D = M * M + N * N;
         if(D < 0 || L / sqrt(D) >= 1 || L / sqrt(D) <= -1)
         {
-            std::cout << "Limit reached..." << std::endl;
             new_pos(T_tmp, theta_tmp);
+            throw std::runtime_error(std::string("Limit reached..."));
             return m_alpha;
         }
         m_alpha[i] = asin(L / sqrt(D)) - atan(M / N);

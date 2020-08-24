@@ -51,10 +51,10 @@
            <number>3</number>
           </property>
           <property name="minimum">
-           <double>-0.020000000000000</double>
+           <double>-0.060000000000000</double>
           </property>
           <property name="maximum">
-           <double>0.020000000000000</double>
+           <double>0.060000000000000</double>
           </property>
           <property name="singleStep">
            <double>0.001000000000000</double>
@@ -84,10 +84,10 @@
            <number>3</number>
           </property>
           <property name="minimum">
-           <double>-0.020000000000000</double>
+           <double>-0.060000000000000</double>
           </property>
           <property name="maximum">
-           <double>0.020000000000000</double>
+           <double>0.060000000000000</double>
           </property>
           <property name="singleStep">
            <double>0.001000000000000</double>
@@ -117,10 +117,10 @@
            <number>3</number>
           </property>
           <property name="minimum">
-           <double>-0.020000000000000</double>
+           <double>-0.060000000000000</double>
           </property>
           <property name="maximum">
-           <double>0.020000000000000</double>
+           <double>0.060000000000000</double>
           </property>
           <property name="singleStep">
            <double>0.001000000000000</double>
@@ -217,6 +217,23 @@
     </item>
     <item row="3" column="0" rowspan="2" colspan="2">
      <layout class="QGridLayout" name="gridLayout">
+      <item row="1" column="0" colspan="3">
+       <widget class="QRadioButton" name="radioButton_cart_mvt">
+        <property name="text">
+         <string notr="true">Cartesian Movement</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLabel" name="label_20">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
       <item row="2" column="2">
        <layout class="QVBoxLayout" name="verticalLayout_2">
         <item>
@@ -332,13 +349,6 @@
          </layout>
         </item>
        </layout>
-      </item>
-      <item row="2" column="1">
-       <widget class="QLabel" name="label_20">
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
       </item>
       <item row="2" column="0">
        <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -456,18 +466,8 @@
         </item>
        </layout>
       </item>
-      <item row="1" column="0" colspan="3">
-       <widget class="QRadioButton" name="radioButton_cart_mvt">
-        <property name="text">
-         <string notr="true">Cartesian Movement</string>
-        </property>
-        <property name="checked">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
       <item row="0" column="0" colspan="3">
-       <widget class="QRadioButton" name="radioButton">
+       <widget class="QRadioButton" name="radioButton_cart_joy">
         <property name="text">
          <string>Joystick</string>
         </property>

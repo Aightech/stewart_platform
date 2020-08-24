@@ -8,10 +8,20 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    double deltas[4] = {0.63, 0.16, 0.075, 0.38};
-    m_sp = new stp::Platform(deltas, 0.08, 0.44,0);
+    ui->pushButton_pause->setEnabled(false);
+    ui->pushButton_stop->setEnabled(false);
+    m_sp = new stp::Platform({.radius_base=0.45,
+                              .radius_platform=0.244,
+                              .delta_base=0.63,
+                              .delta_platform=0.075,
+                              .arm=0.075,
+                              .leg=0.4375} ,0);//0.413//;0.63, 0.16, 0.075, 0.38}, 0.08, 0.44,0);
     m_T[2] = m_sp->get_T(2);
     m_sp->init();
+    m_js.pulse();
+    m_running=false;
+    m_sp->stop();
+    ui->label_state->setText("[ Stop ]");
     std::cout << "Initialized\n";
 
     m_cart_anlge[0] = ui->doubleSpinBox_cart_roll;
@@ -28,7 +38,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     QTimer *timer = new QTimer(this);
     connect(timer, &QTimer::timeout, this, &MainWindow::loop);
-    timer->start(1);
+    timer->start(10);
 
     update_pos();
 }
@@ -57,14 +67,37 @@ void MainWindow::loop()
             for(int i =0; i<3; i++)
                 m_T[i] = m_T_mid[i] + m_sin_dir[i]->value()*sin_v;
         }
+        else if (ui->radioButton_cart_joy->isChecked())
+        {
+            for(int i = 0; i< 2; i++)
+            {
+                m_T[i] = 0.3*m_T[i] + 0.7*m_js.joystickValue(i) / 32767. * 0.07;
+                m_theta[i] = 0.3*m_T[i] + 0.7*m_js.joystickValue(3+i) / 32767. * 0.07;
+            }
+            m_T[2] += m_js.joystickValue(7) / 32767 * 0.001;
+            m_theta[2] += m_js.joystickValue(6) / 32767 * 0.001;
+        }
 
-        m_sp->new_pos(m_T, m_theta);
-        m_sp->update_platform();
+        try {
+
+            m_sp->new_pos(m_T, m_theta);
+        } catch (const std::runtime_error& e) {
+            std::cerr << e.what();
+            if(m_T[0]+m_T[1]>0)
+                m_js.leftPulse();
+            else
+                m_js.rightPulse();
+        }
+        update_pos();
     }
 }
 
 void MainWindow::on_pushButton_start_clicked()
 {
+    ui->label_state->setText("[ Start ]");
+    ui->pushButton_start->setEnabled(false);
+    ui->pushButton_pause->setEnabled(true);
+    ui->pushButton_stop->setEnabled(true);
     m_sp->start();
     m_running=true;
     if(ui->radioButton_cart_mvt->isChecked())
@@ -83,28 +116,43 @@ void MainWindow::on_pushButton_start_clicked()
             m_T_mid[i] = m_sp->get_T(i);
         m_prev_time = chr::high_resolution_clock::now();
     }
+    else if (ui->radioButton_cart_joy->isChecked())
+    {
+
+        for(int i =0; i<3; i++)
+            m_T_mid[i] = m_sp->get_T(i);
+        m_prev_time = chr::high_resolution_clock::now();
+    }
 }
 
 void MainWindow::on_pushButton_pause_clicked()
 {
+    ui->label_state->setText("[ Pause ]");
+    ui->pushButton_start->setEnabled(true);
+    ui->pushButton_pause->setEnabled(true);
+    ui->pushButton_stop->setEnabled(true);
     m_running=false;
     m_sp->pause();
 }
 
 void MainWindow::on_pushButton_stop_clicked()
 {
+    ui->label_state->setText("[ Stop ]");
+    ui->pushButton_start->setEnabled(true);
+    ui->pushButton_pause->setEnabled(false);
+    ui->pushButton_stop->setEnabled(false);
     m_running=false;
     m_sp->stop();
 }
 
 void MainWindow::update_pos()
 {
-    ui->lineEdit_pos_x->setText(QString::number(m_T[0]));
-    ui->lineEdit_pos_y->setText(QString::number(m_T[1]));
-    ui->lineEdit_pos_z->setText(QString::number(m_T[2]));
+    ui->lineEdit_pos_x->setText(QString::number(m_sp->get_T(0)));
+    ui->lineEdit_pos_y->setText(QString::number(m_sp->get_T(1)));
+    ui->lineEdit_pos_z->setText(QString::number(m_sp->get_T(2)));
 
 
-    ui->lineEdit_pos_roll->setText(QString::number(m_theta[0]));
-    ui->lineEdit_pos_pitch->setText(QString::number(m_theta[1]));
-    ui->lineEdit_pos_yaw->setText(QString::number(m_theta[2]));
+    ui->lineEdit_pos_roll->setText(QString::number(m_sp->get_theta(0)));
+    ui->lineEdit_pos_pitch->setText(QString::number(m_sp->get_theta(1)));
+    ui->lineEdit_pos_yaw->setText(QString::number(m_sp->get_theta(2)));
 }

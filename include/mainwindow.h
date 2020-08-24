@@ -34,6 +34,7 @@ private slots:
     void on_pushButton_pause_clicked();
     void on_pushButton_stop_clicked();
 
+
 private:
     Ui::MainWindow *ui;
     stp::Platform *m_sp;
@@ -47,6 +48,9 @@ private:
     QDoubleSpinBox* m_sin_dir[3];
 
     std::chrono::time_point<std::chrono::system_clock> m_prev_time;
+
+    cJoystick m_js;
+
 
 };
 #endif // MAINWINDOW_H

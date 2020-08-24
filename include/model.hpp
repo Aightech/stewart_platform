@@ -11,8 +11,17 @@ namespace stp
 class Model
 {
     public:
+    typedef struct {
+        double radius_base;
+        double radius_platform;
+        double delta_base;
+        double delta_platform;
+        double arm;
+        double leg;
+    } Geometry_stp;
+
     Model(){};
-    Model(double deltas[4], double a, double l, int verbose_level=0);
+    Model(Geometry_stp geometry, int verbose_level=0);
 
     double *
     new_pos(double T[3], double theta[3]);
@@ -32,7 +41,8 @@ class Model
 
   void print_pos();
 
-    protected:
+  void find_r(double n_r);
+protected:
     void
     set_T(double t0, double t1, double t2);
 
