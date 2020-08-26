@@ -124,21 +124,22 @@ stp::Model::new_pos(double T[3], double theta[3])
     double L;
     double M;
     double N;
-    for(int i = 0; i < NB_LEGS; i++)
+    for(int n = 0; n < NB_LEGS; n++)
     {
-        _d2[i] = 0;
-        for(int j = 0; j < 3; j++)
+        _d2[n] = 0;
+        for(int i = 0; i < 3; i++)
         {
-            m_P[i][j] = m_T[j];
-            for(int k = 0; k < 3; k++) m_P[i][j] += m_R[j][k] * m_P1[i][k];
-            tmp = m_P[i][j] - m_B[i][j];
-            _d2[i] += tmp * tmp;
+            m_P[n][i] = m_T[i];
+            for(int j = 0; j < 3; j++)
+                m_P[n][i] += m_R[i][j] * m_P1[n][j];
+            tmp = m_P[n][i] - m_B[n][i];
+            _d2[n] += tmp * tmp;
         }
 
-        L = (m_a2 - m_l2 + _d2[i]) / (2 * m_a);
-        M = cos(m_beta[i]) * (m_P[i][0] - m_B[i][0]) +
-            sin(m_beta[i]) * (m_P[i][1] - m_B[i][1]);
-        N = (m_P[i][2] - m_B[i][2]);
+        L = (m_a2 - m_l2 + _d2[n]) / (2 * m_a);
+        M = cos(m_beta[n]) * (m_P[n][0] - m_B[n][0]) +
+            sin(m_beta[n]) * (m_P[n][1] - m_B[n][1]);
+        N = (m_P[n][2] - m_B[n][2]);
 
         double D = M * M + N * N;
         if(D < 0 || L / sqrt(D) >= 1 || L / sqrt(D) <= -1)
@@ -147,7 +148,7 @@ stp::Model::new_pos(double T[3], double theta[3])
             throw std::runtime_error(std::string("Limit reached..."));
             return m_alpha;
         }
-        m_alpha[i] = asin(L / sqrt(D)) - atan(M / N);
+        m_alpha[n] = asin(L / sqrt(D)) - atan(M / N);
     }
     return m_alpha;
 };

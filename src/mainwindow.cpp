@@ -10,8 +10,8 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     ui->pushButton_pause->setEnabled(false);
     ui->pushButton_stop->setEnabled(false);
-    m_sp = new stp::Platform({.radius_base=0.45,
-                              .radius_platform=0.244,
+    m_sp = new stp::Platform({.radius_base=0.415,
+                              .radius_platform=0.255,
                               .delta_base=0.63,
                               .delta_platform=0.075,
                               .arm=0.075,
@@ -71,16 +71,20 @@ void MainWindow::loop()
         {
             for(int i = 0; i< 2; i++)
             {
-                m_T[i] = 0.3*m_T[i] + 0.7*m_js.joystickValue(i) / 32767. * 0.07;
-                m_theta[i] = 0.3*m_T[i] + 0.7*m_js.joystickValue(3+i) / 32767. * 0.07;
+                //m_T[i] = 0.3*m_T[i] + 0.7*m_js.joystickValue(i) / 32767. * 0.07;
+                //m_theta[i] = 0.3*m_T[i] + 0.7*m_js.joystickValue(3+i) / 32767. * 0.07;
+
+                m_T[i] = m_js.joystickValue(i) / 32767. * 0.07*(1-2*i);
+                m_theta[i+1] = m_js.joystickValue(3+i) / 32767. * 0.1;
             }
-            m_T[2] += m_js.joystickValue(7) / 32767 * 0.001;
-            m_theta[2] += m_js.joystickValue(6) / 32767 * 0.001;
+            m_T[2] -= m_js.joystickValue(7) / 32767 * 0.005;
+            m_theta[0] -= m_js.joystickValue(6) / 32767 * 0.005;
         }
 
         try {
 
             m_sp->new_pos(m_T, m_theta);
+            update_pos();
         } catch (const std::runtime_error& e) {
             std::cerr << e.what();
             if(m_T[0]+m_T[1]>0)
@@ -88,7 +92,6 @@ void MainWindow::loop()
             else
                 m_js.rightPulse();
         }
-        update_pos();
     }
 }
 
@@ -129,7 +132,7 @@ void MainWindow::on_pushButton_pause_clicked()
 {
     ui->label_state->setText("[ Pause ]");
     ui->pushButton_start->setEnabled(true);
-    ui->pushButton_pause->setEnabled(true);
+    ui->pushButton_pause->setEnabled(false);
     ui->pushButton_stop->setEnabled(true);
     m_running=false;
     m_sp->pause();
@@ -160,6 +163,8 @@ void MainWindow::update_pos()
 
     if(m_gnuplot==true)
         m_sim->new_pos(t, theta);
+
+
 }
 
 void MainWindow::on_pushButton_clicked()

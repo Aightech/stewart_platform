@@ -45,7 +45,10 @@ stp::Gnuplot_sim::draw()
     for(int i = 3; i < lines.size(); i++)
     {
         m_plot.gp << m_plot.gp.binFile2d(lines[i], "record");
-        m_plot.gp << "with lines notitle lw 2,";
+        if(i==6)
+            m_plot.gp << "with lines notitle lw 10,";
+        else
+            m_plot.gp << "with lines notitle lw 2,";
     }
 
     m_plot.gp << " \n";
