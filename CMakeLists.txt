@@ -121,7 +121,7 @@ if (EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/lib")
     #get the version
     subproject_version("${subdir}" subdir_version)
     message("-- ${EXEC_NAME}: Added library ${subdir} version: ${subdir_version}")
-    list(APPEND EXTRA_LIBS "${subdir}.${subdir_version}")
+    list(APPEND INTERN_LIBS "${subdir}.${subdir_version}")
   endforeach()
 endif()
 
@@ -148,7 +148,7 @@ set(LIB_SRCS ${LIB_SRCS}  ${EXEC_SRC}  )
 
 
 add_executable(${EXEC_NAME} ${MAIN_FILE} ${LIB_SRCS} ${EXEC_UI})
-target_link_libraries (${EXEC_NAME} ${EXTRA_LIBS})
+target_link_libraries (${EXEC_NAME} ${EXTRA_LIBS} ${INTERN_LIBS})
 target_include_directories(${EXEC_NAME}
   PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include"
   PUBLIC "${EXTRA_INCLUDE}"
@@ -164,16 +164,31 @@ install(TARGETS ${EXEC_NAME} DESTINATION bin)
 install(FILES ${HEADERS} DESTINATION include)
 
 
-# enable_testing()
 
-# # define a function to simplify adding tests
-# function(do_test target arg result)
-#   add_test(NAME Comp${arg} COMMAND ${target} ${arg})
-#   set_tests_properties(Comp${arg}
-#     PROPERTIES PASS_REGULAR_EXPRESSION ${result}
-#     )
-# endfunction(do_test)
+find_program(DOT_EXE "dot")
+if(DOT_EXE)
+  message(STATUS "dot found: ${DOT_EXE}")
+  set(DOT_OUTPUT_TYPE "svg")
+    add_custom_target(dependency-graph
+      COMMAND ${CMAKE_COMMAND} ${CMAKE_SOURCE_DIR} --graphviz=${CMAKE_BINARY_DIR}/graphviz/${PROJECT_NAME}.dot
+      COMMENT "heyyyyyyyy      yyyyy   ${DOT_OUTPUT_TYPE}"
+        COMMAND ${DOT_EXE} -T${DOT_OUTPUT_TYPE} ${CMAKE_BINARY_DIR}/graphviz/${PROJECT_NAME}.dot -o ${CMAKE_BINARY_DIR}/${PROJECT_NAME}.${DOT_OUTPUT_TYPE}
+	)
 
-# # do a bunch of result based tests
-# do_test(canopen 1 1000 0 "")
-# do_test(canopen 2 607A 0 4 d 1000 "")
+      add_custom_command(
+        TARGET dependency-graph PRE_BUILD
+        COMMAND echo "set\\\(GRAPHVIZ_EXTERNAL_LIBS NO\\\)" > CMakeGraphVizOptions.cmake
+	# COMMAND echo "set\\\(GRAPHVIZ_EXECUTABLES YES\\\)" >> CMakeGraphVizOptions.cmake
+	# COMMAND echo "set\\\(GRAPHVIZ_IGNORE_TARGETS lxm32\\\)" >> CMakeGraphVizOptions.cmake
+        COMMENT "blabla"
+	)
+
+    add_custom_command(
+        TARGET dependency-graph POST_BUILD
+        COMMAND ;
+        COMMENT
+        "Dependency graph generated and located at ${CMAKE_BINARY_DIR}/${PROJECT_NAME}.${DOT_OUTPUT_TYPE}"
+	)
+      else()
+    message(STATUS "dot not found!")
+endif()

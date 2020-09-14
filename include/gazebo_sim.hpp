@@ -15,8 +15,8 @@ namespace stp
 class Gazebo_sim : public Model
 {
     public:
-    Gazebo_sim(double deltas[4], double a, double l)
-        : Model(deltas, a, l), m_node(new gazebo::transport::Node())
+    Gazebo_sim(Geometry_stp geometry)
+        : Model(geometry), m_node(new gazebo::transport::Node())
     {
         gazebo::client::setup();
         m_node->Init();
