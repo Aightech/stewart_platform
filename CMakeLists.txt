@@ -31,8 +31,10 @@ cmake_minimum_required(VERSION 3.5)
 
 ###### PROJECT NAME AND VERSION ######
 set(EXEC_NAME stewart_platform)
-set(PROJECT_VERSION 1.0)
+set(PROJECT_VERSION 2.0)
 project(${EXEC_NAME} VERSION ${PROJECT_VERSION})
+message("\n## ${EXEC_NAME} (v${PROJECT_VERSION}) ##")
+
 
 ###### LIBRARY NAME ######
 set(LIB_NAME ${EXEC_NAME}.${PROJECT_VERSION})
@@ -41,77 +43,34 @@ set(LIB_NAME ${EXEC_NAME}.${PROJECT_VERSION})
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
+###### INTERN libraries ######
+set(EXE_INTERN_LIBS "")
+set(LIB_INTERN_LIBS lxm32)
 
-message("\n> EXTERN LIB:")
-###### Special libraries ######
-set(REMOVED_SRC "none")
-set(REMOVED_HEADER "none")
+###### EXTERN libraries ######
+set(EXE_EXTERN_LIBS Qt5)
+set(LIB_EXTERN_LIBS gazebo)
 
+## LIBRARIES SETTINGS ##
+set(gazebo_COMPONENTS_VAR "GAZEBO_LIBRARIES")
+set(gazebo_INCLUDE_DIRS_VAR "GAZEBO_INCLUDE_DIRS")
+set(gazebo_DEPENDANT_SRC "gazebo_sim")
 
-if(0)
-  set(EXTRA_LIBS "pthread" "util")
-endif()
-
-find_package(Boost 1.56 QUIET REQUIRED COMPONENTS system filesystem iostreams)
-if (Boost_FOUND)
-  message("-- Boost \t[OK]")
-  list(APPEND EXTRA_LIBS ${Boost_IOSTREAMS_LIBRARY} ${Boost_SYSTEM_LIBRARY} ${Boost_FILESYSTEM_LIBRARY})
-else ()
-  message("-- Boost \t[NO]")
-endif (Boost_FOUND)
-
-find_package(gazebo QUIET)
-if (gazebo_FOUND)
-  message("-- Gazebo \t[OK]")
-  list(APPEND EXTRA_LIBS ${GAZEBO_LIBRARIES})
-  list(APPEND EXTRA_INCLUDE ${GAZEBO_INCLUDE_DIRS})
-else ()
-  message("-- Gazebo \t[NO]")
-  list(APPEND REMOVED_HEADER "${CMAKE_CURRENT_SOURCE_DIR}/include/gazebo_sim.hpp")
-  list(APPEND REMOVED_SRC "${CMAKE_CURRENT_SOURCE_DIR}/src/gazebo_sim.cpp")
-endif (gazebo_FOUND)
-
-find_package(Qt5 COMPONENTS Widgets REQUIRED)
-if (Qt5_FOUND)
-  message("-- Qt5    \t[OK]")
-  list(APPEND EXTRA_LIBS ${Qt5Widgets_LIBRARIES})
-  list(APPEND EXTRA_INCLUDE ${Qt5Widgets_INCLUDE_DIRS})
-  
-else ()
-  message("-- Qt5    \t[NO]")
-endif (Qt5_FOUND)
+set(Qt5_REQUIRED "REQUIRED")
+set(Qt5_COMPONENTS_VAR "Qt5Widgets_LIBRARIES")
+set(Qt5_COMPONENTS "Widgets")
+set(Qt5_INCLUDE_DIRS_VAR "Qt5Widgets_INCLUDE_DIRS")
 
 
 
 
-###### Get the sources and headers ######
-###### Exec main src file ######
-set(MAIN_FILE "${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp")
-###### Exec-only header file ######
-set(EXTRA_HEADERS "${CMAKE_CURRENT_SOURCE_DIR}/include/gnuplot-iostream.h")
 
-###### Library src and header files (everything else) ######
-file(GLOB LIB_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp" "${CMAKE_CURRENT_SOURCE_DIR}/src/*.c" )
-list(REMOVE_ITEM LIB_SRCS ${MAIN_FILE})
-list(REMOVE_ITEM LIB_SRCS ${REMOVED_SRC})
-file(GLOB LIB_HEADERS "${CMAKE_CURRENT_SOURCE_DIR}/include/*.h" "${CMAKE_CURRENT_SOURCE_DIR}/include/*.hpp" )
-
-message("${LIB_SRCS}")
-list(REMOVE_ITEM LIB_SRCS ${REMOVED_SRC})
-list(REMOVE_ITEM LIB_HEADERS ${REMOVED_HEADER})
-
-
-   
-
-
-
+########### AUTO ###########
 ###### include helper functions ######
 include(CMakeFunctions.txt)
-
-
 ###### Search for Subdirectories/Libraries ######
 if (EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/lib") 
-  message("\n> INTERN LIB:")
+  message("\n> AVAILABLE INTERNAL LIBS:")
   subdirlist(LIBS "${CMAKE_CURRENT_SOURCE_DIR}/lib/")
   foreach(subdir ${LIBS})
     #git submodules init
@@ -121,43 +80,140 @@ if (EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/lib")
     #get the version
     subproject_version("${subdir}" subdir_version)
     message("-- ${EXEC_NAME}: Added library ${subdir} version: ${subdir_version}")
-    list(APPEND INTERN_LIBS "${subdir}.${subdir_version}")
+    list(APPEND AVAILABLE_INTERN_LIBS "${subdir}.${subdir_version}")
   endforeach()
 endif()
 
 
+########### EXEC SOURCES ###########
+###### Get the sources and headers ######
+###### Exec main src file ######
+set(MAIN_FILE "${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp" "${CMAKE_CURRENT_SOURCE_DIR}/src/mainwindow.cpp")
+
+###### Library src and header files (everything else) ######
+file(GLOB LIB_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp" "${CMAKE_CURRENT_SOURCE_DIR}/src/*.c" )
+list(REMOVE_ITEM LIB_SRCS ${MAIN_FILE})
+file(GLOB LIB_HEADERS "${CMAKE_CURRENT_SOURCE_DIR}/include/*.h" "${CMAKE_CURRENT_SOURCE_DIR}/include/*.hpp" )
+
+
+
+
+
+########### LIBRARY CREATION ###########
+message("\n LIBRARY : ${EXEC_NAME}.${PROJECT_VERSION}")
+set(LIB_REMOVED_SRC "none")
+set(LIB_REMOVED_HEADER "none")
+set(LIB_LIBS "")
+set(LIB_INCLUDE_DIRS "")
+## SEARCH FOR EXTERNAL LIBRARIES ##
+message("> EXTERN LIB:")
+foreach(LIB IN LISTS LIB_EXTERN_LIBS)
+  if("${${LIB}_COMPONENTS_VAR}" STREQUAL "")
+    message("-- ${LIB} \t[OK]")
+    list(APPEND LIB_LIBS ${LIB})
+  else()
+    message(" ${${LIB}_COMPONENTS}")
+    find_package(${LIB} QUIET ${${LIB}_REQUIRED} COMPONENTS ${${LIB}_COMPONENTS}) #search the library
+    if (${LIB}_FOUND) #If found
+      message("-- ${LIB} \t[OK]")
+      list(APPEND LIB_LIBS ${${${LIB}_COMPONENTS_VAR}})
+      list(APPEND LIB_INCLUDE_DIRS ${${${LIB}_INCLUDE_DIRS_VAR}})
+    else ()
+      message("-- ${LIB} \t[NO]")
+      foreach(DEP_SRC IN LISTS ${${LIB}_DEPENDANT_SRC})
+	list(APPEND LIB_REMOVED_HEADER "${CMAKE_CURRENT_SOURCE_DIR}/include/${DEP_SRC}.hpp")
+	list(APPEND LIB_REMOVED_SRC "${CMAKE_CURRENT_SOURCE_DIR}/src/${DEP_SRC}.cpp")
+      endforeach()
+    endif (${LIB}_FOUND)
+  endif()
+endforeach()
+list(REMOVE_ITEM LIB_SRCS ${LIB_REMOVED_SRC})
+list(REMOVE_ITEM LIB_HEADERS ${LIB_REMOVED_HEADER})
+## SEARCH FOR INTERNAL LIBRARIES ##
+foreach(LIB IN LISTS LIB_INTERN_LIBS)
+  string(REGEX MATCH "^${LIB}[^ ]*" VAL ${AVAILABLE_INTERN_LIBS})
+  if(VAL)
+    list(APPEND LIB_LIBS "${VAL}")
+  else()
+    message("Couldn't find ${LIB}")
+  endif()
+endforeach()
+
+###### Create the library ######
+add_library(${LIB_NAME} ${LIB_SRCS})
+target_link_libraries (${LIB_NAME}
+  PUBLIC ${LIB_LIBS})
+target_include_directories(${LIB_NAME}
+  PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include"
+  PUBLIC ${LIB_INCLUDE_DIRS})
+#######################################
+
+
+
+
+
+
+
+
+########### EXECUTABLE CREATION ##########
+message("\n EXECUTABLE : ${EXEC_NAME}")
+set(EXE_REMOVED_SRC "none")
+set(EXE_REMOVED_HEADER "none")
+set(EXE_LIBS "")
+set(EXE_INCLUDE_DIRS "")
+## SEARCH FOR EXTERNAL LIBRARIES ##
+message("> EXTERN LIB:")
+foreach(LIB IN LISTS EXE_EXTERN_LIBS)
+  if("${${LIB}_COMPONENTS_VAR}" STREQUAL "")
+    message("-- ${LIB} \t[OK]")
+    list(APPEND EXE_LIBS ${LIB})
+  else()
+    find_package(${LIB} QUIET ${${LIB}_REQUIRED} COMPONENTS ${${LIB}_COMPONENTS}) #search the library
+    if (${LIB}_FOUND) #If found
+      message("-- ${LIB} \t[OK]")
+      list(APPEND EXE_LIBS ${${${LIB}_COMPONENTS_VAR}})
+      list(APPEND EXE_INCLUDE_DIRS ${${${LIB}_INCLUDE_DIRS_VAR}})
+    else ()
+      message("-- ${LIB} \t[NO]")
+      foreach(DEP_SRC IN LISTS ${${LIB}_DEPENDANT_SRC})
+	list(APPEND EXE_REMOVED_HEADER "${CMAKE_CURRENT_SOURCE_DIR}/include/${DEP_SRC}.hpp")
+	list(APPEND EXE_REMOVED_SRC "${CMAKE_CURRENT_SOURCE_DIR}/src/${DEP_SRC}.cpp")
+      endforeach()
+    endif (${LIB}_FOUND)
+  endif()
+endforeach()
+## SEARCH FOR INTERNAL LIBRARIES ##
+foreach(LIB IN LISTS EXE_INTERN_LIBS)
+  string(REGEX MATCH "^${LIB}[^ ]*" VAL ${AVAILABLE_INTERN_LIBS})
+  if(VAL)
+    list(APPEND EXE_LIBS "${VAL}")
+  else()
+    message("Couldn't find ${LIB}")
+  endif()
+endforeach()
+
 message("\n>  BUILD:")
 
-####### Create the library ######
-#add_library(${LIB_NAME} ${LIB_SRCS})
-#target_link_libraries (${LIB_NAME}
-#  PUBLIC ${EXTRA_LIBS})
-#target_include_directories(${LIB_NAME}
-#  PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include"
-#  PUBLIC "${EXTRA_INCLUDE}"
-#  )
-
+###### QT SETTINGS ######
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+qt5_wrap_cpp(QT_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/include/mainwindow.h)
+qt5_wrap_ui(QT_UI ${CMAKE_CURRENT_SOURCE_DIR}/forms/mainwindow.ui)
 
 
 ###### Create the executable ######
-
-set(CMAKE_INCLUDE_CURRENT_DIR ON)
-qt5_wrap_cpp(EXEC_SRC ${CMAKE_CURRENT_SOURCE_DIR}/include/mainwindow.h)
-qt5_wrap_ui(EXEC_UI ${CMAKE_CURRENT_SOURCE_DIR}/forms/mainwindow.ui)
-set(LIB_SRCS ${LIB_SRCS}  ${EXEC_SRC}  )
-
-
-add_executable(${EXEC_NAME} ${MAIN_FILE} ${LIB_SRCS} ${EXEC_UI})
-target_link_libraries (${EXEC_NAME} ${EXTRA_LIBS} ${INTERN_LIBS})
+add_executable(${EXEC_NAME} ${MAIN_FILE} ${QT_SRCS} ${QT_UI})
+target_link_libraries (${EXEC_NAME}
+  PUBLIC ${LIB_NAME}
+  ${EXE_LIBS})
 target_include_directories(${EXEC_NAME}
   PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include"
-  PUBLIC "${EXTRA_INCLUDE}"
-  PUBLIC "${EXEC_UI}")
+  PUBLIC "${EXE_INCLUDE}"
+  PUBLIC "${QT_UI}")
+
+##############################
 
 
 
-
- 
 ###### Instalation rule ######
 install(TARGETS ${EXEC_NAME} DESTINATION bin)
 #install(TARGETS ${LIB_NAME} DESTINATION lib)
