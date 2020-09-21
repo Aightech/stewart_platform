@@ -2,6 +2,9 @@
 
 Project to control the Stewart platform. The platform use to be control via an OLIMEX board doing the interface IP/CAN to communicate with the servo’s drivers. This project aims to bypass this hardware to communicate directly with the CANopen bus of the lxm32a drivers.
 
+<img src="fig/graph.png" width="800"  />
+<img src="fig/sumup.png" width="800"  />
+
 ## Usage
 ### Clone
 ```bash
