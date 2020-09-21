@@ -44,14 +44,21 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 ###### INTERN libraries ######
-set(EXE_INTERN_LIBS "")
-set(LIB_INTERN_LIBS lxm32)
+set(EXE_INTERN_LIBS joystick)
+set(LIB_INTERN_LIBS lxm32 )
 
 ###### EXTERN libraries ######
 set(EXE_EXTERN_LIBS Qt5)
 set(LIB_EXTERN_LIBS gazebo)
 
 ## LIBRARIES SETTINGS ##
+# set(name_V 1.55)
+# set(name_REQUIRED "REQUIRED")
+# set(name_COMPONENTS_VAR "name_LIBRARIES")
+# set(name_INCLUDE_DIRS_VAR "name_INCLUDE_DIRS")
+# set(name_DEPENDANT_SRC "name_file")
+
+
 set(gazebo_COMPONENTS_VAR "GAZEBO_LIBRARIES")
 set(gazebo_INCLUDE_DIRS_VAR "GAZEBO_INCLUDE_DIRS")
 set(gazebo_DEPENDANT_SRC "gazebo_sim")
@@ -64,12 +71,17 @@ set(Qt5_INCLUDE_DIRS_VAR "Qt5Widgets_INCLUDE_DIRS")
 
 
 
-
 ########### AUTO ###########
 ###### include helper functions ######
 include(CMakeFunctions.txt)
 ###### Search for Subdirectories/Libraries ######
-if (EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/lib") 
+if (EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/lib")
+  if(NOT AVAILABLE_INTERN_LIBS)
+    define_property(GLOBAL PROPERTY AVAILABLE_INTERN_LIBS
+      BRIEF_DOCS "PX4 module paths"
+      FULL_DOCS "List of paths to all PX4 modules"
+      )
+  endif()
   message("\n> AVAILABLE INTERNAL LIBS:")
   subdirlist(LIBS "${CMAKE_CURRENT_SOURCE_DIR}/lib/")
   foreach(subdir ${LIBS})
@@ -80,9 +92,11 @@ if (EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/lib")
     #get the version
     subproject_version("${subdir}" subdir_version)
     message("-- ${EXEC_NAME}: Added library ${subdir} version: ${subdir_version}")
-    list(APPEND AVAILABLE_INTERN_LIBS "${subdir}.${subdir_version}")
+    set_property(GLOBAL APPEND PROPERTY AVAILABLE_INTERN_LIBS "${subdir}.${subdir_version}")
+    #list(APPEND AVAILABLE_INTERN_LIBS "${subdir}.${subdir_version}")
   endforeach()
 endif()
+
 
 
 ########### EXEC SOURCES ###########
@@ -109,17 +123,17 @@ set(LIB_INCLUDE_DIRS "")
 message("> EXTERN LIB:")
 foreach(LIB IN LISTS LIB_EXTERN_LIBS)
   if("${${LIB}_COMPONENTS_VAR}" STREQUAL "")
-    message("-- ${LIB} \t[OK]")
+    message("-- [OK] ${LIB}")
     list(APPEND LIB_LIBS ${LIB})
   else()
     message(" ${${LIB}_COMPONENTS}")
-    find_package(${LIB} QUIET ${${LIB}_REQUIRED} COMPONENTS ${${LIB}_COMPONENTS}) #search the library
+    find_package(${LIB} ${${LIB}_V} QUIET ${${LIB}_REQUIRED} COMPONENTS ${${LIB}_COMPONENTS}) #search the library
     if (${LIB}_FOUND) #If found
-      message("-- ${LIB} \t[OK]")
+      message("-- [OK] ${LIB}")
       list(APPEND LIB_LIBS ${${${LIB}_COMPONENTS_VAR}})
       list(APPEND LIB_INCLUDE_DIRS ${${${LIB}_INCLUDE_DIRS_VAR}})
     else ()
-      message("-- ${LIB} \t[NO]")
+      message("-- [NO] ${LIB}")
       foreach(DEP_SRC IN LISTS ${${LIB}_DEPENDANT_SRC})
 	list(APPEND LIB_REMOVED_HEADER "${CMAKE_CURRENT_SOURCE_DIR}/include/${DEP_SRC}.hpp")
 	list(APPEND LIB_REMOVED_SRC "${CMAKE_CURRENT_SOURCE_DIR}/src/${DEP_SRC}.cpp")
@@ -131,11 +145,13 @@ list(REMOVE_ITEM LIB_SRCS ${LIB_REMOVED_SRC})
 list(REMOVE_ITEM LIB_HEADERS ${LIB_REMOVED_HEADER})
 ## SEARCH FOR INTERNAL LIBRARIES ##
 foreach(LIB IN LISTS LIB_INTERN_LIBS)
-  string(REGEX MATCH "^${LIB}[^ ]*" VAL ${AVAILABLE_INTERN_LIBS})
+  get_property(available_libs GLOBAL PROPERTY AVAILABLE_INTERN_LIBS)
+  string(REGEX MATCH "${LIB}.[0-9]+.[0-9]+" VAL ${available_libs})
   if(VAL)
+    message("-- [OK] ${VAL}")
     list(APPEND LIB_LIBS "${VAL}")
   else()
-    message("Couldn't find ${LIB}")
+    message("-- [NO] ${LIB} not found")
   endif()
 endforeach()
 
@@ -165,16 +181,16 @@ set(EXE_INCLUDE_DIRS "")
 message("> EXTERN LIB:")
 foreach(LIB IN LISTS EXE_EXTERN_LIBS)
   if("${${LIB}_COMPONENTS_VAR}" STREQUAL "")
-    message("-- ${LIB} \t[OK]")
+    message("-- [OK] ${LIB}")
     list(APPEND EXE_LIBS ${LIB})
   else()
-    find_package(${LIB} QUIET ${${LIB}_REQUIRED} COMPONENTS ${${LIB}_COMPONENTS}) #search the library
+    find_package(${LIB} ${${LIB}_V} QUIET ${${LIB}_REQUIRED} COMPONENTS ${${LIB}_COMPONENTS}) #search the library
     if (${LIB}_FOUND) #If found
-      message("-- ${LIB} \t[OK]")
+      message("-- [OK] ${LIB}")
       list(APPEND EXE_LIBS ${${${LIB}_COMPONENTS_VAR}})
       list(APPEND EXE_INCLUDE_DIRS ${${${LIB}_INCLUDE_DIRS_VAR}})
     else ()
-      message("-- ${LIB} \t[NO]")
+      message("-- [NO] ${LIB}")
       foreach(DEP_SRC IN LISTS ${${LIB}_DEPENDANT_SRC})
 	list(APPEND EXE_REMOVED_HEADER "${CMAKE_CURRENT_SOURCE_DIR}/include/${DEP_SRC}.hpp")
 	list(APPEND EXE_REMOVED_SRC "${CMAKE_CURRENT_SOURCE_DIR}/src/${DEP_SRC}.cpp")
@@ -184,11 +200,13 @@ foreach(LIB IN LISTS EXE_EXTERN_LIBS)
 endforeach()
 ## SEARCH FOR INTERNAL LIBRARIES ##
 foreach(LIB IN LISTS EXE_INTERN_LIBS)
-  string(REGEX MATCH "^${LIB}[^ ]*" VAL ${AVAILABLE_INTERN_LIBS})
+  get_property(available_libs GLOBAL PROPERTY AVAILABLE_INTERN_LIBS)
+  string(REGEX MATCH "${LIB}.[0-9]+.[0-9]+" VAL ${available_libs})
   if(VAL)
     list(APPEND EXE_LIBS "${VAL}")
+    message("-- [OK] ${VAL}")
   else()
-    message("Couldn't find ${LIB}")
+    message("-- [NO] ${LIB} not found")
   endif()
 endforeach()
 
@@ -224,23 +242,20 @@ install(FILES ${HEADERS} DESTINATION include)
 find_program(DOT_EXE "dot")
 if(DOT_EXE)
   message(STATUS "dot found: ${DOT_EXE}")
-  set(DOT_OUTPUT_TYPE "svg")
-    add_custom_target(dependency-graph
+  set(DOT_OUTPUT_TYPE "png")
+    add_custom_target(dependency-graph_${EXEC_NAME}
       COMMAND ${CMAKE_COMMAND} ${CMAKE_SOURCE_DIR} --graphviz=${CMAKE_BINARY_DIR}/graphviz/${PROJECT_NAME}.dot
-      COMMENT "heyyyyyyyy      yyyyy   ${DOT_OUTPUT_TYPE}"
         COMMAND ${DOT_EXE} -T${DOT_OUTPUT_TYPE} ${CMAKE_BINARY_DIR}/graphviz/${PROJECT_NAME}.dot -o ${CMAKE_BINARY_DIR}/${PROJECT_NAME}.${DOT_OUTPUT_TYPE}
 	)
 
       add_custom_command(
-        TARGET dependency-graph PRE_BUILD
+        TARGET dependency-graph_${EXEC_NAME} PRE_BUILD
         COMMAND echo "set\\\(GRAPHVIZ_EXTERNAL_LIBS NO\\\)" > CMakeGraphVizOptions.cmake
-	# COMMAND echo "set\\\(GRAPHVIZ_EXECUTABLES YES\\\)" >> CMakeGraphVizOptions.cmake
 	# COMMAND echo "set\\\(GRAPHVIZ_IGNORE_TARGETS lxm32\\\)" >> CMakeGraphVizOptions.cmake
-        COMMENT "blabla"
 	)
 
     add_custom_command(
-        TARGET dependency-graph POST_BUILD
+        TARGET dependency-graph_${EXEC_NAME} POST_BUILD
         COMMAND ;
         COMMENT
         "Dependency graph generated and located at ${CMAKE_BINARY_DIR}/${PROJECT_NAME}.${DOT_OUTPUT_TYPE}"
