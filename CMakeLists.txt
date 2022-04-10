@@ -31,7 +31,7 @@ cmake_minimum_required(VERSION 3.5)
 
 ###### PROJECT NAME AND VERSION ######
 set(EXEC_NAME stewart_platform)
-set(PROJECT_VERSION 2.0)
+set(PROJECT_VERSION 6.6)
 project(${EXEC_NAME} VERSION ${PROJECT_VERSION})
 message("\n## ${EXEC_NAME} (v${PROJECT_VERSION}) ##")
 
